@@ -7,6 +7,7 @@ export type Card = {
   kind: string;
   title: string;
   body: string;
+  format?: string;
   answer: string;
   source: string;
   color: string;

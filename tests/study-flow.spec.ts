@@ -43,7 +43,7 @@ test("course filter includes cross-course connections and guide is reachable", a
   await expect(page.locator("article.study-card")).toHaveCount(expected);
   await expect(
     page.getByRole("heading", {
-      name: "One least-squares problem. Two different questions.",
+      name: "Does a numerically accurate least-squares fit guarantee valid inference?",
     }),
   ).toBeVisible();
   await page.getByRole("link", { name: "Explore the course map" }).click();

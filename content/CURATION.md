@@ -4,6 +4,12 @@ The user wants enough material to learn and review the current courses, with **n
 
 `master-feed.json` is the content source of truth. `coverage.json` maps concept groups to stable card IDs. `MASTER_FEED.md` is generated, not independently edited.
 
+## Flashcard style
+
+Each curated card asks one concise question in its title. Its answer gives the direct explanation in one to three short sentences, followed by one intuition sentence. Use separate cards for definitions, assumptions, small calculations, and derivation steps. Do not turn the front into a textbook paragraph or hide multiple questions inside one prompt. Keep essential mathematical conditions even when shortening prose. `format: "flashcard"` allows an empty body; imported passage cards retain their body.
+
+Retain IDs when rewriting the same concept so review history and bookmarks survive. New concepts receive new IDs. The lecture map is in [LECTURE_COVERAGE.md](LECTURE_COVERAGE.md).
+
 ## Decide coverage before count
 
 1. Read the actual assignment and relevant lecture material. Distinguish original questions from completed student writeups. A filename such as `hw1` or `ps1` does not reliably distinguish them.
@@ -17,7 +23,7 @@ The user wants enough material to learn and review the current courses, with **n
 
 - AM 205: PS1–2 and supporting Heath chapter 1–2 concepts; selected chapter 3 material supports the assigned least-squares work.
 - AM 207: HW1–2 and conceptual material in lectures 00–06. Historical anecdotes and application showcase slides are context, not invented exam requirements.
-- STAT 244: HW1–2, linear algebra and least-squares theory, and inference material before the regression-diagnostics section specified by HW2.
+- STAT 244: HW1–2 and all three uploaded lecture-note sets: linear algebra, least-squares theory, and inference, including regression diagnostics. The newer request for all necessary lecture material expands the earlier HW2 boundary.
 
 This first curriculum is not an official answer key, a complete transcription, or a guarantee that every detail has been mastered. Add depth and fresh applications where needed. Do not count source extraction as semantic review of every page.
 

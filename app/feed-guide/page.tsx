@@ -17,7 +17,7 @@ const map = [
     topics:
       "Inverse transforms → Monte Carlo → MCMC → Markov processes → SSA → Bayesian updating",
     scope:
-      "Homework 1–2 and concepts from lectures 01–06, including transformations, Markov dynamics, and uncertainty.",
+      "Lectures 00–06, with homework 1–2 practice: probability, sampling, Markov dynamics, stochastic simulation, and uncertainty.",
     next: "Deepen with worked simulation traces, full derivation drills, and new sampling examples.",
   },
   {
@@ -26,7 +26,7 @@ const map = [
     topics:
       "Subspaces → estimability → projections → contrast coding → variance → Gauss–Markov",
     scope:
-      "Homework 1–2 and selected least-squares theory and inference material.",
+      "All three uploaded note sets: linear algebra, least-squares theory, and inference through regression diagnostics, plus homework 1–2.",
     next: "Deepen with new estimability problems, proof reconstruction, and inference calculations.",
   },
 ];
@@ -43,7 +43,7 @@ export default function Guide() {
         One place to connect them.
       </h1>
       <p className="guide-intro">
-        {feed.cards.length} authored cards, grounded in your own courses. The
+        {feed.cards.length} short question-and-answer flashcards, grounded in your own courses. Try each question, then reveal a direct answer and one intuition. The
         scope is your current lectures and assignments, with supporting textbook
         sections. There is no card quota; the material and your recall gaps
         determine how this grows.

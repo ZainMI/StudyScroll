@@ -1555,7 +1555,7 @@ h1 {
   display: none;
 }
 .reel-card {
-  --accent: #59745b;
+  --accent: #405b43;
   --wash: #e4e9dd;
   height: 100%;
   margin: 0;
@@ -1569,15 +1569,15 @@ h1 {
   box-shadow: none;
 }
 .reel-card.tone-purple {
-  --accent: #746c84;
+  --accent: #5b506c;
   --wash: #eae6ed;
 }
 .reel-card.tone-green {
-  --accent: #59745b;
+  --accent: #405b43;
   --wash: #e4e9dd;
 }
 .reel-card.tone-orange {
-  --accent: #8b7155;
+  --accent: #705334;
   --wash: #eee6da;
 }
 .reel-card .card-top {
@@ -1595,16 +1595,16 @@ h1 {
 }
 .reel-card .card-top div > span {
   font-size: 11px;
-  color: #687360;
+  color: #485343;
   line-height: 1.4;
 }
 .reel-card .card-time {
-  color: #687360;
+  color: #485343;
   font-size: 11px;
   white-space: nowrap;
 }
 .reel-card .save {
-  color: #64735b;
+  color: #46543e;
   width: 44px;
   height: 44px;
   margin-left: 0;
@@ -1644,7 +1644,7 @@ h1 {
   font-size: clamp(24px, 2.5vw, 32px);
   line-height: 1.35;
   font-weight: 600;
-  color: #38483f;
+  color: #202b24;
   letter-spacing: -0.65px;
   margin-bottom: 20px;
   max-width: 24ch;
@@ -1652,7 +1652,7 @@ h1 {
 .reel-card .card-body > p {
   font-size: 17px;
   line-height: 1.8;
-  color: #515f50;
+  color: #28352c;
   margin-bottom: 28px;
   max-width: 60ch;
 }
@@ -1661,7 +1661,7 @@ h1 {
   padding: 16px;
   background: #e6eadf;
   border-color: #d5deca;
-  color: #4f6445;
+  color: #2f452b;
   border-radius: 12px;
   min-height: 48px;
 }
@@ -1669,29 +1669,31 @@ h1 {
   background: #dde5d4;
 }
 .reel-card .answer {
-  background: #eceee4;
+  background: #e5e9dc;
+  border: 1px solid #cbd3bf;
   padding: 22px;
   border-radius: 12px;
 }
 .reel-card .answer p {
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 500;
   line-height: 1.85;
-  color: #4b5b46;
+  color: #28352c;
 }
 .reel-card .answer > div {
-  color: #5c6e50;
+  color: #41513a;
 }
 .reel-card .takeaway {
   font-size: 15px;
   line-height: 1.7;
-  color: #4b6040;
+  color: #293e28;
 }
 .reel-card .rating {
   font-size: 12px;
   flex-wrap: wrap;
 }
 .reel-card .rating > span {
-  color: #65715e;
+  color: #485343;
 }
 .reel-card .rating button {
   min-height: 44px;
@@ -1699,7 +1701,7 @@ h1 {
 }
 .reel-card .card-footer {
   flex-shrink: 0;
-  color: #697361;
+  color: #485343;
   font-size: 11px;
   padding: 14px 36px;
 }
@@ -1710,7 +1712,7 @@ h1 {
 .reel-card .sources {
   flex-shrink: 0;
   padding: 0 36px 20px;
-  color: #5d6e50;
+  color: #3e5135;
   font-size: 12px;
 }
 .reel-card .sources summary {
@@ -1721,7 +1723,7 @@ h1 {
 }
 .reel-card .sources a > span {
   font-size: 11px;
-  color: #687360;
+  color: #485343;
 }
 .reel-controls {
   height: 64px;
@@ -1859,7 +1861,7 @@ h1 {
     padding: 16px;
   }
   .reel-card .answer p {
-    font-size: 15px;
+    font-size: 17px;
   }
   .reel-card .card-footer {
     padding: 12px 22px;
@@ -1913,7 +1915,7 @@ h1 {
     gap: 5px;
     font-size: 10px;
     padding: 10px 4px;
-    color: #68745f;
+    color: #485343;
     border-radius: 0;
     background: transparent;
   }
@@ -1995,7 +1997,7 @@ h1 {
   gap: 5px;
   padding: 12px 4px;
   background: #e8ecdf;
-  color: #485e40;
+  color: #2f452b;
 }
 .recall-rating button strong {
   font-size: 12px;
@@ -2003,11 +2005,11 @@ h1 {
 }
 .recall-rating button small {
   font-size: 11px;
-  color: #68775e;
+  color: #46533d;
 }
 .reel-card .card-body .review-status {
   font-size: 13px;
-  color: #506547;
+  color: #354a2d;
   line-height: 1.6;
   margin: 16px 0 0;
 }
@@ -2043,7 +2045,7 @@ h1 {
   gap: 16px;
   padding: 32px;
   text-align: center;
-  color: #506547;
+  color: #354a2d;
 }
 .session-end h2 {
   font-size: 24px;

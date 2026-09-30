@@ -10,13 +10,16 @@ for (const card of feed.cards) {
     "topic",
     "kind",
     "title",
-    "body",
     "answer",
     "takeaway",
   ]) {
     if (typeof card[key] !== "string" || !card[key].trim())
       throw new Error(`Missing ${key}: ${card.id}`);
   }
+  if (typeof card.body !== "string" || (!card.body.trim() && card.format !== "flashcard"))
+    throw new Error(`Missing body: ${card.id}`);
+  if (card.format === "flashcard" && (!card.title.endsWith("?") || card.answer.split(/\s+/).length > 65))
+    throw new Error(`Flashcard must have a question and a concise answer: ${card.id}`);
   if (!card.sources?.length) throw new Error(`No sources: ${card.id}`);
   for (const source of card.sources) {
     if (!source.path.startsWith("courses/") || source.path.includes(".."))
@@ -48,10 +51,10 @@ const covered = new Set([
 ]);
 for (const id of ids)
   if (!covered.has(id)) throw new Error(`Unmapped card: ${id}`);
-const header = `# StudyScroll: master feed\n\nUpdated ${feed.updated}. ${feed.cards.length} curated cards.\n\n${feed.scope}\n\nThe editable source of truth is [master-feed.json](master-feed.json). This readable document is generated with \`npm run feed:build\`. Edit the JSON, then regenerate; the Next app imports that same JSON directly.\n\nThese are authored learning prompts derived from the listed materials, not quotations or official answer keys. Companion examples and cross-course explanations add interpretation. Reveal the explanation only after attempting the prompt.\n\n## Course map\n\n- **AM 205:** floating-point spacing, rounding, matrix operations, linear-map geometry, pivoting, low-rank approximation, algebraic least squares.\n- **AM 207:** inverse transforms, Monte Carlo rates, Metropolis–Hastings, stationarity and detailed balance, coarse states, SSA, moment closure, Bayesian updating.\n- **STAT 244:** column and null spaces, estimability, identifiability, reparameterization, projections, contrasts, variance estimation, Gauss–Markov.\nSee [coverage.json](coverage.json) for learning-objective mappings and [CURATION.md](CURATION.md) for the uncapped content workflow. Scope is current lectures and assignments with supporting textbook sections. No fixed total, per-course quota, or daily card limit applies.\n\n## Feed\n\n`;
+const header = `# StudyScroll: master feed\n\nUpdated ${feed.updated}. ${feed.cards.length} curated cards.\n\n${feed.scope}\n\nThe editable source of truth is [master-feed.json](master-feed.json). This readable document is generated with \`npm run feed:build\`. Edit the JSON, then regenerate; the Next app imports that same JSON directly.\n\nThese are authored learning prompts derived from the listed materials, not quotations or official answer keys. Companion examples and cross-course explanations add interpretation. Reveal the explanation only after attempting the prompt.\n\n## Course map\n\n- **AM 205:** floating-point spacing, rounding, matrix operations, linear-map geometry, pivoting, low-rank approximation, algebraic least squares.\n- **AM 207:** probability foundations, inverse transforms, Monte Carlo, Metropolis–Hastings, Markov dynamics, jump processes, SSA, tau leaping, and Bayesian uncertainty.\n- **STAT 244:** linear algebra, estimability, projections, contrast coding, least squares and GLS, inference, multicollinearity, PCR/PLS, and regression diagnostics.\nSee [LECTURE_COVERAGE.md](LECTURE_COVERAGE.md) for the lecture-note map, [coverage.json](coverage.json) for learning-objective mappings and [CURATION.md](CURATION.md) for the uncapped content workflow. Scope is current lectures and assignments with supporting textbook sections. No fixed total, per-course quota, or daily card limit applies.\n\n## Feed\n\n`;
 const sections = feed.cards.map(
   (c, i) =>
-    `### ${String(i + 1).padStart(2, "0")}. ${c.title}\n\n**${c.course} · ${c.topic} · ${c.kind}**\n\n${c.body}\n\n<details>\n<summary>Reveal explanation</summary>\n\n${c.answer}\n\n**Remember:** ${c.takeaway}\n\n</details>\n\nSources: ${c.sources.map((s) => `[${s.locator}](../${encodeURI(s.path)}${s.page ? `#page=${s.page}` : ""})`).join("; ")}\n\nCard ID: \`${c.id}\`\n`,
+    `### ${String(i + 1).padStart(2, "0")}. ${c.title}\n\n**${c.course} · ${c.topic} · ${c.kind}**\n\n${c.body ? `${c.body}\n\n` : ""}<details>\n<summary>Reveal explanation</summary>\n\n${c.answer}\n\n**Intuition:** ${c.takeaway}\n\n</details>\n\nSources: ${c.sources.map((s) => `[${s.locator}](../${encodeURI(s.path)}${s.page ? `#page=${s.page}` : ""})`).join("; ")}\n\nCard ID: \`${c.id}\`\n`,
 );
 const output = header + sections.join("\n---\n\n");
 if (process.argv.includes("--check")) {

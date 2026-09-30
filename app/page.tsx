@@ -606,7 +606,7 @@ export default function Home() {
                           </div>
                           <div className="card-body">
                             <h2>{card.title}</h2>
-                            <p>{card.body}</p>
+                            {card.body && <p>{card.body}</p>}
                             {open && (
                               <div className="answer">
                                 <div>
