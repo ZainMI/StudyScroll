@@ -1884,3 +1884,177 @@ h1 {
     transition: none;
   }
 }
+
+/* Mobile keeps the reading canvas edge-to-edge; navigation lives below it. */
+@media (max-width: 650px) {
+  .shell .sidebar {
+    position: fixed;
+    inset: auto 0 0;
+    width: 100%;
+    height: calc(62px + env(safe-area-inset-bottom));
+    padding: 0 12px env(safe-area-inset-bottom);
+    background: #eeefe7;
+    border: 0;
+    border-top: 1px solid #dce1d4;
+    z-index: 30;
+  }
+  .shell .sidebar > :not(nav) {
+    display: none;
+  }
+  .shell .sidebar nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .shell .sidebar nav button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 10px;
+    padding: 10px 4px;
+    color: #68745f;
+    border-radius: 0;
+    background: transparent;
+  }
+  .shell .sidebar nav button.active {
+    color: #374e32;
+  }
+  .shell .sidebar nav button.active svg {
+    stroke-width: 2.6;
+  }
+  .shell .sidebar nav button svg {
+    width: 22px;
+    height: 22px;
+  }
+  .reels-mode {
+    padding-bottom: calc(62px + env(safe-area-inset-bottom));
+    background: #f6f4ed;
+  }
+  .reels-mode .page-content {
+    padding: 0;
+    max-width: none;
+  }
+  .reels-mode .heading,
+  .reels-mode .filters,
+  .reels-mode .feed-label,
+  .reels-mode .reel-controls {
+    display: none;
+  }
+  .reels-mode .reel-viewport,
+  .reels-mode .reel-card {
+    border-radius: 0;
+    border: 0;
+  }
+  .reels-mode .reel-card .card-top {
+    padding: calc(16px + env(safe-area-inset-top)) 22px 16px;
+    border: 0;
+  }
+  .reels-mode .reel-card .course-icon {
+    display: none;
+  }
+  .reels-mode .reel-kicker {
+    padding-top: 12px;
+  }
+  .reels-mode .reel-card .card-body {
+    padding: 24px 26px;
+  }
+  .reels-mode .reel-card .card-footer {
+    display: none;
+  }
+  .reels-mode .reel-card .sources {
+    padding: 0 26px 20px;
+  }
+  .reels-mode .rating > span {
+    flex-basis: 100%;
+    margin-bottom: 4px;
+  }
+  .library-mode {
+    padding-bottom: calc(78px + env(safe-area-inset-bottom));
+  }
+  .library-mode .page-content {
+    padding-top: calc(24px + env(safe-area-inset-top));
+  }
+  .reels-mode .empty {
+    margin: auto 20px;
+  }
+}
+
+.recall-rating {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+.recall-rating > span {
+  grid-column: 1 / -1;
+  line-height: 1.6;
+}
+.reel-card .recall-rating button {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px 4px;
+  background: #e8ecdf;
+  color: #485e40;
+}
+.recall-rating button strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+.recall-rating button small {
+  font-size: 11px;
+  color: #68775e;
+}
+.reel-card .card-body .review-status {
+  font-size: 13px;
+  color: #506547;
+  line-height: 1.6;
+  margin: 16px 0 0;
+}
+.learning-summary {
+  padding: 22px;
+  margin-bottom: 22px;
+  border: 1px solid #dce1d4;
+  border-radius: 12px;
+  background: #eff1e8;
+}
+.learning-summary strong {
+  font-size: 20px;
+  font-weight: 600;
+}
+.learning-summary p {
+  line-height: 1.7;
+  color: #637059;
+}
+.learning-summary a {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 12px;
+  text-decoration: underline;
+}
+.session-end {
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px;
+  text-align: center;
+  color: #506547;
+}
+.session-end h2 {
+  font-size: 24px;
+  margin: 0;
+}
+.session-end p {
+  line-height: 1.8;
+  max-width: 40ch;
+}
+.recall-rating .rating-meaning {
+  font-size: 10px;
+  font-weight: 400;
+  color: #64755a;
+}

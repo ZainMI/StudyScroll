@@ -101,6 +101,26 @@ export default function Guide() {
             </details>
           ))}
         </div>
+        <h2>A feed that brings ideas back</h2>
+        <p>
+          Attempt an answer before revealing, then compare it with the
+          explanation. Again means you could not recall it; Hard means you
+          needed help; Good means correct unaided; Easy means correct and
+          effortless. Swiping alone never counts as learning.
+        </p>
+        <p>
+          First reviews return in 10 minutes, 6 hours, 1 day, or 4 days
+          respectively. Successful delayed recall grows the interval; a missed
+          answer brings it back sooner. These are practical scheduling rules,
+          not a measured guarantee of retention.
+        </p>
+        <p>
+          Due reviews come first, mixed with new ideas. New material follows
+          prerequisite order where possible and varies topics. The card you are
+          reading stays stable; due reviews are inserted next as time passes.
+          Use Courses → Browse all material to explore without changing review
+          dates. Progress stays on this device.
+        </p>
         <h2>How this feed should grow</h2>
         <p>
           New material goes into the course folders. A curation pass identifies
@@ -116,8 +136,8 @@ export default function Guide() {
         <p>
           The folder-import button remains an extraction prototype: it creates
           literal gap-fill cards. It does not automatically produce the
-          interpreted content in this master feed. There is no live AI service,
-          spaced-repetition scheduler, or cloud account yet.
+          interpreted content in this master feed. There is no live AI service
+          or cloud account. Your review schedule is stored in this browser.
         </p>
         <Link className="primary" href="/">
           Start exploring <ArrowUpRight size={16} />

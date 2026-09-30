@@ -18,6 +18,14 @@ import {
   X,
 } from "lucide-react";
 import { Card, curated } from "@/lib/cards";
+import {
+  learningQueue,
+  schedule,
+  readReviews,
+  intervalLabel,
+  type Reviews,
+  type Rating,
+} from "@/lib/learning";
 type Progress = { saved: string[]; learned: string[] };
 export default function Home() {
   const [cards, setCards] = useState<Card[]>(curated);
@@ -25,6 +33,14 @@ export default function Home() {
     saved: [],
     learned: [],
   });
+  const [reviews, setReviews] = useState<Reviews>({});
+  const reviewsRef = useRef<Reviews>({});
+  const [queue, setQueue] = useState<{ card: Card; key: string }[]>([]);
+  const [rated, setRated] = useState<Record<string, string>>({});
+  const ratedRef = useRef(new Set<string>());
+  const [session, setSession] = useState(0);
+  const [practice, setPractice] = useState(false);
+  const [clock, setClock] = useState(Date.now());
   const [ready, setReady] = useState(false);
   const [view, setView] = useState("feed");
   const [course, setCourse] = useState("All courses");
@@ -85,6 +101,12 @@ export default function Home() {
             ),
           ];
           setCards(restored);
+          const restoredReviews = readReviews(
+            data.reviews,
+            new Set(restored.map((c: Card) => c.id)),
+          );
+          reviewsRef.current = restoredReviews;
+          setReviews(restoredReviews);
           const activeIds = new Set(restored.map((c: Card) => c.id));
           setProgress({
             saved: data.progress.saved.filter((id: string) =>
@@ -104,20 +126,91 @@ export default function Home() {
       try {
         localStorage.setItem(
           "studyscroll-v1",
-          JSON.stringify({ cards, progress }),
+          JSON.stringify({ cards, progress, reviews, learningVersion: 1 }),
         );
       } catch {
         setMessage("Browser storage is full. This session will not be saved.");
       }
-  }, [cards, progress, ready]);
+  }, [cards, progress, reviews, ready]);
   const courses = Array.from(new Set(cards.map((c) => c.course)));
-  const visible = cards.filter(
-    (c) =>
-      (course === "All courses" ||
-        course === c.course ||
-        c.relatedCourses?.includes(course)) &&
-      (view !== "saved" || progress.saved.includes(c.id)),
+  useEffect(() => {
+    const timer = window.setInterval(() => setClock(Date.now()), 30000);
+    const refresh = () => setClock(Date.now());
+    window.addEventListener("focus", refresh);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("focus", refresh);
+    };
+  }, []);
+  useEffect(() => {
+    if (!ready) return;
+    const filtered = cards.filter(
+      (c) =>
+        (course === "All courses" ||
+          c.course === course ||
+          c.relatedCourses?.includes(course)) &&
+        (view !== "saved" || progress.saved.includes(c.id)),
+    );
+    const selection =
+      view === "saved" || practice
+        ? filtered
+        : learningQueue(filtered, reviewsRef.current, Date.now());
+    setQueue(
+      selection.map((card) => ({ card, key: `${card.id}:${Date.now()}` })),
+    );
+    setRevealed([]);
+    reel.current?.scrollTo({ top: 0, behavior: "instant" });
+    setActiveCard(0);
+    // Ratings deliberately do not reorder the card being read.
+  }, [cards, course, view, ready, practice, session]);
+  useEffect(() => {
+    if (!ready || practice || view !== "feed") return;
+    setQueue((current) => {
+      const due = cards.filter(
+        (c) =>
+          (course === "All courses" ||
+            c.course === course ||
+            c.relatedCourses?.includes(course)) &&
+          reviewsRef.current[c.id]?.due <= clock,
+      );
+      const additions = due.filter(
+        (c) =>
+          !current.some(
+            (entry) =>
+              entry.card.id === c.id && !ratedRef.current.has(entry.key),
+          ),
+      );
+      if (!additions.length) return current;
+      const insertAt = Math.min(current.length, activeCard + 1);
+      return [
+        ...current.slice(0, insertAt),
+        ...additions.map((card) => ({ card, key: `${card.id}:${clock}` })),
+        ...current.slice(insertAt),
+      ];
+    });
+  }, [clock, ready, practice, view, cards, course, activeCard]);
+  const visible = queue.filter(
+    (entry) => view !== "saved" || progress.saved.includes(entry.card.id),
   );
+  const rateCard = (card: Card, key: string, rating: Rating) => {
+    if (ratedRef.current.has(key) || practice || view === "saved") return;
+    ratedRef.current.add(key);
+    const now = Date.now();
+    const next = schedule(reviewsRef.current[card.id], rating, now);
+    const updated = { ...reviewsRef.current, [card.id]: next };
+    reviewsRef.current = updated;
+    setReviews(updated);
+    setRated((r) => ({
+      ...r,
+      [key]: `Next review in ${intervalLabel(next.due - now)}`,
+    }));
+    setProgress((p) => ({
+      ...p,
+      learned: p.learned.includes(card.id)
+        ? p.learned
+        : [...p.learned, card.id],
+    }));
+  };
   const toggleSave = (id: string) =>
     setProgress((p) => ({
       ...p,
@@ -185,14 +278,21 @@ export default function Home() {
         <div className="nav-label">YOUR SPACE</div>
         <nav>
           <button
+            aria-current={view === "feed" ? "page" : undefined}
             className={view === "feed" ? "active" : ""}
-            onClick={() => setView("feed")}
+            onClick={() => {
+              setCourse("All courses");
+              setPractice(false);
+              setSession((s) => s + 1);
+              setView("feed");
+            }}
           >
             <Layers3 size={19} />
             For you
             <span className="nav-dot" />
           </button>
           <button
+            aria-current={view === "saved" ? "page" : undefined}
             className={view === "saved" ? "active" : ""}
             onClick={() => setView("saved")}
           >
@@ -200,8 +300,12 @@ export default function Home() {
             Saved cards<span className="count">{progress.saved.length}</span>
           </button>
           <button
+            aria-current={view === "courses" ? "page" : undefined}
             className={view === "courses" ? "active" : ""}
-            onClick={() => setView("courses")}
+            onClick={() => {
+              setCourse("All courses");
+              setView("courses");
+            }}
           >
             <BookOpen size={19} />
             My courses<span className="count">{courses.length}</span>
@@ -332,6 +436,33 @@ export default function Home() {
                   Curated from your courses <span className="tiny-dot" />
                 </span>
               </div>
+              {view === "courses" && (
+                <section className="learning-summary">
+                  <strong>
+                    {
+                      Object.values(reviews).filter((r) => r.due <= clock)
+                        .length
+                    }{" "}
+                    reviews due
+                  </strong>
+                  <p>
+                    {Object.keys(reviews).length} cards practiced ·{" "}
+                    {cards.length - Object.keys(reviews).length} new. Scrolling
+                    and revealing do not count as recall.
+                  </p>
+                  <button
+                    className="primary"
+                    onClick={() => {
+                      setPractice(true);
+                      setCourse("All courses");
+                      setView("feed");
+                    }}
+                  >
+                    Browse all material
+                  </button>
+                  <a href="/feed-guide">How your learning feed works</a>
+                </section>
+              )}
               {view === "courses" ? (
                 <div className="course-grid">
                   {courses
@@ -342,6 +473,7 @@ export default function Home() {
                         key={c}
                         onClick={() => {
                           setCourse(c);
+                          setPractice(false);
                           setView("feed");
                         }}
                       >
@@ -388,13 +520,13 @@ export default function Home() {
                     }
                   }}
                 >
-                  {visible.map((card, index) => {
-                    const open = revealed.includes(card.id);
+                  {visible.map(({ card, key }, index) => {
+                    const open = revealed.includes(key);
                     const learned = progress.learned.includes(card.id);
                     return (
                       <article
                         className={`study-card reel-card tone-${card.color}`}
-                        key={card.id}
+                        key={key}
                         aria-label={`Card ${index + 1} of ${visible.length}`}
                       >
                         <div className="card-top">
@@ -438,7 +570,12 @@ export default function Home() {
                         >
                           <div className="reel-kicker">
                             <span className={`dot ${card.color}`} />
-                            {card.kind}
+                            {practice || view === "saved"
+                              ? "BROWSE"
+                              : reviews[card.id]
+                                ? "RETRIEVAL PRACTICE"
+                                : "NEW IDEA"}{" "}
+                            · {card.kind}
                           </div>
                           <div className="card-body">
                             <h2>{card.title}</h2>
@@ -461,62 +598,91 @@ export default function Home() {
                               onClick={() =>
                                 setRevealed((r) =>
                                   open
-                                    ? r.filter((x) => x !== card.id)
-                                    : [...r, card.id],
+                                    ? r.filter((x) => x !== key)
+                                    : [...r, key],
                                 )
                               }
                             >
                               {open
                                 ? "Hide explanation"
-                                : "Think about it. Then reveal."}
+                                : "Recall your answer, then reveal."}
                               {open ? (
                                 <ChevronDown size={17} />
                               ) : (
                                 <ArrowRight size={17} />
                               )}
                             </button>
-                            {open && (
-                              <div className="rating">
-                                <span>How did that feel?</span>
-                                <button
-                                  onClick={() => {
-                                    setProgress((p) => ({
-                                      ...p,
-                                      learned: p.learned.filter(
-                                        (x) => x !== card.id,
-                                      ),
-                                      saved: p.saved.includes(card.id)
-                                        ? p.saved
-                                        : [...p.saved, card.id],
-                                    }));
-                                    setMessage("Saved for another look.");
-                                  }}
-                                >
-                                  Review later
-                                </button>
-                                <button
-                                  className={learned ? "mastered" : ""}
-                                  onClick={() =>
-                                    setProgress((p) => ({
-                                      ...p,
-                                      learned: p.learned.includes(card.id)
-                                        ? p.learned
-                                        : [...p.learned, card.id],
-                                    }))
-                                  }
-                                >
-                                  <Check size={14} />
-                                  {learned ? "Got it" : "I got it"}
-                                </button>
-                              </div>
-                            )}
+                            {open &&
+                              (practice || view === "saved" ? (
+                                <p className="review-status">
+                                  Browse mode · your review schedule stays
+                                  unchanged.
+                                </p>
+                              ) : rated[key] ? (
+                                <p className="review-status" role="status">
+                                  {rated[key]} · swipe for the next idea.
+                                </p>
+                              ) : (
+                                <div className="rating recall-rating">
+                                  <span>
+                                    How much did you recall before revealing?
+                                  </span>
+                                  {(
+                                    [
+                                      "again",
+                                      "hard",
+                                      "good",
+                                      "easy",
+                                    ] as Rating[]
+                                  ).map((rating) => (
+                                    <button
+                                      key={rating}
+                                      onClick={() =>
+                                        rateCard(card, key, rating)
+                                      }
+                                      title={
+                                        {
+                                          again: "Could not recall it",
+                                          hard: "Partial answer or needed a hint",
+                                          good: "Correct without a hint",
+                                          easy: "Correct and effortless",
+                                        }[rating]
+                                      }
+                                    >
+                                      <strong>
+                                        {rating[0].toUpperCase() +
+                                          rating.slice(1)}
+                                      </strong>
+                                      <span className="rating-meaning">
+                                        {
+                                          {
+                                            again: "Forgot",
+                                            hard: "With help",
+                                            good: "Unaided",
+                                            easy: "Effortless",
+                                          }[rating]
+                                        }
+                                      </span>
+                                      <small>
+                                        {intervalLabel(
+                                          schedule(
+                                            reviews[card.id],
+                                            rating,
+                                            clock,
+                                          ).due - clock,
+                                        )}
+                                      </small>
+                                    </button>
+                                  ))}
+                                </div>
+                              ))}
                           </div>
                           <footer className="card-footer">
                             <FileText size={14} />
                             <span>{card.source}</span>
                             {learned ? (
                               <span className="learned-label">
-                                <Check size={13} /> Learned
+                                <Check size={13} /> Reviewed
                               </span>
                             ) : (
                               <span className="source-label">
@@ -552,25 +718,45 @@ export default function Home() {
                       </article>
                     );
                   })}
+                  {visible.length > 0 && (
+                    <section className="session-end">
+                      <Sprout size={30} />
+                      <h2>You’re through this session.</h2>
+                      <p>
+                        Unrated cards remain new. Rated cards will return when
+                        due. Take a break, or try a full problem on paper.
+                      </p>
+                      <button
+                        className="primary"
+                        onClick={() => {
+                          setPractice(false);
+                          setSession((s) => s + 1);
+                        }}
+                      >
+                        Refresh learning feed
+                      </button>
+                    </section>
+                  )}
                 </div>
               )}
-              {view !== "courses" && !visible.length && (
+              {ready && view !== "courses" && !visible.length && (
                 <div className="empty">
                   <Bookmark size={32} />
-                  <h2>Room for your next discovery.</h2>
+                  <h2>You’re caught up for now.</h2>
                   <p>
                     {view === "saved"
                       ? "Tap the bookmark on any card to keep it here."
-                      : "Add course material to start learning."}
+                      : "Your next reviews will appear when they’re due. You can also browse all your material."}
                   </p>
                   <button
                     className="primary"
                     onClick={() => {
+                      setPractice(true);
                       setView("feed");
                       setCourse("All courses");
                     }}
                   >
-                    Explore your feed
+                    Browse all material
                   </button>
                 </div>
               )}

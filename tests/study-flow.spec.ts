@@ -15,18 +15,18 @@ test("curated feed reveals explanations and persists bookmarks and review", asyn
   const card = page.locator("article.study-card").first();
   await expect(card.locator(".answer")).toHaveCount(0);
   await card
-    .getByRole("button", { name: "Think about it. Then reveal." })
+    .getByRole("button", { name: "Recall your answer, then reveal." })
     .click();
   await expect(card.locator(".answer")).toContainText("2⁻⁴⁶");
   await card.getByRole("button", { name: "Save card", exact: true }).click();
-  await card.getByRole("button", { name: "I got it", exact: true }).click();
+  await card.getByRole("button", { name: /^Good/ }).click();
   await page.reload();
   await page
     .locator("nav")
     .getByRole("button", { name: /Saved cards/ })
     .click();
   await expect(page.locator("article.study-card")).toHaveCount(1);
-  await expect(page.locator(".learned-label")).toContainText("Learned");
+  await expect(page.locator(".learned-label")).toContainText("Reviewed");
   await page.screenshot({ path: "tmp/saved-desktop.png", fullPage: false });
 });
 test("course filter includes cross-course connections and guide is reachable", async ({
@@ -105,9 +105,13 @@ test("mobile layout fits the viewport and supports navigation", async ({
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
-  await expect(
-    page.getByRole("heading", { name: "Meet your new rabbit hole." }),
-  ).toBeVisible();
+  await expect(page.locator(".reel-viewport")).toBeVisible();
+  const bounds = await page.locator(".reel-viewport").boundingBox();
+  expect(bounds?.y).toBe(0);
+  expect(bounds?.width).toBe(390);
+  expect(bounds?.height).toBeGreaterThan(770);
+  await expect(page.locator(".heading")).toBeHidden();
+  await expect(page.locator(".filters")).toBeHidden();
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= window.innerWidth,
@@ -178,7 +182,8 @@ for (const viewport of [
     expect(dimensions.height).toBeGreaterThan(250);
     expect(dimensions.height).toBeLessThan(dimensions.screen);
     expect(dimensions.scroll).toBeGreaterThan(dimensions.height * 2);
-    await page.getByRole("button", { name: "Next card", exact: true }).click();
+    await reel.focus();
+    await page.keyboard.press("ArrowDown");
     await expect
       .poll(() => reel.evaluate((e) => Math.abs(e.scrollTop - e.clientHeight)))
       .toBeLessThan(2);
@@ -186,19 +191,27 @@ for (const viewport of [
     await page.keyboard.press("ArrowUp");
     await expect.poll(() => reel.evaluate((e) => e.scrollTop)).toBeLessThan(2);
     await card
-      .getByRole("button", { name: "Think about it. Then reveal." })
+      .getByRole("button", { name: "Recall your answer, then reveal." })
       .click();
     await expect(card.locator(".answer")).toBeVisible();
-    await card.getByRole("button", { name: "I got it", exact: true }).click();
+    await card.getByRole("button", { name: /^Good/ }).click();
     expect(await reel.evaluate((e) => e.scrollTop)).toBeLessThan(2);
     await card
       .locator(".card-reading")
       .evaluate((e) => (e.scrollTop = e.scrollHeight));
     await expect(card.locator(".sources summary")).toBeInViewport();
-    await page
-      .locator(".filters")
-      .getByRole("button", { name: "AM 207", exact: true })
-      .click();
+    if (viewport.width < 650) {
+      await page
+        .locator("nav")
+        .getByRole("button", { name: /My courses/ })
+        .click();
+      await page.locator(".course-tile").filter({ hasText: "AM 207" }).click();
+    } else {
+      await page
+        .locator(".filters")
+        .getByRole("button", { name: "AM 207", exact: true })
+        .click();
+    }
     await expect.poll(() => reel.evaluate((e) => e.scrollTop)).toBeLessThan(2);
     await expect(page.locator(".reel-position")).toContainText("1 /");
     await page.screenshot({ path: `tmp/reels-verified-${viewport.width}.png` });

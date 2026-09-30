@@ -36,7 +36,7 @@ The extraction helper `scripts/extract-courses.py` uses Python with `pypdf` to w
 
 ## Limits
 
-No live AI generation, OCR, authentication, database, or spaced-repetition scheduling. There is no card-count cap or daily quota. The progress indicator tracks self-reported review of the current library, not proven mastery. Clearing browser storage clears saved progress. Large imported card collections can exceed browser storage limits.
+No live AI generation, OCR, authentication, or server database. Spaced-review scheduling runs locally in your browser. There is no card-count cap or daily quota. The progress indicator tracks self-reported review of the current library, not proven mastery. Clearing browser storage clears saved progress. Large imported card collections can exceed browser storage limits.
 
 Run this as a local personal app. The source endpoint serves only files referenced by the master feed, but it has no authentication. Do not expose a deployment containing private course materials without adding access control. Uploaded files are parsed on the app server and are not retained there; generated cards are saved in localStorage. The server must have the local `courses/` files to open source references.
 
@@ -51,3 +51,7 @@ npm run build
 Stack: Next.js App Router, React, TypeScript, Lucide, pdf-parse, Mammoth.
 
 Browser workflow checks: `npm test` (Playwright, configured to use installed Google Chrome). They exercise reveal/save/reload, course filtering, mobile layout, PDF import, uncapped card extraction, and source access boundaries.
+
+## Learning schedule
+
+The learning feed mixes due reviews with new, prerequisite-ordered cards. Rate actual recall after revealing; swipes and bookmarks do not affect scheduling. Saved cards and Browse all material leave the schedule unchanged. All progress stays in this browser. See [LEARNING.md](content/LEARNING.md) for interval rules, migration, and limitations.
