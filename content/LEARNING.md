@@ -28,3 +28,7 @@ Retrieval practice, spacing, and feedback motivate this design. The exact interv
 - [Retrieval practice](https://www.retrievalpractice.org/retrievalpractice)
 - [Spacing](https://www.retrievalpractice.org/spacing)
 - [Feedback](https://www.retrievalpractice.org/feedback)
+
+## Resetting progress
+
+Open My courses → Reset learning progress and confirm. This clears recall ratings, review dates, and reviewed flags on this device. Your course material, imported cards, and saved bookmarks remain. Cancel leaves progress untouched.

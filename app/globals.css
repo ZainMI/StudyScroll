@@ -2058,3 +2058,15 @@ h1 {
   font-weight: 400;
   color: #64755a;
 }
+
+.learning-summary .storage-note {
+  font-size: 12px;
+  margin-top: 24px;
+}
+.reset-progress {
+  padding: 12px 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: #765b4c;
+  font-size: 12px;
+}

@@ -147,3 +147,50 @@ test("favicon is a real ICO and is linked by the page", async ({
     /favicon.ico/,
   );
 });
+
+test("reset can be cancelled and clears only learning progress after confirmation", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const card = page.locator(".study-card").first();
+  await card.getByRole("button", { name: "Save card", exact: true }).click();
+  await card
+    .getByRole("button", { name: "Recall your answer, then reveal." })
+    .click();
+  await card.getByRole("button", { name: /^Good/ }).click();
+  const before = await page.evaluate(() =>
+    JSON.parse(localStorage.getItem("studyscroll-v1")!),
+  );
+  await page
+    .locator("nav")
+    .getByRole("button", { name: /My courses/ })
+    .click();
+  page.once("dialog", (dialog) => dialog.dismiss());
+  await page
+    .getByRole("button", { name: "Reset learning progress", exact: true })
+    .click();
+  expect(
+    await page.evaluate(
+      () => JSON.parse(localStorage.getItem("studyscroll-v1")!).reviews,
+    ),
+  ).toEqual(before.reviews);
+  page.once("dialog", (dialog) => dialog.accept());
+  await page
+    .getByRole("button", { name: "Reset learning progress", exact: true })
+    .click();
+  await expect
+    .poll(() =>
+      page.evaluate(
+        () => JSON.parse(localStorage.getItem("studyscroll-v1")!).reviews,
+      ),
+    )
+    .toEqual({});
+  await page.reload();
+  const after = await page.evaluate(() =>
+    JSON.parse(localStorage.getItem("studyscroll-v1")!),
+  );
+  expect(after.progress.learned).toEqual([]);
+  expect(after.progress.saved).toEqual(before.progress.saved);
+  expect(after.cards).toEqual(before.cards);
+  expect(after.reviews).toEqual({});
+});

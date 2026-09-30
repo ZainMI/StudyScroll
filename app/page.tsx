@@ -211,6 +211,26 @@ export default function Home() {
         : [...p.learned, card.id],
     }));
   };
+  const resetProgress = () => {
+    if (
+      !window.confirm(
+        "Reset all learning progress on this device? This clears recall ratings and review dates. Your course material and saved cards will stay.",
+      )
+    )
+      return;
+    reviewsRef.current = {};
+    ratedRef.current.clear();
+    setReviews({});
+    setRated({});
+    setRevealed([]);
+    setProgress((p) => ({ ...p, learned: [] }));
+    setPractice(false);
+    setClock(Date.now());
+    setSession((s) => s + 1);
+    setMessage(
+      "Learning progress reset. Your material and saved cards are still here.",
+    );
+  };
   const toggleSave = (id: string) =>
     setProgress((p) => ({
       ...p,
@@ -461,6 +481,13 @@ export default function Home() {
                     Browse all material
                   </button>
                   <a href="/feed-guide">How your learning feed works</a>
+                  <p className="storage-note">
+                    Progress is saved in this browser on this device. It does
+                    not sync between devices.
+                  </p>
+                  <button className="reset-progress" onClick={resetProgress}>
+                    Reset learning progress
+                  </button>
                 </section>
               )}
               {view === "courses" ? (
