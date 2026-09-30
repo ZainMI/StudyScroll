@@ -1,8 +1,8 @@
 # StudyScroll: master feed
 
-Updated 2026-09-29. 661 curated cards.
+Updated 2026-09-30. 908 curated cards.
 
-Short question-and-answer flashcards covering the core concepts in AM 207 lectures 00–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2 and supporting material. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded.
+Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2 and supporting material. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference.
 
 The editable source of truth is [master-feed.json](master-feed.json). This readable document is generated with `npm run feed:build`. Edit the JSON, then regenerate; the Next app imports that same JSON directly.
 
@@ -13,6 +13,7 @@ These are authored learning prompts derived from the listed materials, not quota
 - **AM 205:** floating-point spacing, rounding, matrix operations, linear-map geometry, pivoting, low-rank approximation, algebraic least squares.
 - **AM 207:** probability foundations, inverse transforms, Monte Carlo, Metropolis–Hastings, Markov dynamics, jump processes, SSA, tau leaping, and Bayesian uncertainty.
 - **STAT 244:** linear algebra, estimability, projections, contrast coding, least squares and GLS, inference, multicollinearity, PCR/PLS, and regression diagnostics.
+- **AM 209a:** lectures 1–8 from the supplied COMPSCI 1090A course: data preparation, visualization, kNN, regression, cross-validation, ridge/lasso, and bootstrap inference. See [AM209A_COVERAGE.md](AM209A_COVERAGE.md).
 See [LECTURE_COVERAGE.md](LECTURE_COVERAGE.md) for the lecture-note map, [coverage.json](coverage.json) for learning-objective mappings and [CURATION.md](CURATION.md) for the uncapped content workflow. Scope is current lectures and assignments with supporting textbook sections. No fixed total, per-course quota, or daily card limit applies.
 
 ## Feed
@@ -2677,121 +2678,7 @@ Card ID: `am205-pseudoinverse-threshold`
 
 ---
 
-### 141. How is a model different from a system?
-
-**AM 207 · Models and uncertainty · QUICK RECALL**
-
-<details>
-<summary>Reveal explanation</summary>
-
-The system is what you study. A model is a simplified mathematical description of it.
-
-**Intuition:** A useful model keeps the features relevant to the question.
-
-</details>
-
-Sources: [Lecture 00 · p. 29](../courses/am207/lecnotes/Lecture_00_Introduction.pdf#page=29)
-
-Card ID: `am207-system-model`
-
----
-
-### 142. What does a simulation do?
-
-**AM 207 · Models and uncertainty · QUICK RECALL**
-
-<details>
-<summary>Reveal explanation</summary>
-
-It generates outcomes from a model using specified inputs and rules.
-
-**Intuition:** Simulation explores the model; observations test its connection to reality.
-
-</details>
-
-Sources: [Lecture 00 · p. 29](../courses/am207/lecnotes/Lecture_00_Introduction.pdf#page=29)
-
-Card ID: `am207-simulation-model`
-
----
-
-### 143. What is uncertainty propagation?
-
-**AM 207 · Models and uncertainty · QUICK RECALL**
-
-<details>
-<summary>Reveal explanation</summary>
-
-Following uncertain inputs through a model to obtain uncertainty in its outputs.
-
-**Intuition:** Uncertain inputs produce a distribution of predictions.
-
-</details>
-
-Sources: [Lecture 00 · p. 33](../courses/am207/lecnotes/Lecture_00_Introduction.pdf#page=33)
-
-Card ID: `am207-input-output-uncertainty`
-
----
-
-### 144. What does verification check?
-
-**AM 207 · Models and uncertainty · QUICK RECALL**
-
-<details>
-<summary>Reveal explanation</summary>
-
-Whether the code and numerical method solve the chosen mathematical model correctly.
-
-**Intuition:** Verification checks the implementation.
-
-</details>
-
-Sources: [Lecture 00 · p. 35](../courses/am207/lecnotes/Lecture_00_Introduction.pdf#page=35)
-
-Card ID: `am207-verification-question`
-
----
-
-### 145. What does validation check?
-
-**AM 207 · Models and uncertainty · QUICK RECALL**
-
-<details>
-<summary>Reveal explanation</summary>
-
-Whether a model describes relevant observations well enough for its intended use.
-
-**Intuition:** A correctly solved model can still describe reality poorly.
-
-</details>
-
-Sources: [Lecture 00 · p. 35](../courses/am207/lecnotes/Lecture_00_Introduction.pdf#page=35)
-
-Card ID: `am207-validation-question`
-
----
-
-### 146. Why report a predictive distribution instead of only a best prediction?
-
-**AM 207 · Models and uncertainty · QUICK RECALL**
-
-<details>
-<summary>Reveal explanation</summary>
-
-It expresses which outcomes are plausible and how uncertain the prediction is.
-
-**Intuition:** Decisions often depend on the tails as well as the center.
-
-</details>
-
-Sources: [Lecture 00 · p. 41](../courses/am207/lecnotes/Lecture_00_Introduction.pdf#page=41)
-
-Card ID: `am207-prediction-distribution`
-
----
-
-### 147. How does uncertainty differ from error?
+### 141. How does uncertainty differ from error?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -2810,7 +2697,7 @@ Card ID: `am207-uncertainty-error`
 
 ---
 
-### 148. What is an event in probability?
+### 142. What is an event in probability?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -2829,7 +2716,7 @@ Card ID: `am207-event-set`
 
 ---
 
-### 149. What three rules define a probability measure?
+### 143. What three rules define a probability measure?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -2848,7 +2735,7 @@ Card ID: `am207-probability-axioms`
 
 ---
 
-### 150. How do you find the probability that A does not happen?
+### 144. How do you find the probability that A does not happen?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -2867,7 +2754,7 @@ Card ID: `am207-complement-event`
 
 ---
 
-### 151. Why subtract P(A∩B) when finding P(A∪B)?
+### 145. Why subtract P(A∩B) when finding P(A∪B)?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -2886,7 +2773,7 @@ Card ID: `am207-union-overlap`
 
 ---
 
-### 152. Why divide by P(B) in P(A given B)?
+### 146. Why divide by P(B) in P(A given B)?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -2905,7 +2792,7 @@ Card ID: `am207-conditional-denominator`
 
 ---
 
-### 153. How do mutually exclusive cases Bᵢ help compute P(A)?
+### 147. How do mutually exclusive cases Bᵢ help compute P(A)?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -2924,7 +2811,7 @@ Card ID: `am207-total-probability`
 
 ---
 
-### 154. What does independence of A and B mean?
+### 148. What does independence of A and B mean?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -2943,7 +2830,7 @@ Card ID: `am207-independence-meaning`
 
 ---
 
-### 155. What is an ensemble?
+### 149. What is an ensemble?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
@@ -2962,7 +2849,7 @@ Card ID: `am207-ensemble-meaning`
 
 ---
 
-### 156. Do different members of an ensemble interact?
+### 150. Do different members of an ensemble interact?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
@@ -2981,7 +2868,7 @@ Card ID: `am207-ensemble-members`
 
 ---
 
-### 157. Can the expected number of molecules be noninteger?
+### 151. Can the expected number of molecules be noninteger?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
@@ -3000,7 +2887,7 @@ Card ID: `am207-ensemble-fraction`
 
 ---
 
-### 158. Why is the mean of an event indicator its probability?
+### 152. Why is the mean of an event indicator its probability?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
@@ -3019,7 +2906,7 @@ Card ID: `am207-indicator-probability`
 
 ---
 
-### 159. What is a random variable?
+### 153. What is a random variable?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
@@ -3038,7 +2925,7 @@ Card ID: `am207-random-variable-map`
 
 ---
 
-### 160. Can a probability density exceed 1?
+### 154. Can a probability density exceed 1?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
@@ -3057,7 +2944,7 @@ Card ID: `am207-density-not-probability`
 
 ---
 
-### 161. What does F(x) tell you?
+### 155. What does F(x) tell you?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
@@ -3076,7 +2963,7 @@ Card ID: `am207-cdf-definition`
 
 ---
 
-### 162. How do you obtain P(a<X≤b) from a CDF?
+### 156. How do you obtain P(a<X≤b) from a CDF?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
@@ -3095,7 +2982,7 @@ Card ID: `am207-interval-cdf`
 
 ---
 
-### 163. How is variance related to the first two moments?
+### 157. How is variance related to the first two moments?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
@@ -3114,7 +3001,7 @@ Card ID: `am207-variance-second-moment`
 
 ---
 
-### 164. Is E[g(X)] always equal to g(E[X])?
+### 158. Is E[g(X)] always equal to g(E[X])?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
@@ -3133,7 +3020,7 @@ Card ID: `am207-nonlinear-average`
 
 ---
 
-### 165. What makes a stochastic process more than one random variable?
+### 159. What makes a stochastic process more than one random variable?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
@@ -3152,7 +3039,7 @@ Card ID: `am207-stochastic-process`
 
 ---
 
-### 166. If X is normal and Y=eˣ, what values can Y take?
+### 160. If X is normal and Y=eˣ, what values can Y take?
 
 **AM 207 · Probability transforms · QUICK RECALL**
 
@@ -3171,7 +3058,7 @@ Card ID: `am207-lognormal-support`
 
 ---
 
-### 167. Why does a lognormal density contain a factor 1/y?
+### 161. Why does a lognormal density contain a factor 1/y?
 
 **AM 207 · Probability transforms · QUICK RECALL**
 
@@ -3190,7 +3077,7 @@ Card ID: `am207-lognormal-jacobian`
 
 ---
 
-### 168. How can inverse-CDF sampling handle a discrete distribution?
+### 162. How can inverse-CDF sampling handle a discrete distribution?
 
 **AM 207 · Probability transforms · QUICK RECALL**
 
@@ -3209,7 +3096,7 @@ Card ID: `am207-generalized-inverse`
 
 ---
 
-### 169. What does a PRNG seed control?
+### 163. What does a PRNG seed control?
 
 **AM 207 · Random number generation · QUICK RECALL**
 
@@ -3228,7 +3115,7 @@ Card ID: `am207-seed-determinism`
 
 ---
 
-### 170. Why must a finite-state PRNG eventually repeat?
+### 164. Why must a finite-state PRNG eventually repeat?
 
 **AM 207 · Random number generation · QUICK RECALL**
 
@@ -3247,7 +3134,7 @@ Card ID: `am207-finite-state-period`
 
 ---
 
-### 171. How does a linear congruential generator update its state?
+### 165. How does a linear congruential generator update its state?
 
 **AM 207 · Random number generation · QUICK RECALL**
 
@@ -3266,7 +3153,7 @@ Card ID: `am207-lcg-rule`
 
 ---
 
-### 172. Can passing randomness tests prove that PRNG outputs are independent?
+### 166. Can passing randomness tests prove that PRNG outputs are independent?
 
 **AM 207 · Random number generation · QUICK RECALL**
 
@@ -3285,7 +3172,7 @@ Card ID: `am207-random-tests-limit`
 
 ---
 
-### 173. Why should you avoid resetting the same seed inside a sampling loop?
+### 167. Why should you avoid resetting the same seed inside a sampling loop?
 
 **AM 207 · Random number generation · QUICK RECALL**
 
@@ -3304,7 +3191,7 @@ Card ID: `am207-reseed-loop`
 
 ---
 
-### 174. How does uniform sampling on a region D estimate an integral?
+### 168. How does uniform sampling on a region D estimate an integral?
 
 **AM 207 · Monte Carlo integration · QUICK RECALL**
 
@@ -3323,7 +3210,7 @@ Card ID: `am207-uniform-volume-general`
 
 ---
 
-### 175. What changes when several x values map to the same y?
+### 169. What changes when several x values map to the same y?
 
 **AM 207 · Probability transforms · QUICK RECALL**
 
@@ -3342,7 +3229,7 @@ Card ID: `am207-transform-branches`
 
 ---
 
-### 176. For X uniform on (0,1), what is the density of Y=4(X−1/2)²?
+### 170. For X uniform on (0,1), what is the density of Y=4(X−1/2)²?
 
 **AM 207 · Probability transforms · QUICK RECALL**
 
@@ -3361,7 +3248,7 @@ Card ID: `am207-squared-uniform-density`
 
 ---
 
-### 177. When does F(X) have a uniform distribution?
+### 171. When does F(X) have a uniform distribution?
 
 **AM 207 · Probability transforms · QUICK RECALL**
 
@@ -3380,7 +3267,7 @@ Card ID: `am207-probability-integral-condition`
 
 ---
 
-### 178. Where must a rejection-sampling envelope dominate the target?
+### 172. Where must a rejection-sampling envelope dominate the target?
 
 **AM 207 · Rejection sampling · QUICK RECALL**
 
@@ -3399,7 +3286,7 @@ Card ID: `am207-rejection-global-bound`
 
 ---
 
-### 179. For normalized p and proposal q with p≤Mq, what fraction of proposals is accepted on average?
+### 173. For normalized p and proposal q with p≤Mq, what fraction of proposals is accepted on average?
 
 **AM 207 · Rejection sampling · QUICK RECALL**
 
@@ -3418,7 +3305,7 @@ Card ID: `am207-rejection-acceptance-fraction`
 
 ---
 
-### 180. Can a proposal with zero density in part of the target's support work?
+### 174. Can a proposal with zero density in part of the target's support work?
 
 **AM 207 · Rejection sampling · QUICK RECALL**
 
@@ -3437,7 +3324,7 @@ Card ID: `am207-rejection-support`
 
 ---
 
-### 181. How does MCMC reverse the usual stochastic-modeling problem?
+### 175. How does MCMC reverse the usual stochastic-modeling problem?
 
 **AM 207 · Markov chain sampling · QUICK RECALL**
 
@@ -3456,7 +3343,7 @@ Card ID: `am207-mcmc-reverse-design`
 
 ---
 
-### 182. Is rejection in Metropolis–Hastings an absence of a transition?
+### 176. Is rejection in Metropolis–Hastings an absence of a transition?
 
 **AM 207 · Markov chain sampling · QUICK RECALL**
 
@@ -3475,7 +3362,7 @@ Card ID: `am207-mh-holding`
 
 ---
 
-### 183. Why can Metropolis–Hastings use an unnormalized target?
+### 177. Why can Metropolis–Hastings use an unnormalized target?
 
 **AM 207 · Markov chain sampling · QUICK RECALL**
 
@@ -3494,7 +3381,7 @@ Card ID: `am207-mh-normalizer`
 
 ---
 
-### 184. Does an invariant target alone guarantee convergence from any starting point?
+### 178. Does an invariant target alone guarantee convergence from any starting point?
 
 **AM 207 · Markov chain sampling · QUICK RECALL**
 
@@ -3513,7 +3400,7 @@ Card ID: `am207-stationarity-convergence`
 
 ---
 
-### 185. Does the Markov property make consecutive states independent?
+### 179. Does the Markov property make consecutive states independent?
 
 **AM 207 · Markov chain sampling · QUICK RECALL**
 
@@ -3532,7 +3419,7 @@ Card ID: `am207-markov-not-iid`
 
 ---
 
-### 186. Why can a very high acceptance rate signal inefficient sampling?
+### 180. Why can a very high acceptance rate signal inefficient sampling?
 
 **AM 207 · Markov chain sampling · QUICK RECALL**
 
@@ -3551,7 +3438,7 @@ Card ID: `am207-acceptance-too-high`
 
 ---
 
-### 187. Why can very large proposals slow exploration?
+### 181. Why can very large proposals slow exploration?
 
 **AM 207 · Markov chain sampling · QUICK RECALL**
 
@@ -3570,7 +3457,7 @@ Card ID: `am207-acceptance-too-low`
 
 ---
 
-### 188. Is one acceptance-rate target optimal for every MCMC problem?
+### 182. Is one acceptance-rate target optimal for every MCMC problem?
 
 **AM 207 · Markov chain sampling · QUICK RECALL**
 
@@ -3589,7 +3476,7 @@ Card ID: `am207-acceptance-target-universal`
 
 ---
 
-### 189. What is the variance of an average of N IID draws with variance σ²?
+### 183. What is the variance of an average of N IID draws with variance σ²?
 
 **AM 207 · Monte Carlo integration · QUICK RECALL**
 
@@ -3608,7 +3495,7 @@ Card ID: `am207-iid-mean-variance`
 
 ---
 
-### 190. What assumption supports the usual 1/√N Monte Carlo error scale?
+### 184. What assumption supports the usual 1/√N Monte Carlo error scale?
 
 **AM 207 · Monte Carlo integration · QUICK RECALL**
 
@@ -3627,7 +3514,7 @@ Card ID: `am207-mc-finite-variance`
 
 ---
 
-### 191. Does a dimension-independent 1/√N rate mean high-dimensional integration is easy?
+### 185. Does a dimension-independent 1/√N rate mean high-dimensional integration is easy?
 
 **AM 207 · Monte Carlo integration · QUICK RECALL**
 
@@ -3646,7 +3533,7 @@ Card ID: `am207-mc-dimension-constant`
 
 ---
 
-### 192. Which expectation equals ∫₀∞cos(2x)e⁻ˣdx?
+### 186. Which expectation equals ∫₀∞cos(2x)e⁻ˣdx?
 
 **AM 207 · Monte Carlo integration · QUICK RECALL**
 
@@ -3665,7 +3552,7 @@ Card ID: `am207-exponential-integral-example`
 
 ---
 
-### 193. Where must an importance proposal q be positive?
+### 187. Where must an importance proposal q be positive?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
@@ -3684,7 +3571,7 @@ Card ID: `am207-importance-support`
 
 ---
 
-### 194. What determines importance-sampling variance?
+### 188. What determines importance-sampling variance?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
@@ -3703,7 +3590,7 @@ Card ID: `am207-importance-variance`
 
 ---
 
-### 195. What proposal shape minimizes variance for estimating Eₚ[f(X)]?
+### 189. What proposal shape minimizes variance for estimating Eₚ[f(X)]?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
@@ -3722,7 +3609,7 @@ Card ID: `am207-importance-optimal-shape`
 
 ---
 
-### 196. Why is the ideal proposal often unavailable in practice?
+### 190. Why is the ideal proposal often unavailable in practice?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
@@ -3741,7 +3628,7 @@ Card ID: `am207-importance-zero-variance-catch`
 
 ---
 
-### 197. For X∼N(0,σ²I) in d dimensions, where is its typical radius for large d?
+### 191. For X∼N(0,σ²I) in d dimensions, where is its typical radius for large d?
 
 **AM 207 · High-dimensional geometry · QUICK RECALL**
 
@@ -3760,7 +3647,7 @@ Card ID: `am207-normal-typical-radius`
 
 ---
 
-### 198. How variable is the squared radius of a d-dimensional isotropic normal?
+### 192. How variable is the squared radius of a d-dimensional isotropic normal?
 
 **AM 207 · High-dimensional geometry · QUICK RECALL**
 
@@ -3779,7 +3666,7 @@ Card ID: `am207-normal-radius-variance`
 
 ---
 
-### 199. Why can the highest-density point lie far from most probability mass?
+### 193. Why can the highest-density point lie far from most probability mass?
 
 **AM 207 · High-dimensional geometry · QUICK RECALL**
 
@@ -3798,7 +3685,7 @@ Card ID: `am207-density-mode-mass`
 
 ---
 
-### 200. What is the state of an Ising model?
+### 194. What is the state of an Ising model?
 
 **AM 207 · Statistical physics examples · QUICK RECALL**
 
@@ -3817,7 +3704,7 @@ Card ID: `am207-ising-state`
 
 ---
 
-### 201. For energy −JΣsᵢsⱼ with J>0, which neighbors are favored?
+### 195. For energy −JΣsᵢsⱼ with J>0, which neighbors are favored?
 
 **AM 207 · Statistical physics examples · QUICK RECALL**
 
@@ -3836,7 +3723,7 @@ Card ID: `am207-ising-ferromagnetic`
 
 ---
 
-### 202. How does temperature affect Boltzmann probabilities?
+### 196. How does temperature affect Boltzmann probabilities?
 
 **AM 207 · Statistical physics examples · QUICK RECALL**
 
@@ -3855,7 +3742,7 @@ Card ID: `am207-boltzmann-temperature`
 
 ---
 
-### 203. What is the energy change from flipping one Ising spin sᵢ?
+### 197. What is the energy change from flipping one Ising spin sᵢ?
 
 **AM 207 · Statistical physics examples · QUICK RECALL**
 
@@ -3874,7 +3761,7 @@ Card ID: `am207-ising-flip-cost`
 
 ---
 
-### 204. What goes wrong if an energy sum counts each neighboring pair twice?
+### 198. What goes wrong if an energy sum counts each neighboring pair twice?
 
 **AM 207 · Statistical physics examples · QUICK RECALL**
 
@@ -3893,7 +3780,7 @@ Card ID: `am207-ising-double-count`
 
 ---
 
-### 205. Why allow uphill energy moves in Metropolis sampling?
+### 199. Why allow uphill energy moves in Metropolis sampling?
 
 **AM 207 · Statistical physics examples · QUICK RECALL**
 
@@ -3912,7 +3799,7 @@ Card ID: `am207-energy-uphill`
 
 ---
 
-### 206. Where are the minima of (x²−1/2)²?
+### 200. Where are the minima of (x²−1/2)²?
 
 **AM 207 · Multimodal sampling · QUICK RECALL**
 
@@ -3931,7 +3818,7 @@ Card ID: `am207-double-well-minima`
 
 ---
 
-### 207. Why can a chain appear stable while missing half a target distribution?
+### 201. Why can a chain appear stable while missing half a target distribution?
 
 **AM 207 · Multimodal sampling · QUICK RECALL**
 
@@ -3950,7 +3837,7 @@ Card ID: `am207-mode-trapping`
 
 ---
 
-### 208. What units does a transition rate have?
+### 202. What units does a transition rate have?
 
 **AM 207 · Jump processes · QUICK RECALL**
 
@@ -3969,7 +3856,7 @@ Card ID: `am207-master-rate-units`
 
 ---
 
-### 209. Why evaluate a gain term at n−ν for a jump of size ν?
+### 203. Why evaluate a gain term at n−ν for a jump of size ν?
 
 **AM 207 · Jump processes · QUICK RECALL**
 
@@ -3988,7 +3875,7 @@ Card ID: `am207-master-arrival-state`
 
 ---
 
-### 210. Why might mRNA count alone fail to be a Markov state?
+### 204. Why might mRNA count alone fail to be a Markov state?
 
 **AM 207 · Jump process applications · QUICK RECALL**
 
@@ -4007,7 +3894,7 @@ Card ID: `am207-hidden-promoter-state`
 
 ---
 
-### 211. How can promoter switching create bursts of gene expression?
+### 205. How can promoter switching create bursts of gene expression?
 
 **AM 207 · Jump process applications · QUICK RECALL**
 
@@ -4026,7 +3913,7 @@ Card ID: `am207-gene-burst`
 
 ---
 
-### 212. What is the state change for one SIR infection?
+### 206. What is the state change for one SIR infection?
 
 **AM 207 · Jump process applications · QUICK RECALL**
 
@@ -4045,7 +3932,7 @@ Card ID: `am207-sir-infection-jump`
 
 ---
 
-### 213. What is the state change for one SIR recovery?
+### 207. What is the state change for one SIR recovery?
 
 **AM 207 · Jump process applications · QUICK RECALL**
 
@@ -4064,7 +3951,7 @@ Card ID: `am207-sir-recovery-jump`
 
 ---
 
-### 214. Why can a small stochastic outbreak die out even if deterministic dynamics predict growth?
+### 208. Why can a small stochastic outbreak die out even if deterministic dynamics predict growth?
 
 **AM 207 · Jump process applications · QUICK RECALL**
 
@@ -4083,7 +3970,7 @@ Card ID: `am207-small-outbreak-extinction`
 
 ---
 
-### 215. Why is a queue's departure rate zero when it is empty?
+### 209. Why is a queue's departure rate zero when it is empty?
 
 **AM 207 · Jump process applications · QUICK RECALL**
 
@@ -4102,7 +3989,7 @@ Card ID: `am207-queue-boundary`
 
 ---
 
-### 216. When does a basic M/M/1 queue have a stationary queue-length distribution?
+### 210. When does a basic M/M/1 queue have a stationary queue-length distribution?
 
 **AM 207 · Jump process applications · QUICK RECALL**
 
@@ -4121,7 +4008,7 @@ Card ID: `am207-queue-stability`
 
 ---
 
-### 217. What remains conserved when two clusters merge without losing material?
+### 211. What remains conserved when two clusters merge without losing material?
 
 **AM 207 · Jump process applications · QUICK RECALL**
 
@@ -4140,7 +4027,7 @@ Card ID: `am207-coagulation-conservation`
 
 ---
 
-### 218. What makes a Hawkes process self-exciting?
+### 212. What makes a Hawkes process self-exciting?
 
 **AM 207 · Jump process applications · QUICK RECALL**
 
@@ -4159,7 +4046,7 @@ Card ID: `am207-hawkes-memory`
 
 ---
 
-### 219. What happens between jumps in a piecewise-deterministic Markov process?
+### 213. What happens between jumps in a piecewise-deterministic Markov process?
 
 **AM 207 · Jump process applications · QUICK RECALL**
 
@@ -4178,7 +4065,7 @@ Card ID: `am207-pdmp-meaning`
 
 ---
 
-### 220. When can a diffusion approximation miss important behavior?
+### 214. When can a diffusion approximation miss important behavior?
 
 **AM 207 · Jump process applications · QUICK RECALL**
 
@@ -4197,7 +4084,7 @@ Card ID: `am207-diffusion-limit-caution`
 
 ---
 
-### 221. What does the Chapman–Kolmogorov equation sum over?
+### 215. What does the Chapman–Kolmogorov equation sum over?
 
 **AM 207 · Markov dynamics · QUICK RECALL**
 
@@ -4216,7 +4103,7 @@ Card ID: `am207-ck-intermediate`
 
 ---
 
-### 222. What does the generator L do to an observable f?
+### 216. What does the generator L do to an observable f?
 
 **AM 207 · Markov dynamics · QUICK RECALL**
 
@@ -4235,7 +4122,7 @@ Card ID: `am207-generator-observable`
 
 ---
 
-### 223. How does the generator determine the evolution of E[f(Xₜ)]?
+### 217. How does the generator determine the evolution of E[f(Xₜ)]?
 
 **AM 207 · Markov dynamics · QUICK RECALL**
 
@@ -4254,7 +4141,7 @@ Card ID: `am207-expectation-generator`
 
 ---
 
-### 224. Why does a Markov generator send the constant function 1 to zero?
+### 218. Why does a Markov generator send the constant function 1 to zero?
 
 **AM 207 · Markov dynamics · QUICK RECALL**
 
@@ -4273,7 +4160,7 @@ Card ID: `am207-generator-constant-intuition`
 
 ---
 
-### 225. How do L and its adjoint L† play different roles?
+### 219. How do L and its adjoint L† play different roles?
 
 **AM 207 · Markov dynamics · QUICK RECALL**
 
@@ -4292,7 +4179,7 @@ Card ID: `am207-adjoint-density`
 
 ---
 
-### 226. For total jump rate λ, what is the small-time probability of staying put?
+### 220. For total jump rate λ, what is the small-time probability of staying put?
 
 **AM 207 · Jump processes · QUICK RECALL**
 
@@ -4311,7 +4198,7 @@ Card ID: `am207-small-time-stay`
 
 ---
 
-### 227. Why does a jump generator contain f(new)−f(current)?
+### 221. Why does a jump generator contain f(new)−f(current)?
 
 **AM 207 · Jump processes · QUICK RECALL**
 
@@ -4330,7 +4217,7 @@ Card ID: `am207-jump-generator-difference`
 
 ---
 
-### 228. If each of n particles dies at rate γ, what is the total death rate?
+### 222. If each of n particles dies at rate γ, what is the total death rate?
 
 **AM 207 · Jump processes · QUICK RECALL**
 
@@ -4349,7 +4236,7 @@ Card ID: `am207-pure-death-rate`
 
 ---
 
-### 229. How does the mean count evolve under independent death at rate γ?
+### 223. How does the mean count evolve under independent death at rate γ?
 
 **AM 207 · Jump processes · QUICK RECALL**
 
@@ -4368,7 +4255,7 @@ Card ID: `am207-pure-death-mean`
 
 ---
 
-### 230. How does the diffusion coefficient scale with random-walk step size h and step time τ?
+### 224. How does the diffusion coefficient scale with random-walk step size h and step time τ?
 
 **AM 207 · Diffusion limits · QUICK RECALL**
 
@@ -4387,7 +4274,7 @@ Card ID: `am207-random-walk-diffusion`
 
 ---
 
-### 231. How does SSA avoid solving for every state's probability?
+### 225. How does SSA avoid solving for every state's probability?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -4406,7 +4293,7 @@ Card ID: `am207-ssa-paths-not-density`
 
 ---
 
-### 232. What does “exact” mean for SSA?
+### 226. What does “exact” mean for SSA?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -4425,7 +4312,7 @@ Card ID: `am207-ssa-exact-meaning`
 
 ---
 
-### 233. How do reaction propensities determine the next waiting time?
+### 227. How do reaction propensities determine the next waiting time?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -4444,7 +4331,7 @@ Card ID: `am207-ssa-total-rate`
 
 ---
 
-### 234. How is the next reaction channel chosen?
+### 228. How is the next reaction channel chosen?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -4463,7 +4350,7 @@ Card ID: `am207-ssa-channel-probability`
 
 ---
 
-### 235. What happens when the total propensity is zero?
+### 229. What happens when the total propensity is zero?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -4482,7 +4369,7 @@ Card ID: `am207-ssa-zero-rate`
 
 ---
 
-### 236. Why recompute propensities after a reaction?
+### 230. Why recompute propensities after a reaction?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -4501,7 +4388,7 @@ Card ID: `am207-ssa-recompute`
 
 ---
 
-### 237. What is the count-change vector for 2A+B→3B+C?
+### 231. What is the count-change vector for 2A+B→3B+C?
 
 **AM 207 · Reaction networks · QUICK RECALL**
 
@@ -4520,7 +4407,7 @@ Card ID: `am207-stoichiometry-example`
 
 ---
 
-### 238. Why is an A+B reaction propensity proportional to nA·nB?
+### 232. Why is an A+B reaction propensity proportional to nA·nB?
 
 **AM 207 · Reaction networks · QUICK RECALL**
 
@@ -4539,7 +4426,7 @@ Card ID: `am207-bimolecular-distinct`
 
 ---
 
-### 239. Why does a 2A reaction use nA(nA−1)/2 under a per-pair rate convention?
+### 233. Why does a 2A reaction use nA(nA−1)/2 under a per-pair rate convention?
 
 **AM 207 · Reaction networks · QUICK RECALL**
 
@@ -4558,7 +4445,7 @@ Card ID: `am207-bimolecular-identical`
 
 ---
 
-### 240. Why can a source reaction ∅→A have constant propensity?
+### 234. Why can a source reaction ∅→A have constant propensity?
 
 **AM 207 · Reaction networks · QUICK RECALL**
 
@@ -4577,7 +4464,7 @@ Card ID: `am207-zero-order-propensity`
 
 ---
 
-### 241. How does a lattice diffusion hopping rate scale with cell width h?
+### 235. How does a lattice diffusion hopping rate scale with cell width h?
 
 **AM 207 · Spatial reaction systems · QUICK RECALL**
 
@@ -4596,7 +4483,7 @@ Card ID: `am207-hopping-rate`
 
 ---
 
-### 242. Does hopping between cells change total molecule count?
+### 236. Does hopping between cells change total molecule count?
 
 **AM 207 · Spatial reaction systems · QUICK RECALL**
 
@@ -4615,7 +4502,7 @@ Card ID: `am207-hopping-conservation`
 
 ---
 
-### 243. What makes U+2V→3V autocatalytic?
+### 237. What makes U+2V→3V autocatalytic?
 
 **AM 207 · Spatial reaction systems · QUICK RECALL**
 
@@ -4634,7 +4521,7 @@ Card ID: `am207-autocatalysis-vector`
 
 ---
 
-### 244. What is the intuition behind lateral inhibition?
+### 238. What is the intuition behind lateral inhibition?
 
 **AM 207 · Spatial reaction systems · QUICK RECALL**
 
@@ -4653,7 +4540,7 @@ Card ID: `am207-lateral-inhibition`
 
 ---
 
-### 245. How does tau leaping differ from SSA?
+### 239. How does tau leaping differ from SSA?
 
 **AM 207 · Tau leaping · QUICK RECALL**
 
@@ -4672,7 +4559,7 @@ Card ID: `am207-tau-many-events`
 
 ---
 
-### 246. What is the Poisson mean for channel j over a leap of duration τ?
+### 240. What is the Poisson mean for channel j over a leap of duration τ?
 
 **AM 207 · Tau leaping · QUICK RECALL**
 
@@ -4691,7 +4578,7 @@ Card ID: `am207-tau-poisson-mean`
 
 ---
 
-### 247. Why can naive tau leaping produce negative molecule counts?
+### 241. Why can naive tau leaping produce negative molecule counts?
 
 **AM 207 · Tau leaping · QUICK RECALL**
 
@@ -4710,7 +4597,7 @@ Card ID: `am207-tau-negative-count`
 
 ---
 
-### 248. Why is clipping a negative population to zero not a principled repair?
+### 242. Why is clipping a negative population to zero not a principled repair?
 
 **AM 207 · Tau leaping · QUICK RECALL**
 
@@ -4729,7 +4616,7 @@ Card ID: `am207-tau-clipping-problem`
 
 ---
 
-### 249. What should remain nearly constant during a valid tau leap?
+### 243. What should remain nearly constant during a valid tau leap?
 
 **AM 207 · Tau leaping · QUICK RECALL**
 
@@ -4748,7 +4635,7 @@ Card ID: `am207-tau-leap-condition`
 
 ---
 
-### 250. What does the evidence do in Bayes' rule?
+### 244. What does the evidence do in Bayes' rule?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
@@ -4767,7 +4654,7 @@ Card ID: `am207-bayes-evidence-role`
 
 ---
 
-### 251. Is a likelihood automatically a probability density over the parameter?
+### 245. Is a likelihood automatically a probability density over the parameter?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
@@ -4786,7 +4673,7 @@ Card ID: `am207-likelihood-not-parameter-density`
 
 ---
 
-### 252. What is the prior predictive distribution?
+### 246. What is the prior predictive distribution?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
@@ -4805,7 +4692,7 @@ Card ID: `am207-prior-predictive`
 
 ---
 
-### 253. Why is fitting calibration data insufficient for validation?
+### 247. Why is fitting calibration data insufficient for validation?
 
 **AM 207 · Models and uncertainty · QUICK RECALL**
 
@@ -4824,7 +4711,7 @@ Card ID: `am207-calibration-validation`
 
 ---
 
-### 254. With a uniform prior and 4 heads in 11 tosses, what is the posterior for the head probability?
+### 248. With a uniform prior and 4 heads in 11 tosses, what is the posterior for the head probability?
 
 **AM 207 · Bayesian examples · QUICK RECALL**
 
@@ -4843,7 +4730,7 @@ Card ID: `am207-coin-four-eleven`
 
 ---
 
-### 255. What is the posterior mean for Beta(5,8)?
+### 249. What is the posterior mean for Beta(5,8)?
 
 **AM 207 · Bayesian examples · QUICK RECALL**
 
@@ -4862,7 +4749,7 @@ Card ID: `am207-coin-posterior-mean`
 
 ---
 
-### 256. Does the peak of a continuous posterior have positive point probability?
+### 250. Does the peak of a continuous posterior have positive point probability?
 
 **AM 207 · Bayesian examples · QUICK RECALL**
 
@@ -4881,7 +4768,7 @@ Card ID: `am207-continuous-point-probability`
 
 ---
 
-### 257. Can data restore posterior probability to a region assigned zero prior probability?
+### 251. Can data restore posterior probability to a region assigned zero prior probability?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
@@ -4900,7 +4787,7 @@ Card ID: `am207-prior-zero-support`
 
 ---
 
-### 258. Does a narrow posterior prove that the model is correct?
+### 252. Does a narrow posterior prove that the model is correct?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
@@ -4919,7 +4806,7 @@ Card ID: `am207-posterior-model-limits`
 
 ---
 
-### 259. For N independent exponential observations with sum T, what is the rate log-likelihood?
+### 253. For N independent exponential observations with sum T, what is the rate log-likelihood?
 
 **AM 207 · Likelihood estimation · QUICK RECALL**
 
@@ -4938,7 +4825,7 @@ Card ID: `am207-exponential-loglikelihood`
 
 ---
 
-### 260. What is the maximum-likelihood exponential rate?
+### 254. What is the maximum-likelihood exponential rate?
 
 **AM 207 · Likelihood estimation · QUICK RECALL**
 
@@ -4957,7 +4844,7 @@ Card ID: `am207-exponential-mle-rate`
 
 ---
 
-### 261. Is the exponential rate estimate the average of individual reciprocal waiting times?
+### 255. Is the exponential rate estimate the average of individual reciprocal waiting times?
 
 **AM 207 · Likelihood estimation · QUICK RECALL**
 
@@ -4976,7 +4863,7 @@ Card ID: `am207-reciprocal-average`
 
 ---
 
-### 262. Why prefer a raw-data likelihood to fitting histogram heights when a sampling model is available?
+### 256. Why prefer a raw-data likelihood to fitting histogram heights when a sampling model is available?
 
 **AM 207 · Likelihood estimation · QUICK RECALL**
 
@@ -4995,7 +4882,7 @@ Card ID: `am207-histogram-information`
 
 ---
 
-### 263. What is the relative posterior standard deviation for Gamma(N+1,T)?
+### 257. What is the relative posterior standard deviation for Gamma(N+1,T)?
 
 **AM 207 · Bayesian examples · QUICK RECALL**
 
@@ -5014,7 +4901,7 @@ Card ID: `am207-rate-posterior-width`
 
 ---
 
-### 264. How can a uniform draw produce an exponential waiting time with rate λ?
+### 258. How can a uniform draw produce an exponential waiting time with rate λ?
 
 **AM 207 · Inverse-transform sampling · QUICK RECALL**
 
@@ -5033,7 +4920,7 @@ Card ID: `am207-inverse`
 
 ---
 
-### 265. Why does F⁻¹(U) have CDF F when F is continuous and strictly increasing?
+### 259. Why does F⁻¹(U) have CDF F when F is continuous and strictly increasing?
 
 **AM 207 · Inverse-transform sampling · QUICK RECALL**
 
@@ -5052,7 +4939,7 @@ Card ID: `am207-inverse-proof`
 
 ---
 
-### 266. How do you turn U∼Uniform(0,1) into Uniform(−2,5)?
+### 260. How do you turn U∼Uniform(0,1) into Uniform(−2,5)?
 
 **AM 207 · Inverse-transform sampling · QUICK RECALL**
 
@@ -5071,7 +4958,7 @@ Card ID: `am207-affine-uniform`
 
 ---
 
-### 267. An event rate is 4 per second. What is the mean waiting time?
+### 261. An event rate is 4 per second. What is the mean waiting time?
 
 **AM 207 · Inverse-transform sampling · QUICK RECALL**
 
@@ -5090,7 +4977,7 @@ Card ID: `am207-exponential-number`
 
 ---
 
-### 268. You have already waited s for an exponential event. Does the remaining wait depend on s?
+### 262. You have already waited s for an exponential event. Does the remaining wait depend on s?
 
 **AM 207 · Inverse-transform sampling · QUICK RECALL**
 
@@ -5109,7 +4996,7 @@ Card ID: `am207-memoryless-proof`
 
 ---
 
-### 269. How many more independent samples reduce Monte Carlo SE by a factor of 10?
+### 263. How many more independent samples reduce Monte Carlo SE by a factor of 10?
 
 **AM 207 · Monte Carlo · QUICK RECALL**
 
@@ -5128,7 +5015,7 @@ Card ID: `am207-mc-rate`
 
 ---
 
-### 270. How do uniform samples on [2,5] estimate ∫₂⁵f(x)dx?
+### 264. How do uniform samples on [2,5] estimate ∫₂⁵f(x)dx?
 
 **AM 207 · Monte Carlo · QUICK RECALL**
 
@@ -5147,7 +5034,7 @@ Card ID: `am207-integral-volume`
 
 ---
 
-### 271. Does unbiasedness of an average require independent draws?
+### 265. Does unbiasedness of an average require independent draws?
 
 **AM 207 · Monte Carlo · QUICK RECALL**
 
@@ -5166,7 +5053,7 @@ Card ID: `am207-mean-unbiased-proof`
 
 ---
 
-### 272. Independent values have sample SD 3 across 900 draws. What is the mean’s estimated SE?
+### 266. Independent values have sample SD 3 across 900 draws. What is the mean’s estimated SE?
 
 **AM 207 · Monte Carlo · QUICK RECALL**
 
@@ -5185,7 +5072,7 @@ Card ID: `am207-standard-error-number`
 
 ---
 
-### 273. What does MSE include that estimator variance alone does not?
+### 267. What does MSE include that estimator variance alone does not?
 
 **AM 207 · Monte Carlo · QUICK RECALL**
 
@@ -5204,7 +5091,7 @@ Card ID: `am207-rmse-bias`
 
 ---
 
-### 274. Why does a midpoint grid lose its advantage as dimension grows?
+### 268. Why does a midpoint grid lose its advantage as dimension grows?
 
 **AM 207 · High-dimensional integration · QUICK RECALL**
 
@@ -5223,7 +5110,7 @@ Card ID: `am207-grid`
 
 ---
 
-### 275. With at most one million grid points in 8 dimensions, how many fit per axis?
+### 269. With at most one million grid points in 8 dimensions, how many fit per axis?
 
 **AM 207 · High-dimensional integration · QUICK RECALL**
 
@@ -5242,7 +5129,7 @@ Card ID: `am207-grid-budget`
 
 ---
 
-### 276. Why can ∫ over [0,1]ᵈ of exp(−Σxᵢ²) factor into one-dimensional integrals?
+### 270. Why can ∫ over [0,1]ᵈ of exp(−Σxᵢ²) factor into one-dimensional integrals?
 
 **AM 207 · High-dimensional integration · QUICK RECALL**
 
@@ -5261,7 +5148,7 @@ Card ID: `am207-product-integral`
 
 ---
 
-### 277. If Monte Carlo error scales as N⁻¹ᐟ², what does 16 times the sample count buy?
+### 271. If Monte Carlo error scales as N⁻¹ᐟ², what does 16 times the sample count buy?
 
 **AM 207 · High-dimensional integration · QUICK RECALL**
 
@@ -5280,7 +5167,7 @@ Card ID: `am207-slope-interpretation`
 
 ---
 
-### 278. Why can symmetric Metropolis–Hastings use an unnormalized target f?
+### 272. Why can symmetric Metropolis–Hastings use an unnormalized target f?
 
 **AM 207 · Metropolis–Hastings · QUICK RECALL**
 
@@ -5299,7 +5186,7 @@ Card ID: `am207-mh`
 
 ---
 
-### 279. Target ratio is 2, but reverse/forward proposal ratio is 0.2. What is MH acceptance?
+### 273. Target ratio is 2, but reverse/forward proposal ratio is 0.2. What is MH acceptance?
 
 **AM 207 · Metropolis–Hastings · QUICK RECALL**
 
@@ -5318,7 +5205,7 @@ Card ID: `am207-asymmetric-acceptance`
 
 ---
 
-### 280. How can symmetric MH avoid dividing tiny densities?
+### 274. How can symmetric MH avoid dividing tiny densities?
 
 **AM 207 · Metropolis–Hastings · QUICK RECALL**
 
@@ -5337,7 +5224,7 @@ Card ID: `am207-mh-log-space`
 
 ---
 
-### 281. Why is accepted MH probability flow symmetric between x and y?
+### 275. Why is accepted MH probability flow symmetric between x and y?
 
 **AM 207 · Metropolis–Hastings · QUICK RECALL**
 
@@ -5356,7 +5243,7 @@ Card ID: `am207-mh-detailed-balance-proof`
 
 ---
 
-### 282. Should a rejected MH step be saved as another copy of the current state?
+### 276. Should a rejected MH step be saved as another copy of the current state?
 
 **AM 207 · MCMC correctness · QUICK RECALL**
 
@@ -5375,7 +5262,7 @@ Card ID: `am207-reject`
 
 ---
 
-### 283. A chain spends 90% of steps at A. Could keeping only moves suggest 50%?
+### 277. A chain spends 90% of steps at A. Could keeping only moves suggest 50%?
 
 **AM 207 · MCMC correctness · QUICK RECALL**
 
@@ -5394,7 +5281,7 @@ Card ID: `am207-jump-chain-example`
 
 ---
 
-### 284. How do you propose a Cauchy step centered at x with scale γ?
+### 278. How do you propose a Cauchy step centered at x with scale γ?
 
 **AM 207 · Proposal distributions · QUICK RECALL**
 
@@ -5413,7 +5300,7 @@ Card ID: `am207-cauchy`
 
 ---
 
-### 285. What are the Cauchy quartiles for center m and scale γ?
+### 279. What are the Cauchy quartiles for center m and scale γ?
 
 **AM 207 · Proposal distributions · QUICK RECALL**
 
@@ -5432,7 +5319,7 @@ Card ID: `am207-cauchy-quantile`
 
 ---
 
-### 286. Why avoid U=0 or 1 in inverse-Cauchy sampling?
+### 280. Why avoid U=0 or 1 in inverse-Cauchy sampling?
 
 **AM 207 · Proposal distributions · QUICK RECALL**
 
@@ -5451,7 +5338,7 @@ Card ID: `am207-endpoint-tangent`
 
 ---
 
-### 287. Does a 50% MH acceptance rate prove good mixing?
+### 281. Does a 50% MH acceptance rate prove good mixing?
 
 **AM 207 · MCMC diagnostics · QUICK RECALL**
 
@@ -5470,7 +5357,7 @@ Card ID: `am207-mixing`
 
 ---
 
-### 288. For covariance [[1,ρ],[ρ,1]], which directions are long and short when ρ>0?
+### 282. For covariance [[1,ρ],[ρ,1]], which directions are long and short when ρ>0?
 
 **AM 207 · MCMC diagnostics · QUICK RECALL**
 
@@ -5489,7 +5376,7 @@ Card ID: `am207-correlated-normal-axes`
 
 ---
 
-### 289. Why can both tiny and huge random-walk steps be bad?
+### 283. Why can both tiny and huge random-walk steps be bad?
 
 **AM 207 · MCMC diagnostics · QUICK RECALL**
 
@@ -5508,7 +5395,7 @@ Card ID: `am207-proposal-scale-extremes`
 
 ---
 
-### 290. Why freeze a tuned MH proposal after warm-up?
+### 284. Why freeze a tuned MH proposal after warm-up?
 
 **AM 207 · MCMC diagnostics · QUICK RECALL**
 
@@ -5527,7 +5414,7 @@ Card ID: `am207-warmup-adaptation`
 
 ---
 
-### 291. Can a stationary chain fail detailed balance?
+### 285. Can a stationary chain fail detailed balance?
 
 **AM 207 · Stationarity & reversibility · QUICK RECALL**
 
@@ -5546,7 +5433,7 @@ Card ID: `am207-balance`
 
 ---
 
-### 292. For P=[[0.8,0.2],[0.3,0.7]], what is the stationary distribution?
+### 286. For P=[[0.8,0.2],[0.3,0.7]], what is the stationary distribution?
 
 **AM 207 · Stationarity & reversibility · QUICK RECALL**
 
@@ -5565,7 +5452,7 @@ Card ID: `am207-stationary-two-state`
 
 ---
 
-### 293. Why does detailed balance imply stationarity?
+### 287. Why does detailed balance imply stationarity?
 
 **AM 207 · Stationarity & reversibility · QUICK RECALL**
 
@@ -5584,7 +5471,7 @@ Card ID: `am207-detailed-implies-stationary`
 
 ---
 
-### 294. Does a stationary distribution guarantee convergence to it from any start?
+### 288. Does a stationary distribution guarantee convergence to it from any start?
 
 **AM 207 · Stationarity & reversibility · QUICK RECALL**
 
@@ -5603,7 +5490,7 @@ Card ID: `am207-stationarity-not-convergence`
 
 ---
 
-### 295. Why can merging Alice and Bob into “not Carol” destroy the Markov property?
+### 289. Why can merging Alice and Bob into “not Carol” destroy the Markov property?
 
 **AM 207 · The Markov property · QUICK RECALL**
 
@@ -5622,7 +5509,7 @@ Card ID: `am207-lumping`
 
 ---
 
-### 296. Can two merged states have different internal transitions and still form a Markov coarse state?
+### 290. Can two merged states have different internal transitions and still form a Markov coarse state?
 
 **AM 207 · The Markov property · QUICK RECALL**
 
@@ -5641,7 +5528,7 @@ Card ID: `am207-lumpable-example`
 
 ---
 
-### 297. What does whitening do to a Gaussian cloud?
+### 291. What does whitening do to a Gaussian cloud?
 
 **AM 207 · AM 207 × STAT 244 · QUICK RECALL**
 
@@ -5660,7 +5547,7 @@ Card ID: `bridge-whiten`
 
 ---
 
-### 298. Reaction rates are 2 and 3 per second. What is the mean wait for either event?
+### 292. Reaction rates are 2 and 3 per second. What is the mean wait for either event?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -5679,7 +5566,7 @@ Card ID: `am207-ssa`
 
 ---
 
-### 299. SSA rates are (1,3,6). Which reaction does a uniform draw 0.35 select?
+### 293. SSA rates are (1,3,6). Which reaction does a uniform draw 0.35 select?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -5698,7 +5585,7 @@ Card ID: `am207-ssa-event-number`
 
 ---
 
-### 300. The next event is at 10.3, but simulation ends at 10. Which state do you report?
+### 294. The next event is at 10.3, but simulation ends at 10. Which state do you report?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -5717,7 +5604,7 @@ Card ID: `am207-ssa-horizon`
 
 ---
 
-### 301. What happens when every SSA propensity is zero?
+### 295. What happens when every SSA propensity is zero?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -5736,7 +5623,7 @@ Card ID: `am207-zero-propensity`
 
 ---
 
-### 302. For 2A→B with rate c per unordered pair, what is the propensity at count n?
+### 296. For 2A→B with rate c per unordered pair, what is the propensity at count n?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -5755,7 +5642,7 @@ Card ID: `am207-combinatorial-propensity`
 
 ---
 
-### 303. Why isn’t E[RF] always E[R]E[F]?
+### 297. Why isn’t E[RF] always E[R]E[F]?
 
 **AM 207 · Moment closure · QUICK RECALL**
 
@@ -5774,7 +5661,7 @@ Card ID: `am207-closure`
 
 ---
 
-### 304. E[R]=10, E[F]=4, Cov(R,F)=−6. What is E[RF]?
+### 298. E[R]=10, E[F]=4, Cov(R,F)=−6. What is E[RF]?
 
 **AM 207 · Moment closure · QUICK RECALL**
 
@@ -5793,7 +5680,7 @@ Card ID: `am207-covariance-gap`
 
 ---
 
-### 305. With a uniform coin prior, what follows from 4 heads and 7 tails?
+### 299. With a uniform coin prior, what follows from 4 heads and 7 tails?
 
 **AM 207 · Bayesian updating · QUICK RECALL**
 
@@ -5812,7 +5699,7 @@ Card ID: `am207-bayes`
 
 ---
 
-### 306. How does Beta(a,b) update after h heads and t tails?
+### 300. How does Beta(a,b) update after h heads and t tails?
 
 **AM 207 · Bayesian updating · QUICK RECALL**
 
@@ -5831,7 +5718,7 @@ Card ID: `am207-beta-update-general`
 
 ---
 
-### 307. With a Beta(5,8) posterior, what is the next head probability?
+### 301. With a Beta(5,8) posterior, what is the next head probability?
 
 **AM 207 · Bayesian updating · QUICK RECALL**
 
@@ -5850,7 +5737,7 @@ Card ID: `am207-posterior-predictive`
 
 ---
 
-### 308. Why isn’t likelihood automatically a posterior?
+### 302. Why isn’t likelihood automatically a posterior?
 
 **AM 207 · Bayesian updating · QUICK RECALL**
 
@@ -5869,7 +5756,7 @@ Card ID: `am207-likelihood-not-posterior`
 
 ---
 
-### 309. Does observing a coin sequence versus just its head count change the posterior shape?
+### 303. Does observing a coin sequence versus just its head count change the posterior shape?
 
 **AM 207 · Bayesian updating · QUICK RECALL**
 
@@ -5888,7 +5775,7 @@ Card ID: `am207-sequence-versus-count`
 
 ---
 
-### 310. Can a probability density be greater than 1?
+### 304. Can a probability density be greater than 1?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -5907,7 +5794,7 @@ Card ID: `am207-density`
 
 ---
 
-### 311. If F(1)=0.2 and F(3)=0.8, what is P(1<X≤3)?
+### 305. If F(1)=0.2 and F(3)=0.8, what is P(1<X≤3)?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -5926,7 +5813,7 @@ Card ID: `am207-cdf-density`
 
 ---
 
-### 312. For density f(x)=cx on [0,2], what is c?
+### 306. For density f(x)=cx on [0,2], what is c?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -5945,7 +5832,7 @@ Card ID: `am207-normalize-density`
 
 ---
 
-### 313. Must you derive the distribution of g(X) to find its mean?
+### 307. Must you derive the distribution of g(X) to find its mean?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -5964,7 +5851,7 @@ Card ID: `am207-expectation-function`
 
 ---
 
-### 314. A fair die result is even. What is the chance it exceeds 3?
+### 308. A fair die result is even. What is the chance it exceeds 3?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -5983,7 +5870,7 @@ Card ID: `am207-conditional-probability`
 
 ---
 
-### 315. Can two disjoint positive-probability events be independent?
+### 309. Can two disjoint positive-probability events be independent?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
@@ -6002,7 +5889,7 @@ Card ID: `am207-independence-vs-disjoint`
 
 ---
 
-### 316. If Y=2X, why does its density get a factor 1/2?
+### 310. If Y=2X, why does its density get a factor 1/2?
 
 **AM 207 · Transformations · QUICK RECALL**
 
@@ -6021,7 +5908,7 @@ Card ID: `am207-jacobian`
 
 ---
 
-### 317. If Y=−3X, is its density negative?
+### 311. If Y=−3X, is its density negative?
 
 **AM 207 · Transformations · QUICK RECALL**
 
@@ -6040,7 +5927,7 @@ Card ID: `am207-negative-scale`
 
 ---
 
-### 318. For invertible Y=AX, what is the transformed density?
+### 312. For invertible Y=AX, what is the transformed density?
 
 **AM 207 · Transformations · QUICK RECALL**
 
@@ -6059,7 +5946,7 @@ Card ID: `am207-two-dimensional-jacobian`
 
 ---
 
-### 319. For Y=X², why might one inverse root be insufficient?
+### 313. For Y=X², why might one inverse root be insufficient?
 
 **AM 207 · Noninjective transformations · QUICK RECALL**
 
@@ -6078,7 +5965,7 @@ Card ID: `am207-multiple-roots`
 
 ---
 
-### 320. If X is uniform on [−1,1], what is P(X²≤y) for 0<y<1?
+### 314. If X is uniform on [−1,1], what is P(X²≤y) for 0<y<1?
 
 **AM 207 · Noninjective transformations · QUICK RECALL**
 
@@ -6097,7 +5984,7 @@ Card ID: `am207-square-uniform-density`
 
 ---
 
-### 321. Why do accepted rejection-sampling draws follow the target?
+### 315. Why do accepted rejection-sampling draws follow the target?
 
 **AM 207 · Rejection sampling · QUICK RECALL**
 
@@ -6116,7 +6003,7 @@ Card ID: `am207-rejection`
 
 ---
 
-### 322. With normalized target p≤5q, what is the rejection sampler’s acceptance rate?
+### 316. With normalized target p≤5q, what is the rejection sampler’s acceptance rate?
 
 **AM 207 · Rejection sampling · QUICK RECALL**
 
@@ -6135,7 +6022,7 @@ Card ID: `am207-envelope-efficiency`
 
 ---
 
-### 323. With unnormalized f≤cq, how do you accept a proposal x?
+### 317. With unnormalized f≤cq, how do you accept a proposal x?
 
 **AM 207 · Rejection sampling · QUICK RECALL**
 
@@ -6154,7 +6041,7 @@ Card ID: `am207-unknown-normalizer`
 
 ---
 
-### 324. How can samples from q estimate an expectation under p?
+### 318. How can samples from q estimate an expectation under p?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
@@ -6173,7 +6060,7 @@ Card ID: `am207-importance`
 
 ---
 
-### 325. p(A)=0.8 but q(A)=0.5. What weight corrects an A draw?
+### 319. p(A)=0.8 but q(A)=0.5. What weight corrects an A draw?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
@@ -6192,7 +6079,7 @@ Card ID: `am207-importance-discrete`
 
 ---
 
-### 326. Can importance weights recover a region the proposal never visits?
+### 320. Can importance weights recover a region the proposal never visits?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
@@ -6211,7 +6098,7 @@ Card ID: `am207-missing-support`
 
 ---
 
-### 327. Why divide a weighted sum by the sum of weights?
+### 321. Why divide a weighted sum by the sum of weights?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
@@ -6230,7 +6117,7 @@ Card ID: `am207-self-normalized`
 
 ---
 
-### 328. Weights are (1,2,7), values are (0,1,1). What is the normalized weighted mean?
+### 322. Weights are (1,2,7), values are (0,1,1). What is the normalized weighted mean?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
@@ -6249,7 +6136,7 @@ Card ID: `am207-normalize-weights-number`
 
 ---
 
-### 329. What does one normalized weight of 0.99 tell you?
+### 323. What does one normalized weight of 0.99 tell you?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
@@ -6268,7 +6155,7 @@ Card ID: `am207-weight-degeneracy`
 
 ---
 
-### 330. Why can s/√N underestimate MCMC uncertainty?
+### 324. Why can s/√N underestimate MCMC uncertainty?
 
 **AM 207 · Monte Carlo error · QUICK RECALL**
 
@@ -6287,7 +6174,7 @@ Card ID: `am207-autocorrelation`
 
 ---
 
-### 331. If integrated autocorrelation multiplies variance by 9, what is the effective size of 9000 draws?
+### 325. If integrated autocorrelation multiplies variance by 9, what is the effective size of 9000 draws?
 
 **AM 207 · Monte Carlo error · QUICK RECALL**
 
@@ -6306,7 +6193,7 @@ Card ID: `am207-ar1-effective-size`
 
 ---
 
-### 332. In a Poisson process with rate ν, what is the count by time t?
+### 326. In a Poisson process with rate ν, what is the count by time t?
 
 **AM 207 · Poisson processes · QUICK RECALL**
 
@@ -6325,7 +6212,7 @@ Card ID: `am207-poisson`
 
 ---
 
-### 333. At 2 events per minute, what is the expected count in 30 seconds?
+### 327. At 2 events per minute, what is the expected count in 30 seconds?
 
 **AM 207 · Poisson processes · QUICK RECALL**
 
@@ -6344,7 +6231,7 @@ Card ID: `am207-poisson-number`
 
 ---
 
-### 334. Does independent Poisson increments mean N(1) and N(2) are independent?
+### 328. Does independent Poisson increments mean N(1) and N(2) are independent?
 
 **AM 207 · Poisson processes · QUICK RECALL**
 
@@ -6363,7 +6250,7 @@ Card ID: `am207-independent-increments`
 
 ---
 
-### 335. If each independent trial succeeds with probability p, what is the mean trial of first success?
+### 329. If each independent trial succeeds with probability p, what is the mean trial of first success?
 
 **AM 207 · Discrete waiting times · QUICK RECALL**
 
@@ -6382,7 +6269,7 @@ Card ID: `am207-geometric`
 
 ---
 
-### 336. With success chance 0.2, what is P(first success on trial 3)?
+### 330. With success chance 0.2, what is P(first success on trial 3)?
 
 **AM 207 · Discrete waiting times · QUICK RECALL**
 
@@ -6401,7 +6288,7 @@ Card ID: `am207-geometric-number`
 
 ---
 
-### 337. With N parents producing two offspring each, why is sibling probability 1/(2N−1)?
+### 331. With N parents producing two offspring each, why is sibling probability 1/(2N−1)?
 
 **AM 207 · Population sampling · QUICK RECALL**
 
@@ -6420,7 +6307,7 @@ Card ID: `am207-coalescent`
 
 ---
 
-### 338. With 3 parents and two offspring each, what is the sampled pair’s sibling probability?
+### 332. With 3 parents and two offspring each, what is the sampled pair’s sibling probability?
 
 **AM 207 · Population sampling · QUICK RECALL**
 
@@ -6439,7 +6326,7 @@ Card ID: `am207-finite-population-check`
 
 ---
 
-### 339. Why scale a geometric waiting time of mean about 2N by 2N?
+### 333. Why scale a geometric waiting time of mean about 2N by 2N?
 
 **AM 207 · Continuous limits · QUICK RECALL**
 
@@ -6458,7 +6345,7 @@ Card ID: `am207-scaling-limit`
 
 ---
 
-### 340. Two independent lineages mutate at rate ν for a fixed time t. What is their total count?
+### 334. Two independent lineages mutate at rate ν for a fixed time t. What is their total count?
 
 **AM 207 · Conditional distributions · QUICK RECALL**
 
@@ -6477,7 +6364,7 @@ Card ID: `am207-two-lineages`
 
 ---
 
-### 341. Why can a random-time Poisson count have variance larger than its mean?
+### 335. Why can a random-time Poisson count have variance larger than its mean?
 
 **AM 207 · Conditional distributions · QUICK RECALL**
 
@@ -6496,7 +6383,7 @@ Card ID: `am207-mixture-variance`
 
 ---
 
-### 342. How do you invert a linear CDF segment?
+### 336. How do you invert a linear CDF segment?
 
 **AM 207 · Inverse-transform sampling · QUICK RECALL**
 
@@ -6515,7 +6402,7 @@ Card ID: `am207-piecewise-cdf`
 
 ---
 
-### 343. A CDF joins (2,0.3) to (5,0.9). Where does U=0.5 map?
+### 337. A CDF joins (2,0.3) to (5,0.9). Where does U=0.5 map?
 
 **AM 207 · Inverse-transform sampling · QUICK RECALL**
 
@@ -6534,7 +6421,7 @@ Card ID: `am207-inverse-interpolation-number`
 
 ---
 
-### 344. Does a flat part of a continuous CDF contain probability mass?
+### 338. Does a flat part of a continuous CDF contain probability mass?
 
 **AM 207 · Inverse-transform sampling · QUICK RECALL**
 
@@ -6553,7 +6440,7 @@ Card ID: `am207-cdf-flat-segment`
 
 ---
 
-### 345. How does Box–Muller make two standard normals from two uniforms?
+### 339. How does Box–Muller make two standard normals from two uniforms?
 
 **AM 207 · Normal sampling · QUICK RECALL**
 
@@ -6572,7 +6459,7 @@ Card ID: `am207-box-muller`
 
 ---
 
-### 346. For the Box–Muller radius, what is P(R≤r) when r≥0?
+### 340. For the Box–Muller radius, what is P(R≤r) when r≥0?
 
 **AM 207 · Normal sampling · QUICK RECALL**
 
@@ -6591,7 +6478,7 @@ Card ID: `am207-radial-cdf`
 
 ---
 
-### 347. What distribution does R²/2 have in Box–Muller?
+### 341. What distribution does R²/2 have in Box–Muller?
 
 **AM 207 · Normal sampling · QUICK RECALL**
 
@@ -6610,7 +6497,7 @@ Card ID: `am207-radial-square-exponential`
 
 ---
 
-### 348. What fraction of uniform square proposals miss the unit disk?
+### 342. What fraction of uniform square proposals miss the unit disk?
 
 **AM 207 · Rejection geometry · QUICK RECALL**
 
@@ -6629,7 +6516,7 @@ Card ID: `am207-marsaglia`
 
 ---
 
-### 349. How does a uniform disk point become a standard normal pair?
+### 343. How does a uniform disk point become a standard normal pair?
 
 **AM 207 · Rejection geometry · QUICK RECALL**
 
@@ -6648,7 +6535,7 @@ Card ID: `am207-polar-transform`
 
 ---
 
-### 350. If acceptance probability is π/4, how many proposals are needed on average?
+### 344. If acceptance probability is π/4, how many proposals are needed on average?
 
 **AM 207 · Rejection geometry · QUICK RECALL**
 
@@ -6667,7 +6554,7 @@ Card ID: `am207-rejection-efficiency`
 
 ---
 
-### 351. How do you get a two-step transition probability?
+### 345. How do you get a two-step transition probability?
 
 **AM 207 · Markov transitions · QUICK RECALL**
 
@@ -6686,7 +6573,7 @@ Card ID: `am207-ck`
 
 ---
 
-### 352. With current states in P’s rows, how does a row distribution advance?
+### 346. With current states in P’s rows, how does a row distribution advance?
 
 **AM 207 · Markov transitions · QUICK RECALL**
 
@@ -6705,7 +6592,7 @@ Card ID: `am207-transition-matrix-orientation`
 
 ---
 
-### 353. For P=[[0.8,0.2],[0.3,0.7]], what is the two-step chance A→B?
+### 347. For P=[[0.8,0.2],[0.3,0.7]], what is the two-step chance A→B?
 
 **AM 207 · Markov transitions · QUICK RECALL**
 
@@ -6724,7 +6611,7 @@ Card ID: `am207-two-step-number`
 
 ---
 
-### 354. What is the basic structure of a master equation?
+### 348. What is the basic structure of a master equation?
 
 **AM 207 · Master equations · QUICK RECALL**
 
@@ -6743,7 +6630,7 @@ Card ID: `am207-master`
 
 ---
 
-### 355. Why should all master-equation derivatives sum to zero?
+### 349. Why should all master-equation derivatives sum to zero?
 
 **AM 207 · Master equations · QUICK RECALL**
 
@@ -6762,7 +6649,7 @@ Card ID: `am207-probability-conservation`
 
 ---
 
-### 356. In pure death with rate γn, how does probability enter state zero?
+### 350. In pure death with rate γn, how does probability enter state zero?
 
 **AM 207 · Master equations · QUICK RECALL**
 
@@ -6781,7 +6668,7 @@ Card ID: `am207-death-boundary`
 
 ---
 
-### 357. What does a jump-process generator measure?
+### 351. What does a jump-process generator measure?
 
 **AM 207 · Markov generators · QUICK RECALL**
 
@@ -6800,7 +6687,7 @@ Card ID: `am207-generator`
 
 ---
 
-### 358. Why must a jump generator send the constant function 1 to zero?
+### 352. Why must a jump generator send the constant function 1 to zero?
 
 **AM 207 · Markov generators · QUICK RECALL**
 
@@ -6819,7 +6706,7 @@ Card ID: `am207-generator-constant`
 
 ---
 
-### 359. If each particle dies at rate γ, how does the mean count change?
+### 353. If each particle dies at rate γ, how does the mean count change?
 
 **AM 207 · Markov generators · QUICK RECALL**
 
@@ -6838,7 +6725,7 @@ Card ID: `am207-death-mean`
 
 ---
 
-### 360. How does a swap increase the left urn’s blue count?
+### 354. How does a swap increase the left urn’s blue count?
 
 **AM 207 · Transition rates · QUICK RECALL**
 
@@ -6857,7 +6744,7 @@ Card ID: `am207-urn-rates`
 
 ---
 
-### 361. Why must w₋(0)=0 in the urn model?
+### 355. Why must w₋(0)=0 in the urn model?
 
 **AM 207 · Transition rates · QUICK RECALL**
 
@@ -6876,7 +6763,7 @@ Card ID: `am207-urn-boundaries`
 
 ---
 
-### 362. Why does the urn model’s mean equation close exactly?
+### 356. Why does the urn model’s mean equation close exactly?
 
 **AM 207 · Moment equations · QUICK RECALL**
 
@@ -6895,7 +6782,7 @@ Card ID: `am207-urn-mean`
 
 ---
 
-### 363. An urn mean starts at 50 and relaxes toward 25 with time constant 25 seconds. What is it after 25 seconds?
+### 357. An urn mean starts at 50 and relaxes toward 25 with time constant 25 seconds. What is it after 25 seconds?
 
 **AM 207 · Moment equations · QUICK RECALL**
 
@@ -6914,7 +6801,7 @@ Card ID: `am207-urn-timescale-number`
 
 ---
 
-### 364. Why is the equilibrium urn count hypergeometric rather than binomial?
+### 358. Why is the equilibrium urn count hypergeometric rather than binomial?
 
 **AM 207 · Stationary distributions · QUICK RECALL**
 
@@ -6933,7 +6820,7 @@ Card ID: `am207-urn-stationary`
 
 ---
 
-### 365. With 2 balls per urn and 2 blue total, what are the equilibrium left-blue probabilities?
+### 359. With 2 balls per urn and 2 blue total, what are the equilibrium left-blue probabilities?
 
 **AM 207 · Stationary distributions · QUICK RECALL**
 
@@ -6952,7 +6839,7 @@ Card ID: `am207-hypergeometric-small`
 
 ---
 
-### 366. How do birth–death rates determine neighboring stationary probabilities?
+### 360. How do birth–death rates determine neighboring stationary probabilities?
 
 **AM 207 · Stationary distributions · QUICK RECALL**
 
@@ -6971,7 +6858,7 @@ Card ID: `am207-birth-death-recursion`
 
 ---
 
-### 367. Why can a per-jump histogram misrepresent continuous-time occupancy?
+### 361. Why can a per-jump histogram misrepresent continuous-time occupancy?
 
 **AM 207 · Simulation diagnostics · QUICK RECALL**
 
@@ -6990,7 +6877,7 @@ Card ID: `am207-time-histogram`
 
 ---
 
-### 368. A path spends 9 seconds at A and 1 at B. What are its time fractions?
+### 362. A path spends 9 seconds at A and 1 at B. What are its time fractions?
 
 **AM 207 · Simulation diagnostics · QUICK RECALL**
 
@@ -7009,7 +6896,7 @@ Card ID: `am207-holding-time-number`
 
 ---
 
-### 369. What count change does G+R→2R produce in (G,R,F)?
+### 363. What count change does G+R→2R produce in (G,R,F)?
 
 **AM 207 · Reaction systems · QUICK RECALL**
 
@@ -7028,7 +6915,7 @@ Card ID: `am207-stoichiometry`
 
 ---
 
-### 370. How do reaction channels combine into the expected rabbit-count rate?
+### 364. How do reaction channels combine into the expected rabbit-count rate?
 
 **AM 207 · Reaction systems · QUICK RECALL**
 
@@ -7047,7 +6934,7 @@ Card ID: `am207-reaction-drift`
 
 ---
 
-### 371. What is the rabbit equation in the mean-field grass–rabbit–fox model?
+### 365. What is the rabbit equation in the mean-field grass–rabbit–fox model?
 
 **AM 207 · Mean-field dynamics · QUICK RECALL**
 
@@ -7066,7 +6953,7 @@ Card ID: `am207-meanfield`
 
 ---
 
-### 372. At a positive fox equilibrium, what rabbit density is needed?
+### 366. At a positive fox equilibrium, what rabbit density is needed?
 
 **AM 207 · Mean-field dynamics · QUICK RECALL**
 
@@ -7085,7 +6972,7 @@ Card ID: `am207-coexistence-condition`
 
 ---
 
-### 373. Why can a stochastic population go extinct while its mean-field ODE stays positive?
+### 367. Why can a stochastic population go extinct while its mean-field ODE stays positive?
 
 **AM 207 · Stochastic vs deterministic models · QUICK RECALL**
 
@@ -7104,7 +6991,7 @@ Card ID: `am207-extinction`
 
 ---
 
-### 374. In a coupled Delta–Notch grid, does each cell get its own independent SSA clock step?
+### 368. In a coupled Delta–Notch grid, does each cell get its own independent SSA clock step?
 
 **AM 207 · Spatial stochastic systems · QUICK RECALL**
 
@@ -7123,7 +7010,7 @@ Card ID: `am207-notch`
 
 ---
 
-### 375. Why must the Delta–Notch boundary rule be implemented exactly?
+### 369. Why must the Delta–Notch boundary rule be implemented exactly?
 
 **AM 207 · Spatial stochastic systems · QUICK RECALL**
 
@@ -7142,7 +7029,7 @@ Card ID: `am207-neighbor-average`
 
 ---
 
-### 376. Why set production rate to zero at the maximum count instead of clipping afterward?
+### 370. Why set production rate to zero at the maximum count instead of clipping afterward?
 
 **AM 207 · Spatial stochastic systems · QUICK RECALL**
 
@@ -7161,7 +7048,7 @@ Card ID: `am207-bounded-propensities`
 
 ---
 
-### 377. What makes tau-leaping approximate?
+### 371. What makes tau-leaping approximate?
 
 **AM 207 · Accelerated simulation · QUICK RECALL**
 
@@ -7180,7 +7067,7 @@ Card ID: `am207-tau`
 
 ---
 
-### 378. With propensity 12 per second and step 0.1 seconds, what reaction count does tau-leaping draw?
+### 372. With propensity 12 per second and step 0.1 seconds, what reaction count does tau-leaping draw?
 
 **AM 207 · Accelerated simulation · QUICK RECALL**
 
@@ -7199,7 +7086,7 @@ Card ID: `am207-tau-count-number`
 
 ---
 
-### 379. What is the MLE of an exponential rate from positive waiting times?
+### 373. What is the MLE of an exponential rate from positive waiting times?
 
 **AM 207 · Inference · QUICK RECALL**
 
@@ -7218,7 +7105,7 @@ Card ID: `am207-likelihood`
 
 ---
 
-### 380. Waiting times are 0.2, 0.3, and 0.5 seconds. What is the exponential-rate MLE?
+### 374. Waiting times are 0.2, 0.3, and 0.5 seconds. What is the exponential-rate MLE?
 
 **AM 207 · Inference · QUICK RECALL**
 
@@ -7237,7 +7124,7 @@ Card ID: `am207-exp-mle-number`
 
 ---
 
-### 381. Why prefer raw-data likelihood over fitting an exponential histogram?
+### 375. Why prefer raw-data likelihood over fitting an exponential histogram?
 
 **AM 207 · Inference · QUICK RECALL**
 
@@ -7256,7 +7143,7 @@ Card ID: `am207-histogram-fit`
 
 ---
 
-### 382. If θ is uniform on (0,1), are its log-odds uniform too?
+### 376. If θ is uniform on (0,1), are its log-odds uniform too?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
@@ -7275,7 +7162,7 @@ Card ID: `am207-prior`
 
 ---
 
-### 383. A Gamma(a,b) shape–rate prior meets N exponential waits totaling T. What is the posterior?
+### 377. A Gamma(a,b) shape–rate prior meets N exponential waits totaling T. What is the posterior?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
@@ -7294,7 +7181,7 @@ Card ID: `am207-gamma-exponential`
 
 ---
 
-### 384. With prior proportional to 1 for ν>0 and waits totaling T>0, what is the posterior?
+### 378. With prior proportional to 1 for ν>0 and waits totaling T>0, what is the posterior?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
@@ -7313,7 +7200,7 @@ Card ID: `am207-flat-rate-posterior`
 
 ---
 
-### 385. What does a 95% Bayesian credible interval mean?
+### 379. What does a 95% Bayesian credible interval mean?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
@@ -7332,7 +7219,7 @@ Card ID: `am207-credible-interval-meaning`
 
 ---
 
-### 386. A walk jumps ±Δx, each at rate 1/(2τ). What is its diffusion coefficient?
+### 380. A walk jumps ±Δx, each at rate 1/(2τ). What is its diffusion coefficient?
 
 **AM 207 · Random-walk limits · QUICK RECALL**
 
@@ -7351,7 +7238,7 @@ Card ID: `am207-diffusion`
 
 ---
 
-### 387. If jump size halves, how must τ change to keep diffusion fixed?
+### 381. If jump size halves, how must τ change to keep diffusion fixed?
 
 **AM 207 · Random-walk limits · QUICK RECALL**
 
@@ -7370,7 +7257,7 @@ Card ID: `am207-diffusion-scaling`
 
 ---
 
-### 388. How does a diffusing particle’s typical displacement grow with time?
+### 382. How does a diffusing particle’s typical displacement grow with time?
 
 **AM 207 · Random-walk limits · QUICK RECALL**
 
@@ -7389,7 +7276,7 @@ Card ID: `am207-diffusion-msd`
 
 ---
 
-### 389. What changes between frequentist and Bayesian views of an unknown parameter?
+### 383. What changes between frequentist and Bayesian views of an unknown parameter?
 
 **AM 207 · Probability interpretations · QUICK RECALL**
 
@@ -7408,7 +7295,7 @@ Card ID: `am207-probability-views`
 
 ---
 
-### 390. What does uᵀv compute?
+### 384. What does uᵀv compute?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
@@ -7427,7 +7314,7 @@ Card ID: `stat244-inner-product`
 
 ---
 
-### 391. How do you get Euclidean length from a dot product?
+### 385. How do you get Euclidean length from a dot product?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
@@ -7446,7 +7333,7 @@ Card ID: `stat244-vector-length`
 
 ---
 
-### 392. What is (3,4) dotted with (−1,7)?
+### 386. What is (3,4) dotted with (−1,7)?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
@@ -7465,7 +7352,7 @@ Card ID: `stat244-inner-example`
 
 ---
 
-### 393. What is the difference between uᵀv and uvᵀ?
+### 387. What is the difference between uᵀv and uvᵀ?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
@@ -7484,7 +7371,7 @@ Card ID: `stat244-outer-not-inner`
 
 ---
 
-### 394. What is the span of a set of vectors?
+### 388. What is the span of a set of vectors?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
@@ -7503,7 +7390,7 @@ Card ID: `stat244-span-definition`
 
 ---
 
-### 395. What makes a spanning set a basis?
+### 389. What makes a spanning set a basis?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
@@ -7522,7 +7409,7 @@ Card ID: `stat244-basis-definition`
 
 ---
 
-### 396. How do you test linear independence using Xc=0?
+### 390. How do you test linear independence using Xc=0?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
@@ -7541,7 +7428,7 @@ Card ID: `stat244-independence-definition`
 
 ---
 
-### 397. What does rank(X) count?
+### 391. What does rank(X) count?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
@@ -7560,7 +7447,7 @@ Card ID: `stat244-rank-definition`
 
 ---
 
-### 398. What is the null space of X?
+### 392. What is the null space of X?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
@@ -7579,7 +7466,7 @@ Card ID: `stat244-null-definition`
 
 ---
 
-### 399. How do you project y onto a nonzero vector u’s span?
+### 393. How do you project y onto a nonzero vector u’s span?
 
 **STAT 244 · Orthogonal geometry · QUICK RECALL**
 
@@ -7598,7 +7485,7 @@ Card ID: `stat244-projection-line`
 
 ---
 
-### 400. What does XᵀX=I say about X’s columns?
+### 394. What does XᵀX=I say about X’s columns?
 
 **STAT 244 · Orthogonal geometry · QUICK RECALL**
 
@@ -7617,7 +7504,7 @@ Card ID: `stat244-orthonormal-columns`
 
 ---
 
-### 401. If a tall Q has QᵀQ=I, must QQᵀ=I?
+### 395. If a tall Q has QᵀQ=I, must QQᵀ=I?
 
 **STAT 244 · Orthogonal geometry · QUICK RECALL**
 
@@ -7636,7 +7523,7 @@ Card ID: `stat244-rectangular-not-inverse`
 
 ---
 
-### 402. Why is the split into W and W⊥ components unique?
+### 396. Why is the split into W and W⊥ components unique?
 
 **STAT 244 · Orthogonal geometry · QUICK RECALL**
 
@@ -7655,7 +7542,7 @@ Card ID: `stat244-orthogonal-decomposition-unique`
 
 ---
 
-### 403. What does positive semidefinite mean for a symmetric A?
+### 397. What does positive semidefinite mean for a symmetric A?
 
 **STAT 244 · Matrix factorizations · QUICK RECALL**
 
@@ -7674,7 +7561,7 @@ Card ID: `stat244-psd-definition`
 
 ---
 
-### 404. What does Cholesky express a positive-definite matrix as?
+### 398. What does Cholesky express a positive-definite matrix as?
 
 **STAT 244 · Matrix factorizations · QUICK RECALL**
 
@@ -7693,7 +7580,7 @@ Card ID: `stat244-cholesky-role`
 
 ---
 
-### 405. What is the spectral decomposition of a real symmetric matrix?
+### 399. What is the spectral decomposition of a real symmetric matrix?
 
 **STAT 244 · Matrix factorizations · QUICK RECALL**
 
@@ -7712,7 +7599,7 @@ Card ID: `stat244-spectral-decomposition`
 
 ---
 
-### 406. How do eigenvalues reveal whether a symmetric matrix is positive definite?
+### 400. How do eigenvalues reveal whether a symmetric matrix is positive definite?
 
 **STAT 244 · Matrix factorizations · QUICK RECALL**
 
@@ -7731,7 +7618,7 @@ Card ID: `stat244-positive-eigenvalues`
 
 ---
 
-### 407. Why is every covariance matrix positive semidefinite?
+### 401. Why is every covariance matrix positive semidefinite?
 
 **STAT 244 · Matrix factorizations · QUICK RECALL**
 
@@ -7750,7 +7637,7 @@ Card ID: `stat244-covariance-psd`
 
 ---
 
-### 408. Does rotating by covariance eigenvectors fully whiten data?
+### 402. Does rotating by covariance eigenvectors fully whiten data?
 
 **STAT 244 · Matrix factorizations · QUICK RECALL**
 
@@ -7769,7 +7656,7 @@ Card ID: `stat244-decorrelate-not-whiten`
 
 ---
 
-### 409. What is the compact rank-r SVD?
+### 403. What is the compact rank-r SVD?
 
 **STAT 244 · Matrix factorizations · QUICK RECALL**
 
@@ -7788,7 +7675,7 @@ Card ID: `stat244-svd-form`
 
 ---
 
-### 410. Which SVD vectors span C(X)?
+### 404. Which SVD vectors span C(X)?
 
 **STAT 244 · Matrix factorizations · QUICK RECALL**
 
@@ -7807,7 +7694,7 @@ Card ID: `stat244-svd-column-space`
 
 ---
 
-### 411. Which SVD vectors span C(Xᵀ)?
+### 405. Which SVD vectors span C(Xᵀ)?
 
 **STAT 244 · Matrix factorizations · QUICK RECALL**
 
@@ -7826,7 +7713,7 @@ Card ID: `stat244-svd-row-space`
 
 ---
 
-### 412. How does SVD give the pseudoinverse?
+### 406. How does SVD give the pseudoinverse?
 
 **STAT 244 · Matrix factorizations · QUICK RECALL**
 
@@ -7845,7 +7732,7 @@ Card ID: `stat244-svd-pseudoinverse`
 
 ---
 
-### 413. What makes the Moore–Penrose inverse unique beyond XGX=X?
+### 407. What makes the Moore–Penrose inverse unique beyond XGX=X?
 
 **STAT 244 · Generalized inverses · QUICK RECALL**
 
@@ -7864,7 +7751,7 @@ Card ID: `stat244-moore-penrose-conditions`
 
 ---
 
-### 414. Does n≥p guarantee identifiable regression coefficients?
+### 408. Does n≥p guarantee identifiable regression coefficients?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -7883,7 +7770,7 @@ Card ID: `stat244-more-observations-not-rank`
 
 ---
 
-### 415. What is intrinsic aliasing?
+### 409. What is intrinsic aliasing?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -7902,7 +7789,7 @@ Card ID: `stat244-intrinsic-aliasing`
 
 ---
 
-### 416. What is extrinsic aliasing?
+### 410. What is extrinsic aliasing?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -7921,7 +7808,7 @@ Card ID: `stat244-extrinsic-aliasing`
 
 ---
 
-### 417. Why is an unobserved group’s mean not recoverable from its indicator column?
+### 411. Why is an unobserved group’s mean not recoverable from its indicator column?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -7940,7 +7827,7 @@ Card ID: `stat244-empty-level`
 
 ---
 
-### 418. Why not encode an unordered three-level factor as 1,2,3 in one column?
+### 412. Why not encode an unordered three-level factor as 1,2,3 in one column?
 
 **STAT 244 · Design and coding · QUICK RECALL**
 
@@ -7959,7 +7846,7 @@ Card ID: `stat244-quantitative-vs-factor`
 
 ---
 
-### 419. Can a linear model contain x²?
+### 413. Can a linear model contain x²?
 
 **STAT 244 · Design and coding · QUICK RECALL**
 
@@ -7978,7 +7865,7 @@ Card ID: `stat244-linear-in-parameters`
 
 ---
 
-### 420. What do polynomial contrasts test for ordered factor levels?
+### 414. What do polynomial contrasts test for ordered factor levels?
 
 **STAT 244 · Design and coding · QUICK RECALL**
 
@@ -7997,7 +7884,7 @@ Card ID: `stat244-polynomial-contrasts`
 
 ---
 
-### 421. Why does level spacing matter for polynomial contrasts?
+### 415. Why does level spacing matter for polynomial contrasts?
 
 **STAT 244 · Design and coding · QUICK RECALL**
 
@@ -8016,7 +7903,7 @@ Card ID: `stat244-polynomial-spacing`
 
 ---
 
-### 422. What is the spherical Gaussian linear model?
+### 416. What is the spherical Gaussian linear model?
 
 **STAT 244 · Normal linear model · QUICK RECALL**
 
@@ -8035,7 +7922,7 @@ Card ID: `stat244-normal-model`
 
 ---
 
-### 423. What is the central mean assumption of a linear model?
+### 417. What is the central mean assumption of a linear model?
 
 **STAT 244 · Normal linear model · QUICK RECALL**
 
@@ -8054,7 +7941,7 @@ Card ID: `stat244-mean-in-space`
 
 ---
 
-### 424. For full-column-rank X, what is β̂OLS?
+### 418. For full-column-rank X, what is β̂OLS?
 
 **STAT 244 · Least squares estimation · QUICK RECALL**
 
@@ -8073,7 +7960,7 @@ Card ID: `stat244-ols-formula`
 
 ---
 
-### 425. Why is OLS called linear in the response?
+### 419. Why is OLS called linear in the response?
 
 **STAT 244 · Least squares estimation · QUICK RECALL**
 
@@ -8092,7 +7979,7 @@ Card ID: `stat244-ols-linear`
 
 ---
 
-### 426. Under Var(y)=σ²I, what is Var(β̂) for full-rank X?
+### 420. Under Var(y)=σ²I, what is Var(β̂) for full-rank X?
 
 **STAT 244 · Least squares estimation · QUICK RECALL**
 
@@ -8111,7 +7998,7 @@ Card ID: `stat244-ols-covariance`
 
 ---
 
-### 427. Under the correct spherical linear model, what are E[ŷ] and Var(ŷ)?
+### 421. Under the correct spherical linear model, what are E[ŷ] and Var(ŷ)?
 
 **STAT 244 · Least squares estimation · QUICK RECALL**
 
@@ -8130,7 +8017,7 @@ Card ID: `stat244-fit-covariance`
 
 ---
 
-### 428. Why do OLS and Gaussian maximum likelihood choose the same β?
+### 422. Why do OLS and Gaussian maximum likelihood choose the same β?
 
 **STAT 244 · Least squares estimation · QUICK RECALL**
 
@@ -8149,7 +8036,7 @@ Card ID: `stat244-normal-ols-mle`
 
 ---
 
-### 429. Can the fitted mean be closer to observed y than the true mean is?
+### 423. Can the fitted mean be closer to observed y than the true mean is?
 
 **STAT 244 · Projection geometry · QUICK RECALL**
 
@@ -8168,7 +8055,7 @@ Card ID: `stat244-fit-closer-than-truth`
 
 ---
 
-### 430. With an intercept, how does centered total variation split?
+### 424. With an intercept, how does centered total variation split?
 
 **STAT 244 · Explained variation · QUICK RECALL**
 
@@ -8187,7 +8074,7 @@ Card ID: `stat244-centered-decomposition`
 
 ---
 
-### 431. What is R² for OLS with an intercept and nonzero TSS?
+### 425. What is R² for OLS with an intercept and nonzero TSS?
 
 **STAT 244 · Explained variation · QUICK RECALL**
 
@@ -8206,7 +8093,7 @@ Card ID: `stat244-r-squared-definition`
 
 ---
 
-### 432. Why can training R² rise when you add a useless predictor?
+### 426. Why can training R² rise when you add a useless predictor?
 
 **STAT 244 · Explained variation · QUICK RECALL**
 
@@ -8225,7 +8112,7 @@ Card ID: `stat244-r-squared-monotone`
 
 ---
 
-### 433. Does a high R² establish a causal explanation?
+### 427. Does a high R² establish a causal explanation?
 
 **STAT 244 · Explained variation · QUICK RECALL**
 
@@ -8244,7 +8131,7 @@ Card ID: `stat244-r-squared-not-causal`
 
 ---
 
-### 434. How is R² related to the correlation between y and ŷ?
+### 428. How is R² related to the correlation between y and ŷ?
 
 **STAT 244 · Explained variation · QUICK RECALL**
 
@@ -8263,7 +8150,7 @@ Card ID: `stat244-fit-correlation`
 
 ---
 
-### 435. For known positive-definite V and full-rank X, what is β̂GLS?
+### 429. For known positive-definite V and full-rank X, what is β̂GLS?
 
 **STAT 244 · Generalized least squares · QUICK RECALL**
 
@@ -8282,7 +8169,7 @@ Card ID: `stat244-gls-estimator`
 
 ---
 
-### 436. What is Var(β̂GLS) when Var(y)=σ²V?
+### 430. What is Var(β̂GLS) when Var(y)=σ²V?
 
 **STAT 244 · Generalized least squares · QUICK RECALL**
 
@@ -8301,7 +8188,7 @@ Card ID: `stat244-gls-covariance`
 
 ---
 
-### 437. Why can the GLS hat matrix be idempotent but not symmetric?
+### 431. Why can the GLS hat matrix be idempotent but not symmetric?
 
 **STAT 244 · Generalized least squares · QUICK RECALL**
 
@@ -8320,7 +8207,7 @@ Card ID: `stat244-gls-oblique`
 
 ---
 
-### 438. If Y is Gaussian, is AY+b Gaussian?
+### 432. If Y is Gaussian, is AY+b Gaussian?
 
 **STAT 244 · Inference distributions · QUICK RECALL**
 
@@ -8339,7 +8226,7 @@ Card ID: `stat244-normal-linear-map`
 
 ---
 
-### 439. What does (y−μ)ᵀΣ⁻¹(y−μ) measure?
+### 433. What does (y−μ)ᵀΣ⁻¹(y−μ) measure?
 
 **STAT 244 · Inference distributions · QUICK RECALL**
 
@@ -8358,7 +8245,7 @@ Card ID: `stat244-mahalanobis-distance`
 
 ---
 
-### 440. For a positive integer n, what is Γ(n)?
+### 434. For a positive integer n, what is Γ(n)?
 
 **STAT 244 · Inference distributions · QUICK RECALL**
 
@@ -8377,7 +8264,7 @@ Card ID: `stat244-gamma-integer`
 
 ---
 
-### 441. What recursion does the Gamma function satisfy?
+### 435. What recursion does the Gamma function satisfy?
 
 **STAT 244 · Inference distributions · QUICK RECALL**
 
@@ -8396,7 +8283,7 @@ Card ID: `stat244-gamma-recursion`
 
 ---
 
-### 442. What is the square of a standard normal distributed as?
+### 436. What is the square of a standard normal distributed as?
 
 **STAT 244 · Inference distributions · QUICK RECALL**
 
@@ -8415,7 +8302,7 @@ Card ID: `stat244-chi-square-one`
 
 ---
 
-### 443. How do you construct tᵣ from Gaussian and chi-squared variables?
+### 437. How do you construct tᵣ from Gaussian and chi-squared variables?
 
 **STAT 244 · Inference distributions · QUICK RECALL**
 
@@ -8434,7 +8321,7 @@ Card ID: `stat244-t-construction`
 
 ---
 
-### 444. How do two independent chi-squared variables produce an F distribution?
+### 438. How do two independent chi-squared variables produce an F distribution?
 
 **STAT 244 · Inference distributions · QUICK RECALL**
 
@@ -8453,7 +8340,7 @@ Card ID: `stat244-f-construction`
 
 ---
 
-### 445. If T∼tᵣ, what is T² distributed as?
+### 439. If T∼tᵣ, what is T² distributed as?
 
 **STAT 244 · Inference distributions · QUICK RECALL**
 
@@ -8472,7 +8359,7 @@ Card ID: `stat244-t-squared-f`
 
 ---
 
-### 446. Is a ratio of any two scaled chi-squared variables F-distributed?
+### 440. Is a ratio of any two scaled chi-squared variables F-distributed?
 
 **STAT 244 · Inference distributions · QUICK RECALL**
 
@@ -8491,7 +8378,7 @@ Card ID: `stat244-f-independence`
 
 ---
 
-### 447. Under a full-rank Gaussian linear model, what distribution does β̂ have?
+### 441. Under a full-rank Gaussian linear model, what distribution does β̂ have?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
@@ -8510,7 +8397,7 @@ Card ID: `stat244-coefficient-gaussian`
 
 ---
 
-### 448. What is the estimated SE of aᵀβ̂?
+### 442. What is the estimated SE of aᵀβ̂?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
@@ -8529,7 +8416,7 @@ Card ID: `stat244-contrast-se`
 
 ---
 
-### 449. Why is a joint coefficient confidence region generally an ellipsoid?
+### 443. Why is a joint coefficient confidence region generally an ellipsoid?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
@@ -8548,7 +8435,7 @@ Card ID: `stat244-confidence-ellipsoid`
 
 ---
 
-### 450. Why scale predictors before interpreting a condition number?
+### 444. Why scale predictors before interpreting a condition number?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -8567,7 +8454,7 @@ Card ID: `stat244-condition-representation`
 
 ---
 
-### 451. Why use a generalized VIF for a factor?
+### 445. Why use a generalized VIF for a factor?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -8586,7 +8473,7 @@ Card ID: `stat244-gvif-purpose`
 
 ---
 
-### 452. How should you choose how many PCR components to keep for prediction?
+### 446. How should you choose how many PCR components to keep for prediction?
 
 **STAT 244 · Latent predictor methods · QUICK RECALL**
 
@@ -8605,7 +8492,7 @@ Card ID: `stat244-pcr-component-choice`
 
 ---
 
-### 453. What can curvature in residuals versus fitted values suggest?
+### 447. What can curvature in residuals versus fitted values suggest?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8624,7 +8511,7 @@ Card ID: `stat244-residual-curve`
 
 ---
 
-### 454. What can a widening residual funnel suggest?
+### 448. What can a widening residual funnel suggest?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8643,7 +8530,7 @@ Card ID: `stat244-residual-funnel`
 
 ---
 
-### 455. Does a pattern-free residual plot prove all model assumptions?
+### 449. Does a pattern-free residual plot prove all model assumptions?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8662,7 +8549,7 @@ Card ID: `stat244-residual-clean`
 
 ---
 
-### 456. Which plot more directly examines a normal-error assumption?
+### 450. Which plot more directly examines a normal-error assumption?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8681,7 +8568,7 @@ Card ID: `stat244-qq-role`
 
 ---
 
-### 457. What is an observation’s leverage hᵢᵢ?
+### 451. What is an observation’s leverage hᵢᵢ?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
@@ -8700,7 +8587,7 @@ Card ID: `stat244-leverage-definition`
 
 ---
 
-### 458. Can changing y alone change leverage?
+### 452. Can changing y alone change leverage?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
@@ -8719,7 +8606,7 @@ Card ID: `stat244-leverage-response`
 
 ---
 
-### 459. What range can an OLS leverage take?
+### 453. What range can an OLS leverage take?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
@@ -8738,7 +8625,7 @@ Card ID: `stat244-leverage-bounds`
 
 ---
 
-### 460. What is average leverage for a rank-r design with n rows?
+### 454. What is average leverage for a rank-r design with n rows?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
@@ -8757,7 +8644,7 @@ Card ID: `stat244-leverage-average`
 
 ---
 
-### 461. How does yᵢ affect its own fitted value?
+### 455. How does yᵢ affect its own fitted value?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
@@ -8776,7 +8663,7 @@ Card ID: `stat244-leverage-sensitivity`
 
 ---
 
-### 462. Under spherical errors, what is Var(e)?
+### 456. Under spherical errors, what is Var(e)?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8795,7 +8682,7 @@ Card ID: `stat244-residual-covariance`
 
 ---
 
-### 463. Why do high-leverage observations have smaller raw residual variance?
+### 457. Why do high-leverage observations have smaller raw residual variance?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8814,7 +8701,7 @@ Card ID: `stat244-residual-variance`
 
 ---
 
-### 464. Are OLS residuals independent just because the original errors are?
+### 458. Are OLS residuals independent just because the original errors are?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8833,7 +8720,7 @@ Card ID: `stat244-residual-correlated`
 
 ---
 
-### 465. How do you standardize a residual for noise and leverage?
+### 459. How do you standardize a residual for noise and leverage?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8852,7 +8739,7 @@ Card ID: `stat244-internal-studentization`
 
 ---
 
-### 466. Why isn’t an internally studentized residual exactly t-distributed?
+### 460. Why isn’t an internally studentized residual exactly t-distributed?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8871,7 +8758,7 @@ Card ID: `stat244-internal-not-t`
 
 ---
 
-### 467. What changes for an externally studentized residual?
+### 461. What changes for an externally studentized residual?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8890,7 +8777,7 @@ Card ID: `stat244-external-studentization`
 
 ---
 
-### 468. Under Gaussian errors, what is the deleted-residual t reference?
+### 462. Under Gaussian errors, what is the deleted-residual t reference?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8909,7 +8796,7 @@ Card ID: `stat244-external-t-df`
 
 ---
 
-### 469. Why adjust when testing every observation for outlyingness?
+### 463. Why adjust when testing every observation for outlyingness?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8928,7 +8815,7 @@ Card ID: `stat244-outlier-multiple-testing`
 
 ---
 
-### 470. How does Bonferroni adjust n residual-test p-values?
+### 464. How does Bonferroni adjust n residual-test p-values?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8947,7 +8834,7 @@ Card ID: `stat244-bonferroni-residuals`
 
 ---
 
-### 471. Does Bonferroni require independent residual tests?
+### 465. Does Bonferroni require independent residual tests?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8966,7 +8853,7 @@ Card ID: `stat244-bonferroni-dependence`
 
 ---
 
-### 472. Which reference quantiles match externally studentized residuals under the Gaussian model?
+### 466. Which reference quantiles match externally studentized residuals under the Gaussian model?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
@@ -8985,7 +8872,7 @@ Card ID: `stat244-qq-studentized`
 
 ---
 
-### 473. What happens to XᵀX when observation i is removed?
+### 467. What happens to XᵀX when observation i is removed?
 
 **STAT 244 · Deletion diagnostics · QUICK RECALL**
 
@@ -9004,7 +8891,7 @@ Card ID: `stat244-delete-gram`
 
 ---
 
-### 474. Why is Sherman–Morrison–Woodbury useful for deletion diagnostics?
+### 468. Why is Sherman–Morrison–Woodbury useful for deletion diagnostics?
 
 **STAT 244 · Deletion diagnostics · QUICK RECALL**
 
@@ -9023,7 +8910,7 @@ Card ID: `stat244-smw-purpose`
 
 ---
 
-### 475. How is the leave-one-out prediction residual related to the full-fit residual?
+### 469. How is the leave-one-out prediction residual related to the full-fit residual?
 
 **STAT 244 · Deletion diagnostics · QUICK RECALL**
 
@@ -9042,7 +8929,7 @@ Card ID: `stat244-deleted-residual`
 
 ---
 
-### 476. Why can deleting a high-leverage point cause a large change?
+### 470. Why can deleting a high-leverage point cause a large change?
 
 **STAT 244 · Deletion diagnostics · QUICK RECALL**
 
@@ -9061,7 +8948,7 @@ Card ID: `stat244-delete-high-leverage`
 
 ---
 
-### 477. What warning does hᵢᵢ=1 give for ordinary deletion formulas?
+### 471. What warning does hᵢᵢ=1 give for ordinary deletion formulas?
 
 **STAT 244 · Deletion diagnostics · QUICK RECALL**
 
@@ -9080,7 +8967,7 @@ Card ID: `stat244-leverage-one`
 
 ---
 
-### 478. How do outlyingness and leverage differ?
+### 472. How do outlyingness and leverage differ?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
@@ -9099,7 +8986,7 @@ Card ID: `stat244-outlier-vs-leverage`
 
 ---
 
-### 479. What does influence ask?
+### 473. What does influence ask?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
@@ -9118,7 +9005,7 @@ Card ID: `stat244-influence-definition`
 
 ---
 
-### 480. Must a high-leverage point be highly influential?
+### 474. Must a high-leverage point be highly influential?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
@@ -9137,7 +9024,7 @@ Card ID: `stat244-leverage-not-influence`
 
 ---
 
-### 481. What does Cook’s distance summarize?
+### 475. What does Cook’s distance summarize?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
@@ -9156,7 +9043,7 @@ Card ID: `stat244-cooks-definition`
 
 ---
 
-### 482. How does Cook’s distance combine residual size and leverage?
+### 476. How does Cook’s distance combine residual size and leverage?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
@@ -9175,7 +9062,7 @@ Card ID: `stat244-cooks-formula`
 
 ---
 
-### 483. Does a large Cook’s distance automatically justify deleting an observation?
+### 477. Does a large Cook’s distance automatically justify deleting an observation?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
@@ -9194,7 +9081,7 @@ Card ID: `stat244-cooks-not-delete`
 
 ---
 
-### 484. What distinguishes DFFITS from DFBETAS?
+### 478. What distinguishes DFFITS from DFBETAS?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
@@ -9213,7 +9100,7 @@ Card ID: `stat244-dffits-dfbetas`
 
 ---
 
-### 485. What does the column space of X mean in regression?
+### 479. What does the column space of X mean in regression?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
@@ -9232,7 +9119,7 @@ Card ID: `stat244-space`
 
 ---
 
-### 486. For an n×p design X, do coefficients and fitted values live in the same space?
+### 480. For an n×p design X, do coefficients and fitted values live in the same space?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
@@ -9251,7 +9138,7 @@ Card ID: `stat244-ambient-dimensions`
 
 ---
 
-### 487. A 10×4 design has rank 3. How many coefficient directions are invisible?
+### 481. A 10×4 design has rank 3. How many coefficient directions are invisible?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
@@ -9270,7 +9157,7 @@ Card ID: `stat244-rank-nullity`
 
 ---
 
-### 488. Can different design matrices describe the same mean model?
+### 482. Can different design matrices describe the same mean model?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
@@ -9289,7 +9176,7 @@ Card ID: `stat244-span-not-columns`
 
 ---
 
-### 489. What vectors are perpendicular to (1,1,0) and (0,1,1)?
+### 483. What vectors are perpendicular to (1,1,0) and (0,1,1)?
 
 **STAT 244 · Fundamental subspaces · QUICK RECALL**
 
@@ -9308,7 +9195,7 @@ Card ID: `stat244-null`
 
 ---
 
-### 490. Why is N(X) perpendicular to the row space of X?
+### 484. Why is N(X) perpendicular to the row space of X?
 
 **STAT 244 · Fundamental subspaces · QUICK RECALL**
 
@@ -9327,7 +9214,7 @@ Card ID: `stat244-nullspace-test`
 
 ---
 
-### 491. Project y=(1,2,6) onto the constant vectors. What do you get?
+### 485. Project y=(1,2,6) onto the constant vectors. What do you get?
 
 **STAT 244 · Fundamental subspaces · QUICK RECALL**
 
@@ -9346,7 +9233,7 @@ Card ID: `stat244-orthogonal-decomposition-example`
 
 ---
 
-### 492. When can ℓᵀβ be estimated linearly and without bias?
+### 486. When can ℓᵀβ be estimated linearly and without bias?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -9365,7 +9252,7 @@ Card ID: `stat244-estimable`
 
 ---
 
-### 493. With X=[x x], which is identifiable: β₁ or β₁+β₂?
+### 487. With X=[x x], which is identifiable: β₁ or β₁+β₂?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -9384,7 +9271,7 @@ Card ID: `stat244-duplicate-columns`
 
 ---
 
-### 494. If ℓ=Xᵀa, why is aᵀy unbiased for ℓᵀβ?
+### 488. If ℓ=Xᵀa, why is aᵀy unbiased for ℓᵀβ?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -9403,7 +9290,7 @@ Card ID: `stat244-construct-unbiased-estimator`
 
 ---
 
-### 495. Can γ₂−γ₁ be identifiable when individual group effects are not?
+### 489. Can γ₂−γ₁ be identifiable when individual group effects are not?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -9422,7 +9309,7 @@ Card ID: `stat244-contrast-invariance`
 
 ---
 
-### 496. With rank-deficient X, when is a new mean x₀β uniquely determined?
+### 490. With rank-deficient X, when is a new mean x₀β uniquely determined?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -9441,7 +9328,7 @@ Card ID: `stat244-new-point-estimability`
 
 ---
 
-### 497. Does a numerically accurate least-squares fit guarantee valid inference?
+### 491. Does a numerically accurate least-squares fit guarantee valid inference?
 
 **STAT 244 · AM 205 × STAT 244 · QUICK RECALL**
 
@@ -9460,7 +9347,7 @@ Card ID: `bridge-fit`
 
 ---
 
-### 498. Why can an intercept plus every group indicator cause ambiguity?
+### 492. Why can an intercept plus every group indicator cause ambiguity?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -9479,7 +9366,7 @@ Card ID: `stat244-alias`
 
 ---
 
-### 499. An intercept plus three observed-group indicators gives how many independent directions?
+### 493. An intercept plus three observed-group indicators gives how many independent directions?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -9498,7 +9385,7 @@ Card ID: `stat244-dummy-rank`
 
 ---
 
-### 500. Does choosing a reference group restrict the possible group means?
+### 494. Does choosing a reference group restrict the possible group means?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -9517,7 +9404,7 @@ Card ID: `stat244-constraints-not-model`
 
 ---
 
-### 501. Why do X and XA give the same fits when A is invertible?
+### 495. Why do X and XA give the same fits when A is invertible?
 
 **STAT 244 · Reparameterization · QUICK RECALL**
 
@@ -9536,7 +9423,7 @@ Card ID: `stat244-recode`
 
 ---
 
-### 502. If X*=XA and X has full column rank, how do coefficients transform?
+### 496. If X*=XA and X has full column rank, how do coefficients transform?
 
 **STAT 244 · Reparameterization · QUICK RECALL**
 
@@ -9555,7 +9442,7 @@ Card ID: `stat244-parameter-map`
 
 ---
 
-### 503. Two full-rank designs share a column space. Can the basis-change matrix be singular?
+### 497. Two full-rank designs share a column space. Can the basis-change matrix be singular?
 
 **STAT 244 · Reparameterization · QUICK RECALL**
 
@@ -9574,7 +9461,7 @@ Card ID: `stat244-column-space-converse`
 
 ---
 
-### 504. If β̂ is one least-squares solution, what are all the others?
+### 498. If β̂ is one least-squares solution, what are all the others?
 
 **STAT 244 · Rank-deficient least squares · QUICK RECALL**
 
@@ -9593,7 +9480,7 @@ Card ID: `stat244-affine`
 
 ---
 
-### 505. If X=[x x] and the best fit is 3x, what coefficient pairs work?
+### 499. If X=[x x] and the best fit is 3x, what coefficient pairs work?
 
 **STAT 244 · Rank-deficient least squares · QUICK RECALL**
 
@@ -9612,7 +9499,7 @@ Card ID: `stat244-affine-example`
 
 ---
 
-### 506. Do the normal equations require normally distributed errors?
+### 500. Do the normal equations require normally distributed errors?
 
 **STAT 244 · Least-squares geometry · QUICK RECALL**
 
@@ -9631,7 +9518,7 @@ Card ID: `stat244-normal`
 
 ---
 
-### 507. What is the gradient of ‖y−Xβ‖²?
+### 501. What is the gradient of ‖y−Xβ‖²?
 
 **STAT 244 · Least-squares geometry · QUICK RECALL**
 
@@ -9650,7 +9537,7 @@ Card ID: `stat244-differentiate-loss`
 
 ---
 
-### 508. Why do OLS residuals sum to zero when there is an intercept?
+### 502. Why do OLS residuals sum to zero when there is an intercept?
 
 **STAT 244 · Least-squares geometry · QUICK RECALL**
 
@@ -9669,7 +9556,7 @@ Card ID: `stat244-residual-sum-zero`
 
 ---
 
-### 509. Why are OLS fitted values perpendicular to residuals?
+### 503. Why are OLS fitted values perpendicular to residuals?
 
 **STAT 244 · Least-squares geometry · QUICK RECALL**
 
@@ -9688,7 +9575,7 @@ Card ID: `stat244-fitted-orthogonality`
 
 ---
 
-### 510. Which two properties define an orthogonal projector P?
+### 504. Which two properties define an orthogonal projector P?
 
 **STAT 244 · Projection matrices · QUICK RECALL**
 
@@ -9707,7 +9594,7 @@ Card ID: `stat244-projection`
 
 ---
 
-### 511. Is P²=P alone enough for an orthogonal projection?
+### 505. Is P²=P alone enough for an orthogonal projection?
 
 **STAT 244 · Projection matrices · QUICK RECALL**
 
@@ -9726,7 +9613,7 @@ Card ID: `stat244-idempotent-not-orthogonal`
 
 ---
 
-### 512. What eigenvalues can a projector have?
+### 506. What eigenvalues can a projector have?
 
 **STAT 244 · Projection matrices · QUICK RECALL**
 
@@ -9745,7 +9632,7 @@ Card ID: `stat244-projector-eigenvalues`
 
 ---
 
-### 513. If the model space has rank r, what is tr(H)?
+### 507. If the model space has rank r, what is tr(H)?
 
 **STAT 244 · Projection matrices · QUICK RECALL**
 
@@ -9764,7 +9651,7 @@ Card ID: `stat244-hat-trace`
 
 ---
 
-### 514. For nested models, what does (P₁−P₀)y represent?
+### 508. For nested models, what does (P₁−P₀)y represent?
 
 **STAT 244 · Nested models · QUICK RECALL**
 
@@ -9783,7 +9670,7 @@ Card ID: `stat244-nested`
 
 ---
 
-### 515. If V₀⊆V₁, why is P₁P₀=P₀?
+### 509. If V₀⊆V₁, why is P₁P₀=P₀?
 
 **STAT 244 · Nested models · QUICK RECALL**
 
@@ -9802,7 +9689,7 @@ Card ID: `stat244-nesting-product`
 
 ---
 
-### 516. Is the difference of two orthogonal projectors always a projector?
+### 510. Is the difference of two orthogonal projectors always a projector?
 
 **STAT 244 · Nested models · QUICK RECALL**
 
@@ -9821,7 +9708,7 @@ Card ID: `stat244-difference-without-nesting`
 
 ---
 
-### 517. Under treatment coding, what does the intercept mean?
+### 511. Under treatment coding, what does the intercept mean?
 
 **STAT 244 · Contrast coding · QUICK RECALL**
 
@@ -9840,7 +9727,7 @@ Card ID: `stat244-contrasts`
 
 ---
 
-### 518. Reference mean 10; B’s coefficient is 2. What is B’s fitted mean?
+### 512. Reference mean 10; B’s coefficient is 2. What is B’s fitted mean?
 
 **STAT 244 · Contrast coding · QUICK RECALL**
 
@@ -9859,7 +9746,7 @@ Card ID: `stat244-treatment-numeric`
 
 ---
 
-### 519. Sum-coded effects are 2 and −1 for three groups. What is the missing effect?
+### 513. Sum-coded effects are 2 and −1 for three groups. What is the missing effect?
 
 **STAT 244 · Contrast coding · QUICK RECALL**
 
@@ -9878,7 +9765,7 @@ Card ID: `stat244-sum-coding-numeric`
 
 ---
 
-### 520. With a contrast coded −1 for A and +1 for B, why is its coefficient half their difference?
+### 514. With a contrast coded −1 for A and +1 for B, why is its coefficient half their difference?
 
 **STAT 244 · Contrast coding · QUICK RECALL**
 
@@ -9897,7 +9784,7 @@ Card ID: `stat244-helmert-scaling`
 
 ---
 
-### 521. Can you drop the intercept from any equivalent factor codings and keep equivalent models?
+### 515. Can you drop the intercept from any equivalent factor codings and keep equivalent models?
 
 **STAT 244 · Contrast coding · QUICK RECALL**
 
@@ -9916,7 +9803,7 @@ Card ID: `stat244-remove-intercept-caveat`
 
 ---
 
-### 522. Why divide residual SSE by n−rank(X) to estimate noise variance unbiasedly?
+### 516. Why divide residual SSE by n−rank(X) to estimate noise variance unbiasedly?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
@@ -9935,7 +9822,7 @@ Card ID: `stat244-variance`
 
 ---
 
-### 523. n=20, rank(X)=4, SSE=80. What is the unbiased variance estimate?
+### 517. n=20, rank(X)=4, SSE=80. What is the unbiased variance estimate?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
@@ -9954,7 +9841,7 @@ Card ID: `stat244-variance-numeric`
 
 ---
 
-### 524. Why is SSE/n a likelihood maximum for Gaussian variance when SSE>0?
+### 518. Why is SSE/n a likelihood maximum for Gaussian variance when SSE>0?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
@@ -9973,7 +9860,7 @@ Card ID: `stat244-variance-second-derivative`
 
 ---
 
-### 525. What does “best” mean in BLUE?
+### 519. What does “best” mean in BLUE?
 
 **STAT 244 · Gauss–Markov · QUICK RECALL**
 
@@ -9992,7 +9879,7 @@ Card ID: `stat244-blue`
 
 ---
 
-### 526. Does OLS need Gaussian errors to be unbiased?
+### 520. Does OLS need Gaussian errors to be unbiased?
 
 **STAT 244 · Gauss–Markov · QUICK RECALL**
 
@@ -10011,7 +9898,7 @@ Card ID: `stat244-normality-separation`
 
 ---
 
-### 527. What identity defines a generalized inverse G of B here?
+### 521. What identity defines a generalized inverse G of B here?
 
 **STAT 244 · Generalized inverses · QUICK RECALL**
 
@@ -10030,7 +9917,7 @@ Card ID: `stat244-ginverse`
 
 ---
 
-### 528. For B=diag(1,0), why does G=diag(1,t) work for any t?
+### 522. For B=diag(1,0), why does G=diag(1,t) work for any t?
 
 **STAT 244 · Generalized inverses · QUICK RECALL**
 
@@ -10049,7 +9936,7 @@ Card ID: `stat244-ginverse-example`
 
 ---
 
-### 529. If G is a generalized inverse of B, what works for BA when A is invertible?
+### 523. If G is a generalized inverse of B, what works for BA when A is invertible?
 
 **STAT 244 · Generalized inverses · QUICK RECALL**
 
@@ -10068,7 +9955,7 @@ Card ID: `stat244-ginverse-product`
 
 ---
 
-### 530. If G is a generalized inverse of B, what works for AB when A is invertible?
+### 524. If G is a generalized inverse of B, what works for AB when A is invertible?
 
 **STAT 244 · Generalized inverses · QUICK RECALL**
 
@@ -10087,7 +9974,7 @@ Card ID: `stat244-right-product`
 
 ---
 
-### 531. Why can coefficients be nonunique while fitted values are unique?
+### 525. Why can coefficients be nonunique while fitted values are unique?
 
 **STAT 244 · Rank deficiency · QUICK RECALL**
 
@@ -10106,7 +9993,7 @@ Card ID: `stat244-projector-unique`
 
 ---
 
-### 532. For X=[[1,0],[1,0]] and y=(1,3), what is the fit?
+### 526. For X=[[1,0],[1,0]] and y=(1,3), what is the fit?
 
 **STAT 244 · Rank deficiency · QUICK RECALL**
 
@@ -10125,7 +10012,7 @@ Card ID: `stat244-g-inverse-fitted-numeric`
 
 ---
 
-### 533. Why is an orthogonal projection the nearest point in a subspace?
+### 527. Why is an orthogonal projection the nearest point in a subspace?
 
 **STAT 244 · Projection proofs · QUICK RECALL**
 
@@ -10144,7 +10031,7 @@ Card ID: `stat244-pythagoras`
 
 ---
 
-### 534. Why can a linear unbiased competitor not beat OLS under spherical errors?
+### 528. Why can a linear unbiased competitor not beat OLS under spherical errors?
 
 **STAT 244 · Gauss–Markov proof · QUICK RECALL**
 
@@ -10163,7 +10050,7 @@ Card ID: `stat244-blue-proof`
 
 ---
 
-### 535. A linear unbiased contrast estimator adds weights z with Xᵀz=0. What variance does that add?
+### 529. A linear unbiased contrast estimator adds weights z with Xᵀz=0. What variance does that add?
 
 **STAT 244 · Gauss–Markov proof · QUICK RECALL**
 
@@ -10182,7 +10069,7 @@ Card ID: `stat244-contrast-variance-gap`
 
 ---
 
-### 536. What does generalized least squares change?
+### 530. What does generalized least squares change?
 
 **STAT 244 · Generalized least squares · QUICK RECALL**
 
@@ -10201,7 +10088,7 @@ Card ID: `stat244-gls`
 
 ---
 
-### 537. Why whiten both y and X in GLS?
+### 531. Why whiten both y and X in GLS?
 
 **STAT 244 · Generalized least squares · QUICK RECALL**
 
@@ -10220,7 +10107,7 @@ Card ID: `stat244-whitening-covariance`
 
 ---
 
-### 538. Two independent measurements have variances 1 and 4. What relative weights should they get?
+### 532. Two independent measurements have variances 1 and 4. What relative weights should they get?
 
 **STAT 244 · Weighted least squares · QUICK RECALL**
 
@@ -10239,7 +10126,7 @@ Card ID: `stat244-weights`
 
 ---
 
-### 539. Values are 2 and 8, with variances proportional to 1 and 4. What is their weighted mean?
+### 533. Values are 2 and 8, with variances proportional to 1 and 4. What is their weighted mean?
 
 **STAT 244 · Weighted least squares · QUICK RECALL**
 
@@ -10258,7 +10145,7 @@ Card ID: `stat244-weighted-mean`
 
 ---
 
-### 540. Project a standard Gaussian vector onto r orthogonal directions. What distribution does its squared length have?
+### 534. Project a standard Gaussian vector onto r orthogonal directions. What distribution does its squared length have?
 
 **STAT 244 · Quadratic forms · QUICK RECALL**
 
@@ -10277,7 +10164,7 @@ Card ID: `stat244-cochran`
 
 ---
 
-### 541. What are the mean and variance of Z₁²+Z₂² for independent standard normals?
+### 535. What are the mean and variance of Z₁²+Z₂² for independent standard normals?
 
 **STAT 244 · Quadratic forms · QUICK RECALL**
 
@@ -10296,7 +10183,7 @@ Card ID: `stat244-quadratic-rank-two`
 
 ---
 
-### 542. Why are Gaussian OLS fitted values and residuals independent?
+### 536. Why are Gaussian OLS fitted values and residuals independent?
 
 **STAT 244 · Quadratic forms · QUICK RECALL**
 
@@ -10315,7 +10202,7 @@ Card ID: `stat244-independent-fit-residual`
 
 ---
 
-### 543. What does the nested-model F statistic compare?
+### 537. What does the nested-model F statistic compare?
 
 **STAT 244 · Nested-model inference · QUICK RECALL**
 
@@ -10334,7 +10221,7 @@ Card ID: `stat244-f-test`
 
 ---
 
-### 544. Why is the usual central F reference distribution a null-model result?
+### 538. Why is the usual central F reference distribution a null-model result?
 
 **STAT 244 · Nested-model inference · QUICK RECALL**
 
@@ -10353,7 +10240,7 @@ Card ID: `stat244-f-null-needed`
 
 ---
 
-### 545. How many test degrees of freedom can a four-level factor add?
+### 539. How many test degrees of freedom can a four-level factor add?
 
 **STAT 244 · Nested-model inference · QUICK RECALL**
 
@@ -10372,7 +10259,7 @@ Card ID: `stat244-rank-not-predictors`
 
 ---
 
-### 546. For nested Gaussian models, do a large F statistic and a small null/full likelihood ratio agree?
+### 540. For nested Gaussian models, do a large F statistic and a small null/full likelihood ratio agree?
 
 **STAT 244 · Nested-model inference · QUICK RECALL**
 
@@ -10391,7 +10278,7 @@ Card ID: `stat244-lrt-monotone`
 
 ---
 
-### 547. SSE drops from 120 to 80 after adding 2 directions; full residual df is 20. What is F?
+### 541. SSE drops from 120 to 80 after adding 2 directions; full residual df is 20. What is F?
 
 **STAT 244 · Nested-model inference · QUICK RECALL**
 
@@ -10410,7 +10297,7 @@ Card ID: `stat244-f-number`
 
 ---
 
-### 548. How do you express β₂=β₃ as a linear restriction?
+### 542. How do you express β₂=β₃ as a linear restriction?
 
 **STAT 244 · General linear hypotheses · QUICK RECALL**
 
@@ -10429,7 +10316,7 @@ Card ID: `stat244-constraints`
 
 ---
 
-### 549. Is the restriction β₃=2 a subspace constraint?
+### 543. Is the restriction β₃=2 a subspace constraint?
 
 **STAT 244 · General linear hypotheses · QUICK RECALL**
 
@@ -10448,7 +10335,7 @@ Card ID: `stat244-constraint-matrix`
 
 ---
 
-### 550. Why add Lagrange multipliers to constrained least squares?
+### 544. Why add Lagrange multipliers to constrained least squares?
 
 **STAT 244 · General linear hypotheses · QUICK RECALL**
 
@@ -10467,7 +10354,7 @@ Card ID: `stat244-constrained-normal-equations`
 
 ---
 
-### 551. What is a coefficient’s estimated standard error in full-rank OLS?
+### 545. What is a coefficient’s estimated standard error in full-rank OLS?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
@@ -10486,7 +10373,7 @@ Card ID: `stat244-t-ci`
 
 ---
 
-### 552. If s=3 and (XᵀX)⁻¹ⱼⱼ=0.04, what is the coefficient SE?
+### 546. If s=3 and (XᵀX)⁻¹ⱼⱼ=0.04, what is the coefficient SE?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
@@ -10505,7 +10392,7 @@ Card ID: `stat244-standard-error-number`
 
 ---
 
-### 553. What does 95% frequentist confidence mean?
+### 547. What does 95% frequentist confidence mean?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
@@ -10524,7 +10411,7 @@ Card ID: `stat244-confidence-interpretation`
 
 ---
 
-### 554. Why is a new-response prediction interval wider than a mean-response interval?
+### 548. Why is a new-response prediction interval wider than a mean-response interval?
 
 **STAT 244 · Prediction intervals · QUICK RECALL**
 
@@ -10543,7 +10430,7 @@ Card ID: `stat244-prediction`
 
 ---
 
-### 555. With s=2 and mean-prediction leverage 0.25, what are the mean and new-response SEs?
+### 549. With s=2 and mean-prediction leverage 0.25, what are the mean and new-response SEs?
 
 **STAT 244 · Prediction intervals · QUICK RECALL**
 
@@ -10562,7 +10449,7 @@ Card ID: `stat244-prediction-width-number`
 
 ---
 
-### 556. Do ten separate 95% intervals guarantee 95% coverage for all ten together?
+### 550. Do ten separate 95% intervals guarantee 95% coverage for all ten together?
 
 **STAT 244 · Simultaneous inference · QUICK RECALL**
 
@@ -10581,7 +10468,7 @@ Card ID: `stat244-simultaneous`
 
 ---
 
-### 557. What multiplier gives Scheffé protection for all coefficient combinations in a p-parameter Gaussian model?
+### 551. What multiplier gives Scheffé protection for all coefficient combinations in a p-parameter Gaussian model?
 
 **STAT 244 · Simultaneous inference · QUICK RECALL**
 
@@ -10600,7 +10487,7 @@ Card ID: `stat244-scheffe-factor`
 
 ---
 
-### 558. If A⊆B, which orthogonal complement is larger?
+### 552. If A⊆B, which orthogonal complement is larger?
 
 **STAT 244 · Subspace proofs · QUICK RECALL**
 
@@ -10619,7 +10506,7 @@ Card ID: `stat244-orthocomplement`
 
 ---
 
-### 559. Why is v₁+v₂ perpendicular to W₁∩W₂ when vᵢ is perpendicular to Wᵢ?
+### 553. Why is v₁+v₂ perpendicular to W₁∩W₂ when vᵢ is perpendicular to Wᵢ?
 
 **STAT 244 · Subspace proofs · QUICK RECALL**
 
@@ -10638,7 +10525,7 @@ Card ID: `stat244-intersection-complement`
 
 ---
 
-### 560. In finite dimensions, what is (A⊥)⊥ for a subspace A?
+### 554. In finite dimensions, what is (A⊥)⊥ for a subspace A?
 
 **STAT 244 · Subspace proofs · QUICK RECALL**
 
@@ -10657,7 +10544,7 @@ Card ID: `stat244-double-complement`
 
 ---
 
-### 561. How does covariance change under AY+b?
+### 555. How does covariance change under AY+b?
 
 **STAT 244 · Random vectors · QUICK RECALL**
 
@@ -10676,7 +10563,7 @@ Card ID: `stat244-cov-transform`
 
 ---
 
-### 562. Can X and X² be dependent but uncorrelated when X is standard normal?
+### 556. Can X and X² be dependent but uncorrelated when X is standard normal?
 
 **STAT 244 · Random vectors · QUICK RECALL**
 
@@ -10695,7 +10582,7 @@ Card ID: `stat244-gaussian-uncorrelated`
 
 ---
 
-### 563. Can pairwise correlations miss multicollinearity?
+### 557. Can pairwise correlations miss multicollinearity?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -10714,7 +10601,7 @@ Card ID: `stat244-collinearity`
 
 ---
 
-### 564. Why can nearly duplicate predictors have unstable coefficients but stable fits?
+### 558. Why can nearly duplicate predictors have unstable coefficients but stable fits?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -10733,7 +10620,7 @@ Card ID: `stat244-stable-sum-unstable-parts`
 
 ---
 
-### 565. If predicting xⱼ from other predictors gives R²=0.95, what is its VIF?
+### 559. If predicting xⱼ from other predictors gives R²=0.95, what is its VIF?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -10752,7 +10639,7 @@ Card ID: `stat244-vif`
 
 ---
 
-### 566. If VIF=9, how much does the coefficient SE inflate?
+### 560. If VIF=9, how much does the coefficient SE inflate?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -10771,7 +10658,7 @@ Card ID: `stat244-vif-standard-error`
 
 ---
 
-### 567. Software reports GVIF^(1/(2df))=2. What is GVIF^(1/df)?
+### 561. Software reports GVIF^(1/(2df))=2. What is GVIF^(1/df)?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -10790,7 +10677,7 @@ Card ID: `stat244-gvif-scale`
 
 ---
 
-### 568. What does Gram–Schmidt subtract from the next column?
+### 562. What does Gram–Schmidt subtract from the next column?
 
 **STAT 244 · Orthogonalization · QUICK RECALL**
 
@@ -10809,7 +10696,7 @@ Card ID: `stat244-gram-schmidt`
 
 ---
 
-### 569. Remove the projection onto (1,1) from (1,0). What remains?
+### 563. Remove the projection onto (1,1) from (1,0). What remains?
 
 **STAT 244 · Orthogonalization · QUICK RECALL**
 
@@ -10828,7 +10715,7 @@ Card ID: `stat244-gram-schmidt-number`
 
 ---
 
-### 570. Does orthogonalizing predictors remove uncertainty in the original coefficients?
+### 564. Does orthogonalizing predictors remove uncertainty in the original coefficients?
 
 **STAT 244 · Reparameterization · QUICK RECALL**
 
@@ -10847,7 +10734,7 @@ Card ID: `stat244-orthogonalization-limit`
 
 ---
 
-### 571. Why can PCR discard a useful predictor direction?
+### 565. Why can PCR discard a useful predictor direction?
 
 **STAT 244 · Principal components regression · QUICK RECALL**
 
@@ -10866,7 +10753,7 @@ Card ID: `stat244-pcr`
 
 ---
 
-### 572. Why does full-component PCR reproduce OLS, but truncated PCR may not?
+### 566. Why does full-component PCR reproduce OLS, but truncated PCR may not?
 
 **STAT 244 · Principal components regression · QUICK RECALL**
 
@@ -10885,7 +10772,7 @@ Card ID: `stat244-pcr-full-versus-truncated`
 
 ---
 
-### 573. Why fit PCA inside each cross-validation training fold?
+### 567. Why fit PCA inside each cross-validation training fold?
 
 **STAT 244 · Principal components regression · QUICK RECALL**
 
@@ -10904,7 +10791,7 @@ Card ID: `stat244-pca-fold-boundary`
 
 ---
 
-### 574. What does PLS use that PCA does not?
+### 568. What does PLS use that PCA does not?
 
 **STAT 244 · Latent predictor methods · QUICK RECALL**
 
@@ -10923,7 +10810,7 @@ Card ID: `stat244-pls`
 
 ---
 
-### 575. Why is fitting PLS before splitting especially risky?
+### 569. Why is fitting PLS before splitting especially risky?
 
 **STAT 244 · Latent predictor methods · QUICK RECALL**
 
@@ -10942,7 +10829,7 @@ Card ID: `stat244-pls-supervised-boundary`
 
 ---
 
-### 576. Why does C(X) always contain zero?
+### 570. Why does C(X) always contain zero?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
@@ -10961,7 +10848,7 @@ Card ID: `stat244-zero-mean`
 
 ---
 
-### 577. If Xβ₁ and Xβ₂ are possible means, is their sum possible too?
+### 571. If Xβ₁ and Xβ₂ are possible means, is their sum possible too?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
@@ -10980,7 +10867,7 @@ Card ID: `stat244-add-means`
 
 ---
 
-### 578. Does an OLS residual lie in N(X) or N(Xᵀ)?
+### 572. Does an OLS residual lie in N(X) or N(Xᵀ)?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
@@ -10999,7 +10886,7 @@ Card ID: `stat244-residual-space`
 
 ---
 
-### 579. A design has 10 rows and rank 3. How many residual directions remain?
+### 573. A design has 10 rows and rank 3. How many residual directions remain?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
@@ -11018,7 +10905,7 @@ Card ID: `stat244-residual-dimension`
 
 ---
 
-### 580. Can deleting a predictor enlarge the model’s column space?
+### 574. Can deleting a predictor enlarge the model’s column space?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
@@ -11037,7 +10924,7 @@ Card ID: `stat244-drop-column`
 
 ---
 
-### 581. If X has full column rank, which coefficient contrasts are estimable?
+### 575. If X has full column rank, which coefficient contrasts are estimable?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -11056,7 +10943,7 @@ Card ID: `stat244-full-rank-targets`
 
 ---
 
-### 582. How can a null vector prove that ℓᵀβ is not estimable?
+### 576. How can a null vector prove that ℓᵀβ is not estimable?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -11075,7 +10962,7 @@ Card ID: `stat244-null-target-test`
 
 ---
 
-### 583. What does ℓᵀG(XᵀX)=ℓᵀ mean when G is a generalized inverse?
+### 577. What does ℓᵀG(XᵀX)=ℓᵀ mean when G is a generalized inverse?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -11094,7 +10981,7 @@ Card ID: `stat244-estimability-ginverse`
 
 ---
 
-### 584. Why do X and XᵀX have the same null space?
+### 578. Why do X and XᵀX have the same null space?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -11113,7 +11000,7 @@ Card ID: `stat244-gram-null`
 
 ---
 
-### 585. Why is C(XᵀX)=C(Xᵀ)?
+### 579. Why is C(XᵀX)=C(Xᵀ)?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -11132,7 +11019,7 @@ Card ID: `stat244-gram-row`
 
 ---
 
-### 586. For X=[x x], what is one nonzero null vector?
+### 580. For X=[x x], what is one nonzero null vector?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -11151,7 +11038,7 @@ Card ID: `stat244-duplicate-null`
 
 ---
 
-### 587. With X=[x x], can the data identify β₁−β₂?
+### 581. With X=[x x], can the data identify β₁−β₂?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -11170,7 +11057,7 @@ Card ID: `stat244-duplicate-difference`
 
 ---
 
-### 588. In μᵢⱼ=α+βᵢ+γⱼ, why isn’t α separately identifiable without constraints?
+### 582. In μᵢⱼ=α+βᵢ+γⱼ, why isn’t α separately identifiable without constraints?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -11189,7 +11076,7 @@ Card ID: `stat244-two-way-shift`
 
 ---
 
-### 589. In an observed additive two-way layout, is βᵢ−βₖ estimable?
+### 583. In an observed additive two-way layout, is βᵢ−βₖ estimable?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -11208,7 +11095,7 @@ Card ID: `stat244-two-way-row-contrast`
 
 ---
 
-### 590. What does an additive two-way model assume about a row effect across columns?
+### 584. What does an additive two-way model assume about a row effect across columns?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -11227,7 +11114,7 @@ Card ID: `stat244-two-way-interaction`
 
 ---
 
-### 591. With all r×c cells observed, how many mean dimensions does an additive two-way model have?
+### 585. With all r×c cells observed, how many mean dimensions does an additive two-way model have?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -11246,7 +11133,7 @@ Card ID: `stat244-two-way-dimensions`
 
 ---
 
-### 592. Why is “all group means are equal” different from choosing a reference group?
+### 586. Why is “all group means are equal” different from choosing a reference group?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -11265,7 +11152,7 @@ Card ID: `stat244-equality-shrinks`
 
 ---
 
-### 593. Can an invertible recoding change OLS residual SSE?
+### 587. Can an invertible recoding change OLS residual SSE?
 
 **STAT 244 · Reparameterization · QUICK RECALL**
 
@@ -11284,7 +11171,7 @@ Card ID: `stat244-recode-sse`
 
 ---
 
-### 594. Can individual coefficient p-values change after recoding?
+### 588. Can individual coefficient p-values change after recoding?
 
 **STAT 244 · Reparameterization · QUICK RECALL**
 
@@ -11303,7 +11190,7 @@ Card ID: `stat244-recode-coefficient-tests`
 
 ---
 
-### 595. When is the set β̂+N(X) a vector subspace?
+### 589. When is the set β̂+N(X) a vector subspace?
 
 **STAT 244 · Rank-deficient least squares · QUICK RECALL**
 
@@ -11322,7 +11209,7 @@ Card ID: `stat244-affine-origin`
 
 ---
 
-### 596. Why isn’t the line β₁+β₂=3 a vector space?
+### 590. Why isn’t the line β₁+β₂=3 a vector space?
 
 **STAT 244 · Rank-deficient least squares · QUICK RECALL**
 
@@ -11341,7 +11228,7 @@ Card ID: `stat244-affine-zero`
 
 ---
 
-### 597. What does Xᵀe=0 say about each predictor?
+### 591. What does Xᵀe=0 say about each predictor?
 
 **STAT 244 · Least-squares geometry · QUICK RECALL**
 
@@ -11360,7 +11247,7 @@ Card ID: `stat244-normal-equation-geometry`
 
 ---
 
-### 598. Why can least squares have no bad local minima?
+### 592. Why can least squares have no bad local minima?
 
 **STAT 244 · Least-squares geometry · QUICK RECALL**
 
@@ -11379,7 +11266,7 @@ Card ID: `stat244-hessian-positive`
 
 ---
 
-### 599. When is the OLS coefficient minimum unique?
+### 593. When is the OLS coefficient minimum unique?
 
 **STAT 244 · Least-squares geometry · QUICK RECALL**
 
@@ -11398,7 +11285,7 @@ Card ID: `stat244-unique-minimum`
 
 ---
 
-### 600. Without an intercept, must OLS residuals average zero?
+### 594. Without an intercept, must OLS residuals average zero?
 
 **STAT 244 · Least-squares geometry · QUICK RECALL**
 
@@ -11417,7 +11304,7 @@ Card ID: `stat244-no-intercept`
 
 ---
 
-### 601. Why does ‖y‖²=‖ŷ‖²+‖e‖² for OLS?
+### 595. Why does ‖y‖²=‖ŷ‖²+‖e‖² for OLS?
 
 **STAT 244 · Least-squares geometry · QUICK RECALL**
 
@@ -11436,7 +11323,7 @@ Card ID: `stat244-uncentered-squares`
 
 ---
 
-### 602. Why is I−P idempotent when P is?
+### 596. Why is I−P idempotent when P is?
 
 **STAT 244 · Projection matrices · QUICK RECALL**
 
@@ -11455,7 +11342,7 @@ Card ID: `stat244-complement-idempotent`
 
 ---
 
-### 603. Onto what space does the identity matrix project?
+### 597. Onto what space does the identity matrix project?
 
 **STAT 244 · Projection matrices · QUICK RECALL**
 
@@ -11474,7 +11361,7 @@ Card ID: `stat244-identity-projection`
 
 ---
 
-### 604. What does P=(1/n)11ᵀ do to y?
+### 598. What does P=(1/n)11ᵀ do to y?
 
 **STAT 244 · Projection matrices · QUICK RECALL**
 
@@ -11493,7 +11380,7 @@ Card ID: `stat244-mean-projector`
 
 ---
 
-### 605. Why does a projector’s trace equal its rank?
+### 599. Why does a projector’s trace equal its rank?
 
 **STAT 244 · Projection matrices · QUICK RECALL**
 
@@ -11512,7 +11399,7 @@ Card ID: `stat244-trace-rank`
 
 ---
 
-### 606. If tr(H)=r for n observations, what is tr(I−H)?
+### 600. If tr(H)=r for n observations, what is tr(I−H)?
 
 **STAT 244 · Projection matrices · QUICK RECALL**
 
@@ -11531,7 +11418,7 @@ Card ID: `stat244-residual-trace`
 
 ---
 
-### 607. Can adding columns to an OLS model increase its minimized training SSE?
+### 601. Can adding columns to an OLS model increase its minimized training SSE?
 
 **STAT 244 · Nested models · QUICK RECALL**
 
@@ -11550,7 +11437,7 @@ Card ID: `stat244-adding-fit`
 
 ---
 
-### 608. What is rank(P₁−P₀) for nested spaces of dimensions r₀ and r₁?
+### 602. What is rank(P₁−P₀) for nested spaces of dimensions r₀ and r₁?
 
 **STAT 244 · Nested models · QUICK RECALL**
 
@@ -11569,7 +11456,7 @@ Card ID: `stat244-extra-dimensions`
 
 ---
 
-### 609. What are the three orthogonal pieces in a nested-model decomposition?
+### 603. What are the three orthogonal pieces in a nested-model decomposition?
 
 **STAT 244 · Nested models · QUICK RECALL**
 
@@ -11588,7 +11475,7 @@ Card ID: `stat244-three-pieces`
 
 ---
 
-### 610. Do arbitrary orthogonal projectors commute?
+### 604. Do arbitrary orthogonal projectors commute?
 
 **STAT 244 · Nested models · QUICK RECALL**
 
@@ -11607,7 +11494,7 @@ Card ID: `stat244-commute-warning`
 
 ---
 
-### 611. Under sum coding, what does the intercept represent at zero numeric predictors?
+### 605. Under sum coding, what does the intercept represent at zero numeric predictors?
 
 **STAT 244 · Contrast coding · QUICK RECALL**
 
@@ -11626,7 +11513,7 @@ Card ID: `stat244-sum-intercept`
 
 ---
 
-### 612. Is a sum-coded intercept necessarily the overall sample mean?
+### 606. Is a sum-coded intercept necessarily the overall sample mean?
 
 **STAT 244 · Contrast coding · QUICK RECALL**
 
@@ -11645,7 +11532,7 @@ Card ID: `stat244-unbalanced-average`
 
 ---
 
-### 613. If you change the reference group, do group predictions change?
+### 607. If you change the reference group, do group predictions change?
 
 **STAT 244 · Contrast coding · QUICK RECALL**
 
@@ -11664,7 +11551,7 @@ Card ID: `stat244-reference-change`
 
 ---
 
-### 614. Intercept 10 and effects 2,−1,−1 give which group means?
+### 608. Intercept 10 and effects 2,−1,−1 give which group means?
 
 **STAT 244 · Contrast coding · QUICK RECALL**
 
@@ -11683,7 +11570,7 @@ Card ID: `stat244-sum-means`
 
 ---
 
-### 615. A Helmert column has entries −1,−1,+2. How does its coefficient relate to C−average(A,B)?
+### 609. A Helmert column has entries −1,−1,+2. How does its coefficient relate to C−average(A,B)?
 
 **STAT 244 · Contrast coding · QUICK RECALL**
 
@@ -11702,7 +11589,7 @@ Card ID: `stat244-second-helmert`
 
 ---
 
-### 616. Why can the baseline-predictor slope stay unchanged across equivalent group codings?
+### 610. Why can the baseline-predictor slope stay unchanged across equivalent group codings?
 
 **STAT 244 · Reparameterization · QUICK RECALL**
 
@@ -11721,7 +11608,7 @@ Card ID: `stat244-baseline-slope`
 
 ---
 
-### 617. What is the Gaussian maximum-likelihood estimate of σ² when SSE>0?
+### 611. What is the Gaussian maximum-likelihood estimate of σ² when SSE>0?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
@@ -11740,7 +11627,7 @@ Card ID: `stat244-variance-mle`
 
 ---
 
-### 618. Why is SSE/n downward biased under the correct mean model?
+### 612. Why is SSE/n downward biased under the correct mean model?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
@@ -11759,7 +11646,7 @@ Card ID: `stat244-variance-bias`
 
 ---
 
-### 619. If rank(X)=n, can SSE/(n−rank(X)) estimate noise variance?
+### 613. If rank(X)=n, can SSE/(n−rank(X)) estimate noise variance?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
@@ -11778,7 +11665,7 @@ Card ID: `stat244-no-residual-df`
 
 ---
 
-### 620. If Gaussian SSE=0, is σ̂²=0 an ordinary positive interior MLE?
+### 614. If Gaussian SSE=0, is σ̂²=0 an ordinary positive interior MLE?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
@@ -11797,7 +11684,7 @@ Card ID: `stat244-zero-sse-boundary`
 
 ---
 
-### 621. Does Gauss–Markov require normal errors?
+### 615. Does Gauss–Markov require normal errors?
 
 **STAT 244 · Gauss–Markov · QUICK RECALL**
 
@@ -11816,7 +11703,7 @@ Card ID: `stat244-blue-normality`
 
 ---
 
-### 622. Can a biased estimator have smaller mean squared error than BLUE?
+### 616. Can a biased estimator have smaller mean squared error than BLUE?
 
 **STAT 244 · Gauss–Markov · QUICK RECALL**
 
@@ -11835,7 +11722,7 @@ Card ID: `stat244-blue-biased`
 
 ---
 
-### 623. What does Var(y)=σ²I assert?
+### 617. What does Var(y)=σ²I assert?
 
 **STAT 244 · Gauss–Markov · QUICK RECALL**
 
@@ -11854,7 +11741,7 @@ Card ID: `stat244-spherical-errors`
 
 ---
 
-### 624. When does the generalized-inverse condition force G=B⁻¹?
+### 618. When does the generalized-inverse condition force G=B⁻¹?
 
 **STAT 244 · Generalized inverses · QUICK RECALL**
 
@@ -11873,7 +11760,7 @@ Card ID: `stat244-ordinary-inverse`
 
 ---
 
-### 625. Which diag(1,t) is the Moore–Penrose inverse of diag(1,0)?
+### 619. Which diag(1,t) is the Moore–Penrose inverse of diag(1,0)?
 
 **STAT 244 · Generalized inverses · QUICK RECALL**
 
@@ -11892,7 +11779,7 @@ Card ID: `stat244-moore-penrose-choice`
 
 ---
 
-### 626. How does the fitted-value projector act on C(X) and C(X)⊥?
+### 620. How does the fitted-value projector act on C(X) and C(X)⊥?
 
 **STAT 244 · Rank deficiency · QUICK RECALL**
 
@@ -11911,7 +11798,7 @@ Card ID: `stat244-projector-action`
 
 ---
 
-### 627. If an alternative fit differs from the projection by length 3, how much extra squared error does it add?
+### 621. If an alternative fit differs from the projection by length 3, how much extra squared error does it add?
 
 **STAT 244 · Projection proofs · QUICK RECALL**
 
@@ -11930,7 +11817,7 @@ Card ID: `stat244-minimum-squared-distance`
 
 ---
 
-### 628. For full-rank X, when is By unbiased for β for every β?
+### 622. For full-rank X, when is By unbiased for β for every β?
 
 **STAT 244 · Gauss–Markov proof · QUICK RECALL**
 
@@ -11949,7 +11836,7 @@ Card ID: `stat244-unbiased-constraint`
 
 ---
 
-### 629. Why is AAᵀ positive semidefinite?
+### 623. Why is AAᵀ positive semidefinite?
 
 **STAT 244 · Gauss–Markov proof · QUICK RECALL**
 
@@ -11968,7 +11855,7 @@ Card ID: `stat244-variance-gap-psd`
 
 ---
 
-### 630. Are GLS residuals necessarily Euclidean-orthogonal to X’s columns?
+### 624. Are GLS residuals necessarily Euclidean-orthogonal to X’s columns?
 
 **STAT 244 · Generalized least squares · QUICK RECALL**
 
@@ -11987,7 +11874,7 @@ Card ID: `stat244-gls-orthogonality`
 
 ---
 
-### 631. If Var(y)=σ²V, what covariance does V⁻¹ᐟ²y have?
+### 625. If Var(y)=σ²V, what covariance does V⁻¹ᐟ²y have?
 
 **STAT 244 · Generalized least squares · QUICK RECALL**
 
@@ -12006,7 +11893,7 @@ Card ID: `stat244-whitening-result`
 
 ---
 
-### 632. An average combines m independent equal-variance observations. What precision weight should it get?
+### 626. An average combines m independent equal-variance observations. What precision weight should it get?
 
 **STAT 244 · Weighted least squares · QUICK RECALL**
 
@@ -12025,7 +11912,7 @@ Card ID: `stat244-mean-precision`
 
 ---
 
-### 633. Are inverse marginal variances alone enough for GLS with correlated errors?
+### 627. Are inverse marginal variances alone enough for GLS with correlated errors?
 
 **STAT 244 · Weighted least squares · QUICK RECALL**
 
@@ -12044,7 +11931,7 @@ Card ID: `stat244-correlated-weights`
 
 ---
 
-### 634. Under the Gaussian linear model, what is SSE/σ² distributed as?
+### 628. Under the Gaussian linear model, what is SSE/σ² distributed as?
 
 **STAT 244 · Quadratic forms · QUICK RECALL**
 
@@ -12063,7 +11950,7 @@ Card ID: `stat244-residual-chi-square`
 
 ---
 
-### 635. Does a projector always turn squared noise length into a chi-squared variable?
+### 629. Does a projector always turn squared noise length into a chi-squared variable?
 
 **STAT 244 · Quadratic forms · QUICK RECALL**
 
@@ -12082,7 +11969,7 @@ Card ID: `stat244-non-gaussian-warning`
 
 ---
 
-### 636. Why is H(I−H)=0?
+### 630. Why is H(I−H)=0?
 
 **STAT 244 · Quadratic forms · QUICK RECALL**
 
@@ -12101,7 +11988,7 @@ Card ID: `stat244-covariance-zero`
 
 ---
 
-### 637. Why use the full model’s residual SSE in the F-test denominator?
+### 631. Why use the full model’s residual SSE in the F-test denominator?
 
 **STAT 244 · Nested-model inference · QUICK RECALL**
 
@@ -12120,7 +12007,7 @@ Card ID: `stat244-f-noise-denominator`
 
 ---
 
-### 638. Under the null, why is an F statistic often near 1 rather than 0?
+### 632. Under the null, why is an F statistic often near 1 rather than 0?
 
 **STAT 244 · Nested-model inference · QUICK RECALL**
 
@@ -12139,7 +12026,7 @@ Card ID: `stat244-f-close-one`
 
 ---
 
-### 639. For F=5 with 2 added directions and 20 residual df, what reference is needed for a p-value?
+### 633. For F=5 with 2 added directions and 20 residual df, what reference is needed for a p-value?
 
 **STAT 244 · Nested-model inference · QUICK RECALL**
 
@@ -12158,7 +12045,7 @@ Card ID: `stat244-f-degrees`
 
 ---
 
-### 640. For positive SSEs in nested Gaussian models, what is the null/full maximized likelihood ratio?
+### 634. For positive SSEs in nested Gaussian models, what is the null/full maximized likelihood ratio?
 
 **STAT 244 · Nested-model inference · QUICK RECALL**
 
@@ -12177,7 +12064,7 @@ Card ID: `stat244-lrt-ratio`
 
 ---
 
-### 641. Why can’t every coefficient restriction be tested in a rank-deficient model?
+### 635. Why can’t every coefficient restriction be tested in a rank-deficient model?
 
 **STAT 244 · General linear hypotheses · QUICK RECALL**
 
@@ -12196,7 +12083,7 @@ Card ID: `stat244-untestable-restriction`
 
 ---
 
-### 642. How do you encode β₁=β₂ and β₃=2 for β=(β₀,β₁,β₂,β₃)?
+### 636. How do you encode β₁=β₂ and β₃=2 for β=(β₀,β₁,β₂,β₃)?
 
 **STAT 244 · General linear hypotheses · QUICK RECALL**
 
@@ -12215,7 +12102,7 @@ Card ID: `stat244-two-restrictions`
 
 ---
 
-### 643. In the constrained least-squares block system, what does the lower block enforce?
+### 637. In the constrained least-squares block system, what does the lower block enforce?
 
 **STAT 244 · General linear hypotheses · QUICK RECALL**
 
@@ -12234,7 +12121,7 @@ Card ID: `stat244-kkt-lower`
 
 ---
 
-### 644. What is the stationarity equation for constrained least squares?
+### 638. What is the stationarity equation for constrained least squares?
 
 **STAT 244 · General linear hypotheses · QUICK RECALL**
 
@@ -12253,7 +12140,7 @@ Card ID: `stat244-kkt-upper`
 
 ---
 
-### 645. Why use a t distribution instead of a standard normal when σ is estimated?
+### 639. Why use a t distribution instead of a standard normal when σ is estimated?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
@@ -12272,7 +12159,7 @@ Card ID: `stat244-why-t`
 
 ---
 
-### 646. A coefficient is 1.2 with SE 0.6. What t statistic tests zero?
+### 640. A coefficient is 1.2 with SE 0.6. What t statistic tests zero?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
@@ -12291,7 +12178,7 @@ Card ID: `stat244-t-two`
 
 ---
 
-### 647. How do you build a pointwise coefficient confidence interval?
+### 641. How do you build a pointwise coefficient confidence interval?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
@@ -12310,7 +12197,7 @@ Card ID: `stat244-interval-form`
 
 ---
 
-### 648. Does a frequentist 95% interval assign 95% posterior probability to its parameter range?
+### 642. Does a frequentist 95% interval assign 95% posterior probability to its parameter range?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
@@ -12329,7 +12216,7 @@ Card ID: `stat244-confidence-not-posterior`
 
 ---
 
-### 649. Can unlimited data eliminate uncertainty in a new noisy response?
+### 643. Can unlimited data eliminate uncertainty in a new noisy response?
 
 **STAT 244 · Prediction intervals · QUICK RECALL**
 
@@ -12348,7 +12235,7 @@ Card ID: `stat244-infinite-data-noise`
 
 ---
 
-### 650. If ten independent intervals each cover with probability 0.95, what is their joint coverage?
+### 644. If ten independent intervals each cover with probability 0.95, what is their joint coverage?
 
 **STAT 244 · Simultaneous inference · QUICK RECALL**
 
@@ -12367,7 +12254,7 @@ Card ID: `stat244-independent-intervals`
 
 ---
 
-### 651. If E[Y]=μ, what is E[AY+b]?
+### 645. If E[Y]=μ, what is E[AY+b]?
 
 **STAT 244 · Random vectors · QUICK RECALL**
 
@@ -12386,7 +12273,7 @@ Card ID: `stat244-mean-transform`
 
 ---
 
-### 652. Does Var(AY)=AΣAᵀ require Gaussian Y?
+### 646. Does Var(AY)=AΣAᵀ require Gaussian Y?
 
 **STAT 244 · Random vectors · QUICK RECALL**
 
@@ -12405,7 +12292,7 @@ Card ID: `stat244-no-gaussian-required`
 
 ---
 
-### 653. When does zero covariance imply independence for two random vectors?
+### 647. When does zero covariance imply independence for two random vectors?
 
 **STAT 244 · Random vectors · QUICK RECALL**
 
@@ -12424,7 +12311,7 @@ Card ID: `stat244-joint-normal-key`
 
 ---
 
-### 654. Can x₃≈x₁+x₂ cause multicollinearity without an almost-perfect pairwise correlation?
+### 648. Can x₃≈x₁+x₂ cause multicollinearity without an almost-perfect pairwise correlation?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -12443,7 +12330,7 @@ Card ID: `stat244-three-variable-dependence`
 
 ---
 
-### 655. Why can stable training predictions become unstable off the observed predictor relationship?
+### 649. Why can stable training predictions become unstable off the observed predictor relationship?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -12462,7 +12349,7 @@ Card ID: `stat244-extrapolation-risk`
 
 ---
 
-### 656. If a predictor has R²=0 against the others, what is its VIF?
+### 650. If a predictor has R²=0 against the others, what is its VIF?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -12481,7 +12368,7 @@ Card ID: `stat244-vif-zero-rsquared`
 
 ---
 
-### 657. Does a large VIF automatically mean you should delete a predictor?
+### 651. Does a large VIF automatically mean you should delete a predictor?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -12500,7 +12387,7 @@ Card ID: `stat244-vif-not-delete`
 
 ---
 
-### 658. What does a zero Gram–Schmidt residual mean?
+### 652. What does a zero Gram–Schmidt residual mean?
 
 **STAT 244 · Orthogonalization · QUICK RECALL**
 
@@ -12519,7 +12406,7 @@ Card ID: `stat244-zero-new-direction`
 
 ---
 
-### 659. How do you turn a nonzero orthogonal residual u into a unit vector?
+### 653. How do you turn a nonzero orthogonal residual u into a unit vector?
 
 **STAT 244 · Orthogonalization · QUICK RECALL**
 
@@ -12538,7 +12425,7 @@ Card ID: `stat244-normalize-direction`
 
 ---
 
-### 660. Why might discarding small principal components help even though it loses information?
+### 654. Why might discarding small principal components help even though it loses information?
 
 **STAT 244 · Principal components regression · QUICK RECALL**
 
@@ -12557,7 +12444,7 @@ Card ID: `stat244-pcr-tradeoff`
 
 ---
 
-### 661. Does using y to build PLS components guarantee better predictions than PCR?
+### 655. Does using y to build PLS components guarantee better predictions than PCR?
 
 **STAT 244 · Latent predictor methods · QUICK RECALL**
 
@@ -12573,3 +12460,4810 @@ No. Response-informed directions can also fit noise. Compare honest held-out per
 Sources: [Inference notes · pp. 24–25 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=24)
 
 Card ID: `stat244-pls-not-universal`
+
+---
+
+### 656. What connects a data question to a useful decision?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Collect and clean relevant data, explore patterns, fit and evaluate models, then communicate an actionable result.
+
+**Intuition:** The model is one step in the project.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 15](../courses/am209a/lecnotes/lecture-01.pdf#page=15)
+
+Card ID: `am209a-cycle`
+
+---
+
+### 657. Why define the prediction question before choosing features?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It determines the target, prediction time, and information actually available when making the decision.
+
+**Intuition:** A useful prediction must be possible at the moment it is needed.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 16](../courses/am209a/lecnotes/lecture-01.pdf#page=16)
+
+Card ID: `am209a-question-first`
+
+---
+
+### 658. Why can .isna() miss missing observations?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It checks cells in existing rows. An entirely absent row has no cells to inspect.
+
+**Intuition:** Compare observed records with the records that should exist.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 20](../courses/am209a/lecnotes/lecture-01.pdf#page=20)
+
+Card ID: `am209a-absent-rows`
+
+---
+
+### 659. How would you find missing hours in an hourly dataset?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Construct the expected timestamp sequence and compare it with observed timestamps.
+
+**Intuition:** Completeness includes missing records, not just blank values.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 23](../courses/am209a/lecnotes/lecture-01.pdf#page=23)
+
+Card ID: `am209a-hourly-audit`
+
+---
+
+### 660. Why put data cleaning into a repeatable function?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It applies the same transformations consistently and makes decisions inspectable and reproducible.
+
+**Intuition:** A pipeline records how raw data became analysis data.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 27](../courses/am209a/lecnotes/lecture-01.pdf#page=27)
+
+Card ID: `am209a-cleaning-pipeline`
+
+---
+
+### 661. Why convert normalized temperature back to degrees for interpretation?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A slope per degree is easier to interpret than a slope per arbitrary normalized unit.
+
+**Intuition:** Units give coefficients practical meaning.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 28](../courses/am209a/lecnotes/lecture-01.pdf#page=28)
+
+Card ID: `am209a-units`
+
+---
+
+### 662. Why inspect rider groups separately instead of only their overall average?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A dominant group can hide another group's distinct pattern.
+
+**Intuition:** An average can conceal different behaviors.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 37](../courses/am209a/lecnotes/lecture-01.pdf#page=37)
+
+Card ID: `am209a-subgroups`
+
+---
+
+### 663. Why compare similar hours when studying temperature and rentals?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Time of day affects demand and may differ across temperature ranges, confounding a simple comparison.
+
+**Intuition:** A pattern can reflect another variable changing alongside the one you study.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 40](../courses/am209a/lecnotes/lecture-01.pdf#page=40)
+
+Card ID: `am209a-compare-like`
+
+---
+
+### 664. Why train on an earlier year and evaluate on a later year for forecasting?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It mimics predicting the future using only past information.
+
+**Intuition:** The evaluation split should resemble deployment.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 43](../courses/am209a/lecnotes/lecture-01.pdf#page=43)
+
+Card ID: `am209a-future-split`
+
+---
+
+### 665. What does negative test R² reveal?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The predictions have larger squared error than the test-set mean benchmark.
+
+**Intuition:** A model can fit training data and still fail on new data.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 45](../courses/am209a/lecnotes/lecture-01.pdf#page=45)
+
+Card ID: `am209a-negative-score`
+
+---
+
+### 666. What does a curved pattern in residuals suggest?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The model may be missing a nonlinear relationship or another systematic effect.
+
+**Intuition:** Errors with structure are clues to missing structure in the model.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 48](../courses/am209a/lecnotes/lecture-01.pdf#page=48)
+
+Card ID: `am209a-wrong-shape`
+
+---
+
+### 667. Why can a degree-12 curve fit training data better but predict worse?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its flexibility can fit accidental noise instead of a stable pattern.
+
+**Intuition:** Better memorization can mean worse generalization.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 54](../courses/am209a/lecnotes/lecture-01.pdf#page=54)
+
+Card ID: `am209a-flexibility`
+
+---
+
+### 668. How can regularization help an overly flexible model?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It discourages large coefficients while still fitting the data.
+
+**Intuition:** Keep useful flexibility while limiting extreme fits.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 56](../courses/am209a/lecnotes/lecture-01.pdf#page=56)
+
+Card ID: `am209a-shrinkage-intro`
+
+---
+
+### 669. Why might treating hour as a category beat one numeric hour coefficient?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A single slope imposes a constant hourly change. Categories can represent separate morning and evening peaks.
+
+**Intuition:** Numeric storage does not require a straight-line effect.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 59](../courses/am209a/lecnotes/lecture-01.pdf#page=59)
+
+Card ID: `am209a-hour-categories`
+
+---
+
+### 670. How does predicting rental count differ from predicting busy versus quiet?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Count prediction is regression; busy-versus-quiet prediction is classification.
+
+**Intuition:** The response type determines the task.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 63](../courses/am209a/lecnotes/lecture-01.pdf#page=63)
+
+Card ID: `am209a-regression-classification`
+
+---
+
+### 671. Why not use an unconstrained straight line as a probability?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It can predict below 0 or above 1. Logistic regression maps a linear score into valid probabilities.
+
+**Intuition:** A prediction must respect the target's range.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 64](../courses/am209a/lecnotes/lecture-01.pdf#page=64)
+
+Card ID: `am209a-logistic-preview`
+
+---
+
+### 672. How does a decision tree make a prediction?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It follows a sequence of feature-based splits to a terminal prediction.
+
+**Intuition:** Several simple rules can represent a nonlinear pattern.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 68](../courses/am209a/lecnotes/lecture-01.pdf#page=68)
+
+Card ID: `am209a-tree-preview`
+
+---
+
+### 673. Why is a 100% success rate from one observation weak evidence?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It has enormous sampling uncertainty; one additional failure changes the estimate dramatically.
+
+**Intuition:** Extreme percentages can come from tiny samples.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 69](../courses/am209a/lecnotes/lecture-01.pdf#page=69)
+
+Card ID: `am209a-small-samples`
+
+---
+
+### 674. How does the estimate (r+α)/(n+α+β) stabilize a small-sample proportion?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It combines observed successes and failures with prior pseudo-counts.
+
+**Intuition:** The prior has more influence when the data are scarce.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 70](../courses/am209a/lecnotes/lecture-01.pdf#page=70)
+
+Card ID: `am209a-pseudo-counts`
+
+---
+
+### 675. Why can the most accurate model still be unhelpful operationally?
+
+**AM 209a · Data science workflow · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its errors or outputs may not match the decision's costs and needs.
+
+**Intuition:** Evaluate the consequence of being wrong.
+
+</details>
+
+Sources: [Lecture 1 · PDF p. 77](../courses/am209a/lecnotes/lecture-01.pdf#page=77)
+
+Card ID: `am209a-decision-cost`
+
+---
+
+### 676. What three pieces make a recorded value interpretable?
+
+**AM 209a · Structured data · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The entity observed, the variable measured, and its value with a meaningful scale.
+
+**Intuition:** A number without context is ambiguous.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 4](../courses/am209a/lecnotes/lecture-02.pdf#page=4)
+
+Card ID: `am209a-datum`
+
+---
+
+### 677. How do primary and secondary data differ?
+
+**AM 209a · Structured data · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Primary data are collected for the study; secondary data already exist from another collection process.
+
+**Intuition:** Origin affects what the data can support.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 5](../courses/am209a/lecnotes/lecture-02.pdf#page=5)
+
+Card ID: `am209a-primary-secondary`
+
+---
+
+### 678. How does an API differ from scraping a web page?
+
+**AM 209a · Structured data · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+An API provides a programmatic data interface; scraping extracts information from page content.
+
+**Intuition:** Prefer a structured interface when one is available.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 6](../courses/am209a/lecnotes/lecture-02.pdf#page=6)
+
+Card ID: `am209a-api-scraping`
+
+---
+
+### 679. Why keep API keys out of shared notebooks?
+
+**AM 209a · Structured data · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They can grant access or allow requests billed to the owner.
+
+**Intuition:** A credential is not ordinary example code.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 7](../courses/am209a/lecnotes/lecture-02.pdf#page=7)
+
+Card ID: `am209a-api-key`
+
+---
+
+### 680. What does an API rate limit constrain?
+
+**AM 209a · Structured data · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+How frequently requests can be made within a specified interval.
+
+**Intuition:** A working loop can still exceed the service's limits.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 7](../courses/am209a/lecnotes/lecture-02.pdf#page=7)
+
+Card ID: `am209a-rate-limit`
+
+---
+
+### 681. Does public visibility automatically grant permission to republish data?
+
+**AM 209a · Responsible collection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Visibility and permission to reuse are separate questions; check the applicable license and terms.
+
+**Intuition:** Accessible does not mean unrestricted.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 9](../courses/am209a/lecnotes/lecture-02.pdf#page=9)
+
+Card ID: `am209a-public-reuse`
+
+---
+
+### 682. Does robots.txt grant a reuse license?
+
+**AM 209a · Responsible collection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It communicates crawler preferences rather than licensing the content.
+
+**Intuition:** Different documents answer different permission questions.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 10](../courses/am209a/lecnotes/lecture-02.pdf#page=10)
+
+Card ID: `am209a-robots`
+
+---
+
+### 683. How can joining two anonymous datasets reveal identities?
+
+**AM 209a · Responsible collection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Shared attributes can become a distinctive combination that links records to a person.
+
+**Intuition:** Removing names alone may not remove identifiability.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 11](../courses/am209a/lecnotes/lecture-02.pdf#page=11)
+
+Card ID: `am209a-reidentify`
+
+---
+
+### 684. Why cache collected data during analysis?
+
+**AM 209a · Responsible collection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It avoids repeated downloads, reduces server load, and preserves a reproducible input snapshot.
+
+**Intuition:** Rerunning analysis should not require refetching unchanged data.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 12](../courses/am209a/lecnotes/lecture-02.pdf#page=12)
+
+Card ID: `am209a-cache`
+
+---
+
+### 685. What makes a value atomic in a data table?
+
+**AM 209a · Variable types · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It is treated as one indivisible value for the analysis, such as a number, Boolean, or label.
+
+**Intuition:** Atomicity depends on how you use the value.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 15](../courses/am209a/lecnotes/lecture-02.pdf#page=15)
+
+Card ID: `am209a-atomic`
+
+---
+
+### 686. How does a dictionary differ from a single scalar value?
+
+**AM 209a · Variable types · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It contains named components that may represent several variables.
+
+**Intuition:** Nested data often need restructuring before tabular analysis.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 16](../courses/am209a/lecnotes/lecture-02.pdf#page=16)
+
+Card ID: `am209a-compound`
+
+---
+
+### 687. How do discrete and continuous quantitative variables differ?
+
+**AM 209a · Variable types · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Discrete variables have separated possible values; continuous variables can vary throughout an interval in principle.
+
+**Intuition:** Counts and measurements need different interpretations.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 17](../courses/am209a/lecnotes/lecture-02.pdf#page=17)
+
+Card ID: `am209a-discrete-continuous`
+
+---
+
+### 688. What makes a categorical variable nominal?
+
+**AM 209a · Variable types · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its categories have no meaningful intrinsic order, such as blood type.
+
+**Intuition:** A numeric code does not create an order.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 18](../courses/am209a/lecnotes/lecture-02.pdf#page=18)
+
+Card ID: `am209a-nominal`
+
+---
+
+### 689. What makes a categorical variable ordinal?
+
+**AM 209a · Variable types · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its categories have a meaningful order, but the gaps need not be equal.
+
+**Intuition:** Ranking does not establish numerical distance.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 18](../courses/am209a/lecnotes/lecture-02.pdf#page=18)
+
+Card ID: `am209a-ordinal`
+
+---
+
+### 690. Which summaries make sense for a nominal variable?
+
+**AM 209a · Variable types · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Counts, proportions, and the mode.
+
+**Intuition:** Averaging arbitrary category codes has no stable meaning.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 20](../courses/am209a/lecnotes/lecture-02.pdf#page=20)
+
+Card ID: `am209a-nominal-summary`
+
+---
+
+### 691. Why be cautious about averaging ordinal scores?
+
+**AM 209a · Variable types · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A mean treats numerical gaps as meaningful and equal, which the category order alone does not justify.
+
+**Intuition:** An encoding can silently add assumptions.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 20](../courses/am209a/lecnotes/lecture-02.pdf#page=20)
+
+Card ID: `am209a-ordinal-mean`
+
+---
+
+### 692. How do you calculate a sample mean?
+
+**AM 209a · Descriptive summaries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Add all n values and divide by n.
+
+**Intuition:** Every observation contributes equally to the sum.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 21](../courses/am209a/lecnotes/lecture-02.pdf#page=21)
+
+Card ID: `am209a-mean`
+
+---
+
+### 693. How do you calculate the median of an even number of numeric values?
+
+**AM 209a · Descriptive summaries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Sort the values and average the two middle ones.
+
+**Intuition:** The median locates the center by position.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 21](../courses/am209a/lecnotes/lecture-02.pdf#page=21)
+
+Card ID: `am209a-median`
+
+---
+
+### 694. Which moves more when one value becomes extremely large: mean or median?
+
+**AM 209a · Descriptive summaries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Usually the mean; the median depends on order rather than the extreme value's distance.
+
+**Intuition:** The mean is sensitive to magnitude.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 22](../courses/am209a/lecnotes/lecture-02.pdf#page=22)
+
+Card ID: `am209a-outlier-mean`
+
+---
+
+### 695. Which tail names a right-skewed distribution?
+
+**AM 209a · Descriptive summaries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The long right tail, even if most observations are on the left.
+
+**Intuition:** Skew is named for the tail, not the crowded side.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 22](../courses/am209a/lecnotes/lecture-02.pdf#page=22)
+
+Card ID: `am209a-skew-tail`
+
+---
+
+### 696. What is the range of 2, 5, 7, and 12?
+
+**AM 209a · Descriptive summaries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+12−2=10.
+
+**Intuition:** The range uses only the two extremes.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 23](../courses/am209a/lecnotes/lecture-02.pdf#page=23)
+
+Card ID: `am209a-range`
+
+---
+
+### 697. What is the usual unbiased sample variance for IID data?
+
+**AM 209a · Descriptive summaries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+s²=Σ(xᵢ−x̄)²/(n−1), for n>1.
+
+**Intuition:** Estimating the mean uses one degree of freedom.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 24](../courses/am209a/lecnotes/lecture-02.pdf#page=24)
+
+Card ID: `am209a-02-variance`
+
+---
+
+### 698. Why is standard deviation easier to interpret than variance?
+
+**AM 209a · Descriptive summaries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It has the original measurement units; variance has squared units.
+
+**Intuition:** Taking a square root restores the measurement scale.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 24](../courses/am209a/lecnotes/lecture-02.pdf#page=24)
+
+Card ID: `am209a-sd-units`
+
+---
+
+### 699. What does a variable's distribution describe?
+
+**AM 209a · Descriptive summaries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Which values occur and how frequently they occur.
+
+**Intuition:** A center alone leaves out the shape and spread.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 25](../courses/am209a/lecnotes/lecture-02.pdf#page=25)
+
+Card ID: `am209a-distribution`
+
+---
+
+### 700. Why is skewness meaningless for unordered categories?
+
+**AM 209a · Descriptive summaries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Their horizontal order can be rearranged arbitrarily.
+
+**Intuition:** A tail requires a meaningful direction.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 26](../courses/am209a/lecnotes/lecture-02.pdf#page=26)
+
+Card ID: `am209a-nominal-skew`
+
+---
+
+### 701. How do CSV and JSON typically differ structurally?
+
+**AM 209a · Structured data · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+CSV is a rectangular table; JSON can represent nested records with differing fields.
+
+**Intuition:** A collection of records is not always analysis-ready rows.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 28](../courses/am209a/lecnotes/lecture-02.pdf#page=28)
+
+Card ID: `am209a-storage`
+
+---
+
+### 702. What should one row represent in a tidy table?
+
+**AM 209a · Structured data · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+One observation of a clearly defined unit.
+
+**Intuition:** Decide what is being observed before counting rows.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 29](../courses/am209a/lecnotes/lecture-02.pdf#page=29)
+
+Card ID: `am209a-row-unit`
+
+---
+
+### 703. What should one column represent in a tidy table?
+
+**AM 209a · Structured data · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+One variable measured consistently across observations.
+
+**Intuition:** Mixing meanings in one column makes analysis ambiguous.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 29](../courses/am209a/lecnotes/lecture-02.pdf#page=29)
+
+Card ID: `am209a-column-variable`
+
+---
+
+### 704. Can cleaning repair a dataset that lacks the information needed for the question?
+
+**AM 209a · Structured data · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Better formatting cannot create missing study design or relevant measurements.
+
+**Intuition:** Sometimes the right next step is different data.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 31](../courses/am209a/lecnotes/lecture-02.pdf#page=31)
+
+Card ID: `am209a-unanswerable`
+
+---
+
+### 705. Why turn date-valued column headers into a date column?
+
+**AM 209a · Structured data · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Dates are values of a variable. Long form stores them as values and can append new observations consistently.
+
+**Intuition:** Headers should name variables, not enumerate their possible values.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 34](../courses/am209a/lecnotes/lecture-02.pdf#page=34)
+
+Card ID: `am209a-long-form`
+
+---
+
+### 706. Why split a cell containing both a measurement and a unit?
+
+**AM 209a · Structured data · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They are separate pieces of information needed for consistent interpretation and conversion.
+
+**Intuition:** One cell should not hide several variables.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 35](../courses/am209a/lecnotes/lecture-02.pdf#page=35)
+
+Card ID: `am209a-split-cell`
+
+---
+
+### 707. Why separate person records from repeated event records?
+
+**AM 209a · Structured data · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They represent different observation units; mixing them duplicates person attributes and can distort counts.
+
+**Intuition:** One kind of record per table clarifies what a row means.
+
+</details>
+
+Sources: [Lecture 2 · PDF p. 36](../courses/am209a/lecnotes/lecture-02.pdf#page=36)
+
+Card ID: `am209a-mixed-units`
+
+---
+
+### 708. How does a sample differ from a population?
+
+**AM 209a · Sampling and EDA · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The population is the full target group; the sample contains the observations actually collected.
+
+**Intuition:** The sample is evidence about a larger target, not automatically its mirror.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 6](../courses/am209a/lecnotes/lecture-03.pdf#page=6)
+
+Card ID: `am209a-population-sample`
+
+---
+
+### 709. What is selection bias?
+
+**AM 209a · Sampling and EDA · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The selection process systematically favors some relevant kinds of observations over others.
+
+**Intuition:** More data from a biased process can preserve the bias.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 6](../courses/am209a/lecnotes/lecture-03.pdf#page=6)
+
+Card ID: `am209a-selection-bias`
+
+---
+
+### 710. How can nonresponse distort a survey?
+
+**AM 209a · Sampling and EDA · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+People who respond may differ systematically from those who do not.
+
+**Intuition:** The missing voices may be relevant to the answer.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 6](../courses/am209a/lecnotes/lecture-03.pdf#page=6)
+
+Card ID: `am209a-nonresponse`
+
+---
+
+### 711. Why is a sample mean uncertain even when calculated exactly?
+
+**AM 209a · Sampling and EDA · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A different sample would generally give a different mean.
+
+**Intuition:** Computational precision does not remove sampling variation.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 8](../courses/am209a/lecnotes/lecture-03.pdf#page=8)
+
+Card ID: `am209a-sample-uncertainty`
+
+---
+
+### 712. What is the median of 17, 19, 21, 22, 23, 23, 23, 38?
+
+**AM 209a · Descriptive summaries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+22.5, the average of 22 and 23.
+
+**Intuition:** Use the middle positions after sorting.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 9](../courses/am209a/lecnotes/lecture-03.pdf#page=9)
+
+Card ID: `am209a-median-example`
+
+---
+
+### 713. Why does variance react strongly to outliers?
+
+**AM 209a · Descriptive summaries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It squares deviations, giving large distances disproportionately large contributions.
+
+**Intuition:** Twice the deviation produces four times the squared contribution.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 15](../courses/am209a/lecnotes/lecture-03.pdf#page=15)
+
+Card ID: `am209a-variance-outlier`
+
+---
+
+### 714. What does Pearson correlation measure?
+
+**AM 209a · Association · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The strength and direction of a linear relationship between two varying quantitative variables.
+
+**Intuition:** It summarizes linear association, not every kind of dependence.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 17](../courses/am209a/lecnotes/lecture-03.pdf#page=17)
+
+Card ID: `am209a-correlation`
+
+---
+
+### 715. What values can Pearson correlation take?
+
+**AM 209a · Association · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+From −1 to 1, provided both variables have nonzero variance.
+
+**Intuition:** The sign gives direction; magnitude gives linear strength.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 17](../courses/am209a/lecnotes/lecture-03.pdf#page=17)
+
+Card ID: `am209a-correlation-range`
+
+---
+
+### 716. Does converting meters to centimeters change Pearson correlation?
+
+**AM 209a · Association · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Positive linear rescaling leaves it unchanged.
+
+**Intuition:** Standardization removes measurement units.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 17](../courses/am209a/lecnotes/lecture-03.pdf#page=17)
+
+Card ID: `am209a-correlation-units`
+
+---
+
+### 717. Does an observed correlation establish a causal effect?
+
+**AM 209a · Association · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Confounding, selection, or other mechanisms can produce association.
+
+**Intuition:** A predictive relationship is not automatically an intervention effect.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 17](../courses/am209a/lecnotes/lecture-03.pdf#page=17)
+
+Card ID: `am209a-causality`
+
+---
+
+### 718. Does correlation near zero prove no relationship?
+
+**AM 209a · Association · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. A strong curved or symmetric nonlinear relationship can have zero linear correlation.
+
+**Intuition:** Always look beyond a single number.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 18](../courses/am209a/lecnotes/lecture-03.pdf#page=18)
+
+Card ID: `am209a-zero-correlation`
+
+---
+
+### 719. What lesson does Anscombe's quartet teach?
+
+**AM 209a · Sampling and EDA · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Datasets can share common summary statistics while having very different shapes and outliers.
+
+**Intuition:** Plot the data before trusting summaries alone.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 20](../courses/am209a/lecnotes/lecture-03.pdf#page=20)
+
+Card ID: `am209a-anscombe`
+
+---
+
+### 720. What is exploratory data analysis for?
+
+**AM 209a · Sampling and EDA · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Finding patterns, problems, and useful questions through summaries and visual inspection.
+
+**Intuition:** Exploration helps decide what to model and what to check.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 23](../courses/am209a/lecnotes/lecture-03.pdf#page=23)
+
+Card ID: `am209a-eda-purpose`
+
+---
+
+### 721. What should guide the choice of a chart?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The variable types and whether you want to show distribution, relationship, composition, or comparison.
+
+**Intuition:** Choose the display to answer a question.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 24](../courses/am209a/lecnotes/lecture-03.pdf#page=24)
+
+Card ID: `am209a-choose-plot`
+
+---
+
+### 722. What does a histogram show?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+How numerical observations are distributed across intervals.
+
+**Intuition:** Bins group nearby values to reveal distribution shape.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 25](../courses/am209a/lecnotes/lecture-03.pdf#page=25)
+
+Card ID: `am209a-histogram`
+
+---
+
+### 723. Why examine more than one histogram bin width?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Bin choices can hide or exaggerate apparent peaks and gaps.
+
+**Intuition:** A pattern should not depend entirely on one arbitrary setting.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 25](../courses/am209a/lecnotes/lecture-03.pdf#page=25)
+
+Card ID: `am209a-bins`
+
+---
+
+### 724. When is a bar chart more appropriate than a histogram?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+When comparing categories rather than intervals on a numeric scale.
+
+**Intuition:** Categories and numeric bins represent different structures.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 26](../courses/am209a/lecnotes/lecture-03.pdf#page=26)
+
+Card ID: `am209a-bar-histogram`
+
+---
+
+### 725. Why are bars often easier to compare than pie slices?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Aligned lengths are easier to compare accurately than angles or areas.
+
+**Intuition:** Use an encoding that makes the comparison easy.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 28](../courses/am209a/lecnotes/lecture-03.pdf#page=28)
+
+Card ID: `am209a-pie-bars`
+
+---
+
+### 726. Which plot is a natural starting point for two quantitative variables?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A scatter plot with one variable on each axis.
+
+**Intuition:** Each point preserves an observation's paired values.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 29](../courses/am209a/lecnotes/lecture-03.pdf#page=29)
+
+Card ID: `am209a-scatter`
+
+---
+
+### 727. What does a stacked area chart emphasize?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+How a total and its subgroup composition change over a continuous axis such as time.
+
+**Intuition:** Middle layers lack a common baseline, making precise comparisons harder.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 33](../courses/am209a/lecnotes/lecture-03.pdf#page=33)
+
+Card ID: `am209a-stacked-area`
+
+---
+
+### 728. Why overlay or align distributions from different groups?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+To compare their centers, spread, and shapes.
+
+**Intuition:** Similar averages can hide different distributions.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 34](../courses/am209a/lecnotes/lecture-03.pdf#page=34)
+
+Card ID: `am209a-group-distributions`
+
+---
+
+### 729. What does the box in a standard boxplot represent?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The middle 50% of observations, from the first to third quartile, with a median line.
+
+**Intuition:** The box summarizes spread around the center.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 35](../courses/am209a/lecnotes/lecture-03.pdf#page=35)
+
+Card ID: `am209a-boxplot`
+
+---
+
+### 730. Does a point beyond a boxplot whisker automatically mean bad data?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It is unusual under the plotting rule and deserves investigation.
+
+**Intuition:** A flag is not proof of a recording error.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 35](../courses/am209a/lecnotes/lecture-03.pdf#page=35)
+
+Card ID: `am209a-box-outlier`
+
+---
+
+### 731. What extra information can a violin plot show compared with a boxplot?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+An estimated distribution shape, including possible multiple peaks.
+
+**Intuition:** Its shape also depends on density-smoothing choices.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 36](../courses/am209a/lecnotes/lecture-03.pdf#page=36)
+
+Card ID: `am209a-violin`
+
+---
+
+### 732. How can a scatter plot include a third categorical variable?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Use color, marker shape, or separate panels for categories.
+
+**Intuition:** Add an encoding only when it helps interpretation.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 38](../courses/am209a/lecnotes/lecture-03.pdf#page=38)
+
+Card ID: `am209a-extra-dimensions`
+
+---
+
+### 733. Why can plotting every feature at once become unhelpful?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Overlapping marks and competing encodings can obscure the relationships you want to see.
+
+**Intuition:** More displayed information can mean less usable information.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 39](../courses/am209a/lecnotes/lecture-03.pdf#page=39)
+
+Card ID: `am209a-too-many-dimensions`
+
+---
+
+### 734. What does coloring a pair plot by species help reveal?
+
+**AM 209a · Sampling and EDA · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Whether apparent relationships differ across species or arise from mixing groups.
+
+**Intuition:** Group structure can explain an overall pattern.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 43](../courses/am209a/lecnotes/lecture-03.pdf#page=43)
+
+Card ID: `am209a-pairplot`
+
+---
+
+### 735. What does graphical integrity require?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Representing magnitudes, scales, and context honestly rather than exaggerating a preferred message.
+
+**Intuition:** The chart should preserve the meaning of the data.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 50](../courses/am209a/lecnotes/lecture-03.pdf#page=50)
+
+Card ID: `am209a-integrity`
+
+---
+
+### 736. Why remove decorative elements that do not convey information?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They compete with the evidence for attention.
+
+**Intuition:** A reader should see the pattern before the decoration.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 52](../courses/am209a/lecnotes/lecture-03.pdf#page=52)
+
+Card ID: `am209a-chart-junk`
+
+---
+
+### 737. When is a diverging color scale useful?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+When values extend on both sides of a meaningful center, such as positive and negative deviations from zero.
+
+**Intuition:** The midpoint anchors two directions of change.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 56](../courses/am209a/lecnotes/lecture-03.pdf#page=56)
+
+Card ID: `am209a-diverging-color`
+
+---
+
+### 738. What kind of colors suit unordered categories?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Distinct colors without implying a numerical ranking.
+
+**Intuition:** Different categories need distinction, not an artificial gradient.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 57](../courses/am209a/lecnotes/lecture-03.pdf#page=57)
+
+Card ID: `am209a-category-color`
+
+---
+
+### 739. What kind of color scale suits ordered values?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A perceptually ordered scale, often varying lightness.
+
+**Intuition:** The visual order should match the data order.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 58](../courses/am209a/lecnotes/lecture-03.pdf#page=58)
+
+Card ID: `am209a-ordered-color`
+
+---
+
+### 740. Why avoid relying only on red-versus-green differences?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Some readers cannot reliably distinguish them. Add labels, shapes, or other cues.
+
+**Intuition:** Color should reinforce meaning rather than be its only carrier.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 60](../courses/am209a/lecnotes/lecture-03.pdf#page=60)
+
+Card ID: `am209a-accessible-color`
+
+---
+
+### 741. Why adapt a visualization to its audience?
+
+**AM 209a · Visualization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Their knowledge and decision needs determine which labels, context, and detail are useful.
+
+**Intuition:** A technically correct chart still needs to communicate.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 61](../courses/am209a/lecnotes/lecture-03.pdf#page=61)
+
+Card ID: `am209a-audience`
+
+---
+
+### 742. What is the response variable in a prediction problem?
+
+**AM 209a · Regression foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The quantity you want to predict, usually denoted y.
+
+**Intuition:** The target determines what counts as a correct prediction.
+
+</details>
+
+Sources: [Lecture 4 · Part A · PDF p. 8](../courses/am209a/lecnotes/lecture-04a.pdf#page=8)
+
+Card ID: `am209a-response`
+
+---
+
+### 743. What are predictors or features?
+
+**AM 209a · Regression foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The input variables used to predict the response.
+
+**Intuition:** A useful feature must be available when the prediction is made.
+
+</details>
+
+Sources: [Lecture 4 · Part A · PDF p. 8](../courses/am209a/lecnotes/lecture-04a.pdf#page=8)
+
+Card ID: `am209a-predictors`
+
+---
+
+### 744. What is the shape of a design matrix with n observations and p input features?
+
+**AM 209a · Regression foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+n rows by p columns, before adding any explicit intercept column.
+
+**Intuition:** Rows are cases; columns are features.
+
+</details>
+
+Sources: [Lecture 4 · Part A · PDF p. 13](../courses/am209a/lecnotes/lecture-04a.pdf#page=13)
+
+Card ID: `am209a-design-shape`
+
+---
+
+### 745. Why keep a single feature as an n×1 matrix for model fitting?
+
+**AM 209a · Regression foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The estimator expects a collection of rows and feature columns, even when there is only one feature.
+
+**Intuition:** One feature is still a feature axis.
+
+</details>
+
+Sources: [Lecture 4 · Part A · PDF p. 13](../courses/am209a/lecnotes/lecture-04a.pdf#page=13)
+
+Card ID: `am209a-single-feature`
+
+---
+
+### 746. How do df['x'] and df[['x']] differ?
+
+**AM 209a · Regression foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For a unique column name, the first returns a Series; the second returns a one-column DataFrame.
+
+**Intuition:** Double brackets preserve a two-dimensional feature table.
+
+</details>
+
+Sources: [Lecture 4 · Part A · PDF p. 16](../courses/am209a/lecnotes/lecture-04a.pdf#page=16)
+
+Card ID: `am209a-pandas-shape`
+
+---
+
+### 747. What do f(X) and ε represent in y=f(X)+ε?
+
+**AM 209a · Regression foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+f(X) is the underlying systematic relationship; ε is the remaining random variation.
+
+**Intuition:** A model estimates signal from noisy observations.
+
+</details>
+
+Sources: [Lecture 4 · Part A · PDF p. 18](../courses/am209a/lecnotes/lecture-04a.pdf#page=18)
+
+Card ID: `am209a-signal-noise`
+
+---
+
+### 748. How do inference and prediction emphasize different goals?
+
+**AM 209a · Regression foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Inference emphasizes understanding relationships; prediction emphasizes accuracy on new observations.
+
+**Intuition:** The goal affects how you judge a model.
+
+</details>
+
+Sources: [Lecture 4 · Part A · PDF p. 19](../courses/am209a/lecnotes/lecture-04a.pdf#page=19)
+
+Card ID: `am209a-inference-prediction`
+
+---
+
+### 749. What does 1-NN predict at a unique training input?
+
+**AM 209a · Nearest neighbors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its own observed response, assuming that observation is included among candidates.
+
+**Intuition:** Perfect training fit can simply mean memorization.
+
+</details>
+
+Sources: [Lecture 4 · Part A · PDF p. 31](../courses/am209a/lecnotes/lecture-04a.pdf#page=31)
+
+Card ID: `am209a-one-neighbor`
+
+---
+
+### 750. Why is kNN called nonparametric?
+
+**AM 209a · Nearest neighbors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It does not fit a fixed-size coefficient formula for the relationship; predictions depend on stored observations.
+
+**Intuition:** Nonparametric does not mean assumption-free.
+
+</details>
+
+Sources: [Lecture 4 · Part A · PDF p. 36](../courses/am209a/lecnotes/lecture-04a.pdf#page=36)
+
+Card ID: `am209a-nonparametric`
+
+---
+
+### 751. How does kNN regression predict at a new input?
+
+**AM 209a · Nearest neighbors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Find its k nearest training inputs and average their response values.
+
+**Intuition:** Nearby examples supply a local estimate.
+
+</details>
+
+Sources: [Lecture 4 · Part A · PDF p. 37](../courses/am209a/lecnotes/lecture-04a.pdf#page=37)
+
+Card ID: `am209a-knn-rule`
+
+---
+
+### 752. If the three nearest responses are 4, 7, and 10, what does unweighted 3-NN predict?
+
+**AM 209a · Nearest neighbors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+7.
+
+**Intuition:** Regression averages responses rather than taking a category vote.
+
+</details>
+
+Sources: [Lecture 4 · Part A · PDF p. 37](../courses/am209a/lecnotes/lecture-04a.pdf#page=37)
+
+Card ID: `am209a-knn-example`
+
+---
+
+### 753. Why is k a hyperparameter?
+
+**AM 209a · Nearest neighbors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It is chosen to configure the learning procedure rather than fitted as a regression coefficient.
+
+**Intuition:** Tune the neighborhood size using held-out performance.
+
+</details>
+
+Sources: [Lecture 4 · Part A · PDF p. 38](../courses/am209a/lecnotes/lecture-04a.pdf#page=38)
+
+Card ID: `am209a-k-hyperparameter`
+
+---
+
+### 754. What are the roles of training, validation, and test data?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Training fits the model; validation chooses settings; test data assess the finalized procedure.
+
+**Intuition:** Do not use the final exam to choose the answers.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 8](../courses/am209a/lecnotes/lecture-04b.pdf#page=8)
+
+Card ID: `am209a-train-validation-test`
+
+---
+
+### 755. What is a residual when y=10 and ŷ=7?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+y−ŷ=3, indicating underprediction.
+
+**Intuition:** Keep the sign when diagnosing the direction of errors.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-04b.pdf#page=13)
+
+Card ID: `am209a-residual-sign`
+
+---
+
+### 756. How is mean squared error calculated?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Average the squared residuals: MSE=Σ(yᵢ−ŷᵢ)²/n.
+
+**Intuition:** Squaring prevents positive and negative errors from cancelling.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 14](../courses/am209a/lecnotes/lecture-04b.pdf#page=14)
+
+Card ID: `am209a-mse`
+
+---
+
+### 757. What is the MSE for residuals −2, 0, and 4?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+20/3, about 6.67.
+
+**Intuition:** Square first, then average.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 14](../courses/am209a/lecnotes/lecture-04b.pdf#page=14)
+
+Card ID: `am209a-mse-example`
+
+---
+
+### 758. Why report RMSE instead of MSE for interpretability?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+RMSE is √MSE and has the same units as the response.
+
+**Intuition:** The result can be compared directly with the measurement scale.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 15](../courses/am209a/lecnotes/lecture-04b.pdf#page=15)
+
+Card ID: `am209a-rmse`
+
+---
+
+### 759. How does MAE treat large errors differently from MSE?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+MAE grows linearly with error magnitude; MSE grows quadratically.
+
+**Intuition:** MSE gives extreme misses more influence.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 15](../courses/am209a/lecnotes/lecture-04b.pdf#page=15)
+
+Card ID: `am209a-mae`
+
+---
+
+### 760. Is MSE the best loss for every application?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Choose a loss that reflects the consequences of different errors.
+
+**Intuition:** The definition of “best” is part of the problem.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 15](../courses/am209a/lecnotes/lecture-04b.pdf#page=15)
+
+Card ID: `am209a-loss-choice`
+
+---
+
+### 761. Why be cautious when two k values have nearly equal validation MSE?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A different split may reverse their ranking.
+
+**Intuition:** A small observed difference may be sampling variation.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 18](../courses/am209a/lecnotes/lecture-04b.pdf#page=18)
+
+Card ID: `am209a-split-uncertainty`
+
+---
+
+### 762. If responses and predictions are multiplied by 10, what happens to MSE?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It is multiplied by 100.
+
+**Intuition:** Squared errors have squared units.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-04b.pdf#page=21)
+
+Card ID: `am209a-mse-rescale`
+
+---
+
+### 763. How is the usual R² score defined?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+1−Σ(yᵢ−ŷᵢ)²/Σ(yᵢ−ȳ)², when the denominator is positive.
+
+**Intuition:** It compares error with a mean-only benchmark on the evaluated observations.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 24](../courses/am209a/lecnotes/lecture-04b.pdf#page=24)
+
+Card ID: `am209a-r2-formula`
+
+---
+
+### 764. What does R²=0 mean?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The model matches the squared error of the evaluated data's mean benchmark.
+
+**Intuition:** Zero improvement is not necessarily zero error.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 25](../courses/am209a/lecnotes/lecture-04b.pdf#page=25)
+
+Card ID: `am209a-r2-zero`
+
+---
+
+### 765. What does R²=1 mean on an evaluated dataset?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+All its predictions match the observed responses exactly, assuming nonconstant responses.
+
+**Intuition:** A perfect score on training data does not establish generalization.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 25](../courses/am209a/lecnotes/lecture-04b.pdf#page=25)
+
+Card ID: `am209a-r2-one`
+
+---
+
+### 766. Why isn't predicting the mean the worst possible model?
+
+**AM 209a · Model evaluation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Other predictions can have arbitrarily larger errors and therefore negative R².
+
+**Intuition:** The mean is a reference baseline, not a lower performance bound.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 25](../courses/am209a/lecnotes/lecture-04b.pdf#page=25)
+
+Card ID: `am209a-baseline-not-worst`
+
+---
+
+### 767. What happens when k equals the entire training-set size?
+
+**AM 209a · Nearest neighbors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Every prediction is the training response mean.
+
+**Intuition:** The neighborhood no longer depends on the query.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 27](../courses/am209a/lecnotes/lecture-04b.pdf#page=27)
+
+Card ID: `am209a-all-neighbors`
+
+---
+
+### 768. How does increasing k usually change a kNN regression curve?
+
+**AM 209a · Nearest neighbors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It makes the curve smoother by averaging more observations.
+
+**Intuition:** Smoothing reduces sensitivity but can wash out local structure.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 29](../courses/am209a/lecnotes/lecture-04b.pdf#page=29)
+
+Card ID: `am209a-increase-k`
+
+---
+
+### 769. What is Euclidean distance between vectors x and z?
+
+**AM 209a · Nearest neighbors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+√Σⱼ(xⱼ−zⱼ)².
+
+**Intuition:** Differences in every feature contribute to closeness.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 31](../courses/am209a/lecnotes/lecture-04b.pdf#page=31)
+
+Card ID: `am209a-euclidean`
+
+---
+
+### 770. What is the Euclidean distance between (0,0) and (3,4)?
+
+**AM 209a · Nearest neighbors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+5, because √(9+16)=5.
+
+**Intuition:** Distance combines coordinate differences geometrically.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 31](../courses/am209a/lecnotes/lecture-04b.pdf#page=31)
+
+Card ID: `am209a-distance-example`
+
+---
+
+### 771. Why scale features before distance-based modeling?
+
+**AM 209a · Nearest neighbors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A feature with large numerical units can dominate distances even when it is not more informative.
+
+**Intuition:** Measurement units should not silently decide the neighbors.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 32](../courses/am209a/lecnotes/lecture-04b.pdf#page=32)
+
+Card ID: `am209a-scale-distance`
+
+---
+
+### 772. Why does kNN become difficult in high dimensions?
+
+**AM 209a · Nearest neighbors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Data become sparse, so nearby observations may no longer be truly local or clearly distinguishable.
+
+**Intuition:** A useful neighborhood needs enough data in the relevant space.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 32](../courses/am209a/lecnotes/lecture-04b.pdf#page=32)
+
+Card ID: `am209a-curse`
+
+---
+
+### 773. What is the prediction equation for simple linear regression?
+
+**AM 209a · Linear regression · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+ŷ=β̂₀+β̂₁x.
+
+**Intuition:** One intercept and one slope define the fitted line.
+
+</details>
+
+Sources: [Lecture 5 · Part A · PDF p. 6](../courses/am209a/lecnotes/lecture-05a.pdf#page=6)
+
+Card ID: `am209a-line`
+
+---
+
+### 774. What does ordinary least squares choose?
+
+**AM 209a · Linear regression · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Coefficients that minimize the sum, or equivalently the mean, of squared training residuals.
+
+**Intuition:** Training is an optimization problem.
+
+</details>
+
+Sources: [Lecture 5 · Part A · PDF p. 12](../courses/am209a/lecnotes/lecture-05a.pdf#page=12)
+
+Card ID: `am209a-fit`
+
+---
+
+### 775. If ŷ=7+0.05x, what is the prediction at x=100?
+
+**AM 209a · Linear regression · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+12.
+
+**Intuition:** Substitute the input into the fitted equation.
+
+</details>
+
+Sources: [Lecture 5 · Part A · PDF p. 16](../courses/am209a/lecnotes/lecture-05a.pdf#page=16)
+
+Card ID: `am209a-predict-number`
+
+---
+
+### 776. What does a partial derivative hold fixed?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+All the other arguments while varying the chosen one.
+
+**Intuition:** It isolates sensitivity to one coefficient.
+
+</details>
+
+Sources: [Lecture 5 · Part A · PDF p. 19](../courses/am209a/lecnotes/lecture-05a.pdf#page=19)
+
+Card ID: `am209a-partial`
+
+---
+
+### 777. For r=y−β₀−β₁x, what is ∂r²/∂β₀?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+−2r.
+
+**Intuition:** Increasing the intercept decreases the residual.
+
+</details>
+
+Sources: [Lecture 5 · Part A · PDF p. 22](../courses/am209a/lecnotes/lecture-05a.pdf#page=22)
+
+Card ID: `am209a-intercept-gradient`
+
+---
+
+### 778. For r=y−β₀−β₁x, what is ∂r²/∂β₁?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+−2xr.
+
+**Intuition:** The input scales how strongly a slope change affects the prediction.
+
+</details>
+
+Sources: [Lecture 5 · Part A · PDF p. 23](../courses/am209a/lecnotes/lecture-05a.pdf#page=23)
+
+Card ID: `am209a-slope-gradient`
+
+---
+
+### 779. Does a zero gradient always identify a minimum?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. In general it can also identify a maximum or saddle; convex least squares makes stationary points global minima.
+
+**Intuition:** Stationarity needs the shape of the objective for interpretation.
+
+</details>
+
+Sources: [Lecture 5 · Part A · PDF p. 24](../courses/am209a/lecnotes/lecture-05a.pdf#page=24)
+
+Card ID: `am209a-stationary-caution`
+
+---
+
+### 780. What is the gradient of a multivariable loss?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The vector of its partial derivatives.
+
+**Intuition:** It collects local changes in every coefficient direction.
+
+</details>
+
+Sources: [Lecture 5 · Part A · PDF p. 26](../courses/am209a/lecnotes/lecture-05a.pdf#page=26)
+
+Card ID: `am209a-gradient`
+
+---
+
+### 781. What is the fitted simple-regression slope with an intercept?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Σ(xᵢ−x̄)(yᵢ−ȳ)/Σ(xᵢ−x̄)², provided x varies.
+
+**Intuition:** The slope compares joint variation with predictor variation.
+
+</details>
+
+Sources: [Lecture 5 · Part A · PDF p. 30](../courses/am209a/lecnotes/lecture-05a.pdf#page=30)
+
+Card ID: `am209a-slope-formula`
+
+---
+
+### 782. How do you recover the fitted intercept from the slope?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+β̂₀=ȳ−β̂₁x̄.
+
+**Intuition:** The fitted line passes through the sample means.
+
+</details>
+
+Sources: [Lecture 5 · Part A · PDF p. 30](../courses/am209a/lecnotes/lecture-05a.pdf#page=30)
+
+Card ID: `am209a-intercept-formula`
+
+---
+
+### 783. Why can't simple regression identify a unique slope when all x values are equal?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+There is no predictor variation; changes in slope can be offset by the intercept.
+
+**Intuition:** The data need different x values to learn a change with x.
+
+</details>
+
+Sources: [Lecture 5 · Part A · PDF p. 30](../courses/am209a/lecnotes/lecture-05a.pdf#page=30)
+
+Card ID: `am209a-constant-x`
+
+---
+
+### 784. What does multiple linear regression add to simple regression?
+
+**AM 209a · Multiple regression · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Several predictor terms: ŷ=β̂₀+Σⱼβ̂ⱼxⱼ.
+
+**Intuition:** Each coefficient describes a contribution conditional on the others.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 8](../courses/am209a/lecnotes/lecture-05b.pdf#page=8)
+
+Card ID: `am209a-multiple-form`
+
+---
+
+### 785. What does a column of ones represent in the design matrix?
+
+**AM 209a · Multiple regression · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The intercept term.
+
+**Intuition:** Multiplying a coefficient by 1 adds the same offset to every row.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 11](../courses/am209a/lecnotes/lecture-05b.pdf#page=11)
+
+Card ID: `am209a-ones-column`
+
+---
+
+### 786. With n observations, p predictors, and an explicit intercept, how many columns does X have?
+
+**AM 209a · Multiple regression · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+p+1.
+
+**Intuition:** Count the intercept among the fitted coefficients.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 15](../courses/am209a/lecnotes/lecture-05b.pdf#page=15)
+
+Card ID: `am209a-matrix-count`
+
+---
+
+### 787. What is the squared-error loss in matrix notation?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+‖y−Xβ‖²=(y−Xβ)ᵀ(y−Xβ).
+
+**Intuition:** The residual vector's squared length sums all squared errors.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 19](../courses/am209a/lecnotes/lecture-05b.pdf#page=19)
+
+Card ID: `am209a-vector-loss`
+
+---
+
+### 788. Does dividing squared-error loss by n change the unregularized minimizer?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Multiplying an objective by a positive constant preserves its minimizers.
+
+**Intuition:** The scale of the objective differs from the location of its minimum.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 20](../courses/am209a/lecnotes/lecture-05b.pdf#page=20)
+
+Card ID: `am209a-constant-loss-factor`
+
+---
+
+### 789. What is the gradient of ‖y−Xβ‖² with respect to β?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+−2Xᵀ(y−Xβ).
+
+**Intuition:** A stationary fit has no residual component along a design column.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 25](../courses/am209a/lecnotes/lecture-05b.pdf#page=25)
+
+Card ID: `am209a-matrix-gradient`
+
+---
+
+### 790. What equations characterize an ordinary least-squares solution?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+XᵀXβ̂=Xᵀy.
+
+**Intuition:** The residual is orthogonal to every available predictor direction.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 27](../courses/am209a/lecnotes/lecture-05b.pdf#page=27)
+
+Card ID: `am209a-normal-equations`
+
+---
+
+### 791. When is β̂=(XᵀX)⁻¹Xᵀy valid?
+
+**AM 209a · Least-squares derivation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+When X has full column rank, so XᵀX is invertible.
+
+**Intuition:** Writing an inverse does not guarantee it exists.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 27](../courses/am209a/lecnotes/lecture-05b.pdf#page=27)
+
+Card ID: `am209a-inverse-condition`
+
+---
+
+### 792. What does the intercept represent?
+
+**AM 209a · Linear regression · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The predicted response when all numeric predictors are zero and categorical predictors are at their reference levels.
+
+**Intuition:** Its practical meaning depends on whether that setting is realistic.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 34](../courses/am209a/lecnotes/lecture-05b.pdf#page=34)
+
+Card ID: `am209a-intercept`
+
+---
+
+### 793. In ŷ=5+3x, what does the slope 3 mean?
+
+**AM 209a · Linear regression · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The predicted response increases by 3 units for a one-unit increase in x.
+
+**Intuition:** A coefficient connects changes on two measurement scales.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 34](../courses/am209a/lecnotes/lecture-05b.pdf#page=34)
+
+Card ID: `am209a-slope`
+
+---
+
+### 794. What does a multiple-regression slope describe without interactions?
+
+**AM 209a · Multiple regression · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The predicted response change for a one-unit predictor increase, holding other predictors fixed.
+
+**Intuition:** It is a conditional association, not necessarily a causal effect.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 35](../courses/am209a/lecnotes/lecture-05b.pdf#page=35)
+
+Card ID: `am209a-conditional-slope`
+
+---
+
+### 795. Why can't raw coefficient magnitudes reliably rank feature importance?
+
+**AM 209a · Scaling and collinearity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Features measured on different scales produce coefficients in different units.
+
+**Intuition:** A small coefficient can multiply a very large input scale.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 36](../courses/am209a/lecnotes/lecture-05b.pdf#page=36)
+
+Card ID: `am209a-coefficient-units`
+
+---
+
+### 796. How do you standardize a varying feature?
+
+**AM 209a · Scaling and collinearity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Subtract its training mean and divide by its training standard deviation.
+
+**Intuition:** A one-unit change then represents one training standard deviation.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 38](../courses/am209a/lecnotes/lecture-05b.pdf#page=38)
+
+Card ID: `am209a-standardize`
+
+---
+
+### 797. How does min–max scaling transform a nonconstant feature?
+
+**AM 209a · Scaling and collinearity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Use (x−minimum)/(maximum−minimum), with extrema learned from training data.
+
+**Intuition:** The training range becomes 0 to 1.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 38](../courses/am209a/lecnotes/lecture-05b.pdf#page=38)
+
+Card ID: `am209a-minmax`
+
+---
+
+### 798. Does standardization make a variable normally distributed?
+
+**AM 209a · Scaling and collinearity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It changes location and scale, not the underlying shape.
+
+**Intuition:** Zero mean and unit variance do not imply a bell curve.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 38](../courses/am209a/lecnotes/lecture-05b.pdf#page=38)
+
+Card ID: `am209a-scale-not-normal`
+
+---
+
+### 799. Why does strong collinearity make coefficient interpretation difficult?
+
+**AM 209a · Scaling and collinearity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Predictors share information, so their separate contributions are hard to distinguish and estimates can be unstable.
+
+**Intuition:** Stable predictions can coexist with unstable coefficients.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 40](../courses/am209a/lecnotes/lecture-05b.pdf#page=40)
+
+Card ID: `am209a-collinear`
+
+---
+
+### 800. How do exact and near collinearity differ for coefficient uniqueness?
+
+**AM 209a · Scaling and collinearity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Exact dependence can make OLS coefficients nonunique; near dependence can make a unique solution highly sensitive.
+
+**Intuition:** Nonunique and unstable are related but different problems.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 40](../courses/am209a/lecnotes/lecture-05b.pdf#page=40)
+
+Card ID: `am209a-exact-near`
+
+---
+
+### 801. What does a 0/1 indicator encode?
+
+**AM 209a · Categorical predictors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Whether an observation belongs to a specified group.
+
+**Intuition:** A category becomes a usable design column.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 47](../courses/am209a/lecnotes/lecture-05b.pdf#page=47)
+
+Card ID: `am209a-dummy`
+
+---
+
+### 802. In ŷ=β₀+β₁D, what is the predicted group difference?
+
+**AM 209a · Categorical predictors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+β₁: the prediction at D=1 minus the prediction at D=0.
+
+**Intuition:** The intercept is the reference-group prediction.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 48](../courses/am209a/lecnotes/lecture-05b.pdf#page=48)
+
+Card ID: `am209a-dummy-interpretation`
+
+---
+
+### 803. With an intercept, how many ordinary dummy columns represent K categories without redundancy?
+
+**AM 209a · Categorical predictors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+K−1, with one reference category.
+
+**Intuition:** All K indicators already sum to the intercept column.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 49](../courses/am209a/lecnotes/lecture-05b.pdf#page=49)
+
+Card ID: `am209a-levels`
+
+---
+
+### 804. Does changing the reference category change the fitted predictions?
+
+**AM 209a · Categorical predictors · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No, when it is an equivalent recoding of the same model.
+
+**Intuition:** The coefficient interpretation changes, not the model space.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 50](../courses/am209a/lecnotes/lecture-05b.pdf#page=50)
+
+Card ID: `am209a-reference-change`
+
+---
+
+### 805. Must errors be normal to compute an OLS fit?
+
+**AM 209a · Regression diagnostics · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Normality is used for certain exact inferential results, not for minimizing squared error.
+
+**Intuition:** Fitting a model and justifying inference require different assumptions.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 51](../courses/am209a/lecnotes/lecture-05b.pdf#page=51)
+
+Card ID: `am209a-normality-fitting`
+
+---
+
+### 806. Are model errors and fitted residuals the same thing?
+
+**AM 209a · Regression diagnostics · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Errors use the unknown true mean; residuals use an estimated mean and are generally correlated after fitting.
+
+**Intuition:** Estimated deviations inherit constraints from the fit.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 51](../courses/am209a/lecnotes/lecture-05b.pdf#page=51)
+
+Card ID: `am209a-errors-residuals`
+
+---
+
+### 807. Why plot residuals against fitted values in multiple regression?
+
+**AM 209a · Regression diagnostics · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It can reveal curvature or changing spread without choosing only one predictor axis.
+
+**Intuition:** Residual patterns show what the fit leaves unexplained.
+
+</details>
+
+Sources: [Lecture 5 · Part B · PDF p. 52](../courses/am209a/lecnotes/lecture-05b.pdf#page=52)
+
+Card ID: `am209a-residual-pattern`
+
+---
+
+### 808. What is overfitting?
+
+**AM 209a · Model complexity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The fit captures sample-specific noise or quirks that fail to generalize.
+
+**Intuition:** The training sample is not the entire prediction problem.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 9](../courses/am209a/lecnotes/lecture-06a.pdf#page=9)
+
+Card ID: `am209a-overfit`
+
+---
+
+### 809. What does an interaction term let a regression model express?
+
+**AM 209a · Interactions and polynomials · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The effect of one predictor can depend on another predictor's value.
+
+**Intuition:** One universal slope may not describe every context.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 14](../courses/am209a/lecnotes/lecture-06a.pdf#page=14)
+
+Card ID: `am209a-interaction`
+
+---
+
+### 810. In f=β₀+β₁x+β₂z+β₃xz, what is the slope with respect to x?
+
+**AM 209a · Interactions and polynomials · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+β₁+β₃z.
+
+**Intuition:** The interaction makes the x effect depend on z.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 14](../courses/am209a/lecnotes/lecture-06a.pdf#page=14)
+
+Card ID: `am209a-interaction-slope`
+
+---
+
+### 811. What do a numeric predictor and a group indicator produce without an interaction?
+
+**AM 209a · Interactions and polynomials · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Group-specific intercepts with the same slope.
+
+**Intuition:** The fitted lines are parallel.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 16](../courses/am209a/lecnotes/lecture-06a.pdf#page=16)
+
+Card ID: `am209a-parallel-groups`
+
+---
+
+### 812. How does adding xD change the group lines when D is 0 or 1?
+
+**AM 209a · Interactions and polynomials · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Their slopes can differ: β₁ for D=0 and β₁+β₃ for D=1.
+
+**Intuition:** The interaction coefficient is the slope difference.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 17](../courses/am209a/lecnotes/lecture-06a.pdf#page=17)
+
+Card ID: `am209a-group-slopes`
+
+---
+
+### 813. If β₁=2 and β₃=−0.5, what is the x slope for D=1?
+
+**AM 209a · Interactions and polynomials · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+1.5.
+
+**Intuition:** Add the interaction adjustment to the baseline slope.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 17](../courses/am209a/lecnotes/lecture-06a.pdf#page=17)
+
+Card ID: `am209a-interaction-number`
+
+---
+
+### 814. Why is polynomial regression still linear regression?
+
+**AM 209a · Interactions and polynomials · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It is linear in the unknown coefficients, even though it is nonlinear in x.
+
+**Intuition:** Linear describes the parameters, not necessarily the plotted curve.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 24](../courses/am209a/lecnotes/lecture-06a.pdf#page=24)
+
+Card ID: `am209a-polynomial-linear`
+
+---
+
+### 815. How many coefficients does a one-variable degree-M polynomial have with an intercept?
+
+**AM 209a · Interactions and polynomials · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+M+1.
+
+**Intuition:** The constant term counts as a coefficient too.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 24](../courses/am209a/lecnotes/lecture-06a.pdf#page=24)
+
+Card ID: `am209a-poly-count`
+
+---
+
+### 816. What is a quadratic design row for an input x?
+
+**AM 209a · Interactions and polynomials · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+[1,x,x²].
+
+**Intuition:** Transform the input, then fit ordinary linear coefficients.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 25](../courses/am209a/lecnotes/lecture-06a.pdf#page=25)
+
+Card ID: `am209a-poly-row`
+
+---
+
+### 817. What is the cubic design row at x=2?
+
+**AM 209a · Interactions and polynomials · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+[1,2,4,8].
+
+**Intuition:** Each additional column is another power of the same input.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 25](../courses/am209a/lecnotes/lecture-06a.pdf#page=25)
+
+Card ID: `am209a-poly-row-example`
+
+---
+
+### 818. Why inspect the columns produced by polynomial feature expansion?
+
+**AM 209a · Interactions and polynomials · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+With several inputs, it may add interaction terms as well as individual powers.
+
+**Intuition:** Feature expansion can create more terms than you intended.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 29](../courses/am209a/lecnotes/lecture-06a.pdf#page=29)
+
+Card ID: `am209a-cross-features`
+
+---
+
+### 819. Why avoid both an explicit all-ones feature and a redundant fitted intercept?
+
+**AM 209a · Interactions and polynomials · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They represent the same constant direction and create redundant parameters.
+
+**Intuition:** Choose one consistent intercept convention.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 29](../courses/am209a/lecnotes/lecture-06a.pdf#page=29)
+
+Card ID: `am209a-duplicate-intercept`
+
+---
+
+### 820. What is underfitting?
+
+**AM 209a · Model complexity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The model is too restricted to capture important systematic structure.
+
+**Intuition:** Even excellent optimization cannot fix the wrong model family.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 31](../courses/am209a/lecnotes/lecture-06a.pdf#page=31)
+
+Card ID: `am209a-underfit`
+
+---
+
+### 821. Why can high polynomial powers cause numerical trouble?
+
+**AM 209a · Interactions and polynomials · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Very large or tiny input values become extreme when raised to high powers.
+
+**Intuition:** Scale can make a mathematically valid model difficult to compute reliably.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 32](../courses/am209a/lecnotes/lecture-06a.pdf#page=32)
+
+Card ID: `am209a-power-scaling`
+
+---
+
+### 822. Why inspect model predictions even if MSE is small?
+
+**AM 209a · Model selection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The model may imply implausible responses or relationships in important parts of the input range.
+
+**Intuition:** One aggregate score can hide consequential failures.
+
+</details>
+
+Sources: [Lecture 6 · Part B · PDF p. 5](../courses/am209a/lecnotes/lecture-06b.pdf#page=5)
+
+Card ID: `am209a-plausibility`
+
+---
+
+### 823. What is generalization?
+
+**AM 209a · Model selection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Performing well on relevant observations that were not used to fit the model.
+
+**Intuition:** New-data performance is the goal, not training perfection.
+
+</details>
+
+Sources: [Lecture 6 · Part B · PDF p. 6](../courses/am209a/lecnotes/lecture-06b.pdf#page=6)
+
+Card ID: `am209a-generalization`
+
+---
+
+### 824. Why not pick hyperparameters using test-set performance?
+
+**AM 209a · Model selection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The selection would adapt to the test data, making its final score optimistically biased.
+
+**Intuition:** An untouched test set evaluates the completed choice.
+
+</details>
+
+Sources: [Lecture 6 · Part B · PDF p. 9](../courses/am209a/lecnotes/lecture-06b.pdf#page=9)
+
+Card ID: `am209a-test-leak`
+
+---
+
+### 825. How many predictor subsets exist for J candidate predictors?
+
+**AM 209a · Model selection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+2ᴶ, including the empty subset.
+
+**Intuition:** Each predictor has two choices: include or exclude.
+
+</details>
+
+Sources: [Lecture 6 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-06b.pdf#page=13)
+
+Card ID: `am209a-subset-count`
+
+---
+
+### 826. How many subsets can be formed from 5 predictors?
+
+**AM 209a · Model selection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+32.
+
+**Intuition:** Exhaustive search grows exponentially.
+
+</details>
+
+Sources: [Lecture 6 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-06b.pdf#page=13)
+
+Card ID: `am209a-subset-example`
+
+---
+
+### 827. How does forward selection build a model?
+
+**AM 209a · Model selection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Start with no predictors and repeatedly add the candidate that best improves the chosen evaluation criterion.
+
+**Intuition:** It builds one path rather than checking every subset.
+
+</details>
+
+Sources: [Lecture 6 · Part B · PDF p. 16](../courses/am209a/lecnotes/lecture-06b.pdf#page=16)
+
+Card ID: `am209a-forward-selection`
+
+---
+
+### 828. Does forward selection guarantee the globally best predictor subset?
+
+**AM 209a · Model selection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. An early greedy choice can exclude better combinations from the path.
+
+**Intuition:** A computational shortcut can miss joint effects.
+
+</details>
+
+Sources: [Lecture 6 · Part B · PDF p. 16](../courses/am209a/lecnotes/lecture-06b.pdf#page=16)
+
+Card ID: `am209a-greedy-limits`
+
+---
+
+### 829. How many candidate additions are checked along a full forward-selection path with J predictors?
+
+**AM 209a · Model selection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+J+(J−1)+⋯+1=J(J+1)/2, excluding the initial null model.
+
+**Intuition:** The number of candidate fits grows quadratically rather than exponentially.
+
+</details>
+
+Sources: [Lecture 6 · Part B · PDF p. 17](../courses/am209a/lecnotes/lecture-06b.pdf#page=17)
+
+Card ID: `am209a-forward-cost`
+
+---
+
+### 830. How do polynomial coefficients differ from polynomial degree?
+
+**AM 209a · Model selection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Coefficients are fitted parameters; degree is a hyperparameter selecting the model's form.
+
+**Intuition:** Configuration choices sit outside a single model fit.
+
+</details>
+
+Sources: [Lecture 6 · Part B · PDF p. 19](../courses/am209a/lecnotes/lecture-06b.pdf#page=19)
+
+Card ID: `am209a-parameter-hyperparameter`
+
+---
+
+### 831. What does low training error but much higher validation error suggest?
+
+**AM 209a · Model selection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Overfitting, assuming both sets represent the same prediction setting.
+
+**Intuition:** Training success is not transferring to held-out data.
+
+</details>
+
+Sources: [Lecture 6 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-06b.pdf#page=21)
+
+Card ID: `am209a-gap`
+
+---
+
+### 832. What can high training and validation errors suggest?
+
+**AM 209a · Model selection · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Underfitting or a noisy/difficult prediction problem.
+
+**Intuition:** High error alone does not identify its cause.
+
+</details>
+
+Sources: [Lecture 6 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-06b.pdf#page=21)
+
+Card ID: `am209a-high-both`
+
+---
+
+### 833. Why can model choice be fragile with one validation split?
+
+**AM 209a · Cross-validation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its particular observations can accidentally favor one model over another.
+
+**Intuition:** The split itself adds uncertainty.
+
+</details>
+
+Sources: [Lecture 6 · Part C · PDF p. 3](../courses/am209a/lecnotes/lecture-06c.pdf#page=3)
+
+Card ID: `am209a-single-split`
+
+---
+
+### 834. Can repeated tuning overfit cross-validation results?
+
+**AM 209a · Cross-validation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. Trying many choices can adapt to the validation evidence.
+
+**Intuition:** Cross-validation reduces split dependence, not every form of selection bias.
+
+</details>
+
+Sources: [Lecture 6 · Part C · PDF p. 3](../courses/am209a/lecnotes/lecture-06c.pdf#page=3)
+
+Card ID: `am209a-cv-not-magic`
+
+---
+
+### 835. Does cross-validation replace the final untouched test set?
+
+**AM 209a · Cross-validation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No, when CV is used to choose the model; the test set still evaluates the finalized choice.
+
+**Intuition:** Selection and final evaluation remain separate roles.
+
+</details>
+
+Sources: [Lecture 6 · Part C · PDF p. 5](../courses/am209a/lecnotes/lecture-06c.pdf#page=5)
+
+Card ID: `am209a-cv-test`
+
+---
+
+### 836. If three equal-sized folds have MSEs 2, 4, and 6, what is their mean CV MSE?
+
+**AM 209a · Cross-validation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+4.
+
+**Intuition:** Aggregate held-out performance across splits.
+
+</details>
+
+Sources: [Lecture 6 · Part C · PDF p. 12](../courses/am209a/lecnotes/lecture-06c.pdf#page=12)
+
+Card ID: `am209a-cv-average`
+
+---
+
+### 837. How does K-fold cross-validation work?
+
+**AM 209a · Cross-validation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Split development data into K folds, fit on K−1 folds, validate on the remaining fold, and rotate.
+
+**Intuition:** Every observation gets a turn as held-out data.
+
+</details>
+
+Sources: [Lecture 6 · Part C · PDF p. 13](../courses/am209a/lecnotes/lecture-06c.pdf#page=13)
+
+Card ID: `am209a-kfold`
+
+---
+
+### 838. How many fits are needed for one candidate in 5-fold CV?
+
+**AM 209a · Cross-validation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Five, before any final refit.
+
+**Intuition:** Each validation fold needs a model trained without it.
+
+</details>
+
+Sources: [Lecture 6 · Part C · PDF p. 13](../courses/am209a/lecnotes/lecture-06c.pdf#page=13)
+
+Card ID: `am209a-fold-count`
+
+---
+
+### 839. Where should learned scaling or imputation be fitted during CV?
+
+**AM 209a · Cross-validation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Inside each training fold, then applied to its validation fold.
+
+**Intuition:** Validation data should not influence preprocessing estimates.
+
+</details>
+
+Sources: [Lecture 6 · Part C · PDF p. 13](../courses/am209a/lecnotes/lecture-06c.pdf#page=13)
+
+Card ID: `am209a-preprocessing-folds`
+
+---
+
+### 840. What is leave-one-out cross-validation?
+
+**AM 209a · Cross-validation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Use each observation alone as validation and train on all the others.
+
+**Intuition:** It is K-fold CV with K equal to the sample size.
+
+</details>
+
+Sources: [Lecture 6 · Part C · PDF p. 14](../courses/am209a/lecnotes/lecture-06c.pdf#page=14)
+
+Card ID: `am209a-loocv`
+
+---
+
+### 841. Why can leave-one-out CV be expensive?
+
+**AM 209a · Cross-validation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It usually requires one fit per observation.
+
+**Intuition:** Using almost all data per fit can increase computational cost.
+
+</details>
+
+Sources: [Lecture 6 · Part C · PDF p. 14](../courses/am209a/lecnotes/lecture-06c.pdf#page=14)
+
+Card ID: `am209a-loocv-cost`
+
+---
+
+### 842. Why does a cross-validation scorer sometimes return negative MSE?
+
+**AM 209a · Cross-validation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The scoring convention maximizes values, so it negates a loss that should be minimized.
+
+**Intuition:** A score of −2 is better than −5 for negative MSE.
+
+</details>
+
+Sources: [Lecture 6 · Part C · PDF p. 16](../courses/am209a/lecnotes/lecture-06c.pdf#page=16)
+
+Card ID: `am209a-negative-mse`
+
+---
+
+### 843. What is irreducible error in the prediction model?
+
+**AM 209a · Bias and variance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The response variation remaining even if the true conditional mean were known, for the given predictors and setting.
+
+**Intuition:** Better fitting cannot predict randomness absent from the inputs.
+
+</details>
+
+Sources: [Lecture 7 · Part A · PDF p. 11](../courses/am209a/lecnotes/lecture-07a.pdf#page=11)
+
+Card ID: `am209a-irreducible`
+
+---
+
+### 844. What is reducible prediction error?
+
+**AM 209a · Bias and variance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Error from imperfect estimation or an inadequate model for the systematic relationship.
+
+**Intuition:** Better models or better estimation may reduce it.
+
+</details>
+
+Sources: [Lecture 7 · Part A · PDF p. 12](../courses/am209a/lecnotes/lecture-07a.pdf#page=12)
+
+Card ID: `am209a-reducible`
+
+---
+
+### 845. What does model variance measure at a fixed x?
+
+**AM 209a · Bias and variance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+How predictions change across repeated training samples.
+
+**Intuition:** A high-variance model reacts strongly to the particular data collected.
+
+</details>
+
+Sources: [Lecture 7 · Part A · PDF p. 17](../courses/am209a/lecnotes/lecture-07a.pdf#page=17)
+
+Card ID: `am209a-07a-variance`
+
+---
+
+### 846. What is prediction bias at a fixed input x?
+
+**AM 209a · Bias and variance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The average prediction over repeated training samples minus the true mean response f(x).
+
+**Intuition:** Bias concerns systematic error across possible fits.
+
+</details>
+
+Sources: [Lecture 7 · Part A · PDF p. 18](../courses/am209a/lecnotes/lecture-07a.pdf#page=18)
+
+Card ID: `am209a-bias`
+
+---
+
+### 847. What are the usual components of expected squared prediction error?
+
+**AM 209a · Bias and variance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Squared bias, model variance, and irreducible noise variance, under the standard zero-mean noise setup.
+
+**Intuition:** Reducing one component does not necessarily reduce the total.
+
+</details>
+
+Sources: [Lecture 7 · Part A · PDF p. 19](../courses/am209a/lecnotes/lecture-07a.pdf#page=19)
+
+Card ID: `am209a-decomposition`
+
+---
+
+### 848. How does increasing flexibility often affect bias and variance?
+
+**AM 209a · Bias and variance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It can lower bias while increasing variance.
+
+**Intuition:** More adaptable models can also be less stable.
+
+</details>
+
+Sources: [Lecture 7 · Part A · PDF p. 19](../courses/am209a/lecnotes/lecture-07a.pdf#page=19)
+
+Card ID: `am209a-complexity-tradeoff`
+
+---
+
+### 849. Can a biased estimator predict better than an unbiased one?
+
+**AM 209a · Bias and variance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes, if its variance reduction outweighs the added squared bias.
+
+**Intuition:** Prediction error balances both components.
+
+</details>
+
+Sources: [Lecture 7 · Part A · PDF p. 19](../courses/am209a/lecnotes/lecture-07a.pdf#page=19)
+
+Card ID: `am209a-biased-better`
+
+---
+
+### 850. What does regularized regression optimize?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A data-fit loss plus a coefficient penalty weighted by λ.
+
+**Intuition:** A good fit must also pay for complexity.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 12](../courses/am209a/lecnotes/lecture-07b.pdf#page=12)
+
+Card ID: `am209a-penalty`
+
+---
+
+### 851. What happens when λ=0 in ridge or lasso?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The penalty disappears, leaving ordinary least squares.
+
+**Intuition:** Zero regularization returns to the original fitting objective.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-07b.pdf#page=13)
+
+Card ID: `am209a-lambda-zero`
+
+---
+
+### 852. What happens to penalized slopes as λ becomes very large?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They shrink toward zero; an unpenalized intercept can remain.
+
+**Intuition:** Very strong regularization approaches a constant predictor.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-07b.pdf#page=13)
+
+Card ID: `am209a-large-lambda`
+
+---
+
+### 853. Can regularization be too strong?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. Excessive shrinkage can erase useful signal and underfit.
+
+**Intuition:** Regularization strength needs tuning rather than maximization.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-07b.pdf#page=13)
+
+Card ID: `am209a-too-much`
+
+---
+
+### 854. How should prediction-focused regularization strength be chosen?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Compare candidate λ values using validation or cross-validation loss.
+
+**Intuition:** The penalty's training value does not measure held-out usefulness.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 15](../courses/am209a/lecnotes/lecture-07b.pdf#page=15)
+
+Card ID: `am209a-tune-lambda`
+
+---
+
+### 855. What coefficient penalty does lasso use?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The L1 penalty λΣⱼabs(βⱼ), usually excluding the intercept.
+
+**Intuition:** Absolute values create a sharp corner at zero.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 16](../courses/am209a/lecnotes/lecture-07b.pdf#page=16)
+
+Card ID: `am209a-lasso-penalty`
+
+---
+
+### 856. What coefficient penalty does ridge use?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The squared L2 penalty λΣⱼβⱼ², usually excluding the intercept.
+
+**Intuition:** Large coefficients become increasingly expensive.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 19](../courses/am209a/lecnotes/lecture-07b.pdf#page=19)
+
+Card ID: `am209a-ridge-penalty`
+
+---
+
+### 857. Why standardize predictors before applying comparable slope penalties?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Changing a feature's units changes the coefficient needed for the same prediction and therefore its penalty.
+
+**Intuition:** Unscaled penalties can treat units as importance.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 19](../courses/am209a/lecnotes/lecture-07b.pdf#page=19)
+
+Card ID: `am209a-scale-penalty`
+
+---
+
+### 858. Why is the intercept usually left unpenalized?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It sets the overall response level rather than a feature effect.
+
+**Intuition:** Shifting the response's origin should not change how slopes are penalized.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 20](../courses/am209a/lecnotes/lecture-07b.pdf#page=20)
+
+Card ID: `am209a-intercept-penalty`
+
+---
+
+### 859. For centered data and loss ‖y−Xβ‖²+λ‖β‖², what is the ridge solution?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+β̂=(XᵀX+λI)⁻¹Xᵀy for λ>0.
+
+**Intuition:** Adding λ stabilizes weak coefficient directions.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-07b.pdf#page=21)
+
+Card ID: `am209a-ridge-formula`
+
+---
+
+### 860. Why is XᵀX+λI invertible when λ>0?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For nonzero v, vᵀ(XᵀX+λI)v=‖Xv‖²+λ‖v‖²>0.
+
+**Intuition:** The penalty removes flat directions in the slope objective.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-07b.pdf#page=21)
+
+Card ID: `am209a-ridge-invertible`
+
+---
+
+### 861. If the fit loss is MSE rather than SSE, does the same numerical λ mean the same penalty strength?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. With MSE+λ‖β‖², the normal equations contain XᵀX+nλI.
+
+**Intuition:** Always match λ to the objective's scaling convention.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-07b.pdf#page=21)
+
+Card ID: `am209a-ridge-loss-scale`
+
+---
+
+### 862. Why try λ values spread across orders of magnitude?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Useful strengths can differ by factors of ten or more.
+
+**Intuition:** A logarithmic grid explores weak and strong penalties efficiently.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 24](../courses/am209a/lecnotes/lecture-07b.pdf#page=24)
+
+Card ID: `am209a-log-grid`
+
+---
+
+### 863. Can you reuse one fitted coefficient vector for every candidate λ?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Each λ defines a different optimization problem and generally needs its own fit.
+
+**Intuition:** Tuning changes the model, not only its score.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 25](../courses/am209a/lecnotes/lecture-07b.pdf#page=25)
+
+Card ID: `am209a-refit-candidates`
+
+---
+
+### 864. Should validation MSE include the training coefficient penalty?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Use prediction error on held-out observations to compare predictive performance.
+
+**Intuition:** The penalty guides fitting; validation judges the resulting predictions.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 26](../courses/am209a/lecnotes/lecture-07b.pdf#page=26)
+
+Card ID: `am209a-validation-unpenalized`
+
+---
+
+### 865. After selecting λ, what data can you use for the final refit?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+All development data previously used for training and validation, keeping the test set untouched.
+
+**Intuition:** Once the setting is fixed, use available development information.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 29](../courses/am209a/lecnotes/lecture-07b.pdf#page=29)
+
+Card ID: `am209a-final-refit`
+
+---
+
+### 866. With 10 λ values and 5 CV folds, how many candidate fits are needed?
+
+**AM 209a · Regularization · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+50, plus the final refit.
+
+**Intuition:** Every setting must be evaluated across the same fold structure.
+
+</details>
+
+Sources: [Lecture 7 · Part B · PDF p. 50](../courses/am209a/lecnotes/lecture-07b.pdf#page=50)
+
+Card ID: `am209a-cv-grid`
+
+---
+
+### 867. Why is lasso optimization less direct than solving ridge's linear equations?
+
+**AM 209a · Ridge versus lasso · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The absolute-value penalty is not differentiable at zero; algorithms handle that kink explicitly.
+
+**Intuition:** No derivative at zero does not mean no optimization solution.
+
+</details>
+
+Sources: [Lecture 7 · Part C · PDF p. 2](../courses/am209a/lecnotes/lecture-07c.pdf#page=2)
+
+Card ID: `am209a-lasso-optimization`
+
+---
+
+### 868. Which method can set coefficients exactly to zero: ridge or lasso?
+
+**AM 209a · Ridge versus lasso · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Lasso commonly does; ridge generally shrinks coefficients continuously without selecting a sparse subset.
+
+**Intuition:** Shrinkage and feature selection are different outcomes.
+
+</details>
+
+Sources: [Lecture 7 · Part C · PDF p. 3](../courses/am209a/lecnotes/lecture-07c.pdf#page=3)
+
+Card ID: `am209a-sparsity`
+
+---
+
+### 869. Why does lasso's constraint geometry favor zero coefficients?
+
+**AM 209a · Ridge versus lasso · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its corners lie on coordinate axes, where one or more coefficients are zero.
+
+**Intuition:** The penalty's shape helps determine the solution's structure.
+
+</details>
+
+Sources: [Lecture 7 · Part C · PDF p. 4](../courses/am209a/lecnotes/lecture-07c.pdf#page=4)
+
+Card ID: `am209a-lasso-geometry`
+
+---
+
+### 870. Why does ridge usually retain nonzero coefficients?
+
+**AM 209a · Ridge versus lasso · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its smooth constraint boundary does not favor axis-aligned corners.
+
+**Intuition:** A smooth penalty tends to distribute shrinkage.
+
+</details>
+
+Sources: [Lecture 7 · Part C · PDF p. 4](../courses/am209a/lecnotes/lecture-07c.pdf#page=4)
+
+Card ID: `am209a-ridge-geometry`
+
+---
+
+### 871. Why can ridge help with highly correlated predictors?
+
+**AM 209a · Ridge versus lasso · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It stabilizes coefficient estimates by penalizing large solutions along weakly identified directions.
+
+**Intuition:** Accept some bias to reduce sensitivity.
+
+</details>
+
+Sources: [Lecture 7 · Part C · PDF p. 5](../courses/am209a/lecnotes/lecture-07c.pdf#page=5)
+
+Card ID: `am209a-ridge-collinearity`
+
+---
+
+### 872. Does a zero lasso coefficient prove the predictor has no relationship with the response?
+
+**AM 209a · Ridge versus lasso · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Selection depends on λ, other predictors, and the sample.
+
+**Intuition:** A fitted exclusion is not a universal scientific conclusion.
+
+</details>
+
+Sources: [Lecture 7 · Part C · PDF p. 5](../courses/am209a/lecnotes/lecture-07c.pdf#page=5)
+
+Card ID: `am209a-lasso-zero-proof`
+
+---
+
+### 873. Why would repeated studies produce different regression coefficients?
+
+**AM 209a · Inference foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The observed sample and noise vary, changing the fitted model.
+
+**Intuition:** A point estimate does not describe its own reliability.
+
+</details>
+
+Sources: [Lecture 8 · Part A · PDF p. 12](../courses/am209a/lecnotes/lecture-08a.pdf#page=12)
+
+Card ID: `am209a-coefficient-uncertainty`
+
+---
+
+### 874. What is a coefficient's sampling distribution?
+
+**AM 209a · Inference foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The distribution of its estimated values across repeated datasets from the same data-generating process.
+
+**Intuition:** One fitted coefficient is one realization of an estimator.
+
+</details>
+
+Sources: [Lecture 8 · Part A · PDF p. 22](../courses/am209a/lecnotes/lecture-08a.pdf#page=22)
+
+Card ID: `am209a-sampling-distribution`
+
+---
+
+### 875. What does sampling with replacement mean?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+After a draw, that observation remains eligible to be drawn again.
+
+**Intuition:** A bootstrap sample can repeat some records and omit others.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 5](../courses/am209a/lecnotes/lecture-08b.pdf#page=5)
+
+Card ID: `am209a-replacement`
+
+---
+
+### 876. How many observations are drawn for an ordinary size-n bootstrap replicate?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+n draws with replacement from the original n observations.
+
+**Intuition:** Replicates preserve sample size, not the set of distinct rows.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-08b.pdf#page=13)
+
+Card ID: `am209a-bootstrap-size`
+
+---
+
+### 877. For pairs bootstrap in regression, what must be resampled together?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+An entire observation row: its predictors and response.
+
+**Intuition:** Resampling X and y separately would destroy their relationship.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 19](../courses/am209a/lecnotes/lecture-08b.pdf#page=19)
+
+Card ID: `am209a-pairs`
+
+---
+
+### 878. What do you do after drawing each bootstrap dataset?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Refit the estimator and record the quantity of interest.
+
+**Intuition:** Variation across refits approximates sampling variation.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 19](../courses/am209a/lecnotes/lecture-08b.pdf#page=19)
+
+Card ID: `am209a-refit-bootstrap`
+
+---
+
+### 879. How is a bootstrap standard error estimated?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Take the sample standard deviation of the statistic across bootstrap replicates.
+
+**Intuition:** Spread across refits estimates uncertainty in the statistic.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-08b.pdf#page=21)
+
+Card ID: `am209a-bootstrap-se`
+
+---
+
+### 880. Should the bootstrap SD of coefficients be divided by √B to estimate the coefficient's standard error?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The replicate SD already estimates that standard error; dividing by √B targets simulation averaging error instead.
+
+**Intuition:** More bootstrap runs do not create more observed data.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-08b.pdf#page=21)
+
+Card ID: `am209a-not-divide-b`
+
+---
+
+### 881. What distribution does the ordinary nonparametric bootstrap sample from?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The empirical distribution placing equal mass on each observed record.
+
+**Intuition:** The observed sample stands in for the unknown population.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 22](../courses/am209a/lecnotes/lecture-08b.pdf#page=22)
+
+Card ID: `am209a-empirical-population`
+
+---
+
+### 882. What improves when you increase the number of bootstrap replicates B?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The numerical stability of the bootstrap estimate, not the information in the original dataset.
+
+**Intuition:** Reduce simulation noise without pretending to collect new observations.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 22](../courses/am209a/lecnotes/lecture-08b.pdf#page=22)
+
+Card ID: `am209a-more-replicates`
+
+---
+
+### 883. Can bootstrap resampling fix a biased or unrepresentative original sample?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It repeatedly reuses that sample's information and selection limitations.
+
+**Intuition:** Resampling does not repair the collection process.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 22](../courses/am209a/lecnotes/lecture-08b.pdf#page=22)
+
+Card ID: `am209a-bootstrap-limits`
+
+---
+
+### 884. Why can ordinary row bootstrap fail for dependent observations?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Independent resampling breaks the dependence structure; a suitable design such as block resampling may be needed.
+
+**Intuition:** The resampling scheme must match the data structure.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 22](../courses/am209a/lecnotes/lecture-08b.pdf#page=22)
+
+Card ID: `am209a-dependent-data`
+
+---
+
+### 885. What does 95% confidence describe in frequentist inference?
+
+**AM 209a · Inference foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The long-run coverage of the interval-building procedure under its assumptions.
+
+**Intuition:** The parameter is fixed; intervals vary across samples.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 23](../courses/am209a/lecnotes/lecture-08b.pdf#page=23)
+
+Card ID: `am209a-ci-meaning`
+
+---
+
+### 886. Does a realized frequentist 95% CI assign 95% posterior probability to its parameter range?
+
+**AM 209a · Inference foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. That is a Bayesian probability statement requiring a posterior model.
+
+**Intuition:** Coverage and posterior probability answer different questions.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 23](../courses/am209a/lecnotes/lecture-08b.pdf#page=23)
+
+Card ID: `am209a-ci-not-posterior`
+
+---
+
+### 887. How is a 95% percentile bootstrap interval constructed?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Use the 2.5th and 97.5th percentiles of the bootstrap estimates.
+
+**Intuition:** Leave 2.5% of replicate estimates in each tail.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 26](../courses/am209a/lecnotes/lecture-08b.pdf#page=26)
+
+Card ID: `am209a-percentile-ci`
+
+---
+
+### 888. If bootstrap percentiles are 1.2 and 3.8, what is the 95% percentile interval?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+[1.2,3.8].
+
+**Intuition:** Report the endpoint values, not the percentile labels.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 28](../courses/am209a/lecnotes/lecture-08b.pdf#page=28)
+
+Card ID: `am209a-ci-example`
+
+---
+
+### 889. When is estimate ± roughly 2 standard errors a reasonable 95% interval approximation?
+
+**AM 209a · Bootstrap · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+When the estimator's sampling distribution is approximately normal and the standard error estimate is suitable.
+
+**Intuition:** A symmetric interval may misrepresent a skewed distribution.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 30](../courses/am209a/lecnotes/lecture-08b.pdf#page=30)
+
+Card ID: `am209a-normal-approx`
+
+---
+
+### 890. In simple regression, how does predictor spread affect slope uncertainty?
+
+**AM 209a · Inference foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Under spherical errors, SE(β̂₁)=σ/√Σ(xᵢ−x̄)².
+
+**Intuition:** A wider range of x provides more leverage for estimating a slope.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 31](../courses/am209a/lecnotes/lecture-08b.pdf#page=31)
+
+Card ID: `am209a-slope-se`
+
+---
+
+### 891. If the error SD doubles while X stays fixed, what happens to coefficient standard errors?
+
+**AM 209a · Inference foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They double under the same linear-model assumptions.
+
+**Intuition:** Noisier responses make the same design less informative.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 31](../courses/am209a/lecnotes/lecture-08b.pdf#page=31)
+
+Card ID: `am209a-noise-se`
+
+---
+
+### 892. How is residual noise variance estimated in full-rank simple regression with an intercept?
+
+**AM 209a · Inference foundations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+s²=SSE/(n−2), for n>2 under the usual model assumptions.
+
+**Intuition:** Two fitted coefficients use two degrees of freedom.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 32](../courses/am209a/lecnotes/lecture-08b.pdf#page=32)
+
+Card ID: `am209a-noise-estimate`
+
+---
+
+### 893. Why isn't a large coefficient enough to establish statistical significance?
+
+**AM 209a · Predictor significance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its uncertainty and units matter; a large estimate can be imprecise.
+
+**Intuition:** Compare the signal with its uncertainty.
+
+</details>
+
+Sources: [Lecture 8 · Part C · PDF p. 5](../courses/am209a/lecnotes/lecture-08c.pdf#page=5)
+
+Card ID: `am209a-size-vs-evidence`
+
+---
+
+### 894. What is the usual coefficient t statistic for testing βⱼ=0?
+
+**AM 209a · Predictor significance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+t=β̂ⱼ/SE(β̂ⱼ).
+
+**Intuition:** It measures how many standard errors the estimate lies from zero.
+
+</details>
+
+Sources: [Lecture 8 · Part C · PDF p. 7](../courses/am209a/lecnotes/lecture-08c.pdf#page=7)
+
+Card ID: `am209a-t-stat`
+
+---
+
+### 895. If β̂=0.6 and its SE is 0.2, what is the t statistic for a zero null?
+
+**AM 209a · Predictor significance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+3.
+
+**Intuition:** The same coefficient would provide less evidence with a larger SE.
+
+</details>
+
+Sources: [Lecture 8 · Part C · PDF p. 7](../courses/am209a/lecnotes/lecture-08c.pdf#page=7)
+
+Card ID: `am209a-t-example`
+
+---
+
+### 896. With p predictors and an intercept, what are the classical residual t-test degrees of freedom?
+
+**AM 209a · Predictor significance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+n−p−1 for a full-rank design under the normal linear model.
+
+**Intuition:** Count observations minus fitted coefficients.
+
+</details>
+
+Sources: [Lecture 8 · Part C · PDF p. 14](../courses/am209a/lecnotes/lecture-08c.pdf#page=14)
+
+Card ID: `am209a-t-df`
+
+---
+
+### 897. What assumptions justify the usual exact regression t reference distribution?
+
+**AM 209a · Predictor significance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A correct linear mean, full-rank design, and independent Gaussian errors with constant variance, conditional on X.
+
+**Intuition:** The reference distribution depends on the model assumptions.
+
+</details>
+
+Sources: [Lecture 8 · Part C · PDF p. 14](../courses/am209a/lecnotes/lecture-08c.pdf#page=14)
+
+Card ID: `am209a-exact-t`
+
+---
+
+### 898. Why use the absolute t statistic for a two-sided coefficient test?
+
+**AM 209a · Predictor significance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Large departures in either the positive or negative direction count as evidence against zero.
+
+**Intuition:** Both tails matter when either sign is an alternative.
+
+</details>
+
+Sources: [Lecture 8 · Part C · PDF p. 16](../courses/am209a/lecnotes/lecture-08c.pdf#page=16)
+
+Card ID: `am209a-two-sided`
+
+---
+
+### 899. What is a p-value?
+
+**AM 209a · Predictor significance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Under the null and model assumptions, the probability of a test statistic at least as extreme as the observed one.
+
+**Intuition:** It is a probability about possible data, conditional on a hypothesis.
+
+</details>
+
+Sources: [Lecture 8 · Part C · PDF p. 17](../courses/am209a/lecnotes/lecture-08c.pdf#page=17)
+
+Card ID: `am209a-pvalue`
+
+---
+
+### 900. Is a p-value the probability that the null hypothesis is true?
+
+**AM 209a · Predictor significance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No.
+
+**Intuition:** Do not reverse a conditional probability.
+
+</details>
+
+Sources: [Lecture 8 · Part C · PDF p. 17](../courses/am209a/lecnotes/lecture-08c.pdf#page=17)
+
+Card ID: `am209a-p-not-null`
+
+---
+
+### 901. Does a nonsignificant coefficient prove its effect is zero?
+
+**AM 209a · Predictor significance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The data may be too imprecise to distinguish it from zero.
+
+**Intuition:** Absence of strong evidence is not proof of absence.
+
+</details>
+
+Sources: [Lecture 8 · Part C · PDF p. 17](../courses/am209a/lecnotes/lecture-08c.pdf#page=17)
+
+Card ID: `am209a-not-significant`
+
+---
+
+### 902. Does a significant regression coefficient establish causation?
+
+**AM 209a · Predictor significance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The regression can still reflect confounding or selection.
+
+**Intuition:** Statistical evidence for association is not an experimental intervention.
+
+</details>
+
+Sources: [Lecture 8 · Part C · PDF p. 17](../courses/am209a/lecnotes/lecture-08c.pdf#page=17)
+
+Card ID: `am209a-association-not-cause`
+
+---
+
+### 903. Does statistical significance guarantee practical importance?
+
+**AM 209a · Predictor significance · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. A tiny effect can be precisely estimated, and a meaningful effect can be uncertain.
+
+**Intuition:** Magnitude and uncertainty both matter.
+
+</details>
+
+Sources: [Lecture 8 · Part C · PDF p. 18](../courses/am209a/lecnotes/lecture-08c.pdf#page=18)
+
+Card ID: `am209a-practical`
+
+---
+
+### 904. How can bootstrap fits give a confidence interval for the mean response at x?
+
+**AM 209a · Prediction uncertainty · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Predict at the same x with each bootstrap fit and summarize those fitted mean predictions.
+
+**Intuition:** Parameter uncertainty becomes uncertainty about the mean curve.
+
+</details>
+
+Sources: [Lecture 8 · Part D · PDF p. 6](../courses/am209a/lecnotes/lecture-08d.pdf#page=6)
+
+Card ID: `am209a-mean-band`
+
+---
+
+### 905. Why is a prediction interval usually wider than a confidence interval for the mean?
+
+**AM 209a · Prediction uncertainty · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It includes both uncertainty in the fitted mean and variation of a new response around that mean.
+
+**Intuition:** Predicting one outcome is harder than estimating its average.
+
+</details>
+
+Sources: [Lecture 8 · Part D · PDF p. 11](../courses/am209a/lecnotes/lecture-08d.pdf#page=11)
+
+Card ID: `am209a-prediction-vs-confidence`
+
+---
+
+### 906. Would knowing f(x) exactly remove all uncertainty in a new y?
+
+**AM 209a · Prediction uncertainty · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The new response still contains random error ε.
+
+**Intuition:** A perfectly known mean is not a perfectly predictable individual.
+
+</details>
+
+Sources: [Lecture 8 · Part D · PDF p. 11](../courses/am209a/lecnotes/lecture-08d.pdf#page=11)
+
+Card ID: `am209a-known-mean`
+
+---
+
+### 907. What is missing if a bootstrap prediction interval uses only the fitted mean curves?
+
+**AM 209a · Prediction uncertainty · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+New-observation noise. A predictive simulation must also include suitable response variation.
+
+**Intuition:** A collection of fitted lines is a mean-uncertainty band.
+
+</details>
+
+Sources: [Lecture 8 · Part D · PDF p. 13](../courses/am209a/lecnotes/lecture-08d.pdf#page=13)
+
+Card ID: `am209a-bootstrap-new-response`
+
+---
+
+### 908. Under independent new noise, how do mean-estimation variance and response noise combine?
+
+**AM 209a · Prediction uncertainty · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They add: Var(prediction error)=Var(estimated mean error)+σ², under the model.
+
+**Intuition:** Uncertainty has two distinct sources.
+
+</details>
+
+Sources: [Lecture 8 · Part D · PDF p. 14](../courses/am209a/lecnotes/lecture-08d.pdf#page=14)
+
+Card ID: `am209a-two-variances`

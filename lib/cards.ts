@@ -18,6 +18,15 @@ export type Card = {
   prerequisiteIds?: string[];
 };
 export const curated: Card[] = master.cards;
+// Retired curated IDs must not be restored as imports from older phone storage.
+export const retiredCardIds = new Set([
+  "am207-input-output-uncertainty",
+  "am207-prediction-distribution",
+  "am207-simulation-model",
+  "am207-system-model",
+  "am207-validation-question",
+  "am207-verification-question"
+]);
 export function makeCards(
   text: string,
   course: string,

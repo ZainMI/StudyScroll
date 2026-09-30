@@ -122,10 +122,12 @@ test("mobile layout fits the viewport and supports navigation", async ({
     .locator("nav")
     .getByRole("button", { name: /My courses/ })
     .click();
-  await expect(page.locator(".course-tile")).toHaveCount(3);
+  await expect(page.locator(".course-tile")).toHaveCount(
+    new Set(feed.cards.map((card) => card.course)).size,
+  );
 });
 
-test("stored retired course cards do not return after a feed update", async ({
+test("stored retired course and lecture cards do not return after a feed update", async ({
   page,
 }) => {
   await page.addInitScript(() => {
@@ -140,8 +142,15 @@ test("stored retired course cards do not return after a feed update", async ({
             answer: "Old answer",
             title: "Retired course card",
           },
+          {
+            id: "am207-system-model",
+            course: "AM 207",
+            body: "",
+            answer: "Old lecture 0 answer",
+            title: "Retired lecture 0 card",
+          },
         ],
-        progress: { saved: ["cs209-old"], learned: ["cs209-old"] },
+        progress: { saved: ["cs209-old", "am207-system-model"], learned: ["cs209-old", "am207-system-model"] },
       }),
     );
   });
@@ -239,4 +248,29 @@ test("wheel scrolling moves to the next reel", async ({ page }) => {
       ),
     )
     .toBeLessThan(0.01);
+});
+
+test("AM 209a opens lecture flashcards with local PDF references and persists reviews", async ({ page, request }) => {
+  const courseCards = feed.cards.filter((card) => card.course === "AM 209a");
+  expect(courseCards.length).toBeGreaterThan(0);
+  expect(new Set(courseCards.map((card) => card.sources![0].path.match(/lecture-(\d+)/)![1])).size).toBe(8);
+  await page.goto("/");
+  await page.locator(".filters").getByRole("button", { name: "AM 209a", exact: true }).click();
+  await expect(page.locator("article.study-card")).toHaveCount(courseCards.length);
+  const card = page.locator("article.study-card").first();
+  await expect(card.locator("h2")).toHaveText(courseCards[0].title);
+  await card.getByRole("button", { name: "Recall your answer, then reveal." }).click();
+  await expect(card.locator(".answer")).toContainText(courseCards[0].answer);
+  await card.locator(".sources summary").click();
+  const link = card.locator(".sources a").first();
+  await expect(link).toHaveAttribute("href", /lecture-01\.pdf.*#page=15/);
+  const response = await request.get((await link.getAttribute("href"))!);
+  expect(response.ok()).toBeTruthy();
+  expect(response.headers()["content-type"]).toBe("application/pdf");
+  await card.getByRole("button", { name: "Save card", exact: true }).click();
+  await card.getByRole("button", { name: /^Good/ }).click();
+  await page.reload();
+  await page.locator("nav").getByRole("button", { name: /Saved cards/ }).click();
+  await expect(page.locator("article.study-card h2")).toHaveText(courseCards[0].title);
+  await expect(page.locator(".learned-label")).toContainText("Reviewed");
 });

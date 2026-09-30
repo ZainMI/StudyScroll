@@ -1,6 +1,6 @@
 # StudyScroll
 
-A Next.js app that turns your course material into an intentional study feed. The current version loads an expanding library of authored, source-grounded cards covering AM 205, AM 207, and STAT 244.
+A Next.js app that turns your course material into an intentional study feed. The current version loads an expanding library of authored, source-grounded cards covering AM 205, AM 207, STAT 244, and AM 209a (lectures 1–8 from the supplied COMPSCI 1090A Ed course).
 
 ## Run locally
 

@@ -1,5 +1,5 @@
 {
-  "scope": "Short question-and-answer flashcards covering the core concepts in AM 207 lectures 00–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2 and supporting material. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded.",
+  "scope": "Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2 and supporting material. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference.",
   "policy": "No minimum, maximum, or per-course card quota. Add, split, revise, and revisit cards according to conceptual coverage and observed recall gaps. A reviewed card is not evidence of mastery.",
   "units": [
     {
@@ -1229,24 +1229,12 @@
       "title": "Models and uncertainty",
       "status": "Flashcards authored; recall not yet assessed",
       "cardIds": [
-        "am207-system-model",
-        "am207-simulation-model",
-        "am207-input-output-uncertainty",
-        "am207-verification-question",
-        "am207-validation-question",
-        "am207-prediction-distribution",
         "am207-calibration-validation"
       ],
       "objectives": [
         {
           "concept": "Models and uncertainty",
           "cardIds": [
-            "am207-system-model",
-            "am207-simulation-model",
-            "am207-input-output-uncertainty",
-            "am207-verification-question",
-            "am207-validation-question",
-            "am207-prediction-distribution",
             "am207-calibration-validation"
           ]
         }
@@ -3087,6 +3075,904 @@
           ]
         }
       ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Data science workflow",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-cycle",
+        "am209a-question-first",
+        "am209a-absent-rows",
+        "am209a-hourly-audit",
+        "am209a-cleaning-pipeline",
+        "am209a-units",
+        "am209a-subgroups",
+        "am209a-compare-like",
+        "am209a-future-split",
+        "am209a-negative-score",
+        "am209a-wrong-shape",
+        "am209a-flexibility",
+        "am209a-shrinkage-intro",
+        "am209a-hour-categories",
+        "am209a-regression-classification",
+        "am209a-logistic-preview",
+        "am209a-tree-preview",
+        "am209a-small-samples",
+        "am209a-pseudo-counts",
+        "am209a-decision-cost"
+      ],
+      "objectives": [
+        {
+          "concept": "Data science workflow",
+          "cardIds": [
+            "am209a-cycle",
+            "am209a-question-first",
+            "am209a-absent-rows",
+            "am209a-hourly-audit",
+            "am209a-cleaning-pipeline",
+            "am209a-units",
+            "am209a-subgroups",
+            "am209a-compare-like",
+            "am209a-future-split",
+            "am209a-negative-score",
+            "am209a-wrong-shape",
+            "am209a-flexibility",
+            "am209a-shrinkage-intro",
+            "am209a-hour-categories",
+            "am209a-regression-classification",
+            "am209a-logistic-preview",
+            "am209a-tree-preview",
+            "am209a-small-samples",
+            "am209a-pseudo-counts",
+            "am209a-decision-cost"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Structured data",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-datum",
+        "am209a-primary-secondary",
+        "am209a-api-scraping",
+        "am209a-api-key",
+        "am209a-rate-limit",
+        "am209a-storage",
+        "am209a-row-unit",
+        "am209a-column-variable",
+        "am209a-unanswerable",
+        "am209a-long-form",
+        "am209a-split-cell",
+        "am209a-mixed-units"
+      ],
+      "objectives": [
+        {
+          "concept": "Structured data",
+          "cardIds": [
+            "am209a-datum",
+            "am209a-primary-secondary",
+            "am209a-api-scraping",
+            "am209a-api-key",
+            "am209a-rate-limit",
+            "am209a-storage",
+            "am209a-row-unit",
+            "am209a-column-variable",
+            "am209a-unanswerable",
+            "am209a-long-form",
+            "am209a-split-cell",
+            "am209a-mixed-units"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Responsible collection",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-public-reuse",
+        "am209a-robots",
+        "am209a-reidentify",
+        "am209a-cache"
+      ],
+      "objectives": [
+        {
+          "concept": "Responsible collection",
+          "cardIds": [
+            "am209a-public-reuse",
+            "am209a-robots",
+            "am209a-reidentify",
+            "am209a-cache"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Variable types",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-atomic",
+        "am209a-compound",
+        "am209a-discrete-continuous",
+        "am209a-nominal",
+        "am209a-ordinal",
+        "am209a-nominal-summary",
+        "am209a-ordinal-mean"
+      ],
+      "objectives": [
+        {
+          "concept": "Variable types",
+          "cardIds": [
+            "am209a-atomic",
+            "am209a-compound",
+            "am209a-discrete-continuous",
+            "am209a-nominal",
+            "am209a-ordinal",
+            "am209a-nominal-summary",
+            "am209a-ordinal-mean"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Descriptive summaries",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-mean",
+        "am209a-median",
+        "am209a-outlier-mean",
+        "am209a-skew-tail",
+        "am209a-range",
+        "am209a-02-variance",
+        "am209a-sd-units",
+        "am209a-distribution",
+        "am209a-nominal-skew",
+        "am209a-median-example",
+        "am209a-variance-outlier"
+      ],
+      "objectives": [
+        {
+          "concept": "Descriptive summaries",
+          "cardIds": [
+            "am209a-mean",
+            "am209a-median",
+            "am209a-outlier-mean",
+            "am209a-skew-tail",
+            "am209a-range",
+            "am209a-02-variance",
+            "am209a-sd-units",
+            "am209a-distribution",
+            "am209a-nominal-skew",
+            "am209a-median-example",
+            "am209a-variance-outlier"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Sampling and EDA",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-population-sample",
+        "am209a-selection-bias",
+        "am209a-nonresponse",
+        "am209a-sample-uncertainty",
+        "am209a-anscombe",
+        "am209a-eda-purpose",
+        "am209a-pairplot"
+      ],
+      "objectives": [
+        {
+          "concept": "Sampling and EDA",
+          "cardIds": [
+            "am209a-population-sample",
+            "am209a-selection-bias",
+            "am209a-nonresponse",
+            "am209a-sample-uncertainty",
+            "am209a-anscombe",
+            "am209a-eda-purpose",
+            "am209a-pairplot"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Association",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-correlation",
+        "am209a-correlation-range",
+        "am209a-correlation-units",
+        "am209a-causality",
+        "am209a-zero-correlation"
+      ],
+      "objectives": [
+        {
+          "concept": "Association",
+          "cardIds": [
+            "am209a-correlation",
+            "am209a-correlation-range",
+            "am209a-correlation-units",
+            "am209a-causality",
+            "am209a-zero-correlation"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Visualization",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-choose-plot",
+        "am209a-histogram",
+        "am209a-bins",
+        "am209a-bar-histogram",
+        "am209a-pie-bars",
+        "am209a-scatter",
+        "am209a-stacked-area",
+        "am209a-group-distributions",
+        "am209a-boxplot",
+        "am209a-box-outlier",
+        "am209a-violin",
+        "am209a-extra-dimensions",
+        "am209a-too-many-dimensions",
+        "am209a-integrity",
+        "am209a-chart-junk",
+        "am209a-diverging-color",
+        "am209a-category-color",
+        "am209a-ordered-color",
+        "am209a-accessible-color",
+        "am209a-audience"
+      ],
+      "objectives": [
+        {
+          "concept": "Visualization",
+          "cardIds": [
+            "am209a-choose-plot",
+            "am209a-histogram",
+            "am209a-bins",
+            "am209a-bar-histogram",
+            "am209a-pie-bars",
+            "am209a-scatter",
+            "am209a-stacked-area",
+            "am209a-group-distributions",
+            "am209a-boxplot",
+            "am209a-box-outlier",
+            "am209a-violin",
+            "am209a-extra-dimensions",
+            "am209a-too-many-dimensions",
+            "am209a-integrity",
+            "am209a-chart-junk",
+            "am209a-diverging-color",
+            "am209a-category-color",
+            "am209a-ordered-color",
+            "am209a-accessible-color",
+            "am209a-audience"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Regression foundations",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-response",
+        "am209a-predictors",
+        "am209a-design-shape",
+        "am209a-single-feature",
+        "am209a-pandas-shape",
+        "am209a-signal-noise",
+        "am209a-inference-prediction"
+      ],
+      "objectives": [
+        {
+          "concept": "Regression foundations",
+          "cardIds": [
+            "am209a-response",
+            "am209a-predictors",
+            "am209a-design-shape",
+            "am209a-single-feature",
+            "am209a-pandas-shape",
+            "am209a-signal-noise",
+            "am209a-inference-prediction"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Nearest neighbors",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-one-neighbor",
+        "am209a-nonparametric",
+        "am209a-knn-rule",
+        "am209a-knn-example",
+        "am209a-k-hyperparameter",
+        "am209a-all-neighbors",
+        "am209a-increase-k",
+        "am209a-euclidean",
+        "am209a-distance-example",
+        "am209a-scale-distance",
+        "am209a-curse"
+      ],
+      "objectives": [
+        {
+          "concept": "Nearest neighbors",
+          "cardIds": [
+            "am209a-one-neighbor",
+            "am209a-nonparametric",
+            "am209a-knn-rule",
+            "am209a-knn-example",
+            "am209a-k-hyperparameter",
+            "am209a-all-neighbors",
+            "am209a-increase-k",
+            "am209a-euclidean",
+            "am209a-distance-example",
+            "am209a-scale-distance",
+            "am209a-curse"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Model evaluation",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-train-validation-test",
+        "am209a-residual-sign",
+        "am209a-mse",
+        "am209a-mse-example",
+        "am209a-rmse",
+        "am209a-mae",
+        "am209a-loss-choice",
+        "am209a-split-uncertainty",
+        "am209a-mse-rescale",
+        "am209a-r2-formula",
+        "am209a-r2-zero",
+        "am209a-r2-one",
+        "am209a-baseline-not-worst"
+      ],
+      "objectives": [
+        {
+          "concept": "Model evaluation",
+          "cardIds": [
+            "am209a-train-validation-test",
+            "am209a-residual-sign",
+            "am209a-mse",
+            "am209a-mse-example",
+            "am209a-rmse",
+            "am209a-mae",
+            "am209a-loss-choice",
+            "am209a-split-uncertainty",
+            "am209a-mse-rescale",
+            "am209a-r2-formula",
+            "am209a-r2-zero",
+            "am209a-r2-one",
+            "am209a-baseline-not-worst"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Linear regression",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-line",
+        "am209a-fit",
+        "am209a-predict-number",
+        "am209a-intercept",
+        "am209a-slope"
+      ],
+      "objectives": [
+        {
+          "concept": "Linear regression",
+          "cardIds": [
+            "am209a-line",
+            "am209a-fit",
+            "am209a-predict-number",
+            "am209a-intercept",
+            "am209a-slope"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Least-squares derivation",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-partial",
+        "am209a-intercept-gradient",
+        "am209a-slope-gradient",
+        "am209a-stationary-caution",
+        "am209a-gradient",
+        "am209a-slope-formula",
+        "am209a-intercept-formula",
+        "am209a-constant-x",
+        "am209a-vector-loss",
+        "am209a-constant-loss-factor",
+        "am209a-matrix-gradient",
+        "am209a-normal-equations",
+        "am209a-inverse-condition"
+      ],
+      "objectives": [
+        {
+          "concept": "Least-squares derivation",
+          "cardIds": [
+            "am209a-partial",
+            "am209a-intercept-gradient",
+            "am209a-slope-gradient",
+            "am209a-stationary-caution",
+            "am209a-gradient",
+            "am209a-slope-formula",
+            "am209a-intercept-formula",
+            "am209a-constant-x",
+            "am209a-vector-loss",
+            "am209a-constant-loss-factor",
+            "am209a-matrix-gradient",
+            "am209a-normal-equations",
+            "am209a-inverse-condition"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Multiple regression",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-multiple-form",
+        "am209a-ones-column",
+        "am209a-matrix-count",
+        "am209a-conditional-slope"
+      ],
+      "objectives": [
+        {
+          "concept": "Multiple regression",
+          "cardIds": [
+            "am209a-multiple-form",
+            "am209a-ones-column",
+            "am209a-matrix-count",
+            "am209a-conditional-slope"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Scaling and collinearity",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-coefficient-units",
+        "am209a-standardize",
+        "am209a-minmax",
+        "am209a-scale-not-normal",
+        "am209a-collinear",
+        "am209a-exact-near"
+      ],
+      "objectives": [
+        {
+          "concept": "Scaling and collinearity",
+          "cardIds": [
+            "am209a-coefficient-units",
+            "am209a-standardize",
+            "am209a-minmax",
+            "am209a-scale-not-normal",
+            "am209a-collinear",
+            "am209a-exact-near"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Categorical predictors",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-dummy",
+        "am209a-dummy-interpretation",
+        "am209a-levels",
+        "am209a-reference-change"
+      ],
+      "objectives": [
+        {
+          "concept": "Categorical predictors",
+          "cardIds": [
+            "am209a-dummy",
+            "am209a-dummy-interpretation",
+            "am209a-levels",
+            "am209a-reference-change"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Regression diagnostics",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-normality-fitting",
+        "am209a-errors-residuals",
+        "am209a-residual-pattern"
+      ],
+      "objectives": [
+        {
+          "concept": "Regression diagnostics",
+          "cardIds": [
+            "am209a-normality-fitting",
+            "am209a-errors-residuals",
+            "am209a-residual-pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Model complexity",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-overfit",
+        "am209a-underfit"
+      ],
+      "objectives": [
+        {
+          "concept": "Model complexity",
+          "cardIds": [
+            "am209a-overfit",
+            "am209a-underfit"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Interactions and polynomials",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-interaction",
+        "am209a-interaction-slope",
+        "am209a-parallel-groups",
+        "am209a-group-slopes",
+        "am209a-interaction-number",
+        "am209a-polynomial-linear",
+        "am209a-poly-count",
+        "am209a-poly-row",
+        "am209a-poly-row-example",
+        "am209a-cross-features",
+        "am209a-duplicate-intercept",
+        "am209a-power-scaling"
+      ],
+      "objectives": [
+        {
+          "concept": "Interactions and polynomials",
+          "cardIds": [
+            "am209a-interaction",
+            "am209a-interaction-slope",
+            "am209a-parallel-groups",
+            "am209a-group-slopes",
+            "am209a-interaction-number",
+            "am209a-polynomial-linear",
+            "am209a-poly-count",
+            "am209a-poly-row",
+            "am209a-poly-row-example",
+            "am209a-cross-features",
+            "am209a-duplicate-intercept",
+            "am209a-power-scaling"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Model selection",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-plausibility",
+        "am209a-generalization",
+        "am209a-test-leak",
+        "am209a-subset-count",
+        "am209a-subset-example",
+        "am209a-forward-selection",
+        "am209a-greedy-limits",
+        "am209a-forward-cost",
+        "am209a-parameter-hyperparameter",
+        "am209a-gap",
+        "am209a-high-both"
+      ],
+      "objectives": [
+        {
+          "concept": "Model selection",
+          "cardIds": [
+            "am209a-plausibility",
+            "am209a-generalization",
+            "am209a-test-leak",
+            "am209a-subset-count",
+            "am209a-subset-example",
+            "am209a-forward-selection",
+            "am209a-greedy-limits",
+            "am209a-forward-cost",
+            "am209a-parameter-hyperparameter",
+            "am209a-gap",
+            "am209a-high-both"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Cross-validation",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-single-split",
+        "am209a-cv-not-magic",
+        "am209a-cv-test",
+        "am209a-cv-average",
+        "am209a-kfold",
+        "am209a-fold-count",
+        "am209a-preprocessing-folds",
+        "am209a-loocv",
+        "am209a-loocv-cost",
+        "am209a-negative-mse"
+      ],
+      "objectives": [
+        {
+          "concept": "Cross-validation",
+          "cardIds": [
+            "am209a-single-split",
+            "am209a-cv-not-magic",
+            "am209a-cv-test",
+            "am209a-cv-average",
+            "am209a-kfold",
+            "am209a-fold-count",
+            "am209a-preprocessing-folds",
+            "am209a-loocv",
+            "am209a-loocv-cost",
+            "am209a-negative-mse"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Bias and variance",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-irreducible",
+        "am209a-reducible",
+        "am209a-07a-variance",
+        "am209a-bias",
+        "am209a-decomposition",
+        "am209a-complexity-tradeoff",
+        "am209a-biased-better"
+      ],
+      "objectives": [
+        {
+          "concept": "Bias and variance",
+          "cardIds": [
+            "am209a-irreducible",
+            "am209a-reducible",
+            "am209a-07a-variance",
+            "am209a-bias",
+            "am209a-decomposition",
+            "am209a-complexity-tradeoff",
+            "am209a-biased-better"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Regularization",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-penalty",
+        "am209a-lambda-zero",
+        "am209a-large-lambda",
+        "am209a-too-much",
+        "am209a-tune-lambda",
+        "am209a-lasso-penalty",
+        "am209a-ridge-penalty",
+        "am209a-scale-penalty",
+        "am209a-intercept-penalty",
+        "am209a-ridge-formula",
+        "am209a-ridge-invertible",
+        "am209a-ridge-loss-scale",
+        "am209a-log-grid",
+        "am209a-refit-candidates",
+        "am209a-validation-unpenalized",
+        "am209a-final-refit",
+        "am209a-cv-grid"
+      ],
+      "objectives": [
+        {
+          "concept": "Regularization",
+          "cardIds": [
+            "am209a-penalty",
+            "am209a-lambda-zero",
+            "am209a-large-lambda",
+            "am209a-too-much",
+            "am209a-tune-lambda",
+            "am209a-lasso-penalty",
+            "am209a-ridge-penalty",
+            "am209a-scale-penalty",
+            "am209a-intercept-penalty",
+            "am209a-ridge-formula",
+            "am209a-ridge-invertible",
+            "am209a-ridge-loss-scale",
+            "am209a-log-grid",
+            "am209a-refit-candidates",
+            "am209a-validation-unpenalized",
+            "am209a-final-refit",
+            "am209a-cv-grid"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Ridge versus lasso",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-lasso-optimization",
+        "am209a-sparsity",
+        "am209a-lasso-geometry",
+        "am209a-ridge-geometry",
+        "am209a-ridge-collinearity",
+        "am209a-lasso-zero-proof"
+      ],
+      "objectives": [
+        {
+          "concept": "Ridge versus lasso",
+          "cardIds": [
+            "am209a-lasso-optimization",
+            "am209a-sparsity",
+            "am209a-lasso-geometry",
+            "am209a-ridge-geometry",
+            "am209a-ridge-collinearity",
+            "am209a-lasso-zero-proof"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Inference foundations",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-coefficient-uncertainty",
+        "am209a-sampling-distribution",
+        "am209a-ci-meaning",
+        "am209a-ci-not-posterior",
+        "am209a-slope-se",
+        "am209a-noise-se",
+        "am209a-noise-estimate"
+      ],
+      "objectives": [
+        {
+          "concept": "Inference foundations",
+          "cardIds": [
+            "am209a-coefficient-uncertainty",
+            "am209a-sampling-distribution",
+            "am209a-ci-meaning",
+            "am209a-ci-not-posterior",
+            "am209a-slope-se",
+            "am209a-noise-se",
+            "am209a-noise-estimate"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Bootstrap",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-replacement",
+        "am209a-bootstrap-size",
+        "am209a-pairs",
+        "am209a-refit-bootstrap",
+        "am209a-bootstrap-se",
+        "am209a-not-divide-b",
+        "am209a-empirical-population",
+        "am209a-more-replicates",
+        "am209a-bootstrap-limits",
+        "am209a-dependent-data",
+        "am209a-percentile-ci",
+        "am209a-ci-example",
+        "am209a-normal-approx"
+      ],
+      "objectives": [
+        {
+          "concept": "Bootstrap",
+          "cardIds": [
+            "am209a-replacement",
+            "am209a-bootstrap-size",
+            "am209a-pairs",
+            "am209a-refit-bootstrap",
+            "am209a-bootstrap-se",
+            "am209a-not-divide-b",
+            "am209a-empirical-population",
+            "am209a-more-replicates",
+            "am209a-bootstrap-limits",
+            "am209a-dependent-data",
+            "am209a-percentile-ci",
+            "am209a-ci-example",
+            "am209a-normal-approx"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Predictor significance",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-size-vs-evidence",
+        "am209a-t-stat",
+        "am209a-t-example",
+        "am209a-t-df",
+        "am209a-exact-t",
+        "am209a-two-sided",
+        "am209a-pvalue",
+        "am209a-p-not-null",
+        "am209a-not-significant",
+        "am209a-association-not-cause",
+        "am209a-practical"
+      ],
+      "objectives": [
+        {
+          "concept": "Predictor significance",
+          "cardIds": [
+            "am209a-size-vs-evidence",
+            "am209a-t-stat",
+            "am209a-t-example",
+            "am209a-t-df",
+            "am209a-exact-t",
+            "am209a-two-sided",
+            "am209a-pvalue",
+            "am209a-p-not-null",
+            "am209a-not-significant",
+            "am209a-association-not-cause",
+            "am209a-practical"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 209a",
+      "title": "Prediction uncertainty",
+      "status": "Lecture flashcards authored; recall not yet assessed",
+      "cardIds": [
+        "am209a-mean-band",
+        "am209a-prediction-vs-confidence",
+        "am209a-known-mean",
+        "am209a-bootstrap-new-response",
+        "am209a-two-variances"
+      ],
+      "objectives": [
+        {
+          "concept": "Prediction uncertainty",
+          "cardIds": [
+            "am209a-mean-band",
+            "am209a-prediction-vs-confidence",
+            "am209a-known-mean",
+            "am209a-bootstrap-new-response",
+            "am209a-two-variances"
+          ]
+        }
+      ]
     }
   ],
   "crossCourseCardIds": [
@@ -3101,6 +3987,7 @@
   ],
   "deferred": [
     "Future textbook chapters unrelated to the current lectures and assignments.",
-    "Administrative slides, submission instructions, raw scraped web pages, and third-party articles cached as homework data are not learning objectives."
+    "Administrative slides, submission instructions, raw scraped web pages, and third-party articles cached as homework data are not learning objectives.",
+    "AM 209a lectures after 8, administrative material, and optional advanced regularization topics not required for the core lectures."
   ]
 }

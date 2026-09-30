@@ -21,8 +21,10 @@ Retain IDs when rewriting the same concept so review history and bookmarks survi
 
 ## Current boundaries
 
+- AM 209a: lectures 1–8 from the user-supplied COMPSCI 1090A Ed course, including 17 core PDF decks. The course uses the user’s AM 209a label. See [AM209A_COVERAGE.md](AM209A_COVERAGE.md) for lecture counts, source links, exclusions, and mathematical clarifications.
+
 - AM 205: PS1–2 and supporting Heath chapter 1–2 concepts; selected chapter 3 material supports the assigned least-squares work.
-- AM 207: HW1–2 and conceptual material in lectures 00–06. Historical anecdotes and application showcase slides are context, not invented exam requirements.
+- AM 207: HW1–2 and conceptual material in lectures 01–06. Historical anecdotes and application showcase slides are context, not invented exam requirements.
 - STAT 244: HW1–2 and all three uploaded lecture-note sets: linear algebra, least-squares theory, and inference, including regression diagnostics. The newer request for all necessary lecture material expands the earlier HW2 boundary.
 
 This first curriculum is not an official answer key, a complete transcription, or a guarantee that every detail has been mastered. Add depth and fresh applications where needed. Do not count source extraction as semantic review of every page.
@@ -38,3 +40,5 @@ npm run typecheck
 ```
 
 Do not send private course material to an external model service as part of automatic imports without an explicitly selected integration. Current imports are a local extraction prototype; curated content is authored separately.
+
+If intentionally working without some gitignored source PDFs, use `npm run feed:build -- --allow-missing-sources` (and the same flag for `feed:check`). This validates content and references but reports missing files; default checks still require every source file. Never describe an opted-out source check as proof all PDFs exist.

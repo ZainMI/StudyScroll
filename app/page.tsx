@@ -17,7 +17,7 @@ import {
   Sprout,
   X,
 } from "lucide-react";
-import { Card, curated } from "@/lib/cards";
+import { Card, curated, retiredCardIds } from "@/lib/cards";
 import {
   learningQueue,
   schedule,
@@ -97,6 +97,7 @@ export default function Home() {
                 typeof c.answer === "string" &&
                 typeof c.title === "string" &&
                 !c.id.startsWith("demo-") &&
+                !retiredCardIds.has(c.id) &&
                 !curated.some((x) => x.id === c.id),
             ),
           ];

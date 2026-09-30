@@ -17,7 +17,7 @@ const map = [
     topics:
       "Inverse transforms → Monte Carlo → MCMC → Markov processes → SSA → Bayesian updating",
     scope:
-      "Lectures 00–06, with homework 1–2 practice: probability, sampling, Markov dynamics, stochastic simulation, and uncertainty.",
+      "Lectures 01–06, with homework 1–2 practice: probability, sampling, Markov dynamics, stochastic simulation, and uncertainty.",
     next: "Deepen with worked simulation traces, full derivation drills, and new sampling examples.",
   },
   {
@@ -28,6 +28,15 @@ const map = [
     scope:
       "All three uploaded note sets: linear algebra, least-squares theory, and inference through regression diagnostics, plus homework 1–2.",
     next: "Deepen with new estimability problems, proof reconstruction, and inference calculations.",
+  },
+  {
+    course: "AM 209a",
+    title: "Turn data into sound predictions.",
+    topics:
+      "Data preparation → EDA → kNN → regression → cross-validation → ridge and lasso → bootstrap inference",
+    scope:
+      "Lectures 1–8 from your supplied Ed course, labeled COMPSCI 1090A on the site. Includes all 17 core slide decks.",
+    next: "Practice implementing the methods on new datasets and interpreting results without looking at the answers.",
   },
 ];
 export default function Guide() {

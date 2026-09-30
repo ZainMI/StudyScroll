@@ -1,6 +1,8 @@
 import { readFile, writeFile, access } from "node:fs/promises";
 const feed = JSON.parse(await readFile("content/master-feed.json", "utf8"));
 const ids = new Set();
+const missingSources = new Set();
+const allowMissingSources = process.argv.includes("--allow-missing-sources");
 for (const card of feed.cards) {
   if (ids.has(card.id)) throw new Error(`Duplicate card: ${card.id}`);
   ids.add(card.id);
@@ -24,7 +26,12 @@ for (const card of feed.cards) {
   for (const source of card.sources) {
     if (!source.path.startsWith("courses/") || source.path.includes(".."))
       throw new Error(`Invalid source: ${source.path}`);
-    await access(source.path);
+    try {
+      await access(source.path);
+    } catch (error) {
+      if (!allowMissingSources || error.code !== "ENOENT") throw error;
+      missingSources.add(source.path);
+    }
     if (
       source.page !== undefined &&
       (!Number.isInteger(source.page) || source.page < 1)
@@ -51,7 +58,7 @@ const covered = new Set([
 ]);
 for (const id of ids)
   if (!covered.has(id)) throw new Error(`Unmapped card: ${id}`);
-const header = `# StudyScroll: master feed\n\nUpdated ${feed.updated}. ${feed.cards.length} curated cards.\n\n${feed.scope}\n\nThe editable source of truth is [master-feed.json](master-feed.json). This readable document is generated with \`npm run feed:build\`. Edit the JSON, then regenerate; the Next app imports that same JSON directly.\n\nThese are authored learning prompts derived from the listed materials, not quotations or official answer keys. Companion examples and cross-course explanations add interpretation. Reveal the explanation only after attempting the prompt.\n\n## Course map\n\n- **AM 205:** floating-point spacing, rounding, matrix operations, linear-map geometry, pivoting, low-rank approximation, algebraic least squares.\n- **AM 207:** probability foundations, inverse transforms, Monte Carlo, Metropolis–Hastings, Markov dynamics, jump processes, SSA, tau leaping, and Bayesian uncertainty.\n- **STAT 244:** linear algebra, estimability, projections, contrast coding, least squares and GLS, inference, multicollinearity, PCR/PLS, and regression diagnostics.\nSee [LECTURE_COVERAGE.md](LECTURE_COVERAGE.md) for the lecture-note map, [coverage.json](coverage.json) for learning-objective mappings and [CURATION.md](CURATION.md) for the uncapped content workflow. Scope is current lectures and assignments with supporting textbook sections. No fixed total, per-course quota, or daily card limit applies.\n\n## Feed\n\n`;
+const header = `# StudyScroll: master feed\n\nUpdated ${feed.updated}. ${feed.cards.length} curated cards.\n\n${feed.scope}\n\nThe editable source of truth is [master-feed.json](master-feed.json). This readable document is generated with \`npm run feed:build\`. Edit the JSON, then regenerate; the Next app imports that same JSON directly.\n\nThese are authored learning prompts derived from the listed materials, not quotations or official answer keys. Companion examples and cross-course explanations add interpretation. Reveal the explanation only after attempting the prompt.\n\n## Course map\n\n- **AM 205:** floating-point spacing, rounding, matrix operations, linear-map geometry, pivoting, low-rank approximation, algebraic least squares.\n- **AM 207:** probability foundations, inverse transforms, Monte Carlo, Metropolis–Hastings, Markov dynamics, jump processes, SSA, tau leaping, and Bayesian uncertainty.\n- **STAT 244:** linear algebra, estimability, projections, contrast coding, least squares and GLS, inference, multicollinearity, PCR/PLS, and regression diagnostics.\n- **AM 209a:** lectures 1–8 from the supplied COMPSCI 1090A course: data preparation, visualization, kNN, regression, cross-validation, ridge/lasso, and bootstrap inference. See [AM209A_COVERAGE.md](AM209A_COVERAGE.md).\nSee [LECTURE_COVERAGE.md](LECTURE_COVERAGE.md) for the lecture-note map, [coverage.json](coverage.json) for learning-objective mappings and [CURATION.md](CURATION.md) for the uncapped content workflow. Scope is current lectures and assignments with supporting textbook sections. No fixed total, per-course quota, or daily card limit applies.\n\n## Feed\n\n`;
 const sections = feed.cards.map(
   (c, i) =>
     `### ${String(i + 1).padStart(2, "0")}. ${c.title}\n\n**${c.course} · ${c.topic} · ${c.kind}**\n\n${c.body ? `${c.body}\n\n` : ""}<details>\n<summary>Reveal explanation</summary>\n\n${c.answer}\n\n**Intuition:** ${c.takeaway}\n\n</details>\n\nSources: ${c.sources.map((s) => `[${s.locator}](../${encodeURI(s.path)}${s.page ? `#page=${s.page}` : ""})`).join("; ")}\n\nCard ID: \`${c.id}\`\n`,
@@ -61,6 +68,7 @@ if (process.argv.includes("--check")) {
   if ((await readFile("content/MASTER_FEED.md", "utf8")) !== output)
     throw new Error("MASTER_FEED.md is stale. Run npm run feed:build.");
 } else await writeFile("content/MASTER_FEED.md", output);
-console.log(
-  `Validated ${feed.cards.length} unique cards and all local source paths.`,
-);
+if (missingSources.size) {
+  console.warn(`Missing local source files (${missingSources.size}):\n${[...missingSources].join("\n")}`);
+}
+console.log(`Validated ${feed.cards.length} unique cards${missingSources.size ? "; missing local files reported above" : " and all local source paths"}.`);
