@@ -1,0 +1,1152 @@
+{
+  "scope": "Current lectures and assignments, with supporting textbook sections. Confirmed by the user.",
+  "policy": "No minimum, maximum, or per-course card quota. Add, split, revise, and revisit cards according to conceptual coverage and observed recall gaps. A reviewed card is not evidence of mastery.",
+  "units": [
+    {
+      "course": "AM 205",
+      "title": "Floating-point arithmetic and numerical error",
+      "status": "Expanded practice authored; retrieval performance not yet assessed",
+      "cardIds": [
+        "am205-spacing",
+        "am205-count",
+        "am205-reciprocal",
+        "am205-roundtrip",
+        "am205-wellposed",
+        "am205-errors",
+        "am205-relative",
+        "am205-backward",
+        "am205-conditioning",
+        "am205-associative",
+        "am205-precision",
+        "am205-binade-boundary",
+        "am205-roundoff-versus-epsilon",
+        "am205-toy-binary",
+        "am205-finite-binary",
+        "am205-largest-consecutive-integers",
+        "am205-non-grid-endpoint",
+        "am205-pigeonhole-not-all",
+        "am205-discretization-tradeoff",
+        "am205-linear-backward-data",
+        "am205-digits-lost",
+        "am205-scalar-condition",
+        "am205-sqrt-condition",
+        "am205-cancellation",
+        "am205-rationalize-small-difference",
+        "am205-positive-sum-order",
+        "am205-subnormal-role",
+        "am205-overflow-rewrite",
+        "am205-exceptional-values"
+      ],
+      "objectives": [
+        {
+          "concept": "Floating-point arithmetic",
+          "cardIds": [
+            "am205-spacing",
+            "am205-count",
+            "am205-roundtrip",
+            "am205-associative",
+            "am205-precision",
+            "am205-binade-boundary",
+            "am205-roundoff-versus-epsilon",
+            "am205-toy-binary",
+            "am205-finite-binary",
+            "am205-largest-consecutive-integers",
+            "am205-non-grid-endpoint",
+            "am205-positive-sum-order",
+            "am205-subnormal-role"
+          ]
+        },
+        {
+          "concept": "Rounding & information loss",
+          "cardIds": [
+            "am205-reciprocal",
+            "am205-pigeonhole-not-all"
+          ]
+        },
+        {
+          "concept": "Foundations of computation",
+          "cardIds": [
+            "am205-wellposed"
+          ]
+        },
+        {
+          "concept": "Error sources",
+          "cardIds": [
+            "am205-errors",
+            "am205-discretization-tradeoff",
+            "am205-cancellation",
+            "am205-rationalize-small-difference",
+            "am205-overflow-rewrite",
+            "am205-exceptional-values"
+          ]
+        },
+        {
+          "concept": "Error measures",
+          "cardIds": [
+            "am205-relative"
+          ]
+        },
+        {
+          "concept": "Error analysis",
+          "cardIds": [
+            "am205-backward",
+            "am205-linear-backward-data"
+          ]
+        },
+        {
+          "concept": "Conditioning vs stability",
+          "cardIds": [
+            "am205-conditioning",
+            "am205-digits-lost",
+            "am205-scalar-condition",
+            "am205-sqrt-condition"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 205",
+      "title": "Linear systems, geometry, and factorizations",
+      "status": "Expanded practice authored; retrieval performance not yet assessed",
+      "cardIds": [
+        "am205-operations",
+        "am205-disk",
+        "am205-pivot",
+        "am205-det",
+        "am205-condition-scale",
+        "am205-residual",
+        "am205-two-solutions",
+        "am205-pivot-scope",
+        "am205-lu-reuse",
+        "am205-cholesky",
+        "am205-row-column-order",
+        "am205-column-add-index",
+        "am205-singular-values-area",
+        "am205-rank-collapse",
+        "am205-zero-pivot-nonsingular",
+        "am205-pivot-choice",
+        "am205-multiplier-growth",
+        "am205-solve-with-permutation",
+        "am205-triangular-step",
+        "am205-transpose-solve",
+        "am205-inverse-product-cost",
+        "am205-positive-definite-test",
+        "am205-consistency",
+        "am205-underdetermined",
+        "am205-matrix-norms",
+        "am205-diagonal-condition",
+        "am205-small-residual-counterexample",
+        "am205-orthogonal-map"
+      ],
+      "objectives": [
+        {
+          "concept": "Matrix operations",
+          "cardIds": [
+            "am205-operations",
+            "am205-row-column-order",
+            "am205-column-add-index"
+          ]
+        },
+        {
+          "concept": "Geometry of linear maps",
+          "cardIds": [
+            "am205-disk",
+            "am205-singular-values-area",
+            "am205-rank-collapse",
+            "am205-orthogonal-map"
+          ]
+        },
+        {
+          "concept": "Gaussian elimination",
+          "cardIds": [
+            "am205-pivot",
+            "am205-zero-pivot-nonsingular",
+            "am205-multiplier-growth"
+          ]
+        },
+        {
+          "concept": "LU factorization",
+          "cardIds": [
+            "am205-det"
+          ]
+        },
+        {
+          "concept": "Matrix conditioning",
+          "cardIds": [
+            "am205-condition-scale",
+            "am205-matrix-norms",
+            "am205-diagonal-condition"
+          ]
+        },
+        {
+          "concept": "Linear-system verification",
+          "cardIds": [
+            "am205-residual",
+            "am205-small-residual-counterexample"
+          ]
+        },
+        {
+          "concept": "Linear systems",
+          "cardIds": [
+            "am205-two-solutions",
+            "am205-consistency",
+            "am205-underdetermined"
+          ]
+        },
+        {
+          "concept": "Pivoting",
+          "cardIds": [
+            "am205-pivot-scope",
+            "am205-pivot-choice"
+          ]
+        },
+        {
+          "concept": "Efficient linear solves",
+          "cardIds": [
+            "am205-lu-reuse",
+            "am205-solve-with-permutation",
+            "am205-triangular-step",
+            "am205-transpose-solve",
+            "am205-inverse-product-cost"
+          ]
+        },
+        {
+          "concept": "Structured factorizations",
+          "cardIds": [
+            "am205-cholesky",
+            "am205-positive-definite-test"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 205",
+      "title": "Low-rank and least-squares models",
+      "status": "Expanded practice authored; retrieval performance not yet assessed",
+      "cardIds": [
+        "am205-rank",
+        "am205-greedy",
+        "am205-ellipse",
+        "am205-ellipse-check",
+        "am205-rank-one",
+        "am205-normal-squared",
+        "am205-outer-product-rank",
+        "am205-elimination-update",
+        "am205-zero-residual-pivot",
+        "am205-rms-frobenius",
+        "am205-ellipse-design-row",
+        "am205-algebraic-distance",
+        "am205-quadratic-cross-term",
+        "am205-ellipse-axes",
+        "am205-qr-reduction",
+        "am205-svd-minimum-norm"
+      ],
+      "objectives": [
+        {
+          "concept": "Low-rank approximation",
+          "cardIds": [
+            "am205-rank",
+            "am205-greedy",
+            "am205-elimination-update",
+            "am205-zero-residual-pivot",
+            "am205-rms-frobenius"
+          ]
+        },
+        {
+          "concept": "Least squares",
+          "cardIds": [
+            "am205-ellipse",
+            "am205-ellipse-design-row",
+            "am205-algebraic-distance"
+          ]
+        },
+        {
+          "concept": "Model validity",
+          "cardIds": [
+            "am205-ellipse-check",
+            "am205-quadratic-cross-term",
+            "am205-ellipse-axes"
+          ]
+        },
+        {
+          "concept": "Low-rank computation",
+          "cardIds": [
+            "am205-rank-one",
+            "am205-outer-product-rank"
+          ]
+        },
+        {
+          "concept": "Least-squares algorithms",
+          "cardIds": [
+            "am205-normal-squared",
+            "am205-qr-reduction",
+            "am205-svd-minimum-norm"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 207",
+      "title": "Probability and transformations",
+      "status": "Expanded practice authored; retrieval performance not yet assessed",
+      "cardIds": [
+        "am207-inverse",
+        "am207-density",
+        "am207-jacobian",
+        "am207-multiple-roots",
+        "am207-poisson",
+        "am207-geometric",
+        "am207-coalescent",
+        "am207-scaling-limit",
+        "am207-two-lineages",
+        "am207-piecewise-cdf",
+        "am207-box-muller",
+        "am207-marsaglia",
+        "am207-probability-views",
+        "am207-cdf-density",
+        "am207-normalize-density",
+        "am207-expectation-function",
+        "am207-conditional-probability",
+        "am207-independence-vs-disjoint",
+        "am207-negative-scale",
+        "am207-two-dimensional-jacobian",
+        "am207-square-uniform-density",
+        "am207-inverse-proof",
+        "am207-affine-uniform",
+        "am207-inverse-interpolation-number",
+        "am207-cdf-flat-segment",
+        "am207-exponential-number",
+        "am207-memoryless-proof",
+        "am207-poisson-number",
+        "am207-independent-increments",
+        "am207-mixture-variance",
+        "am207-geometric-number",
+        "am207-finite-population-check",
+        "am207-radial-cdf",
+        "am207-radial-square-exponential",
+        "am207-polar-transform",
+        "am207-rejection-efficiency"
+      ],
+      "objectives": [
+        {
+          "concept": "Probability foundations",
+          "cardIds": [
+            "am207-density",
+            "am207-cdf-density",
+            "am207-normalize-density",
+            "am207-expectation-function",
+            "am207-conditional-probability",
+            "am207-independence-vs-disjoint"
+          ]
+        },
+        {
+          "concept": "Probability interpretations",
+          "cardIds": [
+            "am207-probability-views"
+          ]
+        },
+        {
+          "concept": "Transformations",
+          "cardIds": [
+            "am207-jacobian",
+            "am207-negative-scale",
+            "am207-two-dimensional-jacobian"
+          ]
+        },
+        {
+          "concept": "Noninjective transformations",
+          "cardIds": [
+            "am207-multiple-roots",
+            "am207-square-uniform-density"
+          ]
+        },
+        {
+          "concept": "Inverse-transform sampling",
+          "cardIds": [
+            "am207-inverse",
+            "am207-piecewise-cdf",
+            "am207-inverse-proof",
+            "am207-affine-uniform",
+            "am207-inverse-interpolation-number",
+            "am207-cdf-flat-segment",
+            "am207-exponential-number",
+            "am207-memoryless-proof"
+          ]
+        },
+        {
+          "concept": "Normal sampling",
+          "cardIds": [
+            "am207-box-muller",
+            "am207-radial-cdf",
+            "am207-radial-square-exponential"
+          ]
+        },
+        {
+          "concept": "Rejection geometry",
+          "cardIds": [
+            "am207-marsaglia",
+            "am207-polar-transform",
+            "am207-rejection-efficiency"
+          ]
+        },
+        {
+          "concept": "Poisson processes",
+          "cardIds": [
+            "am207-poisson",
+            "am207-poisson-number",
+            "am207-independent-increments"
+          ]
+        },
+        {
+          "concept": "Discrete waiting times",
+          "cardIds": [
+            "am207-geometric",
+            "am207-geometric-number"
+          ]
+        },
+        {
+          "concept": "Population sampling",
+          "cardIds": [
+            "am207-coalescent",
+            "am207-finite-population-check"
+          ]
+        },
+        {
+          "concept": "Continuous limits",
+          "cardIds": [
+            "am207-scaling-limit"
+          ]
+        },
+        {
+          "concept": "Conditional distributions",
+          "cardIds": [
+            "am207-two-lineages",
+            "am207-mixture-variance"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 207",
+      "title": "Monte Carlo and MCMC",
+      "status": "Expanded practice authored; retrieval performance not yet assessed",
+      "cardIds": [
+        "am207-mc-rate",
+        "am207-grid",
+        "am207-mh",
+        "am207-reject",
+        "am207-cauchy",
+        "am207-mixing",
+        "am207-rejection",
+        "am207-importance",
+        "am207-self-normalized",
+        "am207-autocorrelation",
+        "am207-integral-volume",
+        "am207-mean-unbiased-proof",
+        "am207-standard-error-number",
+        "am207-rmse-bias",
+        "am207-grid-budget",
+        "am207-product-integral",
+        "am207-slope-interpretation",
+        "am207-envelope-efficiency",
+        "am207-unknown-normalizer",
+        "am207-asymmetric-acceptance",
+        "am207-mh-log-space",
+        "am207-mh-detailed-balance-proof",
+        "am207-jump-chain-example",
+        "am207-cauchy-quantile",
+        "am207-endpoint-tangent",
+        "am207-correlated-normal-axes",
+        "am207-proposal-scale-extremes",
+        "am207-warmup-adaptation",
+        "am207-ar1-effective-size",
+        "am207-importance-discrete",
+        "am207-missing-support",
+        "am207-normalize-weights-number",
+        "am207-weight-degeneracy"
+      ],
+      "objectives": [
+        {
+          "concept": "Monte Carlo",
+          "cardIds": [
+            "am207-mc-rate",
+            "am207-integral-volume",
+            "am207-mean-unbiased-proof",
+            "am207-standard-error-number",
+            "am207-rmse-bias"
+          ]
+        },
+        {
+          "concept": "High-dimensional integration",
+          "cardIds": [
+            "am207-grid",
+            "am207-grid-budget",
+            "am207-product-integral",
+            "am207-slope-interpretation"
+          ]
+        },
+        {
+          "concept": "Metropolis–Hastings",
+          "cardIds": [
+            "am207-mh",
+            "am207-asymmetric-acceptance",
+            "am207-mh-log-space",
+            "am207-mh-detailed-balance-proof"
+          ]
+        },
+        {
+          "concept": "MCMC correctness",
+          "cardIds": [
+            "am207-reject",
+            "am207-jump-chain-example"
+          ]
+        },
+        {
+          "concept": "Proposal distributions",
+          "cardIds": [
+            "am207-cauchy",
+            "am207-cauchy-quantile",
+            "am207-endpoint-tangent"
+          ]
+        },
+        {
+          "concept": "MCMC diagnostics",
+          "cardIds": [
+            "am207-mixing",
+            "am207-correlated-normal-axes",
+            "am207-proposal-scale-extremes",
+            "am207-warmup-adaptation"
+          ]
+        },
+        {
+          "concept": "Rejection sampling",
+          "cardIds": [
+            "am207-rejection",
+            "am207-envelope-efficiency",
+            "am207-unknown-normalizer"
+          ]
+        },
+        {
+          "concept": "Importance sampling",
+          "cardIds": [
+            "am207-importance",
+            "am207-self-normalized",
+            "am207-importance-discrete",
+            "am207-missing-support",
+            "am207-normalize-weights-number",
+            "am207-weight-degeneracy"
+          ]
+        },
+        {
+          "concept": "Monte Carlo error",
+          "cardIds": [
+            "am207-autocorrelation",
+            "am207-ar1-effective-size"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 207",
+      "title": "Markov processes and simulation",
+      "status": "Expanded practice authored; retrieval performance not yet assessed",
+      "cardIds": [
+        "am207-balance",
+        "am207-lumping",
+        "am207-ssa",
+        "am207-closure",
+        "am207-ck",
+        "am207-master",
+        "am207-generator",
+        "am207-urn-rates",
+        "am207-urn-mean",
+        "am207-urn-stationary",
+        "am207-time-histogram",
+        "am207-stoichiometry",
+        "am207-meanfield",
+        "am207-extinction",
+        "am207-notch",
+        "am207-tau",
+        "am207-diffusion",
+        "am207-stationary-two-state",
+        "am207-detailed-implies-stationary",
+        "am207-stationarity-not-convergence",
+        "am207-transition-matrix-orientation",
+        "am207-two-step-number",
+        "am207-lumpable-example",
+        "am207-probability-conservation",
+        "am207-death-boundary",
+        "am207-generator-constant",
+        "am207-death-mean",
+        "am207-ssa-event-number",
+        "am207-ssa-horizon",
+        "am207-zero-propensity",
+        "am207-combinatorial-propensity",
+        "am207-urn-boundaries",
+        "am207-urn-timescale-number",
+        "am207-hypergeometric-small",
+        "am207-birth-death-recursion",
+        "am207-holding-time-number",
+        "am207-covariance-gap",
+        "am207-reaction-drift",
+        "am207-coexistence-condition",
+        "am207-neighbor-average",
+        "am207-bounded-propensities",
+        "am207-tau-count-number",
+        "am207-diffusion-scaling",
+        "am207-diffusion-msd"
+      ],
+      "objectives": [
+        {
+          "concept": "Stationarity & reversibility",
+          "cardIds": [
+            "am207-balance",
+            "am207-stationary-two-state",
+            "am207-detailed-implies-stationary",
+            "am207-stationarity-not-convergence"
+          ]
+        },
+        {
+          "concept": "The Markov property",
+          "cardIds": [
+            "am207-lumping",
+            "am207-lumpable-example"
+          ]
+        },
+        {
+          "concept": "Stochastic simulation",
+          "cardIds": [
+            "am207-ssa",
+            "am207-ssa-event-number",
+            "am207-ssa-horizon",
+            "am207-zero-propensity",
+            "am207-combinatorial-propensity"
+          ]
+        },
+        {
+          "concept": "Moment closure",
+          "cardIds": [
+            "am207-closure",
+            "am207-covariance-gap"
+          ]
+        },
+        {
+          "concept": "Markov transitions",
+          "cardIds": [
+            "am207-ck",
+            "am207-transition-matrix-orientation",
+            "am207-two-step-number"
+          ]
+        },
+        {
+          "concept": "Master equations",
+          "cardIds": [
+            "am207-master",
+            "am207-probability-conservation",
+            "am207-death-boundary"
+          ]
+        },
+        {
+          "concept": "Markov generators",
+          "cardIds": [
+            "am207-generator",
+            "am207-generator-constant",
+            "am207-death-mean"
+          ]
+        },
+        {
+          "concept": "Transition rates",
+          "cardIds": [
+            "am207-urn-rates",
+            "am207-urn-boundaries"
+          ]
+        },
+        {
+          "concept": "Moment equations",
+          "cardIds": [
+            "am207-urn-mean",
+            "am207-urn-timescale-number"
+          ]
+        },
+        {
+          "concept": "Stationary distributions",
+          "cardIds": [
+            "am207-urn-stationary",
+            "am207-hypergeometric-small",
+            "am207-birth-death-recursion"
+          ]
+        },
+        {
+          "concept": "Simulation diagnostics",
+          "cardIds": [
+            "am207-time-histogram",
+            "am207-holding-time-number"
+          ]
+        },
+        {
+          "concept": "Reaction systems",
+          "cardIds": [
+            "am207-stoichiometry",
+            "am207-reaction-drift"
+          ]
+        },
+        {
+          "concept": "Mean-field dynamics",
+          "cardIds": [
+            "am207-meanfield",
+            "am207-coexistence-condition"
+          ]
+        },
+        {
+          "concept": "Stochastic vs deterministic models",
+          "cardIds": [
+            "am207-extinction"
+          ]
+        },
+        {
+          "concept": "Spatial stochastic systems",
+          "cardIds": [
+            "am207-notch",
+            "am207-neighbor-average",
+            "am207-bounded-propensities"
+          ]
+        },
+        {
+          "concept": "Accelerated simulation",
+          "cardIds": [
+            "am207-tau",
+            "am207-tau-count-number"
+          ]
+        },
+        {
+          "concept": "Random-walk limits",
+          "cardIds": [
+            "am207-diffusion",
+            "am207-diffusion-scaling",
+            "am207-diffusion-msd"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 207",
+      "title": "Likelihood and Bayesian uncertainty",
+      "status": "Expanded practice authored; retrieval performance not yet assessed",
+      "cardIds": [
+        "am207-bayes",
+        "am207-likelihood",
+        "am207-prior",
+        "am207-beta-update-general",
+        "am207-posterior-predictive",
+        "am207-likelihood-not-posterior",
+        "am207-sequence-versus-count",
+        "am207-exp-mle-number",
+        "am207-histogram-fit",
+        "am207-gamma-exponential",
+        "am207-flat-rate-posterior",
+        "am207-credible-interval-meaning"
+      ],
+      "objectives": [
+        {
+          "concept": "Bayesian updating",
+          "cardIds": [
+            "am207-bayes",
+            "am207-beta-update-general",
+            "am207-posterior-predictive",
+            "am207-likelihood-not-posterior",
+            "am207-sequence-versus-count"
+          ]
+        },
+        {
+          "concept": "Inference",
+          "cardIds": [
+            "am207-likelihood",
+            "am207-exp-mle-number",
+            "am207-histogram-fit"
+          ]
+        },
+        {
+          "concept": "Bayesian inference",
+          "cardIds": [
+            "am207-prior",
+            "am207-gamma-exponential",
+            "am207-flat-rate-posterior",
+            "am207-credible-interval-meaning"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "STAT 244",
+      "title": "Subspaces, estimability, and identifiability",
+      "status": "Expanded practice authored; retrieval performance not yet assessed",
+      "cardIds": [
+        "stat244-space",
+        "stat244-null",
+        "stat244-estimable",
+        "stat244-alias",
+        "stat244-recode",
+        "stat244-affine",
+        "stat244-ginverse",
+        "stat244-ginverse-product",
+        "stat244-projector-unique",
+        "stat244-orthocomplement",
+        "stat244-orthogonalization-limit",
+        "stat244-ambient-dimensions",
+        "stat244-rank-nullity",
+        "stat244-span-not-columns",
+        "stat244-nullspace-test",
+        "stat244-orthogonal-decomposition-example",
+        "stat244-duplicate-columns",
+        "stat244-construct-unbiased-estimator",
+        "stat244-contrast-invariance",
+        "stat244-new-point-estimability",
+        "stat244-dummy-rank",
+        "stat244-constraints-not-model",
+        "stat244-parameter-map",
+        "stat244-column-space-converse",
+        "stat244-affine-example",
+        "stat244-ginverse-example",
+        "stat244-right-product",
+        "stat244-g-inverse-fitted-numeric",
+        "stat244-intersection-complement",
+        "stat244-double-complement"
+      ],
+      "objectives": [
+        {
+          "concept": "Column spaces",
+          "cardIds": [
+            "stat244-space",
+            "stat244-ambient-dimensions",
+            "stat244-rank-nullity",
+            "stat244-span-not-columns"
+          ]
+        },
+        {
+          "concept": "Fundamental subspaces",
+          "cardIds": [
+            "stat244-null",
+            "stat244-nullspace-test",
+            "stat244-orthogonal-decomposition-example"
+          ]
+        },
+        {
+          "concept": "Estimability",
+          "cardIds": [
+            "stat244-estimable",
+            "stat244-duplicate-columns",
+            "stat244-construct-unbiased-estimator",
+            "stat244-contrast-invariance",
+            "stat244-new-point-estimability"
+          ]
+        },
+        {
+          "concept": "Identifiability",
+          "cardIds": [
+            "stat244-alias",
+            "stat244-dummy-rank",
+            "stat244-constraints-not-model"
+          ]
+        },
+        {
+          "concept": "Reparameterization",
+          "cardIds": [
+            "stat244-recode",
+            "stat244-orthogonalization-limit",
+            "stat244-parameter-map",
+            "stat244-column-space-converse"
+          ]
+        },
+        {
+          "concept": "Rank-deficient least squares",
+          "cardIds": [
+            "stat244-affine",
+            "stat244-affine-example"
+          ]
+        },
+        {
+          "concept": "Generalized inverses",
+          "cardIds": [
+            "stat244-ginverse",
+            "stat244-ginverse-product",
+            "stat244-ginverse-example",
+            "stat244-right-product"
+          ]
+        },
+        {
+          "concept": "Rank deficiency",
+          "cardIds": [
+            "stat244-projector-unique",
+            "stat244-g-inverse-fitted-numeric"
+          ]
+        },
+        {
+          "concept": "Subspace proofs",
+          "cardIds": [
+            "stat244-orthocomplement",
+            "stat244-intersection-complement",
+            "stat244-double-complement"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "STAT 244",
+      "title": "Least-squares theory and contrasts",
+      "status": "Expanded practice authored; retrieval performance not yet assessed",
+      "cardIds": [
+        "stat244-normal",
+        "stat244-projection",
+        "stat244-nested",
+        "stat244-contrasts",
+        "stat244-variance",
+        "stat244-blue",
+        "stat244-pythagoras",
+        "stat244-blue-proof",
+        "stat244-gls",
+        "stat244-weights",
+        "stat244-differentiate-loss",
+        "stat244-residual-sum-zero",
+        "stat244-fitted-orthogonality",
+        "stat244-idempotent-not-orthogonal",
+        "stat244-projector-eigenvalues",
+        "stat244-hat-trace",
+        "stat244-nesting-product",
+        "stat244-difference-without-nesting",
+        "stat244-treatment-numeric",
+        "stat244-sum-coding-numeric",
+        "stat244-helmert-scaling",
+        "stat244-remove-intercept-caveat",
+        "stat244-variance-numeric",
+        "stat244-variance-second-derivative",
+        "stat244-normality-separation",
+        "stat244-contrast-variance-gap",
+        "stat244-whitening-covariance",
+        "stat244-weighted-mean"
+      ],
+      "objectives": [
+        {
+          "concept": "Least-squares geometry",
+          "cardIds": [
+            "stat244-normal",
+            "stat244-differentiate-loss",
+            "stat244-residual-sum-zero",
+            "stat244-fitted-orthogonality"
+          ]
+        },
+        {
+          "concept": "Projection matrices",
+          "cardIds": [
+            "stat244-projection",
+            "stat244-idempotent-not-orthogonal",
+            "stat244-projector-eigenvalues",
+            "stat244-hat-trace"
+          ]
+        },
+        {
+          "concept": "Nested models",
+          "cardIds": [
+            "stat244-nested",
+            "stat244-nesting-product",
+            "stat244-difference-without-nesting"
+          ]
+        },
+        {
+          "concept": "Contrast coding",
+          "cardIds": [
+            "stat244-contrasts",
+            "stat244-treatment-numeric",
+            "stat244-sum-coding-numeric",
+            "stat244-helmert-scaling",
+            "stat244-remove-intercept-caveat"
+          ]
+        },
+        {
+          "concept": "Variance estimation",
+          "cardIds": [
+            "stat244-variance",
+            "stat244-variance-numeric",
+            "stat244-variance-second-derivative"
+          ]
+        },
+        {
+          "concept": "Gauss–Markov",
+          "cardIds": [
+            "stat244-blue",
+            "stat244-normality-separation"
+          ]
+        },
+        {
+          "concept": "Projection proofs",
+          "cardIds": [
+            "stat244-pythagoras"
+          ]
+        },
+        {
+          "concept": "Gauss–Markov proof",
+          "cardIds": [
+            "stat244-blue-proof",
+            "stat244-contrast-variance-gap"
+          ]
+        },
+        {
+          "concept": "Generalized least squares",
+          "cardIds": [
+            "stat244-gls",
+            "stat244-whitening-covariance"
+          ]
+        },
+        {
+          "concept": "Weighted least squares",
+          "cardIds": [
+            "stat244-weights",
+            "stat244-weighted-mean"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "STAT 244",
+      "title": "Inference before regression diagnostics",
+      "status": "Expanded practice authored; retrieval performance not yet assessed",
+      "cardIds": [
+        "stat244-cochran",
+        "stat244-f-test",
+        "stat244-f-number",
+        "stat244-constraints",
+        "stat244-t-ci",
+        "stat244-prediction",
+        "stat244-simultaneous",
+        "stat244-cov-transform",
+        "stat244-collinearity",
+        "stat244-vif",
+        "stat244-gram-schmidt",
+        "stat244-pcr",
+        "stat244-pls",
+        "stat244-gaussian-uncorrelated",
+        "stat244-quadratic-rank-two",
+        "stat244-independent-fit-residual",
+        "stat244-f-null-needed",
+        "stat244-rank-not-predictors",
+        "stat244-lrt-monotone",
+        "stat244-constraint-matrix",
+        "stat244-constrained-normal-equations",
+        "stat244-standard-error-number",
+        "stat244-confidence-interpretation",
+        "stat244-prediction-width-number",
+        "stat244-scheffe-factor",
+        "stat244-stable-sum-unstable-parts",
+        "stat244-vif-standard-error",
+        "stat244-gvif-scale",
+        "stat244-gram-schmidt-number",
+        "stat244-pcr-full-versus-truncated",
+        "stat244-pca-fold-boundary",
+        "stat244-pls-supervised-boundary"
+      ],
+      "objectives": [
+        {
+          "concept": "Quadratic forms",
+          "cardIds": [
+            "stat244-cochran",
+            "stat244-quadratic-rank-two",
+            "stat244-independent-fit-residual"
+          ]
+        },
+        {
+          "concept": "Nested-model inference",
+          "cardIds": [
+            "stat244-f-test",
+            "stat244-f-number",
+            "stat244-f-null-needed",
+            "stat244-rank-not-predictors",
+            "stat244-lrt-monotone"
+          ]
+        },
+        {
+          "concept": "General linear hypotheses",
+          "cardIds": [
+            "stat244-constraints",
+            "stat244-constraint-matrix",
+            "stat244-constrained-normal-equations"
+          ]
+        },
+        {
+          "concept": "Coefficient inference",
+          "cardIds": [
+            "stat244-t-ci",
+            "stat244-standard-error-number",
+            "stat244-confidence-interpretation"
+          ]
+        },
+        {
+          "concept": "Prediction intervals",
+          "cardIds": [
+            "stat244-prediction",
+            "stat244-prediction-width-number"
+          ]
+        },
+        {
+          "concept": "Simultaneous inference",
+          "cardIds": [
+            "stat244-simultaneous",
+            "stat244-scheffe-factor"
+          ]
+        },
+        {
+          "concept": "Random vectors",
+          "cardIds": [
+            "stat244-cov-transform",
+            "stat244-gaussian-uncorrelated"
+          ]
+        },
+        {
+          "concept": "Multicollinearity",
+          "cardIds": [
+            "stat244-collinearity",
+            "stat244-vif",
+            "stat244-stable-sum-unstable-parts",
+            "stat244-vif-standard-error",
+            "stat244-gvif-scale"
+          ]
+        },
+        {
+          "concept": "Orthogonalization",
+          "cardIds": [
+            "stat244-gram-schmidt",
+            "stat244-gram-schmidt-number"
+          ]
+        },
+        {
+          "concept": "Principal components regression",
+          "cardIds": [
+            "stat244-pcr",
+            "stat244-pcr-full-versus-truncated",
+            "stat244-pca-fold-boundary"
+          ]
+        },
+        {
+          "concept": "Latent predictor methods",
+          "cardIds": [
+            "stat244-pls",
+            "stat244-pls-supervised-boundary"
+          ]
+        }
+      ]
+    }
+  ],
+  "crossCourseCardIds": [
+    "bridge-fit",
+    "bridge-whiten",
+    "bridge-disk"
+  ],
+  "remainingDepth": [
+    "Add unseen numerical variants and multi-step derivation checks where a concept is currently represented by one prompt.",
+    "Validate difficult concepts through user recall; no mastery claim is inferred from card count.",
+    "Additional examples, worked simulation traces, and textbook review-question variants can be added as needed."
+  ],
+  "deferred": [
+    "Future textbook chapters unrelated to the current lectures and assignments.",
+    "STAT 244 regression diagnostics after the assigned pre-diagnostics boundary.",
+    "Administrative slides, submission instructions, raw scraped web pages, and third-party articles cached as homework data are not learning objectives."
+  ]
+}

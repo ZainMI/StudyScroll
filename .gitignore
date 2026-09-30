@@ -1,0 +1,16 @@
+node_modules
+.next
+.env*
+!.env.example
+*.tsbuildinfo
+.DS_Store
+
+tmp/
+__pycache__/
+*.pyc
+
+playwright-report/
+test-results/
+
+# Local course materials
+/courses/
