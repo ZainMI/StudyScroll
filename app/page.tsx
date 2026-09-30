@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { CardVisual } from "@/components/card-visual";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowRight,
   ArrowUp,
@@ -17,6 +18,7 @@ import {
   Sprout,
   X,
 } from "lucide-react";
+import { studyGroups } from "@/lib/study-groups";
 import { Card, curated, retiredCardIds } from "@/lib/cards";
 import {
   learningQueue,
@@ -28,7 +30,12 @@ import {
 } from "@/lib/learning";
 type Progress = { saved: string[]; learned: string[] };
 export default function Home() {
-  const [cards, setCards] = useState<Card[]>(curated);
+  const [allCards, setCards] = useState<Card[]>(curated);
+  const [school, setSchool] = useState<string | null>(null);
+  const cards = useMemo(
+    () => allCards.filter((card) => (card.school ?? "Harvard") === school),
+    [allCards, school],
+  );
   const [progress, setProgress] = useState<Progress>({
     saved: [],
     learned: [],
@@ -38,11 +45,16 @@ export default function Home() {
   const [queue, setQueue] = useState<{ card: Card; key: string }[]>([]);
   const [rated, setRated] = useState<Record<string, string>>({});
   const ratedRef = useRef(new Set<string>());
+  const seenAnswers = useRef(new Set<string>());
+  const scrollIndex = useRef(0);
   const [session, setSession] = useState(0);
   const [practice, setPractice] = useState(false);
   const [clock, setClock] = useState(Date.now());
   const [ready, setReady] = useState(false);
-  const [view, setView] = useState("feed");
+  const [groupMode, setGroupMode] = useState<"topics" | "lectures">("topics");
+  const [selectedGroups, setSelectedGroups] = useState<string[]>([]);
+  const [studyIds, setStudyIds] = useState<string[] | null>(null);
+  const [view, setView] = useState("study");
   const [course, setCourse] = useState("All courses");
   const [revealed, setRevealed] = useState<string[]>([]);
   const [upload, setUpload] = useState(false);
@@ -127,12 +139,28 @@ export default function Home() {
       try {
         localStorage.setItem(
           "studyscroll-v1",
-          JSON.stringify({ cards, progress, reviews, learningVersion: 1 }),
+          JSON.stringify({
+            cards: allCards,
+            progress,
+            reviews,
+            learningVersion: 1,
+          }),
         );
       } catch {
         setMessage("Browser storage is full. This session will not be saved.");
       }
-  }, [cards, progress, reviews, ready]);
+  }, [allCards, progress, reviews, ready]);
+  const groups = [
+    ...studyGroups(cards, "topics"),
+    ...studyGroups(cards, "lectures"),
+  ];
+  const selectedIds = [
+    ...new Set(
+      groups
+        .filter((g) => selectedGroups.includes(g.id))
+        .flatMap((g) => g.cardIds),
+    ),
+  ];
   const courses = Array.from(new Set(cards.map((c) => c.course)));
   useEffect(() => {
     const timer = window.setInterval(() => setClock(Date.now()), 30000);
@@ -150,20 +178,30 @@ export default function Home() {
         (course === "All courses" ||
           c.course === course ||
           c.relatedCourses?.includes(course)) &&
-        (view !== "saved" || progress.saved.includes(c.id)),
+        (view !== "saved" || progress.saved.includes(c.id)) &&
+        (!studyIds || studyIds.includes(c.id)),
     );
     const selection =
       view === "saved" || practice
         ? filtered
-        : learningQueue(filtered, reviewsRef.current, Date.now());
+        : [
+            ...learningQueue(filtered, reviewsRef.current, Date.now()),
+            ...(studyIds
+              ? filtered.filter(
+                  (c) => reviewsRef.current[c.id]?.due > Date.now(),
+                )
+              : []),
+          ];
     setQueue(
       selection.map((card) => ({ card, key: `${card.id}:${Date.now()}` })),
     );
     setRevealed([]);
+    seenAnswers.current.clear();
+    scrollIndex.current = 0;
     reel.current?.scrollTo({ top: 0, behavior: "instant" });
     setActiveCard(0);
     // Ratings deliberately do not reorder the card being read.
-  }, [cards, course, view, ready, practice, session]);
+  }, [cards, course, view, ready, practice, session, studyIds]);
   useEffect(() => {
     if (!ready || practice || view !== "feed") return;
     setQueue((current) => {
@@ -172,6 +210,7 @@ export default function Home() {
           (course === "All courses" ||
             c.course === course ||
             c.relatedCourses?.includes(course)) &&
+          (!studyIds || studyIds.includes(c.id)) &&
           reviewsRef.current[c.id]?.due <= clock,
       );
       const additions = due.filter(
@@ -189,7 +228,7 @@ export default function Home() {
         ...current.slice(insertAt),
       ];
     });
-  }, [clock, ready, practice, view, cards, course, activeCard]);
+  }, [clock, ready, practice, view, cards, course, activeCard, studyIds]);
   const visible = queue.filter(
     (entry) => view !== "saved" || progress.saved.includes(entry.card.id),
   );
@@ -224,6 +263,8 @@ export default function Home() {
     setReviews({});
     setRated({});
     setRevealed([]);
+    seenAnswers.current.clear();
+    scrollIndex.current = 0;
     setProgress((p) => ({ ...p, learned: [] }));
     setPractice(false);
     setClock(Date.now());
@@ -260,9 +301,17 @@ export default function Home() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error);
       if (data.cards.length) {
-        setCards((c) => [...data.cards, ...c]);
+        setCards((c) => [
+          ...data.cards.map((card: Card) => ({
+            ...card,
+            school: school ?? "Harvard",
+            id: `${school ?? "Harvard"}:${card.id}`,
+          })),
+          ...c,
+        ]);
+        setStudyIds(null);
         setCourse("All courses");
-        setView("feed");
+        setView("study");
         setUpload(false);
       }
       setMessage(
@@ -277,9 +326,52 @@ export default function Home() {
       if (input.current) input.current.value = "";
     }
   }
+  const changeSchool = () => {
+    setSchool(null);
+    setSelectedGroups([]);
+    setStudyIds(null);
+    setCourse("All courses");
+    setView("study");
+    setPractice(false);
+  };
+  if (!school)
+    return (
+      <main className="school-picker">
+        <div className="school-intro">
+          <Layers3 size={32} />
+          <p>STUDYSCROLL</p>
+          <h1>Choose your school.</h1>
+          <p>Your courses, your pace. Progress stays saved on this device.</p>
+        </div>
+        <div className="school-folders">
+          {["Harvard", "UBuffalo"].map((name) => {
+            const schoolCards = allCards.filter(
+              (card) => (card.school ?? "Harvard") === name,
+            );
+            const count = new Set(schoolCards.map((card) => card.course)).size;
+            return (
+              <button
+                key={name}
+                disabled={!ready}
+                onClick={() => setSchool(name)}
+              >
+                <FolderPlus size={28} />
+                <strong>{name}</strong>
+                <span>
+                  {count
+                    ? `${count} courses · ${schoolCards.length} cards`
+                    : "Ready for your courses"}
+                </span>
+                <ArrowRight size={20} />
+              </button>
+            );
+          })}
+        </div>
+      </main>
+    );
   return (
     <div
-      className={`shell ${view !== "courses" ? "reels-mode" : "library-mode"}`}
+      className={`shell ${view !== "courses" && view !== "study" ? "reels-mode" : "library-mode"}`}
     >
       <aside className="sidebar">
         <a className="logo" href="/">
@@ -292,44 +384,47 @@ export default function Home() {
         <div className="workspace">
           <span className="avatar small">S</span>
           <div>
-            My workspace<small>Fall 2026 · Your courses</small>
+            {school}
+            <small>Your courses</small>
           </div>
           <ChevronDown size={14} />
         </div>
         <div className="nav-label">YOUR SPACE</div>
         <nav>
           <button
+            disabled={!studyIds}
             aria-current={view === "feed" ? "page" : undefined}
             className={view === "feed" ? "active" : ""}
             onClick={() => {
               setCourse("All courses");
-              setPractice(false);
-              setSession((s) => s + 1);
               setView("feed");
             }}
           >
-            <Layers3 size={19} />
-            For you
-            <span className="nav-dot" />
-          </button>
-          <button
-            aria-current={view === "saved" ? "page" : undefined}
-            className={view === "saved" ? "active" : ""}
-            onClick={() => setView("saved")}
-          >
-            <Bookmark size={19} />
-            Saved cards<span className="count">{progress.saved.length}</span>
+            <Layers3 size={19} /> Session
           </button>
           <button
             aria-current={view === "courses" ? "page" : undefined}
             className={view === "courses" ? "active" : ""}
             onClick={() => {
+              setStudyIds(null);
               setCourse("All courses");
               setView("courses");
             }}
           >
             <BookOpen size={19} />
             My courses<span className="count">{courses.length}</span>
+          </button>
+          <button
+            aria-current={
+              view === "study" || view === "saved" ? "page" : undefined
+            }
+            className={view === "study" || view === "saved" ? "active" : ""}
+            onClick={() => {
+              setCourse("All courses");
+              setView("study");
+            }}
+          >
+            <Layers3 size={19} /> Study
           </button>
         </nav>
         <div className="nav-label course-label">
@@ -343,6 +438,14 @@ export default function Home() {
             <button
               key={c}
               onClick={() => {
+                setStudyIds(
+                  cards
+                    .filter(
+                      (card) =>
+                        card.course === c || card.relatedCourses?.includes(c),
+                    )
+                    .map((card) => card.id),
+                );
                 setCourse(c);
                 setView("feed");
               }}
@@ -380,13 +483,17 @@ export default function Home() {
       <main>
         <header>
           <div>
-            <span className="breadcrumb">Your space</span>
+            <button className="school-switch" onClick={changeSchool}>
+              {school} <ChevronDown size={13} />
+            </button>
             <span className="slash">/</span>
-            {view === "saved"
-              ? "Saved cards"
-              : view === "courses"
-                ? "My courses"
-                : "For you"}
+            {view === "study"
+              ? "Study"
+              : view === "saved"
+                ? "Saved cards"
+                : view === "courses"
+                  ? "My courses"
+                  : "Your session"}
           </div>
           <span className="header-note">
             <span className="online" /> A better kind of screen time
@@ -397,18 +504,22 @@ export default function Home() {
             <div>
               <div className="eyebrow">LESS SCROLLING. MORE KNOWING.</div>
               <h1>
-                {view === "saved"
-                  ? "Keep the good stuff."
-                  : view === "courses"
-                    ? "Your semester, connected."
-                    : "Meet your new rabbit hole."}
+                {view === "study"
+                  ? "Choose what to study."
+                  : view === "saved"
+                    ? "Keep the good stuff."
+                    : view === "courses"
+                      ? "Your semester, connected."
+                      : "Your chosen material."}
               </h1>
               <p>
-                {view === "saved"
-                  ? "The ideas you want to come back to."
-                  : view === "courses"
-                    ? "Your material. A whole new way to learn it."
-                    : "One idea. A little curiosity. Swipe to the next."}
+                {view === "study"
+                  ? "Mix topics or lectures into your own study session."
+                  : view === "saved"
+                    ? "The ideas you want to come back to."
+                    : view === "courses"
+                      ? "Your material. A whole new way to learn it."
+                      : "One idea. A little curiosity. Swipe to the next."}
               </p>
             </div>
             <button
@@ -432,15 +543,29 @@ export default function Home() {
           <div className="content-grid">
             <div className="feed-column">
               <div className="filters">
-                {["All courses", ...courses].map((c) => (
-                  <button
-                    className={course === c ? "selected" : ""}
-                    key={c}
-                    onClick={() => setCourse(c)}
-                  >
-                    {c === "All courses" && <Sparkles size={14} />} {c}
-                  </button>
-                ))}
+                {(view === "feed" ? courses : ["All courses", ...courses]).map(
+                  (c) => (
+                    <button
+                      className={course === c ? "selected" : ""}
+                      key={c}
+                      onClick={() => {
+                        if (view === "feed")
+                          setStudyIds(
+                            cards
+                              .filter(
+                                (card) =>
+                                  card.course === c ||
+                                  card.relatedCourses?.includes(c),
+                              )
+                              .map((card) => card.id),
+                          );
+                        setCourse(c);
+                      }}
+                    >
+                      {c === "All courses" && <Sparkles size={14} />} {c}
+                    </button>
+                  ),
+                )}
               </div>
               <div className="feed-label">
                 <a href="/feed-guide" aria-label="Explore the course map">
@@ -461,25 +586,26 @@ export default function Home() {
                 <section className="learning-summary">
                   <strong>
                     {
-                      Object.values(reviews).filter((r) => r.due <= clock)
+                      cards.filter((card) => reviews[card.id]?.due <= clock)
                         .length
                     }{" "}
                     reviews due
                   </strong>
                   <p>
-                    {Object.keys(reviews).length} cards practiced ·{" "}
-                    {cards.length - Object.keys(reviews).length} new. Scrolling
-                    and revealing do not count as recall.
+                    {cards.filter((card) => reviews[card.id]).length} cards
+                    practiced ·{" "}
+                    {cards.length -
+                      cards.filter((card) => reviews[card.id]).length}{" "}
+                    new. Revealed cards default to Easy when you swipe onward.
                   </p>
                   <button
                     className="primary"
                     onClick={() => {
-                      setPractice(true);
                       setCourse("All courses");
-                      setView("feed");
+                      setView("study");
                     }}
                   >
-                    Browse all material
+                    Choose study material
                   </button>
                   <a href="/feed-guide">How your learning feed works</a>
                   <p className="storage-note">
@@ -491,7 +617,168 @@ export default function Home() {
                   </button>
                 </section>
               )}
-              {view === "courses" ? (
+              {view === "study" ? (
+                <section
+                  className="study-picker"
+                  aria-label="Choose study material"
+                >
+                  <div className="study-picker-toolbar">
+                    <div className="study-modes" aria-label="Group material by">
+                      {(["topics", "lectures"] as const).map((mode) => (
+                        <button
+                          key={mode}
+                          aria-pressed={groupMode === mode}
+                          onClick={() => setGroupMode(mode)}
+                        >
+                          {mode === "topics" ? "Topics" : "Lectures / notes"}
+                        </button>
+                      ))}
+                    </div>
+                    <button
+                      onClick={() => {
+                        setStudyIds(null);
+                        setCourse("All courses");
+                        setView("saved");
+                      }}
+                    >
+                      Saved cards (
+                      {
+                        progress.saved.filter((id) =>
+                          cards.some((card) => card.id === id),
+                        ).length
+                      }
+                      )
+                    </button>
+                  </div>
+                  {!courses.length && (
+                    <div className="school-empty">
+                      <h2>Your {school} folder is ready.</h2>
+                      <p>
+                        Add course material to start building your study
+                        collection.
+                      </p>
+                      <button
+                        className="primary"
+                        onClick={() => setUpload(true)}
+                      >
+                        Add course material
+                      </button>
+                    </div>
+                  )}
+                  <p className="study-help">
+                    Select any combination. Overlapping cards appear once.
+                    Reviews due come first, followed by new cards and early
+                    practice.
+                  </p>
+                  {courses
+                    .filter((c) => course === "All courses" || c === course)
+                    .map((c) => (
+                      <details
+                        className="study-course"
+                        key={c}
+                        open={course === c || courses.length === 1}
+                      >
+                        <summary>
+                          {c}
+                          <span>
+                            {
+                              groups.filter(
+                                (g) =>
+                                  g.course === c &&
+                                  selectedGroups.includes(g.id),
+                              ).length
+                            }{" "}
+                            selected
+                          </span>
+                        </summary>
+                        <label className="study-group study-whole-course">
+                          <input
+                            type="checkbox"
+                            checked={groups
+                              .filter(
+                                (g) => g.course === c && g.mode === "topics",
+                              )
+                              .every((g) => selectedGroups.includes(g.id))}
+                            onChange={(event) => {
+                              const ids = groups
+                                .filter(
+                                  (g) => g.course === c && g.mode === "topics",
+                                )
+                                .map((g) => g.id);
+                              setSelectedGroups((old) =>
+                                event.target.checked
+                                  ? [...new Set([...old, ...ids])]
+                                  : old.filter(
+                                      (id) =>
+                                        !groups.some(
+                                          (g) => g.course === c && g.id === id,
+                                        ),
+                                    ),
+                              );
+                            }}
+                          />
+                          <span>
+                            Entire {c}
+                            <small>
+                              {cards.filter((card) => card.course === c).length}{" "}
+                              cards
+                            </small>
+                          </span>
+                        </label>
+                        <div className="study-group-list">
+                          {groups
+                            .filter(
+                              (g) => g.course === c && g.mode === groupMode,
+                            )
+                            .map((group) => (
+                              <label key={group.id} className="study-group">
+                                <input
+                                  type="checkbox"
+                                  checked={selectedGroups.includes(group.id)}
+                                  onChange={() =>
+                                    setSelectedGroups((old) =>
+                                      old.includes(group.id)
+                                        ? old.filter((id) => id !== group.id)
+                                        : [...old, group.id],
+                                    )
+                                  }
+                                />
+                                <span>
+                                  {group.label}
+                                  <small>{group.cardIds.length} cards</small>
+                                </span>
+                              </label>
+                            ))}
+                        </div>
+                      </details>
+                    ))}
+                  <div className="study-start">
+                    <span aria-live="polite">
+                      {selectedIds.length} cards · {selectedGroups.length}{" "}
+                      groups
+                    </span>
+                    <button
+                      onClick={() => setSelectedGroups([])}
+                      disabled={!selectedGroups.length}
+                    >
+                      Clear selection
+                    </button>
+                    <button
+                      className="primary"
+                      disabled={!selectedIds.length}
+                      onClick={() => {
+                        setStudyIds(selectedIds);
+                        setCourse("All courses");
+                        setPractice(false);
+                        setSession((n) => n + 1);
+                        setView("feed");
+                      }}
+                    >
+                      Start studying <ArrowRight size={16} />
+                    </button>
+                  </div>
+                </section>
+              ) : view === "courses" ? (
                 <div className="course-grid">
                   {courses
                     .filter((c) => course === "All courses" || course === c)
@@ -500,6 +787,15 @@ export default function Home() {
                         className="course-tile"
                         key={c}
                         onClick={() => {
+                          setStudyIds(
+                            cards
+                              .filter(
+                                (card) =>
+                                  card.course === c ||
+                                  card.relatedCourses?.includes(c),
+                              )
+                              .map((card) => card.id),
+                          );
                           setCourse(c);
                           setPractice(false);
                           setView("feed");
@@ -530,9 +826,21 @@ export default function Home() {
                   aria-label="Study reels. Swipe or use arrow keys to move between cards."
                   onScroll={(event) => {
                     const element = event.currentTarget;
-                    setActiveCard(
-                      Math.round(element.scrollTop / element.clientHeight),
+                    const next = Math.max(
+                      0,
+                      Math.min(
+                        visible.length - 1,
+                        Math.round(element.scrollTop / element.clientHeight),
+                      ),
                     );
+                    if (next !== scrollIndex.current) {
+                      const previous = visible[scrollIndex.current];
+                      if (previous && seenAnswers.current.has(previous.key)) {
+                        rateCard(previous.card, previous.key, "good");
+                      }
+                      scrollIndex.current = next;
+                      setActiveCard(next);
+                    }
                   }}
                   onKeyDown={(event) => {
                     if (event.target !== event.currentTarget) return;
@@ -607,6 +915,7 @@ export default function Home() {
                           </div>
                           <div className="card-body">
                             <h2>{card.title}</h2>
+                            {card.visual && <CardVisual visual={card.visual} />}
                             {card.body && <p>{card.body}</p>}
                             {open && (
                               <div className="answer">
@@ -623,13 +932,14 @@ export default function Home() {
                             )}
                             <button
                               className={open ? "reveal revealed" : "reveal"}
-                              onClick={() =>
+                              onClick={() => {
+                                seenAnswers.current.add(key);
                                 setRevealed((r) =>
                                   open
                                     ? r.filter((x) => x !== key)
                                     : [...r, key],
-                                )
-                              }
+                                );
+                              }}
                             >
                               {open
                                 ? "Hide explanation"
@@ -653,53 +963,23 @@ export default function Home() {
                               ) : (
                                 <div className="rating recall-rating">
                                   <span>
-                                    How much did you recall before revealing?
+                                    Swipe for Easy · missed it? Choose Hard.
                                   </span>
                                   {(
                                     [
-                                      "again",
-                                      "hard",
-                                      "good",
-                                      "easy",
-                                    ] as Rating[]
-                                  ).map((rating) => (
+                                      ["again", "Again"],
+                                      ["hard", "Hard"],
+                                      ["good", "Easy"],
+                                      ["easy", "Super easy"],
+                                    ] as const
+                                  ).map(([rating, label]) => (
                                     <button
                                       key={rating}
                                       onClick={() =>
                                         rateCard(card, key, rating)
                                       }
-                                      title={
-                                        {
-                                          again: "Could not recall it",
-                                          hard: "Partial answer or needed a hint",
-                                          good: "Correct without a hint",
-                                          easy: "Correct and effortless",
-                                        }[rating]
-                                      }
                                     >
-                                      <strong>
-                                        {rating[0].toUpperCase() +
-                                          rating.slice(1)}
-                                      </strong>
-                                      <span className="rating-meaning">
-                                        {
-                                          {
-                                            again: "Forgot",
-                                            hard: "With help",
-                                            good: "Unaided",
-                                            easy: "Effortless",
-                                          }[rating]
-                                        }
-                                      </span>
-                                      <small>
-                                        {intervalLabel(
-                                          schedule(
-                                            reviews[card.id],
-                                            rating,
-                                            clock,
-                                          ).due - clock,
-                                        )}
-                                      </small>
+                                      <strong>{label}</strong>
                                     </button>
                                   ))}
                                 </div>
@@ -720,28 +1000,6 @@ export default function Home() {
                               </span>
                             )}
                           </footer>
-                          {card.sources && (
-                            <details className="sources">
-                              <summary>
-                                Open source material · {card.sources.length}{" "}
-                                reference{card.sources.length > 1 ? "s" : ""}
-                              </summary>
-                              {card.sources.map((source) => (
-                                <a
-                                  key={source.path + source.locator}
-                                  href={`/api/source?path=${encodeURIComponent(source.path)}${source.page ? `#page=${source.page}` : ""}`}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  {source.locator}
-                                  <span>
-                                    {source.path.split("/").at(-1)}{" "}
-                                    <ArrowUpRight size={12} />
-                                  </span>
-                                </a>
-                              ))}
-                            </details>
-                          )}
                         </div>
                       </article>
                     );
@@ -767,28 +1025,30 @@ export default function Home() {
                   )}
                 </div>
               )}
-              {ready && view !== "courses" && !visible.length && (
-                <div className="empty">
-                  <Bookmark size={32} />
-                  <h2>You’re caught up for now.</h2>
-                  <p>
-                    {view === "saved"
-                      ? "Tap the bookmark on any card to keep it here."
-                      : "Your next reviews will appear when they’re due. You can also browse all your material."}
-                  </p>
-                  <button
-                    className="primary"
-                    onClick={() => {
-                      setPractice(true);
-                      setView("feed");
-                      setCourse("All courses");
-                    }}
-                  >
-                    Browse all material
-                  </button>
-                </div>
-              )}
-              {visible.length > 0 && view !== "courses" && (
+              {ready &&
+                view !== "courses" &&
+                view !== "study" &&
+                !visible.length && (
+                  <div className="empty">
+                    <Bookmark size={32} />
+                    <h2>You’re caught up for now.</h2>
+                    <p>
+                      {view === "saved"
+                        ? "Tap the bookmark on any card to keep it here."
+                        : "Your next reviews will appear when they’re due. Choose material for another session."}
+                    </p>
+                    <button
+                      className="primary"
+                      onClick={() => {
+                        setView("study");
+                        setCourse("All courses");
+                      }}
+                    >
+                      Choose study material
+                    </button>
+                  </div>
+                )}
+              {visible.length > 0 && view !== "courses" && view !== "study" && (
                 <div className="reel-controls">
                   <span className="reel-hint">Swipe or scroll to explore</span>
                   <span className="reel-position" aria-live="polite">

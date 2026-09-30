@@ -16,31 +16,17 @@ export function schedule(
   rating: Rating,
   now: number,
 ): Review {
-  // Early practice never earns a longer interval. Only delayed retrieval does.
+  // Keep legacy stored rating keys: good = Easy, easy = Super easy.
   const early = previous && previous.due > now;
-  let interval =
-    rating === "again"
-      ? 10 * 60000
+  const interval =
+    (rating === "again"
+      ? 10
       : rating === "hard"
-        ? previous
-          ? Math.max(DAY / 4, previous.interval * 1.2)
-          : DAY / 4
+        ? 30
         : rating === "good"
-          ? previous
-            ? Math.max(DAY, previous.interval * 2.5)
-            : DAY
-          : previous
-            ? Math.max(4 * DAY, previous.interval * 3.5)
-            : 4 * DAY;
-  interval = Math.min(365 * DAY, Math.round(interval));
-  let due = now + interval;
-  if (early && rating !== "again") {
-    due = rating === "hard" ? Math.min(previous.due, due) : previous.due;
-    interval =
-      due === previous.due
-        ? previous.interval
-        : Math.min(previous.interval, due - now);
-  }
+          ? 60
+          : 180) * 60000;
+  const due = now + interval;
   return {
     due,
     interval,

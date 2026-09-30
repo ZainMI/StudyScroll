@@ -31,14 +31,14 @@ The extraction helper `scripts/extract-courses.py` uses Python with `pypdf` to w
 - Interleaved course feed, filtering (including related cross-course cards), course library.
 - Reveal explanations, bookmark, mark understood, and save for another look.
 - Browser-local progress and imported cards; authored content updates are merged by stable ID.
-- Links to source PDFs at their cited pages; notebook sources open as plain text with cell numbers.
+- School folders: choose Harvard or UBuffalo at launch. All current curated courses belong to Harvard. Source citations remain in the content, but PDF links and downloads are disabled.
 - Folder import for text-based PDF, DOCX, TXT, and Markdown. It produces basic source-passage gap-fill cards, **not** the curated interpretation of the master feed.
 
 ## Limits
 
 No live AI generation, OCR, authentication, or server database. Spaced-review scheduling runs locally in your browser. There is no card-count cap or daily quota. The progress indicator tracks self-reported review of the current library, not proven mastery. Clearing browser storage clears saved progress. Large imported card collections can exceed browser storage limits.
 
-Run this as a local personal app. The source endpoint serves only files referenced by the master feed, but it has no authentication. Do not expose a deployment containing private course materials without adding access control. Uploaded files are parsed on the app server and are not retained there; generated cards are saved in localStorage. The server must have the local `courses/` files to open source references.
+The deployed study UI does not require the local `courses/` folder. Source downloads are disabled. Uploaded files are parsed on the app server and are not retained there; generated cards are assigned to the selected school and saved in localStorage. Existing cards without school metadata default to Harvard. Progress and bookmarks remain in the same browser storage across school switches; opening the app always asks for a school. This does not transfer progress to another domain or device.
 
 ## Validation
 
@@ -54,4 +54,8 @@ Browser workflow checks: `npm test` (Playwright, configured to use installed Goo
 
 ## Learning schedule
 
-The learning feed mixes due reviews with new, prerequisite-ordered cards. Rate actual recall after revealing; swipes and bookmarks do not affect scheduling. Saved cards and Browse all material leave the schedule unchanged. All progress stays in this browser. See [LEARNING.md](content/LEARNING.md) for interval rules, migration, and limitations.
+The learning feed mixes due reviews with new, prerequisite-ordered cards. Rate actual recall after revealing; swiping away after revealing defaults to Easy unless you chose another rating. Unrevealed cards and bookmarks do not affect scheduling. Choose courses, topics, or lectures in Study before starting a session. Overlapping selections appear once; due reviews come first, then new cards and early practice. Ratings use fixed intervals: Again 10 minutes, Hard 30 minutes, Easy 1 hour, Super easy 3 hours. Saved cards leave the schedule unchanged. The bottom tabs are Session, My courses, and Study; bookmarks live inside Study. All progress stays in this browser. See [LEARNING.md](content/LEARNING.md) for interval rules, migration, and limitations.
+
+## Authoring cards
+
+Use [CARD_CREATION_GUIDE.md](content/CARD_CREATION_GUIDE.md) as the reusable LLM prompt and schema reference. It covers uncapped source coverage, teaching sequences, visual layouts, citations, and validation. The current visual companion batch adds 24 cards (six per course) while preserving all 908 existing cards.

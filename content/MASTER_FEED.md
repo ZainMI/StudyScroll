@@ -1,6 +1,6 @@
 # StudyScroll: master feed
 
-Updated 2026-09-30. 908 curated cards.
+Updated 2026-09-30. 932 curated cards.
 
 Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2 and supporting material. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference.
 
@@ -17267,3 +17267,577 @@ They add: Var(prediction error)=Var(estimated mean error)+σ², under the model.
 Sources: [Lecture 8 · Part D · PDF p. 14](../courses/am209a/lecnotes/lecture-08d.pdf#page=14)
 
 Card ID: `am209a-two-variances`
+
+---
+
+### 909. Move from 99 to 198: how does the binary64 spacing change?
+
+**AM 205 · Floating-point arithmetic · PREDICT**
+
+**Predict the gap** (equation)
+
+- Magnitude A: 99
+- Magnitude B: 198
+
+<details>
+<summary>Reveal explanation</summary>
+
+It doubles, from 2⁻⁴⁶ to 2⁻⁴⁵. The exponent increases by one while binary64 keeps the same significand precision.
+
+**Intuition:** The floating-point grid stretches with scale.
+
+</details>
+
+Sources: [PS1 · Q1(a)](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+
+Card ID: `am205-spacing-visual-double-spacing`
+
+---
+
+### 910. Which sequence sends the vector (1, 2) to (2, 2)?
+
+**AM 205 · Matrix operations · COMPARE**
+
+**Same operations, different order** (compare)
+
+- A: Double row 1 → swap
+- B: Swap → double row 1
+
+<details>
+<summary>Reveal explanation</summary>
+
+A gives (2, 2). B first gives (2, 1), then (4, 1). Scaling and swapping generally do not commute.
+
+**Intuition:** Track the intermediate state rather than memorizing an order rule.
+
+</details>
+
+Sources: [PS1 · Q3](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+
+Card ID: `am205-row-column-order-visual-operation-order`
+
+---
+
+### 911. A map stretches one axis by 4 and the other by 1/4. What happens to area?
+
+**AM 205 · Geometry of linear maps · PREDICT**
+
+**Two stretches** (equation)
+
+- σ₁: 4
+- σ₂: 1/4
+
+<details>
+<summary>Reveal explanation</summary>
+
+Area is unchanged because the product of singular values is 1. The shape can still become long and thin.
+
+**Intuition:** Shape distortion and area change are different quantities.
+
+</details>
+
+Sources: [PS1 · Q4](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+
+Card ID: `am205-singular-values-area-visual-area-predict`
+
+---
+
+### 912. What is wrong with declaring this solution accurate from its residual alone?
+
+**AM 205 · Linear-system verification · SPOT THE MISTAKE**
+
+**Spot the claim** (mistake)
+
+- Given: A = diag(1, 10⁻⁸), b = (1, 10⁻⁸)
+- Claim: x̂ = (1, 0) is accurate because ‖b − Ax̂‖ = 10⁻⁸
+
+<details>
+<summary>Reveal explanation</summary>
+
+The true solution is (1, 1), so the second component is entirely wrong. The tiny second diagonal entry hides that error in the residual.
+
+**Intuition:** An insensitive output direction can conceal a large solution error.
+
+</details>
+
+Sources: [Heath · §2.3.5, printed p. 61](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82)
+
+Card ID: `am205-small-residual-counterexample-visual-residual-trap`
+
+---
+
+### 913. If κ₂(X)=10⁴, which least-squares route forms a matrix with condition number 10⁸?
+
+**AM 205 · Least-squares algorithms · COMPARE**
+
+**Full column rank X** (compare)
+
+- Normal equations: XᵀX β = Xᵀy
+- QR: X = QR, then Rβ = Qᵀy
+
+<details>
+<summary>Reveal explanation</summary>
+
+The normal equations form XᵀX, whose 2-norm condition number is κ₂(X)² = 10⁸. QR avoids explicitly squaring the condition number.
+
+**Intuition:** Algebraically equivalent formulas can behave differently in finite precision.
+
+</details>
+
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
+
+Card ID: `am205-normal-squared-visual-conditioning-predict`
+
+---
+
+### 914. After factoring PA=LU, what belongs in the missing solve step?
+
+**AM 205 · Efficient linear solves · COMPLETE THE SEQUENCE**
+
+**Reuse the factors** (flow)
+
+- 1: Form Pb
+- 2: Solve Ly = Pb
+- 3: ?
+
+<details>
+<summary>Reveal explanation</summary>
+
+Solve Ux=y by back substitution. For each new right-hand side, reuse P, L, and U rather than refactoring A.
+
+**Intuition:** Pay for the factorization once, then solve cheaply.
+
+</details>
+
+Sources: [Heath · Ch. 2 review · repeated systems](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+
+Card ID: `am205-lu-reuse-visual-solve-pipeline`
+
+---
+
+### 915. Which simulation budget halves the Monte Carlo standard error relative to N draws?
+
+**AM 207 · Monte Carlo integration · COMPARE**
+
+**Independent draws, same variance** (compare)
+
+- Budget A: 2N
+- Budget B: 4N
+
+<details>
+<summary>Reveal explanation</summary>
+
+Budget B. Standard error scales as 1/√N, so quadrupling N halves it; doubling N only multiplies it by 1/√2.
+
+**Intuition:** Precision improves with the square root of computational effort.
+
+</details>
+
+Sources: [Lecture 03 · p. 27](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=27)
+
+Card ID: `am207-iid-mean-variance-visual-mc-budget`
+
+---
+
+### 916. If a valid rejection envelope changes from M=2 to M=8, how does acceptance change?
+
+**AM 207 · Rejection sampling · PREDICT**
+
+**Normalized target and proposal** (equation)
+
+- Before: M = 2
+- After: M = 8
+
+<details>
+<summary>Reveal explanation</summary>
+
+Acceptance falls from 1/2 to 1/8. The looser envelope needs four times as many proposals per accepted draw on average.
+
+**Intuition:** A valid but loose bound wastes computation.
+
+</details>
+
+Sources: [Lecture 02 · p. 34](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=34)
+
+Card ID: `am207-rejection-acceptance-fraction-visual-envelope-cost`
+
+---
+
+### 917. Why is this Metropolis–Hastings output rule wrong?
+
+**AM 207 · Markov chain sampling · SPOT THE MISTAKE**
+
+**Spot the implementation bug** (mistake)
+
+- Rule: Append a state only when a proposal is accepted
+
+<details>
+<summary>Reveal explanation</summary>
+
+Rejected proposals must append the current state again. Removing those repeated states changes residence times and generally changes the sampled distribution.
+
+**Intuition:** Staying put is part of the Markov chain.
+
+</details>
+
+Sources: [Lecture 02 · p. 42](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=42)
+
+Card ID: `am207-mh-holding-visual-rejection-trap`
+
+---
+
+### 918. Which proposal fails before you even inspect its importance weights?
+
+**AM 207 · Importance sampling · COMPARE**
+
+**Target has positive density across the real line** (compare)
+
+- Proposal A: A normal density
+- Proposal B: Uniform on [0, 1]
+
+<details>
+<summary>Reveal explanation</summary>
+
+B misses target mass outside [0,1]. A has full support, although its weight variance may still be poor.
+
+**Intuition:** Support is a necessary check, not a guarantee of efficiency.
+
+</details>
+
+Sources: [Lecture 03 · p. 33](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=33)
+
+Card ID: `am207-importance-support-visual-support-check`
+
+---
+
+### 919. With a frozen propensity of 12 per second and τ=0.25 seconds, what count is sampled?
+
+**AM 207 · Tau leaping · PREDICT**
+
+**One tau-leap channel** (equation)
+
+- aⱼ: 12 s⁻¹
+- τ: 0.25 s
+
+<details>
+<summary>Reveal explanation</summary>
+
+A Poisson random count with mean 3, not exactly three events. Freezing the propensity is the tau-leaping approximation.
+
+**Intuition:** The expected count is deterministic; the realized count is random.
+
+</details>
+
+Sources: [Lecture 05 · p. 39](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=39)
+
+Card ID: `am207-tau-poisson-mean-visual-tau-predict`
+
+---
+
+### 920. What posterior completes this coin-update sequence?
+
+**AM 207 · Bayesian examples · COMPLETE THE SEQUENCE**
+
+**Independent tosses with unknown head probability** (flow)
+
+- Prior: Beta(1, 1)
+- Data: 4 heads, 7 tails
+- Posterior: ?
+
+<details>
+<summary>Reveal explanation</summary>
+
+Beta(5,8): add heads to the first shape parameter and tails to the second.
+
+**Intuition:** Conjugate updating turns evidence into parameter increments.
+
+</details>
+
+Sources: [Lecture 06 · p. 49](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=49)
+
+Card ID: `am207-coin-four-eleven-visual-bayes-pipeline`
+
+---
+
+### 921. Do these coefficient pairs give different fitted values when X=[x x]?
+
+**STAT 244 · Rank-deficient least squares · COMPARE**
+
+**Duplicated design columns** (compare)
+
+- Pair A: (1, 2)
+- Pair B: (4, −1)
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Both give 3x because only the coefficient sum is identified. Individual coefficients differ, but their predictions agree.
+
+**Intuition:** Nonunique coordinates can describe the same fitted vector.
+
+</details>
+
+Sources: [HW2 · Q2](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+
+Card ID: `stat244-affine-example-visual-coefficient-twins`
+
+---
+
+### 922. What condition is missing from this claim about an orthogonal projector?
+
+**STAT 244 · Projection matrices · SPOT THE MISTAKE**
+
+**Spot the incomplete test** (mistake)
+
+- Claim: P² = P, therefore P is an orthogonal projector
+
+<details>
+<summary>Reveal explanation</summary>
+
+For a real matrix, also require Pᵀ=P. Idempotence alone describes a projection that may be oblique.
+
+**Intuition:** Projecting twice changes nothing; orthogonality additionally controls the direction.
+
+</details>
+
+Sources: [HW2 · Q5(a–c)](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+
+Card ID: `stat244-idempotent-not-orthogonal-visual-projection-trap`
+
+---
+
+### 923. If SSE stays 80 but rank(X) rises from 4 to 10 with n=20, what happens to s²?
+
+**STAT 244 · Variance estimation · PREDICT**
+
+**Unbiased variance estimate** (equation)
+
+- Before: 80 / (20 − 4)
+- After: 80 / (20 − 10)
+
+<details>
+<summary>Reveal explanation</summary>
+
+It rises from 5 to 8. With SSE held fixed, fewer residual degrees of freedom mean a larger variance estimate.
+
+**Intuition:** Fitting more independent directions leaves fewer directions for estimating noise.
+
+</details>
+
+Sources: [HW2 · Q7; least-squares theory](../courses/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator](../courses/stat244/lecnotes/notes-lstheory.pdf)
+
+Card ID: `stat244-variance-numeric-visual-degrees-freedom`
+
+---
+
+### 924. Which independent measurement deserves four times the weight in WLS?
+
+**STAT 244 · Weighted least squares · COMPARE**
+
+**Known relative variances** (compare)
+
+- Measurement A: Variance 1
+- Measurement B: Variance 4
+
+<details>
+<summary>Reveal explanation</summary>
+
+A. Inverse-variance weights are 1 and 1/4; the noisier measurement receives less influence.
+
+**Intuition:** Precision, not variance, determines the weight.
+
+</details>
+
+Sources: [Least-squares theory · p. 22](../courses/stat244/lecnotes/notes-lstheory.pdf#page=22)
+
+Card ID: `stat244-weights-visual-weight-comparison`
+
+---
+
+### 925. With s=2 and mean-prediction leverage 0.25, which standard error is larger?
+
+**STAT 244 · Prediction intervals · COMPARE**
+
+**Same predictor value** (compare)
+
+- Mean response: 2√0.25
+- New response: 2√(1 + 0.25)
+
+<details>
+<summary>Reveal explanation</summary>
+
+The new-response SE is √5 ≈ 2.24; the mean-response SE is 1. The extra 1 represents the new observation's noise.
+
+**Intuition:** Predicting an individual adds variability beyond estimating its mean.
+
+</details>
+
+Sources: [Inference notes · pp. 12–13](../courses/stat244/lecnotes/notes-lsinf.pdf#page=13)
+
+Card ID: `stat244-prediction-width-number-visual-uncertainty-split`
+
+---
+
+### 926. Why can this principal-components regression shortcut fail?
+
+**STAT 244 · Principal components regression · SPOT THE MISTAKE**
+
+**Spot the reasoning gap** (mistake)
+
+- Claim: The lowest-variance predictor direction cannot matter for prediction
+
+<details>
+<summary>Reveal explanation</summary>
+
+Predictor variance does not measure association with the response. A low-variance direction can carry important predictive signal, so discarding it can harm prediction.
+
+**Intuition:** PCA looks at X; prediction also needs the relationship with y.
+
+</details>
+
+Sources: [Inference notes · pp. 23–24](../courses/stat244/lecnotes/notes-lsinf.pdf#page=23)
+
+Card ID: `stat244-pcr-visual-pcr-trap`
+
+---
+
+### 927. What is wrong with this plan for fixing a biased survey?
+
+**AM 209a · Sampling and EDA · SPOT THE MISTAKE**
+
+**Spot the claim** (mistake)
+
+- Plan: Keep the same selective recruitment method but collect ten times more responses
+
+<details>
+<summary>Reveal explanation</summary>
+
+More responses can reduce random variation while leaving selection bias intact. Improve who can enter the sample, not just its size.
+
+**Intuition:** A precise answer about the wrong population is still misleading.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 6](../courses/am209a/lecnotes/lecture-03.pdf#page=6)
+
+Card ID: `am209a-selection-bias-visual-sample-size-trap`
+
+---
+
+### 928. If X is symmetric around zero and Y=X², can Pearson correlation miss a perfect relationship?
+
+**AM 209a · Association · PREDICT**
+
+**Assume finite moments and nonzero variances** (equation)
+
+- Input: X
+- Output: Y = X²
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. The covariance is zero by symmetry, even though Y is completely determined by X. Pearson correlation measures linear association.
+
+**Intuition:** Zero linear association does not mean no relationship.
+
+</details>
+
+Sources: [Lecture 3 · PDF p. 17](../courses/am209a/lecnotes/lecture-03.pdf#page=17)
+
+Card ID: `am209a-correlation-visual-curved-association`
+
+---
+
+### 929. Where does this model-selection workflow leak information?
+
+**AM 209a · Model evaluation · COMPLETE THE SEQUENCE**
+
+**Spot the first invalid step** (flow)
+
+- 1: Fit models on training data
+- 2: Choose the best using test-set MSE
+- 3: Report that same test MSE
+
+<details>
+<summary>Reveal explanation</summary>
+
+Step 2 uses the test set for selection. Tune with validation data or cross-validation, then use the held-out test set for final evaluation.
+
+**Intuition:** A test set loses its independent role when it guides decisions.
+
+</details>
+
+Sources: [Lecture 4 · Part B · PDF p. 8](../courses/am209a/lecnotes/lecture-04b.pdf#page=8)
+
+Card ID: `am209a-train-validation-test-visual-test-leak`
+
+---
+
+### 930. For f=1+2x+3z+4xz, what happens to the x-slope when z changes from 0 to 1?
+
+**AM 209a · Interactions and polynomials · PREDICT**
+
+**Compare conditional slopes** (equation)
+
+- z = 0: ∂f/∂x = ?
+- z = 1: ∂f/∂x = ?
+
+<details>
+<summary>Reveal explanation</summary>
+
+The slope changes from 2 to 6 because ∂f/∂x=2+4z.
+
+**Intuition:** An interaction makes one variable's effect depend on another.
+
+</details>
+
+Sources: [Lecture 6 · Part A · PDF p. 14](../courses/am209a/lecnotes/lecture-06a.pdf#page=14)
+
+Card ID: `am209a-interaction-slope-visual-interaction-predict`
+
+---
+
+### 931. Which penalty can produce exact zero coefficients and select features?
+
+**AM 209a · Ridge versus lasso · COMPARE**
+
+**Same squared-error loss, positive λ** (compare)
+
+- Ridge: λ Σ βⱼ²
+- Lasso: λ Σ |βⱼ|
+
+<details>
+<summary>Reveal explanation</summary>
+
+Lasso can set coefficients exactly to zero. Ridge generally shrinks them continuously without making them exactly zero.
+
+**Intuition:** The penalty's geometry changes the kind of solution favored.
+
+</details>
+
+Sources: [Lecture 7 · Part C · PDF p. 3](../courses/am209a/lecnotes/lecture-07c.pdf#page=3)
+
+Card ID: `am209a-sparsity-visual-penalty-choice`
+
+---
+
+### 932. Why does this resampling procedure fail to create an ordinary bootstrap distribution of the mean?
+
+**AM 209a · Bootstrap · SPOT THE MISTAKE**
+
+**Spot the sampling mistake** (mistake)
+
+- Procedure: Draw all n observations without replacement, then recompute the mean
+
+<details>
+<summary>Reveal explanation</summary>
+
+Each resample contains the same observations, so the mean never changes. An ordinary nonparametric bootstrap draws n observations with replacement.
+
+**Intuition:** Repeated and omitted observations create resampling variability.
+
+</details>
+
+Sources: [Lecture 8 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-08b.pdf#page=13)
+
+Card ID: `am209a-bootstrap-size-visual-bootstrap-trap`

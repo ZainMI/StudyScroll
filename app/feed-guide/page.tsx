@@ -52,10 +52,11 @@ export default function Guide() {
         One place to connect them.
       </h1>
       <p className="guide-intro">
-        {feed.cards.length} short question-and-answer flashcards, grounded in your own courses. Try each question, then reveal a direct answer and one intuition. The
-        scope is your current lectures and assignments, with supporting textbook
-        sections. There is no card quota; the material and your recall gaps
-        determine how this grows.
+        {feed.cards.length} short question-and-answer flashcards, grounded in
+        your own courses. Try each question, then reveal a direct answer and one
+        intuition. The scope is your current lectures and assignments, with
+        supporting textbook sections. There is no card quota; the material and
+        your recall gaps determine how this grows.
       </p>
       <div className="guide-callout">
         <Layers3 size={25} />
@@ -114,21 +115,21 @@ export default function Guide() {
         <p>
           Attempt an answer before revealing, then compare it with the
           explanation. Again means you could not recall it; Hard means you
-          needed help; Good means correct unaided; Easy means correct and
-          effortless. Swiping alone never counts as learning.
+          needed help; Easy means correct unaided; Super easy means effortless.
+          Swiping away after revealing defaults to Easy. Unrevealed cards stay
+          unrated.
         </p>
         <p>
-          First reviews return in 10 minutes, 6 hours, 1 day, or 4 days
-          respectively. Successful delayed recall grows the interval; a missed
-          answer brings it back sooner. These are practical scheduling rules,
-          not a measured guarantee of retention.
+          Each rating sets a fixed revisit interval; harder cards return sooner.
+          These are practical scheduling rules, not a measured guarantee of
+          retention.
         </p>
         <p>
           Due reviews come first, mixed with new ideas. New material follows
           prerequisite order where possible and varies topics. The card you are
           reading stays stable; due reviews are inserted next as time passes.
-          Use Courses → Browse all material to explore without changing review
-          dates. Progress stays on this device.
+          Choose your material in Study. Saved cards can be browsed without
+          changing review dates. Progress stays on this device.
         </p>
         <h2>How this feed should grow</h2>
         <p>

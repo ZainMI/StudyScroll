@@ -1,3 +1,4 @@
+import { chooseCourses } from "./study-helper";
 import { test, expect } from "@playwright/test";
 import { DAY, learningQueue, schedule, readReviews } from "../lib/learning";
 import type { Card } from "../lib/cards";
@@ -18,21 +19,14 @@ const make = (
   source: "test",
   color: "green",
 });
-test("spacing grows only after delayed recall and lapses reset it", () => {
-  const first = schedule(undefined, "good", now);
-  expect(first.due).toBe(now + DAY);
-  const early = schedule(first, "easy", now + 1000);
-  expect(early.due).toBe(first.due);
-  expect(early.interval).toBe(first.interval);
-  expect(early.successes).toBe(first.successes);
-  const later = schedule(first, "good", first.due);
-  expect(later.interval).toBe(2.5 * DAY);
-  const missed = schedule(later, "again", later.due);
-  expect(missed.interval).toBe(600000);
-  expect(missed.successes).toBe(0);
-  expect(missed.lapses).toBe(1);
-  expect(schedule(undefined, "hard", now).interval).toBe(DAY / 4);
-  expect(schedule(undefined, "easy", now).interval).toBe(4 * DAY);
+test("review choices use fixed intervals, including on repeated practice", () => {
+  for (const [rating, minutes] of [["again", 10], ["hard", 30], ["good", 60], ["easy", 180]] as const) {
+    const first = schedule(undefined, rating, now);
+    expect(first.due).toBe(now + minutes * 60000);
+    const later = schedule(first, rating, now + 1000);
+    expect(later.due).toBe(now + 1000 + minutes * 60000);
+  }
+  expect(schedule(undefined, "again", now).lapses).toBe(1);
 });
 test("queue prioritizes overdue retrieval, excludes future reviews, and orders prerequisites", () => {
   const cards = [
@@ -70,6 +64,7 @@ test("recall is persisted once, future reviews rest, and browsing does not resch
   page,
 }) => {
   await page.goto("/");
+  await chooseCourses(page);
   const card = page.locator("article.study-card").first();
   const title = await card.locator("h2").innerText();
   await card
@@ -80,13 +75,14 @@ test("recall is persisted once, future reviews rest, and browsing does not resch
       Object.keys(JSON.parse(localStorage.getItem("studyscroll-v1")!).reviews),
     ),
   ).toHaveLength(0);
-  await card.getByRole("button", { name: /^Good/ }).click();
-  await expect(card.getByRole("status")).toContainText("Next review in 1d");
+  await card.getByRole("button", { name: /^Easy/ }).click();
+  await expect(card.getByRole("status")).toContainText("Next review in 1h");
   const before = await page.evaluate(
     () => JSON.parse(localStorage.getItem("studyscroll-v1")!).reviews,
   );
   expect(Object.values(before).map((r: any) => r.attempts)).toEqual([1]);
   await page.reload();
+  await chooseCourses(page);
   await expect(
     page.locator("article.study-card").first().locator("h2"),
   ).not.toHaveText(title);
@@ -95,17 +91,16 @@ test("recall is persisted once, future reviews rest, and browsing does not resch
     .getByRole("button", { name: /My courses/ })
     .click();
   await page
-    .getByRole("button", { name: "Browse all material", exact: true })
+    .getByRole("button", { name: "Choose study material", exact: true })
     .click();
+  await chooseCourses(page);
   const original = page
     .locator("article.study-card")
     .filter({ has: page.getByRole("heading", { name: title, exact: true }) });
   await original
     .getByRole("button", { name: "Recall your answer, then reveal." })
     .click();
-  await expect(original.locator(".review-status")).toContainText(
-    "schedule stays unchanged",
-  );
+  await expect(original.getByRole("button", { name: /^Easy/ })).toBeVisible();
   expect(
     await page.evaluate(
       () => JSON.parse(localStorage.getItem("studyscroll-v1")!).reviews,
@@ -117,6 +112,7 @@ test("a missed card returns with its answer hidden when due, without moving the 
 }) => {
   await page.clock.install({ time: now });
   await page.goto("/");
+  await chooseCourses(page);
   const first = page.locator("article.study-card").first();
   const title = await first.locator("h2").innerText();
   await first
@@ -142,6 +138,7 @@ test("favicon is a real ICO and is linked by the page", async ({
   expect(response.ok()).toBeTruthy();
   expect([...(await response.body()).subarray(0, 4)]).toEqual([0, 0, 1, 0]);
   await page.goto("/");
+  await chooseCourses(page);
   await expect(page.locator('link[rel="icon"]')).toHaveAttribute(
     "href",
     /favicon.ico/,
@@ -152,12 +149,13 @@ test("reset can be cancelled and clears only learning progress after confirmatio
   page,
 }) => {
   await page.goto("/");
+  await chooseCourses(page);
   const card = page.locator(".study-card").first();
   await card.getByRole("button", { name: "Save card", exact: true }).click();
   await card
     .getByRole("button", { name: "Recall your answer, then reveal." })
     .click();
-  await card.getByRole("button", { name: /^Good/ }).click();
+  await card.getByRole("button", { name: /^Easy/ }).click();
   const before = await page.evaluate(() =>
     JSON.parse(localStorage.getItem("studyscroll-v1")!),
   );
@@ -186,6 +184,7 @@ test("reset can be cancelled and clears only learning progress after confirmatio
     )
     .toEqual({});
   await page.reload();
+  await chooseCourses(page);
   const after = await page.evaluate(() =>
     JSON.parse(localStorage.getItem("studyscroll-v1")!),
   );

@@ -59,7 +59,8 @@
         "am205-transpose-solve",
         "am205-inverse-product-cost",
         "am205-many-b-cost",
-        "am205-forward-backward"
+        "am205-forward-backward",
+        "am205-lu-reuse-visual-solve-pipeline"
       ],
       "objectives": [
         {
@@ -71,7 +72,8 @@
             "am205-transpose-solve",
             "am205-inverse-product-cost",
             "am205-many-b-cost",
-            "am205-forward-backward"
+            "am205-forward-backward",
+            "am205-lu-reuse-visual-solve-pipeline"
           ]
         }
       ]
@@ -184,7 +186,8 @@
         "am205-three-fenceposts",
         "am205-rounded-product",
         "am205-parallel-sums",
-        "am205-compensation"
+        "am205-compensation",
+        "am205-spacing-visual-double-spacing"
       ],
       "objectives": [
         {
@@ -213,7 +216,8 @@
             "am205-three-fenceposts",
             "am205-rounded-product",
             "am205-parallel-sums",
-            "am205-compensation"
+            "am205-compensation",
+            "am205-spacing-visual-double-spacing"
           ]
         }
       ]
@@ -272,7 +276,8 @@
         "am205-right-vectors",
         "am205-equal-plot-scales",
         "am205-determinant-sign",
-        "am205-orthogonal-inverse"
+        "am205-orthogonal-inverse",
+        "am205-singular-values-area-visual-area-predict"
       ],
       "objectives": [
         {
@@ -285,7 +290,8 @@
             "am205-right-vectors",
             "am205-equal-plot-scales",
             "am205-determinant-sign",
-            "am205-orthogonal-inverse"
+            "am205-orthogonal-inverse",
+            "am205-singular-values-area-visual-area-predict"
           ]
         }
       ]
@@ -345,7 +351,8 @@
         "am205-condition-ten",
         "am205-qr-leftover",
         "am205-tiny-singular-inverse",
-        "am205-pseudoinverse-threshold"
+        "am205-pseudoinverse-threshold",
+        "am205-normal-squared-visual-conditioning-predict"
       ],
       "objectives": [
         {
@@ -357,7 +364,8 @@
             "am205-condition-ten",
             "am205-qr-leftover",
             "am205-tiny-singular-inverse",
-            "am205-pseudoinverse-threshold"
+            "am205-pseudoinverse-threshold",
+            "am205-normal-squared-visual-conditioning-predict"
           ]
         }
       ]
@@ -393,7 +401,8 @@
       "cardIds": [
         "am205-residual",
         "am205-small-residual-counterexample",
-        "am205-scaled-residual"
+        "am205-scaled-residual",
+        "am205-small-residual-counterexample-visual-residual-trap"
       ],
       "objectives": [
         {
@@ -401,7 +410,8 @@
           "cardIds": [
             "am205-residual",
             "am205-small-residual-counterexample",
-            "am205-scaled-residual"
+            "am205-scaled-residual",
+            "am205-small-residual-counterexample-visual-residual-trap"
           ]
         }
       ]
@@ -499,7 +509,8 @@
         "am205-row-delete",
         "am205-row-copy",
         "am205-left-compose",
-        "am205-right-compose"
+        "am205-right-compose",
+        "am205-row-column-order-visual-operation-order"
       ],
       "objectives": [
         {
@@ -511,7 +522,8 @@
             "am205-row-delete",
             "am205-row-copy",
             "am205-left-compose",
-            "am205-right-compose"
+            "am205-right-compose",
+            "am205-row-column-order-visual-operation-order"
           ]
         }
       ]
@@ -646,7 +658,8 @@
         "am207-coin-four-eleven",
         "am207-coin-posterior-mean",
         "am207-continuous-point-probability",
-        "am207-rate-posterior-width"
+        "am207-rate-posterior-width",
+        "am207-coin-four-eleven-visual-bayes-pipeline"
       ],
       "objectives": [
         {
@@ -655,7 +668,8 @@
             "am207-coin-four-eleven",
             "am207-coin-posterior-mean",
             "am207-continuous-point-probability",
-            "am207-rate-posterior-width"
+            "am207-rate-posterior-width",
+            "am207-coin-four-eleven-visual-bayes-pipeline"
           ]
         }
       ]
@@ -876,7 +890,8 @@
         "am207-missing-support",
         "am207-self-normalized",
         "am207-normalize-weights-number",
-        "am207-weight-degeneracy"
+        "am207-weight-degeneracy",
+        "am207-importance-support-visual-support-check"
       ],
       "objectives": [
         {
@@ -891,7 +906,8 @@
             "am207-missing-support",
             "am207-self-normalized",
             "am207-normalize-weights-number",
-            "am207-weight-degeneracy"
+            "am207-weight-degeneracy",
+            "am207-importance-support-visual-support-check"
           ]
         }
       ]
@@ -1082,7 +1098,8 @@
         "am207-markov-not-iid",
         "am207-acceptance-too-high",
         "am207-acceptance-too-low",
-        "am207-acceptance-target-universal"
+        "am207-acceptance-target-universal",
+        "am207-mh-holding-visual-rejection-trap"
       ],
       "objectives": [
         {
@@ -1095,7 +1112,8 @@
             "am207-markov-not-iid",
             "am207-acceptance-too-high",
             "am207-acceptance-too-low",
-            "am207-acceptance-target-universal"
+            "am207-acceptance-target-universal",
+            "am207-mh-holding-visual-rejection-trap"
           ]
         }
       ]
@@ -1327,7 +1345,8 @@
         "am207-iid-mean-variance",
         "am207-mc-finite-variance",
         "am207-mc-dimension-constant",
-        "am207-exponential-integral-example"
+        "am207-exponential-integral-example",
+        "am207-iid-mean-variance-visual-mc-budget"
       ],
       "objectives": [
         {
@@ -1337,7 +1356,8 @@
             "am207-iid-mean-variance",
             "am207-mc-finite-variance",
             "am207-mc-dimension-constant",
-            "am207-exponential-integral-example"
+            "am207-exponential-integral-example",
+            "am207-iid-mean-variance-visual-mc-budget"
           ]
         }
       ]
@@ -1654,7 +1674,8 @@
         "am207-rejection-support",
         "am207-rejection",
         "am207-envelope-efficiency",
-        "am207-unknown-normalizer"
+        "am207-unknown-normalizer",
+        "am207-rejection-acceptance-fraction-visual-envelope-cost"
       ],
       "objectives": [
         {
@@ -1665,7 +1686,8 @@
             "am207-rejection-support",
             "am207-rejection",
             "am207-envelope-efficiency",
-            "am207-unknown-normalizer"
+            "am207-unknown-normalizer",
+            "am207-rejection-acceptance-fraction-visual-envelope-cost"
           ]
         }
       ]
@@ -1859,7 +1881,8 @@
         "am207-tau-poisson-mean",
         "am207-tau-negative-count",
         "am207-tau-clipping-problem",
-        "am207-tau-leap-condition"
+        "am207-tau-leap-condition",
+        "am207-tau-poisson-mean-visual-tau-predict"
       ],
       "objectives": [
         {
@@ -1869,7 +1892,8 @@
             "am207-tau-poisson-mean",
             "am207-tau-negative-count",
             "am207-tau-clipping-problem",
-            "am207-tau-leap-condition"
+            "am207-tau-leap-condition",
+            "am207-tau-poisson-mean-visual-tau-predict"
           ]
         }
       ]
@@ -2721,7 +2745,8 @@
       "cardIds": [
         "stat244-prediction",
         "stat244-prediction-width-number",
-        "stat244-infinite-data-noise"
+        "stat244-infinite-data-noise",
+        "stat244-prediction-width-number-visual-uncertainty-split"
       ],
       "objectives": [
         {
@@ -2729,7 +2754,8 @@
           "cardIds": [
             "stat244-prediction",
             "stat244-prediction-width-number",
-            "stat244-infinite-data-noise"
+            "stat244-infinite-data-noise",
+            "stat244-prediction-width-number-visual-uncertainty-split"
           ]
         }
       ]
@@ -2742,7 +2768,8 @@
         "stat244-pcr",
         "stat244-pcr-full-versus-truncated",
         "stat244-pca-fold-boundary",
-        "stat244-pcr-tradeoff"
+        "stat244-pcr-tradeoff",
+        "stat244-pcr-visual-pcr-trap"
       ],
       "objectives": [
         {
@@ -2751,7 +2778,8 @@
             "stat244-pcr",
             "stat244-pcr-full-versus-truncated",
             "stat244-pca-fold-boundary",
-            "stat244-pcr-tradeoff"
+            "stat244-pcr-tradeoff",
+            "stat244-pcr-visual-pcr-trap"
           ]
         }
       ]
@@ -2785,7 +2813,8 @@
         "stat244-identity-projection",
         "stat244-mean-projector",
         "stat244-trace-rank",
-        "stat244-residual-trace"
+        "stat244-residual-trace",
+        "stat244-idempotent-not-orthogonal-visual-projection-trap"
       ],
       "objectives": [
         {
@@ -2799,7 +2828,8 @@
             "stat244-identity-projection",
             "stat244-mean-projector",
             "stat244-trace-rank",
-            "stat244-residual-trace"
+            "stat244-residual-trace",
+            "stat244-idempotent-not-orthogonal-visual-projection-trap"
           ]
         }
       ]
@@ -2900,7 +2930,8 @@
         "stat244-affine",
         "stat244-affine-example",
         "stat244-affine-origin",
-        "stat244-affine-zero"
+        "stat244-affine-zero",
+        "stat244-affine-example-visual-coefficient-twins"
       ],
       "objectives": [
         {
@@ -2909,7 +2940,8 @@
             "stat244-affine",
             "stat244-affine-example",
             "stat244-affine-origin",
-            "stat244-affine-zero"
+            "stat244-affine-zero",
+            "stat244-affine-example-visual-coefficient-twins"
           ]
         }
       ]
@@ -3037,7 +3069,8 @@
         "stat244-variance-mle",
         "stat244-variance-bias",
         "stat244-no-residual-df",
-        "stat244-zero-sse-boundary"
+        "stat244-zero-sse-boundary",
+        "stat244-variance-numeric-visual-degrees-freedom"
       ],
       "objectives": [
         {
@@ -3049,7 +3082,8 @@
             "stat244-variance-mle",
             "stat244-variance-bias",
             "stat244-no-residual-df",
-            "stat244-zero-sse-boundary"
+            "stat244-zero-sse-boundary",
+            "stat244-variance-numeric-visual-degrees-freedom"
           ]
         }
       ]
@@ -3062,7 +3096,8 @@
         "stat244-weights",
         "stat244-weighted-mean",
         "stat244-mean-precision",
-        "stat244-correlated-weights"
+        "stat244-correlated-weights",
+        "stat244-weights-visual-weight-comparison"
       ],
       "objectives": [
         {
@@ -3071,7 +3106,8 @@
             "stat244-weights",
             "stat244-weighted-mean",
             "stat244-mean-precision",
-            "stat244-correlated-weights"
+            "stat244-correlated-weights",
+            "stat244-weights-visual-weight-comparison"
           ]
         }
       ]
@@ -3265,7 +3301,8 @@
         "am209a-sample-uncertainty",
         "am209a-anscombe",
         "am209a-eda-purpose",
-        "am209a-pairplot"
+        "am209a-pairplot",
+        "am209a-selection-bias-visual-sample-size-trap"
       ],
       "objectives": [
         {
@@ -3277,7 +3314,8 @@
             "am209a-sample-uncertainty",
             "am209a-anscombe",
             "am209a-eda-purpose",
-            "am209a-pairplot"
+            "am209a-pairplot",
+            "am209a-selection-bias-visual-sample-size-trap"
           ]
         }
       ]
@@ -3291,7 +3329,8 @@
         "am209a-correlation-range",
         "am209a-correlation-units",
         "am209a-causality",
-        "am209a-zero-correlation"
+        "am209a-zero-correlation",
+        "am209a-correlation-visual-curved-association"
       ],
       "objectives": [
         {
@@ -3301,7 +3340,8 @@
             "am209a-correlation-range",
             "am209a-correlation-units",
             "am209a-causality",
-            "am209a-zero-correlation"
+            "am209a-zero-correlation",
+            "am209a-correlation-visual-curved-association"
           ]
         }
       ]
@@ -3441,7 +3481,8 @@
         "am209a-r2-formula",
         "am209a-r2-zero",
         "am209a-r2-one",
-        "am209a-baseline-not-worst"
+        "am209a-baseline-not-worst",
+        "am209a-train-validation-test-visual-test-leak"
       ],
       "objectives": [
         {
@@ -3459,7 +3500,8 @@
             "am209a-r2-formula",
             "am209a-r2-zero",
             "am209a-r2-one",
-            "am209a-baseline-not-worst"
+            "am209a-baseline-not-worst",
+            "am209a-train-validation-test-visual-test-leak"
           ]
         }
       ]
@@ -3652,7 +3694,8 @@
         "am209a-poly-row-example",
         "am209a-cross-features",
         "am209a-duplicate-intercept",
-        "am209a-power-scaling"
+        "am209a-power-scaling",
+        "am209a-interaction-slope-visual-interaction-predict"
       ],
       "objectives": [
         {
@@ -3669,7 +3712,8 @@
             "am209a-poly-row-example",
             "am209a-cross-features",
             "am209a-duplicate-intercept",
-            "am209a-power-scaling"
+            "am209a-power-scaling",
+            "am209a-interaction-slope-visual-interaction-predict"
           ]
         }
       ]
@@ -3830,7 +3874,8 @@
         "am209a-lasso-geometry",
         "am209a-ridge-geometry",
         "am209a-ridge-collinearity",
-        "am209a-lasso-zero-proof"
+        "am209a-lasso-zero-proof",
+        "am209a-sparsity-visual-penalty-choice"
       ],
       "objectives": [
         {
@@ -3841,7 +3886,8 @@
             "am209a-lasso-geometry",
             "am209a-ridge-geometry",
             "am209a-ridge-collinearity",
-            "am209a-lasso-zero-proof"
+            "am209a-lasso-zero-proof",
+            "am209a-sparsity-visual-penalty-choice"
           ]
         }
       ]
@@ -3891,7 +3937,8 @@
         "am209a-dependent-data",
         "am209a-percentile-ci",
         "am209a-ci-example",
-        "am209a-normal-approx"
+        "am209a-normal-approx",
+        "am209a-bootstrap-size-visual-bootstrap-trap"
       ],
       "objectives": [
         {
@@ -3909,7 +3956,8 @@
             "am209a-dependent-data",
             "am209a-percentile-ci",
             "am209a-ci-example",
-            "am209a-normal-approx"
+            "am209a-normal-approx",
+            "am209a-bootstrap-size-visual-bootstrap-trap"
           ]
         }
       ]

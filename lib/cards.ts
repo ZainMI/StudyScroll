@@ -3,11 +3,17 @@ export type Source = { path: string; locator: string; page?: number };
 export type Card = {
   id: string;
   course: string;
+  school?: string;
   topic: string;
   kind: string;
   title: string;
   body: string;
   format?: string;
+  visual?: {
+    type: string;
+    label: string;
+    items: { label: string; value: string }[];
+  };
   answer: string;
   source: string;
   color: string;
@@ -25,7 +31,7 @@ export const retiredCardIds = new Set([
   "am207-simulation-model",
   "am207-system-model",
   "am207-validation-question",
-  "am207-verification-question"
+  "am207-verification-question",
 ]);
 export function makeCards(
   text: string,
