@@ -121,18 +121,109 @@ test("mobile layout fits the viewport and supports navigation", async ({
   await expect(page.locator(".course-tile")).toHaveCount(3);
 });
 
-test("stored retired course cards do not return after a feed update", async ({ page }) => {
+test("stored retired course cards do not return after a feed update", async ({
+  page,
+}) => {
   await page.addInitScript(() => {
-    localStorage.setItem("studyscroll-v1", JSON.stringify({
-      cards: [{ id: "cs209-old", course: "CS 209a", body: "Old prompt", answer: "Old answer", title: "Retired course card" }],
-      progress: { saved: ["cs209-old"], learned: ["cs209-old"] },
-    }));
+    localStorage.setItem(
+      "studyscroll-v1",
+      JSON.stringify({
+        cards: [
+          {
+            id: "cs209-old",
+            course: "CS 209a",
+            body: "Old prompt",
+            answer: "Old answer",
+            title: "Retired course card",
+          },
+        ],
+        progress: { saved: ["cs209-old"], learned: ["cs209-old"] },
+      }),
+    );
   });
   await page.goto("/");
-  await expect(page.locator("article.study-card")).toHaveCount(feed.cards.length);
-  await expect(page.getByText("Retired course card", { exact: true })).toHaveCount(0);
-  await page.locator("nav").getByRole("button", { name: /Saved cards/ }).click();
+  await expect(page.locator("article.study-card")).toHaveCount(
+    feed.cards.length,
+  );
+  await expect(
+    page.getByText("Retired course card", { exact: true }),
+  ).toHaveCount(0);
+  await page
+    .locator("nav")
+    .getByRole("button", { name: /Saved cards/ })
+    .click();
   await expect(page.locator("article.study-card")).toHaveCount(0);
-  const saved = await page.evaluate(() => JSON.parse(localStorage.getItem("studyscroll-v1")!));
+  const saved = await page.evaluate(() =>
+    JSON.parse(localStorage.getItem("studyscroll-v1")!),
+  );
   expect(saved.progress).toEqual({ saved: [], learned: [] });
+});
+
+for (const viewport of [
+  { width: 1440, height: 1000 },
+  { width: 390, height: 844 },
+]) {
+  test(`reels snap, navigate, and keep explanations readable at ${viewport.width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize(viewport);
+    await page.goto("/");
+    const reel = page.locator(".reel-viewport");
+    const card = page.locator(".reel-card").first();
+    const dimensions = await reel.evaluate((e) => ({
+      height: e.clientHeight,
+      scroll: e.scrollHeight,
+      screen: innerHeight,
+    }));
+    expect(dimensions.height).toBeGreaterThan(250);
+    expect(dimensions.height).toBeLessThan(dimensions.screen);
+    expect(dimensions.scroll).toBeGreaterThan(dimensions.height * 2);
+    await page.getByRole("button", { name: "Next card", exact: true }).click();
+    await expect
+      .poll(() => reel.evaluate((e) => Math.abs(e.scrollTop - e.clientHeight)))
+      .toBeLessThan(2);
+    await reel.focus();
+    await page.keyboard.press("ArrowUp");
+    await expect.poll(() => reel.evaluate((e) => e.scrollTop)).toBeLessThan(2);
+    await card
+      .getByRole("button", { name: "Think about it. Then reveal." })
+      .click();
+    await expect(card.locator(".answer")).toBeVisible();
+    await card.getByRole("button", { name: "I got it", exact: true }).click();
+    expect(await reel.evaluate((e) => e.scrollTop)).toBeLessThan(2);
+    await card
+      .locator(".card-reading")
+      .evaluate((e) => (e.scrollTop = e.scrollHeight));
+    await expect(card.locator(".sources summary")).toBeInViewport();
+    await page
+      .locator(".filters")
+      .getByRole("button", { name: "AM 207", exact: true })
+      .click();
+    await expect.poll(() => reel.evaluate((e) => e.scrollTop)).toBeLessThan(2);
+    await expect(page.locator(".reel-position")).toContainText("1 /");
+    await page.screenshot({ path: `tmp/reels-verified-${viewport.width}.png` });
+  });
+}
+
+test("wheel scrolling moves to the next reel", async ({ page }) => {
+  await page.goto("/");
+  const reel = page.locator(".reel-viewport");
+  await page.locator(".reel-card").first().locator(".card-body").hover();
+  const reading = page.locator(".reel-card").first().locator(".card-reading");
+  // A short viewport must finish the card's text before advancing the feed.
+  await reading.evaluate((e) => (e.scrollTop = e.scrollHeight));
+  await page.mouse.wheel(0, 600);
+  await expect
+    .poll(() => reel.evaluate((e) => e.scrollTop), { timeout: 5000 })
+    .toBeGreaterThan(10);
+  await expect
+    .poll(() =>
+      reel.evaluate((e) =>
+        Math.abs(
+          e.scrollTop / e.clientHeight -
+            Math.round(e.scrollTop / e.clientHeight),
+        ),
+      ),
+    )
+    .toBeLessThan(0.01);
 });

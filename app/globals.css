@@ -1444,3 +1444,443 @@ h1 {
   font-size: 9px;
   white-space: nowrap;
 }
+
+/* A quiet, viewport-sized reading stage with native touch/trackpad snapping. */
+.reels-mode {
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  background: #eceee7;
+  color: #38483f;
+}
+.reels-mode main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.reels-mode header {
+  height: 48px;
+  flex-shrink: 0;
+  border-color: #dce1d6;
+}
+.reels-mode .page-content {
+  width: 100%;
+  max-width: 900px;
+  padding: 20px 36px 0;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.reels-mode .heading {
+  margin-bottom: 16px;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.reels-mode .heading .eyebrow {
+  display: none;
+}
+.reels-mode h1 {
+  font-size: 24px;
+  letter-spacing: -0.7px;
+}
+.reels-mode .heading p {
+  color: #657063;
+  font-size: 13px;
+  margin-top: 6px;
+}
+.reels-mode .content-grid {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
+}
+.reels-mode .feed-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 0;
+}
+.reels-mode .right-rail {
+  display: none;
+}
+.reels-mode .filters {
+  padding-bottom: 0;
+  border: 0;
+  gap: 7px;
+  flex-shrink: 0;
+}
+.reels-mode .filters button {
+  background: #f4f4ee;
+  border-color: #d9dfd2;
+  color: #626e5d;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+.reels-mode .filters button.selected {
+  background: #dae3d3;
+  color: #405539;
+  border-color: #bccdaf;
+}
+.reels-mode .feed-label {
+  margin: 12px 2px;
+  color: #65715e;
+  font-size: 9px;
+}
+.reels-mode .feed-label > span:first-of-type {
+  display: none;
+}
+.reels-mode .feed-label a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  letter-spacing: 0;
+  font-size: 12px;
+}
+.reel-viewport {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  border-radius: 22px;
+  overscroll-behavior-y: contain;
+}
+.reel-viewport::-webkit-scrollbar {
+  display: none;
+}
+.reel-viewport:empty {
+  display: none;
+}
+.reel-card {
+  --accent: #59745b;
+  --wash: #e4e9dd;
+  height: 100%;
+  margin: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  background: #f6f4ed;
+  border-color: #d9dfd1;
+  box-shadow: none;
+}
+.reel-card.tone-purple {
+  --accent: #746c84;
+  --wash: #eae6ed;
+}
+.reel-card.tone-green {
+  --accent: #59745b;
+  --wash: #e4e9dd;
+}
+.reel-card.tone-orange {
+  --accent: #8b7155;
+  --wash: #eee6da;
+}
+.reel-card .card-top {
+  flex-shrink: 0;
+  padding: 20px 30px;
+  border-bottom: 1px solid #e3e3d9;
+}
+.reel-card .course-icon {
+  background: var(--wash);
+  color: var(--accent);
+}
+.reel-card .card-top strong {
+  font-size: 13px;
+  color: #465443;
+}
+.reel-card .card-top div > span {
+  font-size: 11px;
+  color: #687360;
+  line-height: 1.4;
+}
+.reel-card .card-time {
+  color: #687360;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.reel-card .save {
+  color: #64735b;
+  width: 44px;
+  height: 44px;
+  margin-left: 0;
+  flex-shrink: 0;
+}
+.card-reading {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: #c5cdba transparent;
+}
+.reel-kicker {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  padding: 26px 36px 0;
+}
+.reel-kicker .dot {
+  background: var(--accent);
+  width: 5px;
+  height: 5px;
+}
+.reel-card .card-body {
+  flex: 1 0 auto;
+  padding: 24px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reel-card .card-body h2 {
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.35;
+  font-weight: 600;
+  color: #38483f;
+  letter-spacing: -0.65px;
+  margin-bottom: 20px;
+  max-width: 24ch;
+}
+.reel-card .card-body > p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #515f50;
+  margin-bottom: 28px;
+  max-width: 60ch;
+}
+.reel-card .reveal {
+  font-size: 13px;
+  padding: 16px;
+  background: #e6eadf;
+  border-color: #d5deca;
+  color: #4f6445;
+  border-radius: 12px;
+  min-height: 48px;
+}
+.reel-card .reveal:hover {
+  background: #dde5d4;
+}
+.reel-card .answer {
+  background: #eceee4;
+  padding: 22px;
+  border-radius: 12px;
+}
+.reel-card .answer p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #4b5b46;
+}
+.reel-card .answer > div {
+  color: #5c6e50;
+}
+.reel-card .takeaway {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4b6040;
+}
+.reel-card .rating {
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+.reel-card .rating > span {
+  color: #65715e;
+}
+.reel-card .rating button {
+  min-height: 44px;
+  padding: 10px 12px;
+}
+.reel-card .card-footer {
+  flex-shrink: 0;
+  color: #697361;
+  font-size: 11px;
+  padding: 14px 36px;
+}
+.reel-card .source-label,
+.reel-card .learned-label {
+  font-size: 10px;
+}
+.reel-card .sources {
+  flex-shrink: 0;
+  padding: 0 36px 20px;
+  color: #5d6e50;
+  font-size: 12px;
+}
+.reel-card .sources summary {
+  padding: 8px 0;
+}
+.reel-card .sources a {
+  font-size: 12px;
+}
+.reel-card .sources a > span {
+  font-size: 11px;
+  color: #687360;
+}
+.reel-controls {
+  height: 64px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #5d6b54;
+}
+.reel-hint {
+  font-size: 12px;
+  margin-right: auto;
+}
+.reel-position {
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  margin-right: 10px;
+}
+.reel-position > span {
+  color: #707b67;
+}
+.reel-controls button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccd5c2;
+  background: #f3f3ec;
+}
+.reel-controls button:disabled {
+  cursor: default;
+  opacity: 0.35;
+}
+.reels-mode .notice {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 25;
+  width: min(440px, 90vw);
+  box-shadow: 0 8px 30px #38483f22;
+}
+@media (max-width: 650px) {
+  .reels-mode {
+    display: flex;
+    flex-direction: column;
+  }
+  .reels-mode .sidebar {
+    height: 56px;
+    flex-shrink: 0;
+  }
+  .reels-mode main {
+    flex: 1;
+    min-height: 0;
+  }
+  .reels-mode header {
+    display: none;
+  }
+  .reels-mode .page-content {
+    padding: 12px 12px 0;
+  }
+  .reels-mode .heading {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    flex-direction: row;
+  }
+  .reels-mode h1 {
+    font-size: 18px;
+    letter-spacing: -0.4px;
+  }
+  .reels-mode .heading p {
+    display: none;
+  }
+  .reels-mode .import-top {
+    margin-top: 0;
+    flex-shrink: 0;
+    font-size: 0;
+    padding: 10px;
+    gap: 0;
+    background: #dce5d4;
+    color: #4b6440;
+  }
+  .reels-mode .filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .reels-mode .filters button {
+    white-space: nowrap;
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+  .reels-mode .feed-label {
+    margin: 9px 2px;
+  }
+  .reels-mode .feed-label > span:last-child {
+    font-size: 9px;
+  }
+  .reel-viewport,
+  .reel-card {
+    border-radius: 17px;
+  }
+  .reel-card .card-top {
+    padding: 12px 16px;
+    gap: 8px;
+  }
+  .reel-card .card-top div > span {
+    font-size: 10px;
+  }
+  .reel-card .card-time {
+    display: none;
+  }
+  .reel-card .save {
+    margin-left: auto;
+  }
+  .reel-kicker {
+    padding: 20px 22px 0;
+    font-size: 9px;
+  }
+  .reel-card .card-body {
+    padding: 20px 22px;
+  }
+  .reel-card .card-body h2 {
+    font-size: 25px;
+    margin-bottom: 16px;
+  }
+  .reel-card .card-body > p {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+  .reel-card .answer {
+    padding: 16px;
+  }
+  .reel-card .answer p {
+    font-size: 15px;
+  }
+  .reel-card .card-footer {
+    padding: 12px 22px;
+  }
+  .reel-card .sources {
+    padding: 0 22px 16px;
+  }
+  .reel-controls {
+    height: calc(56px + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .reel-hint {
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reel-viewport,
+  .card-reading {
+    scroll-behavior: auto;
+  }
+  .progress-track > div {
+    transition: none;
+  }
+}

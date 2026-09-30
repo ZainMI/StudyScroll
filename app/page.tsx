@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
+  ArrowUp,
+  ArrowDown,
   ArrowUpRight,
   Bookmark,
   BookOpen,
@@ -14,7 +16,6 @@ import {
   Sparkles,
   Sprout,
   X,
-  Zap,
 } from "lucide-react";
 import { Card, curated } from "@/lib/cards";
 type Progress = { saved: string[]; learned: string[] };
@@ -32,8 +33,23 @@ export default function Home() {
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
   const input = useRef<HTMLInputElement>(null);
+  const reel = useRef<HTMLDivElement>(null);
+  const [activeCard, setActiveCard] = useState(0);
+  const moveCard = (direction: number) => {
+    const element = reel.current;
+    if (!element) return;
+    const index = Math.round(element.scrollTop / element.clientHeight);
+    element.scrollTo({
+      top: (index + direction) * element.clientHeight,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "instant"
+        : "smooth",
+    });
+  };
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
+    reel.current?.scrollTo({ top: 0, behavior: "instant" });
+    setActiveCard(0);
   }, [view, course]);
   useEffect(() => {
     if (!upload) return;
@@ -71,8 +87,12 @@ export default function Home() {
           setCards(restored);
           const activeIds = new Set(restored.map((c: Card) => c.id));
           setProgress({
-            saved: data.progress.saved.filter((id: string) => activeIds.has(id)),
-            learned: data.progress.learned.filter((id: string) => activeIds.has(id)),
+            saved: data.progress.saved.filter((id: string) =>
+              activeIds.has(id),
+            ),
+            learned: data.progress.learned.filter((id: string) =>
+              activeIds.has(id),
+            ),
           });
         }
       }
@@ -144,7 +164,9 @@ export default function Home() {
     }
   }
   return (
-    <div className="shell">
+    <div
+      className={`shell ${view !== "courses" ? "reels-mode" : "library-mode"}`}
+    >
       <aside className="sidebar">
         <a className="logo" href="/">
           <span className="logo-mark">
@@ -261,7 +283,7 @@ export default function Home() {
                   ? "The ideas you want to come back to."
                   : view === "courses"
                     ? "Your material. A whole new way to learn it."
-                    : "Your course material, in a feed worth getting lost in."}
+                    : "One idea. A little curiosity. Swipe to the next."}
               </p>
             </div>
             <button
@@ -296,6 +318,9 @@ export default function Home() {
                 ))}
               </div>
               <div className="feed-label">
+                <a href="/feed-guide" aria-label="Explore the course map">
+                  Course map <ArrowUpRight size={12} />
+                </a>
                 <span>
                   {view === "saved"
                     ? "YOUR COLLECTION"
@@ -337,211 +362,197 @@ export default function Home() {
                     ))}
                 </div>
               ) : (
-                visible.map((card, index) => {
-                  const open = revealed.includes(card.id);
-                  const learned = progress.learned.includes(card.id);
-                  return (
-                    <article className="study-card" key={card.id}>
-                      <div className="card-top">
-                        <div className={`course-icon ${card.color}`}>
-                          <BookOpen size={18} />
-                        </div>
-                        <div>
-                          <strong>{card.course}</strong>
-                          <span>{card.topic}</span>
-                        </div>
-                        <span className="card-time">~1 min</span>
-                        <button
-                          className={
-                            progress.saved.includes(card.id)
-                              ? "save saved"
-                              : "save"
-                          }
-                          aria-label={
-                            progress.saved.includes(card.id)
-                              ? "Unsave card"
-                              : "Save card"
-                          }
-                          onClick={() => toggleSave(card.id)}
-                        >
-                          <Bookmark
-                            size={20}
-                            fill={
+                <div
+                  className="reel-viewport"
+                  ref={reel}
+                  tabIndex={0}
+                  role="region"
+                  aria-label="Study reels. Swipe or use arrow keys to move between cards."
+                  onScroll={(event) => {
+                    const element = event.currentTarget;
+                    setActiveCard(
+                      Math.round(element.scrollTop / element.clientHeight),
+                    );
+                  }}
+                  onKeyDown={(event) => {
+                    if (event.target !== event.currentTarget) return;
+                    if (
+                      ["ArrowDown", "PageDown", "ArrowUp", "PageUp"].includes(
+                        event.key,
+                      )
+                    ) {
+                      event.preventDefault();
+                      moveCard(
+                        ["ArrowDown", "PageDown"].includes(event.key) ? 1 : -1,
+                      );
+                    }
+                  }}
+                >
+                  {visible.map((card, index) => {
+                    const open = revealed.includes(card.id);
+                    const learned = progress.learned.includes(card.id);
+                    return (
+                      <article
+                        className={`study-card reel-card tone-${card.color}`}
+                        key={card.id}
+                        aria-label={`Card ${index + 1} of ${visible.length}`}
+                      >
+                        <div className="card-top">
+                          <div className={`course-icon ${card.color}`}>
+                            <BookOpen size={18} />
+                          </div>
+                          <div>
+                            <strong>{card.course}</strong>
+                            <span>{card.topic}</span>
+                          </div>
+                          <span className="card-time">
+                            {Math.ceil((card.seconds ?? 60) / 60)} min
+                          </span>
+                          <button
+                            className={
                               progress.saved.includes(card.id)
-                                ? "currentColor"
-                                : "none"
+                                ? "save saved"
+                                : "save"
                             }
-                          />
-                        </button>
-                      </div>
-                      <div className={`card-art ${card.color}`}>
-                        <div className="art-kicker">
-                          <Zap size={13} /> {card.kind}
+                            aria-label={
+                              progress.saved.includes(card.id)
+                                ? "Unsave card"
+                                : "Save card"
+                            }
+                            onClick={() => toggleSave(card.id)}
+                          >
+                            <Bookmark
+                              size={20}
+                              fill={
+                                progress.saved.includes(card.id)
+                                  ? "currentColor"
+                                  : "none"
+                              }
+                            />
+                          </button>
                         </div>
-                        {card.takeaway ? (
-                          <div className="concept-art">
-                            <span>
-                              {card.relatedCourses?.length
-                                ? "A CONNECTION WORTH MAKING"
-                                : "ONE IDEA AT A TIME"}
-                            </span>
-                            <strong>{card.topic}</strong>
-                            <div>
-                              <span>think</span>
-                              <i />
-                              recall
-                              <i />
-                              connect
-                            </div>
-                          </div>
-                        ) : card.color === "purple" ? (
-                          <div className="memory-art">
-                            <div className="orbit one" />
-                            <div className="orbit two" />
-                            <span className="art-node node-one">a</span>
-                            <span className="art-node node-two">✦</span>
-                            <span className="art-node node-three">?</span>
-                            <div className="brain">
-                              <Sparkles size={49} strokeWidth={1.3} />
-                            </div>
-                            <span className="art-caption">make it stick.</span>
-                            <span className="art-star">✧</span>
-                          </div>
-                        ) : (
-                          <div className="formula-art">
-                            {card.color === "green" ? (
-                              <>
-                                <span>A</span>
-                                <b>v</b>
-                                <span>=</span>
-                                <span>λ</span>
-                                <b>v</b>
-                              </>
-                            ) : (
-                              <>
-                                <span>n</span>
-                                <ArrowRight size={34} />
-                                <span>n / 2</span>
-                                <ArrowRight size={34} />
-                                <span>…</span>
-                              </>
-                            )}
-                          </div>
-                        )}
-                        <span className="art-index">
-                          {String(index + 1).padStart(2, "0")} / A MOMENT OF
-                          CURIOSITY
-                        </span>
-                      </div>
-                      <div className="card-body">
-                        <h2>{card.title}</h2>
-                        <p>{card.body}</p>
-                        {open && (
-                          <div className="answer">
-                            <div>
-                              <Sparkles size={16} /> THE IDEA
-                            </div>
-                            <p>{card.answer}</p>
-                            {card.takeaway && (
-                              <strong className="takeaway">
-                                {card.takeaway}
-                              </strong>
-                            )}
-                          </div>
-                        )}
-                        <button
-                          className={open ? "reveal revealed" : "reveal"}
-                          onClick={() =>
-                            setRevealed((r) =>
-                              open
-                                ? r.filter((x) => x !== card.id)
-                                : [...r, card.id],
-                            )
-                          }
+                        <div
+                          className="card-reading"
+                          tabIndex={0}
+                          aria-label="Card content"
                         >
-                          {open
-                            ? "Hide explanation"
-                            : "Think about it. Then reveal."}
-                          {open ? (
-                            <ChevronDown size={17} />
-                          ) : (
-                            <ArrowRight size={17} />
-                          )}
-                        </button>
-                        {open && (
-                          <div className="rating">
-                            <span>How did that feel?</span>
+                          <div className="reel-kicker">
+                            <span className={`dot ${card.color}`} />
+                            {card.kind}
+                          </div>
+                          <div className="card-body">
+                            <h2>{card.title}</h2>
+                            <p>{card.body}</p>
+                            {open && (
+                              <div className="answer">
+                                <div>
+                                  <Sparkles size={16} /> THE IDEA
+                                </div>
+                                <p>{card.answer}</p>
+                                {card.takeaway && (
+                                  <strong className="takeaway">
+                                    {card.takeaway}
+                                  </strong>
+                                )}
+                              </div>
+                            )}
                             <button
-                              onClick={() => {
-                                setProgress((p) => ({
-                                  ...p,
-                                  learned: p.learned.filter(
-                                    (x) => x !== card.id,
-                                  ),
-                                  saved: p.saved.includes(card.id)
-                                    ? p.saved
-                                    : [...p.saved, card.id],
-                                }));
-                                setMessage("Saved for another look.");
-                              }}
-                            >
-                              Review later
-                            </button>
-                            <button
-                              className={learned ? "mastered" : ""}
+                              className={open ? "reveal revealed" : "reveal"}
                               onClick={() =>
-                                setProgress((p) => ({
-                                  ...p,
-                                  learned: p.learned.includes(card.id)
-                                    ? p.learned
-                                    : [...p.learned, card.id],
-                                }))
+                                setRevealed((r) =>
+                                  open
+                                    ? r.filter((x) => x !== card.id)
+                                    : [...r, card.id],
+                                )
                               }
                             >
-                              <Check size={14} />
-                              {learned ? "Got it" : "I got it"}
+                              {open
+                                ? "Hide explanation"
+                                : "Think about it. Then reveal."}
+                              {open ? (
+                                <ChevronDown size={17} />
+                              ) : (
+                                <ArrowRight size={17} />
+                              )}
                             </button>
+                            {open && (
+                              <div className="rating">
+                                <span>How did that feel?</span>
+                                <button
+                                  onClick={() => {
+                                    setProgress((p) => ({
+                                      ...p,
+                                      learned: p.learned.filter(
+                                        (x) => x !== card.id,
+                                      ),
+                                      saved: p.saved.includes(card.id)
+                                        ? p.saved
+                                        : [...p.saved, card.id],
+                                    }));
+                                    setMessage("Saved for another look.");
+                                  }}
+                                >
+                                  Review later
+                                </button>
+                                <button
+                                  className={learned ? "mastered" : ""}
+                                  onClick={() =>
+                                    setProgress((p) => ({
+                                      ...p,
+                                      learned: p.learned.includes(card.id)
+                                        ? p.learned
+                                        : [...p.learned, card.id],
+                                    }))
+                                  }
+                                >
+                                  <Check size={14} />
+                                  {learned ? "Got it" : "I got it"}
+                                </button>
+                              </div>
+                            )}
                           </div>
-                        )}
-                      </div>
-                      <footer className="card-footer">
-                        <FileText size={14} />
-                        <span>{card.source}</span>
-                        {learned ? (
-                          <span className="learned-label">
-                            <Check size={13} /> Learned
-                          </span>
-                        ) : (
-                          <span className="source-label">
-                            {card.sources ? "Curated card" : "Source excerpt"}
-                          </span>
-                        )}
-                      </footer>
-                      {card.sources && (
-                        <details className="sources">
-                          <summary>
-                            Open source material · {card.sources.length}{" "}
-                            reference{card.sources.length > 1 ? "s" : ""}
-                          </summary>
-                          {card.sources.map((source) => (
-                            <a
-                              key={source.path + source.locator}
-                              href={`/api/source?path=${encodeURIComponent(source.path)}${source.page ? `#page=${source.page}` : ""}`}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              {source.locator}
-                              <span>
-                                {source.path.split("/").at(-1)}{" "}
-                                <ArrowUpRight size={12} />
+                          <footer className="card-footer">
+                            <FileText size={14} />
+                            <span>{card.source}</span>
+                            {learned ? (
+                              <span className="learned-label">
+                                <Check size={13} /> Learned
                               </span>
-                            </a>
-                          ))}
-                        </details>
-                      )}
-                    </article>
-                  );
-                })
+                            ) : (
+                              <span className="source-label">
+                                {card.sources
+                                  ? "Curated card"
+                                  : "Source excerpt"}
+                              </span>
+                            )}
+                          </footer>
+                          {card.sources && (
+                            <details className="sources">
+                              <summary>
+                                Open source material · {card.sources.length}{" "}
+                                reference{card.sources.length > 1 ? "s" : ""}
+                              </summary>
+                              {card.sources.map((source) => (
+                                <a
+                                  key={source.path + source.locator}
+                                  href={`/api/source?path=${encodeURIComponent(source.path)}${source.page ? `#page=${source.page}` : ""}`}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  {source.locator}
+                                  <span>
+                                    {source.path.split("/").at(-1)}{" "}
+                                    <ArrowUpRight size={12} />
+                                  </span>
+                                </a>
+                              ))}
+                            </details>
+                          )}
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
               )}
               {view !== "courses" && !visible.length && (
                 <div className="empty">
@@ -564,10 +575,26 @@ export default function Home() {
                 </div>
               )}
               {visible.length > 0 && view !== "courses" && (
-                <div className="feed-end">
-                  <Sprout size={23} />
-                  <h3>You’re through the current selection.</h3>
-                  <p>Revisit saved cards, or explore another course.</p>
+                <div className="reel-controls">
+                  <span className="reel-hint">Swipe or scroll to explore</span>
+                  <span className="reel-position" aria-live="polite">
+                    {Math.min(activeCard + 1, visible.length)}{" "}
+                    <span>/ {visible.length}</span>
+                  </span>
+                  <button
+                    aria-label="Previous card"
+                    disabled={activeCard === 0}
+                    onClick={() => moveCard(-1)}
+                  >
+                    <ArrowUp size={18} />
+                  </button>
+                  <button
+                    aria-label="Next card"
+                    disabled={activeCard >= visible.length - 1}
+                    onClick={() => moveCard(1)}
+                  >
+                    <ArrowDown size={18} />
+                  </button>
                 </div>
               )}
             </div>
