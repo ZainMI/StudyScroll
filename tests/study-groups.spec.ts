@@ -75,10 +75,10 @@ test("mobile study selection deduplicates topics and lectures and isolates the s
   await page.screenshot({ path: "tmp/study-picker-mobile.png" });
   await page.getByRole("button", { name: "Start studying" }).click();
   await expect(page.locator("article.study-card")).toHaveCount(expected.length);
-  const headings = await page
-    .locator("article.study-card h2")
-    .allTextContents();
-  expect(new Set(headings)).toEqual(new Set(expected.map((c) => c.title)));
+  const ids = await page.locator("article.study-card").evaluateAll((cards) =>
+    cards.map((card) => card.getAttribute("data-card-id")),
+  );
+  expect(new Set(ids)).toEqual(new Set(expected.map((c) => c.id)));
   const card = page.locator("article.study-card").first();
   await card
     .getByRole("button", { name: "Recall your answer, then reveal." })

@@ -1,6 +1,6 @@
 # StudyScroll: master feed
 
-Updated 2026-09-30. 1216 curated cards.
+Updated 2026-10-01. 1216 curated cards.
 
 Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2 and supporting material. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. UBuffalo International Finance covers the supplied Chapters 1–5 slides and Chapter 2–4 homework; source inconsistencies and exact/approximate conventions are documented in INTERNATIONAL_FINANCE_COVERAGE.md.
 
@@ -26,7 +26,7 @@ See [LECTURE_COVERAGE.md](LECTURE_COVERAGE.md) for the lecture-note map, [covera
 <details>
 <summary>Reveal explanation</summary>
 
-99 + 2⁻⁴⁶. Since 99 is between 2⁶ and 2⁷, the gap is 2⁶ × 2⁻⁵².
+\(99+2^{-46}\). Since 99 is between \(2^{6}\) and \(2^{7}\), the gap is \(2^6\times2^{-52}\).
 
 **Intuition:** Machine-number gaps grow with magnitude.
 
@@ -45,7 +45,7 @@ Card ID: `am205-spacing`
 <details>
 <summary>Reveal explanation</summary>
 
-No. In binary64, the gap below 2 is 2⁻⁵²; above it, 2⁻⁵¹. Crossing a power of two doubles the gap.
+No. In binary64, the gap below 2 is \(2^{-52}\); above it, \(2^{-51}\). Crossing a power of two doubles the gap.
 
 **Intuition:** The grid gets coarser as numbers grow.
 
@@ -64,7 +64,7 @@ Card ID: `am205-binade-boundary`
 <details>
 <summary>Reveal explanation</summary>
 
-No. For binary64 round-to-nearest, the gap is 2⁻⁵² but unit roundoff is 2⁻⁵³: half a gap. Check which quantity a text calls “epsilon.”
+No. For binary64 round-to-nearest, the gap is \(2^{-52}\) but unit roundoff is \(2^{-53}\): half a gap. Check which quantity a text calls “epsilon.”
 
 **Intuition:** Nearest rounding loses at most about half a step.
 
@@ -95,14 +95,14 @@ Card ID: `am205-toy-binary`
 
 ---
 
-### 05. Why does binary64 round 2⁵³ + 1 back to 2⁵³?
+### 05. Why does binary64 round \(2^{53}\) + 1 back to \(2^{53}\)?
 
 **AM 205 · Floating-point arithmetic · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The gap there is 2, so the exact answer is halfway between neighbors. Ties-to-even chooses 2⁵³.
+The gap there is 2, so the exact answer is halfway between neighbors. Ties-to-even chooses \(2^{53}\).
 
 **Intuition:** Adding one can leave a large machine number unchanged.
 
@@ -114,14 +114,14 @@ Card ID: `am205-largest-consecutive-integers`
 
 ---
 
-### 06. What do subnormal numbers buy us?
+### 06. Why allow floating-point numbers with reduced precision very close to zero?
 
 **AM 205 · Floating-point arithmetic · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-A gradual approach to zero instead of an abrupt cutoff. Their absolute gap stays fixed, so relative precision gets worse near zero.
+They provide a gradual approach to zero instead of an abrupt cutoff. These subnormal numbers have a fixed absolute gap, so their relative precision worsens closer to zero.
 
 **Intuition:** Tiny values survive, but with fewer useful relative digits.
 
@@ -140,7 +140,7 @@ Card ID: `am205-subnormal-role`
 <details>
 <summary>Reveal explanation</summary>
 
-2⁵¹ + 1. Divide the interval length, 0.5, by the gap, 2⁻⁵², then add one for the extra endpoint.
+\(2^{51}\) + 1. Divide the interval length, 0.5, by the gap, \(2^{-52}\), then add one for the extra endpoint.
 
 **Intuition:** Count gaps, then include both ends.
 
@@ -152,14 +152,14 @@ Card ID: `am205-count`
 
 ---
 
-### 08. How many grid points a+kδ lie in [a,b]?
+### 08. How many grid points \(a+k\delta\) lie in [a,b]?
 
 **AM 205 · Floating-point arithmetic · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-⌊(b−a)/δ⌋ + 1, for integers k≥0 and δ>0. Round down because a point beyond b does not count.
+\(\left\lfloor\frac{b-a}{\delta}\right\rfloor+1\), for integers \(k\ge 0\) and \(\delta >0\). Round down because a point beyond b does not count.
 
 **Intuition:** A partial gap does not contain another point.
 
@@ -209,14 +209,14 @@ Card ID: `am205-pigeonhole-not-all`
 
 ---
 
-### 11. Why is 4 × (1/4) exact in binary arithmetic?
+### 11. Why is 4 \(\times\) \((\frac{1}{4})\) exact in binary arithmetic?
 
 **AM 205 · Floating-point arithmetic · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Both 4 and 1/4 are powers of two, so they are exactly representable. Their product is exactly 1.
+Both 4 and \(\frac{1}{4}\) are powers of two, so they are exactly representable. Their product is exactly 1.
 
 **Intuition:** Powers of two fit binary arithmetic naturally.
 
@@ -235,7 +235,7 @@ Card ID: `am205-roundtrip`
 <details>
 <summary>Reveal explanation</summary>
 
-Reduced fractions whose denominators are powers of two. For example, 1/8 terminates; 1/10 does not because its denominator contains a factor of 5.
+Reduced fractions whose denominators are powers of two. For example, \(\frac{1}{8}\) terminates; \(\frac{1}{10}\) does not because its denominator contains a factor of 5.
 
 **Intuition:** Binary place values are halves, quarters, eighths, and so on.
 
@@ -292,7 +292,7 @@ Card ID: `am205-row-column-order`
 <details>
 <summary>Reveal explanation</summary>
 
-C = [[1,0],[3,1]]. The first column of BC is B times (1,3)ᵀ, giving the required combination.
+C \(=\) \(\begin{bmatrix}1&0\\3&1\end{bmatrix}\). The first column of BC is B times \((1,3)^{\mathsf{T}}\), giving the required combination.
 
 **Intuition:** A multiplier’s column gives one output column’s recipe.
 
@@ -323,14 +323,14 @@ Card ID: `am205-disk`
 
 ---
 
-### 17. Singular values are 3 and 1/2. How does area change?
+### 17. Singular values are 3 and \(\frac{1}{2}\). How does area change?
 
 **AM 205 · Geometry of linear maps · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Area is multiplied by 3 × 1/2 = 3/2. A unit disk becomes an ellipse of area 3π/2.
+Area is multiplied by 3 \(\times\) \(\frac{1}{2}\) \(=\) \(\frac{3}{2}\). A unit disk becomes an ellipse of area \(3\pi /2\).
 
 **Intuition:** Multiply the stretches to get the area scale.
 
@@ -342,7 +342,7 @@ Card ID: `am205-singular-values-area`
 
 ---
 
-### 18. What does diag(2,0) do to a unit disk?
+### 18. What does \(\operatorname{diag}(2,0)\) do to a unit disk?
 
 **AM 205 · Geometry of linear maps · QUICK RECALL**
 
@@ -368,7 +368,7 @@ Card ID: `am205-rank-collapse`
 <details>
 <summary>Reveal explanation</summary>
 
-QᵀQ=I, so ‖Qx‖²=xᵀQᵀQx=xᵀx. A square Q can rotate or reflect, but preserves lengths.
+\(Q^{\mathsf{T}}Q=I\), so \(\Vert Qx\Vert ^{2}=x^{\mathsf{T}}Q^{\mathsf{T}}Qx=x^{\mathsf{T}}x\). A square Q can rotate or reflect, but preserves lengths.
 
 **Intuition:** Orthogonal transformations change direction without changing size.
 
@@ -406,7 +406,7 @@ Card ID: `am205-pivot`
 <details>
 <summary>Reveal explanation</summary>
 
-No. [[0,1],[1,0]] is invertible. Swapping rows makes elimination possible.
+No. \(\begin{bmatrix}0&1\\1&0\end{bmatrix}\) is invertible. Swapping rows makes elimination possible.
 
 **Intuition:** Sometimes the equations need reordering, not replacing.
 
@@ -437,7 +437,7 @@ Card ID: `am205-multiplier-growth`
 
 ---
 
-### 23. How do you get det(A) from PA=LU?
+### 23. How do you get \(\det (A)\) from \(PA=LU\)?
 
 **AM 205 · LU factorization · QUICK RECALL**
 
@@ -482,7 +482,7 @@ Card ID: `am205-rank`
 <details>
 <summary>Reveal explanation</summary>
 
-For an m×n residual R, RMS=‖R‖F/√(mn). It is the typical error per pixel rather than the total error size.
+For an \(m\times n\) residual R, \(\operatorname{RMS}=\frac{\lVert R\rVert_F}{\sqrt{mn}}\). It is the typical error per pixel rather than the total error size.
 
 **Intuition:** Normalize by pixel count to compare typical errors.
 
@@ -513,7 +513,7 @@ Card ID: `am205-greedy`
 
 ---
 
-### 27. Why subtract R[:,j]R[i,:]/Rᵢⱼ from a residual?
+### 27. Why subtract \(\frac{R_{:,j}R_{i,:}}{R_{ij}}\) from a residual?
 
 **AM 205 · Low-rank approximation · QUICK RECALL**
 
@@ -551,14 +551,14 @@ Card ID: `am205-zero-residual-pivot`
 
 ---
 
-### 29. Why is bx²+cxy+dy²≈1 a linear least-squares model?
+### 29. Why is \(bx^{2}+cxy+dy^{2}\approx 1\) a linear least-squares model?
 
 **AM 205 · Least squares · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The unknowns b,c,d appear linearly. Treat x²,xy,y² as known features.
+The unknowns b,c,d appear linearly. Treat \(x^{2},xy,y^{2}\) as known features.
 
 **Intuition:** “Linear” refers to the unknown coefficients, not the features.
 
@@ -570,14 +570,14 @@ Card ID: `am205-ellipse`
 
 ---
 
-### 30. For (x,y)=(2,−3), what is the ellipse-fit design row?
+### 30. For \((x,y)=(2,-3)\), what is the ellipse-fit design row?
 
 **AM 205 · Least squares · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-[4,−6,9], because the features are x², xy, and y². The target is 1.
+[4,−6,9], because the features are \(x^{2}\), xy, and \(y^{2}\). The target is 1.
 
 **Intuition:** The cross-product feature keeps its sign.
 
@@ -596,7 +596,7 @@ Card ID: `am205-ellipse-design-row`
 <details>
 <summary>Reveal explanation</summary>
 
-No. It minimizes how far bx²+cxy+dy² is from 1, not the shortest geometric distance to the ellipse.
+No. It minimizes how far \(bx^{2}+cxy+dy^{2}\) is from 1, not the shortest geometric distance to the ellipse.
 
 **Intuition:** An easy-to-compute loss can measure a different kind of error.
 
@@ -608,14 +608,14 @@ Card ID: `am205-algebraic-distance`
 
 ---
 
-### 32. When does bx²+cxy+dy²=1 form a real, nondegenerate ellipse?
+### 32. When does \(bx^{2}+cxy+dy^{2}=1\) form a real, nondegenerate ellipse?
 
 **AM 205 · Model validity · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-When Q=[[b,c/2],[c/2,d]] is positive definite. Equivalently, b>0 and bd−c²/4>0.
+When \(Q=\begin{bmatrix}b&c/2\\c/2&d\end{bmatrix}\) is positive definite. Equivalently, \(b>0\) and \(bd-c^{2}/4>0\).
 
 **Intuition:** The quadratic must curve upward in every direction.
 
@@ -627,14 +627,14 @@ Card ID: `am205-ellipse-check`
 
 ---
 
-### 33. Why does cxy put c/2 in each off-diagonal entry of Q?
+### 33. Why does cxy put \(c/2\) in each off-diagonal entry of Q?
 
 **AM 205 · Model validity · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-In xᵀQx, both off-diagonal entries contribute to xy. Two copies of c/2 add up to c.
+In \(x^{\mathsf{T}}Qx\), both off-diagonal entries contribute to xy. Two copies of \(c/2\) add up to c.
 
 **Intuition:** The cross term gets counted twice.
 
@@ -646,14 +646,14 @@ Card ID: `am205-quadratic-cross-term`
 
 ---
 
-### 34. Q has eigenvalues 4 and 1/9. What are the axes of xᵀQx=1?
+### 34. Q has eigenvalues 4 and \(\frac{1}{9}\). What are the axes of \(x^{\mathsf{T}}Qx=1\)?
 
 **AM 205 · Model validity · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The semiaxis lengths are 1/√4=1/2 and 1/√(1/9)=3.
+The semiaxis lengths are \(1/\sqrt{4}=\frac{1}{2}\) and \(1/\sqrt{\frac{1}{9}}=3\).
 
 **Intuition:** A larger quadratic penalty permits a shorter axis.
 
@@ -665,14 +665,14 @@ Card ID: `am205-ellipse-axes`
 
 ---
 
-### 35. Why use r=√U to sample uniformly inside a unit disk?
+### 35. Why use \(r=\sqrt{U}\) to sample uniformly inside a unit disk?
 
 **AM 205 · AM 205 × AM 207 · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The fraction of area inside radius r is r². Setting r²=U gives r=√U, with an independent uniform angle.
+The fraction of area inside radius r is \(r^{2}\). Setting \(r^{2}=U\) gives \(r=\sqrt{U}\), with an independent uniform angle.
 
 **Intuition:** Outer rings need more samples because they contain more area.
 
@@ -684,14 +684,14 @@ Card ID: `bridge-disk`
 
 ---
 
-### 36. What makes a problem well-posed?
+### 36. Before solving a problem numerically, what makes its answer mathematically well-defined?
 
 **AM 205 · Foundations of computation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-A solution exists, is unique, and changes continuously with the input.
+A solution exists, is unique, and changes continuously with the input. These conditions make the problem well-posed, although its answer can still be very sensitive.
 
 **Intuition:** You need an answer that exists and behaves sensibly.
 
@@ -760,14 +760,14 @@ Card ID: `am205-cancellation`
 
 ---
 
-### 40. How can you compute √(1+x)−1 reliably for small positive x?
+### 40. How can you compute \(\sqrt{1+x}-1\) reliably for small positive x?
 
 **AM 205 · Error sources · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Use x/(√(1+x)+1). It is algebraically equal but avoids subtracting almost equal numbers.
+Use \(\frac{x}{\sqrt{1+x}+1}\). It is algebraically equal but avoids subtracting almost equal numbers.
 
 **Intuition:** Rewrite the expression before increasing precision.
 
@@ -779,14 +779,14 @@ Card ID: `am205-rationalize-small-difference`
 
 ---
 
-### 41. How can √(a²+b²) overflow when its answer fits?
+### 41. How can \(\sqrt{a^{2}+b^{2}}\) overflow when its answer fits?
 
 **AM 205 · Error sources · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The intermediate squares may be too large. With m=max(abs(a),abs(b))>0, compute m√((a/m)²+(b/m)²) instead.
+The intermediate squares may be too large. With \(m=\max (\operatorname{abs}(a),\operatorname{abs}(b))>0\), compute \(m\sqrt{(a/m)^{2}+(b/m)^{2}}\) instead.
 
 **Intuition:** Keep intermediate values on a safe scale.
 
@@ -836,14 +836,14 @@ Card ID: `am205-relative`
 
 ---
 
-### 44. Why is 1.4 a backward-accurate approximation to √2?
+### 44. Why is 1.4 a backward-accurate approximation to \(\sqrt{2}\)?
 
 **AM 205 · Error analysis · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-It is exactly √1.96. Backward error asks how much the input must change: here, 2 changes by 0.04.
+It is exactly \(\sqrt{1.96}\). Backward error asks how much the input must change: here, 2 changes by 0.04.
 
 **Intuition:** Explain the computed answer by a nearby input.
 
@@ -855,14 +855,14 @@ Card ID: `am205-backward`
 
 ---
 
-### 45. If r=b−Ax̂, which right-hand side makes x̂ exact?
+### 45. If \(r=b-A\hat{x}\), which right-hand side makes \(\hat{x}\) exact?
 
 **AM 205 · Error analysis · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-b−r, because Ax̂=b−r. The residual measures the needed change in b when A stays fixed.
+b−r, because \(A\hat{x}=b-r\). The residual measures the needed change in b when A stays fixed.
 
 **Intuition:** A solve’s residual is a backward-error clue.
 
@@ -893,14 +893,14 @@ Card ID: `am205-conditioning`
 
 ---
 
-### 47. With 12-digit input accuracy and condition number 10⁴, how many digits might survive?
+### 47. With 12-digit input accuracy and condition number \(10^{4}\), how many digits might survive?
 
 **AM 205 · Conditioning vs stability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Roughly 8 in a first-order worst-case estimate: 10⁴×10⁻¹²=10⁻⁸. The actual error depends on its direction.
+Roughly 8 in a first-order worst-case estimate: \(10^{4}\times 10^{-12}=10^{-8}\). The actual error depends on its direction.
 
 **Intuition:** Conditioning can consume accurate digits.
 
@@ -912,14 +912,14 @@ Card ID: `am205-digits-lost`
 
 ---
 
-### 48. What does abs(xf′(x)/f(x)) measure?
+### 48. How does \(\left|\frac{xf\prime(x)}{f(x)}\right|\) help predict the effect of a small input error?
 
 **AM 205 · Conditioning vs stability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Local relative sensitivity: the approximate output percentage change per input percentage change. It requires nonzero x and f(x).
+It estimates how many percent the output changes per one-percent input change. This relative condition number requires nonzero x and f(x); a large value means small relative input errors can be amplified.
 
 **Intuition:** It compares relative changes, not raw slopes.
 
@@ -938,7 +938,7 @@ Card ID: `am205-scalar-condition`
 <details>
 <summary>Reveal explanation</summary>
 
-For x>0, it approximately halves them: abs(xf′(x)/f(x))=1/2.
+For \(x>0\), it approximately halves them: \(\left|\frac{xf\prime(x)}{f(x)}\right|=\frac12\).
 
 **Intuition:** Square roots compress relative changes.
 
@@ -957,7 +957,7 @@ Card ID: `am205-sqrt-condition`
 <details>
 <summary>Reveal explanation</summary>
 
-Yes. In binary64, (10¹⁶−10¹⁶)+1 gives 1, while 10¹⁶+(−10¹⁶+1) gives 0.
+Yes. In binary64, \((10^{16}-10^{16})+1\) gives 1, while \(10^{16}+(-10^{16}+1)\) gives 0.
 
 **Intuition:** An intermediate rounding decision can change the final result.
 
@@ -1014,7 +1014,7 @@ Card ID: `am205-precision`
 <details>
 <summary>Reveal explanation</summary>
 
-Yes. For A=10⁻¹⁰I, det(A) is tiny but κ₂(A)=1. All directions shrink equally.
+Yes. For \(A=10^{-10}I\), \(\det (A)\) is tiny but \(\kappa _{2}(A)=1\). All directions shrink equally.
 
 **Intuition:** Conditioning measures unequal sensitivity, not overall size.
 
@@ -1026,7 +1026,7 @@ Card ID: `am205-condition-scale`
 
 ---
 
-### 54. For [[1,−2],[3,4]], what are the induced 1- and infinity-norms?
+### 54. For \(\begin{bmatrix}1&-2\\3&4\end{bmatrix}\), what are the induced 1- and infinity-norms?
 
 **AM 205 · Matrix conditioning · QUICK RECALL**
 
@@ -1045,14 +1045,14 @@ Card ID: `am205-matrix-norms`
 
 ---
 
-### 55. What is κ₂(diag(4,−6,2))?
+### 55. What is \(\kappa _{2}(\operatorname{diag}(4,-6,2))\)?
 
 **AM 205 · Matrix conditioning · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-6/2=3. Use the largest and smallest absolute diagonal entries.
+\(\frac{6}{2}=3\). Use the largest and smallest absolute diagonal entries.
 
 **Intuition:** Signs change orientation, not stretch magnitudes.
 
@@ -1071,7 +1071,7 @@ Card ID: `am205-diagonal-condition`
 <details>
 <summary>Reveal explanation</summary>
 
-The error is −A⁻¹r. A large inverse can amplify a tiny residual.
+The error is \(-A^{-1}r\). A large inverse can amplify a tiny residual.
 
 **Intuition:** A system can hide large errors along weak directions.
 
@@ -1083,14 +1083,14 @@ Card ID: `am205-residual`
 
 ---
 
-### 57. A=diag(1,10⁻⁸), b=(1,10⁻⁸). Can x̂=(1,0) look accurate?
+### 57. \(A=\operatorname{diag}(1,10^{-8})\), \(b=(1,10^{-8})\). Can \(\hat{x}=(1,0)\) look accurate?
 
 **AM 205 · Linear-system verification · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Its residual is only (0,10⁻⁸), but the true solution is (1,1). The second component is completely wrong.
+Its residual is only \((0,10^{-8})\), but the true solution is (1,1). The second component is completely wrong.
 
 **Intuition:** A weakly measured direction can conceal a large error.
 
@@ -1121,7 +1121,7 @@ Card ID: `am205-two-solutions`
 
 ---
 
-### 59. If a matrix is singular, must Ax=b have no solution?
+### 59. If a matrix is singular, must \(Ax=b\) have no solution?
 
 **AM 205 · Linear systems · QUICK RECALL**
 
@@ -1204,7 +1204,7 @@ Card ID: `am205-pivot-choice`
 <details>
 <summary>Reveal explanation</summary>
 
-Dense factorization costs O(n³). Once it is done, each pair of triangular solves costs O(n²).
+Dense factorization costs \(O(n^{3})\). Once it is done, each pair of triangular solves costs \(O(n^{2})\).
 
 **Intuition:** Pay for the expensive structure once.
 
@@ -1216,14 +1216,14 @@ Card ID: `am205-lu-reuse`
 
 ---
 
-### 64. With PA=LU, how do you solve Ax=b?
+### 64. With \(PA=LU\), how do you solve \(Ax=b\)?
 
 **AM 205 · Efficient linear solves · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Solve Ly=Pb, then Ux=y. Apply the row permutation to b as well as A.
+Solve \(Ly=Pb\), then \(Ux=y\). Apply the row permutation to b as well as A.
 
 **Intuition:** Reordering equations also reorders their right-hand sides.
 
@@ -1254,14 +1254,14 @@ Card ID: `am205-triangular-step`
 
 ---
 
-### 66. If A=LU, which factor comes first when solving Aᵀx=b?
+### 66. If \(A=LU\), which factor comes first when solving \(A^{\mathsf{T}}x=b\)?
 
 **AM 205 · Efficient linear solves · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-First solve Uᵀy=b, then Lᵀx=y, because Aᵀ=UᵀLᵀ.
+First solve \(U^{\mathsf{T}}y=b\), then \(L^{\mathsf{T}}x=y\), because \(A^{\mathsf{T}}=U^{\mathsf{T}}L^{\mathsf{T}}\).
 
 **Intuition:** Transposing reverses the product order.
 
@@ -1273,14 +1273,14 @@ Card ID: `am205-transpose-solve`
 
 ---
 
-### 67. To compute A⁻¹Bc, should you build A⁻¹?
+### 67. To compute \(A^{-1}Bc\), should you build \(A^{-1}\)?
 
 **AM 205 · Efficient linear solves · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. Compute v=Bc, then solve Ax=v. This avoids an unnecessary inverse and matrix–matrix product.
+No. Compute \(v=Bc\), then solve \(Ax=v\). This avoids an unnecessary inverse and matrix–matrix product.
 
 **Intuition:** Apply an inverse by solving, not by constructing it.
 
@@ -1299,7 +1299,7 @@ Card ID: `am205-inverse-product-cost`
 <details>
 <summary>Reveal explanation</summary>
 
-Positive definiteness. A real symmetric positive-definite matrix has A=LLᵀ with positive diagonal entries in L.
+Positive definiteness. A real symmetric positive-definite matrix has \(A=LL^{\mathsf{T}}\) with positive diagonal entries in L.
 
 **Intuition:** The quadratic energy must be positive in every nonzero direction.
 
@@ -1318,7 +1318,7 @@ Card ID: `am205-cholesky`
 <details>
 <summary>Reveal explanation</summary>
 
-No. [[1,2],[2,1]] has eigenvalue −1. The direction (1,−1) gives a negative quadratic form.
+No. \(\begin{bmatrix}1&2\\2&1\end{bmatrix}\) has eigenvalue −1. The direction (1,−1) gives a negative quadratic form.
 
 **Intuition:** Checking coordinate directions alone misses tilted directions.
 
@@ -1330,14 +1330,14 @@ Card ID: `am205-positive-definite-test`
 
 ---
 
-### 70. How do you multiply uvᵀ by x without building a matrix?
+### 70. How do you multiply \(uv^{\mathsf{T}}\) by x without building a matrix?
 
 **AM 205 · Low-rank computation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Compute the scalar vᵀx, then scale u by it. The work is O(n), rather than O(n²), for length-n vectors.
+Compute the scalar \(v^{\mathsf{T}}x\), then scale u by it. The work is \(O(n)\), rather than \(O(n^{2})\), for length-n vectors.
 
 **Intuition:** A rank-one map measures one direction and outputs another.
 
@@ -1349,7 +1349,7 @@ Card ID: `am205-rank-one`
 
 ---
 
-### 71. Why is uvᵀ rank one when u and v are nonzero?
+### 71. Why is \(uv^{\mathsf{T}}\) rank one when u and v are nonzero?
 
 **AM 205 · Low-rank computation · QUICK RECALL**
 
@@ -1375,7 +1375,7 @@ Card ID: `am205-outer-product-rank`
 <details>
 <summary>Reveal explanation</summary>
 
-For full-column-rank X, κ₂(XᵀX)=κ₂(X)². Forming XᵀX magnifies the condition number.
+For full-column-rank X, \(\kappa _{2}(X^{\mathsf{T}}X)=\kappa _{2}(X)^{2}\). Forming \(X^{\mathsf{T}}X\) magnifies the condition number.
 
 **Intuition:** Squaring the matrix’s stretch ratios magnifies sensitivity.
 
@@ -1387,14 +1387,14 @@ Card ID: `am205-normal-squared`
 
 ---
 
-### 73. With X=QR, which system gives the least-squares coefficients?
+### 73. With \(X=QR\), which system gives the least-squares coefficients?
 
 **AM 205 · Least-squares algorithms · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Rβ=Qᵀy, for reduced QR with full column rank. Project y onto Q’s directions, then solve the triangular system.
+\(R\beta =Q^{\mathsf{T}}y\), for reduced QR with full column rank. Project y onto Q’s directions, then solve the triangular system.
 
 **Intuition:** Separate geometry from the coefficient solve.
 
@@ -1406,7 +1406,7 @@ Card ID: `am205-qr-reduction`
 
 ---
 
-### 74. What makes X⁺y special among rank-deficient least-squares solutions?
+### 74. What makes \(X^{+}y\) special among rank-deficient least-squares solutions?
 
 **AM 205 · Least-squares algorithms · QUICK RECALL**
 
@@ -1432,7 +1432,7 @@ Card ID: `am205-svd-minimum-norm`
 <details>
 <summary>Reveal explanation</summary>
 
-No. Both lie in [64,128), so both have gap 2⁻⁴⁶.
+No. Both lie in [64,128), so both have gap \(2^{-46}\).
 
 **Intuition:** One power-of-two interval shares one spacing.
 
@@ -1451,7 +1451,7 @@ Card ID: `am205-spacing-at-100`
 <details>
 <summary>Reveal explanation</summary>
 
-It doubles from 2⁻⁴⁶ to 2⁻⁴⁵.
+It doubles from \(2^{-46}\) to \(2^{-45}\).
 
 **Intuition:** The exponent increases; the number of significant bits does not.
 
@@ -1501,14 +1501,14 @@ Card ID: `am205-toy-round`
 
 ---
 
-### 79. Are all integers above 2⁵³ impossible in binary64?
+### 79. Are all integers above \(2^{53}\) impossible in binary64?
 
 **AM 205 · Floating-point arithmetic · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. In [2⁵³,2⁵⁴), every even integer is representable. The odd integers fall between grid points.
+No. In \([2^{53},2^{54})\), every even integer is representable. The odd integers fall between grid points.
 
 **Intuition:** Losing consecutive integers does not mean losing all integers.
 
@@ -1527,7 +1527,7 @@ Card ID: `am205-even-large`
 <details>
 <summary>Reveal explanation</summary>
 
-0.1=1/10, whose reduced denominator includes 5. Its binary expansion repeats and must be rounded.
+\(0.1=\frac{1}{10}\), whose reduced denominator includes 5. Its binary expansion repeats and must be rounded.
 
 **Intuition:** A short decimal need not be a short binary fraction.
 
@@ -1596,14 +1596,14 @@ Card ID: `am205-reciprocal-compression`
 
 ---
 
-### 84. Can 5 × (1/5) still equal 1 on a computer?
+### 84. Can 5 \(\times\) \((\frac{1}{5})\) still equal 1 on a computer?
 
 **AM 205 · Floating-point arithmetic · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Yes. Although 1/5 is rounded, the product may round back to exactly 1.
+Yes. Although \(\frac{1}{5}\) is rounded, the product may round back to exactly 1.
 
 **Intuition:** A rounded intermediate does not force a wrong final value.
 
@@ -1653,14 +1653,14 @@ Card ID: `am205-row-copy`
 
 ---
 
-### 87. If row operation L₁ happens before L₂, what is the final product?
+### 87. If row operation \(L_{1}\) happens before \(L_{2}\), what is the final product?
 
 **AM 205 · Matrix operations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-L₂L₁B. The operator nearest B acts first.
+\(L_{2}L_{1}B\). The operator nearest B acts first.
 
 **Intuition:** Left operations accumulate outward to the left.
 
@@ -1672,14 +1672,14 @@ Card ID: `am205-left-compose`
 
 ---
 
-### 88. If column operation C₁ happens before C₂, what is the final product?
+### 88. If column operation \(C_{1}\) happens before \(C_{2}\), what is the final product?
 
 **AM 205 · Matrix operations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-BC₁C₂.
+\(BC_{1}C_{2}\).
 
 **Intuition:** Right operations accumulate outward to the right.
 
@@ -1755,7 +1755,7 @@ Card ID: `am205-determinant-sign`
 <details>
 <summary>Reveal explanation</summary>
 
-For square Q, QᵀQ=I, so Q⁻¹=Qᵀ.
+For square Q, \(Q^{\mathsf{T}}Q=I\), so \(Q^{-1}=Q^{\mathsf{T}}\).
 
 **Intuition:** Undo a rotation or reflection by transposing.
 
@@ -1767,14 +1767,14 @@ Card ID: `am205-orthogonal-inverse`
 
 ---
 
-### 93. A pivot is 10⁻¹² and the entry below is 5. What multiplier eliminates it?
+### 93. A pivot is \(10^{-12}\) and the entry below is 5. What multiplier eliminates it?
 
 **AM 205 · Gaussian elimination · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-5/10⁻¹²=5×10¹². That huge multiplier is the numerical warning.
+\(5/10^{-12}=5\times 10^{12}\). That huge multiplier is the numerical warning.
 
 **Intuition:** The pivot is a divisor, so its scale matters.
 
@@ -1907,7 +1907,7 @@ Card ID: `am205-rms-scale`
 <details>
 <summary>Reveal explanation</summary>
 
-The sum of squares of the discarded singular values: Σ_{i>k} σᵢ².
+The sum of squares of the discarded singular values: \(\sum_{i>k}\sigma_i^2\).
 
 **Intuition:** Discarded stretches account for the remaining squared error.
 
@@ -1926,7 +1926,7 @@ Card ID: `am205-svd-tail`
 <details>
 <summary>Reveal explanation</summary>
 
-m×n. Every column entry multiplies every row entry.
+\(m\times n\). Every column entry multiplies every row entry.
 
 **Intuition:** An outer product builds a matrix from two patterns.
 
@@ -1964,7 +1964,7 @@ Card ID: `am205-rank-sum`
 <details>
 <summary>Reveal explanation</summary>
 
-Three: b,c,d for x²,xy,y². “Centered” removes linear x and y terms from this model.
+Three: b,c,d for \(x^{2},xy,y^{2}\). “Centered” removes linear x and y terms from this model.
 
 **Intuition:** Model assumptions determine the number of unknowns.
 
@@ -1995,7 +1995,7 @@ Card ID: `am205-points-not-enough`
 
 ---
 
-### 105. If c=0 in bx²+cxy+dy²=1, how are valid ellipse axes oriented?
+### 105. If \(c=0\) in \(bx^{2}+cxy+dy^{2}=1\), how are valid ellipse axes oriented?
 
 **AM 205 · Model validity · QUICK RECALL**
 
@@ -2014,7 +2014,7 @@ Card ID: `am205-axis-aligned`
 
 ---
 
-### 106. If Q has one positive and one negative eigenvalue, is xᵀQx=1 an ellipse?
+### 106. If Q has one positive and one negative eigenvalue, is \(x^{\mathsf{T}}Qx=1\) an ellipse?
 
 **AM 205 · Model validity · QUICK RECALL**
 
@@ -2033,7 +2033,7 @@ Card ID: `am205-indefinite-curve`
 
 ---
 
-### 107. What gives the axis directions of xᵀQx=1 for positive-definite Q?
+### 107. What gives the axis directions of \(x^{\mathsf{T}}Qx=1\) for positive-definite Q?
 
 **AM 205 · Model validity · QUICK RECALL**
 
@@ -2052,14 +2052,14 @@ Card ID: `am205-eigenvector-axes`
 
 ---
 
-### 108. For a point uniform in a unit disk, what is P(r≤1/2)?
+### 108. For a point uniform in a unit disk, what is \(P(r\le \frac{1}{2})\)?
 
 **AM 205 · AM 205 × AM 207 · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-1/4, because area scales as radius squared.
+\(\frac{1}{4}\), because area scales as radius squared.
 
 **Intuition:** Half the radius encloses only a quarter of the area.
 
@@ -2071,14 +2071,14 @@ Card ID: `am205-half-radius`
 
 ---
 
-### 109. What fraction of uniform points in [−1,1]² land inside the unit disk?
+### 109. What fraction of uniform points in \([-1,1]^{2}\) land inside the unit disk?
 
 **AM 205 · AM 205 × AM 207 · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-π/4: disk area divided by square area.
+\(\pi /4\): disk area divided by square area.
 
 **Intuition:** Rejection sampling turns area ratios into acceptance rates.
 
@@ -2166,14 +2166,14 @@ Card ID: `am205-input-noise`
 
 ---
 
-### 114. If derivative error is roughly h+u/h, where is the best scale for h?
+### 114. If derivative error is roughly \(h+u/h\), where is the best scale for h?
 
 **AM 205 · Error sources · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Near √u, where the two error terms balance.
+Near \(\sqrt{u}\), where the two error terms balance.
 
 **Intuition:** Do not improve one error source while ignoring the other.
 
@@ -2204,7 +2204,7 @@ Card ID: `am205-exact-subtraction`
 
 ---
 
-### 116. In a scaled norm calculation, what if max(abs(a),abs(b))=0?
+### 116. In a scaled norm calculation, what if \(\max (\operatorname{abs}(a),\operatorname{abs}(b))=0\)?
 
 **AM 205 · Error sources · QUICK RECALL**
 
@@ -2223,7 +2223,7 @@ Card ID: `am205-zero-scale`
 
 ---
 
-### 117. Under IEEE arithmetic, why is 0/0 NaN rather than infinity?
+### 117. Under IEEE arithmetic, why is \(\frac{0}{0}\) NaN rather than infinity?
 
 **AM 205 · Error sources · QUICK RECALL**
 
@@ -2261,14 +2261,14 @@ Card ID: `am205-relative-zero`
 
 ---
 
-### 119. If √2 is approximated by 1.4, what is the forward error?
+### 119. If \(\sqrt{2}\) is approximated by 1.4, what is the forward error?
 
 **AM 205 · Error analysis · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-About 0.0142: abs(√2−1.4).
+About 0.0142: \(\operatorname{abs}(\sqrt{2}-1.4)\).
 
 **Intuition:** Forward error measures the answer, not the input.
 
@@ -2280,14 +2280,14 @@ Card ID: `am205-forward-sqrt`
 
 ---
 
-### 120. Why is the perturbation to b equal to −r when r=b−Ax̂?
+### 120. Why is the perturbation to b equal to −r when \(r=b-A\hat{x}\)?
 
 **AM 205 · Error analysis · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Rearrange the definition: Ax̂=b−r.
+Rearrange the definition: \(A\hat{x}=b-r\).
 
 **Intuition:** Residual sign conventions matter.
 
@@ -2325,7 +2325,7 @@ Card ID: `am205-problem-vs-solver`
 <details>
 <summary>Reveal explanation</summary>
 
-Yes. For √x near zero, the slope is large but relative condition number is 1/2.
+Yes. For \(\sqrt{x}\) near zero, the slope is large but relative condition number is \(\frac{1}{2}\).
 
 **Intuition:** Raw units and percentage changes tell different stories.
 
@@ -2382,7 +2382,7 @@ Card ID: `am205-compensation`
 <details>
 <summary>Reveal explanation</summary>
 
-No, for the same induced norm: ‖αA‖‖(αA)⁻¹‖=‖A‖‖A⁻¹‖.
+No, for the same induced norm: \(\Vert \alpha A\Vert \Vert (\alpha A)^{-1}\Vert =\Vert A\Vert \Vert A^{-1}\Vert\).
 
 **Intuition:** Uniform scaling cancels out of the sensitivity ratio.
 
@@ -2394,7 +2394,7 @@ Card ID: `am205-condition-scaling`
 
 ---
 
-### 126. What does ‖Ax‖≤‖A‖‖x‖ tell you?
+### 126. What does \(\Vert Ax\Vert \le \Vert A\Vert \Vert x\Vert\) tell you?
 
 **AM 205 · Matrix conditioning · QUICK RECALL**
 
@@ -2439,7 +2439,7 @@ Card ID: `am205-condition-one`
 <details>
 <summary>Reveal explanation</summary>
 
-Multiplying A and b by a tiny scalar makes the raw residual tiny without improving x̂. Normalization accounts for the problem’s scale.
+Multiplying A and b by a tiny scalar makes the raw residual tiny without improving \(\hat{x}\). Normalization accounts for the problem’s scale.
 
 **Intuition:** Small needs a reference scale.
 
@@ -2451,14 +2451,14 @@ Card ID: `am205-scaled-residual`
 
 ---
 
-### 129. If Ax=Ay, where does x−y live?
+### 129. If \(Ax=Ay\), where does x−y live?
 
 **AM 205 · Linear systems · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-In the null space, because A(x−y)=0.
+In the null space, because \(A(x-y)=0\).
 
 **Intuition:** Nonuniqueness lives in invisible directions.
 
@@ -2470,7 +2470,7 @@ Card ID: `am205-null-difference`
 
 ---
 
-### 130. When does an m×n matrix map onto every b in ℝᵐ?
+### 130. When does an \(m\times n\) matrix map onto every b in \(\mathbb{R}^{m}\)?
 
 **AM 205 · Linear systems · QUICK RECALL**
 
@@ -2515,7 +2515,7 @@ Card ID: `am205-column-permutation`
 <details>
 <summary>Reveal explanation</summary>
 
-No. A triangular solve costs O(n²), so doubling n roughly quadruples that work.
+No. A triangular solve costs \(O(n^{2})\), so doubling n roughly quadruples that work.
 
 **Intuition:** Reusing factors is cheaper, but not free.
 
@@ -2546,14 +2546,14 @@ Card ID: `am205-forward-backward`
 
 ---
 
-### 134. What is LLᵀ for L=[[2,0],[1,1]]?
+### 134. What is \(LL^{\mathsf{T}}\) for \(L=\begin{bmatrix}2&0\\1&1\end{bmatrix}\)?
 
 **AM 205 · Structured factorizations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-[[4,2],[2,2]]. This supplies a concrete positive-definite example.
+\(\begin{bmatrix}4&2\\2&2\end{bmatrix}\). This supplies a concrete positive-definite example.
 
 **Intuition:** A factorization can certify positive definiteness.
 
@@ -2572,7 +2572,7 @@ Card ID: `am205-cholesky-check`
 <details>
 <summary>Reveal explanation</summary>
 
-Yes. diag(1,10⁻¹²) is positive definite but has condition number 10¹².
+Yes. \(\operatorname{diag}(1,10^{-12})\) is positive definite but has condition number \(10^{12}\).
 
 **Intuition:** Positive eigenvalues need not have similar magnitudes.
 
@@ -2584,7 +2584,7 @@ Card ID: `am205-spd-sensitive`
 
 ---
 
-### 136. Where must the output of uvᵀx lie?
+### 136. Where must the output of \(uv^{\mathsf{T}}x\) lie?
 
 **AM 205 · Low-rank computation · QUICK RECALL**
 
@@ -2603,7 +2603,7 @@ Card ID: `am205-rank-one-output`
 
 ---
 
-### 137. If κ₂(X)=10, what is κ₂(XᵀX) for full-column-rank X?
+### 137. If \(\kappa _{2}(X)=10\), what is \(\kappa _{2}(X^{\mathsf{T}}X)\) for full-column-rank X?
 
 **AM 205 · Least-squares algorithms · QUICK RECALL**
 
@@ -2629,7 +2629,7 @@ Card ID: `am205-condition-ten`
 <details>
 <summary>Reveal explanation</summary>
 
-Its orthogonal component (I−QQᵀ)y.
+Its orthogonal component \((I-QQ^{\mathsf{T}})y\).
 
 **Intuition:** Least squares cannot fit a direction outside the model space.
 
@@ -2698,14 +2698,14 @@ Card ID: `am207-uncertainty-error`
 
 ---
 
-### 142. What is an event in probability?
+### 142. When rolling a die, what outcomes belong to the event “an even result”?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-A subset of the sample space: all outcomes that satisfy a condition.
+The outcomes {2,4,6}. An event is a group of possible outcomes satisfying a condition; its probability is the chance the result falls in that group.
 
 **Intuition:** An event can contain many elementary outcomes.
 
@@ -2717,14 +2717,14 @@ Card ID: `am207-event-set`
 
 ---
 
-### 143. What three rules define a probability measure?
+### 143. If you assign probabilities to outcomes, what rules keep the assignments consistent?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Probabilities are nonnegative, the whole sample space has probability 1, and probabilities add over countably many disjoint events.
+No event can have negative probability; all possible outcomes together have probability 1; probabilities of countably many nonoverlapping events add. This assignment rule is formally called a probability measure.
 
 **Intuition:** Disjoint alternatives can be added directly.
 
@@ -2743,7 +2743,7 @@ Card ID: `am207-probability-axioms`
 <details>
 <summary>Reveal explanation</summary>
 
-P(Aᶜ)=1−P(A).
+\(P(A^{c})=1-P(A)\).
 
 **Intuition:** A and its complement exhaust all possibilities.
 
@@ -2755,14 +2755,14 @@ Card ID: `am207-complement-event`
 
 ---
 
-### 145. Why subtract P(A∩B) when finding P(A∪B)?
+### 145. Why subtract \(P(A\cap B)\) when finding \(P(A\cup B)\)?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Adding P(A)+P(B) counts the overlap twice. Subtract it once.
+Adding \(P(A)+P(B)\) counts the overlap twice. Subtract it once.
 
 **Intuition:** An outcome in both events is still only one outcome.
 
@@ -2774,14 +2774,14 @@ Card ID: `am207-union-overlap`
 
 ---
 
-### 146. Why divide by P(B) in P(A given B)?
+### 146. Why divide by \(P(B)\) in \(P(A\mid B)\)?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Conditioning restricts attention to B. Dividing P(A∩B) by P(B) renormalizes that restricted space.
+Conditioning restricts attention to B. Dividing \(P(A\cap B)\) by \(P(B)\) renormalizes that restricted space.
 
 **Intuition:** Within the new universe B, total probability must be 1.
 
@@ -2793,14 +2793,14 @@ Card ID: `am207-conditional-denominator`
 
 ---
 
-### 147. How do mutually exclusive cases Bᵢ help compute P(A)?
+### 147. How do mutually exclusive cases \(B_{i}\) help compute \(P(A)\)?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-If the cases cover the sample space, P(A)=ΣᵢP(A given Bᵢ)P(Bᵢ).
+If the cases cover the sample space, \(P(A)=\sum_i P(A\mid B_i)P(B_i)\).
 
 **Intuition:** Average the conditional chances using the chances of each case.
 
@@ -2819,7 +2819,7 @@ Card ID: `am207-total-probability`
 <details>
 <summary>Reveal explanation</summary>
 
-P(A∩B)=P(A)P(B). When P(B)>0, knowing B does not change the probability of A.
+\(P(A\cap B)=P(A)P(B)\). When \(P(B)>0\), knowing B does not change the probability of A.
 
 **Intuition:** Independence concerns information, not whether events look unrelated.
 
@@ -2831,14 +2831,14 @@ Card ID: `am207-independence-meaning`
 
 ---
 
-### 149. What is an ensemble?
+### 149. Why simulate many possible runs of the same random system?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-A collection of possible system descriptions or realizations, with probability weights.
+A single run shows one possible history. A collection of runs, called an ensemble, shows the range of outcomes and lets you estimate probabilities and expected values.
 
 **Intuition:** It represents alternatives, not necessarily particles in one physical system.
 
@@ -2850,14 +2850,14 @@ Card ID: `am207-ensemble-meaning`
 
 ---
 
-### 150. Do different members of an ensemble interact?
+### 150. Do two separately simulated runs affect one another?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. They are alternative realizations. Particles within a single realization may interact.
+No. They represent alternative histories. Particles within one run may interact, but particles in different runs do not. The collection of possible runs is called an ensemble.
 
 **Intuition:** Separate possible worlds from components of one world.
 
@@ -2895,7 +2895,7 @@ Card ID: `am207-ensemble-fraction`
 <details>
 <summary>Reveal explanation</summary>
 
-The indicator is 1 on the event and 0 otherwise, so its expectation is 1·P(A)+0·P(Aᶜ)=P(A).
+The indicator is 1 on the event and 0 otherwise, so its expected value is \(1\cdot P(A)+0\cdot P(A^{c})=P(A)\).
 
 **Intuition:** Counting event occurrences estimates a probability.
 
@@ -2907,14 +2907,14 @@ Card ID: `am207-indicator-probability`
 
 ---
 
-### 153. What is a random variable?
+### 153. If you roll two dice and record their sum, what makes that sum a random variable?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-A numerical function of the random outcome.
+Each possible pair of dice results maps to one number: its sum. The rule is fixed, but the recorded value is uncertain because the dice outcomes are uncertain.
 
 **Intuition:** It turns outcomes into quantities you can analyze.
 
@@ -2952,7 +2952,7 @@ Card ID: `am207-density-not-probability`
 <details>
 <summary>Reveal explanation</summary>
 
-F(x)=P(X≤x), the probability accumulated up to x.
+\(F(x)=P(X\le x)\), the probability accumulated up to x.
 
 **Intuition:** A CDF never decreases and runs from 0 to 1.
 
@@ -2964,7 +2964,7 @@ Card ID: `am207-cdf-definition`
 
 ---
 
-### 156. How do you obtain P(a<X≤b) from a CDF?
+### 156. How do you obtain \(P(a<X\le b)\) from a CDF?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
@@ -2983,14 +2983,14 @@ Card ID: `am207-interval-cdf`
 
 ---
 
-### 157. How is variance related to the first two moments?
+### 157. How can you calculate variance from the expected value of X and \(X^{2}\)?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Var(X)=E[X²]−E[X]², when these moments are finite.
+\(\operatorname{Var}(X)=E[X^{2}]-E[X]^{2}\), when both expected values are finite. Average the squared values, then subtract the square of their average; the remainder captures spread.
 
 **Intuition:** Spread is the second moment after removing the squared center.
 
@@ -3002,14 +3002,14 @@ Card ID: `am207-variance-second-moment`
 
 ---
 
-### 158. Is E[g(X)] always equal to g(E[X])?
+### 158. Is \(E[g(X)]\) always equal to \(g(E[X])\)?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. For g(x)=x², their difference is Var(X).
+No. For \(g(x)=x^{2}\), their difference is \(\operatorname{Var}(X)\).
 
 **Intuition:** Nonlinear transformations and averaging usually do not commute.
 
@@ -3021,14 +3021,14 @@ Card ID: `am207-nonlinear-average`
 
 ---
 
-### 159. What makes a stochastic process more than one random variable?
+### 159. Why do we need more than one random variable to describe a random trajectory?
 
 **AM 207 · Ensembles and random variables · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-It is a collection of random variables indexed by time or another parameter, with a joint probability structure.
+We need a random value at each time and a description of how those values depend on one another. That collection is a stochastic process.
 
 **Intuition:** Knowing each time's marginal distribution does not specify temporal dependence.
 
@@ -3040,7 +3040,7 @@ Card ID: `am207-stochastic-process`
 
 ---
 
-### 160. If X is normal and Y=eˣ, what values can Y take?
+### 160. If X is normal and \(Y=e^{x}\), what values can Y take?
 
 **AM 207 · Probability transforms · QUICK RECALL**
 
@@ -3059,14 +3059,14 @@ Card ID: `am207-lognormal-support`
 
 ---
 
-### 161. Why does a lognormal density contain a factor 1/y?
+### 161. Why does a lognormal density contain a factor \(1/y\)?
 
 **AM 207 · Probability transforms · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The inverse transformation is x=log y, whose derivative is 1/y. Thus fY(y)=fX(log y)/y for y>0.
+The inverse transformation is \(x=\log y\), whose derivative is \(1/y\). Thus \(f_Y(y)=\frac{f_X(\log y)}{y}\) for \(y>0\).
 
 **Intuition:** Density stretches inversely with the coordinate scale.
 
@@ -3085,7 +3085,7 @@ Card ID: `am207-lognormal-jacobian`
 <details>
 <summary>Reveal explanation</summary>
 
-Use the smallest x for which F(x)≥U. Each jump of the CDF receives a uniform interval equal to its probability mass.
+Use the smallest x for which \(F(x)\ge U\). Each jump of the CDF receives a uniform interval equal to its probability mass.
 
 **Intuition:** Flat and jumping CDFs need a generalized inverse.
 
@@ -3142,7 +3142,7 @@ Card ID: `am207-finite-state-period`
 <details>
 <summary>Reveal explanation</summary>
 
-xₙ₊₁=(axₙ+c) mod m.
+\(x_{n+1}=(ax_n+c)\bmod m\).
 
 **Intuition:** Simple arithmetic can generate long sequences, but parameter choices affect quality.
 
@@ -3230,14 +3230,14 @@ Card ID: `am207-transform-branches`
 
 ---
 
-### 170. For X uniform on (0,1), what is the density of Y=4(X−1/2)²?
+### 170. For X uniform on (0,1), what is the density of \(Y=4(X-\frac{1}{2})^{2}\)?
 
 **AM 207 · Probability transforms · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-fY(y)=1/(2√y) for 0<y<1. The two inverse branches contribute equally.
+\(f_Y(y)=\frac{1}{2\sqrt{y}}\) for \(0<y<1\). The two inverse branches contribute equally.
 
 **Intuition:** A symmetric fold combines probability from both sides.
 
@@ -3287,14 +3287,14 @@ Card ID: `am207-rejection-global-bound`
 
 ---
 
-### 173. For normalized p and proposal q with p≤Mq, what fraction of proposals is accepted on average?
+### 173. For normalized p and proposal q with \(p\le Mq\), what fraction of proposals is accepted on average?
 
 **AM 207 · Rejection sampling · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-1/M.
+\(1/M\).
 
 **Intuition:** A loose envelope wastes more proposals.
 
@@ -3351,7 +3351,7 @@ Card ID: `am207-mcmc-reverse-design`
 <details>
 <summary>Reveal explanation</summary>
 
-No. It is a transition back to the current state, contributing to the kernel's diagonal probability.
+No. It is a transition back to the current state, contributing to the transition rule’s probability of staying put.
 
 **Intuition:** Staying put is part of the Markov chain.
 
@@ -3477,14 +3477,14 @@ Card ID: `am207-acceptance-target-universal`
 
 ---
 
-### 183. What is the variance of an average of N IID draws with variance σ²?
+### 183. What is the variance of an average of N IID draws with variance \(\sigma ^{2}\)?
 
 **AM 207 · Monte Carlo integration · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-σ²/N.
+\(\frac{\sigma^2}{N}\).
 
 **Intuition:** Independent averaging reduces variance linearly with sample count.
 
@@ -3496,7 +3496,7 @@ Card ID: `am207-iid-mean-variance`
 
 ---
 
-### 184. What assumption supports the usual 1/√N Monte Carlo error scale?
+### 184. What assumption supports the usual \(\frac{1}{\sqrt{N}}\) Monte Carlo error scale?
 
 **AM 207 · Monte Carlo integration · QUICK RECALL**
 
@@ -3515,7 +3515,7 @@ Card ID: `am207-mc-finite-variance`
 
 ---
 
-### 185. Does a dimension-independent 1/√N rate mean high-dimensional integration is easy?
+### 185. Does a dimension-independent \(\frac{1}{\sqrt{N}}\) rate mean high-dimensional integration is easy?
 
 **AM 207 · Monte Carlo integration · QUICK RECALL**
 
@@ -3534,14 +3534,14 @@ Card ID: `am207-mc-dimension-constant`
 
 ---
 
-### 186. Which expectation equals ∫₀∞cos(2x)e⁻ˣdx?
+### 186. Which expected value equals \(\int_0^\infty\cos(2x)e^{-x}\,dx\)?
 
 **AM 207 · Monte Carlo integration · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-E[cos(2X)] for X∼Exponential(1). The integral equals 1/5.
+\(E[\cos (2X)]\) for \(X\sim \operatorname{Exponential}(1)\). The integral equals \(\frac{1}{5}\).
 
 **Intuition:** Recognizing a density turns an integral into a sampling problem.
 
@@ -3579,7 +3579,7 @@ Card ID: `am207-importance-support`
 <details>
 <summary>Reveal explanation</summary>
 
-The variability of f(X)p(X)/q(X) under draws from q.
+The variability of \(\frac{f(X)p(X)}{q(X)}\) under draws from q.
 
 **Intuition:** A good proposal makes weighted contributions similar.
 
@@ -3591,14 +3591,14 @@ Card ID: `am207-importance-variance`
 
 ---
 
-### 189. What proposal shape minimizes variance for estimating Eₚ[f(X)]?
+### 189. Where should an ideal importance sampler spend its effort to estimate \(\mathbb{E}_p[f(X)]\)?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Under standard integrability conditions, q should be proportional to abs(f)p.
+Where \(|f(x)|p(x)\) is large. Under standard integrability conditions, sampling in proportion to that quantity minimizes variance: focus on regions that contribute most to the integral.
 
 **Intuition:** Sample where contributions are large, not merely where p is large.
 
@@ -3629,14 +3629,14 @@ Card ID: `am207-importance-zero-variance-catch`
 
 ---
 
-### 191. For X∼N(0,σ²I) in d dimensions, where is its typical radius for large d?
+### 191. For \(X\sim N(0,\sigma ^{2}I)\) in d dimensions, where is its typical radius for large d?
 
 **AM 207 · High-dimensional geometry · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Near σ√d, because E[‖X‖²]=dσ² and the squared radius concentrates relatively.
+Near \(\sigma \sqrt{d}\), because \(E[\Vert X\Vert ^{2}]=d\sigma ^{2}\) and the squared radius concentrates relatively.
 
 **Intuition:** Most Gaussian mass is far from its density peak at the origin.
 
@@ -3655,7 +3655,7 @@ Card ID: `am207-normal-typical-radius`
 <details>
 <summary>Reveal explanation</summary>
 
-Var(‖X‖²)=2dσ⁴.
+\(\operatorname{Var}(\Vert X\Vert ^{2})=2d\sigma ^{4}\).
 
 **Intuition:** Relative fluctuations shrink as dimension grows.
 
@@ -3705,7 +3705,7 @@ Card ID: `am207-ising-state`
 
 ---
 
-### 195. For energy −JΣsᵢsⱼ with J>0, which neighbors are favored?
+### 195. For energy \(-J\sum s_{i}s_{j}\) with \(J>0\), which neighbors are favored?
 
 **AM 207 · Statistical physics examples · QUICK RECALL**
 
@@ -3731,7 +3731,7 @@ Card ID: `am207-ising-ferromagnetic`
 <details>
 <summary>Reveal explanation</summary>
 
-The weight is exp(−E/(kBT)). Higher temperature reduces the penalty for higher energy.
+The weight is \(\exp (-E/(kBT))\). Higher temperature reduces the penalty for higher energy.
 
 **Intuition:** Heat makes energetic differences less decisive.
 
@@ -3743,14 +3743,14 @@ Card ID: `am207-boltzmann-temperature`
 
 ---
 
-### 197. What is the energy change from flipping one Ising spin sᵢ?
+### 197. What is the energy change from flipping one Ising spin \(s_{i}\)?
 
 **AM 207 · Statistical physics examples · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-ΔE=2JsᵢΣⱼsⱼ, summing over its neighbors with each bond counted once in the energy.
+\(\Delta E=2Js_{i}\sum _{j}s_{j}\), summing over its neighbors with each bond counted once in the energy.
 
 **Intuition:** Only bonds touching the flipped spin change.
 
@@ -3800,14 +3800,14 @@ Card ID: `am207-energy-uphill`
 
 ---
 
-### 200. Where are the minima of (x²−1/2)²?
+### 200. Where are the minima of \((x^{2}-\frac{1}{2})^{2}\)?
 
 **AM 207 · Multimodal sampling · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-At x=±1/√2, where the squared quantity is zero.
+At \(x=\pm\frac{1}{\sqrt2}\), where the squared quantity is zero.
 
 **Intuition:** Two separated minima create two attractive regions.
 
@@ -3857,14 +3857,14 @@ Card ID: `am207-master-rate-units`
 
 ---
 
-### 203. Why evaluate a gain term at n−ν for a jump of size ν?
+### 203. Why evaluate a gain term at \(n-\nu\) for a jump of size \(\nu\)?
 
 **AM 207 · Jump processes · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-A trajectory arriving at n after that jump must have started at n−ν.
+A trajectory arriving at n after that jump must have started at \(n-\nu\).
 
 **Intuition:** Trace arrivals backward to their source state.
 
@@ -3990,14 +3990,14 @@ Card ID: `am207-queue-boundary`
 
 ---
 
-### 210. When does a basic M/M/1 queue have a stationary queue-length distribution?
+### 210. When does a basic \(M/M/1\) queue have a stationary queue-length distribution?
 
 **AM 207 · Jump process applications · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-When arrival rate λ is smaller than service rate μ. Then P(N=n)=(1−ρ)ρⁿ with ρ=λ/μ.
+When arrival rate \(\lambda\) is smaller than service rate \(\mu\). Then \(P(N=n)=(1-\rho )\rho ^{n}\) with \(\rho =\lambda /\mu\).
 
 **Intuition:** Average service capacity must exceed incoming demand.
 
@@ -4104,14 +4104,14 @@ Card ID: `am207-ck-intermediate`
 
 ---
 
-### 216. What does the generator L do to an observable f?
+### 216. At the current state, how does the generator predict the change in a quantity f(X)?
 
 **AM 207 · Markov dynamics · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-It gives the instantaneous expected rate of change of f, conditional on the current state.
+Lf(x) is the instantaneous expected rate of change of f(X) when the current state is x. The function f picks the quantity you care about, such as a molecule count; the notes call this an observable.
 
 **Intuition:** The generator describes local dynamics through test functions.
 
@@ -4123,14 +4123,14 @@ Card ID: `am207-generator-observable`
 
 ---
 
-### 217. How does the generator determine the evolution of E[f(Xₜ)]?
+### 217. How does the generator determine the evolution of \(E[f(X_{t})]\)?
 
 **AM 207 · Markov dynamics · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Under appropriate regularity, dE[f(Xₜ)]/dt=E[Lf(Xₜ)].
+Under appropriate regularity, \(\frac{d}{dt}\mathbb{E}[f(X_t)]=\mathbb{E}[Lf(X_t)]\).
 
 **Intuition:** Local expected changes produce equations for moments.
 
@@ -4161,14 +4161,14 @@ Card ID: `am207-generator-constant-intuition`
 
 ---
 
-### 219. How do L and its adjoint L† play different roles?
+### 219. How does tracking a quantity’s expected change differ from tracking the whole probability distribution?
 
 **AM 207 · Markov dynamics · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-L evolves observables; L† evolves probability distributions through ∂ₜp=L†p.
+The generator L acts on a quantity f to describe its expected rate of change. Its adjoint L† acts on the distribution: \(\partial _{t}p=L^{\dagger}p\). They describe the same dynamics from two perspectives.
 
 **Intuition:** The same dynamics have a function view and a distribution view.
 
@@ -4180,14 +4180,14 @@ Card ID: `am207-adjoint-density`
 
 ---
 
-### 220. For total jump rate λ, what is the small-time probability of staying put?
+### 220. For total jump rate \(\lambda\), what is the small-time probability of staying put?
 
 **AM 207 · Jump processes · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-1−λΔt plus higher-order terms.
+\(1-\lambda \Delta t\) plus higher-order terms.
 
 **Intuition:** No jump is the usual outcome over a sufficiently short interval.
 
@@ -4218,14 +4218,14 @@ Card ID: `am207-jump-generator-difference`
 
 ---
 
-### 222. If each of n particles dies at rate γ, what is the total death rate?
+### 222. If each of n particles dies at rate \(\gamma\), what is the total death rate?
 
 **AM 207 · Jump processes · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-γn.
+\(\gamma n\).
 
 **Intuition:** Independent opportunities add their rates.
 
@@ -4237,14 +4237,14 @@ Card ID: `am207-pure-death-rate`
 
 ---
 
-### 223. How does the mean count evolve under independent death at rate γ?
+### 223. How does the mean count evolve under independent death at rate \(\gamma\)?
 
 **AM 207 · Jump processes · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-dm/dt=−γm, so m(t)=m(0)e^(−γt).
+\(\frac{dm}{dt}=-\gamma m\), so \(m(t)=m(0)e^{-\gamma t}\).
 
 **Intuition:** The expected loss rate is proportional to the expected population.
 
@@ -4256,14 +4256,14 @@ Card ID: `am207-pure-death-mean`
 
 ---
 
-### 224. How does the diffusion coefficient scale with random-walk step size h and step time τ?
+### 224. How does the diffusion coefficient scale with random-walk step size h and step time \(\tau\)?
 
 **AM 207 · Diffusion limits · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-For symmetric steps ±h every τ, D=h²/(2τ).
+For symmetric steps \(\pm h\) every \(\tau\), \(D=\frac{h^2}{2\tau}\).
 
 **Intuition:** Spread per unit time determines diffusion strength.
 
@@ -4313,14 +4313,14 @@ Card ID: `am207-ssa-exact-meaning`
 
 ---
 
-### 227. How do reaction propensities determine the next waiting time?
+### 227. If several reactions can happen next, how do their rates determine the waiting time?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Sum them to get a₀. With rates constant between jumps, the waiting time is exponential with rate a₀.
+Add their rates to get \(a_{0}\). With rates constant between events, the next waiting time is exponential with rate \(a_{0}\). More possible events make the next event arrive sooner on average.
 
 **Intuition:** Any channel can end the wait.
 
@@ -4339,7 +4339,7 @@ Card ID: `am207-ssa-total-rate`
 <details>
 <summary>Reveal explanation</summary>
 
-Choose channel j with probability aⱼ/a₀.
+Choose channel j with probability \(\frac{a_j}{a_0}\).
 
 **Intuition:** A faster channel wins a larger share of the event competition.
 
@@ -4351,14 +4351,14 @@ Card ID: `am207-ssa-channel-probability`
 
 ---
 
-### 229. What happens when the total propensity is zero?
+### 229. If every possible event has rate zero, can the simulated system change on its own?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No event can occur under the current time-homogeneous rules; the state is absorbing unless an external change activates a channel.
+No. Under the current time-independent rules it stays in that state forever, unless an external change enables an event. Such a state is called absorbing.
 
 **Intuition:** Do not divide by zero or draw a finite waiting time.
 
@@ -4370,7 +4370,7 @@ Card ID: `am207-ssa-zero-rate`
 
 ---
 
-### 230. Why recompute propensities after a reaction?
+### 230. Why recompute reaction rates after a reaction?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -4389,7 +4389,7 @@ Card ID: `am207-ssa-recompute`
 
 ---
 
-### 231. What is the count-change vector for 2A+B→3B+C?
+### 231. What is the count-change vector for \(2A+B\to 3B+C\)?
 
 **AM 207 · Reaction networks · QUICK RECALL**
 
@@ -4408,7 +4408,7 @@ Card ID: `am207-stoichiometry-example`
 
 ---
 
-### 232. Why is an A+B reaction propensity proportional to nA·nB?
+### 232. Why is an A+B reaction reaction rate proportional to nA·nB?
 
 **AM 207 · Reaction networks · QUICK RECALL**
 
@@ -4446,7 +4446,7 @@ Card ID: `am207-bimolecular-identical`
 
 ---
 
-### 234. Why can a source reaction ∅→A have constant propensity?
+### 234. Why can a source reaction \(\varnothing \to A\) have constant reaction rate?
 
 **AM 207 · Reaction networks · QUICK RECALL**
 
@@ -4472,7 +4472,7 @@ Card ID: `am207-zero-order-propensity`
 <details>
 <summary>Reveal explanation</summary>
 
-For a neighbor direction, the per-particle rate scales as D/h².
+For a neighbor direction, the per-particle rate scales as \(D/h^{2}\).
 
 **Intuition:** Finer spatial resolution requires more frequent hops.
 
@@ -4503,7 +4503,7 @@ Card ID: `am207-hopping-conservation`
 
 ---
 
-### 237. What makes U+2V→3V autocatalytic?
+### 237. What makes \(U+2V\to 3V\) autocatalytic?
 
 **AM 207 · Spatial reaction systems · QUICK RECALL**
 
@@ -4548,7 +4548,7 @@ Card ID: `am207-lateral-inhibition`
 <details>
 <summary>Reveal explanation</summary>
 
-It advances a chosen interval and samples multiple reaction counts, approximately holding propensities fixed during that interval.
+It advances a chosen interval and samples multiple reaction counts, approximately holding reaction rates fixed during that interval.
 
 **Intuition:** Larger time advances buy speed through approximation.
 
@@ -4560,14 +4560,14 @@ Card ID: `am207-tau-many-events`
 
 ---
 
-### 240. What is the Poisson mean for channel j over a leap of duration τ?
+### 240. What is the Poisson mean for channel j over a leap of duration \(\tau\)?
 
 **AM 207 · Tau leaping · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-aⱼ(x)τ, using the propensity at the start of the leap.
+\(a_{j}(x)\tau\), using the reaction rate at the start of the leap.
 
 **Intuition:** Rate times duration gives an expected event count.
 
@@ -4624,7 +4624,7 @@ Card ID: `am207-tau-clipping-problem`
 <details>
 <summary>Reveal explanation</summary>
 
-The reaction propensities, with high probability.
+The reaction reaction rates, with high probability.
 
 **Intuition:** Small expected change alone can hide large random fluctuations.
 
@@ -4636,14 +4636,14 @@ Card ID: `am207-tau-leap-condition`
 
 ---
 
-### 244. What does the evidence do in Bayes' rule?
+### 244. Why divide prior times likelihood by a normalizing constant in Bayes’ rule?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-It normalizes prior times likelihood so the posterior integrates to 1.
+The updated probabilities must add or integrate to 1. The normalizing constant, also called the evidence, makes that happen without changing which parameter values are favored.
 
 **Intuition:** The evidence averages the likelihood over the prior.
 
@@ -4674,14 +4674,14 @@ Card ID: `am207-likelihood-not-parameter-density`
 
 ---
 
-### 246. What is the prior predictive distribution?
+### 246. Before seeing data, how can you predict outcomes when the parameter is uncertain?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The data distribution averaged over the prior parameter distribution.
+Predict outcomes for each possible parameter value, then average those predictions using the prior probabilities. The result is the prior predictive distribution.
 
 **Intuition:** It asks what the model predicts before seeing the current data.
 
@@ -4719,7 +4719,7 @@ Card ID: `am207-calibration-validation`
 <details>
 <summary>Reveal explanation</summary>
 
-Beta(5,8), because the likelihood contributes θ⁴(1−θ)⁷.
+\(\operatorname{Beta}(5,8)\), because the likelihood contributes \(\theta ^{4}(1-\theta )^{7}\).
 
 **Intuition:** Add observed heads and tails to the prior's shape parameters.
 
@@ -4731,14 +4731,14 @@ Card ID: `am207-coin-four-eleven`
 
 ---
 
-### 249. What is the posterior mean for Beta(5,8)?
+### 249. What is the posterior mean for \(\operatorname{Beta}(5,8)\)?
 
 **AM 207 · Bayesian examples · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-5/13.
+\(\frac{5}{13}\).
 
 **Intuition:** The posterior mean balances the observed counts with the prior.
 
@@ -4814,7 +4814,7 @@ Card ID: `am207-posterior-model-limits`
 <details>
 <summary>Reveal explanation</summary>
 
-N logν−νT, apart from parameter-independent terms, for ν>0.
+\(N\log\nu-\nu T\), apart from parameter-independent terms, for \(\nu >0\).
 
 **Intuition:** The raw data enter through their count and sum.
 
@@ -4833,7 +4833,7 @@ Card ID: `am207-exponential-loglikelihood`
 <details>
 <summary>Reveal explanation</summary>
 
-ν̂=N/T=1/(sample mean), assuming T>0.
+\(\hat{\nu}=\frac{N}{T}=\frac{1}{\text{sample mean}}\), assuming \(T>0\).
 
 **Intuition:** The rate is the reciprocal of the mean waiting time.
 
@@ -4883,14 +4883,14 @@ Card ID: `am207-histogram-information`
 
 ---
 
-### 257. What is the relative posterior standard deviation for Gamma(N+1,T)?
+### 257. What is the relative posterior standard deviation for \(\operatorname{Gamma}(N+1,T)\)?
 
 **AM 207 · Bayesian examples · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-1/√(N+1), since its mean is (N+1)/T and its SD is √(N+1)/T.
+\(\frac{1}{\sqrt{N+1}}\), since its mean is (N+1)/T and its SD is \(\frac{\sqrt{N+1}}{T}\).
 
 **Intuition:** More observations narrow relative uncertainty at a square-root rate.
 
@@ -4902,14 +4902,14 @@ Card ID: `am207-rate-posterior-width`
 
 ---
 
-### 258. How can a uniform draw produce an exponential waiting time with rate λ?
+### 258. How can a uniform draw produce an exponential waiting time with rate \(\lambda\)?
 
 **AM 207 · Inverse-transform sampling · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Use T=−log(U)/λ for U uniform on (0,1). Its survival probability is e^(−λt).
+Use \(T=-\frac{\log U}{\lambda}\) for U uniform on (0,1). Its survival probability is \(e^{-\lambda t}\).
 
 **Intuition:** Stretch uniform randomness through the inverse CDF.
 
@@ -4921,14 +4921,14 @@ Card ID: `am207-inverse`
 
 ---
 
-### 259. Why does F⁻¹(U) have CDF F when F is continuous and strictly increasing?
+### 259. Why does \(F^{-1}(U)\) have CDF F when F is continuous and strictly increasing?
 
 **AM 207 · Inverse-transform sampling · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-P(F⁻¹(U)≤x)=P(U≤F(x))=F(x).
+\(P(F^{-1}(U)\le x)=P(U\le F(x))=F(x)\).
 
 **Intuition:** Uniform draws choose probability levels, not equally spaced outcomes.
 
@@ -4940,7 +4940,7 @@ Card ID: `am207-inverse-proof`
 
 ---
 
-### 260. How do you turn U∼Uniform(0,1) into Uniform(−2,5)?
+### 260. How do you turn \(U\sim \operatorname{Uniform}(0,1)\) into \(\operatorname{Uniform}(-2,5)\)?
 
 **AM 207 · Inverse-transform sampling · QUICK RECALL**
 
@@ -4966,7 +4966,7 @@ Card ID: `am207-affine-uniform`
 <details>
 <summary>Reveal explanation</summary>
 
-1/4 second. Rate and mean waiting time are reciprocals.
+\(\frac{1}{4}\) second. Rate and mean waiting time are reciprocals.
 
 **Intuition:** Faster events mean shorter waits.
 
@@ -4985,7 +4985,7 @@ Card ID: `am207-exponential-number`
 <details>
 <summary>Reveal explanation</summary>
 
-No. P(T>s+t given T>s)=e^(−λt), the original survival law.
+No. \(P(T>s+t\mid T>s)=e^{-\lambda t}\), the original survival law.
 
 **Intuition:** With a constant hazard, the clock does not age.
 
@@ -5004,7 +5004,7 @@ Card ID: `am207-memoryless-proof`
 <details>
 <summary>Reveal explanation</summary>
 
-100 times as many, assuming finite variance. SE shrinks as 1/√N.
+100 times as many, assuming finite variance. SE shrinks as \(\frac{1}{\sqrt{N}}\).
 
 **Intuition:** Tenfold precision needs a hundredfold sample budget.
 
@@ -5016,7 +5016,7 @@ Card ID: `am207-mc-rate`
 
 ---
 
-### 264. How do uniform samples on [2,5] estimate ∫₂⁵f(x)dx?
+### 264. How do uniform samples on [2,5] estimate \(\int _{2}^{5}f(x)dx\)?
 
 **AM 207 · Monte Carlo · QUICK RECALL**
 
@@ -5025,7 +5025,7 @@ Card ID: `am207-mc-rate`
 
 Average f at the sampled points, then multiply by 3, the interval length.
 
-**Intuition:** A sample average is an expectation; volume turns it into an integral.
+**Intuition:** A sample average is an expected value; volume turns it into an integral.
 
 </details>
 
@@ -5042,7 +5042,7 @@ Card ID: `am207-integral-volume`
 <details>
 <summary>Reveal explanation</summary>
 
-No. If each term has expectation I, their average does too. Dependence matters for its variance.
+No. If each term has expected value I, their average does too. Dependence matters for its variance.
 
 **Intuition:** Expectation is linear even when samples are dependent.
 
@@ -5061,7 +5061,7 @@ Card ID: `am207-mean-unbiased-proof`
 <details>
 <summary>Reveal explanation</summary>
 
-3/√900=0.1.
+\(3/\sqrt{900}=0.1\).
 
 **Intuition:** The average fluctuates less than individual draws.
 
@@ -5080,7 +5080,7 @@ Card ID: `am207-standard-error-number`
 <details>
 <summary>Reveal explanation</summary>
 
-Squared bias: MSE=variance+bias².
+Squared bias: \(\operatorname{MSE}=\operatorname{Variance}+\operatorname{Bias}^2\).
 
 **Intuition:** A stable estimate can still be systematically wrong.
 
@@ -5099,7 +5099,7 @@ Card ID: `am207-rmse-bias`
 <details>
 <summary>Reveal explanation</summary>
 
-With N points in d dimensions, its error scales as N^(−2/d), under suitable smoothness. Monte Carlo’s finite-variance exponent stays −1/2.
+With N points in d dimensions, its error scales as \(N^{-2/d}\), under suitable smoothness. Monte Carlo’s finite-variance exponent stays \(-\frac{1}{2}\).
 
 **Intuition:** Grid points must be spread across every coordinate.
 
@@ -5118,7 +5118,7 @@ Card ID: `am207-grid`
 <details>
 <summary>Reveal explanation</summary>
 
-Only 5: 5⁸=390,625, while 6⁸ exceeds one million.
+Only 5: \(5^{8}=390,625\), while \(6^{8}\) exceeds one million.
 
 **Intuition:** A huge total grid can be sparse along each direction.
 
@@ -5130,7 +5130,7 @@ Card ID: `am207-grid-budget`
 
 ---
 
-### 270. Why can ∫ over [0,1]ᵈ of exp(−Σxᵢ²) factor into one-dimensional integrals?
+### 270. Why can \(\int\) over \([0,1]^{d}\) of \(\exp (-\sum x_{i}^{2})\) factor into one-dimensional integrals?
 
 **AM 207 · High-dimensional integration · QUICK RECALL**
 
@@ -5149,7 +5149,7 @@ Card ID: `am207-product-integral`
 
 ---
 
-### 271. If Monte Carlo error scales as N⁻¹ᐟ², what does 16 times the sample count buy?
+### 271. If Monte Carlo error scales as \(N^{-\frac{1}{2}}\), what does 16 times the sample count buy?
 
 **AM 207 · High-dimensional integration · QUICK RECALL**
 
@@ -5194,7 +5194,7 @@ Card ID: `am207-mh`
 <details>
 <summary>Reveal explanation</summary>
 
-min(1,2×0.2)=0.4.
+\(\min (1,2\times 0.2)=0.4\).
 
 **Intuition:** A proposal’s directional bias must be corrected.
 
@@ -5213,7 +5213,7 @@ Card ID: `am207-asymmetric-acceptance`
 <details>
 <summary>Reveal explanation</summary>
 
-Compare log(U) with min(0,log f(y)−log f(x)).
+Compare log(U) with \(\min(0,\log f(y)-\log f(x))\).
 
 **Intuition:** Log space avoids underflow without changing the decision.
 
@@ -5232,7 +5232,7 @@ Card ID: `am207-mh-log-space`
 <details>
 <summary>Reveal explanation</summary>
 
-It equals min(π(x)q(y given x),π(y)q(x given y)). Swapping x and y leaves it unchanged.
+It equals \(\min\bigl(\pi(x)q(y\mid x),\pi(y)q(x\mid y)\bigr)\). Swapping x and y leaves it unchanged.
 
 **Intuition:** Acceptance trims both directions to the smaller proposed flow.
 
@@ -5282,14 +5282,14 @@ Card ID: `am207-jump-chain-example`
 
 ---
 
-### 278. How do you propose a Cauchy step centered at x with scale γ?
+### 278. How do you propose a Cauchy step centered at x with scale \(\gamma\)?
 
 **AM 207 · Proposal distributions · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Use x+γtan(π(U−1/2)), with U in (0,1). With fixed γ, the proposal is symmetric.
+Use \(x+\gamma \tan (\pi (U-\frac{1}{2}))\), with U in (0,1). With fixed \(\gamma\), the proposal is symmetric.
 
 **Intuition:** Heavy-tailed steps allow occasional large jumps.
 
@@ -5301,14 +5301,14 @@ Card ID: `am207-cauchy`
 
 ---
 
-### 279. What are the Cauchy quartiles for center m and scale γ?
+### 279. What are the Cauchy quartiles for center m and scale \(\gamma\)?
 
 **AM 207 · Proposal distributions · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-m−γ, m, and m+γ.
+\(m-\gamma\), m, and \(m+\gamma\).
 
 **Intuition:** Scale controls the quartile spread, not a finite variance.
 
@@ -5320,14 +5320,14 @@ Card ID: `am207-cauchy-quantile`
 
 ---
 
-### 280. Why avoid U=0 or 1 in inverse-Cauchy sampling?
+### 280. Why avoid \(U=0\) or 1 in inverse-Cauchy sampling?
 
 **AM 207 · Proposal distributions · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Those quantiles are infinite because tan(±π/2) is unbounded.
+Those quantiles are infinite because \(\tan (\pm \pi /2)\) is unbounded.
 
 **Intuition:** Finite random-number endpoints need deliberate handling.
 
@@ -5358,14 +5358,14 @@ Card ID: `am207-mixing`
 
 ---
 
-### 282. For covariance [[1,ρ],[ρ,1]], which directions are long and short when ρ>0?
+### 282. For covariance \(\begin{bmatrix}1&\rho\\\rho &1\end{bmatrix}\), which directions are long and short when \(\rho >0\)?
 
 **AM 207 · MCMC diagnostics · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The (1,1) direction has variance 1+ρ; (1,−1) has variance 1−ρ.
+The (1,1) direction has variance \(1+\rho\); (1,−1) has variance \(1-\rho\).
 
 **Intuition:** Strong positive correlation makes a thin diagonal ridge.
 
@@ -5403,7 +5403,7 @@ Card ID: `am207-proposal-scale-extremes`
 <details>
 <summary>Reveal explanation</summary>
 
-A fixed proposal gives a fixed transition kernel. Continued adaptation requires extra validity conditions.
+A fixed proposal gives a fixed transition rule. Continued adaptation requires extra validity conditions.
 
 **Intuition:** Changing the sampler’s rules changes its mathematical justification.
 
@@ -5434,14 +5434,14 @@ Card ID: `am207-balance`
 
 ---
 
-### 286. For P=[[0.8,0.2],[0.3,0.7]], what is the stationary distribution?
+### 286. For \(P=\begin{bmatrix}0.8&0.2\\0.3&0.7\end{bmatrix}\), what is the stationary distribution?
 
 **AM 207 · Stationarity & reversibility · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-(0.6,0.4), since 0.6×0.2=0.4×0.3.
+(0.6,0.4), since \(0.6\times 0.2=0.4\times 0.3\).
 
 **Intuition:** Stationary mass compensates for unequal escape probabilities.
 
@@ -5536,7 +5536,7 @@ Card ID: `am207-lumpable-example`
 <details>
 <summary>Reveal explanation</summary>
 
-Subtract its mean and multiply by Σ⁻¹ᐟ². The cloud becomes centered with covariance I.
+Subtract its mean and multiply by \(\Sigma ^{-\frac{1}{2}}\). The cloud becomes centered with covariance I.
 
 **Intuition:** Turn a tilted, stretched cloud into a round one.
 
@@ -5555,7 +5555,7 @@ Card ID: `bridge-whiten`
 <details>
 <summary>Reveal explanation</summary>
 
-1/(2+3)=0.2 seconds.
+\(1/(2+3)=0.2\) seconds.
 
 **Intuition:** Competing event rates add.
 
@@ -5605,7 +5605,7 @@ Card ID: `am207-ssa-horizon`
 
 ---
 
-### 295. What happens when every SSA propensity is zero?
+### 295. What happens when every SSA reaction rate is zero?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -5624,7 +5624,7 @@ Card ID: `am207-zero-propensity`
 
 ---
 
-### 296. For 2A→B with rate c per unordered pair, what is the propensity at count n?
+### 296. For \(2A\to B\) with rate c per unordered pair, what is the reaction rate at count n?
 
 **AM 207 · Stochastic simulation · QUICK RECALL**
 
@@ -5643,14 +5643,14 @@ Card ID: `am207-combinatorial-propensity`
 
 ---
 
-### 297. Why isn’t E[RF] always E[R]E[F]?
+### 297. Why isn’t \(E[RF]\) always \(E[R]E[F]\)?
 
 **AM 207 · Moment closure · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-E[RF]=E[R]E[F]+Cov(R,F). Correlation contributes an extra term.
+\(E[RF]=E[R]E[F]+\operatorname{Cov}(R,F)\). Correlation contributes an extra term.
 
 **Intuition:** A nonlinear rate can depend on more than the means.
 
@@ -5662,7 +5662,7 @@ Card ID: `am207-closure`
 
 ---
 
-### 298. E[R]=10, E[F]=4, Cov(R,F)=−6. What is E[RF]?
+### 298. \(E[R]=10\), \(E[F]=4\), \(\operatorname{Cov}(R,F)=-6\). What is \(E[RF]\)?
 
 **AM 207 · Moment closure · QUICK RECALL**
 
@@ -5688,7 +5688,7 @@ Card ID: `am207-covariance-gap`
 <details>
 <summary>Reveal explanation</summary>
 
-A Beta(5,8) posterior: add the counts to the Beta(1,1) prior parameters.
+A \(\operatorname{Beta}(5,8)\) posterior: add the counts to the \(\operatorname{Beta}(1,1)\) prior parameters.
 
 **Intuition:** Bayesian updating adds evidence to the prior.
 
@@ -5700,14 +5700,14 @@ Card ID: `am207-bayes`
 
 ---
 
-### 300. How does Beta(a,b) update after h heads and t tails?
+### 300. How does \(\operatorname{Beta}(a,b)\) update after h heads and t tails?
 
 **AM 207 · Bayesian updating · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-To Beta(a+h,b+t), for conditionally independent flips sharing one head probability.
+To \(\operatorname{Beta}(a+h,b+t)\), for conditionally independent flips sharing one head probability.
 
 **Intuition:** The prior and likelihood combine through their exponents.
 
@@ -5719,14 +5719,14 @@ Card ID: `am207-beta-update-general`
 
 ---
 
-### 301. With a Beta(5,8) posterior, what is the next head probability?
+### 301. With a \(\operatorname{Beta}(5,8)\) posterior, what is the next head probability?
 
 **AM 207 · Bayesian updating · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-5/13, the posterior mean of θ.
+\(\frac{5}{13}\), the posterior mean of \(\theta\).
 
 **Intuition:** Prediction averages over remaining parameter uncertainty.
 
@@ -5764,7 +5764,7 @@ Card ID: `am207-likelihood-not-posterior`
 <details>
 <summary>Reveal explanation</summary>
 
-Not under the same shared-θ Bernoulli model and prior. The count likelihood adds a binomial factor independent of θ.
+Not under the same Bernoulli model with a shared head probability and prior. The count likelihood adds a binomial factor independent of \(\theta\).
 
 **Intuition:** Parameter-independent factors cancel in posterior normalization.
 
@@ -5783,7 +5783,7 @@ Card ID: `am207-sequence-versus-count`
 <details>
 <summary>Reveal explanation</summary>
 
-Yes. Uniform(0,0.2) has density 5. Its total area is still 1.
+Yes. \(\operatorname{Uniform}(0,0.2)\) has density 5. Its total area is still 1.
 
 **Intuition:** Probability is area, not density height.
 
@@ -5795,14 +5795,14 @@ Card ID: `am207-density`
 
 ---
 
-### 305. If F(1)=0.2 and F(3)=0.8, what is P(1<X≤3)?
+### 305. If \(F(1)=0.2\) and \(F(3)=0.8\), what is \(P(1<X\le 3)\)?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-0.8−0.2=0.6.
+\(0.8-0.2=0.6\).
 
 **Intuition:** Subtract cumulative probabilities to isolate an interval.
 
@@ -5814,14 +5814,14 @@ Card ID: `am207-cdf-density`
 
 ---
 
-### 306. For density f(x)=cx on [0,2], what is c?
+### 306. For density \(f(x)=cx\) on [0,2], what is c?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-1/2, since ∫₀²cx dx=2c must equal 1.
+\(\frac{1}{2}\), since \(\int_0^2 cx\,dx=2c\) must equal 1.
 
 **Intuition:** A density must have total area one.
 
@@ -5833,14 +5833,14 @@ Card ID: `am207-normalize-density`
 
 ---
 
-### 307. Must you derive the distribution of g(X) to find its mean?
+### 307. To find the expected value of g(X), do you first need its full distribution?
 
 **AM 207 · Probability foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. Use E[g(X)]=∫g(x)p(x)dx when it exists.
+No. \(E[g(X)]=\int g(x)p(x)dx\) when the integral exists. Weight each possible transformed value by how likely the original value is.
 
 **Intuition:** Average the function directly over the original distribution.
 
@@ -5859,7 +5859,7 @@ Card ID: `am207-expectation-function`
 <details>
 <summary>Reveal explanation</summary>
 
-2/3. Of the remaining possibilities {2,4,6}, two exceed 3.
+\(\frac{2}{3}\). Of the remaining possibilities {2,4,6}, two exceed 3.
 
 **Intuition:** Conditioning restricts the possibilities and renormalizes them.
 
@@ -5890,7 +5890,7 @@ Card ID: `am207-independence-vs-disjoint`
 
 ---
 
-### 310. If Y=2X, why does its density get a factor 1/2?
+### 310. If \(Y=2X\), why does its density get a factor \(\frac{1}{2}\)?
 
 **AM 207 · Transformations · QUICK RECALL**
 
@@ -5909,14 +5909,14 @@ Card ID: `am207-jacobian`
 
 ---
 
-### 311. If Y=−3X, is its density negative?
+### 311. If \(Y=-3X\), is its density negative?
 
 **AM 207 · Transformations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. fY(y)=fX(−y/3)/3. Use the absolute inverse derivative.
+No. \(f_Y(y)=f_X(-y/3)/3\). Use the absolute inverse derivative.
 
 **Intuition:** Orientation changes cannot create negative probability.
 
@@ -5928,14 +5928,14 @@ Card ID: `am207-negative-scale`
 
 ---
 
-### 312. For invertible Y=AX, what is the transformed density?
+### 312. For invertible \(Y=AX\), what is the transformed density?
 
 **AM 207 · Transformations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-fY(y)=fX(A⁻¹y)/abs(det(A)).
+\(f_Y(y)=f_X(A^{-1}y)/\operatorname{abs}(\det (A))\).
 
 **Intuition:** The density compensates for the area or volume stretch.
 
@@ -5947,14 +5947,14 @@ Card ID: `am207-two-dimensional-jacobian`
 
 ---
 
-### 313. For Y=X², why might one inverse root be insufficient?
+### 313. For \(Y=X^{2}\), why might one inverse root be insufficient?
 
 **AM 207 · Noninjective transformations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Both +√y and −√y map to y. Their probability contributions must be added.
+Both \(+\sqrt{y}\) and \(-\sqrt{y}\) map to y. Their probability contributions must be added.
 
 **Intuition:** A many-to-one map collects mass from every valid branch.
 
@@ -5966,14 +5966,14 @@ Card ID: `am207-multiple-roots`
 
 ---
 
-### 314. If X is uniform on [−1,1], what is P(X²≤y) for 0<y<1?
+### 314. If X is uniform on [−1,1], what is \(P(X^{2}\le y)\) for \(0<y<1\)?
 
 **AM 207 · Noninjective transformations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-√y, because X must lie between −√y and √y.
+\(\sqrt{y}\), because X must lie between \(-\sqrt{y}\) and \(\sqrt{y}\).
 
 **Intuition:** Squaring folds both halves of the interval together.
 
@@ -5992,7 +5992,7 @@ Card ID: `am207-square-uniform-density`
 <details>
 <summary>Reveal explanation</summary>
 
-Proposal density q times acceptance p/(Mq) equals p/M. Renormalizing leaves p.
+Proposal density q times acceptance \(p/(Mq)\) equals \(p/M\). Renormalizing leaves p.
 
 **Intuition:** Acceptance corrects the proposal’s shape.
 
@@ -6004,14 +6004,14 @@ Card ID: `am207-rejection`
 
 ---
 
-### 316. With normalized target p≤5q, what is the rejection sampler’s acceptance rate?
+### 316. With normalized target \(p\le 5q\), what is the rejection sampler’s acceptance rate?
 
 **AM 207 · Rejection sampling · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-1/5=20%.
+\(\frac{1}{5}=20\%\).
 
 **Intuition:** A loose envelope wastes proposals.
 
@@ -6023,7 +6023,7 @@ Card ID: `am207-envelope-efficiency`
 
 ---
 
-### 317. With unnormalized f≤cq, how do you accept a proposal x?
+### 317. With unnormalized \(f\le cq\), how do you accept a proposal x?
 
 **AM 207 · Rejection sampling · QUICK RECALL**
 
@@ -6042,14 +6042,14 @@ Card ID: `am207-unknown-normalizer`
 
 ---
 
-### 318. How can samples from q estimate an expectation under p?
+### 318. If you sample from q instead of p, how can you still estimate the expected value under p?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Average f(X)p(X)/q(X), provided q covers every contributing region.
+Average \(\frac{f(X)p(X)}{q(X)}\). The weight \(\frac{p(X)}{q(X)}\) corrects for outcomes sampled too often or too rarely. The sampling distribution q must cover every region contributing to the desired expected value.
 
 **Intuition:** Weights compensate for sampling from the wrong distribution.
 
@@ -6061,14 +6061,14 @@ Card ID: `am207-importance`
 
 ---
 
-### 319. p(A)=0.8 but q(A)=0.5. What weight corrects an A draw?
+### 319. \(p(A)=0.8\) but \(q(A)=0.5\). What weight corrects an A draw?
 
 **AM 207 · Importance sampling · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-0.8/0.5=1.6.
+\(\frac{0.8}{0.5}=1.6\).
 
 **Intuition:** Under-sampled outcomes need extra weight.
 
@@ -6125,7 +6125,7 @@ Card ID: `am207-self-normalized`
 <details>
 <summary>Reveal explanation</summary>
 
-9/10=0.9.
+\(\frac{9}{10}=0.9\).
 
 **Intuition:** Divide by total weight, not sample count.
 
@@ -6156,7 +6156,7 @@ Card ID: `am207-weight-degeneracy`
 
 ---
 
-### 324. Why can s/√N underestimate MCMC uncertainty?
+### 324. Why can \(\frac{s}{\sqrt{N}}\) underestimate MCMC uncertainty?
 
 **AM 207 · Monte Carlo error · QUICK RECALL**
 
@@ -6194,14 +6194,14 @@ Card ID: `am207-ar1-effective-size`
 
 ---
 
-### 326. In a Poisson process with rate ν, what is the count by time t?
+### 326. In a Poisson process with rate \(\nu\), what is the count by time t?
 
 **AM 207 · Poisson processes · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Poisson(νt), with mean νt.
+\(\operatorname{Poisson}(\nu t)\), with mean \(\nu t\).
 
 **Intuition:** Rate times exposure gives the expected count.
 
@@ -6258,7 +6258,7 @@ Card ID: `am207-independent-increments`
 <details>
 <summary>Reveal explanation</summary>
 
-1/p, counting the successful trial.
+\(1/p\), counting the successful trial.
 
 **Intuition:** Rare success means a longer expected wait.
 
@@ -6277,7 +6277,7 @@ Card ID: `am207-geometric`
 <details>
 <summary>Reveal explanation</summary>
 
-0.8²×0.2=0.128: two failures, then success.
+\(0.8^{2}\times 0.2=0.128\): two failures, then success.
 
 **Intuition:** Specify the failures before the first success.
 
@@ -6289,7 +6289,7 @@ Card ID: `am207-geometric-number`
 
 ---
 
-### 331. With N parents producing two offspring each, why is sibling probability 1/(2N−1)?
+### 331. With N parents producing two offspring each, why is sibling probability \(1/(2N-1)\)?
 
 **AM 207 · Population sampling · QUICK RECALL**
 
@@ -6315,7 +6315,7 @@ Card ID: `am207-coalescent`
 <details>
 <summary>Reveal explanation</summary>
 
-1/5, not 1/6.
+\(\frac{1}{5}\), not \(\frac{1}{6}\).
 
 **Intuition:** Large-population approximations need not be exact for small populations.
 
@@ -6334,7 +6334,7 @@ Card ID: `am207-finite-population-check`
 <details>
 <summary>Reveal explanation</summary>
 
-It keeps the typical wait near one as N grows. The scaled survival probability approaches e⁻ᵗ.
+It keeps the typical wait near one as N grows. The scaled survival probability approaches \(e^{-t}\).
 
 **Intuition:** Rescaling reveals a nondegenerate limit.
 
@@ -6346,14 +6346,14 @@ Card ID: `am207-scaling-limit`
 
 ---
 
-### 334. Two independent lineages mutate at rate ν for a fixed time t. What is their total count?
+### 334. Two independent lineages mutate at rate \(\nu\) for a fixed time t. What is their total count?
 
 **AM 207 · Conditional distributions · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Poisson(2νt). Independent Poisson counts add their means.
+\(\operatorname{Poisson}(2\nu t)\). Independent Poisson counts add their means.
 
 **Intuition:** Two lineages provide twice the exposure.
 
@@ -6372,7 +6372,7 @@ Card ID: `am207-two-lineages`
 <details>
 <summary>Reveal explanation</summary>
 
-Exposure-time uncertainty adds extra variance. If K given T is Poisson(2νT), Var(K)=2νE[T]+4ν²Var(T).
+Exposure-time uncertainty adds extra variance. If K given T is \(\operatorname{Poisson}(2\nu T)\), \(\operatorname{Var}(K)=2\nu E[T]+4\nu ^{2}\operatorname{Var}(T)\).
 
 **Intuition:** Random exposure creates overdispersion.
 
@@ -6403,14 +6403,14 @@ Card ID: `am207-piecewise-cdf`
 
 ---
 
-### 337. A CDF joins (2,0.3) to (5,0.9). Where does U=0.5 map?
+### 337. A CDF joins (2,0.3) to (5,0.9). Where does \(U=0.5\) map?
 
 **AM 207 · Inverse-transform sampling · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-To x=3. The probability level is one-third through the segment, so move one-third from 2 to 5.
+To \(x=3\). The probability level is one-third through the segment, so move one-third from 2 to 5.
 
 **Intuition:** Match fractions along the two axes.
 
@@ -6448,7 +6448,7 @@ Card ID: `am207-cdf-flat-segment`
 <details>
 <summary>Reveal explanation</summary>
 
-Set R=√(−2log U₁), θ=2πU₂, then return Rcosθ and Rsinθ, using independent uniforms in (0,1).
+Set \(R=\sqrt{-2\log U_1}\), \(\theta =2\pi U_{2}\), then return \(R\cos\theta\) and \(R\sin\theta\), using independent uniforms in (0,1).
 
 **Intuition:** Choose a Gaussian radius and an independent uniform angle.
 
@@ -6460,14 +6460,14 @@ Card ID: `am207-box-muller`
 
 ---
 
-### 340. For the Box–Muller radius, what is P(R≤r) when r≥0?
+### 340. For the Box–Muller radius, what is \(P(R\le r)\) when \(r\ge 0\)?
 
 **AM 207 · Normal sampling · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-1−e^(−r²/2).
+\(1-e^{-r^{2}/2}\).
 
 **Intuition:** The radius is not uniform; its tail decays with squared distance.
 
@@ -6479,14 +6479,14 @@ Card ID: `am207-radial-cdf`
 
 ---
 
-### 341. What distribution does R²/2 have in Box–Muller?
+### 341. What distribution does \(\frac{R^2}{2}\) have in Box–Muller?
 
 **AM 207 · Normal sampling · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Exponential with rate 1, since R²/2=−log U.
+Exponential with rate 1, since \(\frac{R^2}{2}=-\log U\).
 
 **Intuition:** A Gaussian squared radius connects directly to an exponential wait.
 
@@ -6505,7 +6505,7 @@ Card ID: `am207-radial-square-exponential`
 <details>
 <summary>Reveal explanation</summary>
 
-1−π/4≈21.5%.
+\(1-\pi /4\approx 21.5\%\).
 
 **Intuition:** Rejection cost follows the area outside the accepted region.
 
@@ -6524,7 +6524,7 @@ Card ID: `am207-marsaglia`
 <details>
 <summary>Reveal explanation</summary>
 
-With S=V₁²+V₂² in (0,1), multiply (V₁,V₂) by √(−2log S/S).
+With \(S=V_{1}^{2}+V_{2}^{2}\) in (0,1), multiply \((V_{1},V_{2})\) by \(\sqrt{\frac{-2\log S}{S}}\).
 
 **Intuition:** Keep the angle; replace the radius distribution.
 
@@ -6536,14 +6536,14 @@ Card ID: `am207-polar-transform`
 
 ---
 
-### 344. If acceptance probability is π/4, how many proposals are needed on average?
+### 344. If acceptance probability is \(\pi /4\), how many proposals are needed on average?
 
 **AM 207 · Rejection geometry · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-4/π≈1.27 per accepted point.
+\(4/\pi \approx 1.27\) per accepted point.
 
 **Intuition:** Expected attempts are the reciprocal of success probability.
 
@@ -6562,7 +6562,7 @@ Card ID: `am207-rejection-efficiency`
 <details>
 <summary>Reveal explanation</summary>
 
-Sum products over every intermediate state: (P²)ᵢₖ=ΣⱼPᵢⱼPⱼₖ.
+Sum products over every intermediate state: \((P^{2})_{ik}=\sum _{j}P_{ij}P_{jk}\).
 
 **Intuition:** Multiply along paths, add across alternatives.
 
@@ -6581,7 +6581,7 @@ Card ID: `am207-ck`
 <details>
 <summary>Reveal explanation</summary>
 
-p_next=pP. For a column distribution, use Pᵀp.
+\(p_{\mathrm{next}}=pP\). For a column distribution, use \(P^{\mathsf{T}}p\).
 
 **Intuition:** Keep your vector orientation consistent.
 
@@ -6593,14 +6593,14 @@ Card ID: `am207-transition-matrix-orientation`
 
 ---
 
-### 347. For P=[[0.8,0.2],[0.3,0.7]], what is the two-step chance A→B?
+### 347. For \(P=\begin{bmatrix}0.8&0.2\\0.3&0.7\end{bmatrix}\), what is the two-step chance \(A\to B\)?
 
 **AM 207 · Markov transitions · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-0.8×0.2+0.2×0.7=0.30.
+\(0.8\times 0.2+0.2\times 0.7=0.30\).
 
 **Intuition:** Include both possible intermediate states.
 
@@ -6612,14 +6612,14 @@ Card ID: `am207-two-step-number`
 
 ---
 
-### 348. What is the basic structure of a master equation?
+### 348. How does the probability of being in a state change as events move the system around?
 
 **AM 207 · Master equations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Probability inflow minus probability outflow for each state.
+Add probability arriving from other states and subtract probability leaving this state. Writing that balance for every state gives the master equation.
 
 **Intuition:** Track probability like fluid moving between containers.
 
@@ -6650,14 +6650,14 @@ Card ID: `am207-probability-conservation`
 
 ---
 
-### 350. In pure death with rate γn, how does probability enter state zero?
+### 350. In pure death with rate \(\gamma n\), how does probability enter state zero?
 
 **AM 207 · Master equations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-From state one at rate γp₁. There is no outflow from zero.
+From state one at rate \(\gamma p_{1}\). There is no outflow from zero.
 
 **Intuition:** You cannot lose a particle you do not have.
 
@@ -6669,14 +6669,14 @@ Card ID: `am207-death-boundary`
 
 ---
 
-### 351. What does a jump-process generator measure?
+### 351. How do jump sizes and event rates determine the expected change of a quantity?
 
 **AM 207 · Markov generators · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The rate-weighted change of a function: Lf(x)=Σⱼaⱼ(x)[f(x+νⱼ)−f(x)].
+\(Lf(x)=\sum _{j}a_{j}(x)[f(x+\nu _{j})-f(x)]\). For each possible event, multiply its change in the quantity by its event rate, then add. This rate-of-change operator is called the generator.
 
 **Intuition:** Change per event times events per time gives expected local change.
 
@@ -6707,14 +6707,14 @@ Card ID: `am207-generator-constant`
 
 ---
 
-### 353. If each particle dies at rate γ, how does the mean count change?
+### 353. If each particle dies at rate \(\gamma\), how does the mean count change?
 
 **AM 207 · Markov generators · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-m′=−γm, so m(t)=m(0)e^(−γt). This mean equation is exact because the drift is linear.
+\(m'=-\gamma m\), so \(m(t)=m(0)e^{-\gamma t}\). This mean equation is exact because the drift is linear.
 
 **Intuition:** Random paths can have a simple deterministic mean.
 
@@ -6733,7 +6733,7 @@ Card ID: `am207-death-mean`
 <details>
 <summary>Reveal explanation</summary>
 
-It must choose green from the left and blue from the right. Thus w₊(n)=λ(N−n)(B−n)/N².
+It must choose green from the left and blue from the right. Thus \(w_{+}(n)=\lambda (N-n)(B-n)/N^{2}\).
 
 **Intuition:** Multiply the choices that produce the desired change.
 
@@ -6745,7 +6745,7 @@ Card ID: `am207-urn-rates`
 
 ---
 
-### 355. Why must w₋(0)=0 in the urn model?
+### 355. Why must \(w_{−}(0)=0\) in the urn model?
 
 **AM 207 · Transition rates · QUICK RECALL**
 
@@ -6771,9 +6771,9 @@ Card ID: `am207-urn-boundaries`
 <details>
 <summary>Reveal explanation</summary>
 
-Its net drift is linear: m′=(λ/N)(B−2m). No unknown higher moment appears.
+Its net drift is linear: \(m'=(\lambda /N)(B-2m)\). No unknown higher moment appears.
 
-**Intuition:** Linear drift lets expectation pass through without approximation.
+**Intuition:** Linear drift lets expected value pass through without approximation.
 
 </details>
 
@@ -6790,7 +6790,7 @@ Card ID: `am207-urn-mean`
 <details>
 <summary>Reveal explanation</summary>
 
-25+25/e≈34.2.
+\(25+25/e\approx 34.2\).
 
 **Intuition:** One time constant removes about 63% of the initial gap.
 
@@ -6828,7 +6828,7 @@ Card ID: `am207-urn-stationary`
 <details>
 <summary>Reveal explanation</summary>
 
-For 0,1,2 blue: 1/6, 4/6, 1/6.
+For 0,1,2 blue: \(\frac{1}{6}\), \(\frac{4}{6}\), \(\frac{1}{6}\).
 
 **Intuition:** There are more allocations with one blue in each urn.
 
@@ -6847,7 +6847,7 @@ Card ID: `am207-hypergeometric-small`
 <details>
 <summary>Reveal explanation</summary>
 
-πₙ₊₁/πₙ=w₊(n)/w₋(n+1), when the denominator is positive. Normalize the resulting weights.
+\(\pi _{n+1}/\pi _{n}=w_{+}(n)/w_{−}(n+1)\), when the denominator is positive. Normalize the resulting weights.
 
 **Intuition:** Neighboring flows must balance at equilibrium.
 
@@ -6897,7 +6897,7 @@ Card ID: `am207-holding-time-number`
 
 ---
 
-### 363. What count change does G+R→2R produce in (G,R,F)?
+### 363. What count change does \(G+R\to 2R\) produce in (G,R,F)?
 
 **AM 207 · Reaction systems · QUICK RECALL**
 
@@ -6923,7 +6923,7 @@ Card ID: `am207-stoichiometry`
 <details>
 <summary>Reveal explanation</summary>
 
-Add each rabbit jump times its propensity, then take expectations: (β/N)E[GR]−μE[R]−(γ/N)E[RF].
+Add each rabbit jump times its reaction rate, then take expected values: \((\beta /N)E[GR]-\mu E[R]-(\gamma /N)E[RF]\).
 
 **Intuition:** Birth adds; death and predation subtract.
 
@@ -6935,14 +6935,14 @@ Card ID: `am207-reaction-drift`
 
 ---
 
-### 365. What is the rabbit equation in the mean-field grass–rabbit–fox model?
+### 365. Why does the mean-field rabbit model use products of population densities?
 
 **AM 207 · Mean-field dynamics · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-r′=βgr−μr−γrf. It replaces random product moments with products of densities.
+It approximates expected products by products of expected values, dropping covariance between populations. This gives \(r'=\beta gr-\mu r-\gamma rf\) for grass, rabbit, and fox densities g,r,f; it can miss important random dependence.
 
 **Intuition:** Growth comes from food; losses come from death and predators.
 
@@ -6961,7 +6961,7 @@ Card ID: `am207-meanfield`
 <details>
 <summary>Reveal explanation</summary>
 
-r*=δ/γ, because fox growth f(γr−δ) must vanish with f>0.
+\(r^{*}=\delta /\gamma\), because fox growth \(f(\gamma r-\delta )\) must vanish with \(f>0\).
 
 **Intuition:** The prey density must balance predator birth and death.
 
@@ -7056,7 +7056,7 @@ Card ID: `am207-bounded-propensities`
 <details>
 <summary>Reveal explanation</summary>
 
-It holds propensities roughly constant during a time step and samples how many reactions occur.
+It holds reaction rates roughly constant during a time step and samples how many reactions occur.
 
 **Intuition:** Leap over events only while their rates barely change.
 
@@ -7068,14 +7068,14 @@ Card ID: `am207-tau`
 
 ---
 
-### 372. With propensity 12 per second and step 0.1 seconds, what reaction count does tau-leaping draw?
+### 372. With reaction rate 12 per second and step 0.1 seconds, what reaction count does tau-leaping draw?
 
 **AM 207 · Accelerated simulation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Poisson(1.2), with mean and variance 1.2.
+\(\operatorname{Poisson}(1.2)\), with mean and variance 1.2.
 
 **Intuition:** Rate times step length gives expected event count.
 
@@ -7094,7 +7094,7 @@ Card ID: `am207-tau-count-number`
 <details>
 <summary>Reveal explanation</summary>
 
-N/Σtᵢ, the reciprocal of the sample mean.
+\(\frac{N}{\sum_i t_i}\), the reciprocal of the sample mean.
 
 **Intuition:** More events per observed time imply a higher rate.
 
@@ -7144,14 +7144,14 @@ Card ID: `am207-histogram-fit`
 
 ---
 
-### 376. If θ is uniform on (0,1), are its log-odds uniform too?
+### 376. If \(\theta\) is uniform on (0,1), are its log-odds uniform too?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. The transformed density includes a Jacobian and becomes θ(1−θ) in log-odds coordinates.
+No. The transformed density includes a Jacobian and becomes \(\theta (1-\theta )\) in log-odds coordinates.
 
 **Intuition:** “Uniform” depends on how you parameterize uncertainty.
 
@@ -7163,14 +7163,14 @@ Card ID: `am207-prior`
 
 ---
 
-### 377. A Gamma(a,b) shape–rate prior meets N exponential waits totaling T. What is the posterior?
+### 377. A \(\operatorname{Gamma}(a,b)\) shape–rate prior meets N exponential waits totaling T. What is the posterior?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Gamma(a+N,b+T).
+\(\operatorname{Gamma}(a+N,b+T)\).
 
 **Intuition:** Counts update shape; exposure updates rate.
 
@@ -7182,14 +7182,14 @@ Card ID: `am207-gamma-exponential`
 
 ---
 
-### 378. With prior proportional to 1 for ν>0 and waits totaling T>0, what is the posterior?
+### 378. With prior proportional to 1 for \(\nu >0\) and waits totaling \(T>0\), what is the posterior?
 
 **AM 207 · Bayesian inference · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Gamma(N+1,T) in shape–rate form. The flat prior is improper, but this posterior is proper.
+\(\operatorname{Gamma}(N+1,T)\) in shape–rate form. The flat prior is improper, but this posterior is proper.
 
 **Intuition:** An improper prior requires a separate posterior-normalization check.
 
@@ -7220,14 +7220,14 @@ Card ID: `am207-credible-interval-meaning`
 
 ---
 
-### 380. A walk jumps ±Δx, each at rate 1/(2τ). What is its diffusion coefficient?
+### 380. A walk jumps \(\pm \Delta x\), each at rate \(1/(2\tau )\). What is its diffusion coefficient?
 
 **AM 207 · Random-walk limits · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-D=Δx²/(2τ).
+\(D=\frac{(\Delta x)^2}{2\tau}\).
 
 **Intuition:** Spreading depends on squared jump size per unit time.
 
@@ -7239,14 +7239,14 @@ Card ID: `am207-diffusion`
 
 ---
 
-### 381. If jump size halves, how must τ change to keep diffusion fixed?
+### 381. If jump size halves, how must \(\tau\) change to keep diffusion fixed?
 
 **AM 207 · Random-walk limits · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Divide τ by four.
+Divide \(\tau\) by four.
 
 **Intuition:** Halving length requires quadrupling the event frequency.
 
@@ -7265,7 +7265,7 @@ Card ID: `am207-diffusion-scaling`
 <details>
 <summary>Reveal explanation</summary>
 
-As √t: in one dimension, RMS displacement is √(2Dt).
+As \(\sqrt{t}\): in one dimension, RMS displacement is \(\sqrt{2Dt}\).
 
 **Intuition:** Random steps spread more slowly than steady directed motion.
 
@@ -7296,14 +7296,14 @@ Card ID: `am207-probability-views`
 
 ---
 
-### 384. What does uᵀv compute?
+### 384. What does \(u^{\mathsf{T}}v\) compute?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The sum of coordinate products, Σuᵢvᵢ. Geometrically it equals ‖u‖‖v‖cosθ.
+The sum of coordinate products, \(\sum u_{i}v_{i}\). Geometrically it equals \(\Vert u\Vert \Vert v\Vert \cos \theta\).
 
 **Intuition:** The dot product measures alignment.
 
@@ -7322,7 +7322,7 @@ Card ID: `stat244-inner-product`
 <details>
 <summary>Reveal explanation</summary>
 
-‖u‖=√(uᵀu).
+\(\Vert u\Vert =\sqrt{u^{\mathsf{T}}u}\).
 
 **Intuition:** A vector dotted with itself gives squared length.
 
@@ -7341,7 +7341,7 @@ Card ID: `stat244-vector-length`
 <details>
 <summary>Reveal explanation</summary>
 
-−3+28=25.
+\(-3+28=25\).
 
 **Intuition:** Multiply matching coordinates, then add.
 
@@ -7353,7 +7353,7 @@ Card ID: `stat244-inner-example`
 
 ---
 
-### 387. What is the difference between uᵀv and uvᵀ?
+### 387. What is the difference between \(u^{\mathsf{T}}v\) and \(uv^{\mathsf{T}}\)?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
@@ -7372,14 +7372,14 @@ Card ID: `stat244-outer-not-inner`
 
 ---
 
-### 388. What is the span of a set of vectors?
+### 388. What vectors can you reach by scaling and adding a given set of vectors?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Every linear combination of those vectors.
+All their linear combinations. This reachable set is called their span; it includes every direction those vectors can jointly express.
 
 **Intuition:** Span is everything your ingredients can build.
 
@@ -7391,14 +7391,14 @@ Card ID: `stat244-span-definition`
 
 ---
 
-### 389. What makes a spanning set a basis?
+### 389. What makes a set of vectors enough to describe a space without redundancy?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Its vectors are also linearly independent.
+They reach the whole space, and none is a combination of the others. Such a set is a basis: every vector in the space has a unique coefficient description.
 
 **Intuition:** A basis spans the space without redundancy.
 
@@ -7410,14 +7410,14 @@ Card ID: `stat244-basis-definition`
 
 ---
 
-### 390. How do you test linear independence using Xc=0?
+### 390. How do you test linear independence using \(Xc=0\)?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The columns are independent exactly when c=0 is the only solution.
+The columns are independent exactly when \(c=0\) is the only solution.
 
 **Intuition:** No nontrivial combination cancels out.
 
@@ -7429,14 +7429,14 @@ Card ID: `stat244-independence-definition`
 
 ---
 
-### 391. What does rank(X) count?
+### 391. How many independently adjustable prediction directions does a design matrix provide?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The dimension of its column space, equivalently its row space.
+Its rank: the number of independent column directions. Duplicate or redundant columns do not add a new prediction direction.
 
 **Intuition:** Rank counts independent directions represented by the matrix.
 
@@ -7448,14 +7448,14 @@ Card ID: `stat244-rank-definition`
 
 ---
 
-### 392. What is the null space of X?
+### 392. Which changes to regression coefficients leave every prediction unchanged?
 
 **STAT 244 · Linear algebra foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-All coefficient vectors v for which Xv=0.
+Any vector v with \(Xv=0\). Adding it to \(\beta\) leaves \(X\beta\) unchanged. These invisible coefficient changes form the null space of X.
 
 **Intuition:** These input directions disappear under the map.
 
@@ -7474,7 +7474,7 @@ Card ID: `stat244-null-definition`
 <details>
 <summary>Reveal explanation</summary>
 
-Use u(uᵀy)/(uᵀu).
+Use \(u\frac{u^{\mathsf{T}}y}{u^{\mathsf{T}}u}\).
 
 **Intuition:** Measure alignment with u, then reconstruct that component.
 
@@ -7486,7 +7486,7 @@ Card ID: `stat244-projection-line`
 
 ---
 
-### 394. What does XᵀX=I say about X’s columns?
+### 394. What does \(X^{\mathsf{T}}X=I\) say about X’s columns?
 
 **STAT 244 · Orthogonal geometry · QUICK RECALL**
 
@@ -7505,14 +7505,14 @@ Card ID: `stat244-orthonormal-columns`
 
 ---
 
-### 395. If a tall Q has QᵀQ=I, must QQᵀ=I?
+### 395. If a tall Q has \(Q^{\mathsf{T}}Q=I\), must \(QQ^{\mathsf{T}}=I\)?
 
 **STAT 244 · Orthogonal geometry · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. QQᵀ projects onto Q’s column space, which may be smaller than observation space.
+No. \(QQ^{\mathsf{T}}\) projects onto Q’s column space, which may be smaller than observation space.
 
 **Intuition:** A left inverse need not be a two-sided inverse.
 
@@ -7524,14 +7524,14 @@ Card ID: `stat244-rectangular-not-inverse`
 
 ---
 
-### 396. Why is the split into W and W⊥ components unique?
+### 396. Why is the split into W and \(W^{\perp}\) components unique?
 
 **STAT 244 · Orthogonal geometry · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The difference between two candidate splits would lie in both W and W⊥. Only zero can do that.
+The difference between two candidate splits would lie in both W and \(W^{\perp}\). Only zero can do that.
 
 **Intuition:** Perpendicular complementary spaces overlap only at zero.
 
@@ -7543,14 +7543,14 @@ Card ID: `stat244-orthogonal-decomposition-unique`
 
 ---
 
-### 397. What does positive semidefinite mean for a symmetric A?
+### 397. If \(v^{\mathsf{T}}Av\) is never negative, what does that tell you about a symmetric matrix A?
 
 **STAT 244 · Matrix factorizations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-vᵀAv≥0 for every v. Positive definite requires strict positivity for every nonzero v.
+No direction gives a negative quadratic value. This is positive semidefiniteness. Positive definiteness is stronger: every nonzero direction must give a strictly positive value.
 
 **Intuition:** No direction has negative quadratic energy.
 
@@ -7569,7 +7569,7 @@ Card ID: `stat244-psd-definition`
 <details>
 <summary>Reveal explanation</summary>
 
-LLᵀ, with L lower triangular and positive diagonal.
+\(LL^{\mathsf{T}}\), with L lower triangular and positive diagonal.
 
 **Intuition:** A positive quadratic can be built from a triangular factor.
 
@@ -7588,7 +7588,7 @@ Card ID: `stat244-cholesky-role`
 <details>
 <summary>Reveal explanation</summary>
 
-A=QΛQᵀ, with orthonormal eigenvectors in Q and eigenvalues in Λ.
+\(A=Q\Lambda Q^{\mathsf{T}}\), with orthonormal eigenvectors in Q and eigenvalues in \(\Lambda\).
 
 **Intuition:** Rotate to coordinates where the action is diagonal.
 
@@ -7626,7 +7626,7 @@ Card ID: `stat244-positive-eigenvalues`
 <details>
 <summary>Reveal explanation</summary>
 
-vᵀΣv=Var(vᵀY)≥0.
+\(v^{\mathsf{T}}\Sigma v=\operatorname{Var}(v^{\mathsf{T}}Y)\ge 0\).
 
 **Intuition:** Every linear combination must have nonnegative variance.
 
@@ -7664,7 +7664,7 @@ Card ID: `stat244-decorrelate-not-whiten`
 <details>
 <summary>Reveal explanation</summary>
 
-X=UᵣDᵣVᵣᵀ, retaining the r positive singular values.
+\(X=U_{r}D_{r}V_{r}^{\mathsf{T}}\), retaining the r positive singular values.
 
 **Intuition:** Rotate input, stretch r directions, rotate output.
 
@@ -7695,7 +7695,7 @@ Card ID: `stat244-svd-column-space`
 
 ---
 
-### 405. Which SVD vectors span C(Xᵀ)?
+### 405. Which SVD vectors span \(C(X^{\mathsf{T}})\)?
 
 **STAT 244 · Matrix factorizations · QUICK RECALL**
 
@@ -7721,7 +7721,7 @@ Card ID: `stat244-svd-row-space`
 <details>
 <summary>Reveal explanation</summary>
 
-X⁺=VᵣDᵣ⁻¹Uᵣᵀ. Invert only the positive singular values.
+\(X^{+}=V_{r}D_{r}^{-1}U_{r}^{\mathsf{T}}\). Invert only the positive singular values.
 
 **Intuition:** Undo the stretches that actually exist.
 
@@ -7733,14 +7733,14 @@ Card ID: `stat244-svd-pseudoinverse`
 
 ---
 
-### 407. What makes the Moore–Penrose inverse unique beyond XGX=X?
+### 407. What makes the Moore–Penrose inverse unique beyond \(XGX=X\)?
 
 **STAT 244 · Generalized inverses · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-It also satisfies GXG=G, and both XG and GX are symmetric.
+It also satisfies \(GXG=G\), and both XG and GX are symmetric.
 
 **Intuition:** The extra conditions select canonical orthogonal projections.
 
@@ -7752,7 +7752,7 @@ Card ID: `stat244-moore-penrose-conditions`
 
 ---
 
-### 408. Does n≥p guarantee identifiable regression coefficients?
+### 408. Does \(n\ge p\) guarantee identifiable regression coefficients?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -7771,14 +7771,14 @@ Card ID: `stat244-more-observations-not-rank`
 
 ---
 
-### 409. What is intrinsic aliasing?
+### 409. Why can an intercept plus an indicator for every group give nonunique coefficients?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Column dependence built into the model specification, such as an intercept plus all group indicators.
+The indicators sum to the intercept column, so one column is redundant no matter which data you collect. This dependence built into the model is called intrinsic aliasing.
 
 **Intuition:** The redundancy comes from the chosen description.
 
@@ -7790,14 +7790,14 @@ Card ID: `stat244-intrinsic-aliasing`
 
 ---
 
-### 410. What is extrinsic aliasing?
+### 410. Why can a missing group make its regression effect impossible to estimate?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Column dependence caused by the collected data, such as a group level never being observed.
+Its indicator column is all zero in the collected data, so changing that coefficient changes no observed prediction. Dependence caused by the observed sample is called extrinsic aliasing.
 
 **Intuition:** The design can lose information before fitting begins.
 
@@ -7847,14 +7847,14 @@ Card ID: `stat244-quantitative-vs-factor`
 
 ---
 
-### 413. Can a linear model contain x²?
+### 413. Can a linear model contain \(x^{2}\)?
 
 **STAT 244 · Design and coding · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Yes. β₀+β₁x+β₂x² is linear in its unknown coefficients.
+Yes. \(\beta _{0}+\beta _{1}x+\beta _{2}x^{2}\) is linear in its unknown coefficients.
 
 **Intuition:** A curved response can still use linear-model theory.
 
@@ -7904,16 +7904,16 @@ Card ID: `stat244-polynomial-spacing`
 
 ---
 
-### 416. What is the spherical Gaussian linear model?
+### 416. What assumptions does \(y\sim N(X\beta ,\sigma ^{2}I)\) make about the outcomes?
 
 **STAT 244 · Normal linear model · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-y∼N(Xβ,σ²I): mean in C(X), common variance, and independent Gaussian errors.
+Their expected values are \(X\beta\). Their errors are Gaussian, independent, and have the same variance \(\sigma ^{2}\). The notes call the equal-variance covariance structure spherical.
 
-**Intuition:** The design describes the mean; σ²I describes noise.
+**Intuition:** The design describes the mean; \(\sigma ^{2}I\) describes noise.
 
 </details>
 
@@ -7923,14 +7923,14 @@ Card ID: `stat244-normal-model`
 
 ---
 
-### 417. What is the central mean assumption of a linear model?
+### 417. What does a linear model assume it can express about the true expected outcomes?
 
 **STAT 244 · Normal linear model · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The true mean vector belongs to C(X).
+They can be written as \(X\beta\) for some coefficient vector \(\beta\). In geometric language, the true mean is in the column space C(X).
 
 **Intuition:** The model must be able to express the expected signal.
 
@@ -7942,14 +7942,14 @@ Card ID: `stat244-mean-in-space`
 
 ---
 
-### 418. For full-column-rank X, what is β̂OLS?
+### 418. For full-column-rank X, what is \(\hat{\beta}_{\mathrm{OLS}}\)?
 
 **STAT 244 · Least squares estimation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-(XᵀX)⁻¹Xᵀy. Numerically, solve with QR or SVD rather than explicitly forming the inverse.
+\((X^{\mathsf{T}}X)^{-1}X^{\mathsf{T}}y\). Numerically, solve with QR or SVD rather than explicitly forming the inverse.
 
 **Intuition:** The formula identifies the estimator; a solver computes it.
 
@@ -7968,7 +7968,7 @@ Card ID: `stat244-ols-formula`
 <details>
 <summary>Reveal explanation</summary>
 
-With fixed X, β̂ is a fixed matrix times y.
+With fixed X, \(\hat{\beta}\) is a fixed matrix times y.
 
 **Intuition:** Linearity here concerns y, not the predictor shapes.
 
@@ -7980,14 +7980,14 @@ Card ID: `stat244-ols-linear`
 
 ---
 
-### 420. Under Var(y)=σ²I, what is Var(β̂) for full-rank X?
+### 420. Under \(\operatorname{Var}(y)=\sigma ^{2}I\), what is \(\operatorname{Var}(\hat{\beta})\) for full-rank X?
 
 **STAT 244 · Least squares estimation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-σ²(XᵀX)⁻¹.
+\(\sigma ^{2}(X^{\mathsf{T}}X)^{-1}\).
 
 **Intuition:** Weak design directions create large coefficient uncertainty.
 
@@ -7999,14 +7999,14 @@ Card ID: `stat244-ols-covariance`
 
 ---
 
-### 421. Under the correct spherical linear model, what are E[ŷ] and Var(ŷ)?
+### 421. Under the correct spherical linear model, what are \(E[\hat{y}]\) and \(\operatorname{Var}(\hat{y})\)?
 
 **STAT 244 · Least squares estimation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-E[ŷ]=Xβ and Var(ŷ)=σ²H.
+\(E[\hat{y}]=X\beta\) and \(\operatorname{Var}(\hat{y})=\sigma ^{2}H\).
 
 **Intuition:** The fit is unbiased for the mean but still random.
 
@@ -8018,14 +8018,14 @@ Card ID: `stat244-fit-covariance`
 
 ---
 
-### 422. Why do OLS and Gaussian maximum likelihood choose the same β?
+### 422. Why do OLS and Gaussian maximum likelihood choose the same \(\beta\)?
 
 **STAT 244 · Least squares estimation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-For fixed positive σ², maximizing likelihood is equivalent to minimizing residual SSE.
+For fixed positive \(\sigma ^{2}\), maximizing likelihood is equivalent to minimizing residual SSE.
 
 **Intuition:** Gaussian likelihood penalizes squared errors.
 
@@ -8063,7 +8063,7 @@ Card ID: `stat244-fit-closer-than-truth`
 <details>
 <summary>Reveal explanation</summary>
 
-TSS=explained sum of squares+residual SSE.
+\(\operatorname{TSS}=\text{explained sum of squares}+\operatorname{SSE}\).
 
 **Intuition:** The intercept separates the mean from variation around it.
 
@@ -8075,16 +8075,16 @@ Card ID: `stat244-centered-decomposition`
 
 ---
 
-### 425. What is R² for OLS with an intercept and nonzero TSS?
+### 425. What is \(R^{2}\) for OLS with an intercept and nonzero TSS?
 
 **STAT 244 · Explained variation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-1−SSE/TSS.
+\(1-\operatorname{SSE}/\operatorname{TSS}\).
 
-**Intuition:** R² measures the fraction of centered training variation fitted.
+**Intuition:** \(R^{2}\) measures the fraction of centered training variation fitted.
 
 </details>
 
@@ -8094,7 +8094,7 @@ Card ID: `stat244-r-squared-definition`
 
 ---
 
-### 426. Why can training R² rise when you add a useless predictor?
+### 426. Why can training \(R^{2}\) rise when you add a useless predictor?
 
 **STAT 244 · Explained variation · QUICK RECALL**
 
@@ -8113,7 +8113,7 @@ Card ID: `stat244-r-squared-monotone`
 
 ---
 
-### 427. Does a high R² establish a causal explanation?
+### 427. Does a high \(R^{2}\) establish a causal explanation?
 
 **STAT 244 · Explained variation · QUICK RECALL**
 
@@ -8132,14 +8132,14 @@ Card ID: `stat244-r-squared-not-causal`
 
 ---
 
-### 428. How is R² related to the correlation between y and ŷ?
+### 428. How is \(R^{2}\) related to the correlation between y and \(\hat{y}\)?
 
 **STAT 244 · Explained variation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-For OLS with an intercept and nonconstant fit, R²=Corr(y,ŷ)².
+For OLS with an intercept and nonconstant fit, \(R^{2}=\operatorname{Corr}(y,\hat{y})^{2}\).
 
 **Intuition:** Projection geometry connects explained variation to alignment.
 
@@ -8151,14 +8151,14 @@ Card ID: `stat244-fit-correlation`
 
 ---
 
-### 429. For known positive-definite V and full-rank X, what is β̂GLS?
+### 429. For known positive-definite V and full-rank X, what is \(\hat{\beta}_{\mathrm{GLS}}\)?
 
 **STAT 244 · Generalized least squares · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-(XᵀV⁻¹X)⁻¹XᵀV⁻¹y.
+\((X^{\mathsf{T}}V^{-1}X)^{-1}X^{\mathsf{T}}V^{-1}y\).
 
 **Intuition:** Weight by precision before solving for coefficients.
 
@@ -8170,14 +8170,14 @@ Card ID: `stat244-gls-estimator`
 
 ---
 
-### 430. What is Var(β̂GLS) when Var(y)=σ²V?
+### 430. What is \(\operatorname{Var}(\hat{\beta}_{\mathrm{GLS}})\) when \(\operatorname{Var}(y)=\sigma ^{2}V\)?
 
 **STAT 244 · Generalized least squares · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-σ²(XᵀV⁻¹X)⁻¹, assuming full column rank.
+\(\sigma ^{2}(X^{\mathsf{T}}V^{-1}X)^{-1}\), assuming full column rank.
 
 **Intuition:** The precision-weighted design determines uncertainty.
 
@@ -8215,7 +8215,7 @@ Card ID: `stat244-gls-oblique`
 <details>
 <summary>Reveal explanation</summary>
 
-Yes, possibly degenerate. Its mean is Aμ+b and covariance AΣAᵀ.
+Yes, possibly degenerate. Its mean is \(A\mu +b\) and covariance \(A\Sigma A^{\mathsf{T}}\).
 
 **Intuition:** Linear transformations preserve the Gaussian family.
 
@@ -8227,7 +8227,7 @@ Card ID: `stat244-normal-linear-map`
 
 ---
 
-### 433. What does (y−μ)ᵀΣ⁻¹(y−μ) measure?
+### 433. What does \((y-\mu )^{\mathsf{T}}\Sigma ^{-1}(y-\mu )\) measure?
 
 **STAT 244 · Inference distributions · QUICK RECALL**
 
@@ -8246,7 +8246,7 @@ Card ID: `stat244-mahalanobis-distance`
 
 ---
 
-### 434. For a positive integer n, what is Γ(n)?
+### 434. For a positive integer n, what is \(\Gamma (n)\)?
 
 **STAT 244 · Inference distributions · QUICK RECALL**
 
@@ -8272,7 +8272,7 @@ Card ID: `stat244-gamma-integer`
 <details>
 <summary>Reveal explanation</summary>
 
-Γ(x+1)=xΓ(x), for x>0.
+\(\Gamma (x+1)=x\Gamma (x)\), for \(x>0\).
 
 **Intuition:** It extends the factorial recursion to nonintegers.
 
@@ -8291,7 +8291,7 @@ Card ID: `stat244-gamma-recursion`
 <details>
 <summary>Reveal explanation</summary>
 
-χ² with one degree of freedom.
+\(\chi ^{2}\) with one degree of freedom.
 
 **Intuition:** One independent squared Gaussian contributes one degree of freedom.
 
@@ -8310,7 +8310,7 @@ Card ID: `stat244-chi-square-one`
 <details>
 <summary>Reveal explanation</summary>
 
-Z/√(W/r), with Z∼N(0,1), W∼χ²ᵣ, and independence.
+\(\frac{Z}{\sqrt{W/r}}\), with \(Z\sim N(0,1)\), \(W\sim \chi ^{2r}\), and independence.
 
 **Intuition:** A noisy variance estimate rescales a standard Gaussian.
 
@@ -8329,7 +8329,7 @@ Card ID: `stat244-t-construction`
 <details>
 <summary>Reveal explanation</summary>
 
-(W/p)/(U/q) has F(p,q) when W∼χ²ₚ and U∼χ²q.
+\((W/p)/(U/q)\) has F(p,q) when \(W\sim \chi ^{2}_{p}\) and \(U\sim\chi_q^2\).
 
 **Intuition:** Compare independent variance-like quantities after scaling by df.
 
@@ -8341,7 +8341,7 @@ Card ID: `stat244-f-construction`
 
 ---
 
-### 439. If T∼tᵣ, what is T² distributed as?
+### 439. If \(T\sim t_{r}\), what is \(T^{2}\) distributed as?
 
 **STAT 244 · Inference distributions · QUICK RECALL**
 
@@ -8379,14 +8379,14 @@ Card ID: `stat244-f-independence`
 
 ---
 
-### 441. Under a full-rank Gaussian linear model, what distribution does β̂ have?
+### 441. Under a full-rank Gaussian linear model, what distribution does \(\hat{\beta}\) have?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-N(β,σ²(XᵀX)⁻¹).
+\(N(\beta ,\sigma ^{2}(X^{\mathsf{T}}X)^{-1})\).
 
 **Intuition:** OLS is a linear transformation of Gaussian data.
 
@@ -8398,14 +8398,14 @@ Card ID: `stat244-coefficient-gaussian`
 
 ---
 
-### 442. What is the estimated SE of aᵀβ̂?
+### 442. What is the estimated SE of \(a^{\mathsf{T}}\hat{\beta}\)?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-s√(aᵀ(XᵀX)⁻¹a), for full-rank OLS.
+\(s\sqrt{a^{\mathsf{T}}(X^{\mathsf{T}}X)^{-1}a}\), for full-rank OLS.
 
 **Intuition:** A contrast’s uncertainty includes covariance between coefficients.
 
@@ -8424,7 +8424,7 @@ Card ID: `stat244-contrast-se`
 <details>
 <summary>Reveal explanation</summary>
 
-Some coefficient combinations are measured more precisely than others, as encoded by XᵀX.
+Some coefficient combinations are measured more precisely than others, as encoded by \(X^{\mathsf{T}}X\).
 
 **Intuition:** Uncertainty has direction as well as size.
 
@@ -8569,14 +8569,14 @@ Card ID: `stat244-qq-role`
 
 ---
 
-### 451. What is an observation’s leverage hᵢᵢ?
+### 451. Which observations can pull their own fitted values most strongly toward their responses?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Its diagonal entry in H. It measures how unusual its predictor position is relative to the design.
+Those with high leverage \(h_{ii}\), a diagonal entry of the hat matrix H. Their predictor positions are unusual relative to the design. Leverage depends on predictors, not on whether the observed response is surprising.
 
 **Intuition:** Leverage concerns x, not an unusual response y.
 
@@ -8633,7 +8633,7 @@ Card ID: `stat244-leverage-bounds`
 <details>
 <summary>Reveal explanation</summary>
 
-r/n, because Σhᵢᵢ=r.
+\(r/n\), because \(\sum_i h_{ii}=r\).
 
 **Intuition:** Total fitted dimension is distributed across observations.
 
@@ -8645,14 +8645,14 @@ Card ID: `stat244-leverage-average`
 
 ---
 
-### 455. How does yᵢ affect its own fitted value?
+### 455. How does \(y_{i}\) affect its own fitted value?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-∂ŷᵢ/∂yᵢ=hᵢᵢ.
+\(\partial \hat{y}_{i}/\partial y_{i}=h_{ii}\).
 
 **Intuition:** High leverage gives an observation more pull on its own fit.
 
@@ -8664,14 +8664,14 @@ Card ID: `stat244-leverage-sensitivity`
 
 ---
 
-### 456. Under spherical errors, what is Var(e)?
+### 456. Under equal-variance, uncorrelated errors, what is \(\operatorname{Var}(e)\)?
 
 **STAT 244 · Regression diagnostics · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-σ²(I−H).
+\(\sigma ^{2}(I-H)\).
 
 **Intuition:** Fitting changes both residual variances and their correlations.
 
@@ -8690,7 +8690,7 @@ Card ID: `stat244-residual-covariance`
 <details>
 <summary>Reveal explanation</summary>
 
-Var(eᵢ)=σ²(1−hᵢᵢ). The fit follows them more closely.
+\(\operatorname{Var}(e_{i})=\sigma ^{2}(1-h_{ii})\). The fit follows them more closely.
 
 **Intuition:** A small residual need not mean little influence.
 
@@ -8709,7 +8709,7 @@ Card ID: `stat244-residual-variance`
 <details>
 <summary>Reveal explanation</summary>
 
-Generally not. Their off-diagonal covariances are −σ²hᵢⱼ.
+Generally not. Their off-diagonal covariances are \(-\sigma ^{2}h_{ij}\).
 
 **Intuition:** Fitting links observations through the shared model.
 
@@ -8728,7 +8728,7 @@ Card ID: `stat244-residual-correlated`
 <details>
 <summary>Reveal explanation</summary>
 
-rᵢ=eᵢ/[s√(1−hᵢᵢ)], when the denominator is positive.
+\(r_i=\frac{e_i}{s\sqrt{1-h_{ii}}}\), when the denominator is positive.
 
 **Intuition:** Raw residuals do not all have the same variance.
 
@@ -8766,7 +8766,7 @@ Card ID: `stat244-internal-not-t`
 <details>
 <summary>Reveal explanation</summary>
 
-Use s estimated with observation i omitted: eᵢ/[s₍ᵢ₎√(1−hᵢᵢ)].
+Use s estimated with observation i omitted: \(\frac{e_i}{s_{(i)}\sqrt{1-h_{ii}}}\).
 
 **Intuition:** Estimate noise without the point being checked.
 
@@ -8873,14 +8873,14 @@ Card ID: `stat244-qq-studentized`
 
 ---
 
-### 467. What happens to XᵀX when observation i is removed?
+### 467. What happens to \(X^{\mathsf{T}}X\) when observation i is removed?
 
 **STAT 244 · Deletion diagnostics · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Subtract xᵢᵀxᵢ.
+Subtract \(x_{i}^{\mathsf{T}}x_{i}\).
 
 **Intuition:** One deleted row is a rank-one update to the Gram matrix.
 
@@ -8918,7 +8918,7 @@ Card ID: `stat244-smw-purpose`
 <details>
 <summary>Reveal explanation</summary>
 
-It is eᵢ/(1−hᵢᵢ), provided deleting the point preserves rank.
+It is \(\frac{e_i}{1-h_{ii}}\), provided deleting the point preserves rank.
 
 **Intuition:** The full fit hides some error by fitting the point itself.
 
@@ -8937,7 +8937,7 @@ Card ID: `stat244-deleted-residual`
 <details>
 <summary>Reveal explanation</summary>
 
-Deletion formulas divide by 1−hᵢᵢ, which becomes small.
+Deletion formulas divide by \(1-h_{ii}\), which becomes small.
 
 **Intuition:** A point with strong pull can be hard to replace.
 
@@ -8949,7 +8949,7 @@ Card ID: `stat244-delete-high-leverage`
 
 ---
 
-### 471. What warning does hᵢᵢ=1 give for ordinary deletion formulas?
+### 471. What warning does \(h_{ii}=1\) give for ordinary deletion formulas?
 
 **STAT 244 · Deletion diagnostics · QUICK RECALL**
 
@@ -8987,14 +8987,14 @@ Card ID: `stat244-outlier-vs-leverage`
 
 ---
 
-### 473. What does influence ask?
+### 473. How can you check whether one observation strongly drives the fitted model?
 
 **STAT 244 · Leverage and influence · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-How much the fitted model changes when an observation is removed.
+Remove it, refit, and compare coefficients or predictions. A large change indicates influence; an unusual predictor value alone does not establish that.
 
 **Intuition:** Influence is about the fit’s dependence on a point.
 
@@ -9051,7 +9051,7 @@ Card ID: `stat244-cooks-definition`
 <details>
 <summary>Reveal explanation</summary>
 
-Dᵢ=(rᵢ²/p)hᵢᵢ/(1−hᵢᵢ), using the internally studentized residual.
+\(D_i=\frac{r_i^2}{p}\frac{h_{ii}}{1-h_{ii}}\), using the internally studentized residual.
 
 **Intuition:** Large residuals and high leverage reinforce each other.
 
@@ -9108,7 +9108,7 @@ Card ID: `stat244-dffits-dfbetas`
 <details>
 <summary>Reveal explanation</summary>
 
-It is every mean vector the model can express: all Xβ. It contains zero and is closed under addition and scaling.
+It is every mean vector the model can express: all \(X\beta\). It contains zero and is closed under addition and scaling.
 
 **Intuition:** The column space is the model’s menu of possible means.
 
@@ -9120,14 +9120,14 @@ Card ID: `stat244-space`
 
 ---
 
-### 480. For an n×p design X, do coefficients and fitted values live in the same space?
+### 480. For an \(n\times p\) design X, do coefficients and fitted values live in the same space?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Usually not. β lives in ℝᵖ; Xβ lives in ℝⁿ.
+Usually not. \(\beta\) lives in \(\mathbb{R}^{p}\); \(X\beta\) lives in \(\mathbb{R}^{n}\).
 
 **Intuition:** Coefficients describe features; fitted values describe observations.
 
@@ -9139,14 +9139,14 @@ Card ID: `stat244-ambient-dimensions`
 
 ---
 
-### 481. A 10×4 design has rank 3. How many coefficient directions are invisible?
+### 481. A \(10\times 4\) design has rank 3. How many coefficient directions are invisible?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-One: dim N(X)=4−3. Moving along it leaves Xβ unchanged.
+One: dim \(N(X)=4-3\). Moving along it leaves \(X\beta\) unchanged.
 
 **Intuition:** Rank counts visible directions; nullity counts invisible ones.
 
@@ -9203,7 +9203,7 @@ Card ID: `stat244-null`
 <details>
 <summary>Reveal explanation</summary>
 
-Xv=0 says every row has dot product zero with v. The same is then true for every combination of rows.
+\(Xv=0\) says every row has dot product zero with v. The same is then true for every combination of rows.
 
 **Intuition:** A null direction is invisible to every row.
 
@@ -9215,7 +9215,7 @@ Card ID: `stat244-nullspace-test`
 
 ---
 
-### 485. Project y=(1,2,6) onto the constant vectors. What do you get?
+### 485. Project \(y=(1,2,6)\) onto the constant vectors. What do you get?
 
 **STAT 244 · Fundamental subspaces · QUICK RECALL**
 
@@ -9234,14 +9234,14 @@ Card ID: `stat244-orthogonal-decomposition-example`
 
 ---
 
-### 486. When can ℓᵀβ be estimated linearly and without bias?
+### 486. When can the data support an unbiased estimate of a coefficient combination \(\ell ^{\mathsf{T}}\beta\)?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-When ℓ is in X’s row space. Then ℓ=Xᵀa for some a, and aᵀy estimates the target unbiasedly.
+When \(\ell\) lies in the row space of X. Then \(\ell =X^{\mathsf{T}}a\) for some a, so \(a^{\mathsf{T}}y\) has expected value \(\ell ^{\mathsf{T}}\beta\). The combination is then called estimable.
 
 **Intuition:** An estimable target cannot depend on invisible coefficient directions.
 
@@ -9253,14 +9253,14 @@ Card ID: `stat244-estimable`
 
 ---
 
-### 487. With X=[x x], which is identifiable: β₁ or β₁+β₂?
+### 487. With \(X=\begin{bmatrix}x&x\end{bmatrix}\), which is identifiable: \(\beta _{1}\) or \(\beta _{1}+\beta _{2}\)?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The sum. The mean is x(β₁+β₂), so the data cannot separate the two contributions.
+The sum. The mean is \(x(\beta _{1}+\beta _{2})\), so the data cannot separate the two contributions.
 
 **Intuition:** Duplicate features reveal a total, not its allocation.
 
@@ -9272,14 +9272,14 @@ Card ID: `stat244-duplicate-columns`
 
 ---
 
-### 488. If ℓ=Xᵀa, why is aᵀy unbiased for ℓᵀβ?
+### 488. If \(\ell =X^{\mathsf{T}}a\), why is \(a^{\mathsf{T}}y\) unbiased for \(\ell ^{\mathsf{T}}\beta\)?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-E[aᵀy]=aᵀXβ=ℓᵀβ, assuming E[y]=Xβ.
+\(E[a^{\mathsf{T}}y]=a^{\mathsf{T}}X\beta =\ell ^{\mathsf{T}}\beta\), assuming \(E[y]=X\beta\).
 
 **Intuition:** Match the estimator’s mean to the target.
 
@@ -9291,14 +9291,14 @@ Card ID: `stat244-construct-unbiased-estimator`
 
 ---
 
-### 489. Can γ₂−γ₁ be identifiable when individual group effects are not?
+### 489. Can \(\gamma _{2}-\gamma _{1}\) be identifiable when individual group effects are not?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Yes. In μᵢ=α+γᵢ, the difference is μ₂−μ₁ for observed groups. A common shift in effects cancels.
+Yes. In \(\mu _{i}=\alpha +\gamma _{i}\), the difference is \(\mu _{2}-\mu _{1}\) for observed groups. A common shift in effects cancels.
 
 **Intuition:** Differences can be identifiable even when baselines are arbitrary.
 
@@ -9310,14 +9310,14 @@ Card ID: `stat244-contrast-invariance`
 
 ---
 
-### 490. With rank-deficient X, when is a new mean x₀β uniquely determined?
+### 490. With rank-deficient X, when is a new mean \(x_{0}\beta\) uniquely determined?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-When x₀ is in X’s row space. Otherwise two equally valid coefficient vectors can predict different new means.
+When \(x_{0}\) is in X’s row space. Otherwise two equally valid coefficient vectors can predict different new means.
 
 **Intuition:** Training-fit agreement does not guarantee prediction agreement everywhere.
 
@@ -9424,14 +9424,14 @@ Card ID: `stat244-recode`
 
 ---
 
-### 496. If X*=XA and X has full column rank, how do coefficients transform?
+### 496. If \(X^{*}=XA\) and X has full column rank, how do coefficients transform?
 
 **STAT 244 · Reparameterization · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-β=Aγ, or γ=A⁻¹β, so Xβ=X*γ.
+\(\beta =A\gamma\), or \(\gamma =A^{-1}\beta\), so \(X\beta =X^{*}\gamma\).
 
 **Intuition:** The coefficients must compensate for the changed basis.
 
@@ -9462,14 +9462,14 @@ Card ID: `stat244-column-space-converse`
 
 ---
 
-### 498. If β̂ is one least-squares solution, what are all the others?
+### 498. If \(\hat{\beta}\) is one least-squares solution, what are all the others?
 
 **STAT 244 · Rank-deficient least squares · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-β̂+N(X). Adding a null vector changes coefficients but leaves the fitted values unchanged.
+\(\hat{\beta}+N(X)\). Adding a null vector changes coefficients but leaves the fitted values unchanged.
 
 **Intuition:** Nonunique solutions form a shifted null space.
 
@@ -9481,14 +9481,14 @@ Card ID: `stat244-affine`
 
 ---
 
-### 499. If X=[x x] and the best fit is 3x, what coefficient pairs work?
+### 499. If \(X=\begin{bmatrix}x&x\end{bmatrix}\) and the best fit is 3x, what coefficient pairs work?
 
 **STAT 244 · Rank-deficient least squares · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Every pair with β₁+β₂=3, such as (3,0) or (1,2).
+Every pair with \(\beta _{1}+\beta _{2}=3\), such as (3,0) or (1,2).
 
 **Intuition:** One fit can have many coefficient explanations.
 
@@ -9507,7 +9507,7 @@ Card ID: `stat244-affine-example`
 <details>
 <summary>Reveal explanation</summary>
 
-No. “Normal” means perpendicular: Xᵀ(y−Xβ̂)=0. This follows from least-squares geometry alone.
+No. “Normal” means perpendicular: \(X^{\mathsf{T}}(y-X\hat{\beta})=0\). This follows from least-squares geometry alone.
 
 **Intuition:** The name refers to a right angle, not a distribution.
 
@@ -9519,14 +9519,14 @@ Card ID: `stat244-normal`
 
 ---
 
-### 501. What is the gradient of ‖y−Xβ‖²?
+### 501. What is the gradient of \(\Vert y-X\beta \Vert ^{2}\)?
 
 **STAT 244 · Least-squares geometry · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-2Xᵀ(Xβ−y). Setting it to zero gives XᵀXβ=Xᵀy.
+\(2X^{\mathsf{T}}(X\beta -y)\). Setting it to zero gives \(X^{\mathsf{T}}X\beta =X^{\mathsf{T}}y\).
 
 **Intuition:** At the optimum, no predictor direction reduces squared error.
 
@@ -9545,7 +9545,7 @@ Card ID: `stat244-differentiate-loss`
 <details>
 <summary>Reveal explanation</summary>
 
-They are perpendicular to every design column, including the all-ones column. So 1ᵀe=0.
+They are perpendicular to every design column, including the all-ones column. So \(1^{\mathsf{T}}e=0\).
 
 **Intuition:** An intercept forces the average residual to zero.
 
@@ -9583,7 +9583,7 @@ Card ID: `stat244-fitted-orthogonality`
 <details>
 <summary>Reveal explanation</summary>
 
-P²=P and Pᵀ=P. Applying it twice changes nothing, and symmetry makes the projection perpendicular.
+\(P^{2}=P\) and \(P^{\mathsf{T}}=P\). Applying it twice changes nothing, and symmetry makes the projection perpendicular.
 
 **Intuition:** Idempotence gives a projection; symmetry makes it orthogonal.
 
@@ -9595,14 +9595,14 @@ Card ID: `stat244-projection`
 
 ---
 
-### 505. Is P²=P alone enough for an orthogonal projection?
+### 505. Is \(P^{2}=P\) alone enough for an orthogonal projection?
 
 **STAT 244 · Projection matrices · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. [[1,1],[0,0]] is idempotent but not symmetric. It projects at a slant.
+No. \(\begin{bmatrix}1&1\\0&0\end{bmatrix}\) is idempotent but not symmetric. It projects at a slant.
 
 **Intuition:** A projection can be oblique.
 
@@ -9621,7 +9621,7 @@ Card ID: `stat244-idempotent-not-orthogonal`
 <details>
 <summary>Reveal explanation</summary>
 
-Only 0 or 1: λ²=λ. A direction is either removed or retained.
+Only 0 or 1: \(\lambda ^{2}=\lambda\). A direction is either removed or retained.
 
 **Intuition:** A projector selects directions rather than stretching them.
 
@@ -9652,7 +9652,7 @@ Card ID: `stat244-hat-trace`
 
 ---
 
-### 508. For nested models, what does (P₁−P₀)y represent?
+### 508. For nested models, what does \((P_{1}-P_{0})y\) represent?
 
 **STAT 244 · Nested models · QUICK RECALL**
 
@@ -9671,14 +9671,14 @@ Card ID: `stat244-nested`
 
 ---
 
-### 509. If V₀⊆V₁, why is P₁P₀=P₀?
+### 509. If \(V_{0}\subseteq V_{1}\), why is \(P_{1}P_{0}=P_{0}\)?
 
 **STAT 244 · Nested models · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-After projecting into V₀, the vector already lies in V₁. Projecting into V₁ cannot change it.
+After projecting into \(V_{0}\), the vector already lies in \(V_{1}\). Projecting into \(V_{1}\) cannot change it.
 
 **Intuition:** A larger space already contains the smaller fit.
 
@@ -9697,7 +9697,7 @@ Card ID: `stat244-nesting-product`
 <details>
 <summary>Reveal explanation</summary>
 
-No. diag(0,1)−diag(1,0)=diag(−1,1), which is not idempotent. The usual difference rule requires nested spaces.
+No. \(\operatorname{diag}(0,1)-\operatorname{diag}(1,0)=\operatorname{diag}(-1,1)\), which is not idempotent. The usual difference rule requires nested spaces.
 
 **Intuition:** Subtracting unrelated model spaces is not “extra fit.”
 
@@ -9804,14 +9804,14 @@ Card ID: `stat244-remove-intercept-caveat`
 
 ---
 
-### 516. Why divide residual SSE by n−rank(X) to estimate noise variance unbiasedly?
+### 516. Why divide residual SSE by \(n-\operatorname{rank}(X)\) to estimate noise variance unbiasedly?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Fitting uses rank(X) directions. Under spherical errors and the correct mean model, only n−rank(X) noise directions remain in the residual.
+Fitting uses \(\operatorname{rank}(X)\) directions. Under equal-variance, uncorrelated errors and the correct mean model, only \(n-\operatorname{rank}(X)\) noise directions remain in the residual.
 
 **Intuition:** Fitted directions consume residual degrees of freedom.
 
@@ -9823,14 +9823,14 @@ Card ID: `stat244-variance`
 
 ---
 
-### 517. n=20, rank(X)=4, SSE=80. What is the unbiased variance estimate?
+### 517. \(n=20\), \(\operatorname{rank}(X)=4\), \(\operatorname{SSE}=80\). What is the unbiased variance estimate?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-80/(20−4)=5.
+\(80/(20-4)=5\).
 
 **Intuition:** Divide by residual dimensions, not total observations.
 
@@ -9842,14 +9842,14 @@ Card ID: `stat244-variance-numeric`
 
 ---
 
-### 518. Why is SSE/n a likelihood maximum for Gaussian variance when SSE>0?
+### 518. Why is \(\operatorname{SSE}/n\) a likelihood maximum for Gaussian variance when \(\operatorname{SSE}>0\)?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-At s=SSE/n, the derivative of ℓ(s) is zero and its second derivative is negative.
+At \(s=\operatorname{SSE}/n\), the derivative of \(\ell (s)\) is zero and its second derivative is negative.
 
 **Intuition:** Check curvature, not just the stationary point.
 
@@ -9887,7 +9887,7 @@ Card ID: `stat244-blue`
 <details>
 <summary>Reveal explanation</summary>
 
-No. With fixed full-rank X, E[y]=Xβ is enough. Gaussianity matters for exact finite-sample t and F inference.
+No. With fixed full-rank X, \(E[y]=X\beta\) is enough. Gaussianity matters for exact finite-sample t and F inference.
 
 **Intuition:** Estimation and exact inference require different assumptions.
 
@@ -9906,7 +9906,7 @@ Card ID: `stat244-normality-separation`
 <details>
 <summary>Reveal explanation</summary>
 
-BGB=B. It need not satisfy BG=I or be unique.
+\(BGB=B\). It need not satisfy \(BG=I\) or be unique.
 
 **Intuition:** A generalized inverse only has to undo B where B acts.
 
@@ -9918,14 +9918,14 @@ Card ID: `stat244-ginverse`
 
 ---
 
-### 522. For B=diag(1,0), why does G=diag(1,t) work for any t?
+### 522. For \(B=\operatorname{diag}(1,0)\), why does \(G=\operatorname{diag}(1,t)\) work for any t?
 
 **STAT 244 · Generalized inverses · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-BGB=B whatever t is. Multiplication by B erases the second direction.
+\(BGB=B\) whatever t is. Multiplication by B erases the second direction.
 
 **Intuition:** The generalized-inverse rule leaves invisible directions unconstrained.
 
@@ -9944,9 +9944,9 @@ Card ID: `stat244-ginverse-example`
 <details>
 <summary>Reveal explanation</summary>
 
-A⁻¹G, since (BA)(A⁻¹G)(BA)=BGBA=BA.
+\(A^{-1}G\), since (BA)(\(A^{-1}G\))(BA)=BGBA=BA.
 
-**Intuition:** Cancel A next to its inverse, then use BGB=B.
+**Intuition:** Cancel A next to its inverse, then use \(BGB=B\).
 
 </details>
 
@@ -9963,7 +9963,7 @@ Card ID: `stat244-ginverse-product`
 <details>
 <summary>Reveal explanation</summary>
 
-GA⁻¹, since (AB)(GA⁻¹)(AB)=A(BGB)=AB.
+\(GA^{-1}\), since \((AB)(GA^{-1})(AB)=A(BGB)=AB\).
 
 **Intuition:** The inverse must go on the correct side.
 
@@ -9994,7 +9994,7 @@ Card ID: `stat244-projector-unique`
 
 ---
 
-### 526. For X=[[1,0],[1,0]] and y=(1,3), what is the fit?
+### 526. For \(X=\begin{bmatrix}1&0\\1&0\end{bmatrix}\) and \(y=(1,3)\), what is the fit?
 
 **STAT 244 · Rank deficiency · QUICK RECALL**
 
@@ -10020,7 +10020,7 @@ Card ID: `stat244-g-inverse-fitted-numeric`
 <details>
 <summary>Reveal explanation</summary>
 
-Moving elsewhere within the subspace adds a perpendicular squared-distance term: ‖y−μ‖²=‖y−μ̂‖²+‖μ̂−μ‖².
+Moving elsewhere within the subspace adds a perpendicular squared-distance term: \(\Vert y-\mu \Vert ^{2}=\Vert y-\hat{\mu}\Vert ^{2}+\Vert \hat{\mu}-\mu \Vert ^{2}\).
 
 **Intuition:** Every alternative adds nonnegative extra distance.
 
@@ -10032,14 +10032,14 @@ Card ID: `stat244-pythagoras`
 
 ---
 
-### 528. Why can a linear unbiased competitor not beat OLS under spherical errors?
+### 528. Why can a linear unbiased competitor not beat OLS under equal-variance, uncorrelated errors?
 
 **STAT 244 · Gauss–Markov proof · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Its covariance is OLS covariance plus σ²AAᵀ for some AX=0. The added term is positive semidefinite.
+Its covariance is OLS covariance plus \(\sigma ^{2}AA^{\mathsf{T}}\) for some \(AX=0\). The added term is positive semidefinite.
 
 **Intuition:** Extra unbiased adjustments add noise, not information.
 
@@ -10051,14 +10051,14 @@ Card ID: `stat244-blue-proof`
 
 ---
 
-### 529. A linear unbiased contrast estimator adds weights z with Xᵀz=0. What variance does that add?
+### 529. A linear unbiased contrast estimator adds weights z with \(X^{\mathsf{T}}z=0\). What variance does that add?
 
 **STAT 244 · Gauss–Markov proof · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-σ²‖z‖² under Var(y)=σ²I.
+\(\sigma ^{2}\Vert z\Vert ^{2}\) under \(\operatorname{Var}(y)=\sigma ^{2}I\).
 
 **Intuition:** Weighting pure residual directions adds noise to the target.
 
@@ -10077,7 +10077,7 @@ Card ID: `stat244-contrast-variance-gap`
 <details>
 <summary>Reveal explanation</summary>
 
-It measures residual size using V⁻¹ when Var(y)=σ²V: minimize eᵀV⁻¹e.
+It measures residual size using \(V^{-1}\) when \(\operatorname{Var}(y)=\sigma ^{2}V\): minimize \(e^{\mathsf{T}}V^{-1}e\).
 
 **Intuition:** Judge errors relative to their covariance structure.
 
@@ -10096,7 +10096,7 @@ Card ID: `stat244-gls`
 <details>
 <summary>Reveal explanation</summary>
 
-Transforming y by V⁻¹ᐟ² changes its mean to V⁻¹ᐟ²Xβ too. Leaving X unchanged would change the model.
+Transforming y by \(V^{-\frac{1}{2}}\) changes its mean to \(V^{-\frac{1}{2}}X\beta\) too. Leaving X unchanged would change the model.
 
 **Intuition:** Transform the data and its expected signal together.
 
@@ -10115,7 +10115,7 @@ Card ID: `stat244-whitening-covariance`
 <details>
 <summary>Reveal explanation</summary>
 
-1 and 1/4, proportional to inverse variance.
+1 and \(\frac{1}{4}\), proportional to inverse variance.
 
 **Intuition:** Trust the noisier measurement less.
 
@@ -10134,7 +10134,7 @@ Card ID: `stat244-weights`
 <details>
 <summary>Reveal explanation</summary>
 
-(2+8/4)/(1+1/4)=3.2.
+\((2+\frac{8}{4})/(1+\frac{1}{4})=3.2\).
 
 **Intuition:** The estimate leans toward the more precise observation.
 
@@ -10153,7 +10153,7 @@ Card ID: `stat244-weighted-mean`
 <details>
 <summary>Reveal explanation</summary>
 
-χ² with r degrees of freedom: a sum of r independent squared standard normals.
+\(\chi ^{2}\) with r degrees of freedom: a sum of r independent squared standard normals.
 
 **Intuition:** Degrees of freedom count independent squared noise directions.
 
@@ -10165,16 +10165,16 @@ Card ID: `stat244-cochran`
 
 ---
 
-### 535. What are the mean and variance of Z₁²+Z₂² for independent standard normals?
+### 535. What are the mean and variance of \(Z_{1}^{2}+Z_{2}^{2}\) for independent standard normals?
 
 **STAT 244 · Quadratic forms · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-It is χ²₂, with mean 2 and variance 4.
+It is \(\chi ^{2}_{2}\), with mean 2 and variance 4.
 
-**Intuition:** For χ²ᵣ, mean is r and variance is 2r.
+**Intuition:** For \(\chi ^{2r}\), mean is r and variance is 2r.
 
 </details>
 
@@ -10191,7 +10191,7 @@ Card ID: `stat244-quadratic-rank-two`
 <details>
 <summary>Reveal explanation</summary>
 
-They are jointly Gaussian and have zero cross-covariance, since H(I−H)=0.
+They are jointly Gaussian and have zero cross-covariance, since \(H(I-H)=0\).
 
 **Intuition:** Gaussianity turns orthogonality into independence.
 
@@ -10210,7 +10210,7 @@ Card ID: `stat244-independent-fit-residual`
 <details>
 <summary>Reveal explanation</summary>
 
-Improvement per added direction against residual noise per remaining direction: [(SSE₀−SSE₁)/(r₁−r₀)]/[SSE₁/(n−r₁)].
+Improvement per added direction against residual noise per remaining direction: \(\frac{(\operatorname{SSE}_0-\operatorname{SSE}_1)/(r_1-r_0)}{\operatorname{SSE}_1/(n-r_1)}\).
 
 **Intuition:** Ask whether extra fit is large relative to noise.
 
@@ -10286,7 +10286,7 @@ Card ID: `stat244-lrt-monotone`
 <details>
 <summary>Reveal explanation</summary>
 
-[(120−80)/2]/[80/20]=5.
+\(\frac{(120-80)/2}{80/20}=5\).
 
 **Intuition:** Compare improvement per direction with noise per direction.
 
@@ -10298,14 +10298,14 @@ Card ID: `stat244-f-number`
 
 ---
 
-### 542. How do you express β₂=β₃ as a linear restriction?
+### 542. How do you express \(\beta _{2}=\beta _{3}\) as a linear restriction?
 
 **STAT 244 · General linear hypotheses · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Use a row with 1 in position 2, −1 in position 3, and zeros elsewhere; set its product with β to zero.
+Use a row with 1 in position 2, −1 in position 3, and zeros elsewhere; set its product with \(\beta\) to zero.
 
 **Intuition:** Equality is a zero difference.
 
@@ -10317,7 +10317,7 @@ Card ID: `stat244-constraints`
 
 ---
 
-### 543. Is the restriction β₃=2 a subspace constraint?
+### 543. Is the restriction \(\beta _{3}=2\) a subspace constraint?
 
 **STAT 244 · General linear hypotheses · QUICK RECALL**
 
@@ -10343,7 +10343,7 @@ Card ID: `stat244-constraint-matrix`
 <details>
 <summary>Reveal explanation</summary>
 
-They balance the least-squares gradient against directions forbidden by Λβ=c. The constraints and stationarity equations are solved together.
+They balance the least-squares gradient against directions forbidden by \(\Lambda \beta =c\). The constraints and stationarity equations are solved together.
 
 **Intuition:** The best allowed point need not have an unconstrained zero gradient.
 
@@ -10362,7 +10362,7 @@ Card ID: `stat244-constrained-normal-equations`
 <details>
 <summary>Reveal explanation</summary>
 
-s√[(XᵀX)⁻¹ⱼⱼ], with s²=SSE/(n−p). The inverse-design term alone omits the noise scale.
+\(s\sqrt{(X^{\mathsf{T}}X)^{-1}_{jj}}\), with \(s^2=\frac{\operatorname{SSE}}{n-p}\). The inverse-design term alone omits the noise scale.
 
 **Intuition:** Uncertainty combines design geometry and noise size.
 
@@ -10374,14 +10374,14 @@ Card ID: `stat244-t-ci`
 
 ---
 
-### 546. If s=3 and (XᵀX)⁻¹ⱼⱼ=0.04, what is the coefficient SE?
+### 546. If \(s=3\) and \((X^{\mathsf{T}}X)^{-1}_{jj}=0.04\), what is the coefficient SE?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-3√0.04=0.6.
+\(3\sqrt{0.04}=0.6\).
 
 **Intuition:** Take the square root before multiplying by the noise scale.
 
@@ -10431,14 +10431,14 @@ Card ID: `stat244-prediction`
 
 ---
 
-### 549. With s=2 and mean-prediction leverage 0.25, what are the mean and new-response SEs?
+### 549. With \(s=2\) and mean-prediction leverage 0.25, what are the mean and new-response SEs?
 
 **STAT 244 · Prediction intervals · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Mean: 2√0.25=1. New response: 2√1.25=√5.
+Mean: \(2\sqrt{0.25}=1\). New response: \(2\sqrt{1.25}=\sqrt{5}\).
 
 **Intuition:** The extra 1 inside the square root is future observation noise.
 
@@ -10476,7 +10476,7 @@ Card ID: `stat244-simultaneous`
 <details>
 <summary>Reveal explanation</summary>
 
-√(pF), using the 1−α quantile of F with p and n−p degrees of freedom.
+\(\sqrt{pF}\), using the \(1-\alpha\) quantile of F with p and n−p degrees of freedom.
 
 **Intuition:** Protecting every linear combination widens the intervals.
 
@@ -10488,14 +10488,14 @@ Card ID: `stat244-scheffe-factor`
 
 ---
 
-### 552. If A⊆B, which orthogonal complement is larger?
+### 552. If \(A\subseteq B\), which orthogonal complement is larger?
 
 **STAT 244 · Subspace proofs · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-A⊥ is larger: B⊥⊆A⊥. Being perpendicular to a bigger space imposes more restrictions.
+\(A^{\perp}\) is larger: \(B^{\perp}\subseteq A^{\perp}\). Being perpendicular to a bigger space imposes more restrictions.
 
 **Intuition:** More directions to avoid means fewer directions left.
 
@@ -10507,14 +10507,14 @@ Card ID: `stat244-orthocomplement`
 
 ---
 
-### 553. Why is v₁+v₂ perpendicular to W₁∩W₂ when vᵢ is perpendicular to Wᵢ?
+### 553. Why is \(v_{1}+v_{2}\) perpendicular to \(W_{1}\cap W_{2}\) when \(v_{i}\) is perpendicular to \(W_{i}\)?
 
 **STAT 244 · Subspace proofs · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Any vector in the intersection is perpendicular to both v₁ and v₂, hence to their sum.
+Any vector in the intersection is perpendicular to both \(v_{1}\) and \(v_{2}\), hence to their sum.
 
 **Intuition:** Two zero dot products still add to zero.
 
@@ -10526,14 +10526,14 @@ Card ID: `stat244-intersection-complement`
 
 ---
 
-### 554. In finite dimensions, what is (A⊥)⊥ for a subspace A?
+### 554. In finite dimensions, what is \((A^{\perp})^{\perp}\) for a subspace A?
 
 **STAT 244 · Subspace proofs · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-A itself. Every vector decomposes into an A component and an A⊥ component; perpendicularity to A⊥ removes the latter.
+A itself. Every vector decomposes into an A component and an \(A^{\perp}\) component; perpendicularity to \(A^{\perp}\) removes the latter.
 
 **Intuition:** Taking the orthogonal complement twice returns the original space.
 
@@ -10552,7 +10552,7 @@ Card ID: `stat244-double-complement`
 <details>
 <summary>Reveal explanation</summary>
 
-It becomes AΣAᵀ. The constant shift b changes the mean, not the covariance.
+It becomes \(A\Sigma A^{\mathsf{T}}\). The constant shift b changes the mean, not the covariance.
 
 **Intuition:** Linear mixing changes spread; translation does not.
 
@@ -10564,14 +10564,14 @@ Card ID: `stat244-cov-transform`
 
 ---
 
-### 556. Can X and X² be dependent but uncorrelated when X is standard normal?
+### 556. Can X and \(X^{2}\) be dependent but uncorrelated when X is standard normal?
 
 **STAT 244 · Random vectors · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Yes. Symmetry makes Cov(X,X²)=0, but X² is completely determined by X.
+Yes. Symmetry makes \(\operatorname{Cov}(X,X^{2})=0\), but \(X^{2}\) is completely determined by X.
 
 **Intuition:** Zero correlation only rules out linear association.
 
@@ -10609,7 +10609,7 @@ Card ID: `stat244-collinearity`
 <details>
 <summary>Reveal explanation</summary>
 
-One coefficient can rise while the other falls, nearly cancelling in Xβ.
+One coefficient can rise while the other falls, nearly cancelling in \(X\beta\).
 
 **Intuition:** The data may identify a total much better than its parts.
 
@@ -10621,14 +10621,14 @@ Card ID: `stat244-stable-sum-unstable-parts`
 
 ---
 
-### 559. If predicting xⱼ from other predictors gives R²=0.95, what is its VIF?
+### 559. If predicting \(x_{j}\) from other predictors gives \(R^{2}=0.95\), what is its VIF?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-1/(1−0.95)=20. This is a variance-inflation factor under the usual regression comparison.
+\(1/(1-0.95)=20\). This is a variance-inflation factor under the usual regression comparison.
 
 **Intuition:** Little unique predictor variation means high coefficient uncertainty.
 
@@ -10640,7 +10640,7 @@ Card ID: `stat244-vif`
 
 ---
 
-### 560. If VIF=9, how much does the coefficient SE inflate?
+### 560. If \(\operatorname{VIF}=9\), how much does the coefficient SE inflate?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -10659,7 +10659,7 @@ Card ID: `stat244-vif-standard-error`
 
 ---
 
-### 561. Software reports GVIF^(1/(2df))=2. What is GVIF^(1/df)?
+### 561. Software reports \(\operatorname{GVIF}^{1/(2df)}=2\). What is \(\operatorname{GVIF}^{1/df}\)?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -10704,7 +10704,7 @@ Card ID: `stat244-gram-schmidt`
 <details>
 <summary>Reveal explanation</summary>
 
-(1/2,−1/2), whose dot product with (1,1) is zero.
+\((\frac{1}{2},-\frac{1}{2})\), whose dot product with (1,1) is zero.
 
 **Intuition:** Subtract the shared component to isolate a new direction.
 
@@ -10837,7 +10837,7 @@ Card ID: `stat244-pls-supervised-boundary`
 <details>
 <summary>Reveal explanation</summary>
 
-Choose β=0, so Xβ=0.
+Choose \(\beta =0\), so \(X\beta =0\).
 
 **Intuition:** A linear model space always passes through the origin.
 
@@ -10849,14 +10849,14 @@ Card ID: `stat244-zero-mean`
 
 ---
 
-### 571. If Xβ₁ and Xβ₂ are possible means, is their sum possible too?
+### 571. If \(X\beta _{1}\) and \(X\beta _{2}\) are possible means, is their sum possible too?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Yes: Xβ₁+Xβ₂=X(β₁+β₂).
+Yes: \(X\beta _{1}+X\beta _{2}=X(\beta _{1}+\beta _{2})\).
 
 **Intuition:** Linear combinations stay in the model space.
 
@@ -10868,14 +10868,14 @@ Card ID: `stat244-add-means`
 
 ---
 
-### 572. Does an OLS residual lie in N(X) or N(Xᵀ)?
+### 572. Does an OLS residual lie in N(X) or \(N(X^{\mathsf{T}})\)?
 
 **STAT 244 · Column spaces · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-N(Xᵀ), since Xᵀe=0. Residuals have n entries, not p.
+\(N(X^{\mathsf{T}})\), since \(X^{\mathsf{T}}e=0\). Residuals have n entries, not p.
 
 **Intuition:** Dimensions help catch a transposed-space mistake.
 
@@ -10894,7 +10894,7 @@ Card ID: `stat244-residual-space`
 <details>
 <summary>Reveal explanation</summary>
 
-10−3=7.
+\(10-3=7\).
 
 **Intuition:** Observation space splits into fitted and residual directions.
 
@@ -10932,7 +10932,7 @@ Card ID: `stat244-drop-column`
 <details>
 <summary>Reveal explanation</summary>
 
-Every ℓᵀβ. The row space is all of ℝᵖ.
+Every \(\ell ^{\mathsf{T}}\beta\). The row space is all of \(\mathbb{R}^{p}\).
 
 **Intuition:** No coefficient direction is invisible.
 
@@ -10944,14 +10944,14 @@ Card ID: `stat244-full-rank-targets`
 
 ---
 
-### 576. How can a null vector prove that ℓᵀβ is not estimable?
+### 576. How can a null vector prove that \(\ell ^{\mathsf{T}}\beta\) is not estimable?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Find v with Xv=0 but ℓᵀv≠0. Then β and β+v have identical means but different target values.
+Find v with \(Xv=0\) but \(\ell ^{\mathsf{T}}v\ne 0\). Then \(\beta\) and \(\beta +v\) have identical means but different target values.
 
 **Intuition:** The data cannot distinguish targets that change invisibly.
 
@@ -10963,7 +10963,7 @@ Card ID: `stat244-null-target-test`
 
 ---
 
-### 577. What does ℓᵀG(XᵀX)=ℓᵀ mean when G is a generalized inverse?
+### 577. What does \(\ell ^{\mathsf{T}}G(X^{\mathsf{T}}X)=\ell ^{\mathsf{T}}\) mean when G is a generalized inverse?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -10982,14 +10982,14 @@ Card ID: `stat244-estimability-ginverse`
 
 ---
 
-### 578. Why do X and XᵀX have the same null space?
+### 578. Why do X and \(X^{\mathsf{T}}X\) have the same null space?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-vᵀXᵀXv=‖Xv‖². This is zero exactly when Xv=0.
+\(v^{\mathsf{T}}X^{\mathsf{T}}Xv=\Vert Xv\Vert ^{2}\). This is zero exactly when \(Xv=0\).
 
 **Intuition:** Squaring the design preserves its invisible directions.
 
@@ -11001,7 +11001,7 @@ Card ID: `stat244-gram-null`
 
 ---
 
-### 579. Why is C(XᵀX)=C(Xᵀ)?
+### 579. Why is \(C(X^{\mathsf{T}}X)=C(X^{\mathsf{T}})\)?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -11020,7 +11020,7 @@ Card ID: `stat244-gram-row`
 
 ---
 
-### 580. For X=[x x], what is one nonzero null vector?
+### 580. For \(X=\begin{bmatrix}x&x\end{bmatrix}\), what is one nonzero null vector?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -11039,7 +11039,7 @@ Card ID: `stat244-duplicate-null`
 
 ---
 
-### 581. With X=[x x], can the data identify β₁−β₂?
+### 581. With \(X=\begin{bmatrix}x&x\end{bmatrix}\), can the data identify \(\beta _{1}-\beta _{2}\)?
 
 **STAT 244 · Estimability · QUICK RECALL**
 
@@ -11058,14 +11058,14 @@ Card ID: `stat244-duplicate-difference`
 
 ---
 
-### 582. In μᵢⱼ=α+βᵢ+γⱼ, why isn’t α separately identifiable without constraints?
+### 582. In \(\mu _{ij}=\alpha +\beta _{i}+\gamma _{j}\), why isn’t \(\alpha\) separately identifiable without constraints?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Add c to α and subtract c from every βᵢ. Every cell mean stays the same.
+Add c to \(\alpha\) and subtract c from every \(\beta _{i}\). Every cell mean stays the same.
 
 **Intuition:** An arbitrary baseline can move between parameter blocks.
 
@@ -11077,14 +11077,14 @@ Card ID: `stat244-two-way-shift`
 
 ---
 
-### 583. In an observed additive two-way layout, is βᵢ−βₖ estimable?
+### 583. In an observed additive two-way layout, is \(\beta _{i}-\beta _{k}\) estimable?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Yes. At the same column j, μᵢⱼ−μₖⱼ=βᵢ−βₖ.
+Yes. At the same column j, \(\mu _{ij}-\mu _{kj}=\beta _{i}-\beta _{k}\).
 
 **Intuition:** Compare groups while holding the other factor fixed.
 
@@ -11103,7 +11103,7 @@ Card ID: `stat244-two-way-row-contrast`
 <details>
 <summary>Reveal explanation</summary>
 
-The difference βᵢ−βₖ is the same at every column level.
+The difference \(\beta _{i}-\beta _{k}\) is the same at every column level.
 
 **Intuition:** Additivity means one factor does not modify the other’s effect.
 
@@ -11115,7 +11115,7 @@ Card ID: `stat244-two-way-interaction`
 
 ---
 
-### 585. With all r×c cells observed, how many mean dimensions does an additive two-way model have?
+### 585. With all \(r\times c\) cells observed, how many mean dimensions does an additive two-way model have?
 
 **STAT 244 · Identifiability · QUICK RECALL**
 
@@ -11191,14 +11191,14 @@ Card ID: `stat244-recode-coefficient-tests`
 
 ---
 
-### 589. When is the set β̂+N(X) a vector subspace?
+### 589. When is the set \(\hat{\beta}+N(X)\) a vector subspace?
 
 **STAT 244 · Rank-deficient least squares · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-When it contains zero, equivalently when Xβ̂=0.
+When it contains zero, equivalently when \(X\hat{\beta}=0\).
 
 **Intuition:** A shifted space is linear only if the shift stays inside it.
 
@@ -11210,7 +11210,7 @@ Card ID: `stat244-affine-origin`
 
 ---
 
-### 590. Why isn’t the line β₁+β₂=3 a vector space?
+### 590. Why isn’t the line \(\beta _{1}+\beta _{2}=3\) a vector space?
 
 **STAT 244 · Rank-deficient least squares · QUICK RECALL**
 
@@ -11229,7 +11229,7 @@ Card ID: `stat244-affine-zero`
 
 ---
 
-### 591. What does Xᵀe=0 say about each predictor?
+### 591. What does \(X^{\mathsf{T}}e=0\) say about each predictor?
 
 **STAT 244 · Least-squares geometry · QUICK RECALL**
 
@@ -11255,7 +11255,7 @@ Card ID: `stat244-normal-equation-geometry`
 <details>
 <summary>Reveal explanation</summary>
 
-Its Hessian is 2XᵀX, which is positive semidefinite because vᵀXᵀXv=‖Xv‖²≥0.
+Its Hessian is \(2X^{\mathsf{T}}X\), which is positive semidefinite because \(v^{\mathsf{T}}X^{\mathsf{T}}Xv=\Vert Xv\Vert ^{2}\ge 0\).
 
 **Intuition:** The squared-error surface is convex.
 
@@ -11274,7 +11274,7 @@ Card ID: `stat244-hessian-positive`
 <details>
 <summary>Reveal explanation</summary>
 
-When X has full column rank, making XᵀX positive definite.
+When X has full column rank, making \(X^{\mathsf{T}}X\) positive definite.
 
 **Intuition:** No flat coefficient direction means no alternate minimizer.
 
@@ -11305,14 +11305,14 @@ Card ID: `stat244-no-intercept`
 
 ---
 
-### 595. Why does ‖y‖²=‖ŷ‖²+‖e‖² for OLS?
+### 595. Why does \(\Vert y\Vert ^{2}=\Vert \hat{y}\Vert ^{2}+\Vert e\Vert ^{2}\) for OLS?
 
 **STAT 244 · Least-squares geometry · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Because y=ŷ+e and ŷᵀe=0.
+Because \(y=\hat{y}+e\) and \(\hat{y}^{\mathsf{T}}e=0\).
 
 **Intuition:** The fitted and residual pieces form a right triangle.
 
@@ -11331,7 +11331,7 @@ Card ID: `stat244-uncentered-squares`
 <details>
 <summary>Reveal explanation</summary>
 
-Expand: (I−P)²=I−2P+P²=I−P.
+Expand: \((I-P)^{2}=I-2P+P^{2}=I-P\).
 
 **Intuition:** Extracting the leftover twice changes nothing.
 
@@ -11362,7 +11362,7 @@ Card ID: `stat244-identity-projection`
 
 ---
 
-### 598. What does P=(1/n)11ᵀ do to y?
+### 598. What does \(P=(1/n)11^{\mathsf{T}}\) do to y?
 
 **STAT 244 · Projection matrices · QUICK RECALL**
 
@@ -11400,7 +11400,7 @@ Card ID: `stat244-trace-rank`
 
 ---
 
-### 600. If tr(H)=r for n observations, what is tr(I−H)?
+### 600. If \(\operatorname{tr}(H)=r\) for n observations, what is tr(I−H)?
 
 **STAT 244 · Projection matrices · QUICK RECALL**
 
@@ -11438,14 +11438,14 @@ Card ID: `stat244-adding-fit`
 
 ---
 
-### 602. What is rank(P₁−P₀) for nested spaces of dimensions r₀ and r₁?
+### 602. What is \(\operatorname{rank}(P_{1}-P_{0})\) for nested spaces of dimensions \(r_{0}\) and \(r_{1}\)?
 
 **STAT 244 · Nested models · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-r₁−r₀.
+\(r_{1}-r_{0}\).
 
 **Intuition:** The difference projector keeps only newly added directions.
 
@@ -11483,7 +11483,7 @@ Card ID: `stat244-three-pieces`
 <details>
 <summary>Reveal explanation</summary>
 
-No. Nesting is one condition that makes P₀P₁=P₁P₀=P₀.
+No. Nesting is one condition that makes \(P_{0}P_{1}=P_{1}P_{0}=P_{0}\).
 
 **Intuition:** Do not move matrix factors past each other without a reason.
 
@@ -11609,14 +11609,14 @@ Card ID: `stat244-baseline-slope`
 
 ---
 
-### 611. What is the Gaussian maximum-likelihood estimate of σ² when SSE>0?
+### 611. What is the Gaussian maximum-likelihood estimate of \(\sigma ^{2}\) when \(\operatorname{SSE}>0\)?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-SSE/n, rather than SSE/(n−r).
+\(\operatorname{SSE}/n\), rather than \(\operatorname{SSE}/(n-r)\).
 
 **Intuition:** Maximum likelihood and unbiasedness optimize different criteria.
 
@@ -11628,14 +11628,14 @@ Card ID: `stat244-variance-mle`
 
 ---
 
-### 612. Why is SSE/n downward biased under the correct mean model?
+### 612. Why is \(\operatorname{SSE}/n\) downward biased under the correct mean model?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Fitting removes noise along r model directions, leaving expected SSE=(n−r)σ².
+Fitting removes noise along r model directions, leaving expected \(\operatorname{SSE}=(n-r)\sigma ^{2}\).
 
 **Intuition:** The residual has already had some noise fitted away.
 
@@ -11647,7 +11647,7 @@ Card ID: `stat244-variance-bias`
 
 ---
 
-### 613. If rank(X)=n, can SSE/(n−rank(X)) estimate noise variance?
+### 613. If \(\operatorname{rank}(X)=n\), can \(\operatorname{SSE}/(n-\operatorname{rank}(X))\) estimate noise variance?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
@@ -11666,7 +11666,7 @@ Card ID: `stat244-no-residual-df`
 
 ---
 
-### 614. If Gaussian SSE=0, is σ̂²=0 an ordinary positive interior MLE?
+### 614. If Gaussian \(\operatorname{SSE}=0\), is \(\hat{\sigma}^{2}=0\) an ordinary positive interior MLE?
 
 **STAT 244 · Variance estimation · QUICK RECALL**
 
@@ -11692,7 +11692,7 @@ Card ID: `stat244-zero-sse-boundary`
 <details>
 <summary>Reveal explanation</summary>
 
-No. The mean and spherical covariance assumptions are enough for the linear-unbiased comparison.
+No. The mean and equal-variance, uncorrelated-error assumptions are enough for the linear-unbiased comparison.
 
 **Intuition:** Normality is not part of BLUE’s core argument.
 
@@ -11704,14 +11704,14 @@ Card ID: `stat244-blue-normality`
 
 ---
 
-### 616. Can a biased estimator have smaller mean squared error than BLUE?
+### 616. Can a slightly biased estimator outperform the best linear unbiased estimator in squared error?
 
 **STAT 244 · Gauss–Markov · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Yes. BLUE only minimizes variance within the linear unbiased class.
+Yes. A reduction in variance can outweigh the squared bias. “Best linear unbiased” (BLUE) only compares variance among linear estimators with zero bias.
 
 **Intuition:** Accepting some bias can reduce variance enough to help overall error.
 
@@ -11723,14 +11723,14 @@ Card ID: `stat244-blue-biased`
 
 ---
 
-### 617. What does Var(y)=σ²I assert?
+### 617. Does \(\operatorname{Var}(y)=\sigma ^{2}I\) mean the errors are independent?
 
 **STAT 244 · Gauss–Markov · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Equal marginal variances and zero pairwise covariances. It does not alone assert independence.
+It says they have equal variances and zero pairwise covariances. Independence follows if they are jointly Gaussian, but not from this covariance statement alone.
 
 **Intuition:** A covariance model is weaker than a full distribution model.
 
@@ -11742,14 +11742,14 @@ Card ID: `stat244-spherical-errors`
 
 ---
 
-### 618. When does the generalized-inverse condition force G=B⁻¹?
+### 618. When does the generalized-inverse condition force \(G=B^{-1}\)?
 
 **STAT 244 · Generalized inverses · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-When B is invertible. Multiply BGB=B by B⁻¹ on both sides.
+When B is invertible. Multiply \(BGB=B\) by \(B^{-1}\) on both sides.
 
 **Intuition:** Full invertibility removes the freedom.
 
@@ -11761,14 +11761,14 @@ Card ID: `stat244-ordinary-inverse`
 
 ---
 
-### 619. Which diag(1,t) is the Moore–Penrose inverse of diag(1,0)?
+### 619. Which \(\operatorname{diag}(1,t)\) is the Moore–Penrose inverse of \(\operatorname{diag}(1,0)\)?
 
 **STAT 244 · Generalized inverses · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-t=0.
+\(t=0\).
 
 **Intuition:** The pseudoinverse avoids arbitrary action in the null direction.
 
@@ -11780,7 +11780,7 @@ Card ID: `stat244-moore-penrose-choice`
 
 ---
 
-### 620. How does the fitted-value projector act on C(X) and C(X)⊥?
+### 620. How does the fitted-value projector act on C(X) and \(C(X)^{\perp}\)?
 
 **STAT 244 · Rank deficiency · QUICK RECALL**
 
@@ -11818,14 +11818,14 @@ Card ID: `stat244-minimum-squared-distance`
 
 ---
 
-### 622. For full-rank X, when is By unbiased for β for every β?
+### 622. For full-rank X, when is By unbiased for \(\beta\) for every \(\beta\)?
 
 **STAT 244 · Gauss–Markov proof · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-When BX=I, because E[By]=BXβ.
+When \(BX=I\), because \(E[By]=BX\beta\).
 
 **Intuition:** Unbiasedness becomes a matrix identity.
 
@@ -11837,14 +11837,14 @@ Card ID: `stat244-unbiased-constraint`
 
 ---
 
-### 623. Why is AAᵀ positive semidefinite?
+### 623. Why is \(AA^{\mathsf{T}}\) positive semidefinite?
 
 **STAT 244 · Gauss–Markov proof · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-For every v, vᵀAAᵀv=‖Aᵀv‖²≥0.
+For every v, \(v^{\mathsf{T}}AA^{\mathsf{T}}v=\Vert A^{\mathsf{T}}v\Vert ^{2}\ge 0\).
 
 **Intuition:** A squared length can never reduce variance.
 
@@ -11863,7 +11863,7 @@ Card ID: `stat244-variance-gap-psd`
 <details>
 <summary>Reveal explanation</summary>
 
-No. They satisfy XᵀV⁻¹e=0: weighted orthogonality.
+No. They satisfy \(X^{\mathsf{T}}V^{-1}e=0\): weighted orthogonality.
 
 **Intuition:** GLS changes the geometry used to measure angles and lengths.
 
@@ -11875,14 +11875,14 @@ Card ID: `stat244-gls-orthogonality`
 
 ---
 
-### 625. If Var(y)=σ²V, what covariance does V⁻¹ᐟ²y have?
+### 625. If \(\operatorname{Var}(y)=\sigma ^{2}V\), what covariance does \(V^{-\frac{1}{2}}y\) have?
 
 **STAT 244 · Generalized least squares · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-σ²I.
+\(\sigma ^{2}I\).
 
 **Intuition:** Whitening removes unequal scales and covariance in the transformed coordinates.
 
@@ -11901,7 +11901,7 @@ Card ID: `stat244-whitening-result`
 <details>
 <summary>Reveal explanation</summary>
 
-Weight proportional to m, since its variance is σ²/m.
+Weight proportional to m, since its variance is \(\sigma ^{2}/m\).
 
 **Intuition:** More independent measurements make an average more precise.
 
@@ -11932,14 +11932,14 @@ Card ID: `stat244-correlated-weights`
 
 ---
 
-### 628. Under the Gaussian linear model, what is SSE/σ² distributed as?
+### 628. Under the Gaussian linear model, what is \(\operatorname{SSE}/\sigma ^{2}\) distributed as?
 
 **STAT 244 · Quadratic forms · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-χ² with n−rank(X) degrees of freedom, assuming positive residual df.
+\(\chi ^{2}\) with \(n-\operatorname{rank}(X)\) degrees of freedom, assuming positive residual df.
 
 **Intuition:** Residual noise lives in the unfitted directions.
 
@@ -11970,14 +11970,14 @@ Card ID: `stat244-non-gaussian-warning`
 
 ---
 
-### 630. Why is H(I−H)=0?
+### 630. Why is \(H(I-H)=0\)?
 
 **STAT 244 · Quadratic forms · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-H−H²=0 because H is idempotent.
+\(H-H^{2}=0\) because H is idempotent.
 
 **Intuition:** The fitted and residual projectors keep disjoint directions.
 
@@ -12027,7 +12027,7 @@ Card ID: `stat244-f-close-one`
 
 ---
 
-### 633. For F=5 with 2 added directions and 20 residual df, what reference is needed for a p-value?
+### 633. For \(F=5\) with 2 added directions and 20 residual df, what reference is needed for a p-value?
 
 **STAT 244 · Nested-model inference · QUICK RECALL**
 
@@ -12053,7 +12053,7 @@ Card ID: `stat244-f-degrees`
 <details>
 <summary>Reveal explanation</summary>
 
-(SSE₀/SSE₁)^(−n/2). Larger relative improvement makes this ratio smaller.
+\((\operatorname{SSE}_{0}/\operatorname{SSE}_{1})^{-n/2}\). Larger relative improvement makes this ratio smaller.
 
 **Intuition:** The simpler model loses likelihood when its residual cost rises.
 
@@ -12084,7 +12084,7 @@ Card ID: `stat244-untestable-restriction`
 
 ---
 
-### 636. How do you encode β₁=β₂ and β₃=2 for β=(β₀,β₁,β₂,β₃)?
+### 636. How do you encode \(\beta _{1}=\beta _{2}\) and \(\beta _{3}=2\) for \(\beta =(\beta _{0},\beta _{1},\beta _{2},\beta _{3})\)?
 
 **STAT 244 · General linear hypotheses · QUICK RECALL**
 
@@ -12110,7 +12110,7 @@ Card ID: `stat244-two-restrictions`
 <details>
 <summary>Reveal explanation</summary>
 
-Λβ=c.
+\(\Lambda \beta =c\).
 
 **Intuition:** One block optimizes; the other keeps the solution feasible.
 
@@ -12129,7 +12129,7 @@ Card ID: `stat244-kkt-lower`
 <details>
 <summary>Reveal explanation</summary>
 
-XᵀXβ+Λᵀξ=Xᵀy, with multiplier scaling absorbed in ξ.
+\(X^{\mathsf{T}}X\beta +\Lambda ^{\mathsf{T}}\xi =X^{\mathsf{T}}y\), with multiplier scaling absorbed in \(\xi\).
 
 **Intuition:** The constraint supplies the force balancing the loss gradient.
 
@@ -12141,7 +12141,7 @@ Card ID: `stat244-kkt-upper`
 
 ---
 
-### 639. Why use a t distribution instead of a standard normal when σ is estimated?
+### 639. Why use a t distribution instead of a standard normal when \(\sigma\) is estimated?
 
 **STAT 244 · Coefficient inference · QUICK RECALL**
 
@@ -12167,7 +12167,7 @@ Card ID: `stat244-why-t`
 <details>
 <summary>Reveal explanation</summary>
 
-1.2/0.6=2.
+\(\frac{1.2}{0.6}=2\).
 
 **Intuition:** A t statistic measures distance from the null in SE units.
 
@@ -12186,7 +12186,7 @@ Card ID: `stat244-t-two`
 <details>
 <summary>Reveal explanation</summary>
 
-Estimate ± t critical value × estimated SE, under the Gaussian linear-model conditions.
+Estimate \(\pm\) t critical value \(\times\) estimated SE, under the Gaussian linear-model conditions.
 
 **Intuition:** Uncertainty is a margin around the estimate.
 
@@ -12243,7 +12243,7 @@ Card ID: `stat244-infinite-data-noise`
 <details>
 <summary>Reveal explanation</summary>
 
-0.95¹⁰≈0.60.
+\(0.95^{10}\approx 0.60\).
 
 **Intuition:** Many individually reliable statements can be jointly unreliable.
 
@@ -12255,14 +12255,14 @@ Card ID: `stat244-independent-intervals`
 
 ---
 
-### 645. If E[Y]=μ, what is E[AY+b]?
+### 645. If \(E[Y]=\mu\), what is \(E[AY+b]\)?
 
 **STAT 244 · Random vectors · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Aμ+b.
+\(A\mu +b\).
 
 **Intuition:** Expectation follows affine transformations directly.
 
@@ -12274,7 +12274,7 @@ Card ID: `stat244-mean-transform`
 
 ---
 
-### 646. Does Var(AY)=AΣAᵀ require Gaussian Y?
+### 646. Does \(\operatorname{Var}(AY)=A\Sigma A^{\mathsf{T}}\) require Gaussian Y?
 
 **STAT 244 · Random vectors · QUICK RECALL**
 
@@ -12312,7 +12312,7 @@ Card ID: `stat244-joint-normal-key`
 
 ---
 
-### 648. Can x₃≈x₁+x₂ cause multicollinearity without an almost-perfect pairwise correlation?
+### 648. Can \(x_{3}\approx x_{1}+x_{2}\) cause multicollinearity without an almost-perfect pairwise correlation?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -12350,7 +12350,7 @@ Card ID: `stat244-extrapolation-risk`
 
 ---
 
-### 650. If a predictor has R²=0 against the others, what is its VIF?
+### 650. If a predictor has \(R^{2}=0\) against the others, what is its VIF?
 
 **STAT 244 · Multicollinearity · QUICK RECALL**
 
@@ -12414,7 +12414,7 @@ Card ID: `stat244-zero-new-direction`
 <details>
 <summary>Reveal explanation</summary>
 
-Divide by ‖u‖.
+Divide by \(\Vert u\Vert\).
 
 **Intuition:** Orthogonal means perpendicular; orthonormal also means unit length.
 
@@ -12635,7 +12635,7 @@ Card ID: `am209a-future-split`
 
 ---
 
-### 665. What does negative test R² reveal?
+### 665. What does negative test \(R^{2}\) reveal?
 
 **AM 209a · Data science workflow · QUICK RECALL**
 
@@ -12806,7 +12806,7 @@ Card ID: `am209a-small-samples`
 
 ---
 
-### 674. How does the estimate (r+α)/(n+α+β) stabilize a small-sample proportion?
+### 674. How does the estimate \((r+\alpha )/(n+\alpha +\beta )\) stabilize a small-sample proportion?
 
 **AM 209a · Data science workflow · QUICK RECALL**
 
@@ -13231,7 +13231,7 @@ Card ID: `am209a-skew-tail`
 <details>
 <summary>Reveal explanation</summary>
 
-12−2=10.
+\(12-2=10\).
 
 **Intuition:** The range uses only the two extremes.
 
@@ -13250,7 +13250,7 @@ Card ID: `am209a-range`
 <details>
 <summary>Reveal explanation</summary>
 
-s²=Σ(xᵢ−x̄)²/(n−1), for n>1.
+\(s^2=\frac{\sum_i(x_i-\bar x)^2}{n-1}\), for \(n>1\).
 
 **Intuition:** Estimating the mean uses one degree of freedom.
 
@@ -14098,14 +14098,14 @@ Card ID: `am209a-audience`
 
 ---
 
-### 742. What is the response variable in a prediction problem?
+### 742. In a model predicting house prices from size and location, which quantity is y?
 
 **AM 209a · Regression foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The quantity you want to predict, usually denoted y.
+The house price: the outcome you want to predict. It is also called the response or target; size and location are predictors.
 
 **Intuition:** The target determines what counts as a correct prediction.
 
@@ -14155,7 +14155,7 @@ Card ID: `am209a-design-shape`
 
 ---
 
-### 745. Why keep a single feature as an n×1 matrix for model fitting?
+### 745. Why keep a single feature as an \(n\times 1\) matrix for model fitting?
 
 **AM 209a · Regression foundations · QUICK RECALL**
 
@@ -14193,14 +14193,14 @@ Card ID: `am209a-pandas-shape`
 
 ---
 
-### 747. What do f(X) and ε represent in y=f(X)+ε?
+### 747. What do f(X) and \(\varepsilon\) represent in \(y=f(X)+\varepsilon\)?
 
 **AM 209a · Regression foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-f(X) is the underlying systematic relationship; ε is the remaining random variation.
+f(X) is the underlying systematic relationship; \(\varepsilon\) is the remaining random variation.
 
 **Intuition:** A model estimates signal from noisy observations.
 
@@ -14250,14 +14250,14 @@ Card ID: `am209a-one-neighbor`
 
 ---
 
-### 750. Why is kNN called nonparametric?
+### 750. Why does k-nearest-neighbors keep the training observations for prediction?
 
 **AM 209a · Nearest neighbors · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-It does not fit a fixed-size coefficient formula for the relationship; predictions depend on stored observations.
+It predicts from nearby stored examples instead of compressing the relationship into a fixed-size coefficient formula. This is why it is called nonparametric; it still has choices such as the number of neighbors.
 
 **Intuition:** Nonparametric does not mean assumption-free.
 
@@ -14345,14 +14345,14 @@ Card ID: `am209a-train-validation-test`
 
 ---
 
-### 755. What is a residual when y=10 and ŷ=7?
+### 755. What is a residual when \(y=10\) and \(\hat{y}=7\)?
 
 **AM 209a · Model evaluation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-y−ŷ=3, indicating underprediction.
+\(y-\hat{y}=3\), indicating underprediction.
 
 **Intuition:** Keep the sign when diagnosing the direction of errors.
 
@@ -14371,7 +14371,7 @@ Card ID: `am209a-residual-sign`
 <details>
 <summary>Reveal explanation</summary>
 
-Average the squared residuals: MSE=Σ(yᵢ−ŷᵢ)²/n.
+Average the squared residuals: \(\operatorname{MSE}=\frac{1}{n}\sum_i(y_i-\hat y_i)^2\).
 
 **Intuition:** Squaring prevents positive and negative errors from cancelling.
 
@@ -14390,7 +14390,7 @@ Card ID: `am209a-mse`
 <details>
 <summary>Reveal explanation</summary>
 
-20/3, about 6.67.
+\(\frac{20}{3}\), about 6.67.
 
 **Intuition:** Square first, then average.
 
@@ -14409,7 +14409,7 @@ Card ID: `am209a-mse-example`
 <details>
 <summary>Reveal explanation</summary>
 
-RMSE is √MSE and has the same units as the response.
+RMSE is \(\sqrt{\operatorname{MSE}}\) and has the same units as the response.
 
 **Intuition:** The result can be compared directly with the measurement scale.
 
@@ -14497,14 +14497,14 @@ Card ID: `am209a-mse-rescale`
 
 ---
 
-### 763. How is the usual R² score defined?
+### 763. How is the usual \(R^{2}\) score defined?
 
 **AM 209a · Model evaluation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-1−Σ(yᵢ−ŷᵢ)²/Σ(yᵢ−ȳ)², when the denominator is positive.
+\(1-\frac{\sum_i(y_i-\hat y_i)^2}{\sum_i(y_i-\bar y)^2}\), when the denominator is positive.
 
 **Intuition:** It compares error with a mean-only benchmark on the evaluated observations.
 
@@ -14516,7 +14516,7 @@ Card ID: `am209a-r2-formula`
 
 ---
 
-### 764. What does R²=0 mean?
+### 764. What does \(R^{2}=0\) mean?
 
 **AM 209a · Model evaluation · QUICK RECALL**
 
@@ -14535,7 +14535,7 @@ Card ID: `am209a-r2-zero`
 
 ---
 
-### 765. What does R²=1 mean on an evaluated dataset?
+### 765. What does \(R^{2}=1\) mean on an evaluated dataset?
 
 **AM 209a · Model evaluation · QUICK RECALL**
 
@@ -14561,7 +14561,7 @@ Card ID: `am209a-r2-one`
 <details>
 <summary>Reveal explanation</summary>
 
-Other predictions can have arbitrarily larger errors and therefore negative R².
+Other predictions can have arbitrarily larger errors and therefore negative \(R^{2}\).
 
 **Intuition:** The mean is a reference baseline, not a lower performance bound.
 
@@ -14618,7 +14618,7 @@ Card ID: `am209a-increase-k`
 <details>
 <summary>Reveal explanation</summary>
 
-√Σⱼ(xⱼ−zⱼ)².
+\(\sqrt{\sum_j(x_j-z_j)^2}\).
 
 **Intuition:** Differences in every feature contribute to closeness.
 
@@ -14637,7 +14637,7 @@ Card ID: `am209a-euclidean`
 <details>
 <summary>Reveal explanation</summary>
 
-5, because √(9+16)=5.
+5, because \(\sqrt{9+16}=5\).
 
 **Intuition:** Distance combines coordinate differences geometrically.
 
@@ -14694,7 +14694,7 @@ Card ID: `am209a-curse`
 <details>
 <summary>Reveal explanation</summary>
 
-ŷ=β̂₀+β̂₁x.
+\(\hat{y}=\hat{\beta}_{0}+\hat{\beta}_{1}x\).
 
 **Intuition:** One intercept and one slope define the fitted line.
 
@@ -14725,7 +14725,7 @@ Card ID: `am209a-fit`
 
 ---
 
-### 775. If ŷ=7+0.05x, what is the prediction at x=100?
+### 775. If \(\hat{y}=7+0.05x\), what is the prediction at \(x=100\)?
 
 **AM 209a · Linear regression · QUICK RECALL**
 
@@ -14763,7 +14763,7 @@ Card ID: `am209a-partial`
 
 ---
 
-### 777. For r=y−β₀−β₁x, what is ∂r²/∂β₀?
+### 777. For \(r=y-\beta _{0}-\beta _{1}x\), what is \(\partial r^{2}/\partial \beta _{0}\)?
 
 **AM 209a · Least-squares derivation · QUICK RECALL**
 
@@ -14782,7 +14782,7 @@ Card ID: `am209a-intercept-gradient`
 
 ---
 
-### 778. For r=y−β₀−β₁x, what is ∂r²/∂β₁?
+### 778. For \(r=y-\beta _{0}-\beta _{1}x\), what is \(\partial r^{2}/\partial \beta _{1}\)?
 
 **AM 209a · Least-squares derivation · QUICK RECALL**
 
@@ -14820,14 +14820,14 @@ Card ID: `am209a-stationary-caution`
 
 ---
 
-### 780. What is the gradient of a multivariable loss?
+### 780. How does the gradient tell an optimizer which way to change its parameters?
 
 **AM 209a · Least-squares derivation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The vector of its partial derivatives.
+It collects the partial derivatives of the loss. Locally it points toward the steepest increase; a small step in the opposite direction decreases a differentiable loss when the gradient is nonzero.
 
 **Intuition:** It collects local changes in every coefficient direction.
 
@@ -14846,7 +14846,7 @@ Card ID: `am209a-gradient`
 <details>
 <summary>Reveal explanation</summary>
 
-Σ(xᵢ−x̄)(yᵢ−ȳ)/Σ(xᵢ−x̄)², provided x varies.
+\(\frac{\sum_i(x_i-\bar x)(y_i-\bar y)}{\sum_i(x_i-\bar x)^2}\), provided x varies.
 
 **Intuition:** The slope compares joint variation with predictor variation.
 
@@ -14865,7 +14865,7 @@ Card ID: `am209a-slope-formula`
 <details>
 <summary>Reveal explanation</summary>
 
-β̂₀=ȳ−β̂₁x̄.
+\(\hat{\beta}_{0}=\bar{y}-\hat{\beta}_{1}\bar{x}\).
 
 **Intuition:** The fitted line passes through the sample means.
 
@@ -14903,7 +14903,7 @@ Card ID: `am209a-constant-x`
 <details>
 <summary>Reveal explanation</summary>
 
-Several predictor terms: ŷ=β̂₀+Σⱼβ̂ⱼxⱼ.
+Several predictor terms: \(\hat{y}=\hat{\beta}_{0}+\sum _{j}\hat{\beta}_{j}x_{j}\).
 
 **Intuition:** Each coefficient describes a contribution conditional on the others.
 
@@ -14960,7 +14960,7 @@ Card ID: `am209a-matrix-count`
 <details>
 <summary>Reveal explanation</summary>
 
-‖y−Xβ‖²=(y−Xβ)ᵀ(y−Xβ).
+\(\Vert y-X\beta \Vert ^{2}=(y-X\beta )^{\mathsf{T}}(y-X\beta )\).
 
 **Intuition:** The residual vector's squared length sums all squared errors.
 
@@ -14991,14 +14991,14 @@ Card ID: `am209a-constant-loss-factor`
 
 ---
 
-### 789. What is the gradient of ‖y−Xβ‖² with respect to β?
+### 789. What is the gradient of \(\Vert y-X\beta \Vert ^{2}\) with respect to \(\beta\)?
 
 **AM 209a · Least-squares derivation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-−2Xᵀ(y−Xβ).
+\(-2X^{\mathsf{T}}(y-X\beta )\).
 
 **Intuition:** A stationary fit has no residual component along a design column.
 
@@ -15017,7 +15017,7 @@ Card ID: `am209a-matrix-gradient`
 <details>
 <summary>Reveal explanation</summary>
 
-XᵀXβ̂=Xᵀy.
+\(X^{\mathsf{T}}X\hat{\beta}=X^{\mathsf{T}}y\).
 
 **Intuition:** The residual is orthogonal to every available predictor direction.
 
@@ -15029,14 +15029,14 @@ Card ID: `am209a-normal-equations`
 
 ---
 
-### 791. When is β̂=(XᵀX)⁻¹Xᵀy valid?
+### 791. When is \(\hat{\beta}=(X^{\mathsf{T}}X)^{-1}X^{\mathsf{T}}y\) valid?
 
 **AM 209a · Least-squares derivation · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-When X has full column rank, so XᵀX is invertible.
+When X has full column rank, so \(X^{\mathsf{T}}X\) is invertible.
 
 **Intuition:** Writing an inverse does not guarantee it exists.
 
@@ -15067,7 +15067,7 @@ Card ID: `am209a-intercept`
 
 ---
 
-### 793. In ŷ=5+3x, what does the slope 3 mean?
+### 793. In \(\hat{y}=5+3x\), what does the slope 3 mean?
 
 **AM 209a · Linear regression · QUICK RECALL**
 
@@ -15238,14 +15238,14 @@ Card ID: `am209a-dummy`
 
 ---
 
-### 802. In ŷ=β₀+β₁D, what is the predicted group difference?
+### 802. In \(\hat{y}=\beta _{0}+\beta _{1}D\), what is the predicted group difference?
 
 **AM 209a · Categorical predictors · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-β₁: the prediction at D=1 minus the prediction at D=0.
+\(\beta _{1}\): the prediction at \(D=1\) minus the prediction at \(D=0\).
 
 **Intuition:** The intercept is the reference-group prediction.
 
@@ -15352,14 +15352,14 @@ Card ID: `am209a-residual-pattern`
 
 ---
 
-### 808. What is overfitting?
+### 808. Why might a model fit its training data closely but predict new data poorly?
 
 **AM 209a · Model complexity · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The fit captures sample-specific noise or quirks that fail to generalize.
+It may have learned sample-specific noise instead of a pattern that persists. This is overfitting; performance on suitable held-out data helps reveal it.
 
 **Intuition:** The training sample is not the entire prediction problem.
 
@@ -15390,14 +15390,14 @@ Card ID: `am209a-interaction`
 
 ---
 
-### 810. In f=β₀+β₁x+β₂z+β₃xz, what is the slope with respect to x?
+### 810. In \(f=\beta _{0}+\beta _{1}x+\beta _{2}z+\beta _{3}xz\), what is the slope with respect to x?
 
 **AM 209a · Interactions and polynomials · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-β₁+β₃z.
+\(\beta _{1}+\beta _{3}z\).
 
 **Intuition:** The interaction makes the x effect depend on z.
 
@@ -15435,7 +15435,7 @@ Card ID: `am209a-parallel-groups`
 <details>
 <summary>Reveal explanation</summary>
 
-Their slopes can differ: β₁ for D=0 and β₁+β₃ for D=1.
+Their slopes can differ: \(\beta _{1}\) for \(D=0\) and \(\beta _{1}+\beta _{3}\) for \(D=1\).
 
 **Intuition:** The interaction coefficient is the slope difference.
 
@@ -15447,7 +15447,7 @@ Card ID: `am209a-group-slopes`
 
 ---
 
-### 813. If β₁=2 and β₃=−0.5, what is the x slope for D=1?
+### 813. If \(\beta _{1}=2\) and \(\beta _{3}=-0.5\), what is the x slope for \(D=1\)?
 
 **AM 209a · Interactions and polynomials · QUICK RECALL**
 
@@ -15511,7 +15511,7 @@ Card ID: `am209a-poly-count`
 <details>
 <summary>Reveal explanation</summary>
 
-[1,x,x²].
+\([1,x,x^{2}]\).
 
 **Intuition:** Transform the input, then fit ordinary linear coefficients.
 
@@ -15523,7 +15523,7 @@ Card ID: `am209a-poly-row`
 
 ---
 
-### 817. What is the cubic design row at x=2?
+### 817. What is the cubic design row at \(x=2\)?
 
 **AM 209a · Interactions and polynomials · QUICK RECALL**
 
@@ -15580,14 +15580,14 @@ Card ID: `am209a-duplicate-intercept`
 
 ---
 
-### 820. What is underfitting?
+### 820. Why can an overly simple model perform poorly even on its training data?
 
 **AM 209a · Model complexity · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The model is too restricted to capture important systematic structure.
+It cannot express an important pattern in the data. This is underfitting; collecting more data alone does not fix a model that is too restricted.
 
 **Intuition:** Even excellent optimization cannot fix the wrong model family.
 
@@ -15637,14 +15637,14 @@ Card ID: `am209a-plausibility`
 
 ---
 
-### 823. What is generalization?
+### 823. What should improve if a model has learned a useful pattern rather than memorized its sample?
 
 **AM 209a · Model selection · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Performing well on relevant observations that were not used to fit the model.
+Its predictions on relevant new observations. This ability to transfer beyond the training data is called generalization.
 
 **Intuition:** New-data performance is the goal, not training perfection.
 
@@ -15682,7 +15682,7 @@ Card ID: `am209a-test-leak`
 <details>
 <summary>Reveal explanation</summary>
 
-2ᴶ, including the empty subset.
+\(2^{J}\), including the empty subset.
 
 **Intuition:** Each predictor has two choices: include or exclude.
 
@@ -15758,7 +15758,7 @@ Card ID: `am209a-greedy-limits`
 <details>
 <summary>Reveal explanation</summary>
 
-J+(J−1)+⋯+1=J(J+1)/2, excluding the initial null model.
+\(J+(J-1)+\cdots +1=J(J+1)/2\), excluding the initial null model.
 
 **Intuition:** The number of candidate fits grows quadratically rather than exponentially.
 
@@ -16017,14 +16017,14 @@ Card ID: `am209a-negative-mse`
 
 ---
 
-### 843. What is irreducible error in the prediction model?
+### 843. If you knew the true expected response for each input, would prediction error disappear?
 
 **AM 209a · Bias and variance · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The response variation remaining even if the true conditional mean were known, for the given predictors and setting.
+Not if individual responses still vary around that expected value. This remaining variation is irreducible noise for the available predictors and setting.
 
 **Intuition:** Better fitting cannot predict randomness absent from the inputs.
 
@@ -16036,14 +16036,14 @@ Card ID: `am209a-irreducible`
 
 ---
 
-### 844. What is reducible prediction error?
+### 844. Which part of prediction error can a better model or more informative training data reduce?
 
 **AM 209a · Bias and variance · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Error from imperfect estimation or an inadequate model for the systematic relationship.
+The error from an inadequate relationship or imperfect estimation of it. This is reducible error, distinct from unpredictable variation around the true expected response.
 
 **Intuition:** Better models or better estimation may reduce it.
 
@@ -16074,14 +16074,14 @@ Card ID: `am209a-07a-variance`
 
 ---
 
-### 846. What is prediction bias at a fixed input x?
+### 846. What does it mean if repeated fits systematically predict above the true mean at an input?
 
 **AM 209a · Bias and variance · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The average prediction over repeated training samples minus the true mean response f(x).
+They have positive prediction bias there: the average prediction across training samples exceeds the true expected response f(x). Bias describes systematic error, not the spread between fits.
 
 **Intuition:** Bias concerns systematic error across possible fits.
 
@@ -16157,7 +16157,7 @@ Card ID: `am209a-biased-better`
 <details>
 <summary>Reveal explanation</summary>
 
-A data-fit loss plus a coefficient penalty weighted by λ.
+A data-fit loss plus a coefficient penalty weighted by \(\lambda\).
 
 **Intuition:** A good fit must also pay for complexity.
 
@@ -16169,7 +16169,7 @@ Card ID: `am209a-penalty`
 
 ---
 
-### 851. What happens when λ=0 in ridge or lasso?
+### 851. What happens when \(\lambda =0\) in ridge or lasso?
 
 **AM 209a · Regularization · QUICK RECALL**
 
@@ -16188,7 +16188,7 @@ Card ID: `am209a-lambda-zero`
 
 ---
 
-### 852. What happens to penalized slopes as λ becomes very large?
+### 852. What happens to penalized slopes as \(\lambda\) becomes very large?
 
 **AM 209a · Regularization · QUICK RECALL**
 
@@ -16233,7 +16233,7 @@ Card ID: `am209a-too-much`
 <details>
 <summary>Reveal explanation</summary>
 
-Compare candidate λ values using validation or cross-validation loss.
+Compare candidate \(\lambda\) values using validation or cross-validation loss.
 
 **Intuition:** The penalty's training value does not measure held-out usefulness.
 
@@ -16252,7 +16252,7 @@ Card ID: `am209a-tune-lambda`
 <details>
 <summary>Reveal explanation</summary>
 
-The L1 penalty λΣⱼabs(βⱼ), usually excluding the intercept.
+The L1 penalty \(\lambda\sum_j|\beta_j|\), usually excluding the intercept.
 
 **Intuition:** Absolute values create a sharp corner at zero.
 
@@ -16271,7 +16271,7 @@ Card ID: `am209a-lasso-penalty`
 <details>
 <summary>Reveal explanation</summary>
 
-The squared L2 penalty λΣⱼβⱼ², usually excluding the intercept.
+The squared L2 penalty \(\lambda\sum_j\beta_j^2\), usually excluding the intercept.
 
 **Intuition:** Large coefficients become increasingly expensive.
 
@@ -16321,16 +16321,16 @@ Card ID: `am209a-intercept-penalty`
 
 ---
 
-### 859. For centered data and loss ‖y−Xβ‖²+λ‖β‖², what is the ridge solution?
+### 859. For centered data and loss \(\Vert y-X\beta \Vert ^{2}+\lambda \Vert \beta \Vert ^{2}\), what is the ridge solution?
 
 **AM 209a · Regularization · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-β̂=(XᵀX+λI)⁻¹Xᵀy for λ>0.
+\(\hat{\beta}=(X^{\mathsf{T}}X+\lambda I)^{-1}X^{\mathsf{T}}y\) for \(\lambda >0\).
 
-**Intuition:** Adding λ stabilizes weak coefficient directions.
+**Intuition:** Adding \(\lambda\) stabilizes weak coefficient directions.
 
 </details>
 
@@ -16340,14 +16340,14 @@ Card ID: `am209a-ridge-formula`
 
 ---
 
-### 860. Why is XᵀX+λI invertible when λ>0?
+### 860. Why is \(X^{\mathsf{T}}X+\lambda I\) invertible when \(\lambda >0\)?
 
 **AM 209a · Regularization · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-For nonzero v, vᵀ(XᵀX+λI)v=‖Xv‖²+λ‖v‖²>0.
+For nonzero v, \(v^{\mathsf{T}}(X^{\mathsf{T}}X+\lambda I)v=\Vert Xv\Vert ^{2}+\lambda \Vert v\Vert ^{2}>0\).
 
 **Intuition:** The penalty removes flat directions in the slope objective.
 
@@ -16359,16 +16359,16 @@ Card ID: `am209a-ridge-invertible`
 
 ---
 
-### 861. If the fit loss is MSE rather than SSE, does the same numerical λ mean the same penalty strength?
+### 861. If the fit loss is MSE rather than SSE, does the same numerical \(\lambda\) mean the same penalty strength?
 
 **AM 209a · Regularization · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. With MSE+λ‖β‖², the normal equations contain XᵀX+nλI.
+No. With \(\operatorname{MSE}+\lambda \Vert \beta \Vert ^{2}\), the normal equations contain \(X^{\mathsf{T}}X+n\lambda I\).
 
-**Intuition:** Always match λ to the objective's scaling convention.
+**Intuition:** Always match \(\lambda\) to the objective's scaling convention.
 
 </details>
 
@@ -16378,7 +16378,7 @@ Card ID: `am209a-ridge-loss-scale`
 
 ---
 
-### 862. Why try λ values spread across orders of magnitude?
+### 862. Why try \(\lambda\) values spread across orders of magnitude?
 
 **AM 209a · Regularization · QUICK RECALL**
 
@@ -16397,14 +16397,14 @@ Card ID: `am209a-log-grid`
 
 ---
 
-### 863. Can you reuse one fitted coefficient vector for every candidate λ?
+### 863. Can you reuse one fitted coefficient vector for every candidate \(\lambda\)?
 
 **AM 209a · Regularization · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. Each λ defines a different optimization problem and generally needs its own fit.
+No. Each \(\lambda\) defines a different optimization problem and generally needs its own fit.
 
 **Intuition:** Tuning changes the model, not only its score.
 
@@ -16435,7 +16435,7 @@ Card ID: `am209a-validation-unpenalized`
 
 ---
 
-### 865. After selecting λ, what data can you use for the final refit?
+### 865. After selecting \(\lambda\), what data can you use for the final refit?
 
 **AM 209a · Regularization · QUICK RECALL**
 
@@ -16454,7 +16454,7 @@ Card ID: `am209a-final-refit`
 
 ---
 
-### 866. With 10 λ values and 5 CV folds, how many candidate fits are needed?
+### 866. With 10 \(\lambda\) values and 5 CV folds, how many candidate fits are needed?
 
 **AM 209a · Regularization · QUICK RECALL**
 
@@ -16575,7 +16575,7 @@ Card ID: `am209a-ridge-collinearity`
 <details>
 <summary>Reveal explanation</summary>
 
-No. Selection depends on λ, other predictors, and the sample.
+No. Selection depends on \(\lambda\), other predictors, and the sample.
 
 **Intuition:** A fitted exclusion is not a universal scientific conclusion.
 
@@ -16606,14 +16606,14 @@ Card ID: `am209a-coefficient-uncertainty`
 
 ---
 
-### 874. What is a coefficient's sampling distribution?
+### 874. If you repeated a study many times, why would the fitted coefficient vary?
 
 **AM 209a · Inference foundations · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The distribution of its estimated values across repeated datasets from the same data-generating process.
+Each sample has different observations and noise. The distribution of coefficient estimates across those repeated samples is its sampling distribution.
 
 **Intuition:** One fitted coefficient is one realization of an estimator.
 
@@ -16625,14 +16625,14 @@ Card ID: `am209a-sampling-distribution`
 
 ---
 
-### 875. What does sampling with replacement mean?
+### 875. In a bootstrap resample, can the same observation appear more than once?
 
 **AM 209a · Bootstrap · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-After a draw, that observation remains eligible to be drawn again.
+Yes. Sampling with replacement keeps each observation eligible after every draw, so a resample can repeat some rows and omit others.
 
 **Intuition:** A bootstrap sample can repeat some records and omit others.
 
@@ -16720,14 +16720,14 @@ Card ID: `am209a-bootstrap-se`
 
 ---
 
-### 880. Should the bootstrap SD of coefficients be divided by √B to estimate the coefficient's standard error?
+### 880. Should the bootstrap SD of coefficients be divided by \(\sqrt{B}\) to estimate the coefficient's standard error?
 
 **AM 209a · Bootstrap · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. The replicate SD already estimates that standard error; dividing by √B targets simulation averaging error instead.
+No. The replicate SD already estimates that standard error; dividing by \(\sqrt{B}\) targets simulation averaging error instead.
 
 **Intuition:** More bootstrap runs do not create more observed data.
 
@@ -16891,7 +16891,7 @@ Card ID: `am209a-ci-example`
 
 ---
 
-### 889. When is estimate ± roughly 2 standard errors a reasonable 95% interval approximation?
+### 889. When is estimate \(\pm\) roughly 2 standard errors a reasonable 95% interval approximation?
 
 **AM 209a · Bootstrap · QUICK RECALL**
 
@@ -16917,7 +16917,7 @@ Card ID: `am209a-normal-approx`
 <details>
 <summary>Reveal explanation</summary>
 
-Under spherical errors, SE(β̂₁)=σ/√Σ(xᵢ−x̄)².
+Under equal-variance, uncorrelated errors, \(\operatorname{SE}(\hat\beta_1)=\frac{\sigma}{\sqrt{\sum_i(x_i-\bar x)^2}}\).
 
 **Intuition:** A wider range of x provides more leverage for estimating a slope.
 
@@ -16955,7 +16955,7 @@ Card ID: `am209a-noise-se`
 <details>
 <summary>Reveal explanation</summary>
 
-s²=SSE/(n−2), for n>2 under the usual model assumptions.
+\(s^2=\frac{\operatorname{SSE}}{n-2}\), for \(n>2\) under the usual model assumptions.
 
 **Intuition:** Two fitted coefficients use two degrees of freedom.
 
@@ -16986,14 +16986,14 @@ Card ID: `am209a-size-vs-evidence`
 
 ---
 
-### 894. What is the usual coefficient t statistic for testing βⱼ=0?
+### 894. What is the usual coefficient t statistic for testing \(\beta _{j}=0\)?
 
 **AM 209a · Predictor significance · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-t=β̂ⱼ/SE(β̂ⱼ).
+\(t=\hat{\beta}_{j}/\operatorname{SE}(\hat{\beta}_{j})\).
 
 **Intuition:** It measures how many standard errors the estimate lies from zero.
 
@@ -17005,7 +17005,7 @@ Card ID: `am209a-t-stat`
 
 ---
 
-### 895. If β̂=0.6 and its SE is 0.2, what is the t statistic for a zero null?
+### 895. If \(\hat{\beta}=0.6\) and its SE is 0.2, what is the t statistic for a zero null?
 
 **AM 209a · Predictor significance · QUICK RECALL**
 
@@ -17081,14 +17081,14 @@ Card ID: `am209a-two-sided`
 
 ---
 
-### 899. What is a p-value?
+### 899. If the null hypothesis were true, what question would a p-value answer?
 
 **AM 209a · Predictor significance · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Under the null and model assumptions, the probability of a test statistic at least as extreme as the observed one.
+How likely is a test statistic at least as extreme as the one observed, under the null and model assumptions? It does not give the probability that the null itself is true.
 
 **Intuition:** It is a probability about possible data, conditional on a hypothesis.
 
@@ -17100,14 +17100,14 @@ Card ID: `am209a-pvalue`
 
 ---
 
-### 900. Is a p-value the probability that the null hypothesis is true?
+### 900. Does a p-value of 0.03 mean the null hypothesis has a 3% chance of being true?
 
 **AM 209a · Predictor significance · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-No.
+No. It means results at least as extreme as observed have probability 3% under the null and model assumptions. Turning evidence into a probability about the hypothesis requires additional assumptions, such as a Bayesian model.
 
 **Intuition:** Do not reverse a conditional probability.
 
@@ -17221,7 +17221,7 @@ Card ID: `am209a-prediction-vs-confidence`
 <details>
 <summary>Reveal explanation</summary>
 
-No. The new response still contains random error ε.
+No. The new response still contains random error \(\varepsilon\).
 
 **Intuition:** A perfectly known mean is not a perfectly predictable individual.
 
@@ -17259,7 +17259,7 @@ Card ID: `am209a-bootstrap-new-response`
 <details>
 <summary>Reveal explanation</summary>
 
-They add: Var(prediction error)=Var(estimated mean error)+σ², under the model.
+They add: \(\operatorname{Var}(\text{prediction error})=\operatorname{Var}(\text{estimated mean error})+\sigma^2\), under the model.
 
 **Intuition:** Uncertainty has two distinct sources.
 
@@ -17283,7 +17283,7 @@ Card ID: `am209a-two-variances`
 <details>
 <summary>Reveal explanation</summary>
 
-It doubles, from 2⁻⁴⁶ to 2⁻⁴⁵. The exponent increases by one while binary64 keeps the same significand precision.
+It doubles, from \(2^{-46}\) to \(2^{-45}\). The exponent increases by one while binary64 keeps the same significand precision.
 
 **Intuition:** The floating-point grid stretches with scale.
 
@@ -17301,8 +17301,8 @@ Card ID: `am205-spacing-visual-double-spacing`
 
 **Same operations, different order** (compare)
 
-- A: Double row 1 → swap
-- B: Swap → double row 1
+- A: Double row 1 \(\to\) swap
+- B: Swap \(\to\) double row 1
 
 <details>
 <summary>Reveal explanation</summary>
@@ -17319,14 +17319,14 @@ Card ID: `am205-row-column-order-visual-operation-order`
 
 ---
 
-### 911. A map stretches one axis by 4 and the other by 1/4. What happens to area?
+### 911. A map stretches one axis by 4 and the other by \(\frac{1}{4}\). What happens to area?
 
 **AM 205 · Geometry of linear maps · PREDICT**
 
 **Two stretches** (equation)
 
-- σ₁: 4
-- σ₂: 1/4
+- \(\sigma _{1}\): 4
+- \(\sigma _{2}\): \(\frac{1}{4}\)
 
 <details>
 <summary>Reveal explanation</summary>
@@ -17349,8 +17349,8 @@ Card ID: `am205-singular-values-area-visual-area-predict`
 
 **Spot the claim** (mistake)
 
-- Given: A = diag(1, 10⁻⁸), b = (1, 10⁻⁸)
-- Claim: x̂ = (1, 0) is accurate because ‖b − Ax̂‖ = 10⁻⁸
+- Given: A \(=\) diag(1, \(10^{-8}\)), b \(=\) (1, \(10^{-8}\))
+- Claim: \(\hat{x}\) \(=\) (1, 0) is accurate because \(\lVert b-A\hat x\rVert\) \(=\) \(10^{-8}\)
 
 <details>
 <summary>Reveal explanation</summary>
@@ -17367,19 +17367,19 @@ Card ID: `am205-small-residual-counterexample-visual-residual-trap`
 
 ---
 
-### 913. If κ₂(X)=10⁴, which least-squares route forms a matrix with condition number 10⁸?
+### 913. If \(\kappa _{2}(X)=10^{4}\), which least-squares route forms a matrix with condition number \(10^{8}\)?
 
 **AM 205 · Least-squares algorithms · COMPARE**
 
 **Full column rank X** (compare)
 
-- Normal equations: XᵀX β = Xᵀy
-- QR: X = QR, then Rβ = Qᵀy
+- Normal equations: \(X^{\mathsf{T}}X\beta=X^{\mathsf{T}}y\)
+- QR: X \(=\) QR, then \(R\beta=Q^{\mathsf{T}}y\)
 
 <details>
 <summary>Reveal explanation</summary>
 
-The normal equations form XᵀX, whose 2-norm condition number is κ₂(X)² = 10⁸. QR avoids explicitly squaring the condition number.
+The normal equations form \(X^{\mathsf{T}}X\), whose 2-norm condition number is \(\kappa _{2}(X)^{2}\) \(=\) \(10^{8}\). QR avoids explicitly squaring the condition number.
 
 **Intuition:** Algebraically equivalent formulas can behave differently in finite precision.
 
@@ -17391,20 +17391,20 @@ Card ID: `am205-normal-squared-visual-conditioning-predict`
 
 ---
 
-### 914. After factoring PA=LU, what belongs in the missing solve step?
+### 914. After factoring \(PA=LU\), what belongs in the missing solve step?
 
 **AM 205 · Efficient linear solves · COMPLETE THE SEQUENCE**
 
 **Reuse the factors** (flow)
 
 - 1: Form Pb
-- 2: Solve Ly = Pb
+- 2: Solve Ly \(=\) Pb
 - 3: ?
 
 <details>
 <summary>Reveal explanation</summary>
 
-Solve Ux=y by back substitution. For each new right-hand side, reuse P, L, and U rather than refactoring A.
+Solve \(Ux=y\) by back substitution. For each new right-hand side, reuse P, L, and U rather than refactoring A.
 
 **Intuition:** Pay for the factorization once, then solve cheaply.
 
@@ -17428,7 +17428,7 @@ Card ID: `am205-lu-reuse-visual-solve-pipeline`
 <details>
 <summary>Reveal explanation</summary>
 
-Budget B. Standard error scales as 1/√N, so quadrupling N halves it; doubling N only multiplies it by 1/√2.
+Budget B. Standard error scales as \(\frac{1}{\sqrt{N}}\), so quadrupling N halves it; doubling N only multiplies it by \(\frac{1}{\sqrt{2}}\).
 
 **Intuition:** Precision improves with the square root of computational effort.
 
@@ -17440,19 +17440,19 @@ Card ID: `am207-iid-mean-variance-visual-mc-budget`
 
 ---
 
-### 916. If a valid rejection envelope changes from M=2 to M=8, how does acceptance change?
+### 916. If a valid rejection envelope changes from \(M=2\) to \(M=8\), how does acceptance change?
 
 **AM 207 · Rejection sampling · PREDICT**
 
 **Normalized target and proposal** (equation)
 
-- Before: M = 2
-- After: M = 8
+- Before: M \(=\) 2
+- After: M \(=\) 8
 
 <details>
 <summary>Reveal explanation</summary>
 
-Acceptance falls from 1/2 to 1/8. The looser envelope needs four times as many proposals per accepted draw on average.
+Acceptance falls from \(\frac{1}{2}\) to \(\frac{1}{8}\). The looser envelope needs four times as many proposals per accepted draw on average.
 
 **Intuition:** A valid but loose bound wastes computation.
 
@@ -17511,19 +17511,19 @@ Card ID: `am207-importance-support-visual-support-check`
 
 ---
 
-### 919. With a frozen propensity of 12 per second and τ=0.25 seconds, what count is sampled?
+### 919. With a frozen reaction rate of 12 per second and \(\tau =0.25\) seconds, what count is sampled?
 
 **AM 207 · Tau leaping · PREDICT**
 
 **One tau-leap channel** (equation)
 
-- aⱼ: 12 s⁻¹
-- τ: 0.25 s
+- \(a_{j}\): 12 \(s^{-1}\)
+- \(\tau\): 0.25 s
 
 <details>
 <summary>Reveal explanation</summary>
 
-A Poisson random count with mean 3, not exactly three events. Freezing the propensity is the tau-leaping approximation.
+A Poisson random count with mean 3, not exactly three events. Freezing the reaction rate is the tau-leaping approximation.
 
 **Intuition:** The expected count is deterministic; the realized count is random.
 
@@ -17548,7 +17548,7 @@ Card ID: `am207-tau-poisson-mean-visual-tau-predict`
 <details>
 <summary>Reveal explanation</summary>
 
-Beta(5,8): add heads to the first shape parameter and tails to the second.
+\(\operatorname{Beta}(5,8)\): add heads to the first shape parameter and tails to the second.
 
 **Intuition:** Conjugate updating turns evidence into parameter increments.
 
@@ -17560,7 +17560,7 @@ Card ID: `am207-coin-four-eleven-visual-bayes-pipeline`
 
 ---
 
-### 921. Do these coefficient pairs give different fitted values when X=[x x]?
+### 921. Do these coefficient pairs give different fitted values when \(X=\begin{bmatrix}x&x\end{bmatrix}\)?
 
 **STAT 244 · Rank-deficient least squares · COMPARE**
 
@@ -17590,12 +17590,12 @@ Card ID: `stat244-affine-example-visual-coefficient-twins`
 
 **Spot the incomplete test** (mistake)
 
-- Claim: P² = P, therefore P is an orthogonal projector
+- Claim: \(P^{2}\) \(=\) P, therefore P is an orthogonal projector
 
 <details>
 <summary>Reveal explanation</summary>
 
-For a real matrix, also require Pᵀ=P. Idempotence alone describes a projection that may be oblique.
+For a real matrix, also require \(P^{\mathsf{T}}=P\). Idempotence alone describes a projection that may be oblique.
 
 **Intuition:** Projecting twice changes nothing; orthogonality additionally controls the direction.
 
@@ -17607,7 +17607,7 @@ Card ID: `stat244-idempotent-not-orthogonal-visual-projection-trap`
 
 ---
 
-### 923. If SSE stays 80 but rank(X) rises from 4 to 10 with n=20, what happens to s²?
+### 923. If SSE stays 80 but \(\operatorname{rank}(X)\) rises from 4 to 10 with \(n=20\), what happens to \(s^{2}\)?
 
 **STAT 244 · Variance estimation · PREDICT**
 
@@ -17643,7 +17643,7 @@ Card ID: `stat244-variance-numeric-visual-degrees-freedom`
 <details>
 <summary>Reveal explanation</summary>
 
-A. Inverse-variance weights are 1 and 1/4; the noisier measurement receives less influence.
+A. Inverse-variance weights are 1 and \(\frac{1}{4}\); the noisier measurement receives less influence.
 
 **Intuition:** Precision, not variance, determines the weight.
 
@@ -17655,19 +17655,19 @@ Card ID: `stat244-weights-visual-weight-comparison`
 
 ---
 
-### 925. With s=2 and mean-prediction leverage 0.25, which standard error is larger?
+### 925. With \(s=2\) and mean-prediction leverage 0.25, which standard error is larger?
 
 **STAT 244 · Prediction intervals · COMPARE**
 
 **Same predictor value** (compare)
 
-- Mean response: 2√0.25
+- Mean response: \(2\sqrt{0.25}\)
 - New response: 2√(1 + 0.25)
 
 <details>
 <summary>Reveal explanation</summary>
 
-The new-response SE is √5 ≈ 2.24; the mean-response SE is 1. The extra 1 represents the new observation's noise.
+The new-response SE is \(\sqrt{5}\) \(\approx\) 2.24; the mean-response SE is 1. The extra 1 represents the new observation's noise.
 
 **Intuition:** Predicting an individual adds variability beyond estimating its mean.
 
@@ -17725,14 +17725,14 @@ Card ID: `am209a-selection-bias-visual-sample-size-trap`
 
 ---
 
-### 928. If X is symmetric around zero and Y=X², can Pearson correlation miss a perfect relationship?
+### 928. If X is symmetric around zero and \(Y=X^{2}\), can Pearson correlation miss a perfect relationship?
 
 **AM 209a · Association · PREDICT**
 
 **Assume finite moments and nonzero variances** (equation)
 
 - Input: X
-- Output: Y = X²
+- Output: Y \(=\) \(X^{2}\)
 
 <details>
 <summary>Reveal explanation</summary>
@@ -17774,19 +17774,19 @@ Card ID: `am209a-train-validation-test-visual-test-leak`
 
 ---
 
-### 930. For f=1+2x+3z+4xz, what happens to the x-slope when z changes from 0 to 1?
+### 930. For \(f=1+2x+3z+4xz\), what happens to the x-slope when z changes from 0 to 1?
 
 **AM 209a · Interactions and polynomials · PREDICT**
 
 **Compare conditional slopes** (equation)
 
-- z = 0: ∂f/∂x = ?
-- z = 1: ∂f/∂x = ?
+- z \(=\) 0: \(\partial f/\partial x\) \(=\) ?
+- z \(=\) 1: \(\partial f/\partial x\) \(=\) ?
 
 <details>
 <summary>Reveal explanation</summary>
 
-The slope changes from 2 to 6 because ∂f/∂x=2+4z.
+The slope changes from 2 to 6 because \(\partial f/\partial x=2+4z\).
 
 **Intuition:** An interaction makes one variable's effect depend on another.
 
@@ -17802,10 +17802,10 @@ Card ID: `am209a-interaction-slope-visual-interaction-predict`
 
 **AM 209a · Ridge versus lasso · COMPARE**
 
-**Same squared-error loss, positive λ** (compare)
+**Same squared-error loss, positive \(\lambda\)** (compare)
 
-- Ridge: λ Σ βⱼ²
-- Lasso: λ Σ |βⱼ|
+- Ridge: \(\lambda\) \(\Sigma\) \(\beta _{j}^{2}\)
+- Lasso: \(\lambda\) \(\Sigma\) \(|\beta _{j}|\)
 
 <details>
 <summary>Reveal explanation</summary>
@@ -17959,14 +17959,14 @@ Card ID: `ub-if-comparative-advantage`
 
 ---
 
-### 939. What is a good's opportunity cost?
+### 939. If you use scarce resources to produce one good, what is the economic cost beyond the money spent?
 
 **International Finance · Gains from trade · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The amount of another good or activity sacrificed to produce it with scarce resources.
+The best alternative production or activity you give up. This is opportunity cost: the trade-off created by using those resources here rather than elsewhere.
 
 **Intuition:** Scarcity makes relative tradeoffs matter.
 
@@ -18327,7 +18327,7 @@ Card ID: `ub-if-gdp`
 <details>
 <summary>Reveal explanation</summary>
 
-GNP = GDP + factor income received from abroad − factor income paid abroad.
+GNP \(=\) GDP + factor income received from abroad − factor income paid abroad.
 
 **Intuition:** Location and ownership differ through cross-border factor income.
 
@@ -18377,7 +18377,7 @@ Card ID: `ub-if-final-goods`
 
 ---
 
-### 961. What are the four expenditure components in Y=C+I+G+CA?
+### 961. What are the four expenditure components in \(Y=C+I+G+CA\)?
 
 **International Finance · National income accounting · QUICK RECALL**
 
@@ -18498,7 +18498,7 @@ Card ID: `ub-if-absorption`
 <details>
 <summary>Reveal explanation</summary>
 
-CA=Y−(C+I+G) in the chapter's income identity. A surplus means income exceeds absorption; a deficit means absorption exceeds income.
+\(CA=Y-(C+I+G)\) in the chapter's income identity. A surplus means income exceeds absorption; a deficit means absorption exceeds income.
 
 **Intuition:** The current account records the gap between earning and spending.
 
@@ -18574,7 +18574,7 @@ Card ID: `ub-if-wealth-caveat`
 <details>
 <summary>Reveal explanation</summary>
 
-S=Y−C−G: income not used for consumption or government purchases.
+\(S=Y-C-G\): income not used for consumption or government purchases.
 
 **Intuition:** Saving leaves resources available for investment or net foreign lending.
 
@@ -18593,7 +18593,7 @@ Card ID: `ub-if-national-saving`
 <details>
 <summary>Reveal explanation</summary>
 
-S=I+CA, so CA=S−I. Saving can fund domestic investment or a net acquisition of foreign claims.
+\(S=I+CA\), so \(CA=S-I\). Saving can fund domestic investment or a net acquisition of foreign claims.
 
 **Intuition:** An open economy has two destinations for saving.
 
@@ -18612,7 +18612,7 @@ Card ID: `ub-if-saving-identity`
 <details>
 <summary>Reveal explanation</summary>
 
-Without cross-border transactions, CA=0, so the identity S=I+CA reduces to S=I.
+Without cross-border transactions, \(CA=0\), so the identity \(S=I+CA\) reduces to \(S=I\).
 
 **Intuition:** Closing the economy removes net foreign lending.
 
@@ -18631,7 +18631,7 @@ Card ID: `ub-if-closed-economy`
 <details>
 <summary>Reveal explanation</summary>
 
-Negative: CA=S−I<0. The investment gap is financed by net external borrowing or foreign-asset reduction.
+Negative: \(CA=S-I<0\). The investment gap is financed by net external borrowing or foreign-asset reduction.
 
 **Intuition:** Domestic investment need not wait for equal domestic saving.
 
@@ -18650,7 +18650,7 @@ Card ID: `ub-if-saving-deficit`
 <details>
 <summary>Reveal explanation</summary>
 
-Sᵖ=Y−T−C, where T is net taxes and Y−T is disposable income.
+\(S^{p}=Y-T-C\), where T is net taxes and Y−T is disposable income.
 
 **Intuition:** Private saving is what remains after taxes and consumption.
 
@@ -18669,7 +18669,7 @@ Card ID: `ub-if-private-saving`
 <details>
 <summary>Reveal explanation</summary>
 
-Sᵍ=T−G. A budget deficit, G>T, is negative government saving.
+\(S^{g}=T-G\). A budget deficit, \(G>T\), is negative government saving.
 
 **Intuition:** A budget deficit absorbs part of national saving.
 
@@ -18681,7 +18681,7 @@ Card ID: `ub-if-government-saving`
 
 ---
 
-### 977. Why does Sᵖ+Sᵍ equal national saving?
+### 977. Why does \(S^{p}+S^{g}\) equal national saving?
 
 **International Finance · Saving and investment · QUICK RECALL**
 
@@ -18707,7 +18707,7 @@ Card ID: `ub-if-saving-sum`
 <details>
 <summary>Reveal explanation</summary>
 
-Sᵖ=I+CA+(G−T). Rearranging gives CA=Sᵖ−I−(G−T).
+\(S^{p}=I+CA+(G-T)\). Rearranging gives \(CA=S^{p}-I-(G-T)\).
 
 **Intuition:** The budget deficit competes with investment and foreign lending for private saving.
 
@@ -18783,7 +18783,7 @@ Card ID: `ub-if-three-accounts`
 <details>
 <summary>Reveal explanation</summary>
 
-Net financial inflows are positive: sales of domestic assets to foreigners minus domestic purchases of foreign assets. Under it, CA+KA+FA=0.
+Net financial inflows are positive: sales of domestic assets to foreigners minus domestic purchases of foreign assets. Under it, \(CA+KA+FA=0\).
 
 **Intuition:** State the sign convention before using an identity.
 
@@ -18909,14 +18909,14 @@ Card ID: `ub-if-debt-forgiveness`
 
 ---
 
-### 989. If CA=−40 and KA=5, what is FA under the slides' net-inflow convention?
+### 989. If \(CA=-40\) and \(KA=5\), what is FA under the slides' net-inflow convention?
 
 **International Finance · Balance of payments bookkeeping · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-FA=35, since −40+5+35=0.
+\(FA=35\), since \(-40+5+35=0\).
 
 **Intuition:** Account signs must close the same identity.
 
@@ -19156,7 +19156,7 @@ Card ID: `ub-if-ireland-example`
 
 ---
 
-### 1002. What does E=1.20 dollars per euro mean?
+### 1002. What does \(E=1.20\) dollars per euro mean?
 
 **International Finance · Exchange-rate quotations · QUICK RECALL**
 
@@ -19182,7 +19182,7 @@ Card ID: `ub-if-quote-units`
 <details>
 <summary>Reveal explanation</summary>
 
-1/1.25=0.80 euros per dollar.
+\(\frac{1}{1.25}=0.80\) euros per dollar.
 
 **Intuition:** Reversing a quote requires taking its reciprocal.
 
@@ -19239,7 +19239,7 @@ Card ID: `ub-if-dollar-appreciation`
 <details>
 <summary>Reveal explanation</summary>
 
-It increases the dollar price because P$=E×P€ and E rises.
+It increases the dollar price because \(P_{\mathrm{USD}}=E\times P_{\mathrm{EUR}}\) and E rises.
 
 **Intuition:** Exchange-rate pass-through here assumes the foreign sticker price is unchanged.
 
@@ -19258,7 +19258,7 @@ Card ID: `ub-if-import-price`
 <details>
 <summary>Reveal explanation</summary>
 
-It raises the euro price: P€=P$/E and dollar appreciation means E falls.
+It raises the euro price: \(P_{\mathrm{EUR}}=P_{\mathrm{USD}}/E\) and dollar appreciation means E falls.
 
 **Intuition:** A stronger currency makes unchanged domestic-price exports costlier abroad.
 
@@ -19486,7 +19486,7 @@ Card ID: `ub-if-futures-forward`
 <details>
 <summary>Reveal explanation</summary>
 
-¥12,500,000×$0.006400/¥=$80,000.
+\(\text{JPY}12,500,000\times \text{USD}0.006400/\text{JPY}=\text{USD}80,000\).
 
 **Intuition:** Notional measures the position's scale, not the required collateral.
 
@@ -19505,7 +19505,7 @@ Card ID: `ub-if-futures-notional`
 <details>
 <summary>Reveal explanation</summary>
 
-Multiply the contract's currency amount by the price tick. Here ¥12,500,000×$0.0000005/¥=$6.25.
+Multiply the contract's currency amount by the price tick. Here \(\text{JPY}12,500,000\times \text{USD}0.0000005/\text{JPY}=\text{USD}6.25\).
 
 **Intuition:** A small quote movement is multiplied by the full contract size.
 
@@ -19581,7 +19581,7 @@ Card ID: `ub-if-futures-profit`
 <details>
 <summary>Reveal explanation</summary>
 
-$625−$2−$2=$621 in the slide's example.
+\(\text{USD}625-\text{USD}2-\text{USD}2=\text{USD}621\) in the slide's example.
 
 **Intuition:** Round-trip costs reduce the amount actually earned.
 
@@ -19676,7 +19676,7 @@ Card ID: `ub-if-nominal-return`
 <details>
 <summary>Reveal explanation</summary>
 
-Subtract inflation: r≈R−π. The exact gross real return is (1+R)/(1+π).
+Subtract inflation: \(r\approx R-\pi\). The exact gross real return is \((1+R)/(1+\pi )\).
 
 **Intuition:** Purchasing-power gains can be smaller than money gains.
 
@@ -19771,7 +19771,7 @@ Card ID: `ub-if-two-return-components`
 <details>
 <summary>Reveal explanation</summary>
 
-Buy 1/E euros, earn (1+R€)/E euros, then convert at expected future rate Eᵉ to get (1+R€)Eᵉ/E dollars.
+Buy \(1/E\) euros, earn (1+R€)/E euros, then convert at expected future rate \(E^{e}\) to get \((1+R_{\mathrm{EUR}})E^{e}/E\) dollars.
 
 **Intuition:** Follow the currency conversion at both ends.
 
@@ -19790,7 +19790,7 @@ Card ID: `ub-if-conversion-steps`
 <details>
 <summary>Reveal explanation</summary>
 
-R€,$=(1+R€)Eᵉ/E−1, with E and Eᵉ both quoted in dollars per euro.
+\(R_{\mathrm{EUR},\mathrm{USD}}=(1+R_{\mathrm{EUR}})\frac{E^e}{E}-1\), with E and \(E^{e}\) both quoted in dollars per euro.
 
 **Intuition:** The interest gain also experiences the currency conversion.
 
@@ -19809,7 +19809,7 @@ Card ID: `ub-if-exact-foreign-return`
 <details>
 <summary>Reveal explanation</summary>
 
-R€+(Eᵉ−E)/E. It drops the product of the interest rate and the expected exchange-rate change.
+\(R_{\mathrm{EUR}}+\frac{E^e-E}{E}\). It drops the product of the interest rate and the expected exchange-rate change.
 
 **Intuition:** The approximation works best when both rates are small.
 
@@ -19828,7 +19828,7 @@ Card ID: `ub-if-approx-foreign-return`
 <details>
 <summary>Reveal explanation</summary>
 
-The exact return includes R€×[(Eᵉ−E)/E], which the additive approximation omits.
+The exact return includes \(R_{\mathrm{EUR}}\times [(E^{e}-E)/E]\), which the additive approximation omits.
 
 **Intuition:** A small omitted product is still nonzero.
 
@@ -19847,7 +19847,7 @@ Card ID: `ub-if-cross-term`
 <details>
 <summary>Reveal explanation</summary>
 
-No. The euro deposit's exact dollar return is 1.04×0.97−1=0.88%, below 2%.
+No. The euro deposit's exact dollar return is \(1.04\times 0.97-1=0.88\%\), below 2%.
 
 **Intuition:** A currency loss can outweigh an interest advantage.
 
@@ -19859,7 +19859,7 @@ Card ID: `ub-if-higher-interest-trap`
 
 ---
 
-### 1039. What does R$−R€−(Eᵉ−E)/E measure?
+### 1039. What does \(R_{\mathrm{USD}}-R_{\mathrm{EUR}}-\frac{E^e-E}{E}\) measure?
 
 **International Finance · Currency deposit returns · QUICK RECALL**
 
@@ -19885,7 +19885,7 @@ Card ID: `ub-if-return-gap`
 <details>
 <summary>Reveal explanation</summary>
 
-R$=R€+(Eᵉ−E)/E. Deposits offer equal expected returns measured in dollars under the model's risk and liquidity assumptions.
+\(R_{\mathrm{USD}}=R_{\mathrm{EUR}}+\frac{E^e-E}{E}\). Deposits offer equal expected returns measured in dollars under the model's risk and liquidity assumptions.
 
 **Intuition:** Uncovered means the future exchange rate is not locked in.
 
@@ -19904,7 +19904,7 @@ Card ID: `ub-if-uip`
 <details>
 <summary>Reveal explanation</summary>
 
-No. It equates expected returns under assumptions; the realized future spot rate can differ from its expectation.
+No. It equates expected returns under assumptions; the realized future spot rate can differ from its expected value.
 
 **Intuition:** Expected equality is not a guaranteed risk-free payoff.
 
@@ -19923,7 +19923,7 @@ Card ID: `ub-if-uip-risk`
 <details>
 <summary>Reveal explanation</summary>
 
-Demand shifts toward dollars, so E falls: the dollar appreciates. At fixed Eᵉ, cheaper euros now offer greater expected future appreciation until parity is restored.
+Demand shifts toward dollars, so E falls: the dollar appreciates. At fixed \(E^{e}\), cheaper euros now offer greater expected future appreciation until parity is restored.
 
 **Intuition:** Today's price adjusts to close the expected-return gap.
 
@@ -19935,7 +19935,7 @@ Card ID: `ub-if-dollar-excess-return`
 
 ---
 
-### 1043. At fixed Eᵉ and R€, why does a higher current E lower expected euro returns?
+### 1043. At fixed \(E^{e}\) and R€, why does a higher current E lower expected euro returns?
 
 **International Finance · Interest parity and expectations · QUICK RECALL**
 
@@ -19954,7 +19954,7 @@ Card ID: `ub-if-current-depreciation`
 
 ---
 
-### 1044. At fixed Eᵉ and R€, how does dollar appreciation today affect expected euro returns?
+### 1044. At fixed \(E^{e}\) and R€, how does dollar appreciation today affect expected euro returns?
 
 **International Finance · Interest parity and expectations · QUICK RECALL**
 
@@ -19992,7 +19992,7 @@ Card ID: `ub-if-fx-graph`
 
 ---
 
-### 1046. At fixed foreign interest and Eᵉ, what does a higher dollar interest rate do to E?
+### 1046. At fixed foreign interest and \(E^{e}\), what does a higher dollar interest rate do to E?
 
 **International Finance · Interest parity and expectations · QUICK RECALL**
 
@@ -20001,7 +20001,7 @@ Card ID: `ub-if-fx-graph`
 
 It lowers E, so the dollar appreciates.
 
-**Intuition:** The condition on expectations is essential.
+**Intuition:** The condition on expected values is essential.
 
 </details>
 
@@ -20011,7 +20011,7 @@ Card ID: `ub-if-dollar-rate-rise`
 
 ---
 
-### 1047. At fixed dollar interest and Eᵉ, what does a higher euro interest rate do to E?
+### 1047. At fixed dollar interest and \(E^{e}\), what does a higher euro interest rate do to E?
 
 **International Finance · Interest parity and expectations · QUICK RECALL**
 
@@ -20056,7 +20056,7 @@ Card ID: `ub-if-expectations-now`
 <details>
 <summary>Reveal explanation</summary>
 
-E=Eᵉ/(1+R$−R€), assuming the denominator is positive.
+\(E=\frac{E^e}{1+R_{\mathrm{USD}}-R_{\mathrm{EUR}}}\), assuming the denominator is positive.
 
 **Intuition:** A higher expected future quote raises today's equilibrium quote.
 
@@ -20068,14 +20068,14 @@ Card ID: `ub-if-uip-solve`
 
 ---
 
-### 1050. What is a currency carry trade?
+### 1050. Why might someone borrow in one currency and invest in another with a higher interest rate?
 
 **International Finance · Carry trade and covered parity · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Borrow in a low-interest currency and invest in a higher-interest currency, typically leaving exchange-rate exposure.
+They seek the interest-rate difference. This carry trade usually leaves exchange-rate risk: depreciation of the investment currency can erase the interest gain.
 
 **Intuition:** The interest spread is only one part of the total return.
 
@@ -20132,7 +20132,7 @@ Card ID: `ub-if-cip`
 <details>
 <summary>Reveal explanation</summary>
 
-1+R$=(1+R€)F/E, with E and F in dollars per euro.
+\(1+R_{\mathrm{USD}}=(1+R_{\mathrm{EUR}})F/E\), with E and F in dollars per euro.
 
 **Intuition:** Compare two locked-in payoffs for the same initial dollar.
 
@@ -20170,7 +20170,7 @@ Card ID: `ub-if-forward-premium`
 <details>
 <summary>Reveal explanation</summary>
 
-R$≈R€+(F−E)/E. It neglects the interest-times-premium cross-term.
+\(R_{\mathrm{USD}}\approx R_{\mathrm{EUR}}+\frac{F-E}{E}\). It neglects the interest-times-premium cross-term.
 
 **Intuition:** Label the approximation when doing numerical exercises.
 
@@ -20189,7 +20189,7 @@ Card ID: `ub-if-cip-approx`
 <details>
 <summary>Reveal explanation</summary>
 
-F=E(1+R$)/(1+R€). Interest rates must cover the same maturity as the forward.
+\(F=E\frac{1+R_{\mathrm{USD}}}{1+R_{\mathrm{EUR}}}\). Interest rates must cover the same maturity as the forward.
 
 **Intuition:** A quoted annual rate cannot be mixed blindly with a shorter contract.
 
@@ -20246,7 +20246,7 @@ Card ID: `ub-if-cip-frictions`
 <details>
 <summary>Reveal explanation</summary>
 
-When both covered and uncovered parity hold for comparable deposits and maturities under the stated assumptions. Covered parity alone does not imply F=Eᵉ.
+When both covered and uncovered parity hold for comparable deposits and maturities under the stated assumptions. Covered parity alone does not imply \(F=E^{e}\).
 
 **Intuition:** A forward price is not automatically a forecast.
 
@@ -20455,7 +20455,7 @@ Card ID: `ub-if-income-money-demand`
 <details>
 <summary>Reveal explanation</summary>
 
-Mᵈ=P L(R,Y), where real money demand L falls with R and rises with Y.
+\(M^d=P L(R,Y)\), where real money demand L falls with R and rises with Y.
 
 **Intuition:** Separate the price scale from desired purchasing power.
 
@@ -20467,14 +20467,14 @@ Card ID: `ub-if-nominal-demand`
 
 ---
 
-### 1071. What does M/P measure?
+### 1071. If the money stock stays fixed but prices double, what happens to purchasing power?
 
 **International Finance · Money demand · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Real money balances: the purchasing power represented by a nominal money stock.
+Real money balances \(M/P\) halve. Dividing nominal money by the price level shows how much goods and services that money can buy.
 
 **Intuition:** Dividing by the price level converts currency units into real units.
 
@@ -20512,7 +20512,7 @@ Card ID: `ub-if-shift-vs-move`
 <details>
 <summary>Reveal explanation</summary>
 
-Mˢ/P=L(R,Y). The interest rate adjusts until real money demand equals real supply.
+\(M^{s}/P=L(R,Y)\). The interest rate adjusts until real money demand equals real supply.
 
 **Intuition:** Equilibrium removes excess demand or supply of money.
 
@@ -20531,7 +20531,7 @@ Card ID: `ub-if-money-equilibrium`
 <details>
 <summary>Reveal explanation</summary>
 
-Given the nominal stock and price level, Mˢ/P does not depend on the interest rate in this simplified model.
+Given the nominal stock and price level, \(M^{s}/P\) does not depend on the interest rate in this simplified model.
 
 **Intuition:** Verticality is a model assumption about supply.
 
@@ -20626,7 +20626,7 @@ Card ID: `ub-if-income-interest`
 <details>
 <summary>Reveal explanation</summary>
 
-It reduces real money supply Mˢ/P and raises the equilibrium interest rate.
+It reduces real money supply \(M^{s}/P\) and raises the equilibrium interest rate.
 
 **Intuition:** A price increase can tighten real liquidity without changing nominal money.
 
@@ -20638,7 +20638,7 @@ Card ID: `ub-if-price-interest`
 
 ---
 
-### 1080. With sticky prices, fixed output, and fixed exchange-rate expectations, how does a domestic monetary expansion affect the currency?
+### 1080. With sticky prices, fixed output, and fixed exchange-rate expected values, how does a domestic monetary expansion affect the currency?
 
 **International Finance · Money and FX in the short run · QUICK RECALL**
 
@@ -20797,7 +20797,7 @@ Card ID: `ub-if-level-neutrality`
 <details>
 <summary>Reveal explanation</summary>
 
-P=Mˢ/L(R,Y). With real money demand unchanged, prices scale with nominal money supply.
+\(P=M^{s}/L(R,Y)\). With real money demand unchanged, prices scale with nominal money supply.
 
 **Intuition:** Prices adjust to restore desired real balances.
 
@@ -21082,7 +21082,7 @@ Card ID: `ub-if-inflation-news`
 <details>
 <summary>Reveal explanation</summary>
 
-How exchange rates tend to relate to economic fundamentals after prices adjust, and how investors may form future-rate expectations. They are not exact daily forecasting machines.
+How exchange rates tend to relate to economic fundamentals after prices adjust, and how investors may form future-rate expected values. They are not exact daily forecasting machines.
 
 **Intuition:** A long-run benchmark is not a promise about tomorrow's quote.
 
@@ -21120,7 +21120,7 @@ Card ID: `ub-if-one-price`
 <details>
 <summary>Reveal explanation</summary>
 
-PUS=EUS$/C$×PCanada for the same good.
+\(P_{\mathrm{US}}=E_{\mathrm{USD}/\mathrm{CAD}}P_{\mathrm{Canada}}\) for the same good.
 
 **Intuition:** The exchange-rate units must cancel the foreign currency.
 
@@ -21158,7 +21158,7 @@ Card ID: `ub-if-ppp-basket`
 <details>
 <summary>Reveal explanation</summary>
 
-E=P/P*, where E is domestic currency per foreign currency and P and P* price equivalent baskets.
+\(E=\frac{P}{P^*}\), where E is domestic currency per foreign currency and P and P* price equivalent baskets.
 
 **Intuition:** A foreign currency's price reflects the relative cost of the basket.
 
@@ -21177,7 +21177,7 @@ Card ID: `ub-if-absolute-ppp`
 <details>
 <summary>Reveal explanation</summary>
 
-200/400=US$0.50 per C$1. The reciprocal is C$2 per US$1.
+\(\frac{200}{400}=US\text{USD}0.50\) per C$1. The reciprocal is C$2 per US$1.
 
 **Intuition:** A correct ratio can still be mislabeled if quote units are omitted.
 
@@ -21196,7 +21196,7 @@ Card ID: `ub-if-ppp-numeric`
 <details>
 <summary>Reveal explanation</summary>
 
-Domestic-currency depreciation approximately equals domestic inflation minus foreign inflation: ΔE/E≈π−π*.
+Domestic-currency depreciation approximately equals domestic inflation minus foreign inflation: \(\Delta E/E\approx \pi -\pi *\).
 
 **Intuition:** Higher relative inflation erodes the domestic currency's purchasing power.
 
@@ -21215,7 +21215,7 @@ Card ID: `ub-if-relative-ppp`
 <details>
 <summary>Reveal explanation</summary>
 
-E₁/E₀=(1+π)/(1+π*). The inflation-difference formula is a small-rate approximation.
+\(\frac{E_1}{E_0}=\frac{1+\pi}{1+\pi^*}\). The inflation-difference formula is a small-rate approximation.
 
 **Intuition:** Ratios of gross growth factors preserve compounding.
 
@@ -21234,7 +21234,7 @@ Card ID: `ub-if-relative-exact`
 <details>
 <summary>Reveal explanation</summary>
 
-Yes. A persistent level wedge can leave E proportional to P/P* without making the proportionality constant one.
+Yes. A persistent level wedge can leave E proportional to \(P/P^{*}\) without making the proportionality constant one.
 
 **Intuition:** Stable deviations in levels can cancel when comparing growth rates.
 
@@ -21291,7 +21291,7 @@ Card ID: `ub-if-monetary-building-blocks`
 <details>
 <summary>Reveal explanation</summary>
 
-E=(M/M*)×[L(R*,Y*)/L(R,Y)]. It follows by substituting P=M/L and P*=M*/L* into E=P/P*.
+\(E=\frac{M}{M^*}\frac{L(R^*,Y^*)}{L(R,Y)}\). It follows by substituting \(P=M/L\) and \(P^{*}=M^{*}/L^{*}\) into \(E=\frac{P}{P^*}\).
 
 **Intuition:** Relative supply and relative demand for money both matter.
 
@@ -21350,7 +21350,7 @@ Card ID: `ub-if-foreign-money-ppp`
 
 Higher nominal interest lowers desired real money balances. At fixed M, a higher P restores money-market equilibrium, and PPP implies a higher E.
 
-**Intuition:** This flexible-price mechanism differs from the fixed-expectations short-run asset experiment.
+**Intuition:** This flexible-price mechanism differs from the fixed-expected values short-run asset experiment.
 
 </details>
 
@@ -21405,9 +21405,9 @@ Card ID: `ub-if-level-vs-growth`
 <details>
 <summary>Reveal explanation</summary>
 
-Uncovered interest parity plus expected relative PPP give R−R*≈πᵉ−π*ᵉ.
+Uncovered interest parity plus expected relative PPP give \(R-R^{*}\approx \pi ^{e}-\pi ^{*e}\).
 
-**Intuition:** The Fisher differential needs an exchange-rate expectation link.
+**Intuition:** The Fisher differential needs an exchange-rate expected value link.
 
 </details>
 
@@ -21481,7 +21481,7 @@ Card ID: `ub-if-growth-shock-rate`
 <details>
 <summary>Reveal explanation</summary>
 
-The higher nominal interest rate reduces L(R,Y). At fixed current M, P=M/L must rise to clear the money market.
+The higher nominal interest rate reduces L(R,Y). At fixed current M, \(P=M/L\) must rise to clear the money market.
 
 **Intuition:** A change in money demand can move prices without an immediate money-stock jump.
 
@@ -21519,7 +21519,7 @@ Card ID: `ub-if-growth-path`
 <details>
 <summary>Reveal explanation</summary>
 
-Prices adjust immediately with expectations, preventing the temporary excess real balances and interest-rate fall of the sticky-price mechanism.
+Prices adjust immediately with expected values, preventing the temporary excess real balances and interest-rate fall of the sticky-price mechanism.
 
 **Intuition:** Speed of price adjustment changes the exchange-rate path.
 
@@ -21538,7 +21538,7 @@ Card ID: `ub-if-ppp-no-overshoot`
 <details>
 <summary>Reveal explanation</summary>
 
-The first holds future exchange-rate expectations fixed in a short-run experiment. The second changes expected inflation and future exchange rates in a long-run experiment.
+The first holds future exchange-rate expected values fixed in a short-run experiment. The second changes expected inflation and future exchange rates in a long-run experiment.
 
 **Intuition:** Comparative statics cannot be combined while silently changing what is held fixed.
 
@@ -21721,7 +21721,7 @@ Card ID: `ub-if-endowment-theory`
 
 ---
 
-### 1137. What is q=EP*/P when E is domestic currency per foreign currency?
+### 1137. What is \(q=\frac{EP^*}{P}\) when E is domestic currency per foreign currency?
 
 **International Finance · Real exchange rates · QUICK RECALL**
 
@@ -21740,14 +21740,14 @@ Card ID: `ub-if-real-exchange-definition`
 
 ---
 
-### 1138. If E=$1.20/€, P*=€100, and P=$120, what is q?
+### 1138. If \(E=\text{USD}1.20/\text{EUR}\), \(P^{*}=\text{EUR}100\), and \(P=\text{USD}120\), what is q?
 
 **International Finance · Real exchange rates · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-q=1.20×100/120=1. One foreign basket costs the same as one domestic basket.
+\(q=1.20\times \frac{100}{120}=1\). One foreign basket costs the same as one domestic basket.
 
 **Intuition:** All three inputs are needed to measure real purchasing power.
 
@@ -21759,7 +21759,7 @@ Card ID: `ub-if-real-one`
 
 ---
 
-### 1139. Under q=EP*/P, what does a rise in q mean?
+### 1139. Under \(q=\frac{EP^*}{P}\), what does a rise in q mean?
 
 **International Finance · Real exchange rates · QUICK RECALL**
 
@@ -21778,7 +21778,7 @@ Card ID: `ub-if-real-depreciation`
 
 ---
 
-### 1140. Under q=EP*/P, what does a fall in q mean?
+### 1140. Under \(q=\frac{EP^*}{P}\), what does a fall in q mean?
 
 **International Finance · Real exchange rates · QUICK RECALL**
 
@@ -21804,7 +21804,7 @@ Card ID: `ub-if-real-appreciation`
 <details>
 <summary>Reveal explanation</summary>
 
-E=qP/P*. Nominal movements can reflect either relative price levels or real relative-price changes.
+\(E=q\frac{P}{P^*}\). Nominal movements can reflect either relative price levels or real relative-price changes.
 
 **Intuition:** PPP is the special case with a fixed appropriate q.
 
@@ -21823,7 +21823,7 @@ Card ID: `ub-if-nominal-decompose`
 <details>
 <summary>Reveal explanation</summary>
 
-No. If domestic prices rise proportionally with E while foreign prices stay fixed, q=EP*/P is unchanged.
+No. If domestic prices rise proportionally with E while foreign prices stay fixed, \(q=\frac{EP^*}{P}\) is unchanged.
 
 **Intuition:** Inflation can offset a nominal exchange-rate movement.
 
@@ -21937,7 +21937,7 @@ Card ID: `ub-if-monetary-real-neutral`
 <details>
 <summary>Reveal explanation</summary>
 
-Real appreciation lowers q, so E=qP/P* falls: nominal domestic appreciation.
+Real appreciation lowers q, so \(E=q\frac{P}{P^*}\) falls: nominal domestic appreciation.
 
 **Intuition:** A real demand shift can move the currency without a money-supply change.
 
@@ -21956,7 +21956,7 @@ Card ID: `ub-if-demand-nominal`
 <details>
 <summary>Reveal explanation</summary>
 
-More output raises q through real depreciation but increases money demand and lowers P. Since E=qP/P*, those effects oppose each other.
+More output raises q through real depreciation but increases money demand and lowers P. Since \(E=q\frac{P}{P^*}\), those effects oppose each other.
 
 **Intuition:** A clear real effect need not determine the nominal effect.
 
@@ -21994,7 +21994,7 @@ Card ID: `ub-if-productivity-models`
 <details>
 <summary>Reveal explanation</summary>
 
-Expected real depreciation: R−R*≈expected Δq/q+πᵉ−π*ᵉ, combining UIP with q=EP*/P.
+Expected real depreciation: R−R*≈expected \(\Delta q/q+\pi ^{e}-\pi ^{*e}\), combining UIP with \(q=\frac{EP^*}{P}\).
 
 **Intuition:** Expected goods-price changes matter when relative PPP does not hold.
 
@@ -22013,7 +22013,7 @@ Card ID: `ub-if-general-nominal-gap`
 <details>
 <summary>Reveal explanation</summary>
 
-rᵉ≈R−πᵉ. It measures the expected purchasing-power return rather than the currency-unit return.
+\(r^{e}\approx R-\pi ^{e}\). It measures the expected purchasing-power return rather than the currency-unit return.
 
 **Intuition:** Expected inflation, not already realized inflation, enters an ex ante calculation.
 
@@ -22032,7 +22032,7 @@ Card ID: `ub-if-real-interest`
 <details>
 <summary>Reveal explanation</summary>
 
-rᵉ−r*ᵉ≈expected Δq/q. The real return gap matches expected domestic real depreciation.
+\(r^e-r^{*e}\approx\mathbb{E}[\Delta q/q]\). The real return gap matches expected domestic real depreciation.
 
 **Intuition:** Equal expected nominal-currency returns need not mean equal goods-basket returns.
 
@@ -22072,7 +22072,7 @@ Card ID: `ub-if-real-equality`
 
 3%: the domestic real rate exceeds the foreign rate by the expected 2% real depreciation.
 
-**Intuition:** Keep the sign tied to q=EP*/P.
+**Intuition:** Keep the sign tied to \(q=\frac{EP^*}{P}\).
 
 </details>
 
@@ -22082,14 +22082,14 @@ Card ID: `ub-if-real-gap-numeric`
 
 ---
 
-### 1156. What is a vehicle currency, and why is the dollar an example?
+### 1156. Why might traders exchange two currencies through dollars instead of trading the pair directly?
 
 **International Finance · Foreign exchange markets · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-It is used as an intermediary even when neither party is from its issuing country. Extensive dollar trading can make routing exchanges through dollars convenient and liquid.
+Dollar markets can be deeper and easier to trade. The dollar acts as an intermediary, called a vehicle currency, even when neither trader is American.
 
 **Intuition:** A widely used trading network can reduce the need for every possible direct currency pair.
 
@@ -22151,7 +22151,7 @@ Card ID: `ub-if-money-demand-innovation`
 <details>
 <summary>Reveal explanation</summary>
 
-$62.50: 50×1.25. The pound units cancel, leaving dollars.
+$62.50: \(50\times 1.25\). The pound units cancel, leaving dollars.
 
 **Intuition:** Use multiplication when the quote is domestic currency per foreign currency.
 
@@ -22182,14 +22182,14 @@ Card ID: `ub-if-implied-jeans-rate`
 
 ---
 
-### 1161. Given CA=15, Sᵖ=50, I=25, G=12, what can you determine about T?
+### 1161. Given \(CA=15\), \(S^{p}=50\), \(I=25\), \(G=12\), what can you determine about T?
 
 **International Finance · Saving and investment practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-T=2. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+\(T=2\). Use \(CA=S^{p}-I-G+T\) and rearrange for the missing quantity.
 
 **Intuition:** Check how many independent unknowns remain before calculating.
 
@@ -22201,14 +22201,14 @@ Card ID: `ub-if-hw2-row-1`
 
 ---
 
-### 1162. Given CA=8, Sᵖ=50, G=15, T=3, what can you determine about I?
+### 1162. Given \(CA=8\), \(S^{p}=50\), \(G=15\), \(T=3\), what can you determine about I?
 
 **International Finance · Saving and investment practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-I=30. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+\(I=30\). Use \(CA=S^{p}-I-G+T\) and rearrange for the missing quantity.
 
 **Intuition:** Check how many independent unknowns remain before calculating.
 
@@ -22220,14 +22220,14 @@ Card ID: `ub-if-hw2-row-2`
 
 ---
 
-### 1163. Given CA=9, I=25, G=10, T=4, what can you determine about Sᵖ?
+### 1163. Given \(CA=9\), \(I=25\), \(G=10\), \(T=4\), what can you determine about \(S^{p}\)?
 
 **International Finance · Saving and investment practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Sᵖ=40. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+\(S^{p}=40\). Use \(CA=S^{p}-I-G+T\) and rearrange for the missing quantity.
 
 **Intuition:** Check how many independent unknowns remain before calculating.
 
@@ -22239,14 +22239,14 @@ Card ID: `ub-if-hw2-row-3`
 
 ---
 
-### 1164. Given CA=35, Sᵖ=50, I=10, T=5, what can you determine about G?
+### 1164. Given \(CA=35\), \(S^{p}=50\), \(I=10\), \(T=5\), what can you determine about G?
 
 **International Finance · Saving and investment practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-G=10. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+\(G=10\). Use \(CA=S^{p}-I-G+T\) and rearrange for the missing quantity.
 
 **Intuition:** Check how many independent unknowns remain before calculating.
 
@@ -22258,14 +22258,14 @@ Card ID: `ub-if-hw2-row-4`
 
 ---
 
-### 1165. Given Sᵖ=10, I=30, G=20, T=10, what can you determine about CA?
+### 1165. Given \(S^{p}=10\), \(I=30\), \(G=20\), \(T=10\), what can you determine about CA?
 
 **International Finance · Saving and investment practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-CA=-30. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+\(CA=-30\). Use \(CA=S^{p}-I-G+T\) and rearrange for the missing quantity.
 
 **Intuition:** Check how many independent unknowns remain before calculating.
 
@@ -22277,14 +22277,14 @@ Card ID: `ub-if-hw2-row-5`
 
 ---
 
-### 1166. Given CA=22, Sᵖ=200, G=50, T=12, what can you determine about I?
+### 1166. Given \(CA=22\), \(S^{p}=200\), \(G=50\), \(T=12\), what can you determine about I?
 
 **International Finance · Saving and investment practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-I=140. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+\(I=140\). Use \(CA=S^{p}-I-G+T\) and rearrange for the missing quantity.
 
 **Intuition:** Check how many independent unknowns remain before calculating.
 
@@ -22296,14 +22296,14 @@ Card ID: `ub-if-hw2-row-6`
 
 ---
 
-### 1167. Given CA=-25, I=140, G=100, T=15, what can you determine about Sᵖ?
+### 1167. Given \(CA=-25\), \(I=140\), \(G=100\), \(T=15\), what can you determine about \(S^{p}\)?
 
 **International Finance · Saving and investment practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Sᵖ=200. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+\(S^{p}=200\). Use \(CA=S^{p}-I-G+T\) and rearrange for the missing quantity.
 
 **Intuition:** Check how many independent unknowns remain before calculating.
 
@@ -22315,14 +22315,14 @@ Card ID: `ub-if-hw2-row-7`
 
 ---
 
-### 1168. Given Sᵖ=400, I=200, T=20, what can you determine about CA and G?
+### 1168. Given \(S^{p}=400\), \(I=200\), \(T=20\), what can you determine about CA and G?
 
 **International Finance · Saving and investment practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-There is no unique numerical solution. The identity gives CA=220−G, so one additional value is needed.
+There is no unique numerical solution. The identity gives \(CA=220-G\), so one additional value is needed.
 
 **Intuition:** Check how many independent unknowns remain before calculating.
 
@@ -22334,14 +22334,14 @@ Card ID: `ub-if-hw2-row-8`
 
 ---
 
-### 1169. Given CA=-280, Sᵖ=100, I=200, G=200, what can you determine about T?
+### 1169. Given \(CA=-280\), \(S^{p}=100\), \(I=200\), \(G=200\), what can you determine about T?
 
 **International Finance · Saving and investment practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-T=20. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+\(T=20\). Use \(CA=S^{p}-I-G+T\) and rearrange for the missing quantity.
 
 **Intuition:** Check how many independent unknowns remain before calculating.
 
@@ -22353,14 +22353,14 @@ Card ID: `ub-if-hw2-row-9`
 
 ---
 
-### 1170. With R$=10%, R€=6%, and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
+### 1170. With \(R_{\mathrm{USD}}=10\%\), \(R_{\mathrm{EUR}}=6\%\), and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-4 percentage points: 10−6−(0)=4. Dollar deposits have the higher expected dollar return.
+4 percentage points: \(10-6-(0)=4\). Dollar deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22372,14 +22372,14 @@ Card ID: `ub-if-hw3-gap-1`
 
 ---
 
-### 1171. With R$=10%, R€=6%, and expected dollar depreciation 4%, what is the approximate dollar-minus-euro return gap?
+### 1171. With \(R_{\mathrm{USD}}=10\%\), \(R_{\mathrm{EUR}}=6\%\), and expected dollar depreciation 4%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-0 percentage points: 10−6−(4)=0. The deposits tie in expected dollar return.
+0 percentage points: \(10-6-(4)=0\). The deposits tie in expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22391,14 +22391,14 @@ Card ID: `ub-if-hw3-gap-2`
 
 ---
 
-### 1172. With R$=10%, R€=6%, and expected dollar depreciation 8%, what is the approximate dollar-minus-euro return gap?
+### 1172. With \(R_{\mathrm{USD}}=10\%\), \(R_{\mathrm{EUR}}=6\%\), and expected dollar depreciation 8%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
--4 percentage points: 10−6−(8)=-4. Euro deposits have the higher expected dollar return.
+-4 percentage points: \(10-6-(8)=-4\). Euro deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22410,14 +22410,14 @@ Card ID: `ub-if-hw3-gap-3`
 
 ---
 
-### 1173. With R$=10%, R€=12%, and expected dollar depreciation -4%, what is the approximate dollar-minus-euro return gap?
+### 1173. With \(R_{\mathrm{USD}}=10\%\), \(R_{\mathrm{EUR}}=12\%\), and expected dollar depreciation -4%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-2 percentage points: 10−12−(-4)=2. Dollar deposits have the higher expected dollar return.
+2 percentage points: \(10-12-(-4)=2\). Dollar deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22429,14 +22429,14 @@ Card ID: `ub-if-hw3-gap-4`
 
 ---
 
-### 1174. With R$=10%, R€=18%, and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
+### 1174. With \(R_{\mathrm{USD}}=10\%\), \(R_{\mathrm{EUR}}=18\%\), and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
--8 percentage points: 10−18−(0)=-8. Euro deposits have the higher expected dollar return.
+-8 percentage points: \(10-18-(0)=-8\). Euro deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22448,14 +22448,14 @@ Card ID: `ub-if-hw3-gap-5`
 
 ---
 
-### 1175. With R$=15%, R€=6%, and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
+### 1175. With \(R_{\mathrm{USD}}=15\%\), \(R_{\mathrm{EUR}}=6\%\), and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-9 percentage points: 15−6−(0)=9. Dollar deposits have the higher expected dollar return.
+9 percentage points: \(15-6-(0)=9\). Dollar deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22467,14 +22467,14 @@ Card ID: `ub-if-hw3-gap-6`
 
 ---
 
-### 1176. With R$=15%, R€=6%, and expected dollar depreciation 4%, what is the approximate dollar-minus-euro return gap?
+### 1176. With \(R_{\mathrm{USD}}=15\%\), \(R_{\mathrm{EUR}}=6\%\), and expected dollar depreciation 4%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-5 percentage points: 15−6−(4)=5. Dollar deposits have the higher expected dollar return.
+5 percentage points: \(15-6-(4)=5\). Dollar deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22486,14 +22486,14 @@ Card ID: `ub-if-hw3-gap-7`
 
 ---
 
-### 1177. With R$=15%, R€=6%, and expected dollar depreciation 8%, what is the approximate dollar-minus-euro return gap?
+### 1177. With \(R_{\mathrm{USD}}=15\%\), \(R_{\mathrm{EUR}}=6\%\), and expected dollar depreciation 8%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-1 percentage points: 15−6−(8)=1. Dollar deposits have the higher expected dollar return.
+1 percentage points: \(15-6-(8)=1\). Dollar deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22505,14 +22505,14 @@ Card ID: `ub-if-hw3-gap-8`
 
 ---
 
-### 1178. With R$=15%, R€=12%, and expected dollar depreciation -4%, what is the approximate dollar-minus-euro return gap?
+### 1178. With \(R_{\mathrm{USD}}=15\%\), \(R_{\mathrm{EUR}}=12\%\), and expected dollar depreciation -4%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-7 percentage points: 15−12−(-4)=7. Dollar deposits have the higher expected dollar return.
+7 percentage points: \(15-12-(-4)=7\). Dollar deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22524,14 +22524,14 @@ Card ID: `ub-if-hw3-gap-9`
 
 ---
 
-### 1179. With R$=15%, R€=18%, and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
+### 1179. With \(R_{\mathrm{USD}}=15\%\), \(R_{\mathrm{EUR}}=18\%\), and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
--3 percentage points: 15−18−(0)=-3. Euro deposits have the higher expected dollar return.
+-3 percentage points: \(15-18-(0)=-3\). Euro deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22543,14 +22543,14 @@ Card ID: `ub-if-hw3-gap-10`
 
 ---
 
-### 1180. With R$=20%, R€=6%, and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
+### 1180. With \(R_{\mathrm{USD}}=20\%\), \(R_{\mathrm{EUR}}=6\%\), and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-14 percentage points: 20−6−(0)=14. Dollar deposits have the higher expected dollar return.
+14 percentage points: \(20-6-(0)=14\). Dollar deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22562,14 +22562,14 @@ Card ID: `ub-if-hw3-gap-11`
 
 ---
 
-### 1181. With R$=20%, R€=6%, and expected dollar depreciation 4%, what is the approximate dollar-minus-euro return gap?
+### 1181. With \(R_{\mathrm{USD}}=20\%\), \(R_{\mathrm{EUR}}=6\%\), and expected dollar depreciation 4%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-10 percentage points: 20−6−(4)=10. Dollar deposits have the higher expected dollar return.
+10 percentage points: \(20-6-(4)=10\). Dollar deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22581,14 +22581,14 @@ Card ID: `ub-if-hw3-gap-12`
 
 ---
 
-### 1182. With R$=20%, R€=6%, and expected dollar depreciation 8%, what is the approximate dollar-minus-euro return gap?
+### 1182. With \(R_{\mathrm{USD}}=20\%\), \(R_{\mathrm{EUR}}=6\%\), and expected dollar depreciation 8%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-6 percentage points: 20−6−(8)=6. Dollar deposits have the higher expected dollar return.
+6 percentage points: \(20-6-(8)=6\). Dollar deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22600,14 +22600,14 @@ Card ID: `ub-if-hw3-gap-13`
 
 ---
 
-### 1183. With R$=20%, R€=12%, and expected dollar depreciation -4%, what is the approximate dollar-minus-euro return gap?
+### 1183. With \(R_{\mathrm{USD}}=20\%\), \(R_{\mathrm{EUR}}=12\%\), and expected dollar depreciation -4%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-12 percentage points: 20−12−(-4)=12. Dollar deposits have the higher expected dollar return.
+12 percentage points: \(20-12-(-4)=12\). Dollar deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22619,14 +22619,14 @@ Card ID: `ub-if-hw3-gap-14`
 
 ---
 
-### 1184. With R$=20%, R€=18%, and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
+### 1184. With \(R_{\mathrm{USD}}=20\%\), \(R_{\mathrm{EUR}}=18\%\), and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-2 percentage points: 20−18−(0)=2. Dollar deposits have the higher expected dollar return.
+2 percentage points: \(20-18-(0)=2\). Dollar deposits have the higher expected dollar return.
 
 **Intuition:** Use the same currency and distinguish percentage points from percentage changes.
 
@@ -22638,7 +22638,7 @@ Card ID: `ub-if-hw3-gap-15`
 
 ---
 
-### 1185. Under approximate UIP, what dollar interest rate matches R€=6% and expected dollar depreciation of 0%?
+### 1185. Under approximate UIP, what dollar interest rate matches \(R_{\mathrm{EUR}}=6\%\) and expected dollar depreciation of 0%?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
@@ -22657,7 +22657,7 @@ Card ID: `ub-if-hw3-parity-1`
 
 ---
 
-### 1186. Under approximate UIP, what dollar interest rate matches R€=6% and expected dollar depreciation of 4%?
+### 1186. Under approximate UIP, what dollar interest rate matches \(R_{\mathrm{EUR}}=6\%\) and expected dollar depreciation of 4%?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
@@ -22676,7 +22676,7 @@ Card ID: `ub-if-hw3-parity-2`
 
 ---
 
-### 1187. Under approximate UIP, what dollar interest rate matches R€=6% and expected dollar depreciation of 8%?
+### 1187. Under approximate UIP, what dollar interest rate matches \(R_{\mathrm{EUR}}=6\%\) and expected dollar depreciation of 8%?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
@@ -22695,7 +22695,7 @@ Card ID: `ub-if-hw3-parity-3`
 
 ---
 
-### 1188. Under approximate UIP, what dollar interest rate matches R€=12% and expected dollar depreciation of -4%?
+### 1188. Under approximate UIP, what dollar interest rate matches \(R_{\mathrm{EUR}}=12\%\) and expected dollar depreciation of -4%?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
@@ -22714,7 +22714,7 @@ Card ID: `ub-if-hw3-parity-4`
 
 ---
 
-### 1189. Under approximate UIP, what dollar interest rate matches R€=18% and expected dollar depreciation of 0%?
+### 1189. Under approximate UIP, what dollar interest rate matches \(R_{\mathrm{EUR}}=18\%\) and expected dollar depreciation of 0%?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
@@ -22733,7 +22733,7 @@ Card ID: `ub-if-hw3-parity-5`
 
 ---
 
-### 1190. With E=$1.10/€, Eᵉ=$1.20/€, and R€=5%, what is the expected dollar return?
+### 1190. With \(E=\text{USD}1.10/\text{EUR}\), \(E^{e}=\text{USD}1.20/\text{EUR}\), and \(R_{\mathrm{EUR}}=5\%\), what is the expected dollar return?
 
 **International Finance · Interest parity practice · PREDICT**
 
@@ -22746,7 +22746,7 @@ Card ID: `ub-if-hw3-parity-5`
 <details>
 <summary>Reveal explanation</summary>
 
-The chapter approximation gives 5%+0.10/1.10≈14.09%. The exact conversion gives 1.05×1.20/1.10−1≈14.55%. Both exceed the given 10% dollar rate under equal risk and liquidity.
+The chapter approximation gives \(5\%+\frac{0.10}{1.10}\approx 14.09\%\). The exact conversion gives \(1.05\times \frac{1.20}{1.10}-1\approx 14.55\%\). Both exceed the given 10% dollar rate under equal risk and liquidity.
 
 **Intuition:** Label whether you kept the interest-times-currency-change term.
 
@@ -22758,14 +22758,14 @@ Card ID: `ub-if-hw3-return-110-120`
 
 ---
 
-### 1191. With E=$1.10/€, Eᵉ=$1.165/€, and R€=5%, why is the homework return about 11%?
+### 1191. With \(E=\text{USD}1.10/\text{EUR}\), \(E^{e}=\text{USD}1.165/\text{EUR}\), and \(R_{\mathrm{EUR}}=5\%\), why is the homework return about 11%?
 
 **International Finance · Interest parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-The approximation is 5%+0.065/1.10≈10.91%, rounding to 11%. The exact return is about 11.20%.
+The approximation is \(5\%+\frac{0.065}{1.10}\approx 10.91\%\), rounding to 11%. The exact return is about 11.20%.
 
 **Intuition:** Rounded choices can hide a meaningful distinction between formulas.
 
@@ -22777,14 +22777,14 @@ Card ID: `ub-if-hw3-return-1165`
 
 ---
 
-### 1192. At E=$1.00/€, R$=10%, and R€=5%, what one-year forward quote satisfies parity?
+### 1192. At \(E=\text{USD}1.00/\text{EUR}\), \(R_{\mathrm{USD}}=10\%\), and \(R_{\mathrm{EUR}}=5\%\), what one-year forward quote satisfies parity?
 
 **International Finance · Covered parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Exact CIP gives F=1.00×1.10/1.05≈$1.04762/€. The chapter approximation gives F≈1.00×1.05=$1.0500/€.
+Exact CIP gives \(F=1.00\times \frac{1.10}{1.05}\approx \text{USD}1.04762/\text{EUR}\). The chapter approximation gives \(F\approx 1.00\times 1.05=\text{USD}1.0500/\text{EUR}\).
 
 **Intuition:** Do not mix the approximate premium with an exact no-arbitrage claim.
 
@@ -22796,14 +22796,14 @@ Card ID: `ub-if-hw3-forward-1`
 
 ---
 
-### 1193. At E=$1.05/€, R$=10%, and R€=5%, what one-year forward quote satisfies parity?
+### 1193. At \(E=\text{USD}1.05/\text{EUR}\), \(R_{\mathrm{USD}}=10\%\), and \(R_{\mathrm{EUR}}=5\%\), what one-year forward quote satisfies parity?
 
 **International Finance · Covered parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Exact CIP gives F=1.05×1.10/1.05≈$1.10000/€. The chapter approximation gives F≈1.05×1.05=$1.1025/€.
+Exact CIP gives \(F=1.05\times \frac{1.10}{1.05}\approx \text{USD}1.10000/\text{EUR}\). The chapter approximation gives \(F\approx 1.05\times 1.05=\text{USD}1.1025/\text{EUR}\).
 
 **Intuition:** Do not mix the approximate premium with an exact no-arbitrage claim.
 
@@ -22815,14 +22815,14 @@ Card ID: `ub-if-hw3-forward-2`
 
 ---
 
-### 1194. At E=$1.10/€, R$=10%, and R€=5%, what one-year forward quote satisfies parity?
+### 1194. At \(E=\text{USD}1.10/\text{EUR}\), \(R_{\mathrm{USD}}=10\%\), and \(R_{\mathrm{EUR}}=5\%\), what one-year forward quote satisfies parity?
 
 **International Finance · Covered parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Exact CIP gives F=1.10×1.10/1.05≈$1.15238/€. The chapter approximation gives F≈1.10×1.05=$1.1550/€.
+Exact CIP gives \(F=1.10\times \frac{1.10}{1.05}\approx \text{USD}1.15238/\text{EUR}\). The chapter approximation gives \(F\approx 1.10\times 1.05=\text{USD}1.1550/\text{EUR}\).
 
 **Intuition:** Do not mix the approximate premium with an exact no-arbitrage claim.
 
@@ -22834,14 +22834,14 @@ Card ID: `ub-if-hw3-forward-3`
 
 ---
 
-### 1195. At E=$1.20/€, R$=10%, and R€=5%, what one-year forward quote satisfies parity?
+### 1195. At \(E=\text{USD}1.20/\text{EUR}\), \(R_{\mathrm{USD}}=10\%\), and \(R_{\mathrm{EUR}}=5\%\), what one-year forward quote satisfies parity?
 
 **International Finance · Covered parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Exact CIP gives F=1.20×1.10/1.05≈$1.25714/€. The chapter approximation gives F≈1.20×1.05=$1.2600/€.
+Exact CIP gives \(F=1.20\times \frac{1.10}{1.05}\approx \text{USD}1.25714/\text{EUR}\). The chapter approximation gives \(F\approx 1.20\times 1.05=\text{USD}1.2600/\text{EUR}\).
 
 **Intuition:** Do not mix the approximate premium with an exact no-arbitrage claim.
 
@@ -22853,14 +22853,14 @@ Card ID: `ub-if-hw3-forward-4`
 
 ---
 
-### 1196. At E=$1.30/€, R$=10%, and R€=5%, what one-year forward quote satisfies parity?
+### 1196. At \(E=\text{USD}1.30/\text{EUR}\), \(R_{\mathrm{USD}}=10\%\), and \(R_{\mathrm{EUR}}=5\%\), what one-year forward quote satisfies parity?
 
 **International Finance · Covered parity practice · QUICK RECALL**
 
 <details>
 <summary>Reveal explanation</summary>
 
-Exact CIP gives F=1.30×1.10/1.05≈$1.36190/€. The chapter approximation gives F≈1.30×1.05=$1.3650/€.
+Exact CIP gives \(F=1.30\times \frac{1.10}{1.05}\approx \text{USD}1.36190/\text{EUR}\). The chapter approximation gives \(F\approx 1.30\times 1.05=\text{USD}1.3650/\text{EUR}\).
 
 **Intuition:** Do not mix the approximate premium with an exact no-arbitrage claim.
 
@@ -22944,20 +22944,20 @@ Card ID: `ub-if-gnp-numeric`
 
 ---
 
-### 1200. What finishes the accounting chain if Y=200, C=120, G=30, and I=65?
+### 1200. What finishes the accounting chain if \(Y=200\), \(C=120\), \(G=30\), and \(I=65\)?
 
 **International Finance · Saving and investment · COMPLETE THE SEQUENCE**
 
 **Find the external balance** (flow)
 
-- 1: S = Y − C − G
-- 2: S = 50
-- 3: CA = S − I = ?
+- 1: S \(=\) Y − C − G
+- 2: S \(=\) 50
+- 3: CA \(=\) S − I \(=\) ?
 
 <details>
 <summary>Reveal explanation</summary>
 
-Saving is 200−120−30=50. CA=50−65=−15, a current account deficit.
+Saving is \(200-120-30=50\). \(CA=50-65=-15\), a current account deficit.
 
 **Intuition:** Subtract domestic investment from saving after computing saving.
 
@@ -23053,7 +23053,7 @@ Card ID: `ub-if-niip-reconcile-example`
 <details>
 <summary>Reveal explanation</summary>
 
-The dollar depreciates: it buys fewer euros. The euro’s dollar price rises 20%, while the dollar’s euro value falls from 1 to 1/1.2≈0.8333, about 16.67%.
+The dollar depreciates: it buys fewer euros. The euro’s dollar price rises 20%, while the dollar’s euro value falls from 1 to \(\frac{1}{1.2}\approx 0.8333\), about 16.67%.
 
 **Intuition:** Reciprocal quotes have opposite signs and different percentage magnitudes.
 
@@ -23089,7 +23089,7 @@ Card ID: `ub-if-arbitrage-example`
 
 ---
 
-### 1206. If Eᵉ=$1.20/€, R$=10%, and R€=5%, what is today’s approximate UIP equilibrium E?
+### 1206. If \(E^{e}=\text{USD}1.20/\text{EUR}\), \(R_{\mathrm{USD}}=10\%\), and \(R_{\mathrm{EUR}}=5\%\), what is today’s approximate UIP equilibrium E?
 
 **International Finance · Interest parity and expectations · PREDICT**
 
@@ -23101,7 +23101,7 @@ Card ID: `ub-if-arbitrage-example`
 <details>
 <summary>Reveal explanation</summary>
 
-E=1.20/(1+0.10−0.05)≈$1.14286/€. This leaves expected dollar depreciation of 5%, offsetting the euro interest disadvantage.
+\(E=1.20/(1+0.10-0.05)\approx \text{USD}1.14286/\text{EUR}\). This leaves expected dollar depreciation of 5%, offsetting the euro interest disadvantage.
 
 **Intuition:** Solve for today’s price rather than plugging the future rate in as today’s rate.
 
@@ -23113,18 +23113,18 @@ Card ID: `ub-if-uip-equilibrium-example`
 
 ---
 
-### 1207. Does F=$1.113/€, E=$1.05/€, R€=4%, and R$=10% satisfy exact CIP?
+### 1207. Does \(F=\text{USD}1.113/\text{EUR}\), \(E=\text{USD}1.05/\text{EUR}\), \(R_{\mathrm{EUR}}=4\%\), and \(R_{\mathrm{USD}}=10\%\) satisfy exact CIP?
 
 **International Finance · Covered parity practice · SPOT THE MISTAKE**
 
 **Spot the approximation trap** (mistake)
 
-- Claim: 4% + 6% forward premium = exact 10% return.
+- Claim: 4% + 6% forward premium \(=\) exact 10% return.
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. The covered euro return is 1.04×1.113/1.05−1=10.24%, above 10%. Exact parity requires F=1.05×1.10/1.04≈$1.11058/€. The additive approximation hides the gap.
+No. The covered euro return is \(1.04\times \frac{1.113}{1.05}-1=10.24\%\), above 10%. Exact parity requires \(F=1.05\times \frac{1.10}{1.04}\approx \text{USD}1.11058/\text{EUR}\). The additive approximation hides the gap.
 
 **Intuition:** An approximate equality is not exact no-arbitrage.
 
@@ -23142,13 +23142,13 @@ Card ID: `ub-if-cip-rounding-trap`
 
 **Money and prices** (compare)
 
-- Before: M = 100, P = 2
-- After: M = 120, P = 3
+- Before: M \(=\) 100, P \(=\) 2
+- After: M \(=\) 120, P \(=\) 3
 
 <details>
 <summary>Reveal explanation</summary>
 
-No. They fell from 100/2=50 to 120/3=40, a 20% decrease.
+No. They fell from \(\frac{100}{2}=50\) to \(\frac{120}{3}=40\), a 20% decrease.
 
 **Intuition:** More currency units can still buy fewer goods.
 
@@ -23160,7 +23160,7 @@ Card ID: `ub-if-real-balances-example`
 
 ---
 
-### 1209. What completes the temporary U.S. expansion chain with fixed prices, output, and expectations?
+### 1209. What completes the temporary U.S. expansion chain with fixed prices, output, and expected values?
 
 **International Finance · Money and FX in the short run · COMPLETE THE SEQUENCE**
 
@@ -23197,7 +23197,7 @@ Card ID: `ub-if-money-fx-pipeline`
 <details>
 <summary>Reveal explanation</summary>
 
-About 5%. The exact gross-rate calculation is 1.08/1.03−1≈4.85%.
+About 5%. The exact gross-rate calculation is \(\frac{1.08}{1.03}-1\approx 4.85\%\).
 
 **Intuition:** State when you use a growth-rate approximation.
 
@@ -23246,7 +23246,7 @@ Card ID: `ub-if-overshoot-numeric`
 <details>
 <summary>Reveal explanation</summary>
 
-Approximately 4%. Exactly, E₁/E₀−1=1.06/1.02−1≈3.92%.
+Approximately 4%. Exactly, \(E_{1}/E_{0}-1=\frac{1.06}{1.02}-1\approx 3.92\%\).
 
 **Intuition:** An inflation differential is the linear approximation to a gross-price ratio.
 
@@ -23262,7 +23262,7 @@ Card ID: `ub-if-ppp-inflation-example`
 
 **International Finance · Real exchange rates · PREDICT**
 
-**q = EP*/P** (equation)
+**q \(=\) EP*/P** (equation)
 
 - E multiplier: 1.10
 - P multiplier: 1.10
@@ -23307,19 +23307,19 @@ Card ID: `ub-if-fisher-example`
 
 ---
 
-### 1215. If q rises 8% but P/P* falls 10%, what happens to E=qP/P*?
+### 1215. If q rises 8% but \(P/P^{*}\) falls 10%, what happens to \(E=q\frac{P}{P^*}\)?
 
 **International Finance · Real demand and supply · PREDICT**
 
 **Combine both channels** (equation)
 
 - q multiplier: 1.08
-- P/P* multiplier: 0.90
+- \(P/P^{*}\) multiplier: 0.90
 
 <details>
 <summary>Reveal explanation</summary>
 
-E changes by 1.08×0.90−1=−2.8%, a nominal appreciation despite real depreciation. Different magnitudes could reverse the net sign.
+E changes by \(1.08\times 0.90-1=-2.8\%\), a nominal appreciation despite real depreciation. Different magnitudes could reverse the net sign.
 
 **Intuition:** Opposing channels must be combined quantitatively.
 
@@ -23337,8 +23337,8 @@ Card ID: `ub-if-supply-nominal-example`
 
 **Approximate real parity** (compare)
 
-- Domestic: R = 7%, πᵉ = 4%
-- Foreign: R* = 4%, π*ᵉ = 2%
+- Domestic: R \(=\) 7%, \(\pi ^{e}\) \(=\) 4%
+- Foreign: R* \(=\) 4%, \(\pi ^{*e}\) \(=\) 2%
 
 <details>
 <summary>Reveal explanation</summary>

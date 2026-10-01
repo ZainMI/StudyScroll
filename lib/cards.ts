@@ -1,4 +1,4 @@
-import master from "@/content/master-feed.json";
+import master from "@/content/master-feed.json" with { type: "json" };
 export type Source = { path: string; locator: string; page?: number };
 export type Card = {
   id: string;

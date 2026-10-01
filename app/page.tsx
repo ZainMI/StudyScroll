@@ -1,4 +1,6 @@
 "use client";
+import { MathText } from "@/components/math-text";
+import { CardTutor } from "@/components/card-tutor";
 import { CardVisual } from "@/components/card-visual";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -28,8 +30,10 @@ import {
   type Reviews,
   type Rating,
 } from "@/lib/learning";
+const curatedIds = new Set(curated.map((card) => card.id));
 type Progress = { saved: string[]; learned: string[] };
 export default function Home() {
+  const [tutorCard, setTutorCard] = useState<Card | null>(null);
   const [allCards, setCards] = useState<Card[]>(curated);
   const [school, setSchool] = useState<string | null>(null);
   const cards = useMemo(
@@ -861,6 +865,7 @@ export default function Home() {
                     const learned = progress.learned.includes(card.id);
                     return (
                       <article
+                        data-card-id={card.id}
                         className={`study-card reel-card tone-${card.color}`}
                         key={key}
                         aria-label={`Card ${index + 1} of ${visible.length}`}
@@ -914,18 +919,26 @@ export default function Home() {
                             · {card.kind}
                           </div>
                           <div className="card-body">
-                            <h2>{card.title}</h2>
+                            <h2>
+                              <MathText>{card.title}</MathText>
+                            </h2>
                             {card.visual && <CardVisual visual={card.visual} />}
-                            {card.body && <p>{card.body}</p>}
+                            {card.body && (
+                              <p>
+                                <MathText>{card.body}</MathText>
+                              </p>
+                            )}
                             {open && (
                               <div className="answer">
                                 <div>
                                   <Sparkles size={16} /> THE IDEA
                                 </div>
-                                <p>{card.answer}</p>
+                                <p>
+                                  <MathText>{card.answer}</MathText>
+                                </p>
                                 {card.takeaway && (
                                   <strong className="takeaway">
-                                    {card.takeaway}
+                                    <MathText>{card.takeaway}</MathText>
                                   </strong>
                                 )}
                               </div>
@@ -950,6 +963,14 @@ export default function Home() {
                                 <ArrowRight size={17} />
                               )}
                             </button>
+                            {open && curatedIds.has(card.id) && (
+                              <button
+                                className="ask-card"
+                                onClick={() => setTutorCard(card)}
+                              >
+                                Ask about this
+                              </button>
+                            )}
                             {open &&
                               (practice || view === "saved" ? (
                                 <p className="review-status">
@@ -1154,6 +1175,13 @@ export default function Home() {
           </div>
         </div>
       </main>
+      {tutorCard && (
+        <CardTutor
+          key={tutorCard.id}
+          card={tutorCard}
+          onClose={() => setTutorCard(null)}
+        />
+      )}
       {upload && (
         <div
           className="modal-backdrop"
@@ -1208,7 +1236,7 @@ export default function Home() {
             <p className="privacy">
               Text is extracted on your local app server. Cards stay in this
               browser. This prototype uses source passages and fill-in-the-gap
-              prompts; no AI service is connected. Scanned PDFs need OCR first.
+              prompts; importing does not use AI. Scanned PDFs need OCR first.
             </p>
             {message && (
               <div className="modal-message" role="status">

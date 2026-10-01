@@ -19,7 +19,8 @@ test("curated feed reveals explanations and persists bookmarks and review", asyn
   await card
     .getByRole("button", { name: "Recall your answer, then reveal." })
     .click();
-  await expect(card.locator(".answer")).toContainText("2⁻⁴⁶");
+  await expect(card.locator(".answer .katex").first()).toBeVisible();
+  await expect(card.locator(".answer annotation").first()).toHaveText("99+2^{-46}");
   await card.getByRole("button", { name: "Save card", exact: true }).click();
   await card.getByRole("button", { name: /^Easy/ }).click();
   await page.reload();

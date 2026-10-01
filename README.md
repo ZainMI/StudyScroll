@@ -61,3 +61,15 @@ The learning feed mixes due reviews with new, prerequisite-ordered cards. Rate a
 Use [CARD_CREATION_GUIDE.md](content/CARD_CREATION_GUIDE.md) as the reusable LLM prompt and schema reference. It covers uncapped source coverage, teaching sequences, visual layouts, citations, and validation. The current visual companion batch adds 24 cards (six per course) while preserving all 908 existing cards.
 
 International Finance source inventory, chapter coverage, homework mapping, and source inconsistencies: [INTERNATIONAL_FINANCE_COVERAGE.md](content/INTERNATIONAL_FINANCE_COVERAGE.md).
+
+## Card tutor (Harvard credits)
+
+After revealing a built-in card, select **Ask about this** for a short explanation, example, or follow-up conversation. The tutor uses Harvard’s Community Developers `/ais-openai-direct-comdev/v2/chat/completions` endpoint with `gpt-4o-mini`. No paid fallback is configured. Imported cards are not sent to the tutor.
+
+Copy `.env.example` to `.env.local` and fill in `HARVARD_API_KEY` (the API key, not the client secret) and `TUTOR_ACCESS_CODE` (a separate private code you choose for your study users). Restart the development server. For Vercel, add both as server environment variables in project settings and redeploy. Never prefix either with `NEXT_PUBLIC_` or commit `.env.local`.
+
+Users enter the study access code in the tutor sheet; only that code is remembered for the browser tab’s session. The Harvard key stays server-side. Chats clear when the sheet closes, independently of saved learning progress. Each request sends the canonical card, up to two prerequisite cards, and up to four preceding exchanges; it does not upload PDFs. Replies are capped at 600 output tokens and displayed when complete.
+
+Harvard enforces the credit allowance; a 429 displays a limit/busy message without interrupting flashcards. The route also has a best-effort 20 requests/minute throttle per server instance, not a distributed or per-user quota. Keep the study access code private; for broad public access, replace it with individual authentication and a durable rate limiter. The tutor stays unavailable until both environment variables are configured. Check approved audience and eligibility against your Harvard API product.
+
+Card text now supports KaTeX using `\(...\)` inline and `\[...\]` for display math, including tutor replies. Literal dollar amounts remain plain text. `npm run feed:check` validates every authored expression as well as existing coverage/source checks. The October 2026 refresh keeps all 1,216 card IDs and source mappings intact, standardizes concept names, and rewrites 53 terminology-heavy prompts around reasoning and examples. See `content/CARD_CREATION_GUIDE.md` for the revised authoring rules.

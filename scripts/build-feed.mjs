@@ -1,4 +1,5 @@
 import { readFile, writeFile, access } from "node:fs/promises";
+import katex from "katex";
 const feed = JSON.parse(await readFile("content/master-feed.json", "utf8"));
 const ids = new Set();
 const missingSources = new Set();
@@ -22,6 +23,38 @@ for (const card of feed.cards) {
     throw new Error(`Missing body: ${card.id}`);
   if (card.format === "flashcard" && (!card.title.endsWith("?") || card.answer.split(/\s+/).length > 65))
     throw new Error(`Flashcard must have a question and a concise answer: ${card.id}`);
+  const mathFields = [
+    card.title,
+    card.body,
+    card.answer,
+    card.takeaway,
+    ...(card.visual
+      ? [
+          card.visual.label,
+          ...card.visual.items.flatMap((item) => [item.label, item.value]),
+        ]
+      : []),
+  ];
+  for (const text of mathFields) {
+    const remaining = text.replace(
+      /\\\(([\s\S]*?)\\\)|\\\[([\s\S]*?)\\\]/g,
+      (_, inline, display) => {
+        try {
+          katex.renderToString(inline ?? display, {
+            throwOnError: true,
+            strict: "error",
+            trust: false,
+            maxExpand: 500,
+          });
+        } catch (error) {
+          throw new Error(`Invalid math in ${card.id}: ${error.message}`);
+        }
+        return "";
+      },
+    );
+    if (/\\[()[\]]/.test(remaining))
+      throw new Error(`Unbalanced math delimiters: ${card.id}`);
+  }
   if (card.visual) {
     const v = card.visual;
     if (!["equation", "compare", "flow", "mistake"].includes(v.type) ||

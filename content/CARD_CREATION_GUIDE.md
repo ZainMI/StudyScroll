@@ -47,7 +47,10 @@ Preserve this pedagogical order in the authored list and set `prerequisiteIds` f
 - Specify dimensions, units, distributional assumptions, conditioning, and sign conventions when relevant.
 - Use original wording. Cite course material accurately; label invented numeric examples as authored companions. Do not present those examples as quotations or official solutions.
 - Do not leak the answer through a visual label, caption, title, or setup. Intentionally flawed statements must be explicitly labeled as claims or mistakes.
-- Use Unicode mathematics in plain strings. The site does not render LaTeX, Markdown tables, HTML, Mermaid, or arbitrary images inside card text. Do not supply raw `$...$` or executable content.
+- Write math in LaTeX: `\(...\)` for inline math and `\[...\]` for a standalone equation. In JSON, double each backslash: `"answer": "The standard error is \\(\\sigma/\\sqrt{N}\\)."`. Use `\frac`, `\sqrt`, `\sum`, explicit indices, and `bmatrix` for matrices. Never use dollar delimiters: finance cards contain literal currency amounts. KaTeX renders the notation with MathML for accessibility. Do not supply HTML or executable content.
+- Test understanding, not terminology recall. Prefer a concrete situation, a prediction, a reason, or a comparison over “Define X.” Introduce necessary formal names in the explanation, attached to their plain-language meaning.
+- Keep concept names consistent across cards. Use **expected value** for a probability-weighted average, **sample mean** for an average of observed data, **reaction rate** (with “propensity” explained if the lecture uses it), **quantity of interest** for an observable, and **transition rule** for a transition kernel. A **probability measure** assigns probabilities to events; it is not another name for expected value. Keep distinct concepts distinct.
+- Explain technical prerequisites on the card itself because the study order can vary. In statistics, say “equal-variance, uncorrelated errors” before using “spherical”; identify a column space as possible mean vectors and a null space as coefficient changes that leave predictions unchanged.
 
 ## 5. Canonical schema
 
@@ -63,7 +66,7 @@ Edit `content/master-feed.json`, an object with `version`, `title`, `updated` (Y
   "format": "flashcard",
   "title": "If the number of independent draws quadruples, how does the standard error change?",
   "body": "Assume the draws have the same finite variance.",
-  "answer": "It halves. Standard error scales as 1/√N, so replacing N by 4N divides it by 2.",
+  "answer": "It halves. Standard error scales as \\(1/\\sqrt{N}\\), so replacing \\(N\\) by \\(4N\\) divides it by 2.",
   "takeaway": "Precision improves with the square root of sampling effort.",
   "source": "Lecture 2 · Monte Carlo · authored companion",
   "sources": [
