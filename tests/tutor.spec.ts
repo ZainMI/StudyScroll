@@ -21,6 +21,9 @@ test("tutor stays on the card, sends follow-up context, and leaves progress alon
     messages: { role: string; content: string }[];
   }[] = [];
   await page.route("**/api/tutor", async (route) => {
+    expect(route.request().headers()["x-study-access-code"]).toBe(
+      "test-study-code",
+    );
     calls.push(route.request().postDataJSON());
     await route.fulfill({
       json: {
@@ -59,7 +62,23 @@ test("tutor stays on the card, sends follow-up context, and leaves progress alon
   await expect(page.locator(".tutor-message")).toHaveCount(0);
   await expect(
     page.getByLabel("Study access code", { exact: true }),
-  ).toHaveValue("test-study-code");
+  ).toHaveCount(0);
+  expect(
+    await page.evaluate(() => localStorage.getItem("studyscroll-tutor-code")),
+  ).toBe("test-study-code");
+  await page.getByRole("button", { name: "Close tutor" }).click();
+  await page.reload();
+  await chooseCourses(page);
+  await card
+    .getByRole("button", { name: "Recall your answer, then reveal." })
+    .click();
+  await card.getByRole("button", { name: "Ask about this" }).click();
+  await expect(
+    page.getByLabel("Study access code", { exact: true }),
+  ).toHaveCount(0);
+  const bounds = await sheet.boundingBox();
+  expect(Math.abs(bounds!.y + bounds!.height / 2 - 844 / 2)).toBeLessThan(3);
+  await page.screenshot({ path: "tmp/tutor-clean-empty-mobile.png" });
   await page.route("**/api/tutor", (route) =>
     route.fulfill({
       status: 429,
@@ -67,7 +86,17 @@ test("tutor stays on the card, sends follow-up context, and leaves progress alon
     }),
   );
   await page.getByRole("button", { name: "Explain why", exact: true }).click();
-  await expect(page.getByRole("dialog").getByRole("alert")).toContainText("Your cards still work");
+  await expect(page.getByRole("dialog").getByRole("alert")).toContainText(
+    "Your cards still work",
+  );
+  await sheet.getByRole("button", { name: "Change access code" }).click();
+  await expect(
+    sheet.getByLabel("Study access code", { exact: true }),
+  ).toHaveValue("test-study-code");
+  await sheet.getByRole("button", { name: "Forget code" }).click();
+  expect(
+    await page.evaluate(() => localStorage.getItem("studyscroll-tutor-code")),
+  ).toBeNull();
   await page.getByRole("button", { name: "Close tutor" }).click();
   await expect(
     card.getByRole("button", { name: "Hard", exact: true }),

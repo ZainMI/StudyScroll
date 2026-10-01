@@ -2150,125 +2150,36 @@ h1 {
   text-underline-offset: 4px;
 }
 .tutor-sheet {
-  padding: 0;
-  border: 1px solid var(--line);
-  border-radius: 24px 24px 0 0;
-  background: var(--paper);
-  color: var(--ink);
-  width: min(100%, 600px);
-  max-width: 100%;
-  max-height: 90dvh;
-  margin: auto auto 0;
+  padding: 0; border: 1px solid var(--line); border-radius: 22px;
+  background: var(--paper); color: var(--ink);
+  width: min(calc(100% - 32px), 520px); max-width: 100%;
+  max-height: 80dvh; margin: auto; box-shadow: 0 20px 80px #24171a20;
 }
-.tutor-sheet::backdrop {
-  background: rgb(35 22 26 / 35%);
-}
-.tutor-inner {
-  display: flex;
-  flex-direction: column;
-  max-height: 89dvh;
-  padding: 22px 22px max(18px, env(safe-area-inset-bottom));
-  gap: 12px;
-}
-.tutor-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.tutor-header small,
-.tutor-message small {
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  color: var(--muted);
-}
-.tutor-header h2 {
-  margin: 4px 0 0;
-  font-size: 22px;
-}
-.tutor-header button {
-  min-width: 44px;
-  min-height: 44px;
-}
-.tutor-context {
-  margin: 0;
-  font-weight: 600;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--line);
-}
-.tutor-chat {
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  min-height: 70px;
-  flex: 1;
-}
-.tutor-chat p {
-  line-height: 1.65;
-  white-space: pre-wrap;
-  margin: 6px 0 16px;
-  overflow-wrap: anywhere;
-}
-.tutor-message {
-  padding: 10px 12px;
-  border-radius: 12px;
-}
-.tutor-message.user {
-  background: #efe4df;
-  margin-bottom: 10px;
-}
-.tutor-prompts {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-.tutor-prompts button {
-  border: 1px solid #ceb9b7;
-  border-radius: 20px;
-  padding: 9px 12px;
-  font-size: 12px;
-}
-.tutor-inner form label {
-  display: block;
-  font-size: 12px;
-  margin-bottom: 7px;
-}
-.tutor-compose {
-  display: flex;
-  gap: 8px;
-}
-.tutor-compose textarea,
-.tutor-access input {
-  font: inherit;
-  font-size: 16px;
-  padding: 10px;
-  color: var(--ink);
-  background: #fffdfa;
-  border: 1px solid #bda6a6;
-  border-radius: 10px;
-  min-width: 0;
-}
-.tutor-compose textarea {
-  flex: 1;
-  resize: none;
-}
-.tutor-compose .primary {
-  padding: 12px 18px;
-}
-.tutor-access {
-  margin-top: 10px;
-  font-size: 12px;
-}
-.tutor-access input {
-  width: 100%;
-  margin-top: 8px;
-}
-.tutor-note {
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.5;
-}
-.tutor-error {
-  color: #8b192a;
-}
+.tutor-sheet::backdrop { background: rgb(35 22 26 / 30%); }
+.tutor-inner { display: flex; flex-direction: column; max-height: 80dvh; padding: 20px; gap: 16px; }
+.tutor-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.tutor-header h2 { margin: 0; font-size: 19px; font-weight: 650; letter-spacing: -.02em; }
+.tutor-header button { display: grid; place-items: center; width: 36px; height: 36px; margin: -6px -6px -6px 0; color: var(--muted); }
+.tutor-context { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; max-height: 64px; overflow-y: auto; }
+.tutor-chat { overflow-y: auto; overscroll-behavior: contain; min-height: 0; flex: 1; }
+.tutor-chat:has(> div:only-child) { display: none; }
+.tutor-chat p { line-height: 1.65; white-space: pre-wrap; margin: 0; overflow-wrap: anywhere; }
+.tutor-message { padding: 12px 0; }
+.tutor-message.user { background: #efe4df; margin: 8px 0 8px 28px; padding: 10px 14px; border-radius: 14px 14px 3px 14px; }
+.tutor-prompts { display: flex; gap: 8px; flex-wrap: wrap; }
+.tutor-prompts button { background: #f0e7e3; border-radius: 18px; padding: 9px 13px; font-size: 12px; }
+.tutor-compose { display: flex; align-items: center; gap: 8px; background: #fffdfa; border: 1px solid #d4c2bf; border-radius: 16px; padding: 6px; }
+.tutor-compose:focus-within { border-color: var(--crimson); }
+.tutor-compose textarea { flex: 1; width: 100%; min-width: 0; resize: none; border: 0; background: transparent; font: inherit; font-size: 16px; line-height: 1.45; padding: 8px; color: var(--ink); }
+.tutor-compose textarea:focus-visible { outline: none; }
+.tutor-send { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--crimson); color: white; flex-shrink: 0; }
+.tutor-access { margin-top: 12px; }
+.tutor-access input { width: 100%; font: inherit; font-size: 16px; padding: 10px 12px; color: var(--ink); background: #fffdfa; border: 1px solid #d4c2bf; border-radius: 10px; }
+.tutor-access small { display: block; color: var(--muted); font-size: 11px; margin-top: 6px; }
+.tutor-access button { font-size: 12px; color: var(--crimson); margin-top: 8px; padding: 4px 0; }
+.tutor-bottom { display: flex; align-items: center; justify-content: space-between; min-height: 22px; color: var(--muted); font-size: 11px; }
+.tutor-bottom button { display: grid; place-items: center; width: 32px; height: 26px; }
+.tutor-error { color: #8b192a; padding: 8px 0; }
 .math-inline .katex {
   font-size: 1.06em;
 }
