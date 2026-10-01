@@ -51,7 +51,7 @@ export default function Home() {
   const [practice, setPractice] = useState(false);
   const [clock, setClock] = useState(Date.now());
   const [ready, setReady] = useState(false);
-  const [groupMode, setGroupMode] = useState<"topics" | "lectures">("topics");
+  const [groupMode, setGroupMode] = useState<"topics" | "lectures">("lectures");
   const [selectedGroups, setSelectedGroups] = useState<string[]>([]);
   const [studyIds, setStudyIds] = useState<string[] | null>(null);
   const [view, setView] = useState("study");
@@ -630,7 +630,7 @@ export default function Home() {
                           aria-pressed={groupMode === mode}
                           onClick={() => setGroupMode(mode)}
                         >
-                          {mode === "topics" ? "Topics" : "Lectures / notes"}
+                          {mode === "topics" ? "Topics" : "Lectures / chapters"}
                         </button>
                       ))}
                     </div>

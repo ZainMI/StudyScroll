@@ -21,8 +21,8 @@ test("lecture groups consolidate multipart decks and preserve course boundaries"
     ),
   ).toEqual(
     new Set([
-      "courses/am209a/lecnotes/lecture-04a.pdf",
-      "courses/am209a/lecnotes/lecture-04b.pdf",
+      "courses/harvard/am209a/lecnotes/lecture-04a.pdf",
+      "courses/harvard/am209a/lecnotes/lecture-04b.pdf",
     ]),
   );
   expect(groups.some((g) => g.label === "Lecture 0")).toBe(false);
@@ -55,11 +55,13 @@ test("mobile study selection deduplicates topics and lectures and isolates the s
   ).toBeDisabled();
   const course = page.locator(".study-course").filter({ hasText: "AM 209a" });
   await course.locator("summary").click();
+  await expect(page.getByRole("button", { name: "Lectures / chapters", exact: true })).toHaveAttribute("aria-pressed", "true");
+  await page.getByRole("button", { name: "Topics", exact: true }).click();
   await course
     .getByRole("checkbox", { name: /^Data science workflow/ })
     .check();
   await page
-    .getByRole("button", { name: "Lectures / notes", exact: true })
+    .getByRole("button", { name: "Lectures / chapters", exact: true })
     .click();
   await course.getByRole("checkbox", { name: /^Lecture 1 / }).check();
   const expected = curated.filter(
@@ -150,8 +152,8 @@ test("school folders isolate courses and preserve existing progress across switc
   await page.locator("nav").getByRole("button", { name: "Study", exact: true }).click();
   await page.getByRole("button", { name: "Harvard", exact: true }).click();
   await page.getByRole("button", { name: /UBuffalo/ }).click();
-  await expect(page.getByRole("heading", { name: "Your UBuffalo folder is ready." })).toBeVisible();
-  await expect(page.locator(".study-course")).toHaveCount(0);
+  await expect(page.locator(".study-course")).toHaveCount(1);
+  await expect(page.locator(".study-course summary")).toContainText("International Finance");
   await page.reload();
   await expect(page.getByRole("heading", { name: "Choose your school." })).toBeVisible();
   await page.getByRole("button", { name: /Harvard/ }).click();
@@ -160,4 +162,33 @@ test("school folders isolate courses and preserve existing progress across switc
   expect(after.reviews).toEqual(before.reviews);
   expect(after.progress).toEqual(before.progress);
   expect(after.cards).toHaveLength(curated.length);
+});
+
+test("International Finance offers five chapter groups and saves UBuffalo reviews independently", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const finance = curated.filter((card) => card.school === "UBuffalo" && card.course === "International Finance");
+  expect(finance.length).toBe(284);
+  const chapters = studyGroups(finance, "lectures");
+  expect(chapters.map((group) => group.label)).toEqual(["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5"]);
+  expect(new Set(chapters.flatMap((group) => group.cardIds)).size).toBe(finance.length);
+  await page.goto("/");
+  await page.getByRole("button", { name: /UBuffalo/ }).click();
+  await expect(page.locator(".study-course")).toHaveCount(1);
+  await page.getByRole("button", { name: "Lectures / chapters", exact: true }).click();
+  await page.getByRole("checkbox", { name: /^Chapter 5 / }).check();
+  await page.screenshot({ path: "tmp/international-finance-chapters-mobile.png" });
+  await page.getByRole("button", { name: "Start studying" }).click();
+  await expect(page.locator("article.study-card")).toHaveCount(chapters[4].cardIds.length);
+  const card = page.locator("article.study-card").first();
+  await expect(card).toContainText("International Finance");
+  await card.getByRole("button", { name: "Recall your answer, then reveal." }).click();
+  await card.getByRole("button", { name: "Hard", exact: true }).click();
+  await expect(card.getByRole("status")).toContainText("Next review");
+  await page.screenshot({ path: "tmp/international-finance-card-mobile.png", animations: "disabled" });
+  const before = await page.evaluate(() => JSON.parse(localStorage.getItem("studyscroll-v1")!).reviews);
+  expect(Object.keys(before)[0]).toMatch(/^ub-if-/);
+  await page.reload();
+  await page.getByRole("button", { name: /Harvard/ }).click();
+  await expect(page.locator(".study-course")).toHaveCount(4);
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem("studyscroll-v1")!).reviews)).toEqual(before);
 });

@@ -4021,6 +4021,794 @@
           ]
         }
       ]
+    },
+    {
+      "school": "UBuffalo",
+      "course": "International Finance",
+      "title": "Chapter 1",
+      "status": "Authored from supplied slides and homework; see source audit and caveats",
+      "cardIds": [
+        "ub-if-international-scope",
+        "ub-if-trade-vs-finance",
+        "ub-if-trade-share",
+        "ub-if-country-size",
+        "ub-if-voluntary-trade",
+        "ub-if-comparative-advantage",
+        "ub-if-opportunity-cost",
+        "ub-if-abundant-resources",
+        "ub-if-scale",
+        "ub-if-intertemporal-trade",
+        "ub-if-distribution",
+        "ub-if-trade-pattern",
+        "ub-if-tariff",
+        "ub-if-export-subsidy",
+        "ub-if-regulatory-barrier",
+        "ub-if-retaliation",
+        "ub-if-special-interests",
+        "ub-if-diversification",
+        "ub-if-exchange-rate-role",
+        "ub-if-fixed-floating",
+        "ub-if-coordination",
+        "ub-if-capital-risk",
+        "ub-if-comparative-numeric",
+        "ub-if-gains-mistake"
+      ],
+      "objectives": [
+        {
+          "concept": "International economics",
+          "cardIds": [
+            "ub-if-international-scope",
+            "ub-if-trade-vs-finance",
+            "ub-if-trade-share",
+            "ub-if-country-size"
+          ]
+        },
+        {
+          "concept": "Gains from trade",
+          "cardIds": [
+            "ub-if-voluntary-trade",
+            "ub-if-comparative-advantage",
+            "ub-if-opportunity-cost",
+            "ub-if-abundant-resources",
+            "ub-if-scale",
+            "ub-if-intertemporal-trade",
+            "ub-if-distribution",
+            "ub-if-comparative-numeric",
+            "ub-if-gains-mistake"
+          ]
+        },
+        {
+          "concept": "Trade patterns and policy",
+          "cardIds": [
+            "ub-if-trade-pattern",
+            "ub-if-tariff",
+            "ub-if-export-subsidy",
+            "ub-if-regulatory-barrier",
+            "ub-if-retaliation",
+            "ub-if-special-interests"
+          ]
+        },
+        {
+          "concept": "International financial links",
+          "cardIds": [
+            "ub-if-diversification",
+            "ub-if-exchange-rate-role",
+            "ub-if-fixed-floating",
+            "ub-if-coordination",
+            "ub-if-capital-risk"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "UBuffalo",
+      "course": "International Finance",
+      "title": "Chapter 2",
+      "status": "Authored from supplied slides and homework; see source audit and caveats",
+      "cardIds": [
+        "ub-if-income-output-expenditure",
+        "ub-if-gnp",
+        "ub-if-gdp",
+        "ub-if-gnp-gdp",
+        "ub-if-factory",
+        "ub-if-final-goods",
+        "ub-if-four-uses",
+        "ub-if-investment-definition",
+        "ub-if-inventory",
+        "ub-if-depreciation",
+        "ub-if-transfers",
+        "ub-if-absorption",
+        "ub-if-ca-absorption",
+        "ub-if-ca-vs-trade",
+        "ub-if-deficit-finance",
+        "ub-if-wealth-caveat",
+        "ub-if-national-saving",
+        "ub-if-saving-identity",
+        "ub-if-closed-economy",
+        "ub-if-saving-deficit",
+        "ub-if-private-saving",
+        "ub-if-government-saving",
+        "ub-if-saving-sum",
+        "ub-if-private-rearrange",
+        "ub-if-twin-deficits",
+        "ub-if-double-entry",
+        "ub-if-three-accounts",
+        "ub-if-sign-convention",
+        "ub-if-asset-purchase",
+        "ub-if-asset-sale",
+        "ub-if-import-entry",
+        "ub-if-travel-entry",
+        "ub-if-stock-entry",
+        "ub-if-debt-forgiveness",
+        "ub-if-balance-identity",
+        "ub-if-discrepancy",
+        "ub-if-world-ca",
+        "ub-if-intervention",
+        "ub-if-reserve-assets",
+        "ub-if-settlements",
+        "ub-if-settlements-deficit",
+        "ub-if-net-foreign-wealth",
+        "ub-if-valuation-dollar",
+        "ub-if-stock-flow-reconcile",
+        "ub-if-other-adjustments",
+        "ub-if-profit-shifting",
+        "ub-if-ireland-example",
+        "ub-if-hw2-row-1",
+        "ub-if-hw2-row-2",
+        "ub-if-hw2-row-3",
+        "ub-if-hw2-row-4",
+        "ub-if-hw2-row-5",
+        "ub-if-hw2-row-6",
+        "ub-if-hw2-row-7",
+        "ub-if-hw2-row-8",
+        "ub-if-hw2-row-9",
+        "ub-if-gnp-numeric",
+        "ub-if-saving-pipeline",
+        "ub-if-official-balance-example",
+        "ub-if-valuation-example",
+        "ub-if-niip-reconcile-example"
+      ],
+      "objectives": [
+        {
+          "concept": "National income accounting",
+          "cardIds": [
+            "ub-if-income-output-expenditure",
+            "ub-if-gnp",
+            "ub-if-gdp",
+            "ub-if-gnp-gdp",
+            "ub-if-factory",
+            "ub-if-final-goods",
+            "ub-if-four-uses",
+            "ub-if-investment-definition",
+            "ub-if-inventory",
+            "ub-if-depreciation",
+            "ub-if-transfers",
+            "ub-if-gnp-numeric"
+          ]
+        },
+        {
+          "concept": "Current account and absorption",
+          "cardIds": [
+            "ub-if-absorption",
+            "ub-if-ca-absorption",
+            "ub-if-ca-vs-trade",
+            "ub-if-deficit-finance",
+            "ub-if-wealth-caveat"
+          ]
+        },
+        {
+          "concept": "Saving and investment",
+          "cardIds": [
+            "ub-if-national-saving",
+            "ub-if-saving-identity",
+            "ub-if-closed-economy",
+            "ub-if-saving-deficit",
+            "ub-if-private-saving",
+            "ub-if-government-saving",
+            "ub-if-saving-sum",
+            "ub-if-private-rearrange",
+            "ub-if-twin-deficits",
+            "ub-if-saving-pipeline"
+          ]
+        },
+        {
+          "concept": "Balance of payments bookkeeping",
+          "cardIds": [
+            "ub-if-double-entry",
+            "ub-if-three-accounts",
+            "ub-if-sign-convention",
+            "ub-if-asset-purchase",
+            "ub-if-asset-sale",
+            "ub-if-import-entry",
+            "ub-if-travel-entry",
+            "ub-if-stock-entry",
+            "ub-if-debt-forgiveness",
+            "ub-if-balance-identity",
+            "ub-if-discrepancy",
+            "ub-if-world-ca"
+          ]
+        },
+        {
+          "concept": "Reserves and external wealth",
+          "cardIds": [
+            "ub-if-intervention",
+            "ub-if-reserve-assets",
+            "ub-if-settlements",
+            "ub-if-settlements-deficit",
+            "ub-if-net-foreign-wealth",
+            "ub-if-valuation-dollar",
+            "ub-if-stock-flow-reconcile",
+            "ub-if-other-adjustments",
+            "ub-if-official-balance-example",
+            "ub-if-valuation-example",
+            "ub-if-niip-reconcile-example"
+          ]
+        },
+        {
+          "concept": "GDP and welfare",
+          "cardIds": [
+            "ub-if-profit-shifting",
+            "ub-if-ireland-example"
+          ]
+        },
+        {
+          "concept": "Saving and investment practice",
+          "cardIds": [
+            "ub-if-hw2-row-1",
+            "ub-if-hw2-row-2",
+            "ub-if-hw2-row-3",
+            "ub-if-hw2-row-4",
+            "ub-if-hw2-row-5",
+            "ub-if-hw2-row-6",
+            "ub-if-hw2-row-7",
+            "ub-if-hw2-row-8",
+            "ub-if-hw2-row-9"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "UBuffalo",
+      "course": "International Finance",
+      "title": "Chapter 3",
+      "status": "Authored from supplied slides and homework; see source audit and caveats",
+      "cardIds": [
+        "ub-if-quote-units",
+        "ub-if-reciprocal",
+        "ub-if-dollar-depreciation",
+        "ub-if-dollar-appreciation",
+        "ub-if-import-price",
+        "ub-if-export-price",
+        "ub-if-relative-price",
+        "ub-if-quantity-caveat",
+        "ub-if-participants",
+        "ub-if-bank-role",
+        "ub-if-arbitrage",
+        "ub-if-arbitrage-costs",
+        "ub-if-spot-forward",
+        "ub-if-spot-forward-equal",
+        "ub-if-fx-swap",
+        "ub-if-swap-use",
+        "ub-if-futures-forward",
+        "ub-if-futures-notional",
+        "ub-if-tick-value",
+        "ub-if-margin",
+        "ub-if-margin-leverage",
+        "ub-if-futures-profit",
+        "ub-if-net-profit",
+        "ub-if-option-obligation",
+        "ub-if-call-put",
+        "ub-if-option-style",
+        "ub-if-nominal-return",
+        "ub-if-real-return",
+        "ub-if-fixed-prices",
+        "ub-if-asset-demand",
+        "ub-if-equal-risk-assumption",
+        "ub-if-two-return-components",
+        "ub-if-conversion-steps",
+        "ub-if-exact-foreign-return",
+        "ub-if-approx-foreign-return",
+        "ub-if-cross-term",
+        "ub-if-higher-interest-trap",
+        "ub-if-return-gap",
+        "ub-if-uip",
+        "ub-if-uip-risk",
+        "ub-if-dollar-excess-return",
+        "ub-if-current-depreciation",
+        "ub-if-current-appreciation",
+        "ub-if-fx-graph",
+        "ub-if-dollar-rate-rise",
+        "ub-if-euro-rate-rise",
+        "ub-if-expectations-now",
+        "ub-if-uip-solve",
+        "ub-if-carry-trade",
+        "ub-if-carry-risk",
+        "ub-if-cip",
+        "ub-if-cip-exact",
+        "ub-if-forward-premium",
+        "ub-if-cip-approx",
+        "ub-if-forward-solve",
+        "ub-if-covered-arbitrage-direction",
+        "ub-if-cip-frictions",
+        "ub-if-forward-expectation",
+        "ub-if-vehicle-currency",
+        "ub-if-bond-derivative",
+        "ub-if-sweater-conversion",
+        "ub-if-implied-jeans-rate",
+        "ub-if-hw3-gap-1",
+        "ub-if-hw3-gap-2",
+        "ub-if-hw3-gap-3",
+        "ub-if-hw3-gap-4",
+        "ub-if-hw3-gap-5",
+        "ub-if-hw3-gap-6",
+        "ub-if-hw3-gap-7",
+        "ub-if-hw3-gap-8",
+        "ub-if-hw3-gap-9",
+        "ub-if-hw3-gap-10",
+        "ub-if-hw3-gap-11",
+        "ub-if-hw3-gap-12",
+        "ub-if-hw3-gap-13",
+        "ub-if-hw3-gap-14",
+        "ub-if-hw3-gap-15",
+        "ub-if-hw3-parity-1",
+        "ub-if-hw3-parity-2",
+        "ub-if-hw3-parity-3",
+        "ub-if-hw3-parity-4",
+        "ub-if-hw3-parity-5",
+        "ub-if-hw3-return-110-120",
+        "ub-if-hw3-return-1165",
+        "ub-if-hw3-forward-1",
+        "ub-if-hw3-forward-2",
+        "ub-if-hw3-forward-3",
+        "ub-if-hw3-forward-4",
+        "ub-if-hw3-forward-5",
+        "ub-if-quote-mistake",
+        "ub-if-arbitrage-example",
+        "ub-if-uip-equilibrium-example",
+        "ub-if-cip-rounding-trap"
+      ],
+      "objectives": [
+        {
+          "concept": "Exchange-rate quotations",
+          "cardIds": [
+            "ub-if-quote-units",
+            "ub-if-reciprocal",
+            "ub-if-dollar-depreciation",
+            "ub-if-dollar-appreciation",
+            "ub-if-import-price",
+            "ub-if-export-price",
+            "ub-if-relative-price",
+            "ub-if-quantity-caveat",
+            "ub-if-sweater-conversion",
+            "ub-if-implied-jeans-rate",
+            "ub-if-quote-mistake"
+          ]
+        },
+        {
+          "concept": "Foreign exchange markets",
+          "cardIds": [
+            "ub-if-participants",
+            "ub-if-bank-role",
+            "ub-if-arbitrage",
+            "ub-if-arbitrage-costs",
+            "ub-if-vehicle-currency",
+            "ub-if-arbitrage-example"
+          ]
+        },
+        {
+          "concept": "Currency contracts",
+          "cardIds": [
+            "ub-if-spot-forward",
+            "ub-if-spot-forward-equal",
+            "ub-if-fx-swap",
+            "ub-if-swap-use",
+            "ub-if-futures-forward",
+            "ub-if-futures-notional",
+            "ub-if-tick-value",
+            "ub-if-margin",
+            "ub-if-margin-leverage",
+            "ub-if-futures-profit",
+            "ub-if-net-profit",
+            "ub-if-option-obligation",
+            "ub-if-call-put",
+            "ub-if-option-style",
+            "ub-if-bond-derivative"
+          ]
+        },
+        {
+          "concept": "Currency deposit returns",
+          "cardIds": [
+            "ub-if-nominal-return",
+            "ub-if-real-return",
+            "ub-if-fixed-prices",
+            "ub-if-asset-demand",
+            "ub-if-equal-risk-assumption",
+            "ub-if-two-return-components",
+            "ub-if-conversion-steps",
+            "ub-if-exact-foreign-return",
+            "ub-if-approx-foreign-return",
+            "ub-if-cross-term",
+            "ub-if-higher-interest-trap",
+            "ub-if-return-gap"
+          ]
+        },
+        {
+          "concept": "Interest parity and expectations",
+          "cardIds": [
+            "ub-if-uip",
+            "ub-if-uip-risk",
+            "ub-if-dollar-excess-return",
+            "ub-if-current-depreciation",
+            "ub-if-current-appreciation",
+            "ub-if-fx-graph",
+            "ub-if-dollar-rate-rise",
+            "ub-if-euro-rate-rise",
+            "ub-if-expectations-now",
+            "ub-if-uip-solve",
+            "ub-if-uip-equilibrium-example"
+          ]
+        },
+        {
+          "concept": "Carry trade and covered parity",
+          "cardIds": [
+            "ub-if-carry-trade",
+            "ub-if-carry-risk",
+            "ub-if-cip",
+            "ub-if-cip-exact",
+            "ub-if-forward-premium",
+            "ub-if-cip-approx",
+            "ub-if-forward-solve",
+            "ub-if-covered-arbitrage-direction",
+            "ub-if-cip-frictions",
+            "ub-if-forward-expectation"
+          ]
+        },
+        {
+          "concept": "Interest parity practice",
+          "cardIds": [
+            "ub-if-hw3-gap-1",
+            "ub-if-hw3-gap-2",
+            "ub-if-hw3-gap-3",
+            "ub-if-hw3-gap-4",
+            "ub-if-hw3-gap-5",
+            "ub-if-hw3-gap-6",
+            "ub-if-hw3-gap-7",
+            "ub-if-hw3-gap-8",
+            "ub-if-hw3-gap-9",
+            "ub-if-hw3-gap-10",
+            "ub-if-hw3-gap-11",
+            "ub-if-hw3-gap-12",
+            "ub-if-hw3-gap-13",
+            "ub-if-hw3-gap-14",
+            "ub-if-hw3-gap-15",
+            "ub-if-hw3-parity-1",
+            "ub-if-hw3-parity-2",
+            "ub-if-hw3-parity-3",
+            "ub-if-hw3-parity-4",
+            "ub-if-hw3-parity-5",
+            "ub-if-hw3-return-110-120",
+            "ub-if-hw3-return-1165"
+          ]
+        },
+        {
+          "concept": "Covered parity practice",
+          "cardIds": [
+            "ub-if-hw3-forward-1",
+            "ub-if-hw3-forward-2",
+            "ub-if-hw3-forward-3",
+            "ub-if-hw3-forward-4",
+            "ub-if-hw3-forward-5",
+            "ub-if-cip-rounding-trap"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "UBuffalo",
+      "course": "International Finance",
+      "title": "Chapter 4",
+      "status": "Authored from supplied slides and homework; see source audit and caveats",
+      "cardIds": [
+        "ub-if-money",
+        "ub-if-narrow-broad",
+        "ub-if-liquidity",
+        "ub-if-liquidity-return",
+        "ub-if-central-bank-supply",
+        "ub-if-inflation-risk",
+        "ub-if-opportunity-cost-money",
+        "ub-if-interest-money-demand",
+        "ub-if-price-money-demand",
+        "ub-if-income-money-demand",
+        "ub-if-nominal-demand",
+        "ub-if-real-balances",
+        "ub-if-shift-vs-move",
+        "ub-if-money-equilibrium",
+        "ub-if-supply-vertical",
+        "ub-if-excess-money",
+        "ub-if-money-shortage",
+        "ub-if-supply-interest",
+        "ub-if-income-interest",
+        "ub-if-price-interest",
+        "ub-if-domestic-expansion",
+        "ub-if-domestic-contraction",
+        "ub-if-foreign-expansion",
+        "ub-if-foreign-us-market",
+        "ub-if-joint-equilibrium",
+        "ub-if-short-long",
+        "ub-if-capacity",
+        "ub-if-level-neutrality",
+        "ub-if-price-equilibrium",
+        "ub-if-inflation-growth",
+        "ub-if-money-data",
+        "ub-if-hyperinflation",
+        "ub-if-demand-cost-pressure",
+        "ub-if-wage-expectations",
+        "ub-if-volatility-sticky",
+        "ub-if-permanent-level-fx",
+        "ub-if-permanent-vs-temporary",
+        "ub-if-overshooting",
+        "ub-if-overshoot-uip",
+        "ub-if-adjustment-path",
+        "ub-if-flexible-prices",
+        "ub-if-contraction-path",
+        "ub-if-inflation-news",
+        "ub-if-money-demand-innovation",
+        "ub-if-real-balances-example",
+        "ub-if-money-fx-pipeline",
+        "ub-if-inflation-growth-example",
+        "ub-if-overshoot-numeric"
+      ],
+      "objectives": [
+        {
+          "concept": "Money and liquidity",
+          "cardIds": [
+            "ub-if-money",
+            "ub-if-narrow-broad",
+            "ub-if-liquidity",
+            "ub-if-liquidity-return",
+            "ub-if-central-bank-supply",
+            "ub-if-inflation-risk"
+          ]
+        },
+        {
+          "concept": "Money demand",
+          "cardIds": [
+            "ub-if-opportunity-cost-money",
+            "ub-if-interest-money-demand",
+            "ub-if-price-money-demand",
+            "ub-if-income-money-demand",
+            "ub-if-nominal-demand",
+            "ub-if-real-balances",
+            "ub-if-shift-vs-move",
+            "ub-if-money-demand-innovation",
+            "ub-if-real-balances-example"
+          ]
+        },
+        {
+          "concept": "Money-market equilibrium",
+          "cardIds": [
+            "ub-if-money-equilibrium",
+            "ub-if-supply-vertical",
+            "ub-if-excess-money",
+            "ub-if-money-shortage",
+            "ub-if-supply-interest",
+            "ub-if-income-interest",
+            "ub-if-price-interest"
+          ]
+        },
+        {
+          "concept": "Money and FX in the short run",
+          "cardIds": [
+            "ub-if-domestic-expansion",
+            "ub-if-domestic-contraction",
+            "ub-if-foreign-expansion",
+            "ub-if-foreign-us-market",
+            "ub-if-joint-equilibrium",
+            "ub-if-money-fx-pipeline"
+          ]
+        },
+        {
+          "concept": "Long-run money and prices",
+          "cardIds": [
+            "ub-if-short-long",
+            "ub-if-capacity",
+            "ub-if-level-neutrality",
+            "ub-if-price-equilibrium",
+            "ub-if-inflation-growth",
+            "ub-if-money-data",
+            "ub-if-hyperinflation",
+            "ub-if-demand-cost-pressure",
+            "ub-if-wage-expectations",
+            "ub-if-volatility-sticky",
+            "ub-if-inflation-growth-example"
+          ]
+        },
+        {
+          "concept": "Overshooting and expectations",
+          "cardIds": [
+            "ub-if-permanent-level-fx",
+            "ub-if-permanent-vs-temporary",
+            "ub-if-overshooting",
+            "ub-if-overshoot-uip",
+            "ub-if-adjustment-path",
+            "ub-if-flexible-prices",
+            "ub-if-contraction-path",
+            "ub-if-inflation-news",
+            "ub-if-overshoot-numeric"
+          ]
+        }
+      ]
+    },
+    {
+      "school": "UBuffalo",
+      "course": "International Finance",
+      "title": "Chapter 5",
+      "status": "Authored from supplied slides and homework; see source audit and caveats",
+      "cardIds": [
+        "ub-if-long-run-model-purpose",
+        "ub-if-one-price",
+        "ub-if-one-price-equation",
+        "ub-if-ppp-basket",
+        "ub-if-absolute-ppp",
+        "ub-if-ppp-numeric",
+        "ub-if-relative-ppp",
+        "ub-if-relative-exact",
+        "ub-if-absolute-relative",
+        "ub-if-equal-inflation",
+        "ub-if-monetary-building-blocks",
+        "ub-if-monetary-equation",
+        "ub-if-money-level-ppp",
+        "ub-if-foreign-money-ppp",
+        "ub-if-interest-long-run",
+        "ub-if-output-ppp",
+        "ub-if-level-vs-growth",
+        "ub-if-fisher-derive",
+        "ub-if-fisher",
+        "ub-if-nominal-strength-trap",
+        "ub-if-growth-shock-rate",
+        "ub-if-price-jump",
+        "ub-if-growth-path",
+        "ub-if-ppp-no-overshoot",
+        "ub-if-two-experiments",
+        "ub-if-ppp-evidence",
+        "ub-if-transport-band",
+        "ub-if-nontradables",
+        "ub-if-pricing-to-market",
+        "ub-if-basket-measurement",
+        "ub-if-rich-price-levels",
+        "ub-if-balassa-samuelson",
+        "ub-if-poor-wages",
+        "ub-if-endowment-theory",
+        "ub-if-real-exchange-definition",
+        "ub-if-real-one",
+        "ub-if-real-depreciation",
+        "ub-if-real-appreciation",
+        "ub-if-nominal-decompose",
+        "ub-if-nominal-real-distinction",
+        "ub-if-demand-real",
+        "ub-if-supply-real",
+        "ub-if-relative-graph",
+        "ub-if-relative-supply-vertical",
+        "ub-if-monetary-real-neutral",
+        "ub-if-demand-nominal",
+        "ub-if-supply-ambiguity",
+        "ub-if-productivity-models",
+        "ub-if-general-nominal-gap",
+        "ub-if-real-interest",
+        "ub-if-real-parity",
+        "ub-if-real-equality",
+        "ub-if-real-gap-numeric",
+        "ub-if-ppp-inflation-example",
+        "ub-if-real-rate-example",
+        "ub-if-fisher-example",
+        "ub-if-supply-nominal-example",
+        "ub-if-real-parity-example"
+      ],
+      "objectives": [
+        {
+          "concept": "Long-run exchange-rate models",
+          "cardIds": [
+            "ub-if-long-run-model-purpose"
+          ]
+        },
+        {
+          "concept": "Purchasing power parity",
+          "cardIds": [
+            "ub-if-one-price",
+            "ub-if-one-price-equation",
+            "ub-if-ppp-basket",
+            "ub-if-absolute-ppp",
+            "ub-if-ppp-numeric",
+            "ub-if-relative-ppp",
+            "ub-if-relative-exact",
+            "ub-if-absolute-relative",
+            "ub-if-equal-inflation",
+            "ub-if-ppp-inflation-example"
+          ]
+        },
+        {
+          "concept": "Monetary approach",
+          "cardIds": [
+            "ub-if-monetary-building-blocks",
+            "ub-if-monetary-equation",
+            "ub-if-money-level-ppp",
+            "ub-if-foreign-money-ppp",
+            "ub-if-interest-long-run",
+            "ub-if-output-ppp",
+            "ub-if-level-vs-growth"
+          ]
+        },
+        {
+          "concept": "Fisher effect and inflation",
+          "cardIds": [
+            "ub-if-fisher-derive",
+            "ub-if-fisher",
+            "ub-if-nominal-strength-trap",
+            "ub-if-growth-shock-rate",
+            "ub-if-price-jump",
+            "ub-if-growth-path",
+            "ub-if-ppp-no-overshoot",
+            "ub-if-two-experiments",
+            "ub-if-fisher-example"
+          ]
+        },
+        {
+          "concept": "Limits of PPP",
+          "cardIds": [
+            "ub-if-ppp-evidence",
+            "ub-if-transport-band",
+            "ub-if-nontradables",
+            "ub-if-pricing-to-market",
+            "ub-if-basket-measurement"
+          ]
+        },
+        {
+          "concept": "Price levels across countries",
+          "cardIds": [
+            "ub-if-rich-price-levels",
+            "ub-if-balassa-samuelson",
+            "ub-if-poor-wages",
+            "ub-if-endowment-theory"
+          ]
+        },
+        {
+          "concept": "Real exchange rates",
+          "cardIds": [
+            "ub-if-real-exchange-definition",
+            "ub-if-real-one",
+            "ub-if-real-depreciation",
+            "ub-if-real-appreciation",
+            "ub-if-nominal-decompose",
+            "ub-if-nominal-real-distinction",
+            "ub-if-real-rate-example"
+          ]
+        },
+        {
+          "concept": "Real demand and supply",
+          "cardIds": [
+            "ub-if-demand-real",
+            "ub-if-supply-real",
+            "ub-if-relative-graph",
+            "ub-if-relative-supply-vertical",
+            "ub-if-monetary-real-neutral",
+            "ub-if-demand-nominal",
+            "ub-if-supply-ambiguity",
+            "ub-if-productivity-models",
+            "ub-if-supply-nominal-example"
+          ]
+        },
+        {
+          "concept": "Real interest parity",
+          "cardIds": [
+            "ub-if-general-nominal-gap",
+            "ub-if-real-interest",
+            "ub-if-real-parity",
+            "ub-if-real-equality",
+            "ub-if-real-gap-numeric",
+            "ub-if-real-parity-example"
+          ]
+        }
+      ]
     }
   ],
   "crossCourseCardIds": [

@@ -1,8 +1,8 @@
 # StudyScroll: master feed
 
-Updated 2026-09-30. 932 curated cards.
+Updated 2026-09-30. 1216 curated cards.
 
-Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2 and supporting material. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference.
+Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2 and supporting material. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. UBuffalo International Finance covers the supplied Chapters 1–5 slides and Chapter 2–4 homework; source inconsistencies and exact/approximate conventions are documented in INTERNATIONAL_FINANCE_COVERAGE.md.
 
 The editable source of truth is [master-feed.json](master-feed.json). This readable document is generated with `npm run feed:build`. Edit the JSON, then regenerate; the Next app imports that same JSON directly.
 
@@ -10,6 +10,7 @@ These are authored learning prompts derived from the listed materials, not quota
 
 ## Course map
 
+- **UBuffalo — International Finance:** Chapters 1–5 and Chapter 2–4 homework: national accounts, balance of payments, currency returns, money markets, PPP, and real exchange rates. See [INTERNATIONAL_FINANCE_COVERAGE.md](INTERNATIONAL_FINANCE_COVERAGE.md).
 - **AM 205:** floating-point spacing, rounding, matrix operations, linear-map geometry, pivoting, low-rank approximation, algebraic least squares.
 - **AM 207:** probability foundations, inverse transforms, Monte Carlo, Metropolis–Hastings, Markov dynamics, jump processes, SSA, tau leaping, and Bayesian uncertainty.
 - **STAT 244:** linear algebra, estimability, projections, contrast coding, least squares and GLS, inference, multicollinearity, PCR/PLS, and regression diagnostics.
@@ -31,7 +32,7 @@ See [LECTURE_COVERAGE.md](LECTURE_COVERAGE.md) for the lecture-note map, [covera
 
 </details>
 
-Sources: [PS1 · Q1(a)](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(a)](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-spacing`
 
@@ -50,7 +51,7 @@ No. In binary64, the gap below 2 is 2⁻⁵²; above it, 2⁻⁵¹. Crossing a p
 
 </details>
 
-Sources: [PS1 · Q1(a)](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(a)](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-binade-boundary`
 
@@ -69,7 +70,7 @@ No. For binary64 round-to-nearest, the gap is 2⁻⁵² but unit roundoff is 2�
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-roundoff-versus-epsilon`
 
@@ -88,7 +89,7 @@ Card ID: `am205-roundoff-versus-epsilon`
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-toy-binary`
 
@@ -107,7 +108,7 @@ The gap there is 2, so the exact answer is halfway between neighbors. Ties-to-ev
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-largest-consecutive-integers`
 
@@ -126,7 +127,7 @@ A gradual approach to zero instead of an abrupt cutoff. Their absolute gap stays
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-subnormal-role`
 
@@ -145,7 +146,7 @@ Card ID: `am205-subnormal-role`
 
 </details>
 
-Sources: [PS1 · Q1(b)](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(b)](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-count`
 
@@ -164,7 +165,7 @@ Card ID: `am205-count`
 
 </details>
 
-Sources: [PS1 · Q1(b)](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(b)](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-non-grid-endpoint`
 
@@ -183,7 +184,7 @@ Yes. Different exact reciprocals can round to the same output. Rounding squeezes
 
 </details>
 
-Sources: [PS1 · Q1(c–e)](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(c–e)](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-reciprocal`
 
@@ -202,7 +203,7 @@ No. Counting more inputs than possible outputs proves some collision exists. Fin
 
 </details>
 
-Sources: [PS1 · Q1(c–e)](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(c–e)](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-pigeonhole-not-all`
 
@@ -221,7 +222,7 @@ Both 4 and 1/4 are powers of two, so they are exactly representable. Their produ
 
 </details>
 
-Sources: [PS1 · Q2](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q2](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-roundtrip`
 
@@ -240,7 +241,7 @@ Reduced fractions whose denominators are powers of two. For example, 1/8 termina
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-finite-binary`
 
@@ -259,7 +260,7 @@ On the left. Column operations multiply on the right: LB changes rows; BC change
 
 </details>
 
-Sources: [PS1 · Q3](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q3](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-operations`
 
@@ -278,7 +279,7 @@ Usually not. In the first order, the scaled row moves. In the reverse order, a d
 
 </details>
 
-Sources: [PS1 · Q3](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q3](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-row-column-order`
 
@@ -297,7 +298,7 @@ C = [[1,0],[3,1]]. The first column of BC is B times (1,3)ᵀ, giving the requir
 
 </details>
 
-Sources: [PS1 · Q3](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q3](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-column-add-index`
 
@@ -316,7 +317,7 @@ It produces an ellipse. The map’s singular values are its semiaxis lengths; it
 
 </details>
 
-Sources: [PS1 · Q4](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q4](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-disk`
 
@@ -335,7 +336,7 @@ Area is multiplied by 3 × 1/2 = 3/2. A unit disk becomes an ellipse of area 3π
 
 </details>
 
-Sources: [PS1 · Q4](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q4](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-singular-values-area`
 
@@ -354,7 +355,7 @@ It flattens it onto the horizontal segment from −2 to 2. The second direction 
 
 </details>
 
-Sources: [PS1 · Q4](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q4](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-rank-collapse`
 
@@ -373,7 +374,7 @@ QᵀQ=I, so ‖Qx‖²=xᵀQᵀQx=xᵀx. A square Q can rotate or reflect, but p
 
 </details>
 
-Sources: [PS1 · Q4](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q4](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-orthogonal-map`
 
@@ -392,7 +393,7 @@ It creates huge elimination multipliers. Large intermediate values can magnify r
 
 </details>
 
-Sources: [PS2 · Q1](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q1](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-pivot`
 
@@ -411,7 +412,7 @@ No. [[0,1],[1,0]] is invertible. Swapping rows makes elimination possible.
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
 
 Card ID: `am205-zero-pivot-nonsingular`
 
@@ -430,7 +431,7 @@ No. Subtracting rows with opposite signs can increase entries. For example, subt
 
 </details>
 
-Sources: [Heath · Ch. 2 review Q2.27, printed p. 93](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
+Sources: [Heath · Ch. 2 review Q2.27, printed p. 93](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
 
 Card ID: `am205-multiplier-growth`
 
@@ -449,7 +450,7 @@ Multiply U’s diagonal entries and multiply by (−1) for each row swap. This a
 
 </details>
 
-Sources: [PS2 · Q1(a)](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q1(a)](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-det`
 
@@ -468,7 +469,7 @@ Repeated stripes create repeated patterns. Folds and shadows introduce extra ind
 
 </details>
 
-Sources: [PS2 · Q2](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-rank`
 
@@ -487,7 +488,7 @@ For an m×n residual R, RMS=‖R‖F/√(mn). It is the typical error per pixel 
 
 </details>
 
-Sources: [PS2 · Q2](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-rms-frobenius`
 
@@ -506,7 +507,7 @@ No. Removing the largest residual entry need not reduce total squared error. Tru
 
 </details>
 
-Sources: [PS2 · Q2 · method comparison](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2 · method comparison](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-greedy`
 
@@ -525,7 +526,7 @@ For a nonzero pivot, this rank-one term exactly matches pivot row i and column j
 
 </details>
 
-Sources: [PS2 · Q2 · method comparison](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2 · method comparison](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-elimination-update`
 
@@ -544,7 +545,7 @@ Then every residual entry is zero. Stop: dividing by that pivot would only intro
 
 </details>
 
-Sources: [PS2 · Q2 · method comparison](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2 · method comparison](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-zero-residual-pivot`
 
@@ -563,7 +564,7 @@ The unknowns b,c,d appear linearly. Treat x²,xy,y² as known features.
 
 </details>
 
-Sources: [PS2 · Q3(a)](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q3(a)](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-ellipse`
 
@@ -582,7 +583,7 @@ Card ID: `am205-ellipse`
 
 </details>
 
-Sources: [PS2 · Q3(a)](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q3(a)](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-ellipse-design-row`
 
@@ -601,7 +602,7 @@ No. It minimizes how far bx²+cxy+dy² is from 1, not the shortest geometric dis
 
 </details>
 
-Sources: [PS2 · Q3(a)](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q3(a)](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-algebraic-distance`
 
@@ -620,7 +621,7 @@ When Q=[[b,c/2],[c/2,d]] is positive definite. Equivalently, b>0 and bd−c²/4>
 
 </details>
 
-Sources: [PS2 · Q3 · interpretation](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q3 · interpretation](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-ellipse-check`
 
@@ -639,7 +640,7 @@ In xᵀQx, both off-diagonal entries contribute to xy. Two copies of c/2 add up 
 
 </details>
 
-Sources: [PS2 · Q3 · interpretation](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q3 · interpretation](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-quadratic-cross-term`
 
@@ -658,7 +659,7 @@ The semiaxis lengths are 1/√4=1/2 and 1/√(1/9)=3.
 
 </details>
 
-Sources: [PS2 · Q3 · interpretation](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q3 · interpretation](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-ellipse-axes`
 
@@ -677,7 +678,7 @@ The fraction of area inside radius r is r². Setting r²=U gives r=√U, with an
 
 </details>
 
-Sources: [PS1 · Q4](../courses/am205/homeworks/ps1/ps1.pdf#page=1); [HW1 · Q4 · transformations](../courses/am207/homeworks/ps1/hw01.pdf#page=4)
+Sources: [PS1 · Q4](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [HW1 · Q4 · transformations](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=4)
 
 Card ID: `bridge-disk`
 
@@ -696,7 +697,7 @@ A solution exists, is unique, and changes continuously with the input.
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed p. 39](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
+Sources: [Heath · Ch. 1 review, printed p. 39](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
 
 Card ID: `am205-wellposed`
 
@@ -715,7 +716,7 @@ No. It reduces rounding error, but does not fix a wrong model, an inadequate dis
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed p. 39](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
+Sources: [Heath · Ch. 1 review, printed p. 39](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
 
 Card ID: `am205-errors`
 
@@ -734,7 +735,7 @@ Truncation error shrinks with h, but rounding in f(x+h)−f(x) gets amplified by
 
 </details>
 
-Sources: [Heath · Ch. 1 review Q1.50, printed p. 41](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=62)
+Sources: [Heath · Ch. 1 review Q1.50, printed p. 41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=62)
 
 Card ID: `am205-discretization-tradeoff`
 
@@ -753,7 +754,7 @@ Their true difference is small, but the errors already in the inputs need not be
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-cancellation`
 
@@ -772,7 +773,7 @@ Use x/(√(1+x)+1). It is algebraically equal but avoids subtracting almost equa
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-rationalize-small-difference`
 
@@ -791,7 +792,7 @@ The intermediate squares may be too large. With m=max(abs(a),abs(b))>0, compute 
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-overflow-rewrite`
 
@@ -810,7 +811,7 @@ NaN compares unequal to everything, including itself. Use an isnan check.
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-exceptional-values`
 
@@ -829,7 +830,7 @@ Card ID: `am205-exceptional-values`
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed p. 39](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
+Sources: [Heath · Ch. 1 review, printed p. 39](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
 
 Card ID: `am205-relative`
 
@@ -848,7 +849,7 @@ It is exactly √1.96. Backward error asks how much the input must change: here,
 
 </details>
 
-Sources: [Heath · §1.2.5, printed p. 12](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=33)
+Sources: [Heath · §1.2.5, printed p. 12](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=33)
 
 Card ID: `am205-backward`
 
@@ -867,7 +868,7 @@ b−r, because Ax̂=b−r. The residual measures the needed change in b when A s
 
 </details>
 
-Sources: [Heath · §1.2.5, printed p. 12](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=33)
+Sources: [Heath · §1.2.5, printed p. 12](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=33)
 
 Card ID: `am205-linear-backward-data`
 
@@ -886,7 +887,7 @@ Yes. It solves a nearby problem accurately, but an ill-conditioned problem can t
 
 </details>
 
-Sources: [Heath · §1.2.6, printed p. 13](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34)
+Sources: [Heath · §1.2.6, printed p. 13](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34)
 
 Card ID: `am205-conditioning`
 
@@ -905,7 +906,7 @@ Roughly 8 in a first-order worst-case estimate: 10⁴×10⁻¹²=10⁻⁸. The a
 
 </details>
 
-Sources: [Heath · Ch. 2 review Q2.64–65, printed p. 95](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review Q2.64–65, printed p. 95](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
 
 Card ID: `am205-digits-lost`
 
@@ -924,7 +925,7 @@ Local relative sensitivity: the approximate output percentage change per input p
 
 </details>
 
-Sources: [Heath · §1.2.6, printed pp. 13–14](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34)
+Sources: [Heath · §1.2.6, printed pp. 13–14](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34)
 
 Card ID: `am205-scalar-condition`
 
@@ -943,7 +944,7 @@ For x>0, it approximately halves them: abs(xf′(x)/f(x))=1/2.
 
 </details>
 
-Sources: [Heath · §1.2.6, printed pp. 13–14](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34)
+Sources: [Heath · §1.2.6, printed pp. 13–14](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34)
 
 Card ID: `am205-sqrt-condition`
 
@@ -962,7 +963,7 @@ Yes. In binary64, (10¹⁶−10¹⁶)+1 gives 1, while 10¹⁶+(−10¹⁶+1) gi
 
 </details>
 
-Sources: [Heath · Ch. 1 review · floating-point properties](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
+Sources: [Heath · Ch. 1 review · floating-point properties](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
 
 Card ID: `am205-associative`
 
@@ -981,7 +982,7 @@ Each might vanish when added alone to a huge sum. Together they can form a contr
 
 </details>
 
-Sources: [Heath · Ch. 1 review Q1.45–49, printed p. 41](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=62)
+Sources: [Heath · Ch. 1 review Q1.45–49, printed p. 41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=62)
 
 Card ID: `am205-positive-sum-order`
 
@@ -1000,7 +1001,7 @@ No. Precision is how many digits the arithmetic can represent; accuracy is how c
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed p. 39](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
+Sources: [Heath · Ch. 1 review, printed p. 39](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
 
 Card ID: `am205-precision`
 
@@ -1019,7 +1020,7 @@ Yes. For A=10⁻¹⁰I, det(A) is tiny but κ₂(A)=1. All directions shrink equ
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 95](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review, printed p. 95](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
 
 Card ID: `am205-condition-scale`
 
@@ -1038,7 +1039,7 @@ The 1-norm is 6, the largest absolute column sum. The infinity-norm is 7, the la
 
 </details>
 
-Sources: [Heath · Ch. 2 review · matrix norms](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
+Sources: [Heath · Ch. 2 review · matrix norms](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
 
 Card ID: `am205-matrix-norms`
 
@@ -1057,7 +1058,7 @@ Card ID: `am205-matrix-norms`
 
 </details>
 
-Sources: [Heath · Ch. 2 review Q2.57, printed p. 94](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
+Sources: [Heath · Ch. 2 review Q2.57, printed p. 94](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
 
 Card ID: `am205-diagonal-condition`
 
@@ -1076,7 +1077,7 @@ The error is −A⁻¹r. A large inverse can amplify a tiny residual.
 
 </details>
 
-Sources: [Heath · §2.3.5, printed p. 61](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82)
+Sources: [Heath · §2.3.5, printed p. 61](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82)
 
 Card ID: `am205-residual`
 
@@ -1095,7 +1096,7 @@ Its residual is only (0,10⁻⁸), but the true solution is (1,1). The second co
 
 </details>
 
-Sources: [Heath · §2.3.5, printed p. 61](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82)
+Sources: [Heath · §2.3.5, printed p. 61](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82)
 
 Card ID: `am205-small-residual-counterexample`
 
@@ -1114,7 +1115,7 @@ No. Every point on the line through two distinct solutions is also a solution.
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 93](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
+Sources: [Heath · Ch. 2 review, printed p. 93](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
 
 Card ID: `am205-two-solutions`
 
@@ -1133,7 +1134,7 @@ No. It may have none or infinitely many, depending on whether b lies in its colu
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
 
 Card ID: `am205-consistency`
 
@@ -1152,7 +1153,7 @@ No. The equations can conflict. If a solution exists, however, the nontrivial nu
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
 
 Card ID: `am205-underdetermined`
 
@@ -1171,7 +1172,7 @@ Partial pivoting searches the active column. Complete pivoting searches the rema
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 93](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
+Sources: [Heath · Ch. 2 review, printed p. 93](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
 
 Card ID: `am205-pivot-scope`
 
@@ -1190,7 +1191,7 @@ Card ID: `am205-pivot-scope`
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
 
 Card ID: `am205-pivot-choice`
 
@@ -1209,7 +1210,7 @@ Dense factorization costs O(n³). Once it is done, each pair of triangular solve
 
 </details>
 
-Sources: [Heath · Ch. 2 review · repeated systems](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review · repeated systems](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
 
 Card ID: `am205-lu-reuse`
 
@@ -1228,7 +1229,7 @@ Solve Ly=Pb, then Ux=y. Apply the row permutation to b as well as A.
 
 </details>
 
-Sources: [Heath · Ch. 2 review · repeated systems](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review · repeated systems](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
 
 Card ID: `am205-solve-with-permutation`
 
@@ -1247,7 +1248,7 @@ The first row gives the first unknown. Each later row uses values already found.
 
 </details>
 
-Sources: [Heath · Ch. 2 exercises · triangular solves](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=117)
+Sources: [Heath · Ch. 2 exercises · triangular solves](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=117)
 
 Card ID: `am205-triangular-step`
 
@@ -1266,7 +1267,7 @@ First solve Uᵀy=b, then Lᵀx=y, because Aᵀ=UᵀLᵀ.
 
 </details>
 
-Sources: [Heath · Ch. 2 review Q2.48, printed p. 94](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
+Sources: [Heath · Ch. 2 review Q2.48, printed p. 94](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
 
 Card ID: `am205-transpose-solve`
 
@@ -1285,7 +1286,7 @@ No. Compute v=Bc, then solve Ax=v. This avoids an unnecessary inverse and matrix
 
 </details>
 
-Sources: [Heath · Ch. 2 review Q2.44–46, printed p. 94](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
+Sources: [Heath · Ch. 2 review Q2.44–46, printed p. 94](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
 
 Card ID: `am205-inverse-product-cost`
 
@@ -1304,7 +1305,7 @@ Positive definiteness. A real symmetric positive-definite matrix has A=LLᵀ wit
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 95](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review, printed p. 95](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
 
 Card ID: `am205-cholesky`
 
@@ -1323,7 +1324,7 @@ No. [[1,2],[2,1]] has eigenvalue −1. The direction (1,−1) gives a negative q
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
 
 Card ID: `am205-positive-definite-test`
 
@@ -1342,7 +1343,7 @@ Compute the scalar vᵀx, then scale u by it. The work is O(n), rather than O(n�
 
 </details>
 
-Sources: [Heath · Ch. 2 review · rank-one matrices](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review · rank-one matrices](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
 
 Card ID: `am205-rank-one`
 
@@ -1361,7 +1362,7 @@ Every column is a multiple of u, and at least one is nonzero.
 
 </details>
 
-Sources: [Heath · Ch. 2 review · rank-one matrices](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review · rank-one matrices](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
 
 Card ID: `am205-outer-product-rank`
 
@@ -1380,7 +1381,7 @@ For full-column-rank X, κ₂(XᵀX)=κ₂(X)². Forming XᵀX magnifies the con
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
 
 Card ID: `am205-normal-squared`
 
@@ -1399,7 +1400,7 @@ Rβ=Qᵀy, for reduced QR with full column rank. Project y onto Q’s directions
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
 
 Card ID: `am205-qr-reduction`
 
@@ -1418,7 +1419,7 @@ It has the smallest Euclidean coefficient norm. Adding a null-space vector keeps
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
 
 Card ID: `am205-svd-minimum-norm`
 
@@ -1437,7 +1438,7 @@ No. Both lie in [64,128), so both have gap 2⁻⁴⁶.
 
 </details>
 
-Sources: [PS1 · Q1(a) · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(a) · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-spacing-at-100`
 
@@ -1456,7 +1457,7 @@ It doubles from 2⁻⁴⁶ to 2⁻⁴⁵.
 
 </details>
 
-Sources: [PS1 · Q1(a) · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(a) · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-spacing-at-128`
 
@@ -1475,7 +1476,7 @@ Any point between neighbors is at most half their distance from the closer neigh
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-half-gap`
 
@@ -1494,7 +1495,7 @@ To 1.5: it is 0.1 away, versus 0.15 from 1.25.
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-toy-round`
 
@@ -1513,7 +1514,7 @@ No. In [2⁵³,2⁵⁴), every even integer is representable. The odd integers f
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-even-large`
 
@@ -1532,7 +1533,7 @@ Card ID: `am205-even-large`
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-decimal-point-one`
 
@@ -1551,7 +1552,7 @@ Not by itself. It must also fit the format’s exponent range and precision.
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-fraction-range`
 
@@ -1570,7 +1571,7 @@ Three: one at each end and one in the middle.
 
 </details>
 
-Sources: [PS1 · Q1(b) · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(b) · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-three-fenceposts`
 
@@ -1589,7 +1590,7 @@ The reciprocal curve gets flatter as inputs grow. Their outputs can differ by le
 
 </details>
 
-Sources: [PS1 · Q1(c–e) · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(c–e) · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-reciprocal-compression`
 
@@ -1608,7 +1609,7 @@ Yes. Although 1/5 is rounded, the product may round back to exactly 1.
 
 </details>
 
-Sources: [PS1 · Q2 · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q2 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-rounded-product`
 
@@ -1627,7 +1628,7 @@ Yes. Multiply on the left by a rectangular matrix that selects the rows you keep
 
 </details>
 
-Sources: [PS1 · Q3 · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q3 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-row-delete`
 
@@ -1646,7 +1647,7 @@ No. The original row 1 is lost. The corresponding row-operation matrix is singul
 
 </details>
 
-Sources: [PS1 · Q3 · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q3 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-row-copy`
 
@@ -1665,7 +1666,7 @@ L₂L₁B. The operator nearest B acts first.
 
 </details>
 
-Sources: [PS1 · Q3 · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q3 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-left-compose`
 
@@ -1684,7 +1685,7 @@ BC₁C₂.
 
 </details>
 
-Sources: [PS1 · Q3 · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q3 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-right-compose`
 
@@ -1703,7 +1704,7 @@ They are the input directions that become the ellipse’s principal axes after t
 
 </details>
 
-Sources: [PS1 · Q4 · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q4 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-right-vectors`
 
@@ -1722,7 +1723,7 @@ Unequal plot scales can make a circle look like an ellipse or distort the true s
 
 </details>
 
-Sources: [PS1 · Q4 · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q4 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-equal-plot-scales`
 
@@ -1741,7 +1742,7 @@ No. Absolute determinant gives area scale. A negative sign indicates an orientat
 
 </details>
 
-Sources: [PS1 · Q4 · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q4 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-determinant-sign`
 
@@ -1760,7 +1761,7 @@ For square Q, QᵀQ=I, so Q⁻¹=Qᵀ.
 
 </details>
 
-Sources: [PS1 · Q4 · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q4 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-orthogonal-inverse`
 
@@ -1779,7 +1780,7 @@ Card ID: `am205-orthogonal-inverse`
 
 </details>
 
-Sources: [PS2 · Q1 · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q1 · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-pivot-multiplier`
 
@@ -1798,7 +1799,7 @@ No. It improves the elimination procedure but does not remove sensitivity in the
 
 </details>
 
-Sources: [PS2 · Q1 · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q1 · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-pivot-does-not-fix`
 
@@ -1817,7 +1818,7 @@ It flips the sign without changing the magnitude.
 
 </details>
 
-Sources: [PS2 · Q1(a) · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q1(a) · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-swap-det`
 
@@ -1836,7 +1837,7 @@ Its triangular structure eliminates the competing determinant terms.
 
 </details>
 
-Sources: [PS2 · Q1(a) · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q1(a) · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-triangular-det`
 
@@ -1855,7 +1856,7 @@ Yes. Tiny noise can make every singular value nonzero, even if only a few are la
 
 </details>
 
-Sources: [PS2 · Q2 · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2 · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-noisy-full-rank`
 
@@ -1874,7 +1875,7 @@ One, unless the image is entirely zero.
 
 </details>
 
-Sources: [PS2 · Q2 · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2 · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-one-pattern-image`
 
@@ -1893,7 +1894,7 @@ It doubles. Squaring gives a factor of four, then the square root removes half t
 
 </details>
 
-Sources: [PS2 · Q2 · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2 · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-rms-scale`
 
@@ -1912,7 +1913,7 @@ The sum of squares of the discarded singular values: Σ_{i>k} σᵢ².
 
 </details>
 
-Sources: [PS2 · Q2 · method comparison · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2 · method comparison · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-svd-tail`
 
@@ -1931,7 +1932,7 @@ m×n. Every column entry multiplies every row entry.
 
 </details>
 
-Sources: [PS2 · Q2 · method comparison · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2 · method comparison · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-outer-shape`
 
@@ -1950,7 +1951,7 @@ No. Its column space fits inside the span of at most k column vectors.
 
 </details>
 
-Sources: [PS2 · Q2 · method comparison · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2 · method comparison · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-rank-sum`
 
@@ -1969,7 +1970,7 @@ Three: b,c,d for x²,xy,y². “Centered” removes linear x and y terms from th
 
 </details>
 
-Sources: [PS2 · Q3(a) · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q3(a) · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-three-features`
 
@@ -1988,7 +1989,7 @@ No. Their feature rows must also be linearly independent.
 
 </details>
 
-Sources: [PS2 · Q3(a) · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q3(a) · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-points-not-enough`
 
@@ -2007,7 +2008,7 @@ Along the coordinate axes, provided b and d are positive.
 
 </details>
 
-Sources: [PS2 · Q3 · interpretation · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q3 · interpretation · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-axis-aligned`
 
@@ -2026,7 +2027,7 @@ No. In its eigenbasis, one squared term is subtracted: the curve is a hyperbola.
 
 </details>
 
-Sources: [PS2 · Q3 · interpretation · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q3 · interpretation · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-indefinite-curve`
 
@@ -2045,7 +2046,7 @@ Q’s orthonormal eigenvectors.
 
 </details>
 
-Sources: [PS2 · Q3 · interpretation · companion concept check](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q3 · interpretation · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `am205-eigenvector-axes`
 
@@ -2064,7 +2065,7 @@ Card ID: `am205-eigenvector-axes`
 
 </details>
 
-Sources: [PS1 · Q4 · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1); [HW1 · Q4 · transformations · companion concept check](../courses/am207/homeworks/ps1/hw01.pdf#page=4)
+Sources: [PS1 · Q4 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [HW1 · Q4 · transformations · companion concept check](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=4)
 
 Card ID: `am205-half-radius`
 
@@ -2083,7 +2084,7 @@ Card ID: `am205-half-radius`
 
 </details>
 
-Sources: [PS1 · Q4 · companion concept check](../courses/am205/homeworks/ps1/ps1.pdf#page=1); [HW1 · Q4 · transformations · companion concept check](../courses/am207/homeworks/ps1/hw01.pdf#page=4)
+Sources: [PS1 · Q4 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [HW1 · Q4 · transformations · companion concept check](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=4)
 
 Card ID: `am205-square-rejection`
 
@@ -2102,7 +2103,7 @@ Yes. Its answer can depend continuously but very steeply on the input.
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed p. 39 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
+Sources: [Heath · Ch. 1 review, printed p. 39 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
 
 Card ID: `am205-wellposed-not-wellconditioned`
 
@@ -2121,7 +2122,7 @@ The model omits a relevant force. That is modeling error, even if the equations 
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed p. 39 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
+Sources: [Heath · Ch. 1 review, printed p. 39 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
 
 Card ID: `am205-model-error`
 
@@ -2140,7 +2141,7 @@ Discretization error: a continuous object is replaced by a finite approximation.
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed p. 39 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
+Sources: [Heath · Ch. 1 review, printed p. 39 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
 
 Card ID: `am205-discretization-example`
 
@@ -2159,7 +2160,7 @@ No. It can preserve available information, not create missing information.
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed p. 39 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
+Sources: [Heath · Ch. 1 review, printed p. 39 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
 
 Card ID: `am205-input-noise`
 
@@ -2178,7 +2179,7 @@ Near √u, where the two error terms balance.
 
 </details>
 
-Sources: [Heath · Ch. 1 review Q1.50, printed p. 41 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=62)
+Sources: [Heath · Ch. 1 review Q1.50, printed p. 41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=62)
 
 Card ID: `am205-balance-step`
 
@@ -2197,7 +2198,7 @@ Yes. It can reveal errors already present in the two operands.
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-exact-subtraction`
 
@@ -2216,7 +2217,7 @@ Return zero. Both inputs are zero, so no division is needed.
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-zero-scale`
 
@@ -2235,7 +2236,7 @@ No unique quotient is determined. Any finite number multiplied by zero gives zer
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
 
 Card ID: `am205-zero-over-zero`
 
@@ -2254,7 +2255,7 @@ The usual formula divides by the true magnitude. Use absolute error or another m
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed p. 39 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
+Sources: [Heath · Ch. 1 review, printed p. 39 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
 
 Card ID: `am205-relative-zero`
 
@@ -2273,7 +2274,7 @@ About 0.0142: abs(√2−1.4).
 
 </details>
 
-Sources: [Heath · §1.2.5, printed p. 12 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=33)
+Sources: [Heath · §1.2.5, printed p. 12 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=33)
 
 Card ID: `am205-forward-sqrt`
 
@@ -2292,7 +2293,7 @@ Rearrange the definition: Ax̂=b−r.
 
 </details>
 
-Sources: [Heath · §1.2.5, printed p. 12 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=33)
+Sources: [Heath · §1.2.5, printed p. 12 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=33)
 
 Card ID: `am205-residual-sign`
 
@@ -2311,7 +2312,7 @@ Conditioning. Stability describes how an algorithm handles rounding and perturba
 
 </details>
 
-Sources: [Heath · §1.2.6, printed p. 13 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34)
+Sources: [Heath · §1.2.6, printed p. 13 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34)
 
 Card ID: `am205-problem-vs-solver`
 
@@ -2330,7 +2331,7 @@ Yes. For √x near zero, the slope is large but relative condition number is 1/2
 
 </details>
 
-Sources: [Heath · §1.2.6, printed pp. 13–14 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34)
+Sources: [Heath · §1.2.6, printed pp. 13–14 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34)
 
 Card ID: `am205-absolute-vs-relative`
 
@@ -2349,7 +2350,7 @@ They group additions differently. Floating-point rounding makes grouping matter.
 
 </details>
 
-Sources: [Heath · Ch. 1 review · floating-point properties · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
+Sources: [Heath · Ch. 1 review · floating-point properties · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
 
 Card ID: `am205-parallel-sums`
 
@@ -2368,7 +2369,7 @@ Track small rounding losses in a correction term so later additions can recover 
 
 </details>
 
-Sources: [Heath · Ch. 1 review Q1.45–49, printed p. 41 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=62)
+Sources: [Heath · Ch. 1 review Q1.45–49, printed p. 41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=62)
 
 Card ID: `am205-compensation`
 
@@ -2387,7 +2388,7 @@ No, for the same induced norm: ‖αA‖‖(αA)⁻¹‖=‖A‖‖A⁻¹‖.
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 95 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review, printed p. 95 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
 
 Card ID: `am205-condition-scaling`
 
@@ -2406,7 +2407,7 @@ The induced matrix norm bounds how much A can amplify a vector’s size.
 
 </details>
 
-Sources: [Heath · Ch. 2 review · matrix norms · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
+Sources: [Heath · Ch. 2 review · matrix norms · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
 
 Card ID: `am205-norm-bound`
 
@@ -2425,7 +2426,7 @@ Card ID: `am205-norm-bound`
 
 </details>
 
-Sources: [Heath · Ch. 2 review Q2.57, printed p. 94 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
+Sources: [Heath · Ch. 2 review Q2.57, printed p. 94 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
 
 Card ID: `am205-condition-one`
 
@@ -2444,7 +2445,7 @@ Multiplying A and b by a tiny scalar makes the raw residual tiny without improvi
 
 </details>
 
-Sources: [Heath · §2.3.5, printed p. 61 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82)
+Sources: [Heath · §2.3.5, printed p. 61 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82)
 
 Card ID: `am205-scaled-residual`
 
@@ -2463,7 +2464,7 @@ In the null space, because A(x−y)=0.
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 93 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
+Sources: [Heath · Ch. 2 review, printed p. 93 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
 
 Card ID: `am205-null-difference`
 
@@ -2482,7 +2483,7 @@ When it has full row rank m.
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed pp. 92–96 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review, printed pp. 92–96 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
 
 Card ID: `am205-full-row-rank`
 
@@ -2501,7 +2502,7 @@ They reorder the variables. Without undoing them, the solution entries can be as
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 93 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
+Sources: [Heath · Ch. 2 review, printed p. 93 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
 
 Card ID: `am205-column-permutation`
 
@@ -2520,7 +2521,7 @@ No. A triangular solve costs O(n²), so doubling n roughly quadruples that work.
 
 </details>
 
-Sources: [Heath · Ch. 2 review · repeated systems · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review · repeated systems · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
 
 Card ID: `am205-many-b-cost`
 
@@ -2539,7 +2540,7 @@ The upper-triangular solve. The last equation isolates the last unknown.
 
 </details>
 
-Sources: [Heath · Ch. 2 review · repeated systems · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review · repeated systems · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
 
 Card ID: `am205-forward-backward`
 
@@ -2558,7 +2559,7 @@ Card ID: `am205-forward-backward`
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 95 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review, printed p. 95 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
 
 Card ID: `am205-cholesky-check`
 
@@ -2577,7 +2578,7 @@ Yes. diag(1,10⁻¹²) is positive definite but has condition number 10¹².
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 95 · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review, printed p. 95 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
 
 Card ID: `am205-spd-sensitive`
 
@@ -2596,7 +2597,7 @@ In span(u), whatever x is.
 
 </details>
 
-Sources: [Heath · Ch. 2 review · rank-one matrices · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review · rank-one matrices · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
 
 Card ID: `am205-rank-one-output`
 
@@ -2615,7 +2616,7 @@ Card ID: `am205-rank-one-output`
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
 
 Card ID: `am205-condition-ten`
 
@@ -2634,7 +2635,7 @@ Its orthogonal component (I−QQᵀ)y.
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
 
 Card ID: `am205-qr-leftover`
 
@@ -2653,7 +2654,7 @@ Its reciprocal is huge, so a small data component becomes a large coefficient co
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
 
 Card ID: `am205-tiny-singular-inverse`
 
@@ -2672,7 +2673,7 @@ It must decide which small singular values count as zero. That decision changes 
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading · companion concept check](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
 
 Card ID: `am205-pseudoinverse-threshold`
 
@@ -2691,7 +2692,7 @@ Error is a discrepancy from a true or reference value. Uncertainty describes the
 
 </details>
 
-Sources: [Lecture 01 · p. 8](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=8)
+Sources: [Lecture 01 · p. 8](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=8)
 
 Card ID: `am207-uncertainty-error`
 
@@ -2710,7 +2711,7 @@ A subset of the sample space: all outcomes that satisfy a condition.
 
 </details>
 
-Sources: [Lecture 01 · p. 11](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=11)
+Sources: [Lecture 01 · p. 11](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=11)
 
 Card ID: `am207-event-set`
 
@@ -2729,7 +2730,7 @@ Probabilities are nonnegative, the whole sample space has probability 1, and pro
 
 </details>
 
-Sources: [Lecture 01 · p. 12](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=12)
+Sources: [Lecture 01 · p. 12](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=12)
 
 Card ID: `am207-probability-axioms`
 
@@ -2748,7 +2749,7 @@ P(Aᶜ)=1−P(A).
 
 </details>
 
-Sources: [Lecture 01 · p. 12](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=12)
+Sources: [Lecture 01 · p. 12](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=12)
 
 Card ID: `am207-complement-event`
 
@@ -2767,7 +2768,7 @@ Adding P(A)+P(B) counts the overlap twice. Subtract it once.
 
 </details>
 
-Sources: [Lecture 01 · p. 12](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=12)
+Sources: [Lecture 01 · p. 12](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=12)
 
 Card ID: `am207-union-overlap`
 
@@ -2786,7 +2787,7 @@ Conditioning restricts attention to B. Dividing P(A∩B) by P(B) renormalizes th
 
 </details>
 
-Sources: [Lecture 01 · p. 18](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=18)
+Sources: [Lecture 01 · p. 18](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=18)
 
 Card ID: `am207-conditional-denominator`
 
@@ -2805,7 +2806,7 @@ If the cases cover the sample space, P(A)=ΣᵢP(A given Bᵢ)P(Bᵢ).
 
 </details>
 
-Sources: [Lecture 01 · p. 18](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=18)
+Sources: [Lecture 01 · p. 18](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=18)
 
 Card ID: `am207-total-probability`
 
@@ -2824,7 +2825,7 @@ P(A∩B)=P(A)P(B). When P(B)>0, knowing B does not change the probability of A.
 
 </details>
 
-Sources: [Lecture 01 · p. 18](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=18)
+Sources: [Lecture 01 · p. 18](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=18)
 
 Card ID: `am207-independence-meaning`
 
@@ -2843,7 +2844,7 @@ A collection of possible system descriptions or realizations, with probability w
 
 </details>
 
-Sources: [Lecture 01 · p. 29](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=29)
+Sources: [Lecture 01 · p. 29](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=29)
 
 Card ID: `am207-ensemble-meaning`
 
@@ -2862,7 +2863,7 @@ No. They are alternative realizations. Particles within a single realization may
 
 </details>
 
-Sources: [Lecture 01 · p. 30](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=30)
+Sources: [Lecture 01 · p. 30](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=30)
 
 Card ID: `am207-ensemble-members`
 
@@ -2881,7 +2882,7 @@ Yes. Every realization has an integer count, but a weighted average of those cou
 
 </details>
 
-Sources: [Lecture 01 · p. 31](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=31)
+Sources: [Lecture 01 · p. 31](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=31)
 
 Card ID: `am207-ensemble-fraction`
 
@@ -2900,7 +2901,7 @@ The indicator is 1 on the event and 0 otherwise, so its expectation is 1·P(A)+0
 
 </details>
 
-Sources: [Lecture 01 · p. 33](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=33)
+Sources: [Lecture 01 · p. 33](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=33)
 
 Card ID: `am207-indicator-probability`
 
@@ -2919,7 +2920,7 @@ A numerical function of the random outcome.
 
 </details>
 
-Sources: [Lecture 01 · p. 35](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=35)
+Sources: [Lecture 01 · p. 35](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=35)
 
 Card ID: `am207-random-variable-map`
 
@@ -2938,7 +2939,7 @@ Yes. Probabilities are areas under the density, and the total area must be 1.
 
 </details>
 
-Sources: [Lecture 01 · p. 36](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
+Sources: [Lecture 01 · p. 36](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
 
 Card ID: `am207-density-not-probability`
 
@@ -2957,7 +2958,7 @@ F(x)=P(X≤x), the probability accumulated up to x.
 
 </details>
 
-Sources: [Lecture 01 · p. 36](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
+Sources: [Lecture 01 · p. 36](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
 
 Card ID: `am207-cdf-definition`
 
@@ -2976,7 +2977,7 @@ Subtract F(a) from F(b).
 
 </details>
 
-Sources: [Lecture 01 · p. 36](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
+Sources: [Lecture 01 · p. 36](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
 
 Card ID: `am207-interval-cdf`
 
@@ -2995,7 +2996,7 @@ Var(X)=E[X²]−E[X]², when these moments are finite.
 
 </details>
 
-Sources: [Lecture 01 · p. 37](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=37)
+Sources: [Lecture 01 · p. 37](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=37)
 
 Card ID: `am207-variance-second-moment`
 
@@ -3014,7 +3015,7 @@ No. For g(x)=x², their difference is Var(X).
 
 </details>
 
-Sources: [Lecture 01 · p. 37](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=37)
+Sources: [Lecture 01 · p. 37](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=37)
 
 Card ID: `am207-nonlinear-average`
 
@@ -3033,7 +3034,7 @@ It is a collection of random variables indexed by time or another parameter, wit
 
 </details>
 
-Sources: [Lecture 01 · p. 38](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=38)
+Sources: [Lecture 01 · p. 38](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=38)
 
 Card ID: `am207-stochastic-process`
 
@@ -3052,7 +3053,7 @@ Only positive values. Exponentiation maps the real line to (0,∞).
 
 </details>
 
-Sources: [Lecture 01 · p. 41](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=41)
+Sources: [Lecture 01 · p. 41](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=41)
 
 Card ID: `am207-lognormal-support`
 
@@ -3071,7 +3072,7 @@ The inverse transformation is x=log y, whose derivative is 1/y. Thus fY(y)=fX(lo
 
 </details>
 
-Sources: [Lecture 01 · p. 41](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=41)
+Sources: [Lecture 01 · p. 41](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=41)
 
 Card ID: `am207-lognormal-jacobian`
 
@@ -3090,7 +3091,7 @@ Use the smallest x for which F(x)≥U. Each jump of the CDF receives a uniform i
 
 </details>
 
-Sources: [Lecture 01 · p. 44](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=44)
+Sources: [Lecture 01 · p. 44](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=44)
 
 Card ID: `am207-generalized-inverse`
 
@@ -3109,7 +3110,7 @@ It fixes the initial state of a deterministic generator and therefore its subseq
 
 </details>
 
-Sources: [Lecture 02 · p. 5](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=5)
+Sources: [Lecture 02 · p. 5](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=5)
 
 Card ID: `am207-seed-determinism`
 
@@ -3128,7 +3129,7 @@ After enough steps, a state repeats. Deterministic updates then repeat the same 
 
 </details>
 
-Sources: [Lecture 02 · p. 6](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=6)
+Sources: [Lecture 02 · p. 6](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=6)
 
 Card ID: `am207-finite-state-period`
 
@@ -3147,7 +3148,7 @@ xₙ₊₁=(axₙ+c) mod m.
 
 </details>
 
-Sources: [Lecture 02 · p. 6](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=6)
+Sources: [Lecture 02 · p. 6](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=6)
 
 Card ID: `am207-lcg-rule`
 
@@ -3166,7 +3167,7 @@ No. Tests can detect certain patterns, but cannot certify every property of a de
 
 </details>
 
-Sources: [Lecture 02 · p. 8](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=8)
+Sources: [Lecture 02 · p. 8](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=8)
 
 Card ID: `am207-random-tests-limit`
 
@@ -3185,7 +3186,7 @@ Each reset restarts the sequence, often producing the same draw repeatedly.
 
 </details>
 
-Sources: [Lecture 02 · p. 11](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=11)
+Sources: [Lecture 02 · p. 11](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=11)
 
 Card ID: `am207-reseed-loop`
 
@@ -3204,7 +3205,7 @@ Multiply the sample average of f(X) by the volume of D.
 
 </details>
 
-Sources: [Lecture 02 · p. 12](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=12)
+Sources: [Lecture 02 · p. 12](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=12)
 
 Card ID: `am207-uniform-volume-general`
 
@@ -3223,7 +3224,7 @@ Add the density contribution from every inverse branch, each divided by the abso
 
 </details>
 
-Sources: [Lecture 02 · p. 19](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=19)
+Sources: [Lecture 02 · p. 19](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=19)
 
 Card ID: `am207-transform-branches`
 
@@ -3242,7 +3243,7 @@ fY(y)=1/(2√y) for 0<y<1. The two inverse branches contribute equally.
 
 </details>
 
-Sources: [Lecture 02 · p. 20](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=20)
+Sources: [Lecture 02 · p. 20](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=20)
 
 Card ID: `am207-squared-uniform-density`
 
@@ -3261,7 +3262,7 @@ When X has a continuous CDF F. Discrete CDFs generally produce discrete probabil
 
 </details>
 
-Sources: [Lecture 02 · p. 21](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=21)
+Sources: [Lecture 02 · p. 21](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=21)
 
 Card ID: `am207-probability-integral-condition`
 
@@ -3280,7 +3281,7 @@ Everywhere the target has positive density, up to sets of zero probability.
 
 </details>
 
-Sources: [Lecture 02 · p. 32](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=32)
+Sources: [Lecture 02 · p. 32](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=32)
 
 Card ID: `am207-rejection-global-bound`
 
@@ -3299,7 +3300,7 @@ Card ID: `am207-rejection-global-bound`
 
 </details>
 
-Sources: [Lecture 02 · p. 34](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=34)
+Sources: [Lecture 02 · p. 34](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=34)
 
 Card ID: `am207-rejection-acceptance-fraction`
 
@@ -3318,7 +3319,7 @@ No. It can never propose outcomes from that missing region.
 
 </details>
 
-Sources: [Lecture 02 · p. 32](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=32)
+Sources: [Lecture 02 · p. 32](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=32)
 
 Card ID: `am207-rejection-support`
 
@@ -3337,7 +3338,7 @@ Instead of starting with dynamics and finding their distribution, you start with
 
 </details>
 
-Sources: [Lecture 02 · p. 41](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=41)
+Sources: [Lecture 02 · p. 41](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=41)
 
 Card ID: `am207-mcmc-reverse-design`
 
@@ -3356,7 +3357,7 @@ No. It is a transition back to the current state, contributing to the kernel's d
 
 </details>
 
-Sources: [Lecture 02 · p. 42](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=42)
+Sources: [Lecture 02 · p. 42](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=42)
 
 Card ID: `am207-mh-holding`
 
@@ -3375,7 +3376,7 @@ The common normalization constant cancels in the target-density ratio.
 
 </details>
 
-Sources: [Lecture 02 · p. 38](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=38)
+Sources: [Lecture 02 · p. 38](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=38)
 
 Card ID: `am207-mh-normalizer`
 
@@ -3394,7 +3395,7 @@ No. The chain also needs suitable accessibility and convergence conditions; a ch
 
 </details>
 
-Sources: [Lecture 02 · p. 47](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=47)
+Sources: [Lecture 02 · p. 47](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=47)
 
 Card ID: `am207-stationarity-convergence`
 
@@ -3413,7 +3414,7 @@ No. The next state can depend strongly on the current state; the earlier past ad
 
 </details>
 
-Sources: [Lecture 03 · p. 10](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=10)
+Sources: [Lecture 03 · p. 10](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=10)
 
 Card ID: `am207-markov-not-iid`
 
@@ -3432,7 +3433,7 @@ Proposals may be so small that the chain barely moves, producing highly correlat
 
 </details>
 
-Sources: [Lecture 03 · p. 22](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=22)
+Sources: [Lecture 03 · p. 22](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=22)
 
 Card ID: `am207-acceptance-too-high`
 
@@ -3451,7 +3452,7 @@ Many proposals land in low-density regions and are rejected, leaving repeated st
 
 </details>
 
-Sources: [Lecture 03 · p. 22](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=22)
+Sources: [Lecture 03 · p. 22](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=22)
 
 Card ID: `am207-acceptance-too-low`
 
@@ -3470,7 +3471,7 @@ No. Useful rates depend on the proposal, dimension, and target geometry.
 
 </details>
 
-Sources: [Lecture 03 · p. 23](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=23)
+Sources: [Lecture 03 · p. 23](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=23)
 
 Card ID: `am207-acceptance-target-universal`
 
@@ -3489,7 +3490,7 @@ Card ID: `am207-acceptance-target-universal`
 
 </details>
 
-Sources: [Lecture 03 · p. 27](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=27)
+Sources: [Lecture 03 · p. 27](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=27)
 
 Card ID: `am207-iid-mean-variance`
 
@@ -3508,7 +3509,7 @@ Finite variance, together with suitable sampling assumptions such as IID draws.
 
 </details>
 
-Sources: [Lecture 03 · p. 28](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=28)
+Sources: [Lecture 03 · p. 28](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=28)
 
 Card ID: `am207-mc-finite-variance`
 
@@ -3527,7 +3528,7 @@ No. The variance and cost per draw can grow dramatically with dimension.
 
 </details>
 
-Sources: [Lecture 03 · p. 30](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=30)
+Sources: [Lecture 03 · p. 30](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=30)
 
 Card ID: `am207-mc-dimension-constant`
 
@@ -3546,7 +3547,7 @@ E[cos(2X)] for X∼Exponential(1). The integral equals 1/5.
 
 </details>
 
-Sources: [Lecture 03 · p. 29](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=29)
+Sources: [Lecture 03 · p. 29](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=29)
 
 Card ID: `am207-exponential-integral-example`
 
@@ -3565,7 +3566,7 @@ Where the integrand times the target density is nonzero.
 
 </details>
 
-Sources: [Lecture 03 · p. 33](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=33)
+Sources: [Lecture 03 · p. 33](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=33)
 
 Card ID: `am207-importance-support`
 
@@ -3584,7 +3585,7 @@ The variability of f(X)p(X)/q(X) under draws from q.
 
 </details>
 
-Sources: [Lecture 03 · p. 34](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=34)
+Sources: [Lecture 03 · p. 34](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=34)
 
 Card ID: `am207-importance-variance`
 
@@ -3603,7 +3604,7 @@ Under standard integrability conditions, q should be proportional to abs(f)p.
 
 </details>
 
-Sources: [Lecture 03 · p. 35](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=35)
+Sources: [Lecture 03 · p. 35](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=35)
 
 Card ID: `am207-importance-optimal-shape`
 
@@ -3622,7 +3623,7 @@ Its normalizing constant may be the very integral you want to estimate.
 
 </details>
 
-Sources: [Lecture 03 · p. 35](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=35)
+Sources: [Lecture 03 · p. 35](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=35)
 
 Card ID: `am207-importance-zero-variance-catch`
 
@@ -3641,7 +3642,7 @@ Near σ√d, because E[‖X‖²]=dσ² and the squared radius concentrates rela
 
 </details>
 
-Sources: [Lecture 03 · p. 39](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=39)
+Sources: [Lecture 03 · p. 39](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=39)
 
 Card ID: `am207-normal-typical-radius`
 
@@ -3660,7 +3661,7 @@ Var(‖X‖²)=2dσ⁴.
 
 </details>
 
-Sources: [Lecture 03 · p. 39](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=39)
+Sources: [Lecture 03 · p. 39](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=39)
 
 Card ID: `am207-normal-radius-variance`
 
@@ -3679,7 +3680,7 @@ Probability depends on both density and available volume. High-dimensional shell
 
 </details>
 
-Sources: [Lecture 03 · p. 38](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=38)
+Sources: [Lecture 03 · p. 38](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=38)
 
 Card ID: `am207-density-mode-mass`
 
@@ -3698,7 +3699,7 @@ A configuration of spins, each taking the value +1 or −1.
 
 </details>
 
-Sources: [Lecture 03 · p. 41](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=41)
+Sources: [Lecture 03 · p. 41](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=41)
 
 Card ID: `am207-ising-state`
 
@@ -3717,7 +3718,7 @@ Aligned neighbors have lower energy than opposite neighbors.
 
 </details>
 
-Sources: [Lecture 03 · p. 41](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=41)
+Sources: [Lecture 03 · p. 41](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=41)
 
 Card ID: `am207-ising-ferromagnetic`
 
@@ -3736,7 +3737,7 @@ The weight is exp(−E/(kBT)). Higher temperature reduces the penalty for higher
 
 </details>
 
-Sources: [Lecture 03 · p. 42](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=42)
+Sources: [Lecture 03 · p. 42](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=42)
 
 Card ID: `am207-boltzmann-temperature`
 
@@ -3755,7 +3756,7 @@ Card ID: `am207-boltzmann-temperature`
 
 </details>
 
-Sources: [Lecture 03 · p. 44](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=44)
+Sources: [Lecture 03 · p. 44](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=44)
 
 Card ID: `am207-ising-flip-cost`
 
@@ -3774,7 +3775,7 @@ It doubles the interaction energy. Count each bond once or divide that sum by tw
 
 </details>
 
-Sources: [Lecture 03 · p. 44](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=44)
+Sources: [Lecture 03 · p. 44](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=44)
 
 Card ID: `am207-ising-double-count`
 
@@ -3793,7 +3794,7 @@ They are needed to sample a finite-temperature distribution and can help escape 
 
 </details>
 
-Sources: [Lecture 03 · p. 43](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=43)
+Sources: [Lecture 03 · p. 43](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=43)
 
 Card ID: `am207-energy-uphill`
 
@@ -3812,7 +3813,7 @@ At x=±1/√2, where the squared quantity is zero.
 
 </details>
 
-Sources: [Lecture 03 · p. 49](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=49)
+Sources: [Lecture 03 · p. 49](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=49)
 
 Card ID: `am207-double-well-minima`
 
@@ -3831,7 +3832,7 @@ It may explore one mode well but rarely cross the low-probability barrier to ano
 
 </details>
 
-Sources: [Lecture 03 · p. 50](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=50)
+Sources: [Lecture 03 · p. 50](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=50)
 
 Card ID: `am207-mode-trapping`
 
@@ -3850,7 +3851,7 @@ Inverse time. Rate times a small time interval approximates a jump probability.
 
 </details>
 
-Sources: [Lecture 04 · p. 4](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=4)
+Sources: [Lecture 04 · p. 4](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=4)
 
 Card ID: `am207-master-rate-units`
 
@@ -3869,7 +3870,7 @@ A trajectory arriving at n after that jump must have started at n−ν.
 
 </details>
 
-Sources: [Lecture 04 · p. 18](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=18)
+Sources: [Lecture 04 · p. 18](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=18)
 
 Card ID: `am207-master-arrival-state`
 
@@ -3888,7 +3889,7 @@ Its future production rate can depend on an unobserved promoter state. Include t
 
 </details>
 
-Sources: [Lecture 04 · p. 16](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=16)
+Sources: [Lecture 04 · p. 16](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=16)
 
 Card ID: `am207-hidden-promoter-state`
 
@@ -3907,7 +3908,7 @@ An active interval allows repeated transcription before the promoter switches of
 
 </details>
 
-Sources: [Lecture 04 · p. 16](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=16)
+Sources: [Lecture 04 · p. 16](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=16)
 
 Card ID: `am207-gene-burst`
 
@@ -3926,7 +3927,7 @@ Susceptible decreases by 1 and infected increases by 1; recovered stays unchange
 
 </details>
 
-Sources: [Lecture 04 · p. 20](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=20)
+Sources: [Lecture 04 · p. 20](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=20)
 
 Card ID: `am207-sir-infection-jump`
 
@@ -3945,7 +3946,7 @@ Infected decreases by 1 and recovered increases by 1.
 
 </details>
 
-Sources: [Lecture 04 · p. 20](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=20)
+Sources: [Lecture 04 · p. 20](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=20)
 
 Card ID: `am207-sir-recovery-jump`
 
@@ -3964,7 +3965,7 @@ Early recoveries may occur before enough new infections. Discrete chance matters
 
 </details>
 
-Sources: [Lecture 04 · p. 20](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=20)
+Sources: [Lecture 04 · p. 20](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=20)
 
 Card ID: `am207-small-outbreak-extinction`
 
@@ -3983,7 +3984,7 @@ There is no customer to serve. The boundary must prevent negative queue length.
 
 </details>
 
-Sources: [Lecture 04 · p. 27](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=27)
+Sources: [Lecture 04 · p. 27](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=27)
 
 Card ID: `am207-queue-boundary`
 
@@ -4002,7 +4003,7 @@ When arrival rate λ is smaller than service rate μ. Then P(N=n)=(1−ρ)ρⁿ 
 
 </details>
 
-Sources: [Lecture 04 · p. 27](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=27)
+Sources: [Lecture 04 · p. 27](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=27)
 
 Card ID: `am207-queue-stability`
 
@@ -4021,7 +4022,7 @@ Total mass, even though the number of clusters decreases.
 
 </details>
 
-Sources: [Lecture 04 · p. 28](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=28)
+Sources: [Lecture 04 · p. 28](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=28)
 
 Card ID: `am207-coagulation-conservation`
 
@@ -4040,7 +4041,7 @@ An event temporarily increases the rate of future events.
 
 </details>
 
-Sources: [Lecture 04 · p. 34](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=34)
+Sources: [Lecture 04 · p. 34](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=34)
 
 Card ID: `am207-hawkes-memory`
 
@@ -4059,7 +4060,7 @@ The state follows deterministic dynamics; random events change its evolution.
 
 </details>
 
-Sources: [Lecture 04 · p. 38](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=38)
+Sources: [Lecture 04 · p. 38](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=38)
 
 Card ID: `am207-pdmp-meaning`
 
@@ -4078,7 +4079,7 @@ When discrete boundaries, rare large jumps, or heavy tails matter.
 
 </details>
 
-Sources: [Lecture 04 · p. 41](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=41)
+Sources: [Lecture 04 · p. 41](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=41)
 
 Card ID: `am207-diffusion-limit-caution`
 
@@ -4097,7 +4098,7 @@ All possible intermediate states, multiplying the two transition probabilities f
 
 </details>
 
-Sources: [Lecture 04 · p. 43](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=43)
+Sources: [Lecture 04 · p. 43](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=43)
 
 Card ID: `am207-ck-intermediate`
 
@@ -4116,7 +4117,7 @@ It gives the instantaneous expected rate of change of f, conditional on the curr
 
 </details>
 
-Sources: [Lecture 04 · p. 49](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=49)
+Sources: [Lecture 04 · p. 49](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=49)
 
 Card ID: `am207-generator-observable`
 
@@ -4135,7 +4136,7 @@ Under appropriate regularity, dE[f(Xₜ)]/dt=E[Lf(Xₜ)].
 
 </details>
 
-Sources: [Lecture 04 · p. 49](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=49)
+Sources: [Lecture 04 · p. 49](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=49)
 
 Card ID: `am207-expectation-generator`
 
@@ -4154,7 +4155,7 @@ The value 1 never changes along any trajectory.
 
 </details>
 
-Sources: [Lecture 04 · p. 50](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=50)
+Sources: [Lecture 04 · p. 50](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=50)
 
 Card ID: `am207-generator-constant-intuition`
 
@@ -4173,7 +4174,7 @@ L evolves observables; L† evolves probability distributions through ∂ₜp=L�
 
 </details>
 
-Sources: [Lecture 04 · p. 52](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=52)
+Sources: [Lecture 04 · p. 52](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=52)
 
 Card ID: `am207-adjoint-density`
 
@@ -4192,7 +4193,7 @@ Card ID: `am207-adjoint-density`
 
 </details>
 
-Sources: [Lecture 04 · p. 54](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=54)
+Sources: [Lecture 04 · p. 54](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=54)
 
 Card ID: `am207-small-time-stay`
 
@@ -4211,7 +4212,7 @@ It measures the change caused by each possible jump, weighted by its rate.
 
 </details>
 
-Sources: [Lecture 04 · p. 55](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=55)
+Sources: [Lecture 04 · p. 55](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=55)
 
 Card ID: `am207-jump-generator-difference`
 
@@ -4230,7 +4231,7 @@ Card ID: `am207-jump-generator-difference`
 
 </details>
 
-Sources: [Lecture 04 · p. 61](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=61)
+Sources: [Lecture 04 · p. 61](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=61)
 
 Card ID: `am207-pure-death-rate`
 
@@ -4249,7 +4250,7 @@ dm/dt=−γm, so m(t)=m(0)e^(−γt).
 
 </details>
 
-Sources: [Lecture 04 · p. 63](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=63)
+Sources: [Lecture 04 · p. 63](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=63)
 
 Card ID: `am207-pure-death-mean`
 
@@ -4268,7 +4269,7 @@ For symmetric steps ±h every τ, D=h²/(2τ).
 
 </details>
 
-Sources: [Lecture 04 · p. 69](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=69)
+Sources: [Lecture 04 · p. 69](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=69)
 
 Card ID: `am207-random-walk-diffusion`
 
@@ -4287,7 +4288,7 @@ It generates individual event trajectories and estimates statistics from repeate
 
 </details>
 
-Sources: [Lecture 05 · p. 3](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=3)
+Sources: [Lecture 05 · p. 3](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=3)
 
 Card ID: `am207-ssa-paths-not-density`
 
@@ -4306,7 +4307,7 @@ It samples the specified continuous-time jump model without a time-discretizatio
 
 </details>
 
-Sources: [Lecture 05 · p. 37](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=37)
+Sources: [Lecture 05 · p. 37](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=37)
 
 Card ID: `am207-ssa-exact-meaning`
 
@@ -4325,7 +4326,7 @@ Sum them to get a₀. With rates constant between jumps, the waiting time is exp
 
 </details>
 
-Sources: [Lecture 05 · p. 6](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=6)
+Sources: [Lecture 05 · p. 6](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=6)
 
 Card ID: `am207-ssa-total-rate`
 
@@ -4344,7 +4345,7 @@ Choose channel j with probability aⱼ/a₀.
 
 </details>
 
-Sources: [Lecture 05 · p. 10](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=10)
+Sources: [Lecture 05 · p. 10](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=10)
 
 Card ID: `am207-ssa-channel-probability`
 
@@ -4363,7 +4364,7 @@ No event can occur under the current time-homogeneous rules; the state is absorb
 
 </details>
 
-Sources: [Lecture 05 · p. 10](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=10)
+Sources: [Lecture 05 · p. 10](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=10)
 
 Card ID: `am207-ssa-zero-rate`
 
@@ -4382,7 +4383,7 @@ The event changes molecule counts, which can change the rates of other channels.
 
 </details>
 
-Sources: [Lecture 05 · p. 21](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=21)
+Sources: [Lecture 05 · p. 21](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=21)
 
 Card ID: `am207-ssa-recompute`
 
@@ -4401,7 +4402,7 @@ In the order A,B,C, it is (−2,+2,+1).
 
 </details>
 
-Sources: [Lecture 05 · p. 19](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=19)
+Sources: [Lecture 05 · p. 19](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=19)
 
 Card ID: `am207-stoichiometry-example`
 
@@ -4420,7 +4421,7 @@ There are nA choices of A and nB choices of B, giving nA·nB possible pairs.
 
 </details>
 
-Sources: [Lecture 05 · p. 20](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=20)
+Sources: [Lecture 05 · p. 20](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=20)
 
 Card ID: `am207-bimolecular-distinct`
 
@@ -4439,7 +4440,7 @@ It counts unordered pairs of distinct A molecules.
 
 </details>
 
-Sources: [Lecture 05 · p. 20](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=20)
+Sources: [Lecture 05 · p. 20](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=20)
 
 Card ID: `am207-bimolecular-identical`
 
@@ -4458,7 +4459,7 @@ Its supply is modeled as external and independent of the current count of A.
 
 </details>
 
-Sources: [Lecture 05 · p. 20](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=20)
+Sources: [Lecture 05 · p. 20](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=20)
 
 Card ID: `am207-zero-order-propensity`
 
@@ -4477,7 +4478,7 @@ For a neighbor direction, the per-particle rate scales as D/h².
 
 </details>
 
-Sources: [Lecture 05 · p. 25](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=25)
+Sources: [Lecture 05 · p. 25](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=25)
 
 Card ID: `am207-hopping-rate`
 
@@ -4496,7 +4497,7 @@ No. One cell loses exactly what the other gains.
 
 </details>
 
-Sources: [Lecture 05 · p. 25](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=25)
+Sources: [Lecture 05 · p. 25](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=25)
 
 Card ID: `am207-hopping-conservation`
 
@@ -4515,7 +4516,7 @@ V helps produce another V. The net change is one U lost and one V gained.
 
 </details>
 
-Sources: [Lecture 05 · p. 27](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=27)
+Sources: [Lecture 05 · p. 27](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=27)
 
 Card ID: `am207-autocatalysis-vector`
 
@@ -4534,7 +4535,7 @@ A cell's state suppresses the same fate in neighboring cells, encouraging contra
 
 </details>
 
-Sources: [Lecture 05 · p. 34](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=34)
+Sources: [Lecture 05 · p. 34](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=34)
 
 Card ID: `am207-lateral-inhibition`
 
@@ -4553,7 +4554,7 @@ It advances a chosen interval and samples multiple reaction counts, approximatel
 
 </details>
 
-Sources: [Lecture 05 · p. 38](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=38)
+Sources: [Lecture 05 · p. 38](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=38)
 
 Card ID: `am207-tau-many-events`
 
@@ -4572,7 +4573,7 @@ aⱼ(x)τ, using the propensity at the start of the leap.
 
 </details>
 
-Sources: [Lecture 05 · p. 39](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=39)
+Sources: [Lecture 05 · p. 39](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=39)
 
 Card ID: `am207-tau-poisson-mean`
 
@@ -4591,7 +4592,7 @@ Independent sampled reaction counts may consume more molecules than are availabl
 
 </details>
 
-Sources: [Lecture 05 · p. 41](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=41)
+Sources: [Lecture 05 · p. 41](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=41)
 
 Card ID: `am207-tau-negative-count`
 
@@ -4610,7 +4611,7 @@ It changes the simulated transition law and can bias statistics. Reduce the step
 
 </details>
 
-Sources: [Lecture 05 · p. 41](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=41)
+Sources: [Lecture 05 · p. 41](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=41)
 
 Card ID: `am207-tau-clipping-problem`
 
@@ -4629,7 +4630,7 @@ The reaction propensities, with high probability.
 
 </details>
 
-Sources: [Lecture 05 · p. 42](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=42)
+Sources: [Lecture 05 · p. 42](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=42)
 
 Card ID: `am207-tau-leap-condition`
 
@@ -4648,7 +4649,7 @@ It normalizes prior times likelihood so the posterior integrates to 1.
 
 </details>
 
-Sources: [Lecture 06 · p. 10](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=10)
+Sources: [Lecture 06 · p. 10](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=10)
 
 Card ID: `am207-bayes-evidence-role`
 
@@ -4667,7 +4668,7 @@ No. It describes the observed data as a function of the parameter; it need not i
 
 </details>
 
-Sources: [Lecture 06 · p. 10](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=10)
+Sources: [Lecture 06 · p. 10](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=10)
 
 Card ID: `am207-likelihood-not-parameter-density`
 
@@ -4686,7 +4687,7 @@ The data distribution averaged over the prior parameter distribution.
 
 </details>
 
-Sources: [Lecture 06 · p. 19](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=19)
+Sources: [Lecture 06 · p. 19](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=19)
 
 Card ID: `am207-prior-predictive`
 
@@ -4705,7 +4706,7 @@ The parameters were selected using those data. Predicting relevant new observati
 
 </details>
 
-Sources: [Lecture 06 · p. 39](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=39)
+Sources: [Lecture 06 · p. 39](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=39)
 
 Card ID: `am207-calibration-validation`
 
@@ -4724,7 +4725,7 @@ Beta(5,8), because the likelihood contributes θ⁴(1−θ)⁷.
 
 </details>
 
-Sources: [Lecture 06 · p. 49](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=49)
+Sources: [Lecture 06 · p. 49](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=49)
 
 Card ID: `am207-coin-four-eleven`
 
@@ -4743,7 +4744,7 @@ Card ID: `am207-coin-four-eleven`
 
 </details>
 
-Sources: [Lecture 06 · p. 50](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=50)
+Sources: [Lecture 06 · p. 50](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=50)
 
 Card ID: `am207-coin-posterior-mean`
 
@@ -4762,7 +4763,7 @@ No. A single point has probability zero; intervals have probability obtained by 
 
 </details>
 
-Sources: [Lecture 06 · p. 50](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=50)
+Sources: [Lecture 06 · p. 50](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=50)
 
 Card ID: `am207-continuous-point-probability`
 
@@ -4781,7 +4782,7 @@ Not under ordinary Bayes updating: zero prior times finite likelihood remains ze
 
 </details>
 
-Sources: [Lecture 06 · p. 53](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=53)
+Sources: [Lecture 06 · p. 53](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=53)
 
 Card ID: `am207-prior-zero-support`
 
@@ -4800,7 +4801,7 @@ No. It describes uncertainty conditional on the chosen model and assumptions.
 
 </details>
 
-Sources: [Lecture 06 · p. 64](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=64)
+Sources: [Lecture 06 · p. 64](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=64)
 
 Card ID: `am207-posterior-model-limits`
 
@@ -4819,7 +4820,7 @@ N logν−νT, apart from parameter-independent terms, for ν>0.
 
 </details>
 
-Sources: [Lecture 06 · p. 59](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=59)
+Sources: [Lecture 06 · p. 59](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=59)
 
 Card ID: `am207-exponential-loglikelihood`
 
@@ -4838,7 +4839,7 @@ Card ID: `am207-exponential-loglikelihood`
 
 </details>
 
-Sources: [Lecture 06 · p. 59](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=59)
+Sources: [Lecture 06 · p. 59](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=59)
 
 Card ID: `am207-exponential-mle-rate`
 
@@ -4857,7 +4858,7 @@ No. It is the reciprocal of their average.
 
 </details>
 
-Sources: [Lecture 06 · p. 59](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=59)
+Sources: [Lecture 06 · p. 59](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=59)
 
 Card ID: `am207-reciprocal-average`
 
@@ -4876,7 +4877,7 @@ Binning discards information and makes the fit depend on bin choices.
 
 </details>
 
-Sources: [Lecture 06 · p. 55](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=55)
+Sources: [Lecture 06 · p. 55](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=55)
 
 Card ID: `am207-histogram-information`
 
@@ -4895,7 +4896,7 @@ Card ID: `am207-histogram-information`
 
 </details>
 
-Sources: [Lecture 06 · p. 62](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=62)
+Sources: [Lecture 06 · p. 62](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=62)
 
 Card ID: `am207-rate-posterior-width`
 
@@ -4914,7 +4915,7 @@ Use T=−log(U)/λ for U uniform on (0,1). Its survival probability is e^(−λt
 
 </details>
 
-Sources: [Lecture 01 · p. 44](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=44)
+Sources: [Lecture 01 · p. 44](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=44)
 
 Card ID: `am207-inverse`
 
@@ -4933,7 +4934,7 @@ P(F⁻¹(U)≤x)=P(U≤F(x))=F(x).
 
 </details>
 
-Sources: [Lecture 01 · p. 44](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=44)
+Sources: [Lecture 01 · p. 44](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=44)
 
 Card ID: `am207-inverse-proof`
 
@@ -4952,7 +4953,7 @@ Use −2+7U. Scale by the interval length, then shift to its left endpoint.
 
 </details>
 
-Sources: [Lecture 02 · uniform transformation](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=28)
+Sources: [Lecture 02 · uniform transformation](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=28)
 
 Card ID: `am207-affine-uniform`
 
@@ -4971,7 +4972,7 @@ Card ID: `am207-affine-uniform`
 
 </details>
 
-Sources: [Lecture 01 · p. 44](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=44)
+Sources: [Lecture 01 · p. 44](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=44)
 
 Card ID: `am207-exponential-number`
 
@@ -4990,7 +4991,7 @@ No. P(T>s+t given T>s)=e^(−λt), the original survival law.
 
 </details>
 
-Sources: [Lecture 01 · p. 44](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=44)
+Sources: [Lecture 01 · p. 44](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=44)
 
 Card ID: `am207-memoryless-proof`
 
@@ -5009,7 +5010,7 @@ Card ID: `am207-memoryless-proof`
 
 </details>
 
-Sources: [HW1 · Q2 · Monte Carlo integration](../courses/am207/homeworks/ps1/hw01.pdf#page=2)
+Sources: [HW1 · Q2 · Monte Carlo integration](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=2)
 
 Card ID: `am207-mc-rate`
 
@@ -5028,7 +5029,7 @@ Average f at the sampled points, then multiply by 3, the interval length.
 
 </details>
 
-Sources: [Lecture 03 · pp. 25–27](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=26)
+Sources: [Lecture 03 · pp. 25–27](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=26)
 
 Card ID: `am207-integral-volume`
 
@@ -5047,7 +5048,7 @@ No. If each term has expectation I, their average does too. Dependence matters f
 
 </details>
 
-Sources: [HW1 · Q2 · Monte Carlo integration](../courses/am207/homeworks/ps1/hw01.pdf#page=2)
+Sources: [HW1 · Q2 · Monte Carlo integration](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=2)
 
 Card ID: `am207-mean-unbiased-proof`
 
@@ -5066,7 +5067,7 @@ Card ID: `am207-mean-unbiased-proof`
 
 </details>
 
-Sources: [HW1 · Q2 · Monte Carlo integration](../courses/am207/homeworks/ps1/hw01.pdf#page=2)
+Sources: [HW1 · Q2 · Monte Carlo integration](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=2)
 
 Card ID: `am207-standard-error-number`
 
@@ -5085,7 +5086,7 @@ Squared bias: MSE=variance+bias².
 
 </details>
 
-Sources: [HW1 · Q2 · Monte Carlo integration](../courses/am207/homeworks/ps1/hw01.pdf#page=2)
+Sources: [HW1 · Q2 · Monte Carlo integration](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=2)
 
 Card ID: `am207-rmse-bias`
 
@@ -5104,7 +5105,7 @@ With N points in d dimensions, its error scales as N^(−2/d), under suitable sm
 
 </details>
 
-Sources: [HW1 · Q2(d)](../courses/am207/homeworks/ps1/hw01.pdf#page=2)
+Sources: [HW1 · Q2(d)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=2)
 
 Card ID: `am207-grid`
 
@@ -5123,7 +5124,7 @@ Only 5: 5⁸=390,625, while 6⁸ exceeds one million.
 
 </details>
 
-Sources: [HW1 · Q2(d)](../courses/am207/homeworks/ps1/hw01.pdf#page=2)
+Sources: [HW1 · Q2(d)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=2)
 
 Card ID: `am207-grid-budget`
 
@@ -5142,7 +5143,7 @@ The integrand is a product of separate coordinate functions, and the domain is a
 
 </details>
 
-Sources: [HW1 · Q2(d)](../courses/am207/homeworks/ps1/hw01.pdf#page=2)
+Sources: [HW1 · Q2(d)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=2)
 
 Card ID: `am207-product-integral`
 
@@ -5161,7 +5162,7 @@ About four times smaller error, under the stated scaling.
 
 </details>
 
-Sources: [HW1 · Q2(d)](../courses/am207/homeworks/ps1/hw01.pdf#page=2)
+Sources: [HW1 · Q2(d)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=2)
 
 Card ID: `am207-slope-interpretation`
 
@@ -5180,7 +5181,7 @@ Its acceptance ratio is min(1,f(y)/f(x)). The target’s common normalizing cons
 
 </details>
 
-Sources: [Lecture 03 · pp. 4–6](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=4)
+Sources: [Lecture 03 · pp. 4–6](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=4)
 
 Card ID: `am207-mh`
 
@@ -5199,7 +5200,7 @@ min(1,2×0.2)=0.4.
 
 </details>
 
-Sources: [Lecture 03 · pp. 4–6](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=4)
+Sources: [Lecture 03 · pp. 4–6](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=4)
 
 Card ID: `am207-asymmetric-acceptance`
 
@@ -5218,7 +5219,7 @@ Compare log(U) with min(0,log f(y)−log f(x)).
 
 </details>
 
-Sources: [Lecture 03 · pp. 4–6](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=4)
+Sources: [Lecture 03 · pp. 4–6](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=4)
 
 Card ID: `am207-mh-log-space`
 
@@ -5237,7 +5238,7 @@ It equals min(π(x)q(y given x),π(y)q(x given y)). Swapping x and y leaves it u
 
 </details>
 
-Sources: [Lecture 03 · pp. 4–6](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=4)
+Sources: [Lecture 03 · pp. 4–6](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=4)
 
 Card ID: `am207-mh-detailed-balance-proof`
 
@@ -5256,7 +5257,7 @@ Yes. The repeated state records how long the chain stays there. Dropping repeats
 
 </details>
 
-Sources: [Lecture 03 · pp. 4–6](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=6)
+Sources: [Lecture 03 · pp. 4–6](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=6)
 
 Card ID: `am207-reject`
 
@@ -5275,7 +5276,7 @@ Yes. A two-state jump sequence alternates A,B regardless of unequal holding time
 
 </details>
 
-Sources: [Lecture 03 · pp. 4–6](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=6)
+Sources: [Lecture 03 · pp. 4–6](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=6)
 
 Card ID: `am207-jump-chain-example`
 
@@ -5294,7 +5295,7 @@ Use x+γtan(π(U−1/2)), with U in (0,1). With fixed γ, the proposal is symmet
 
 </details>
 
-Sources: [HW2 · Q1(a)](../courses/am207/homeworks/ps2/hw02.pdf#page=1)
+Sources: [HW2 · Q1(a)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=1)
 
 Card ID: `am207-cauchy`
 
@@ -5313,7 +5314,7 @@ m−γ, m, and m+γ.
 
 </details>
 
-Sources: [HW2 · Q1(a)](../courses/am207/homeworks/ps2/hw02.pdf#page=1)
+Sources: [HW2 · Q1(a)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=1)
 
 Card ID: `am207-cauchy-quantile`
 
@@ -5332,7 +5333,7 @@ Those quantiles are infinite because tan(±π/2) is unbounded.
 
 </details>
 
-Sources: [HW2 · Q1(a)](../courses/am207/homeworks/ps2/hw02.pdf#page=1)
+Sources: [HW2 · Q1(a)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=1)
 
 Card ID: `am207-endpoint-tangent`
 
@@ -5351,7 +5352,7 @@ No. A chain can accept tiny, redundant moves while exploring a narrow ridge very
 
 </details>
 
-Sources: [HW2 · Q1(b)](../courses/am207/homeworks/ps2/hw02.pdf#page=1)
+Sources: [HW2 · Q1(b)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=1)
 
 Card ID: `am207-mixing`
 
@@ -5370,7 +5371,7 @@ The (1,1) direction has variance 1+ρ; (1,−1) has variance 1−ρ.
 
 </details>
 
-Sources: [HW2 · Q1(b)](../courses/am207/homeworks/ps2/hw02.pdf#page=1)
+Sources: [HW2 · Q1(b)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=1)
 
 Card ID: `am207-correlated-normal-axes`
 
@@ -5389,7 +5390,7 @@ Tiny steps accept but crawl. Huge steps usually reject and leave the chain stuck
 
 </details>
 
-Sources: [HW2 · Q1(b)](../courses/am207/homeworks/ps2/hw02.pdf#page=1)
+Sources: [HW2 · Q1(b)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=1)
 
 Card ID: `am207-proposal-scale-extremes`
 
@@ -5408,7 +5409,7 @@ A fixed proposal gives a fixed transition kernel. Continued adaptation requires 
 
 </details>
 
-Sources: [Lecture 03 · adaptive proposal discussion, companion caution](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=23)
+Sources: [Lecture 03 · adaptive proposal discussion, companion caution](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=23)
 
 Card ID: `am207-warmup-adaptation`
 
@@ -5427,7 +5428,7 @@ Yes. A uniform three-state cycle is stationary but has one-way probability flow.
 
 </details>
 
-Sources: [HW2 · Q2(b) · companion example](../courses/am207/homeworks/ps2/hw02.pdf#page=2)
+Sources: [HW2 · Q2(b) · companion example](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=2)
 
 Card ID: `am207-balance`
 
@@ -5446,7 +5447,7 @@ Card ID: `am207-balance`
 
 </details>
 
-Sources: [HW2 · Q2(b) · companion example](../courses/am207/homeworks/ps2/hw02.pdf#page=2)
+Sources: [HW2 · Q2(b) · companion example](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=2)
 
 Card ID: `am207-stationary-two-state`
 
@@ -5465,7 +5466,7 @@ Summing matched pairwise flows makes total incoming probability equal each state
 
 </details>
 
-Sources: [HW2 · Q2(b) · companion example](../courses/am207/homeworks/ps2/hw02.pdf#page=2)
+Sources: [HW2 · Q2(b) · companion example](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=2)
 
 Card ID: `am207-detailed-implies-stationary`
 
@@ -5484,7 +5485,7 @@ No. A deterministic two-state alternation has a stationary uniform distribution 
 
 </details>
 
-Sources: [HW2 · Q2(b) · companion example](../courses/am207/homeworks/ps2/hw02.pdf#page=2)
+Sources: [HW2 · Q2(b) · companion example](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=2)
 
 Card ID: `am207-stationarity-not-convergence`
 
@@ -5503,7 +5504,7 @@ If Alice and Bob have different chances of sending to Carol, the hidden identity
 
 </details>
 
-Sources: [HW2 · Q2(c)](../courses/am207/homeworks/ps2/hw02.pdf#page=2)
+Sources: [HW2 · Q2(c)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=2)
 
 Card ID: `am207-lumping`
 
@@ -5522,7 +5523,7 @@ Yes, if their total transition probability into each coarse block is the same.
 
 </details>
 
-Sources: [HW2 · Q2(c)](../courses/am207/homeworks/ps2/hw02.pdf#page=2)
+Sources: [HW2 · Q2(c)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=2)
 
 Card ID: `am207-lumpable-example`
 
@@ -5541,7 +5542,7 @@ Subtract its mean and multiply by Σ⁻¹ᐟ². The cloud becomes centered with 
 
 </details>
 
-Sources: [HW2 · Q11](../courses/stat244/homeworks/ps2/hw2.pdf#page=4); [HW2 · Q1](../courses/am207/homeworks/ps2/hw02.pdf#page=1)
+Sources: [HW2 · Q11](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4); [HW2 · Q1](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=1)
 
 Card ID: `bridge-whiten`
 
@@ -5560,7 +5561,7 @@ Card ID: `bridge-whiten`
 
 </details>
 
-Sources: [Lecture 05 · p. 21](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=21)
+Sources: [Lecture 05 · p. 21](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=21)
 
 Card ID: `am207-ssa`
 
@@ -5579,7 +5580,7 @@ Reaction 2. The cumulative probability cutoffs are 0.1,0.4,1.
 
 </details>
 
-Sources: [Lecture 05 · p. 21](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=21)
+Sources: [Lecture 05 · p. 21](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=21)
 
 Card ID: `am207-ssa-event-number`
 
@@ -5598,7 +5599,7 @@ The state before that event. Nothing changes before the horizon.
 
 </details>
 
-Sources: [Lecture 05 · p. 21](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=21)
+Sources: [Lecture 05 · p. 21](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=21)
 
 Card ID: `am207-ssa-horizon`
 
@@ -5617,7 +5618,7 @@ No further event can occur under the current time-homogeneous model. Stop or car
 
 </details>
 
-Sources: [Lecture 05 · p. 21](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=21)
+Sources: [Lecture 05 · p. 21](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=21)
 
 Card ID: `am207-zero-propensity`
 
@@ -5636,7 +5637,7 @@ c n(n−1)/2.
 
 </details>
 
-Sources: [Lecture 05 · propensity examples](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=20)
+Sources: [Lecture 05 · propensity examples](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=20)
 
 Card ID: `am207-combinatorial-propensity`
 
@@ -5655,7 +5656,7 @@ E[RF]=E[R]E[F]+Cov(R,F). Correlation contributes an extra term.
 
 </details>
 
-Sources: [HW2 · Q3(c) and Q4(a–b)](../courses/am207/homeworks/ps2/hw02.pdf#page=4)
+Sources: [HW2 · Q3(c) and Q4(a–b)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=4)
 
 Card ID: `am207-closure`
 
@@ -5674,7 +5675,7 @@ Card ID: `am207-closure`
 
 </details>
 
-Sources: [HW2 · Q3(c) and Q4(a–b)](../courses/am207/homeworks/ps2/hw02.pdf#page=4)
+Sources: [HW2 · Q3(c) and Q4(a–b)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=4)
 
 Card ID: `am207-covariance-gap`
 
@@ -5693,7 +5694,7 @@ A Beta(5,8) posterior: add the counts to the Beta(1,1) prior parameters.
 
 </details>
 
-Sources: [Lecture 06 · pp. 45–51 · companion calculation](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=51)
+Sources: [Lecture 06 · pp. 45–51 · companion calculation](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=51)
 
 Card ID: `am207-bayes`
 
@@ -5712,7 +5713,7 @@ To Beta(a+h,b+t), for conditionally independent flips sharing one head probabili
 
 </details>
 
-Sources: [Lecture 06 · pp. 45–51 · companion calculation](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=51)
+Sources: [Lecture 06 · pp. 45–51 · companion calculation](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=51)
 
 Card ID: `am207-beta-update-general`
 
@@ -5731,7 +5732,7 @@ Card ID: `am207-beta-update-general`
 
 </details>
 
-Sources: [Lecture 06 · pp. 45–51 · companion calculation](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=51)
+Sources: [Lecture 06 · pp. 45–51 · companion calculation](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=51)
 
 Card ID: `am207-posterior-predictive`
 
@@ -5750,7 +5751,7 @@ A posterior multiplies likelihood by a prior, then normalizes over the parameter
 
 </details>
 
-Sources: [Lecture 06 · pp. 45–51 · companion calculation](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=51)
+Sources: [Lecture 06 · pp. 45–51 · companion calculation](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=51)
 
 Card ID: `am207-likelihood-not-posterior`
 
@@ -5769,7 +5770,7 @@ Not under the same shared-θ Bernoulli model and prior. The count likelihood add
 
 </details>
 
-Sources: [Lecture 06 · pp. 45–51 · companion calculation](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=51)
+Sources: [Lecture 06 · pp. 45–51 · companion calculation](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=51)
 
 Card ID: `am207-sequence-versus-count`
 
@@ -5788,7 +5789,7 @@ Yes. Uniform(0,0.2) has density 5. Its total area is still 1.
 
 </details>
 
-Sources: [Lecture 01 · pp. 35–37](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
+Sources: [Lecture 01 · pp. 35–37](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
 
 Card ID: `am207-density`
 
@@ -5807,7 +5808,7 @@ Card ID: `am207-density`
 
 </details>
 
-Sources: [Lecture 01 · pp. 35–37](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
+Sources: [Lecture 01 · pp. 35–37](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
 
 Card ID: `am207-cdf-density`
 
@@ -5826,7 +5827,7 @@ Card ID: `am207-cdf-density`
 
 </details>
 
-Sources: [Lecture 01 · pp. 35–37](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
+Sources: [Lecture 01 · pp. 35–37](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
 
 Card ID: `am207-normalize-density`
 
@@ -5845,7 +5846,7 @@ No. Use E[g(X)]=∫g(x)p(x)dx when it exists.
 
 </details>
 
-Sources: [Lecture 01 · pp. 35–37](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
+Sources: [Lecture 01 · pp. 35–37](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=36)
 
 Card ID: `am207-expectation-function`
 
@@ -5864,7 +5865,7 @@ Card ID: `am207-expectation-function`
 
 </details>
 
-Sources: [Lecture 01 · conditional probability example](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=18)
+Sources: [Lecture 01 · conditional probability example](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=18)
 
 Card ID: `am207-conditional-probability`
 
@@ -5883,7 +5884,7 @@ No. Learning one occurred rules out the other.
 
 </details>
 
-Sources: [Lecture 01 · probability rules, companion example](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=12)
+Sources: [Lecture 01 · probability rules, companion example](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=12)
 
 Card ID: `am207-independence-vs-disjoint`
 
@@ -5902,7 +5903,7 @@ The transformation doubles interval lengths. Density must halve to preserve prob
 
 </details>
 
-Sources: [Lecture 02 · pp. 15–17](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=16)
+Sources: [Lecture 02 · pp. 15–17](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=16)
 
 Card ID: `am207-jacobian`
 
@@ -5921,7 +5922,7 @@ No. fY(y)=fX(−y/3)/3. Use the absolute inverse derivative.
 
 </details>
 
-Sources: [Lecture 02 · pp. 15–17](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=16)
+Sources: [Lecture 02 · pp. 15–17](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=16)
 
 Card ID: `am207-negative-scale`
 
@@ -5940,7 +5941,7 @@ fY(y)=fX(A⁻¹y)/abs(det(A)).
 
 </details>
 
-Sources: [Lecture 02 · pp. 15–17](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=16)
+Sources: [Lecture 02 · pp. 15–17](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=16)
 
 Card ID: `am207-two-dimensional-jacobian`
 
@@ -5959,7 +5960,7 @@ Both +√y and −√y map to y. Their probability contributions must be added.
 
 </details>
 
-Sources: [Lecture 02 · pp. 19–20](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=19)
+Sources: [Lecture 02 · pp. 19–20](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=19)
 
 Card ID: `am207-multiple-roots`
 
@@ -5978,7 +5979,7 @@ Card ID: `am207-multiple-roots`
 
 </details>
 
-Sources: [Lecture 02 · pp. 19–20](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=19)
+Sources: [Lecture 02 · pp. 19–20](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=19)
 
 Card ID: `am207-square-uniform-density`
 
@@ -5997,7 +5998,7 @@ Proposal density q times acceptance p/(Mq) equals p/M. Renormalizing leaves p.
 
 </details>
 
-Sources: [Lecture 02 · pp. 32–34](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=32)
+Sources: [Lecture 02 · pp. 32–34](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=32)
 
 Card ID: `am207-rejection`
 
@@ -6016,7 +6017,7 @@ Card ID: `am207-rejection`
 
 </details>
 
-Sources: [Lecture 02 · pp. 32–34](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=32)
+Sources: [Lecture 02 · pp. 32–34](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=32)
 
 Card ID: `am207-envelope-efficiency`
 
@@ -6035,7 +6036,7 @@ With probability f(x)/(cq(x)). Accepted draws follow f normalized, even if its i
 
 </details>
 
-Sources: [Lecture 02 · pp. 32–34](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=32)
+Sources: [Lecture 02 · pp. 32–34](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=32)
 
 Card ID: `am207-unknown-normalizer`
 
@@ -6054,7 +6055,7 @@ Average f(X)p(X)/q(X), provided q covers every contributing region.
 
 </details>
 
-Sources: [Lecture 03 · pp. 33–36](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=34)
+Sources: [Lecture 03 · pp. 33–36](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=34)
 
 Card ID: `am207-importance`
 
@@ -6073,7 +6074,7 @@ Card ID: `am207-importance`
 
 </details>
 
-Sources: [Lecture 03 · pp. 33–36](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=34)
+Sources: [Lecture 03 · pp. 33–36](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=34)
 
 Card ID: `am207-importance-discrete`
 
@@ -6092,7 +6093,7 @@ No. If q is zero where the target integrand contributes, that contribution is mi
 
 </details>
 
-Sources: [Lecture 03 · pp. 33–36](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=34)
+Sources: [Lecture 03 · pp. 33–36](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=34)
 
 Card ID: `am207-missing-support`
 
@@ -6111,7 +6112,7 @@ It cancels an unknown common scale. The resulting ratio is generally biased at f
 
 </details>
 
-Sources: [Lecture 03 · p. 35](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=35)
+Sources: [Lecture 03 · p. 35](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=35)
 
 Card ID: `am207-self-normalized`
 
@@ -6130,7 +6131,7 @@ Card ID: `am207-self-normalized`
 
 </details>
 
-Sources: [Lecture 03 · p. 35](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=35)
+Sources: [Lecture 03 · p. 35](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=35)
 
 Card ID: `am207-normalize-weights-number`
 
@@ -6149,7 +6150,7 @@ Nearly the entire estimate comes from one sample. Nominal sample count greatly o
 
 </details>
 
-Sources: [Lecture 03 · p. 35](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=35)
+Sources: [Lecture 03 · p. 35](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=35)
 
 Card ID: `am207-weight-degeneracy`
 
@@ -6168,7 +6169,7 @@ Positive dependence adds covariance terms to the average’s variance.
 
 </details>
 
-Sources: [Lecture 03 · p. 6 and pp. 30–32 · comparison](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=6)
+Sources: [Lecture 03 · p. 6 and pp. 30–32 · comparison](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=6)
 
 Card ID: `am207-autocorrelation`
 
@@ -6187,7 +6188,7 @@ About 1000 for that estimated quantity, under the stationary mixing approximatio
 
 </details>
 
-Sources: [Lecture 03 · p. 6 and pp. 30–32 · comparison](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=6)
+Sources: [Lecture 03 · p. 6 and pp. 30–32 · comparison](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=6)
 
 Card ID: `am207-ar1-effective-size`
 
@@ -6206,7 +6207,7 @@ Poisson(νt), with mean νt.
 
 </details>
 
-Sources: [HW1 · Q1(a–b)](../courses/am207/homeworks/ps1/hw01.pdf#page=1)
+Sources: [HW1 · Q1(a–b)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=1)
 
 Card ID: `am207-poisson`
 
@@ -6225,7 +6226,7 @@ Card ID: `am207-poisson`
 
 </details>
 
-Sources: [HW1 · Q1(a–b)](../courses/am207/homeworks/ps1/hw01.pdf#page=1)
+Sources: [HW1 · Q1(a–b)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=1)
 
 Card ID: `am207-poisson-number`
 
@@ -6244,7 +6245,7 @@ No. N(2) includes N(1). Only counts over disjoint intervals are independent.
 
 </details>
 
-Sources: [HW1 · Q1(a–b)](../courses/am207/homeworks/ps1/hw01.pdf#page=1)
+Sources: [HW1 · Q1(a–b)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=1)
 
 Card ID: `am207-independent-increments`
 
@@ -6263,7 +6264,7 @@ Card ID: `am207-independent-increments`
 
 </details>
 
-Sources: [HW1 · Q1(c)](../courses/am207/homeworks/ps1/hw01.pdf#page=1)
+Sources: [HW1 · Q1(c)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=1)
 
 Card ID: `am207-geometric`
 
@@ -6282,7 +6283,7 @@ Card ID: `am207-geometric`
 
 </details>
 
-Sources: [HW1 · Q1(c)](../courses/am207/homeworks/ps1/hw01.pdf#page=1)
+Sources: [HW1 · Q1(c)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=1)
 
 Card ID: `am207-geometric-number`
 
@@ -6301,7 +6302,7 @@ After choosing one offspring, exactly one of the other 2N−1 is its sibling.
 
 </details>
 
-Sources: [HW1 · Q1(c)](../courses/am207/homeworks/ps1/hw01.pdf#page=1)
+Sources: [HW1 · Q1(c)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=1)
 
 Card ID: `am207-coalescent`
 
@@ -6320,7 +6321,7 @@ Card ID: `am207-coalescent`
 
 </details>
 
-Sources: [HW1 · Q1(c)](../courses/am207/homeworks/ps1/hw01.pdf#page=1)
+Sources: [HW1 · Q1(c)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=1)
 
 Card ID: `am207-finite-population-check`
 
@@ -6339,7 +6340,7 @@ It keeps the typical wait near one as N grows. The scaled survival probability a
 
 </details>
 
-Sources: [HW1 · Q1(c)](../courses/am207/homeworks/ps1/hw01.pdf#page=1)
+Sources: [HW1 · Q1(c)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=1)
 
 Card ID: `am207-scaling-limit`
 
@@ -6358,7 +6359,7 @@ Poisson(2νt). Independent Poisson counts add their means.
 
 </details>
 
-Sources: [HW1 · Q1(d–e)](../courses/am207/homeworks/ps1/hw01.pdf#page=1)
+Sources: [HW1 · Q1(d–e)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=1)
 
 Card ID: `am207-two-lineages`
 
@@ -6377,7 +6378,7 @@ Exposure-time uncertainty adds extra variance. If K given T is Poisson(2νT), Va
 
 </details>
 
-Sources: [HW1 · Q1(d–e)](../courses/am207/homeworks/ps1/hw01.pdf#page=1)
+Sources: [HW1 · Q1(d–e)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=1)
 
 Card ID: `am207-mixture-variance`
 
@@ -6396,7 +6397,7 @@ Find U’s fraction through the segment’s CDF range, then move that same fract
 
 </details>
 
-Sources: [HW1 · Q3](../courses/am207/homeworks/ps1/hw01.pdf#page=3)
+Sources: [HW1 · Q3](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=3)
 
 Card ID: `am207-piecewise-cdf`
 
@@ -6415,7 +6416,7 @@ To x=3. The probability level is one-third through the segment, so move one-thir
 
 </details>
 
-Sources: [HW1 · Q3](../courses/am207/homeworks/ps1/hw01.pdf#page=3)
+Sources: [HW1 · Q3](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=3)
 
 Card ID: `am207-inverse-interpolation-number`
 
@@ -6434,7 +6435,7 @@ No. The cumulative probability does not increase there.
 
 </details>
 
-Sources: [HW1 · Q3](../courses/am207/homeworks/ps1/hw01.pdf#page=3)
+Sources: [HW1 · Q3](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=3)
 
 Card ID: `am207-cdf-flat-segment`
 
@@ -6453,7 +6454,7 @@ Set R=√(−2log U₁), θ=2πU₂, then return Rcosθ and Rsinθ, using indepe
 
 </details>
 
-Sources: [HW1 · Q4(a–b)](../courses/am207/homeworks/ps1/hw01.pdf#page=4)
+Sources: [HW1 · Q4(a–b)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=4)
 
 Card ID: `am207-box-muller`
 
@@ -6472,7 +6473,7 @@ Card ID: `am207-box-muller`
 
 </details>
 
-Sources: [HW1 · Q4(a–b)](../courses/am207/homeworks/ps1/hw01.pdf#page=4)
+Sources: [HW1 · Q4(a–b)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=4)
 
 Card ID: `am207-radial-cdf`
 
@@ -6491,7 +6492,7 @@ Exponential with rate 1, since R²/2=−log U.
 
 </details>
 
-Sources: [HW1 · Q4(a–b)](../courses/am207/homeworks/ps1/hw01.pdf#page=4)
+Sources: [HW1 · Q4(a–b)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=4)
 
 Card ID: `am207-radial-square-exponential`
 
@@ -6510,7 +6511,7 @@ Card ID: `am207-radial-square-exponential`
 
 </details>
 
-Sources: [HW1 · Q4(d)](../courses/am207/homeworks/ps1/hw01.pdf#page=4)
+Sources: [HW1 · Q4(d)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=4)
 
 Card ID: `am207-marsaglia`
 
@@ -6529,7 +6530,7 @@ With S=V₁²+V₂² in (0,1), multiply (V₁,V₂) by √(−2log S/S).
 
 </details>
 
-Sources: [HW1 · Q4(d)](../courses/am207/homeworks/ps1/hw01.pdf#page=4)
+Sources: [HW1 · Q4(d)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=4)
 
 Card ID: `am207-polar-transform`
 
@@ -6548,7 +6549,7 @@ Card ID: `am207-polar-transform`
 
 </details>
 
-Sources: [HW1 · Q4(d)](../courses/am207/homeworks/ps1/hw01.pdf#page=4)
+Sources: [HW1 · Q4(d)](../courses/harvard/am207/homeworks/ps1/hw01.pdf#page=4)
 
 Card ID: `am207-rejection-efficiency`
 
@@ -6567,7 +6568,7 @@ Sum products over every intermediate state: (P²)ᵢₖ=ΣⱼPᵢⱼPⱼₖ.
 
 </details>
 
-Sources: [Lecture 04 · pp. 43–45](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=43)
+Sources: [Lecture 04 · pp. 43–45](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=43)
 
 Card ID: `am207-ck`
 
@@ -6586,7 +6587,7 @@ p_next=pP. For a column distribution, use Pᵀp.
 
 </details>
 
-Sources: [Lecture 04 · pp. 43–45](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=43)
+Sources: [Lecture 04 · pp. 43–45](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=43)
 
 Card ID: `am207-transition-matrix-orientation`
 
@@ -6605,7 +6606,7 @@ Card ID: `am207-transition-matrix-orientation`
 
 </details>
 
-Sources: [Lecture 04 · pp. 43–45](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=43)
+Sources: [Lecture 04 · pp. 43–45](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=43)
 
 Card ID: `am207-two-step-number`
 
@@ -6624,7 +6625,7 @@ Probability inflow minus probability outflow for each state.
 
 </details>
 
-Sources: [Lecture 05 · p. 6](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=6)
+Sources: [Lecture 05 · p. 6](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=6)
 
 Card ID: `am207-master`
 
@@ -6643,7 +6644,7 @@ Every transition removes probability from one state and adds the same amount to 
 
 </details>
 
-Sources: [Lecture 05 · p. 6](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=6)
+Sources: [Lecture 05 · p. 6](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=6)
 
 Card ID: `am207-probability-conservation`
 
@@ -6662,7 +6663,7 @@ From state one at rate γp₁. There is no outflow from zero.
 
 </details>
 
-Sources: [Lecture 04 · radioactive decay, pp. 61–63](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=62)
+Sources: [Lecture 04 · radioactive decay, pp. 61–63](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=62)
 
 Card ID: `am207-death-boundary`
 
@@ -6681,7 +6682,7 @@ The rate-weighted change of a function: Lf(x)=Σⱼaⱼ(x)[f(x+νⱼ)−f(x)].
 
 </details>
 
-Sources: [Lecture 04 · pp. 49–55](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=49)
+Sources: [Lecture 04 · pp. 49–55](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=49)
 
 Card ID: `am207-generator`
 
@@ -6700,7 +6701,7 @@ Every jump changes 1 by zero. This is a quick check of probability conservation.
 
 </details>
 
-Sources: [Lecture 04 · pp. 49–55](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=49)
+Sources: [Lecture 04 · pp. 49–55](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=49)
 
 Card ID: `am207-generator-constant`
 
@@ -6719,7 +6720,7 @@ m′=−γm, so m(t)=m(0)e^(−γt). This mean equation is exact because the dri
 
 </details>
 
-Sources: [Lecture 04 · radioactive decay mean](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=63)
+Sources: [Lecture 04 · radioactive decay mean](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=63)
 
 Card ID: `am207-death-mean`
 
@@ -6738,7 +6739,7 @@ It must choose green from the left and blue from the right. Thus w₊(n)=λ(N−
 
 </details>
 
-Sources: [HW2 · Q3(a)](../courses/am207/homeworks/ps2/hw02.pdf#page=3)
+Sources: [HW2 · Q3(a)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=3)
 
 Card ID: `am207-urn-rates`
 
@@ -6757,7 +6758,7 @@ The left urn has no blue ball to lose.
 
 </details>
 
-Sources: [HW2 · Q3(a)](../courses/am207/homeworks/ps2/hw02.pdf#page=3)
+Sources: [HW2 · Q3(a)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=3)
 
 Card ID: `am207-urn-boundaries`
 
@@ -6776,7 +6777,7 @@ Its net drift is linear: m′=(λ/N)(B−2m). No unknown higher moment appears.
 
 </details>
 
-Sources: [HW2 · Q3(c)](../courses/am207/homeworks/ps2/hw02.pdf#page=3)
+Sources: [HW2 · Q3(c)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=3)
 
 Card ID: `am207-urn-mean`
 
@@ -6795,7 +6796,7 @@ Card ID: `am207-urn-mean`
 
 </details>
 
-Sources: [HW2 · Q3(c)](../courses/am207/homeworks/ps2/hw02.pdf#page=3)
+Sources: [HW2 · Q3(c)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=3)
 
 Card ID: `am207-urn-timescale-number`
 
@@ -6814,7 +6815,7 @@ The left urn samples N balls without replacement from 2N balls with a fixed tota
 
 </details>
 
-Sources: [HW2 · Q3(d)](../courses/am207/homeworks/ps2/hw02.pdf#page=3)
+Sources: [HW2 · Q3(d)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=3)
 
 Card ID: `am207-urn-stationary`
 
@@ -6833,7 +6834,7 @@ For 0,1,2 blue: 1/6, 4/6, 1/6.
 
 </details>
 
-Sources: [HW2 · Q3(d)](../courses/am207/homeworks/ps2/hw02.pdf#page=3)
+Sources: [HW2 · Q3(d)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=3)
 
 Card ID: `am207-hypergeometric-small`
 
@@ -6852,7 +6853,7 @@ Card ID: `am207-hypergeometric-small`
 
 </details>
 
-Sources: [HW2 · Q3(d)](../courses/am207/homeworks/ps2/hw02.pdf#page=3)
+Sources: [HW2 · Q3(d)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=3)
 
 Card ID: `am207-birth-death-recursion`
 
@@ -6871,7 +6872,7 @@ Fast-exit states generate many visits but little residence time. Weight by holdi
 
 </details>
 
-Sources: [HW2 · Q3(e) · simulation diagnostic](../courses/am207/homeworks/ps2/hw02.pdf#page=3)
+Sources: [HW2 · Q3(e) · simulation diagnostic](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=3)
 
 Card ID: `am207-time-histogram`
 
@@ -6890,7 +6891,7 @@ Card ID: `am207-time-histogram`
 
 </details>
 
-Sources: [HW2 · Q3(e) · simulation diagnostic](../courses/am207/homeworks/ps2/hw02.pdf#page=3)
+Sources: [HW2 · Q3(e) · simulation diagnostic](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=3)
 
 Card ID: `am207-holding-time-number`
 
@@ -6909,7 +6910,7 @@ Card ID: `am207-holding-time-number`
 
 </details>
 
-Sources: [HW2 · Q4](../courses/am207/homeworks/ps2/hw02.pdf#page=4)
+Sources: [HW2 · Q4](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=4)
 
 Card ID: `am207-stoichiometry`
 
@@ -6928,7 +6929,7 @@ Add each rabbit jump times its propensity, then take expectations: (β/N)E[GR]�
 
 </details>
 
-Sources: [HW2 · Q4](../courses/am207/homeworks/ps2/hw02.pdf#page=4)
+Sources: [HW2 · Q4](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=4)
 
 Card ID: `am207-reaction-drift`
 
@@ -6947,7 +6948,7 @@ r′=βgr−μr−γrf. It replaces random product moments with products of dens
 
 </details>
 
-Sources: [HW2 · Q4(b)](../courses/am207/homeworks/ps2/hw02.pdf#page=4)
+Sources: [HW2 · Q4(b)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=4)
 
 Card ID: `am207-meanfield`
 
@@ -6966,7 +6967,7 @@ r*=δ/γ, because fox growth f(γr−δ) must vanish with f>0.
 
 </details>
 
-Sources: [HW2 · Q4(b)](../courses/am207/homeworks/ps2/hw02.pdf#page=4)
+Sources: [HW2 · Q4(b)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=4)
 
 Card ID: `am207-coexistence-condition`
 
@@ -6985,7 +6986,7 @@ The last individual can disappear in a discrete event. An absorbing zero state c
 
 </details>
 
-Sources: [HW2 · Q4(c)](../courses/am207/homeworks/ps2/hw02.pdf#page=4)
+Sources: [HW2 · Q4(c)](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=4)
 
 Card ID: `am207-extinction`
 
@@ -7004,7 +7005,7 @@ Not in the direct global SSA. Choose one event from all cells’ channels using 
 
 </details>
 
-Sources: [HW2 · Q5](../courses/am207/homeworks/ps2/hw02.pdf#page=5)
+Sources: [HW2 · Q5](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=5)
 
 Card ID: `am207-notch`
 
@@ -7023,7 +7024,7 @@ Zero-valued fictitious boundary cells and periodic wrapping produce different ne
 
 </details>
 
-Sources: [HW2 · Q5](../courses/am207/homeworks/ps2/hw02.pdf#page=5)
+Sources: [HW2 · Q5](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=5)
 
 Card ID: `am207-neighbor-average`
 
@@ -7042,7 +7043,7 @@ It removes the forbidden event from both event selection and total rate. Clippin
 
 </details>
 
-Sources: [HW2 · Q5](../courses/am207/homeworks/ps2/hw02.pdf#page=5)
+Sources: [HW2 · Q5](../courses/harvard/am207/homeworks/ps2/hw02.pdf#page=5)
 
 Card ID: `am207-bounded-propensities`
 
@@ -7061,7 +7062,7 @@ It holds propensities roughly constant during a time step and samples how many r
 
 </details>
 
-Sources: [Lecture 05 · pp. 38–43](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=39)
+Sources: [Lecture 05 · pp. 38–43](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=39)
 
 Card ID: `am207-tau`
 
@@ -7080,7 +7081,7 @@ Poisson(1.2), with mean and variance 1.2.
 
 </details>
 
-Sources: [Lecture 05 · pp. 38–43](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=39)
+Sources: [Lecture 05 · pp. 38–43](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=39)
 
 Card ID: `am207-tau-count-number`
 
@@ -7099,7 +7100,7 @@ N/Σtᵢ, the reciprocal of the sample mean.
 
 </details>
 
-Sources: [Lecture 06 · p. 60](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=60)
+Sources: [Lecture 06 · p. 60](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=60)
 
 Card ID: `am207-likelihood`
 
@@ -7118,7 +7119,7 @@ Card ID: `am207-likelihood`
 
 </details>
 
-Sources: [Lecture 06 · p. 60](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=60)
+Sources: [Lecture 06 · p. 60](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=60)
 
 Card ID: `am207-exp-mle-number`
 
@@ -7137,7 +7138,7 @@ The histogram changes with bin edges and widths. Raw-data likelihood avoids that
 
 </details>
 
-Sources: [Lecture 06 · p. 60](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=60)
+Sources: [Lecture 06 · p. 60](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=60)
 
 Card ID: `am207-histogram-fit`
 
@@ -7156,7 +7157,7 @@ No. The transformed density includes a Jacobian and becomes θ(1−θ) in log-od
 
 </details>
 
-Sources: [Lecture 06 · pp. 50–53 · transformation companion](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=50)
+Sources: [Lecture 06 · pp. 50–53 · transformation companion](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=50)
 
 Card ID: `am207-prior`
 
@@ -7175,7 +7176,7 @@ Gamma(a+N,b+T).
 
 </details>
 
-Sources: [Lecture 06 · Bayesian exponential example, pp. 61–64](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=61)
+Sources: [Lecture 06 · Bayesian exponential example, pp. 61–64](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=61)
 
 Card ID: `am207-gamma-exponential`
 
@@ -7194,7 +7195,7 @@ Gamma(N+1,T) in shape–rate form. The flat prior is improper, but this posterio
 
 </details>
 
-Sources: [Lecture 06 · flat-prior exponential example](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=62)
+Sources: [Lecture 06 · flat-prior exponential example](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=62)
 
 Card ID: `am207-flat-rate-posterior`
 
@@ -7213,7 +7214,7 @@ It contains 95% of posterior probability under the chosen prior and likelihood.
 
 </details>
 
-Sources: [Lecture 06 · pp. 50–53 · transformation companion](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=50)
+Sources: [Lecture 06 · pp. 50–53 · transformation companion](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=50)
 
 Card ID: `am207-credible-interval-meaning`
 
@@ -7232,7 +7233,7 @@ D=Δx²/(2τ).
 
 </details>
 
-Sources: [Lecture 04 · pp. 69–71](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=71)
+Sources: [Lecture 04 · pp. 69–71](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=71)
 
 Card ID: `am207-diffusion`
 
@@ -7251,7 +7252,7 @@ Divide τ by four.
 
 </details>
 
-Sources: [Lecture 04 · pp. 69–71](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=71)
+Sources: [Lecture 04 · pp. 69–71](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=71)
 
 Card ID: `am207-diffusion-scaling`
 
@@ -7270,7 +7271,7 @@ As √t: in one dimension, RMS displacement is √(2Dt).
 
 </details>
 
-Sources: [Lecture 04 · pp. 69–71](../courses/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=71)
+Sources: [Lecture 04 · pp. 69–71](../courses/harvard/am207/lecnotes/Lecture_04_Master_Equation_0921.pdf#page=71)
 
 Card ID: `am207-diffusion-msd`
 
@@ -7289,7 +7290,7 @@ Frequentist inference treats it as fixed; Bayesian inference represents uncertai
 
 </details>
 
-Sources: [Lecture 01 · pp. 19–23 and p. 45](../courses/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=23)
+Sources: [Lecture 01 · pp. 19–23 and p. 45](../courses/harvard/am207/lecnotes/Lecture_01_Probabilities_Definition_Transform.pdf#page=23)
 
 Card ID: `am207-probability-views`
 
@@ -7308,7 +7309,7 @@ The sum of coordinate products, Σuᵢvᵢ. Geometrically it equals ‖u‖‖v�
 
 </details>
 
-Sources: [Linear algebra notes · p. 1](../courses/stat244/lecnotes/notes-linalg.pdf#page=1)
+Sources: [Linear algebra notes · p. 1](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=1)
 
 Card ID: `stat244-inner-product`
 
@@ -7327,7 +7328,7 @@ Card ID: `stat244-inner-product`
 
 </details>
 
-Sources: [Linear algebra notes · p. 1](../courses/stat244/lecnotes/notes-linalg.pdf#page=1)
+Sources: [Linear algebra notes · p. 1](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=1)
 
 Card ID: `stat244-vector-length`
 
@@ -7346,7 +7347,7 @@ Card ID: `stat244-vector-length`
 
 </details>
 
-Sources: [Linear algebra notes · p. 1](../courses/stat244/lecnotes/notes-linalg.pdf#page=1)
+Sources: [Linear algebra notes · p. 1](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=1)
 
 Card ID: `stat244-inner-example`
 
@@ -7365,7 +7366,7 @@ For equally sized vectors, the first is a scalar. The second is a matrix of pair
 
 </details>
 
-Sources: [Linear algebra notes · p. 2](../courses/stat244/lecnotes/notes-linalg.pdf#page=2)
+Sources: [Linear algebra notes · p. 2](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=2)
 
 Card ID: `stat244-outer-not-inner`
 
@@ -7384,7 +7385,7 @@ Every linear combination of those vectors.
 
 </details>
 
-Sources: [Linear algebra notes · p. 2](../courses/stat244/lecnotes/notes-linalg.pdf#page=2)
+Sources: [Linear algebra notes · p. 2](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=2)
 
 Card ID: `stat244-span-definition`
 
@@ -7403,7 +7404,7 @@ Its vectors are also linearly independent.
 
 </details>
 
-Sources: [Linear algebra notes · p. 3](../courses/stat244/lecnotes/notes-linalg.pdf#page=3)
+Sources: [Linear algebra notes · p. 3](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=3)
 
 Card ID: `stat244-basis-definition`
 
@@ -7422,7 +7423,7 @@ The columns are independent exactly when c=0 is the only solution.
 
 </details>
 
-Sources: [Linear algebra notes · p. 3](../courses/stat244/lecnotes/notes-linalg.pdf#page=3)
+Sources: [Linear algebra notes · p. 3](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=3)
 
 Card ID: `stat244-independence-definition`
 
@@ -7441,7 +7442,7 @@ The dimension of its column space, equivalently its row space.
 
 </details>
 
-Sources: [Linear algebra notes · p. 3](../courses/stat244/lecnotes/notes-linalg.pdf#page=3)
+Sources: [Linear algebra notes · p. 3](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=3)
 
 Card ID: `stat244-rank-definition`
 
@@ -7460,7 +7461,7 @@ All coefficient vectors v for which Xv=0.
 
 </details>
 
-Sources: [Linear algebra notes · p. 4](../courses/stat244/lecnotes/notes-linalg.pdf#page=4)
+Sources: [Linear algebra notes · p. 4](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=4)
 
 Card ID: `stat244-null-definition`
 
@@ -7479,7 +7480,7 @@ Use u(uᵀy)/(uᵀu).
 
 </details>
 
-Sources: [Linear algebra notes · p. 8](../courses/stat244/lecnotes/notes-linalg.pdf#page=8)
+Sources: [Linear algebra notes · p. 8](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=8)
 
 Card ID: `stat244-projection-line`
 
@@ -7498,7 +7499,7 @@ They have unit length and are pairwise perpendicular.
 
 </details>
 
-Sources: [Linear algebra notes · p. 8](../courses/stat244/lecnotes/notes-linalg.pdf#page=8)
+Sources: [Linear algebra notes · p. 8](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=8)
 
 Card ID: `stat244-orthonormal-columns`
 
@@ -7517,7 +7518,7 @@ No. QQᵀ projects onto Q’s column space, which may be smaller than observatio
 
 </details>
 
-Sources: [Linear algebra notes · p. 8](../courses/stat244/lecnotes/notes-linalg.pdf#page=8)
+Sources: [Linear algebra notes · p. 8](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=8)
 
 Card ID: `stat244-rectangular-not-inverse`
 
@@ -7536,7 +7537,7 @@ The difference between two candidate splits would lie in both W and W⊥. Only z
 
 </details>
 
-Sources: [Linear algebra notes · p. 7](../courses/stat244/lecnotes/notes-linalg.pdf#page=7)
+Sources: [Linear algebra notes · p. 7](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=7)
 
 Card ID: `stat244-orthogonal-decomposition-unique`
 
@@ -7555,7 +7556,7 @@ vᵀAv≥0 for every v. Positive definite requires strict positivity for every n
 
 </details>
 
-Sources: [Linear algebra notes · p. 9](../courses/stat244/lecnotes/notes-linalg.pdf#page=9)
+Sources: [Linear algebra notes · p. 9](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=9)
 
 Card ID: `stat244-psd-definition`
 
@@ -7574,7 +7575,7 @@ LLᵀ, with L lower triangular and positive diagonal.
 
 </details>
 
-Sources: [Linear algebra notes · p. 10](../courses/stat244/lecnotes/notes-linalg.pdf#page=10)
+Sources: [Linear algebra notes · p. 10](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=10)
 
 Card ID: `stat244-cholesky-role`
 
@@ -7593,7 +7594,7 @@ A=QΛQᵀ, with orthonormal eigenvectors in Q and eigenvalues in Λ.
 
 </details>
 
-Sources: [Linear algebra notes · p. 10](../courses/stat244/lecnotes/notes-linalg.pdf#page=10)
+Sources: [Linear algebra notes · p. 10](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=10)
 
 Card ID: `stat244-spectral-decomposition`
 
@@ -7612,7 +7613,7 @@ All must be positive. Nonnegative eigenvalues give positive semidefiniteness.
 
 </details>
 
-Sources: [Linear algebra notes · p. 10](../courses/stat244/lecnotes/notes-linalg.pdf#page=10)
+Sources: [Linear algebra notes · p. 10](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=10)
 
 Card ID: `stat244-positive-eigenvalues`
 
@@ -7631,7 +7632,7 @@ vᵀΣv=Var(vᵀY)≥0.
 
 </details>
 
-Sources: [Linear algebra notes · p. 11](../courses/stat244/lecnotes/notes-linalg.pdf#page=11)
+Sources: [Linear algebra notes · p. 11](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=11)
 
 Card ID: `stat244-covariance-psd`
 
@@ -7650,7 +7651,7 @@ It removes covariance between coordinates, but their variances remain the eigenv
 
 </details>
 
-Sources: [Linear algebra notes · p. 11](../courses/stat244/lecnotes/notes-linalg.pdf#page=11)
+Sources: [Linear algebra notes · p. 11](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=11)
 
 Card ID: `stat244-decorrelate-not-whiten`
 
@@ -7669,7 +7670,7 @@ X=UᵣDᵣVᵣᵀ, retaining the r positive singular values.
 
 </details>
 
-Sources: [Linear algebra notes · p. 13](../courses/stat244/lecnotes/notes-linalg.pdf#page=13)
+Sources: [Linear algebra notes · p. 13](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=13)
 
 Card ID: `stat244-svd-form`
 
@@ -7688,7 +7689,7 @@ The left singular vectors corresponding to positive singular values.
 
 </details>
 
-Sources: [Linear algebra notes · p. 13](../courses/stat244/lecnotes/notes-linalg.pdf#page=13)
+Sources: [Linear algebra notes · p. 13](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=13)
 
 Card ID: `stat244-svd-column-space`
 
@@ -7707,7 +7708,7 @@ The right singular vectors corresponding to positive singular values.
 
 </details>
 
-Sources: [Linear algebra notes · p. 13](../courses/stat244/lecnotes/notes-linalg.pdf#page=13)
+Sources: [Linear algebra notes · p. 13](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=13)
 
 Card ID: `stat244-svd-row-space`
 
@@ -7726,7 +7727,7 @@ X⁺=VᵣDᵣ⁻¹Uᵣᵀ. Invert only the positive singular values.
 
 </details>
 
-Sources: [Linear algebra notes · p. 13](../courses/stat244/lecnotes/notes-linalg.pdf#page=13)
+Sources: [Linear algebra notes · p. 13](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=13)
 
 Card ID: `stat244-svd-pseudoinverse`
 
@@ -7745,7 +7746,7 @@ It also satisfies GXG=G, and both XG and GX are symmetric.
 
 </details>
 
-Sources: [Linear algebra notes · p. 5](../courses/stat244/lecnotes/notes-linalg.pdf#page=5)
+Sources: [Linear algebra notes · p. 5](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=5)
 
 Card ID: `stat244-moore-penrose-conditions`
 
@@ -7764,7 +7765,7 @@ No. The design columns must also be independent.
 
 </details>
 
-Sources: [Linear algebra notes · p. 14](../courses/stat244/lecnotes/notes-linalg.pdf#page=14)
+Sources: [Linear algebra notes · p. 14](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=14)
 
 Card ID: `stat244-more-observations-not-rank`
 
@@ -7783,7 +7784,7 @@ Column dependence built into the model specification, such as an intercept plus 
 
 </details>
 
-Sources: [Linear algebra notes · p. 15](../courses/stat244/lecnotes/notes-linalg.pdf#page=15)
+Sources: [Linear algebra notes · p. 15](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=15)
 
 Card ID: `stat244-intrinsic-aliasing`
 
@@ -7802,7 +7803,7 @@ Column dependence caused by the collected data, such as a group level never bein
 
 </details>
 
-Sources: [Linear algebra notes · p. 15](../courses/stat244/lecnotes/notes-linalg.pdf#page=15)
+Sources: [Linear algebra notes · p. 15](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=15)
 
 Card ID: `stat244-extrinsic-aliasing`
 
@@ -7821,7 +7822,7 @@ That indicator is all zero, so changing its coefficient changes no observed mean
 
 </details>
 
-Sources: [Linear algebra notes · p. 15](../courses/stat244/lecnotes/notes-linalg.pdf#page=15)
+Sources: [Linear algebra notes · p. 15](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=15)
 
 Card ID: `stat244-empty-level`
 
@@ -7840,7 +7841,7 @@ That imposes an ordered, equally spaced linear effect. Separate contrasts allow 
 
 </details>
 
-Sources: [Least-squares theory notes · p. 1](../courses/stat244/lecnotes/notes-lstheory.pdf#page=1)
+Sources: [Least-squares theory notes · p. 1](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=1)
 
 Card ID: `stat244-quantitative-vs-factor`
 
@@ -7859,7 +7860,7 @@ Yes. β₀+β₁x+β₂x² is linear in its unknown coefficients.
 
 </details>
 
-Sources: [Least-squares theory notes · p. 1](../courses/stat244/lecnotes/notes-lstheory.pdf#page=1)
+Sources: [Least-squares theory notes · p. 1](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=1)
 
 Card ID: `stat244-linear-in-parameters`
 
@@ -7878,7 +7879,7 @@ Linear, quadratic, and higher-order patterns across the specified level scores.
 
 </details>
 
-Sources: [Least-squares theory notes · p. 6](../courses/stat244/lecnotes/notes-lstheory.pdf#page=6)
+Sources: [Least-squares theory notes · p. 6](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=6)
 
 Card ID: `stat244-polynomial-contrasts`
 
@@ -7897,7 +7898,7 @@ The trends depend on the numeric scores assigned to levels. Equal spacing is a m
 
 </details>
 
-Sources: [Least-squares theory notes · p. 6](../courses/stat244/lecnotes/notes-lstheory.pdf#page=6)
+Sources: [Least-squares theory notes · p. 6](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=6)
 
 Card ID: `stat244-polynomial-spacing`
 
@@ -7916,7 +7917,7 @@ y∼N(Xβ,σ²I): mean in C(X), common variance, and independent Gaussian errors
 
 </details>
 
-Sources: [Least-squares theory notes · p. 8](../courses/stat244/lecnotes/notes-lstheory.pdf#page=8)
+Sources: [Least-squares theory notes · p. 8](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=8)
 
 Card ID: `stat244-normal-model`
 
@@ -7935,7 +7936,7 @@ The true mean vector belongs to C(X).
 
 </details>
 
-Sources: [Least-squares theory notes · p. 8](../courses/stat244/lecnotes/notes-lstheory.pdf#page=8)
+Sources: [Least-squares theory notes · p. 8](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=8)
 
 Card ID: `stat244-mean-in-space`
 
@@ -7954,7 +7955,7 @@ Card ID: `stat244-mean-in-space`
 
 </details>
 
-Sources: [Least-squares theory notes · p. 9](../courses/stat244/lecnotes/notes-lstheory.pdf#page=9)
+Sources: [Least-squares theory notes · p. 9](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=9)
 
 Card ID: `stat244-ols-formula`
 
@@ -7973,7 +7974,7 @@ With fixed X, β̂ is a fixed matrix times y.
 
 </details>
 
-Sources: [Least-squares theory notes · p. 11](../courses/stat244/lecnotes/notes-lstheory.pdf#page=11)
+Sources: [Least-squares theory notes · p. 11](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=11)
 
 Card ID: `stat244-ols-linear`
 
@@ -7992,7 +7993,7 @@ Card ID: `stat244-ols-linear`
 
 </details>
 
-Sources: [Least-squares theory notes · p. 11](../courses/stat244/lecnotes/notes-lstheory.pdf#page=11)
+Sources: [Least-squares theory notes · p. 11](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=11)
 
 Card ID: `stat244-ols-covariance`
 
@@ -8011,7 +8012,7 @@ E[ŷ]=Xβ and Var(ŷ)=σ²H.
 
 </details>
 
-Sources: [Least-squares theory notes · p. 11](../courses/stat244/lecnotes/notes-lstheory.pdf#page=11)
+Sources: [Least-squares theory notes · p. 11](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=11)
 
 Card ID: `stat244-fit-covariance`
 
@@ -8030,7 +8031,7 @@ For fixed positive σ², maximizing likelihood is equivalent to minimizing resid
 
 </details>
 
-Sources: [Least-squares theory notes · p. 13](../courses/stat244/lecnotes/notes-lstheory.pdf#page=13)
+Sources: [Least-squares theory notes · p. 13](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=13)
 
 Card ID: `stat244-normal-ols-mle`
 
@@ -8049,7 +8050,7 @@ Yes. Least squares picks the closest allowed mean, and can absorb some sample no
 
 </details>
 
-Sources: [Least-squares theory notes · p. 16](../courses/stat244/lecnotes/notes-lstheory.pdf#page=16)
+Sources: [Least-squares theory notes · p. 16](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=16)
 
 Card ID: `stat244-fit-closer-than-truth`
 
@@ -8068,7 +8069,7 @@ TSS=explained sum of squares+residual SSE.
 
 </details>
 
-Sources: [Least-squares theory notes · p. 16](../courses/stat244/lecnotes/notes-lstheory.pdf#page=16)
+Sources: [Least-squares theory notes · p. 16](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=16)
 
 Card ID: `stat244-centered-decomposition`
 
@@ -8087,7 +8088,7 @@ Card ID: `stat244-centered-decomposition`
 
 </details>
 
-Sources: [Least-squares theory notes · p. 18](../courses/stat244/lecnotes/notes-lstheory.pdf#page=18)
+Sources: [Least-squares theory notes · p. 18](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=18)
 
 Card ID: `stat244-r-squared-definition`
 
@@ -8106,7 +8107,7 @@ The larger space can fit extra noise and cannot increase minimized SSE.
 
 </details>
 
-Sources: [Least-squares theory notes · p. 18](../courses/stat244/lecnotes/notes-lstheory.pdf#page=18)
+Sources: [Least-squares theory notes · p. 18](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=18)
 
 Card ID: `stat244-r-squared-monotone`
 
@@ -8125,7 +8126,7 @@ No. It summarizes fit, not the assumptions needed for causal inference.
 
 </details>
 
-Sources: [Least-squares theory notes · p. 18](../courses/stat244/lecnotes/notes-lstheory.pdf#page=18)
+Sources: [Least-squares theory notes · p. 18](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=18)
 
 Card ID: `stat244-r-squared-not-causal`
 
@@ -8144,7 +8145,7 @@ For OLS with an intercept and nonconstant fit, R²=Corr(y,ŷ)².
 
 </details>
 
-Sources: [Least-squares theory notes · p. 19](../courses/stat244/lecnotes/notes-lstheory.pdf#page=19)
+Sources: [Least-squares theory notes · p. 19](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=19)
 
 Card ID: `stat244-fit-correlation`
 
@@ -8163,7 +8164,7 @@ Card ID: `stat244-fit-correlation`
 
 </details>
 
-Sources: [Least-squares theory notes · p. 21](../courses/stat244/lecnotes/notes-lstheory.pdf#page=21)
+Sources: [Least-squares theory notes · p. 21](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=21)
 
 Card ID: `stat244-gls-estimator`
 
@@ -8182,7 +8183,7 @@ Card ID: `stat244-gls-estimator`
 
 </details>
 
-Sources: [Least-squares theory notes · p. 21](../courses/stat244/lecnotes/notes-lstheory.pdf#page=21)
+Sources: [Least-squares theory notes · p. 21](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=21)
 
 Card ID: `stat244-gls-covariance`
 
@@ -8201,7 +8202,7 @@ It projects using weighted geometry. In ordinary Euclidean geometry, that projec
 
 </details>
 
-Sources: [Least-squares theory notes · p. 22](../courses/stat244/lecnotes/notes-lstheory.pdf#page=22)
+Sources: [Least-squares theory notes · p. 22](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=22)
 
 Card ID: `stat244-gls-oblique`
 
@@ -8220,7 +8221,7 @@ Yes, possibly degenerate. Its mean is Aμ+b and covariance AΣAᵀ.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 1](../courses/stat244/lecnotes/notes-lsinf.pdf#page=1)
+Sources: [Least-squares inference notes · p. 1](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=1)
 
 Card ID: `stat244-normal-linear-map`
 
@@ -8239,7 +8240,7 @@ Squared distance from the mean after accounting for covariance.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 2](../courses/stat244/lecnotes/notes-lsinf.pdf#page=2)
+Sources: [Least-squares inference notes · p. 2](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=2)
 
 Card ID: `stat244-mahalanobis-distance`
 
@@ -8258,7 +8259,7 @@ Card ID: `stat244-mahalanobis-distance`
 
 </details>
 
-Sources: [Least-squares inference notes · p. 1](../courses/stat244/lecnotes/notes-lsinf.pdf#page=1)
+Sources: [Least-squares inference notes · p. 1](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=1)
 
 Card ID: `stat244-gamma-integer`
 
@@ -8277,7 +8278,7 @@ Card ID: `stat244-gamma-integer`
 
 </details>
 
-Sources: [Least-squares inference notes · p. 1](../courses/stat244/lecnotes/notes-lsinf.pdf#page=1)
+Sources: [Least-squares inference notes · p. 1](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=1)
 
 Card ID: `stat244-gamma-recursion`
 
@@ -8296,7 +8297,7 @@ Card ID: `stat244-gamma-recursion`
 
 </details>
 
-Sources: [Least-squares inference notes · p. 2](../courses/stat244/lecnotes/notes-lsinf.pdf#page=2)
+Sources: [Least-squares inference notes · p. 2](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=2)
 
 Card ID: `stat244-chi-square-one`
 
@@ -8315,7 +8316,7 @@ Z/√(W/r), with Z∼N(0,1), W∼χ²ᵣ, and independence.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 2](../courses/stat244/lecnotes/notes-lsinf.pdf#page=2)
+Sources: [Least-squares inference notes · p. 2](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=2)
 
 Card ID: `stat244-t-construction`
 
@@ -8334,7 +8335,7 @@ Card ID: `stat244-t-construction`
 
 </details>
 
-Sources: [Least-squares inference notes · p. 2](../courses/stat244/lecnotes/notes-lsinf.pdf#page=2)
+Sources: [Least-squares inference notes · p. 2](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=2)
 
 Card ID: `stat244-f-construction`
 
@@ -8353,7 +8354,7 @@ F with degrees of freedom (1,r).
 
 </details>
 
-Sources: [Least-squares inference notes · p. 2](../courses/stat244/lecnotes/notes-lsinf.pdf#page=2)
+Sources: [Least-squares inference notes · p. 2](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=2)
 
 Card ID: `stat244-t-squared-f`
 
@@ -8372,7 +8373,7 @@ No. The standard construction requires independence.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 2](../courses/stat244/lecnotes/notes-lsinf.pdf#page=2)
+Sources: [Least-squares inference notes · p. 2](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=2)
 
 Card ID: `stat244-f-independence`
 
@@ -8391,7 +8392,7 @@ N(β,σ²(XᵀX)⁻¹).
 
 </details>
 
-Sources: [Least-squares inference notes · p. 10](../courses/stat244/lecnotes/notes-lsinf.pdf#page=10)
+Sources: [Least-squares inference notes · p. 10](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=10)
 
 Card ID: `stat244-coefficient-gaussian`
 
@@ -8410,7 +8411,7 @@ s√(aᵀ(XᵀX)⁻¹a), for full-rank OLS.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 12](../courses/stat244/lecnotes/notes-lsinf.pdf#page=12)
+Sources: [Least-squares inference notes · p. 12](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=12)
 
 Card ID: `stat244-contrast-se`
 
@@ -8429,7 +8430,7 @@ Some coefficient combinations are measured more precisely than others, as encode
 
 </details>
 
-Sources: [Least-squares inference notes · p. 11](../courses/stat244/lecnotes/notes-lsinf.pdf#page=11)
+Sources: [Least-squares inference notes · p. 11](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=11)
 
 Card ID: `stat244-confidence-ellipsoid`
 
@@ -8448,7 +8449,7 @@ Units alone can create large stretch differences. Scaling helps separate unit ch
 
 </details>
 
-Sources: [Least-squares inference notes · p. 15](../courses/stat244/lecnotes/notes-lsinf.pdf#page=15)
+Sources: [Least-squares inference notes · p. 15](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=15)
 
 Card ID: `stat244-condition-representation`
 
@@ -8467,7 +8468,7 @@ A factor can occupy several contrast columns. GVIF assesses the block rather tha
 
 </details>
 
-Sources: [Least-squares inference notes · p. 16](../courses/stat244/lecnotes/notes-lsinf.pdf#page=16)
+Sources: [Least-squares inference notes · p. 16](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=16)
 
 Card ID: `stat244-gvif-purpose`
 
@@ -8486,7 +8487,7 @@ Use an appropriate validation procedure, fitting preprocessing inside training f
 
 </details>
 
-Sources: [Least-squares inference notes · p. 24](../courses/stat244/lecnotes/notes-lsinf.pdf#page=24)
+Sources: [Least-squares inference notes · p. 24](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=24)
 
 Card ID: `stat244-pcr-component-choice`
 
@@ -8505,7 +8506,7 @@ The mean model may be missing a nonlinear pattern.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 25](../courses/stat244/lecnotes/notes-lsinf.pdf#page=25)
+Sources: [Least-squares inference notes · p. 25](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=25)
 
 Card ID: `stat244-residual-curve`
 
@@ -8524,7 +8525,7 @@ Nonconstant error variance.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 25](../courses/stat244/lecnotes/notes-lsinf.pdf#page=25)
+Sources: [Least-squares inference notes · p. 25](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=25)
 
 Card ID: `stat244-residual-funnel`
 
@@ -8543,7 +8544,7 @@ No. It may fail to reveal problems and does not directly check every assumption.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 25](../courses/stat244/lecnotes/notes-lsinf.pdf#page=25)
+Sources: [Least-squares inference notes · p. 25](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=25)
 
 Card ID: `stat244-residual-clean`
 
@@ -8562,7 +8563,7 @@ A suitable residual QQ plot, rather than only residuals versus fitted values.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 25](../courses/stat244/lecnotes/notes-lsinf.pdf#page=25)
+Sources: [Least-squares inference notes · p. 25](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=25)
 
 Card ID: `stat244-qq-role`
 
@@ -8581,7 +8582,7 @@ Its diagonal entry in H. It measures how unusual its predictor position is relat
 
 </details>
 
-Sources: [Least-squares inference notes · p. 26](../courses/stat244/lecnotes/notes-lsinf.pdf#page=26)
+Sources: [Least-squares inference notes · p. 26](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=26)
 
 Card ID: `stat244-leverage-definition`
 
@@ -8600,7 +8601,7 @@ No. H depends only on X.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 26](../courses/stat244/lecnotes/notes-lsinf.pdf#page=26)
+Sources: [Least-squares inference notes · p. 26](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=26)
 
 Card ID: `stat244-leverage-response`
 
@@ -8619,7 +8620,7 @@ Between 0 and 1.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 26](../courses/stat244/lecnotes/notes-lsinf.pdf#page=26)
+Sources: [Least-squares inference notes · p. 26](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=26)
 
 Card ID: `stat244-leverage-bounds`
 
@@ -8638,7 +8639,7 @@ r/n, because Σhᵢᵢ=r.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 26](../courses/stat244/lecnotes/notes-lsinf.pdf#page=26)
+Sources: [Least-squares inference notes · p. 26](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=26)
 
 Card ID: `stat244-leverage-average`
 
@@ -8657,7 +8658,7 @@ Card ID: `stat244-leverage-average`
 
 </details>
 
-Sources: [Least-squares inference notes · p. 27](../courses/stat244/lecnotes/notes-lsinf.pdf#page=27)
+Sources: [Least-squares inference notes · p. 27](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=27)
 
 Card ID: `stat244-leverage-sensitivity`
 
@@ -8676,7 +8677,7 @@ Card ID: `stat244-leverage-sensitivity`
 
 </details>
 
-Sources: [Least-squares inference notes · p. 27](../courses/stat244/lecnotes/notes-lsinf.pdf#page=27)
+Sources: [Least-squares inference notes · p. 27](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=27)
 
 Card ID: `stat244-residual-covariance`
 
@@ -8695,7 +8696,7 @@ Var(eᵢ)=σ²(1−hᵢᵢ). The fit follows them more closely.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 27](../courses/stat244/lecnotes/notes-lsinf.pdf#page=27)
+Sources: [Least-squares inference notes · p. 27](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=27)
 
 Card ID: `stat244-residual-variance`
 
@@ -8714,7 +8715,7 @@ Generally not. Their off-diagonal covariances are −σ²hᵢⱼ.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 27](../courses/stat244/lecnotes/notes-lsinf.pdf#page=27)
+Sources: [Least-squares inference notes · p. 27](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=27)
 
 Card ID: `stat244-residual-correlated`
 
@@ -8733,7 +8734,7 @@ rᵢ=eᵢ/[s√(1−hᵢᵢ)], when the denominator is positive.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 27](../courses/stat244/lecnotes/notes-lsinf.pdf#page=27)
+Sources: [Least-squares inference notes · p. 27](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=27)
 
 Card ID: `stat244-internal-studentization`
 
@@ -8752,7 +8753,7 @@ Its numerator and the full-data estimate s are dependent.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 27](../courses/stat244/lecnotes/notes-lsinf.pdf#page=27)
+Sources: [Least-squares inference notes · p. 27](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=27)
 
 Card ID: `stat244-internal-not-t`
 
@@ -8771,7 +8772,7 @@ Use s estimated with observation i omitted: eᵢ/[s₍ᵢ₎√(1−hᵢᵢ)].
 
 </details>
 
-Sources: [Least-squares inference notes · p. 28](../courses/stat244/lecnotes/notes-lsinf.pdf#page=28)
+Sources: [Least-squares inference notes · p. 28](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=28)
 
 Card ID: `stat244-external-studentization`
 
@@ -8790,7 +8791,7 @@ t with n−p−1 df for a fixed observation, assuming the deleted design keeps r
 
 </details>
 
-Sources: [Least-squares inference notes · p. 28](../courses/stat244/lecnotes/notes-lsinf.pdf#page=28)
+Sources: [Least-squares inference notes · p. 28](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=28)
 
 Card ID: `stat244-external-t-df`
 
@@ -8809,7 +8810,7 @@ Many individual tests increase the chance of at least one false flag.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 28](../courses/stat244/lecnotes/notes-lsinf.pdf#page=28)
+Sources: [Least-squares inference notes · p. 28](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=28)
 
 Card ID: `stat244-outlier-multiple-testing`
 
@@ -8828,7 +8829,7 @@ Multiply each raw p-value by n and cap at 1.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 28](../courses/stat244/lecnotes/notes-lsinf.pdf#page=28)
+Sources: [Least-squares inference notes · p. 28](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=28)
 
 Card ID: `stat244-bonferroni-residuals`
 
@@ -8847,7 +8848,7 @@ No. Its familywise-error bound also holds under dependence.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 29](../courses/stat244/lecnotes/notes-lsinf.pdf#page=29)
+Sources: [Least-squares inference notes · p. 29](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=29)
 
 Card ID: `stat244-bonferroni-dependence`
 
@@ -8866,7 +8867,7 @@ t quantiles with n−p−1 df, subject to the deletion assumptions.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 29](../courses/stat244/lecnotes/notes-lsinf.pdf#page=29)
+Sources: [Least-squares inference notes · p. 29](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=29)
 
 Card ID: `stat244-qq-studentized`
 
@@ -8885,7 +8886,7 @@ Subtract xᵢᵀxᵢ.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 29](../courses/stat244/lecnotes/notes-lsinf.pdf#page=29)
+Sources: [Least-squares inference notes · p. 29](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=29)
 
 Card ID: `stat244-delete-gram`
 
@@ -8904,7 +8905,7 @@ It updates an inverse after a low-rank change instead of recomputing it from scr
 
 </details>
 
-Sources: [Least-squares inference notes · p. 29](../courses/stat244/lecnotes/notes-lsinf.pdf#page=29)
+Sources: [Least-squares inference notes · p. 29](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=29)
 
 Card ID: `stat244-smw-purpose`
 
@@ -8923,7 +8924,7 @@ It is eᵢ/(1−hᵢᵢ), provided deleting the point preserves rank.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 30](../courses/stat244/lecnotes/notes-lsinf.pdf#page=30)
+Sources: [Least-squares inference notes · p. 30](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=30)
 
 Card ID: `stat244-deleted-residual`
 
@@ -8942,7 +8943,7 @@ Deletion formulas divide by 1−hᵢᵢ, which becomes small.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 30](../courses/stat244/lecnotes/notes-lsinf.pdf#page=30)
+Sources: [Least-squares inference notes · p. 30](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=30)
 
 Card ID: `stat244-delete-high-leverage`
 
@@ -8961,7 +8962,7 @@ The denominator vanishes; deleting that observation loses a design direction.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 30](../courses/stat244/lecnotes/notes-lsinf.pdf#page=30)
+Sources: [Least-squares inference notes · p. 30](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=30)
 
 Card ID: `stat244-leverage-one`
 
@@ -8980,7 +8981,7 @@ Outlyingness is an unusual response given x; leverage is an unusual x.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 32](../courses/stat244/lecnotes/notes-lsinf.pdf#page=32)
+Sources: [Least-squares inference notes · p. 32](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=32)
 
 Card ID: `stat244-outlier-vs-leverage`
 
@@ -8999,7 +9000,7 @@ How much the fitted model changes when an observation is removed.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 32](../courses/stat244/lecnotes/notes-lsinf.pdf#page=32)
+Sources: [Least-squares inference notes · p. 32](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=32)
 
 Card ID: `stat244-influence-definition`
 
@@ -9018,7 +9019,7 @@ No. Its response may agree closely with the rest of the fitted pattern.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 32](../courses/stat244/lecnotes/notes-lsinf.pdf#page=32)
+Sources: [Least-squares inference notes · p. 32](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=32)
 
 Card ID: `stat244-leverage-not-influence`
 
@@ -9037,7 +9038,7 @@ The coefficient change after deleting a point, scaled by coefficient uncertainty
 
 </details>
 
-Sources: [Least-squares inference notes · p. 33](../courses/stat244/lecnotes/notes-lsinf.pdf#page=33)
+Sources: [Least-squares inference notes · p. 33](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=33)
 
 Card ID: `stat244-cooks-definition`
 
@@ -9056,7 +9057,7 @@ Dᵢ=(rᵢ²/p)hᵢᵢ/(1−hᵢᵢ), using the internally studentized residual.
 
 </details>
 
-Sources: [Least-squares inference notes · p. 33](../courses/stat244/lecnotes/notes-lsinf.pdf#page=33)
+Sources: [Least-squares inference notes · p. 33](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=33)
 
 Card ID: `stat244-cooks-formula`
 
@@ -9075,7 +9076,7 @@ No. Investigate data quality and model sensitivity; the point may be valid and i
 
 </details>
 
-Sources: [Least-squares inference notes · p. 33](../courses/stat244/lecnotes/notes-lsinf.pdf#page=33)
+Sources: [Least-squares inference notes · p. 33](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=33)
 
 Card ID: `stat244-cooks-not-delete`
 
@@ -9094,7 +9095,7 @@ DFFITS focuses on a fitted-value change; DFBETAS on a particular coefficient cha
 
 </details>
 
-Sources: [Least-squares inference notes · p. 33](../courses/stat244/lecnotes/notes-lsinf.pdf#page=33)
+Sources: [Least-squares inference notes · p. 33](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=33)
 
 Card ID: `stat244-dffits-dfbetas`
 
@@ -9113,7 +9114,7 @@ It is every mean vector the model can express: all Xβ. It contains zero and is 
 
 </details>
 
-Sources: [HW1 · Q1](../courses/stat244/homeworks/ps1/hw1.pdf#page=1)
+Sources: [HW1 · Q1](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=1)
 
 Card ID: `stat244-space`
 
@@ -9132,7 +9133,7 @@ Usually not. β lives in ℝᵖ; Xβ lives in ℝⁿ.
 
 </details>
 
-Sources: [HW1 · Q1](../courses/stat244/homeworks/ps1/hw1.pdf#page=1)
+Sources: [HW1 · Q1](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=1)
 
 Card ID: `stat244-ambient-dimensions`
 
@@ -9151,7 +9152,7 @@ One: dim N(X)=4−3. Moving along it leaves Xβ unchanged.
 
 </details>
 
-Sources: [Linear algebra notes · subspaces and rank](../courses/stat244/lecnotes/notes-linalg.pdf#page=4)
+Sources: [Linear algebra notes · subspaces and rank](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=4)
 
 Card ID: `stat244-rank-nullity`
 
@@ -9170,7 +9171,7 @@ Yes, if their columns span the same space.
 
 </details>
 
-Sources: [HW1 · Q1](../courses/stat244/homeworks/ps1/hw1.pdf#page=1)
+Sources: [HW1 · Q1](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=1)
 
 Card ID: `stat244-span-not-columns`
 
@@ -9189,7 +9190,7 @@ Multiples of (1,−1,1). Each dot product is zero.
 
 </details>
 
-Sources: [HW1 · Q2](../courses/stat244/homeworks/ps1/hw1.pdf#page=1)
+Sources: [HW1 · Q2](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=1)
 
 Card ID: `stat244-null`
 
@@ -9208,7 +9209,7 @@ Xv=0 says every row has dot product zero with v. The same is then true for every
 
 </details>
 
-Sources: [HW1 · Q2](../courses/stat244/homeworks/ps1/hw1.pdf#page=1)
+Sources: [HW1 · Q2](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=1)
 
 Card ID: `stat244-nullspace-test`
 
@@ -9227,7 +9228,7 @@ Card ID: `stat244-nullspace-test`
 
 </details>
 
-Sources: [HW1 · Q2](../courses/stat244/homeworks/ps1/hw1.pdf#page=1)
+Sources: [HW1 · Q2](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=1)
 
 Card ID: `stat244-orthogonal-decomposition-example`
 
@@ -9246,7 +9247,7 @@ When ℓ is in X’s row space. Then ℓ=Xᵀa for some a, and aᵀy estimates t
 
 </details>
 
-Sources: [HW1 · Q5–6](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q5–6](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-estimable`
 
@@ -9265,7 +9266,7 @@ The sum. The mean is x(β₁+β₂), so the data cannot separate the two contrib
 
 </details>
 
-Sources: [HW1 · Q5–6](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q5–6](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-duplicate-columns`
 
@@ -9284,7 +9285,7 @@ E[aᵀy]=aᵀXβ=ℓᵀβ, assuming E[y]=Xβ.
 
 </details>
 
-Sources: [HW1 · Q5–6](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q5–6](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-construct-unbiased-estimator`
 
@@ -9303,7 +9304,7 @@ Yes. In μᵢ=α+γᵢ, the difference is μ₂−μ₁ for observed groups. A c
 
 </details>
 
-Sources: [HW1 · Q5–6](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q5–6](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-contrast-invariance`
 
@@ -9322,7 +9323,7 @@ When x₀ is in X’s row space. Otherwise two equally valid coefficient vectors
 
 </details>
 
-Sources: [HW1 · Q5–6](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q5–6](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-new-point-estimability`
 
@@ -9341,7 +9342,7 @@ No. AM 205 asks whether the calculation is reliable; STAT 244 asks whether the s
 
 </details>
 
-Sources: [HW2 · Q5–9](../courses/stat244/homeworks/ps2/hw2.pdf#page=3); [PS2 · Q3](../courses/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [HW2 · Q5–9](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3); [PS2 · Q3](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
 
 Card ID: `bridge-fit`
 
@@ -9360,7 +9361,7 @@ The indicators add up to the intercept column. You can shift the intercept and o
 
 </details>
 
-Sources: [Least-squares theory · p. 2](../courses/stat244/lecnotes/notes-lstheory.pdf#page=2)
+Sources: [Least-squares theory · p. 2](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=2)
 
 Card ID: `stat244-alias`
 
@@ -9379,7 +9380,7 @@ Three, not four. The intercept is the sum of the indicators.
 
 </details>
 
-Sources: [Least-squares theory · p. 2](../courses/stat244/lecnotes/notes-lstheory.pdf#page=2)
+Sources: [Least-squares theory · p. 2](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=2)
 
 Card ID: `stat244-dummy-rank`
 
@@ -9398,7 +9399,7 @@ No. It changes the coefficient description: the intercept is the reference mean,
 
 </details>
 
-Sources: [Least-squares theory · p. 2](../courses/stat244/lecnotes/notes-lstheory.pdf#page=2)
+Sources: [Least-squares theory · p. 2](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=2)
 
 Card ID: `stat244-constraints-not-model`
 
@@ -9417,7 +9418,7 @@ They span the same column space. A changes coordinates, not the set of possible 
 
 </details>
 
-Sources: [HW2 · Q1 and Q4](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q1 and Q4](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-recode`
 
@@ -9436,7 +9437,7 @@ Card ID: `stat244-recode`
 
 </details>
 
-Sources: [HW2 · Q1 and Q4](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q1 and Q4](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-parameter-map`
 
@@ -9455,7 +9456,7 @@ No. A singular change would lose a direction, contradicting full column rank.
 
 </details>
 
-Sources: [HW2 · Q1 and Q4](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q1 and Q4](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-column-space-converse`
 
@@ -9474,7 +9475,7 @@ Card ID: `stat244-column-space-converse`
 
 </details>
 
-Sources: [HW2 · Q2](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q2](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-affine`
 
@@ -9493,7 +9494,7 @@ Every pair with β₁+β₂=3, such as (3,0) or (1,2).
 
 </details>
 
-Sources: [HW2 · Q2](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q2](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-affine-example`
 
@@ -9512,7 +9513,7 @@ No. “Normal” means perpendicular: Xᵀ(y−Xβ̂)=0. This follows from least
 
 </details>
 
-Sources: [Least-squares theory · p. 9](../courses/stat244/lecnotes/notes-lstheory.pdf#page=9)
+Sources: [Least-squares theory · p. 9](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=9)
 
 Card ID: `stat244-normal`
 
@@ -9531,7 +9532,7 @@ Card ID: `stat244-normal`
 
 </details>
 
-Sources: [Least-squares theory · p. 9](../courses/stat244/lecnotes/notes-lstheory.pdf#page=9)
+Sources: [Least-squares theory · p. 9](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=9)
 
 Card ID: `stat244-differentiate-loss`
 
@@ -9550,7 +9551,7 @@ They are perpendicular to every design column, including the all-ones column. So
 
 </details>
 
-Sources: [Least-squares theory · p. 9](../courses/stat244/lecnotes/notes-lstheory.pdf#page=9)
+Sources: [Least-squares theory · p. 9](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=9)
 
 Card ID: `stat244-residual-sum-zero`
 
@@ -9569,7 +9570,7 @@ The fit lies in C(X), and the residual is perpendicular to that entire space.
 
 </details>
 
-Sources: [Least-squares theory · p. 9](../courses/stat244/lecnotes/notes-lstheory.pdf#page=9)
+Sources: [Least-squares theory · p. 9](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=9)
 
 Card ID: `stat244-fitted-orthogonality`
 
@@ -9588,7 +9589,7 @@ P²=P and Pᵀ=P. Applying it twice changes nothing, and symmetry makes the proj
 
 </details>
 
-Sources: [HW2 · Q5(a–c)](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(a–c)](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-projection`
 
@@ -9607,7 +9608,7 @@ No. [[1,1],[0,0]] is idempotent but not symmetric. It projects at a slant.
 
 </details>
 
-Sources: [HW2 · Q5(a–c)](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(a–c)](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-idempotent-not-orthogonal`
 
@@ -9626,7 +9627,7 @@ Only 0 or 1: λ²=λ. A direction is either removed or retained.
 
 </details>
 
-Sources: [HW2 · Q5(a–c)](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(a–c)](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-projector-eigenvalues`
 
@@ -9645,7 +9646,7 @@ r. Each retained direction contributes an eigenvalue 1.
 
 </details>
 
-Sources: [HW2 · Q5(a–c)](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(a–c)](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-hat-trace`
 
@@ -9664,7 +9665,7 @@ The part of y explained by the larger model but not the smaller one.
 
 </details>
 
-Sources: [HW2 · Q5(d)](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(d)](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-nested`
 
@@ -9683,7 +9684,7 @@ After projecting into V₀, the vector already lies in V₁. Projecting into V�
 
 </details>
 
-Sources: [HW2 · Q5(d)](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(d)](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-nesting-product`
 
@@ -9702,7 +9703,7 @@ No. diag(0,1)−diag(1,0)=diag(−1,1), which is not idempotent. The usual diffe
 
 </details>
 
-Sources: [HW2 · Q5(d)](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(d)](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-difference-without-nesting`
 
@@ -9721,7 +9722,7 @@ The fitted reference-group mean when other numeric predictors are zero.
 
 </details>
 
-Sources: [HW2 · Q3–4](../courses/stat244/homeworks/ps2/hw2.pdf#page=2)
+Sources: [HW2 · Q3–4](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=2)
 
 Card ID: `stat244-contrasts`
 
@@ -9740,7 +9741,7 @@ Card ID: `stat244-contrasts`
 
 </details>
 
-Sources: [HW2 · Q3–4](../courses/stat244/homeworks/ps2/hw2.pdf#page=2)
+Sources: [HW2 · Q3–4](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=2)
 
 Card ID: `stat244-treatment-numeric`
 
@@ -9759,7 +9760,7 @@ Card ID: `stat244-treatment-numeric`
 
 </details>
 
-Sources: [HW2 · Q3–4](../courses/stat244/homeworks/ps2/hw2.pdf#page=2)
+Sources: [HW2 · Q3–4](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=2)
 
 Card ID: `stat244-sum-coding-numeric`
 
@@ -9778,7 +9779,7 @@ Moving from A to B changes the code by 2, so the fitted difference is twice the 
 
 </details>
 
-Sources: [HW2 · Q3–4](../courses/stat244/homeworks/ps2/hw2.pdf#page=2)
+Sources: [HW2 · Q3–4](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=2)
 
 Card ID: `stat244-helmert-scaling`
 
@@ -9797,7 +9798,7 @@ No. Their spaces can coincide only after the intercept direction is added.
 
 </details>
 
-Sources: [HW2 · Q3–4](../courses/stat244/homeworks/ps2/hw2.pdf#page=2)
+Sources: [HW2 · Q3–4](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=2)
 
 Card ID: `stat244-remove-intercept-caveat`
 
@@ -9816,7 +9817,7 @@ Fitting uses rank(X) directions. Under spherical errors and the correct mean mod
 
 </details>
 
-Sources: [HW2 · Q7; least-squares theory](../courses/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator](../courses/stat244/lecnotes/notes-lstheory.pdf)
+Sources: [HW2 · Q7; least-squares theory](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf)
 
 Card ID: `stat244-variance`
 
@@ -9835,7 +9836,7 @@ Card ID: `stat244-variance`
 
 </details>
 
-Sources: [HW2 · Q7; least-squares theory](../courses/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator](../courses/stat244/lecnotes/notes-lstheory.pdf)
+Sources: [HW2 · Q7; least-squares theory](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf)
 
 Card ID: `stat244-variance-numeric`
 
@@ -9854,7 +9855,7 @@ At s=SSE/n, the derivative of ℓ(s) is zero and its second derivative is negati
 
 </details>
 
-Sources: [HW2 · Q7; least-squares theory](../courses/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator](../courses/stat244/lecnotes/notes-lstheory.pdf)
+Sources: [HW2 · Q7; least-squares theory](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf)
 
 Card ID: `stat244-variance-second-derivative`
 
@@ -9873,7 +9874,7 @@ Smallest variance among linear unbiased estimators, under the Gauss–Markov ass
 
 </details>
 
-Sources: [HW2 · Q9](../courses/stat244/homeworks/ps2/hw2.pdf#page=4)
+Sources: [HW2 · Q9](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4)
 
 Card ID: `stat244-blue`
 
@@ -9892,7 +9893,7 @@ No. With fixed full-rank X, E[y]=Xβ is enough. Gaussianity matters for exact fi
 
 </details>
 
-Sources: [HW2 · Q9](../courses/stat244/homeworks/ps2/hw2.pdf#page=4)
+Sources: [HW2 · Q9](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4)
 
 Card ID: `stat244-normality-separation`
 
@@ -9911,7 +9912,7 @@ BGB=B. It need not satisfy BG=I or be unique.
 
 </details>
 
-Sources: [Linear algebra notes · pp. 4–5](../courses/stat244/lecnotes/notes-linalg.pdf#page=5)
+Sources: [Linear algebra notes · pp. 4–5](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=5)
 
 Card ID: `stat244-ginverse`
 
@@ -9930,7 +9931,7 @@ BGB=B whatever t is. Multiplication by B erases the second direction.
 
 </details>
 
-Sources: [Linear algebra notes · pp. 4–5](../courses/stat244/lecnotes/notes-linalg.pdf#page=5)
+Sources: [Linear algebra notes · pp. 4–5](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=5)
 
 Card ID: `stat244-ginverse-example`
 
@@ -9949,7 +9950,7 @@ A⁻¹G, since (BA)(A⁻¹G)(BA)=BGBA=BA.
 
 </details>
 
-Sources: [HW2 · Q1(a)](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q1(a)](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-ginverse-product`
 
@@ -9968,7 +9969,7 @@ GA⁻¹, since (AB)(GA⁻¹)(AB)=A(BGB)=AB.
 
 </details>
 
-Sources: [HW2 · Q1(a)](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q1(a)](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-right-product`
 
@@ -9987,7 +9988,7 @@ All least-squares fits equal the unique orthogonal projection onto C(X). Differe
 
 </details>
 
-Sources: [HW2 · Q10](../courses/stat244/homeworks/ps2/hw2.pdf#page=4)
+Sources: [HW2 · Q10](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4)
 
 Card ID: `stat244-projector-unique`
 
@@ -10006,7 +10007,7 @@ Card ID: `stat244-projector-unique`
 
 </details>
 
-Sources: [HW2 · Q10](../courses/stat244/homeworks/ps2/hw2.pdf#page=4)
+Sources: [HW2 · Q10](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4)
 
 Card ID: `stat244-g-inverse-fitted-numeric`
 
@@ -10025,7 +10026,7 @@ Moving elsewhere within the subspace adds a perpendicular squared-distance term:
 
 </details>
 
-Sources: [HW2 · Q6](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q6](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-pythagoras`
 
@@ -10044,7 +10045,7 @@ Its covariance is OLS covariance plus σ²AAᵀ for some AX=0. The added term is
 
 </details>
 
-Sources: [Least-squares theory · pp. 19–20](../courses/stat244/lecnotes/notes-lstheory.pdf#page=19)
+Sources: [Least-squares theory · pp. 19–20](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=19)
 
 Card ID: `stat244-blue-proof`
 
@@ -10063,7 +10064,7 @@ Card ID: `stat244-blue-proof`
 
 </details>
 
-Sources: [Least-squares theory · pp. 19–20](../courses/stat244/lecnotes/notes-lstheory.pdf#page=19)
+Sources: [Least-squares theory · pp. 19–20](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=19)
 
 Card ID: `stat244-contrast-variance-gap`
 
@@ -10082,7 +10083,7 @@ It measures residual size using V⁻¹ when Var(y)=σ²V: minimize eᵀV⁻¹e.
 
 </details>
 
-Sources: [Least-squares theory · pp. 20–22](../courses/stat244/lecnotes/notes-lstheory.pdf#page=20)
+Sources: [Least-squares theory · pp. 20–22](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=20)
 
 Card ID: `stat244-gls`
 
@@ -10101,7 +10102,7 @@ Transforming y by V⁻¹ᐟ² changes its mean to V⁻¹ᐟ²Xβ too. Leaving X 
 
 </details>
 
-Sources: [Least-squares theory · pp. 20–22](../courses/stat244/lecnotes/notes-lstheory.pdf#page=20)
+Sources: [Least-squares theory · pp. 20–22](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=20)
 
 Card ID: `stat244-whitening-covariance`
 
@@ -10120,7 +10121,7 @@ Card ID: `stat244-whitening-covariance`
 
 </details>
 
-Sources: [Least-squares theory · p. 22](../courses/stat244/lecnotes/notes-lstheory.pdf#page=22)
+Sources: [Least-squares theory · p. 22](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=22)
 
 Card ID: `stat244-weights`
 
@@ -10139,7 +10140,7 @@ Card ID: `stat244-weights`
 
 </details>
 
-Sources: [Least-squares theory · p. 22](../courses/stat244/lecnotes/notes-lstheory.pdf#page=22)
+Sources: [Least-squares theory · p. 22](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=22)
 
 Card ID: `stat244-weighted-mean`
 
@@ -10158,7 +10159,7 @@ Card ID: `stat244-weighted-mean`
 
 </details>
 
-Sources: [Inference notes · p. 3](../courses/stat244/lecnotes/notes-lsinf.pdf#page=3)
+Sources: [Inference notes · p. 3](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=3)
 
 Card ID: `stat244-cochran`
 
@@ -10177,7 +10178,7 @@ It is χ²₂, with mean 2 and variance 4.
 
 </details>
 
-Sources: [Inference notes · p. 3](../courses/stat244/lecnotes/notes-lsinf.pdf#page=3)
+Sources: [Inference notes · p. 3](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=3)
 
 Card ID: `stat244-quadratic-rank-two`
 
@@ -10196,7 +10197,7 @@ They are jointly Gaussian and have zero cross-covariance, since H(I−H)=0.
 
 </details>
 
-Sources: [Inference notes · p. 3](../courses/stat244/lecnotes/notes-lsinf.pdf#page=3)
+Sources: [Inference notes · p. 3](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=3)
 
 Card ID: `stat244-independent-fit-residual`
 
@@ -10215,7 +10216,7 @@ Improvement per added direction against residual noise per remaining direction: 
 
 </details>
 
-Sources: [Inference notes · pp. 3–6](../courses/stat244/lecnotes/notes-lsinf.pdf#page=5)
+Sources: [Inference notes · pp. 3–6](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=5)
 
 Card ID: `stat244-f-test`
 
@@ -10234,7 +10235,7 @@ Under the null, the extra fitted directions contain noise but no mean signal. Un
 
 </details>
 
-Sources: [Inference notes · pp. 3–6](../courses/stat244/lecnotes/notes-lsinf.pdf#page=5)
+Sources: [Inference notes · pp. 3–6](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=5)
 
 Card ID: `stat244-f-null-needed`
 
@@ -10253,7 +10254,7 @@ Three with an intercept, if all three contrast directions are independent.
 
 </details>
 
-Sources: [Inference notes · pp. 3–6](../courses/stat244/lecnotes/notes-lsinf.pdf#page=5)
+Sources: [Inference notes · pp. 3–6](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=5)
 
 Card ID: `stat244-rank-not-predictors`
 
@@ -10272,7 +10273,7 @@ Yes. Both indicate that allowing the extra directions substantially improves fit
 
 </details>
 
-Sources: [Inference notes · pp. 5–6](../courses/stat244/lecnotes/notes-lsinf.pdf#page=5)
+Sources: [Inference notes · pp. 5–6](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=5)
 
 Card ID: `stat244-lrt-monotone`
 
@@ -10291,7 +10292,7 @@ Card ID: `stat244-lrt-monotone`
 
 </details>
 
-Sources: [Inference notes · p. 5 · companion calculation](../courses/stat244/lecnotes/notes-lsinf.pdf#page=5)
+Sources: [Inference notes · p. 5 · companion calculation](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=5)
 
 Card ID: `stat244-f-number`
 
@@ -10310,7 +10311,7 @@ Use a row with 1 in position 2, −1 in position 3, and zeros elsewhere; set its
 
 </details>
 
-Sources: [Inference notes · pp. 8–10](../courses/stat244/lecnotes/notes-lsinf.pdf#page=9)
+Sources: [Inference notes · pp. 8–10](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=9)
 
 Card ID: `stat244-constraints`
 
@@ -10329,7 +10330,7 @@ No. Its solution set does not contain zero, so it is affine.
 
 </details>
 
-Sources: [Inference notes · pp. 8–10](../courses/stat244/lecnotes/notes-lsinf.pdf#page=9)
+Sources: [Inference notes · pp. 8–10](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=9)
 
 Card ID: `stat244-constraint-matrix`
 
@@ -10348,7 +10349,7 @@ They balance the least-squares gradient against directions forbidden by Λβ=c. 
 
 </details>
 
-Sources: [Inference notes · pp. 8–10](../courses/stat244/lecnotes/notes-lsinf.pdf#page=9)
+Sources: [Inference notes · pp. 8–10](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=9)
 
 Card ID: `stat244-constrained-normal-equations`
 
@@ -10367,7 +10368,7 @@ s√[(XᵀX)⁻¹ⱼⱼ], with s²=SSE/(n−p). The inverse-design term alone om
 
 </details>
 
-Sources: [Inference notes · p. 10](../courses/stat244/lecnotes/notes-lsinf.pdf#page=10)
+Sources: [Inference notes · p. 10](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=10)
 
 Card ID: `stat244-t-ci`
 
@@ -10386,7 +10387,7 @@ Card ID: `stat244-t-ci`
 
 </details>
 
-Sources: [Inference notes · p. 10](../courses/stat244/lecnotes/notes-lsinf.pdf#page=10)
+Sources: [Inference notes · p. 10](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=10)
 
 Card ID: `stat244-standard-error-number`
 
@@ -10405,7 +10406,7 @@ Under repeated sampling, the interval-building procedure covers the fixed true p
 
 </details>
 
-Sources: [Inference notes · p. 10](../courses/stat244/lecnotes/notes-lsinf.pdf#page=10)
+Sources: [Inference notes · p. 10](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=10)
 
 Card ID: `stat244-confidence-interpretation`
 
@@ -10424,7 +10425,7 @@ A new response includes its own noise in addition to uncertainty in the estimate
 
 </details>
 
-Sources: [Inference notes · pp. 12–13](../courses/stat244/lecnotes/notes-lsinf.pdf#page=13)
+Sources: [Inference notes · pp. 12–13](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=13)
 
 Card ID: `stat244-prediction`
 
@@ -10443,7 +10444,7 @@ Mean: 2√0.25=1. New response: 2√1.25=√5.
 
 </details>
 
-Sources: [Inference notes · pp. 12–13](../courses/stat244/lecnotes/notes-lsinf.pdf#page=13)
+Sources: [Inference notes · pp. 12–13](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=13)
 
 Card ID: `stat244-prediction-width-number`
 
@@ -10462,7 +10463,7 @@ No. All intervals covering simultaneously is a stronger event than any one cover
 
 </details>
 
-Sources: [Inference notes · pp. 11–12](../courses/stat244/lecnotes/notes-lsinf.pdf#page=12)
+Sources: [Inference notes · pp. 11–12](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=12)
 
 Card ID: `stat244-simultaneous`
 
@@ -10481,7 +10482,7 @@ Card ID: `stat244-simultaneous`
 
 </details>
 
-Sources: [Inference notes · pp. 11–12](../courses/stat244/lecnotes/notes-lsinf.pdf#page=12)
+Sources: [Inference notes · pp. 11–12](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=12)
 
 Card ID: `stat244-scheffe-factor`
 
@@ -10500,7 +10501,7 @@ A⊥ is larger: B⊥⊆A⊥. Being perpendicular to a bigger space imposes more 
 
 </details>
 
-Sources: [HW1 · Q7](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q7](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-orthocomplement`
 
@@ -10519,7 +10520,7 @@ Any vector in the intersection is perpendicular to both v₁ and v₂, hence to 
 
 </details>
 
-Sources: [HW1 · Q7](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q7](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-intersection-complement`
 
@@ -10538,7 +10539,7 @@ A itself. Every vector decomposes into an A component and an A⊥ component; per
 
 </details>
 
-Sources: [HW1 · Q7](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q7](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-double-complement`
 
@@ -10557,7 +10558,7 @@ It becomes AΣAᵀ. The constant shift b changes the mean, not the covariance.
 
 </details>
 
-Sources: [Inference notes · p. 1](../courses/stat244/lecnotes/notes-lsinf.pdf#page=1)
+Sources: [Inference notes · p. 1](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=1)
 
 Card ID: `stat244-cov-transform`
 
@@ -10576,7 +10577,7 @@ Yes. Symmetry makes Cov(X,X²)=0, but X² is completely determined by X.
 
 </details>
 
-Sources: [Inference notes · p. 1](../courses/stat244/lecnotes/notes-lsinf.pdf#page=1)
+Sources: [Inference notes · p. 1](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=1)
 
 Card ID: `stat244-gaussian-uncorrelated`
 
@@ -10595,7 +10596,7 @@ Yes. One predictor can be nearly a combination of several others without nearly 
 
 </details>
 
-Sources: [Inference notes · pp. 14–15](../courses/stat244/lecnotes/notes-lsinf.pdf#page=14)
+Sources: [Inference notes · pp. 14–15](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=14)
 
 Card ID: `stat244-collinearity`
 
@@ -10614,7 +10615,7 @@ One coefficient can rise while the other falls, nearly cancelling in Xβ.
 
 </details>
 
-Sources: [Inference notes · pp. 14–15](../courses/stat244/lecnotes/notes-lsinf.pdf#page=14)
+Sources: [Inference notes · pp. 14–15](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=14)
 
 Card ID: `stat244-stable-sum-unstable-parts`
 
@@ -10633,7 +10634,7 @@ Card ID: `stat244-stable-sum-unstable-parts`
 
 </details>
 
-Sources: [Inference notes · pp. 15–18](../courses/stat244/lecnotes/notes-lsinf.pdf#page=15)
+Sources: [Inference notes · pp. 15–18](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=15)
 
 Card ID: `stat244-vif`
 
@@ -10652,7 +10653,7 @@ By 3, holding noise and predictor scale fixed. Standard error is the square root
 
 </details>
 
-Sources: [Inference notes · pp. 15–18](../courses/stat244/lecnotes/notes-lsinf.pdf#page=15)
+Sources: [Inference notes · pp. 15–18](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=15)
 
 Card ID: `stat244-vif-standard-error`
 
@@ -10671,7 +10672,7 @@ Card ID: `stat244-vif-standard-error`
 
 </details>
 
-Sources: [Inference notes · pp. 16–17](../courses/stat244/lecnotes/notes-lsinf.pdf#page=17)
+Sources: [Inference notes · pp. 16–17](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=17)
 
 Card ID: `stat244-gvif-scale`
 
@@ -10690,7 +10691,7 @@ Its projection onto the earlier columns’ span. What remains is a new perpendic
 
 </details>
 
-Sources: [Inference notes · pp. 20–23](../courses/stat244/lecnotes/notes-lsinf.pdf#page=20)
+Sources: [Inference notes · pp. 20–23](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=20)
 
 Card ID: `stat244-gram-schmidt`
 
@@ -10709,7 +10710,7 @@ Card ID: `stat244-gram-schmidt`
 
 </details>
 
-Sources: [Inference notes · pp. 20–23](../courses/stat244/lecnotes/notes-lsinf.pdf#page=20)
+Sources: [Inference notes · pp. 20–23](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=20)
 
 Card ID: `stat244-gram-schmidt-number`
 
@@ -10728,7 +10729,7 @@ No. If all directions are retained, it only changes coordinates. Transforming ba
 
 </details>
 
-Sources: [Inference notes · pp. 18–20](../courses/stat244/lecnotes/notes-lsinf.pdf#page=19)
+Sources: [Inference notes · pp. 18–20](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=19)
 
 Card ID: `stat244-orthogonalization-limit`
 
@@ -10747,7 +10748,7 @@ PCA ranks directions by variation in X, not their relationship with y. A low-var
 
 </details>
 
-Sources: [Inference notes · pp. 23–24](../courses/stat244/lecnotes/notes-lsinf.pdf#page=23)
+Sources: [Inference notes · pp. 23–24](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=23)
 
 Card ID: `stat244-pcr`
 
@@ -10766,7 +10767,7 @@ All components preserve the original space. Dropping components removes directio
 
 </details>
 
-Sources: [Inference notes · pp. 23–24](../courses/stat244/lecnotes/notes-lsinf.pdf#page=23)
+Sources: [Inference notes · pp. 23–24](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=23)
 
 Card ID: `stat244-pcr-full-versus-truncated`
 
@@ -10785,7 +10786,7 @@ Otherwise validation predictors influence the means, scales, and directions used
 
 </details>
 
-Sources: [Inference notes · pp. 23–24](../courses/stat244/lecnotes/notes-lsinf.pdf#page=23)
+Sources: [Inference notes · pp. 23–24](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=23)
 
 Card ID: `stat244-pca-fold-boundary`
 
@@ -10804,7 +10805,7 @@ The response y, as well as predictor structure, to construct components.
 
 </details>
 
-Sources: [Inference notes · pp. 24–25](../courses/stat244/lecnotes/notes-lsinf.pdf#page=24)
+Sources: [Inference notes · pp. 24–25](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=24)
 
 Card ID: `stat244-pls`
 
@@ -10823,7 +10824,7 @@ Validation responses influence the constructed components, leaking the answers i
 
 </details>
 
-Sources: [Inference notes · pp. 24–25](../courses/stat244/lecnotes/notes-lsinf.pdf#page=24)
+Sources: [Inference notes · pp. 24–25](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=24)
 
 Card ID: `stat244-pls-supervised-boundary`
 
@@ -10842,7 +10843,7 @@ Choose β=0, so Xβ=0.
 
 </details>
 
-Sources: [HW1 · Q1 · companion concept check](../courses/stat244/homeworks/ps1/hw1.pdf#page=1)
+Sources: [HW1 · Q1 · companion concept check](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=1)
 
 Card ID: `stat244-zero-mean`
 
@@ -10861,7 +10862,7 @@ Yes: Xβ₁+Xβ₂=X(β₁+β₂).
 
 </details>
 
-Sources: [HW1 · Q1 · companion concept check](../courses/stat244/homeworks/ps1/hw1.pdf#page=1)
+Sources: [HW1 · Q1 · companion concept check](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=1)
 
 Card ID: `stat244-add-means`
 
@@ -10880,7 +10881,7 @@ N(Xᵀ), since Xᵀe=0. Residuals have n entries, not p.
 
 </details>
 
-Sources: [HW1 · Q1 · companion concept check](../courses/stat244/homeworks/ps1/hw1.pdf#page=1)
+Sources: [HW1 · Q1 · companion concept check](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=1)
 
 Card ID: `stat244-residual-space`
 
@@ -10899,7 +10900,7 @@ Card ID: `stat244-residual-space`
 
 </details>
 
-Sources: [Linear algebra notes · subspaces and rank · companion concept check](../courses/stat244/lecnotes/notes-linalg.pdf#page=4)
+Sources: [Linear algebra notes · subspaces and rank · companion concept check](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=4)
 
 Card ID: `stat244-residual-dimension`
 
@@ -10918,7 +10919,7 @@ No. Every combination of the remaining columns was already available.
 
 </details>
 
-Sources: [HW1 · Q1 · companion concept check](../courses/stat244/homeworks/ps1/hw1.pdf#page=1)
+Sources: [HW1 · Q1 · companion concept check](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=1)
 
 Card ID: `stat244-drop-column`
 
@@ -10937,7 +10938,7 @@ Every ℓᵀβ. The row space is all of ℝᵖ.
 
 </details>
 
-Sources: [HW1 · Q5–6 · companion concept check](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q5–6 · companion concept check](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-full-rank-targets`
 
@@ -10956,7 +10957,7 @@ Find v with Xv=0 but ℓᵀv≠0. Then β and β+v have identical means but diff
 
 </details>
 
-Sources: [HW1 · Q5–6 · companion concept check](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q5–6 · companion concept check](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-null-target-test`
 
@@ -10975,7 +10976,7 @@ The target row survives the recoverable part of the design. This characterizes e
 
 </details>
 
-Sources: [HW1 · Q5–6 · companion concept check](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q5–6 · companion concept check](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-estimability-ginverse`
 
@@ -10994,7 +10995,7 @@ vᵀXᵀXv=‖Xv‖². This is zero exactly when Xv=0.
 
 </details>
 
-Sources: [HW1 · Q5–6 · companion concept check](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q5–6 · companion concept check](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-gram-null`
 
@@ -11013,7 +11014,7 @@ They have the same null space, and their column spaces are the corresponding ort
 
 </details>
 
-Sources: [HW1 · Q5–6 · companion concept check](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q5–6 · companion concept check](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-gram-row`
 
@@ -11032,7 +11033,7 @@ Card ID: `stat244-gram-row`
 
 </details>
 
-Sources: [HW1 · Q5–6 · companion concept check](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q5–6 · companion concept check](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-duplicate-null`
 
@@ -11051,7 +11052,7 @@ No. Shifting coefficients by (t,−t) changes the difference by 2t without chang
 
 </details>
 
-Sources: [HW1 · Q5–6 · companion concept check](../courses/stat244/homeworks/ps1/hw1.pdf#page=2)
+Sources: [HW1 · Q5–6 · companion concept check](../courses/harvard/stat244/homeworks/ps1/hw1.pdf#page=2)
 
 Card ID: `stat244-duplicate-difference`
 
@@ -11070,7 +11071,7 @@ Add c to α and subtract c from every βᵢ. Every cell mean stays the same.
 
 </details>
 
-Sources: [Least-squares theory · p. 2 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=2)
+Sources: [Least-squares theory · p. 2 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=2)
 
 Card ID: `stat244-two-way-shift`
 
@@ -11089,7 +11090,7 @@ Yes. At the same column j, μᵢⱼ−μₖⱼ=βᵢ−βₖ.
 
 </details>
 
-Sources: [Least-squares theory · p. 2 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=2)
+Sources: [Least-squares theory · p. 2 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=2)
 
 Card ID: `stat244-two-way-row-contrast`
 
@@ -11108,7 +11109,7 @@ The difference βᵢ−βₖ is the same at every column level.
 
 </details>
 
-Sources: [Least-squares theory · p. 2 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=2)
+Sources: [Least-squares theory · p. 2 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=2)
 
 Card ID: `stat244-two-way-interaction`
 
@@ -11127,7 +11128,7 @@ r+c−1: one baseline, r−1 row contrasts, and c−1 column contrasts.
 
 </details>
 
-Sources: [Least-squares theory · p. 2 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=2)
+Sources: [Least-squares theory · p. 2 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=2)
 
 Card ID: `stat244-two-way-dimensions`
 
@@ -11146,7 +11147,7 @@ It removes allowable mean patterns. Choosing a reference only renames the same p
 
 </details>
 
-Sources: [Least-squares theory · p. 2 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=2)
+Sources: [Least-squares theory · p. 2 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=2)
 
 Card ID: `stat244-equality-shrinks`
 
@@ -11165,7 +11166,7 @@ No. The fitted-value space and orthogonal projection are unchanged.
 
 </details>
 
-Sources: [HW2 · Q1 and Q4 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q1 and Q4 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-recode-sse`
 
@@ -11184,7 +11185,7 @@ Yes. A coefficient may now represent a different hypothesis, even though fitted 
 
 </details>
 
-Sources: [HW2 · Q1 and Q4 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q1 and Q4 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-recode-coefficient-tests`
 
@@ -11203,7 +11204,7 @@ When it contains zero, equivalently when Xβ̂=0.
 
 </details>
 
-Sources: [HW2 · Q2 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q2 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-affine-origin`
 
@@ -11222,7 +11223,7 @@ It excludes (0,0), and doubling a point changes the sum to 6.
 
 </details>
 
-Sources: [HW2 · Q2 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q2 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-affine-zero`
 
@@ -11241,7 +11242,7 @@ Its dot product with the residual is zero.
 
 </details>
 
-Sources: [Least-squares theory · p. 9 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=9)
+Sources: [Least-squares theory · p. 9 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=9)
 
 Card ID: `stat244-normal-equation-geometry`
 
@@ -11260,7 +11261,7 @@ Its Hessian is 2XᵀX, which is positive semidefinite because vᵀXᵀXv=‖Xv�
 
 </details>
 
-Sources: [Least-squares theory · p. 9 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=9)
+Sources: [Least-squares theory · p. 9 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=9)
 
 Card ID: `stat244-hessian-positive`
 
@@ -11279,7 +11280,7 @@ When X has full column rank, making XᵀX positive definite.
 
 </details>
 
-Sources: [Least-squares theory · p. 9 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=9)
+Sources: [Least-squares theory · p. 9 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=9)
 
 Card ID: `stat244-unique-minimum`
 
@@ -11298,7 +11299,7 @@ No. The all-ones direction may not belong to the model space.
 
 </details>
 
-Sources: [Least-squares theory · p. 9 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=9)
+Sources: [Least-squares theory · p. 9 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=9)
 
 Card ID: `stat244-no-intercept`
 
@@ -11317,7 +11318,7 @@ Because y=ŷ+e and ŷᵀe=0.
 
 </details>
 
-Sources: [Least-squares theory · p. 9 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=9)
+Sources: [Least-squares theory · p. 9 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=9)
 
 Card ID: `stat244-uncentered-squares`
 
@@ -11336,7 +11337,7 @@ Expand: (I−P)²=I−2P+P²=I−P.
 
 </details>
 
-Sources: [HW2 · Q5(a–c) · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(a–c) · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-complement-idempotent`
 
@@ -11355,7 +11356,7 @@ The entire observation space. Every vector stays unchanged.
 
 </details>
 
-Sources: [HW2 · Q5(a–c) · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(a–c) · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-identity-projection`
 
@@ -11374,7 +11375,7 @@ It replaces every entry with the sample mean.
 
 </details>
 
-Sources: [HW2 · Q5(a–c) · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(a–c) · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-mean-projector`
 
@@ -11393,7 +11394,7 @@ Its eigenvalues are only 0 and 1. Summing them counts the retained directions.
 
 </details>
 
-Sources: [HW2 · Q5(a–c) · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(a–c) · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-trace-rank`
 
@@ -11412,7 +11413,7 @@ n−r.
 
 </details>
 
-Sources: [HW2 · Q5(a–c) · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(a–c) · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-residual-trace`
 
@@ -11431,7 +11432,7 @@ No. The old fit is still available in the larger space.
 
 </details>
 
-Sources: [HW2 · Q5(d) · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(d) · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-adding-fit`
 
@@ -11450,7 +11451,7 @@ r₁−r₀.
 
 </details>
 
-Sources: [HW2 · Q5(d) · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(d) · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-extra-dimensions`
 
@@ -11469,7 +11470,7 @@ Small-model fit, extra large-model fit, and large-model residual. Their sum is y
 
 </details>
 
-Sources: [HW2 · Q5(d) · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(d) · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-three-pieces`
 
@@ -11488,7 +11489,7 @@ No. Nesting is one condition that makes P₀P₁=P₁P₀=P₀.
 
 </details>
 
-Sources: [HW2 · Q5(d) · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(d) · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-commute-warning`
 
@@ -11507,7 +11508,7 @@ The equally weighted average of fitted group means.
 
 </details>
 
-Sources: [HW2 · Q3–4 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=2)
+Sources: [HW2 · Q3–4 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=2)
 
 Card ID: `stat244-sum-intercept`
 
@@ -11526,7 +11527,7 @@ No. It averages group means equally, while the sample mean weights groups by the
 
 </details>
 
-Sources: [HW2 · Q3–4 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=2)
+Sources: [HW2 · Q3–4 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=2)
 
 Card ID: `stat244-unbalanced-average`
 
@@ -11545,7 +11546,7 @@ No, with equivalent full-rank coding and the same model. The differences are sim
 
 </details>
 
-Sources: [HW2 · Q3–4 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=2)
+Sources: [HW2 · Q3–4 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=2)
 
 Card ID: `stat244-reference-change`
 
@@ -11564,7 +11565,7 @@ Card ID: `stat244-reference-change`
 
 </details>
 
-Sources: [HW2 · Q3–4 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=2)
+Sources: [HW2 · Q3–4 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=2)
 
 Card ID: `stat244-sum-means`
 
@@ -11583,7 +11584,7 @@ That mean contrast equals three times the coefficient.
 
 </details>
 
-Sources: [HW2 · Q3–4 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=2)
+Sources: [HW2 · Q3–4 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=2)
 
 Card ID: `stat244-second-helmert`
 
@@ -11602,7 +11603,7 @@ The group-mean space is unchanged, so adjusting for it leaves the same regressio
 
 </details>
 
-Sources: [HW2 · Q1 and Q4 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q1 and Q4 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-baseline-slope`
 
@@ -11621,7 +11622,7 @@ SSE/n, rather than SSE/(n−r).
 
 </details>
 
-Sources: [HW2 · Q7; least-squares theory · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf)
+Sources: [HW2 · Q7; least-squares theory · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf)
 
 Card ID: `stat244-variance-mle`
 
@@ -11640,7 +11641,7 @@ Fitting removes noise along r model directions, leaving expected SSE=(n−r)σ²
 
 </details>
 
-Sources: [HW2 · Q7; least-squares theory · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf)
+Sources: [HW2 · Q7; least-squares theory · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf)
 
 Card ID: `stat244-variance-bias`
 
@@ -11659,7 +11660,7 @@ No. There are no residual degrees of freedom, and the denominator is zero.
 
 </details>
 
-Sources: [HW2 · Q7; least-squares theory · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf)
+Sources: [HW2 · Q7; least-squares theory · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf)
 
 Card ID: `stat244-no-residual-df`
 
@@ -11678,7 +11679,7 @@ No. The likelihood grows as variance approaches zero, a boundary behavior.
 
 </details>
 
-Sources: [HW2 · Q7; least-squares theory · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf)
+Sources: [HW2 · Q7; least-squares theory · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf)
 
 Card ID: `stat244-zero-sse-boundary`
 
@@ -11697,7 +11698,7 @@ No. The mean and spherical covariance assumptions are enough for the linear-unbi
 
 </details>
 
-Sources: [HW2 · Q9 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=4)
+Sources: [HW2 · Q9 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4)
 
 Card ID: `stat244-blue-normality`
 
@@ -11716,7 +11717,7 @@ Yes. BLUE only minimizes variance within the linear unbiased class.
 
 </details>
 
-Sources: [HW2 · Q9 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=4)
+Sources: [HW2 · Q9 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4)
 
 Card ID: `stat244-blue-biased`
 
@@ -11735,7 +11736,7 @@ Equal marginal variances and zero pairwise covariances. It does not alone assert
 
 </details>
 
-Sources: [HW2 · Q9 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=4)
+Sources: [HW2 · Q9 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4)
 
 Card ID: `stat244-spherical-errors`
 
@@ -11754,7 +11755,7 @@ When B is invertible. Multiply BGB=B by B⁻¹ on both sides.
 
 </details>
 
-Sources: [Linear algebra notes · pp. 4–5 · companion concept check](../courses/stat244/lecnotes/notes-linalg.pdf#page=5)
+Sources: [Linear algebra notes · pp. 4–5 · companion concept check](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=5)
 
 Card ID: `stat244-ordinary-inverse`
 
@@ -11773,7 +11774,7 @@ t=0.
 
 </details>
 
-Sources: [Linear algebra notes · pp. 4–5 · companion concept check](../courses/stat244/lecnotes/notes-linalg.pdf#page=5)
+Sources: [Linear algebra notes · pp. 4–5 · companion concept check](../courses/harvard/stat244/lecnotes/notes-linalg.pdf#page=5)
 
 Card ID: `stat244-moore-penrose-choice`
 
@@ -11792,7 +11793,7 @@ It keeps the first and kills the second.
 
 </details>
 
-Sources: [HW2 · Q10 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=4)
+Sources: [HW2 · Q10 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4)
 
 Card ID: `stat244-projector-action`
 
@@ -11811,7 +11812,7 @@ Card ID: `stat244-projector-action`
 
 </details>
 
-Sources: [HW2 · Q6 · companion concept check](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q6 · companion concept check](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-minimum-squared-distance`
 
@@ -11830,7 +11831,7 @@ When BX=I, because E[By]=BXβ.
 
 </details>
 
-Sources: [Least-squares theory · pp. 19–20 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=19)
+Sources: [Least-squares theory · pp. 19–20 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=19)
 
 Card ID: `stat244-unbiased-constraint`
 
@@ -11849,7 +11850,7 @@ For every v, vᵀAAᵀv=‖Aᵀv‖²≥0.
 
 </details>
 
-Sources: [Least-squares theory · pp. 19–20 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=19)
+Sources: [Least-squares theory · pp. 19–20 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=19)
 
 Card ID: `stat244-variance-gap-psd`
 
@@ -11868,7 +11869,7 @@ No. They satisfy XᵀV⁻¹e=0: weighted orthogonality.
 
 </details>
 
-Sources: [Least-squares theory · pp. 20–22 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=20)
+Sources: [Least-squares theory · pp. 20–22 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=20)
 
 Card ID: `stat244-gls-orthogonality`
 
@@ -11887,7 +11888,7 @@ Card ID: `stat244-gls-orthogonality`
 
 </details>
 
-Sources: [Least-squares theory · pp. 20–22 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=20)
+Sources: [Least-squares theory · pp. 20–22 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=20)
 
 Card ID: `stat244-whitening-result`
 
@@ -11906,7 +11907,7 @@ Weight proportional to m, since its variance is σ²/m.
 
 </details>
 
-Sources: [Least-squares theory · p. 22 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=22)
+Sources: [Least-squares theory · p. 22 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=22)
 
 Card ID: `stat244-mean-precision`
 
@@ -11925,7 +11926,7 @@ No. The full inverse covariance matters, including off-diagonal entries.
 
 </details>
 
-Sources: [Least-squares theory · p. 22 · companion concept check](../courses/stat244/lecnotes/notes-lstheory.pdf#page=22)
+Sources: [Least-squares theory · p. 22 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=22)
 
 Card ID: `stat244-correlated-weights`
 
@@ -11944,7 +11945,7 @@ Card ID: `stat244-correlated-weights`
 
 </details>
 
-Sources: [Inference notes · p. 3 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=3)
+Sources: [Inference notes · p. 3 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=3)
 
 Card ID: `stat244-residual-chi-square`
 
@@ -11963,7 +11964,7 @@ No. The exact chi-squared result requires the appropriate Gaussian noise model.
 
 </details>
 
-Sources: [Inference notes · p. 3 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=3)
+Sources: [Inference notes · p. 3 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=3)
 
 Card ID: `stat244-non-gaussian-warning`
 
@@ -11982,7 +11983,7 @@ H−H²=0 because H is idempotent.
 
 </details>
 
-Sources: [Inference notes · p. 3 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=3)
+Sources: [Inference notes · p. 3 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=3)
 
 Card ID: `stat244-covariance-zero`
 
@@ -12001,7 +12002,7 @@ It estimates noise after allowing all directions under consideration.
 
 </details>
 
-Sources: [Inference notes · pp. 3–6 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=5)
+Sources: [Inference notes · pp. 3–6 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=5)
 
 Card ID: `stat244-f-noise-denominator`
 
@@ -12020,7 +12021,7 @@ Both numerator and denominator estimate the same noise variance after dividing b
 
 </details>
 
-Sources: [Inference notes · pp. 3–6 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=5)
+Sources: [Inference notes · pp. 3–6 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=5)
 
 Card ID: `stat244-f-close-one`
 
@@ -12039,7 +12040,7 @@ F with degrees of freedom (2,20), under the Gaussian null assumptions.
 
 </details>
 
-Sources: [Inference notes · p. 5 · companion calculation · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=5)
+Sources: [Inference notes · p. 5 · companion calculation · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=5)
 
 Card ID: `stat244-f-degrees`
 
@@ -12058,7 +12059,7 @@ Card ID: `stat244-f-degrees`
 
 </details>
 
-Sources: [Inference notes · pp. 5–6 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=5)
+Sources: [Inference notes · pp. 5–6 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=5)
 
 Card ID: `stat244-lrt-ratio`
 
@@ -12077,7 +12078,7 @@ Some restrictions change along null directions while the data distribution stays
 
 </details>
 
-Sources: [Inference notes · pp. 8–10 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=9)
+Sources: [Inference notes · pp. 8–10 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=9)
 
 Card ID: `stat244-untestable-restriction`
 
@@ -12096,7 +12097,7 @@ Use rows (0,1,−1,0) and (0,0,0,1), with targets 0 and 2.
 
 </details>
 
-Sources: [Inference notes · pp. 8–10 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=9)
+Sources: [Inference notes · pp. 8–10 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=9)
 
 Card ID: `stat244-two-restrictions`
 
@@ -12115,7 +12116,7 @@ Card ID: `stat244-two-restrictions`
 
 </details>
 
-Sources: [Inference notes · pp. 8–10 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=9)
+Sources: [Inference notes · pp. 8–10 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=9)
 
 Card ID: `stat244-kkt-lower`
 
@@ -12134,7 +12135,7 @@ XᵀXβ+Λᵀξ=Xᵀy, with multiplier scaling absorbed in ξ.
 
 </details>
 
-Sources: [Inference notes · pp. 8–10 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=9)
+Sources: [Inference notes · pp. 8–10 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=9)
 
 Card ID: `stat244-kkt-upper`
 
@@ -12153,7 +12154,7 @@ The estimated noise scale introduces extra uncertainty. Under Gaussian errors, t
 
 </details>
 
-Sources: [Inference notes · p. 10 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=10)
+Sources: [Inference notes · p. 10 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=10)
 
 Card ID: `stat244-why-t`
 
@@ -12172,7 +12173,7 @@ Card ID: `stat244-why-t`
 
 </details>
 
-Sources: [Inference notes · p. 10 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=10)
+Sources: [Inference notes · p. 10 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=10)
 
 Card ID: `stat244-t-two`
 
@@ -12191,7 +12192,7 @@ Estimate ± t critical value × estimated SE, under the Gaussian linear-model co
 
 </details>
 
-Sources: [Inference notes · p. 10 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=10)
+Sources: [Inference notes · p. 10 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=10)
 
 Card ID: `stat244-interval-form`
 
@@ -12210,7 +12211,7 @@ No. That interpretation needs a posterior distribution and its assumptions.
 
 </details>
 
-Sources: [Inference notes · p. 10 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=10)
+Sources: [Inference notes · p. 10 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=10)
 
 Card ID: `stat244-confidence-not-posterior`
 
@@ -12229,7 +12230,7 @@ It can eliminate mean-estimation uncertainty in suitable settings, but not the n
 
 </details>
 
-Sources: [Inference notes · pp. 12–13 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=13)
+Sources: [Inference notes · pp. 12–13 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=13)
 
 Card ID: `stat244-infinite-data-noise`
 
@@ -12248,7 +12249,7 @@ Card ID: `stat244-infinite-data-noise`
 
 </details>
 
-Sources: [Inference notes · pp. 11–12 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=12)
+Sources: [Inference notes · pp. 11–12 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=12)
 
 Card ID: `stat244-independent-intervals`
 
@@ -12267,7 +12268,7 @@ Aμ+b.
 
 </details>
 
-Sources: [Inference notes · p. 1 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=1)
+Sources: [Inference notes · p. 1 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=1)
 
 Card ID: `stat244-mean-transform`
 
@@ -12286,7 +12287,7 @@ No. Finite second moments suffice.
 
 </details>
 
-Sources: [Inference notes · p. 1 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=1)
+Sources: [Inference notes · p. 1 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=1)
 
 Card ID: `stat244-no-gaussian-required`
 
@@ -12305,7 +12306,7 @@ When they are jointly Gaussian.
 
 </details>
 
-Sources: [Inference notes · p. 1 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=1)
+Sources: [Inference notes · p. 1 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=1)
 
 Card ID: `stat244-joint-normal-key`
 
@@ -12324,7 +12325,7 @@ Yes. The near-dependence uses three columns together.
 
 </details>
 
-Sources: [Inference notes · pp. 14–15 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=14)
+Sources: [Inference notes · pp. 14–15 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=14)
 
 Card ID: `stat244-three-variable-dependence`
 
@@ -12343,7 +12344,7 @@ The cancellation between uncertain coefficients may no longer occur at the new p
 
 </details>
 
-Sources: [Inference notes · pp. 14–15 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=14)
+Sources: [Inference notes · pp. 14–15 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=14)
 
 Card ID: `stat244-extrapolation-risk`
 
@@ -12362,7 +12363,7 @@ Card ID: `stat244-extrapolation-risk`
 
 </details>
 
-Sources: [Inference notes · pp. 15–18 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=15)
+Sources: [Inference notes · pp. 15–18 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=15)
 
 Card ID: `stat244-vif-zero-rsquared`
 
@@ -12381,7 +12382,7 @@ No. The scientific target and model assumptions matter too.
 
 </details>
 
-Sources: [Inference notes · pp. 15–18 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=15)
+Sources: [Inference notes · pp. 15–18 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=15)
 
 Card ID: `stat244-vif-not-delete`
 
@@ -12400,7 +12401,7 @@ The new column is already in the earlier span.
 
 </details>
 
-Sources: [Inference notes · pp. 20–23 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=20)
+Sources: [Inference notes · pp. 20–23 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=20)
 
 Card ID: `stat244-zero-new-direction`
 
@@ -12419,7 +12420,7 @@ Divide by ‖u‖.
 
 </details>
 
-Sources: [Inference notes · pp. 20–23 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=20)
+Sources: [Inference notes · pp. 20–23 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=20)
 
 Card ID: `stat244-normalize-direction`
 
@@ -12438,7 +12439,7 @@ It can reduce variance by removing poorly determined directions, at the cost of 
 
 </details>
 
-Sources: [Inference notes · pp. 23–24 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=23)
+Sources: [Inference notes · pp. 23–24 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=23)
 
 Card ID: `stat244-pcr-tradeoff`
 
@@ -12457,7 +12458,7 @@ No. Response-informed directions can also fit noise. Compare honest held-out per
 
 </details>
 
-Sources: [Inference notes · pp. 24–25 · companion concept check](../courses/stat244/lecnotes/notes-lsinf.pdf#page=24)
+Sources: [Inference notes · pp. 24–25 · companion concept check](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=24)
 
 Card ID: `stat244-pls-not-universal`
 
@@ -12476,7 +12477,7 @@ Collect and clean relevant data, explore patterns, fit and evaluate models, then
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 15](../courses/am209a/lecnotes/lecture-01.pdf#page=15)
+Sources: [Lecture 1 · PDF p. 15](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=15)
 
 Card ID: `am209a-cycle`
 
@@ -12495,7 +12496,7 @@ It determines the target, prediction time, and information actually available wh
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 16](../courses/am209a/lecnotes/lecture-01.pdf#page=16)
+Sources: [Lecture 1 · PDF p. 16](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=16)
 
 Card ID: `am209a-question-first`
 
@@ -12514,7 +12515,7 @@ It checks cells in existing rows. An entirely absent row has no cells to inspect
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 20](../courses/am209a/lecnotes/lecture-01.pdf#page=20)
+Sources: [Lecture 1 · PDF p. 20](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=20)
 
 Card ID: `am209a-absent-rows`
 
@@ -12533,7 +12534,7 @@ Construct the expected timestamp sequence and compare it with observed timestamp
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 23](../courses/am209a/lecnotes/lecture-01.pdf#page=23)
+Sources: [Lecture 1 · PDF p. 23](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=23)
 
 Card ID: `am209a-hourly-audit`
 
@@ -12552,7 +12553,7 @@ It applies the same transformations consistently and makes decisions inspectable
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 27](../courses/am209a/lecnotes/lecture-01.pdf#page=27)
+Sources: [Lecture 1 · PDF p. 27](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=27)
 
 Card ID: `am209a-cleaning-pipeline`
 
@@ -12571,7 +12572,7 @@ A slope per degree is easier to interpret than a slope per arbitrary normalized 
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 28](../courses/am209a/lecnotes/lecture-01.pdf#page=28)
+Sources: [Lecture 1 · PDF p. 28](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=28)
 
 Card ID: `am209a-units`
 
@@ -12590,7 +12591,7 @@ A dominant group can hide another group's distinct pattern.
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 37](../courses/am209a/lecnotes/lecture-01.pdf#page=37)
+Sources: [Lecture 1 · PDF p. 37](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=37)
 
 Card ID: `am209a-subgroups`
 
@@ -12609,7 +12610,7 @@ Time of day affects demand and may differ across temperature ranges, confounding
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 40](../courses/am209a/lecnotes/lecture-01.pdf#page=40)
+Sources: [Lecture 1 · PDF p. 40](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=40)
 
 Card ID: `am209a-compare-like`
 
@@ -12628,7 +12629,7 @@ It mimics predicting the future using only past information.
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 43](../courses/am209a/lecnotes/lecture-01.pdf#page=43)
+Sources: [Lecture 1 · PDF p. 43](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=43)
 
 Card ID: `am209a-future-split`
 
@@ -12647,7 +12648,7 @@ The predictions have larger squared error than the test-set mean benchmark.
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 45](../courses/am209a/lecnotes/lecture-01.pdf#page=45)
+Sources: [Lecture 1 · PDF p. 45](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=45)
 
 Card ID: `am209a-negative-score`
 
@@ -12666,7 +12667,7 @@ The model may be missing a nonlinear relationship or another systematic effect.
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 48](../courses/am209a/lecnotes/lecture-01.pdf#page=48)
+Sources: [Lecture 1 · PDF p. 48](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=48)
 
 Card ID: `am209a-wrong-shape`
 
@@ -12685,7 +12686,7 @@ Its flexibility can fit accidental noise instead of a stable pattern.
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 54](../courses/am209a/lecnotes/lecture-01.pdf#page=54)
+Sources: [Lecture 1 · PDF p. 54](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=54)
 
 Card ID: `am209a-flexibility`
 
@@ -12704,7 +12705,7 @@ It discourages large coefficients while still fitting the data.
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 56](../courses/am209a/lecnotes/lecture-01.pdf#page=56)
+Sources: [Lecture 1 · PDF p. 56](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=56)
 
 Card ID: `am209a-shrinkage-intro`
 
@@ -12723,7 +12724,7 @@ A single slope imposes a constant hourly change. Categories can represent separa
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 59](../courses/am209a/lecnotes/lecture-01.pdf#page=59)
+Sources: [Lecture 1 · PDF p. 59](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=59)
 
 Card ID: `am209a-hour-categories`
 
@@ -12742,7 +12743,7 @@ Count prediction is regression; busy-versus-quiet prediction is classification.
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 63](../courses/am209a/lecnotes/lecture-01.pdf#page=63)
+Sources: [Lecture 1 · PDF p. 63](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=63)
 
 Card ID: `am209a-regression-classification`
 
@@ -12761,7 +12762,7 @@ It can predict below 0 or above 1. Logistic regression maps a linear score into 
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 64](../courses/am209a/lecnotes/lecture-01.pdf#page=64)
+Sources: [Lecture 1 · PDF p. 64](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=64)
 
 Card ID: `am209a-logistic-preview`
 
@@ -12780,7 +12781,7 @@ It follows a sequence of feature-based splits to a terminal prediction.
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 68](../courses/am209a/lecnotes/lecture-01.pdf#page=68)
+Sources: [Lecture 1 · PDF p. 68](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=68)
 
 Card ID: `am209a-tree-preview`
 
@@ -12799,7 +12800,7 @@ It has enormous sampling uncertainty; one additional failure changes the estimat
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 69](../courses/am209a/lecnotes/lecture-01.pdf#page=69)
+Sources: [Lecture 1 · PDF p. 69](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=69)
 
 Card ID: `am209a-small-samples`
 
@@ -12818,7 +12819,7 @@ It combines observed successes and failures with prior pseudo-counts.
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 70](../courses/am209a/lecnotes/lecture-01.pdf#page=70)
+Sources: [Lecture 1 · PDF p. 70](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=70)
 
 Card ID: `am209a-pseudo-counts`
 
@@ -12837,7 +12838,7 @@ Its errors or outputs may not match the decision's costs and needs.
 
 </details>
 
-Sources: [Lecture 1 · PDF p. 77](../courses/am209a/lecnotes/lecture-01.pdf#page=77)
+Sources: [Lecture 1 · PDF p. 77](../courses/harvard/am209a/lecnotes/lecture-01.pdf#page=77)
 
 Card ID: `am209a-decision-cost`
 
@@ -12856,7 +12857,7 @@ The entity observed, the variable measured, and its value with a meaningful scal
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 4](../courses/am209a/lecnotes/lecture-02.pdf#page=4)
+Sources: [Lecture 2 · PDF p. 4](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=4)
 
 Card ID: `am209a-datum`
 
@@ -12875,7 +12876,7 @@ Primary data are collected for the study; secondary data already exist from anot
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 5](../courses/am209a/lecnotes/lecture-02.pdf#page=5)
+Sources: [Lecture 2 · PDF p. 5](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=5)
 
 Card ID: `am209a-primary-secondary`
 
@@ -12894,7 +12895,7 @@ An API provides a programmatic data interface; scraping extracts information fro
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 6](../courses/am209a/lecnotes/lecture-02.pdf#page=6)
+Sources: [Lecture 2 · PDF p. 6](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=6)
 
 Card ID: `am209a-api-scraping`
 
@@ -12913,7 +12914,7 @@ They can grant access or allow requests billed to the owner.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 7](../courses/am209a/lecnotes/lecture-02.pdf#page=7)
+Sources: [Lecture 2 · PDF p. 7](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=7)
 
 Card ID: `am209a-api-key`
 
@@ -12932,7 +12933,7 @@ How frequently requests can be made within a specified interval.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 7](../courses/am209a/lecnotes/lecture-02.pdf#page=7)
+Sources: [Lecture 2 · PDF p. 7](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=7)
 
 Card ID: `am209a-rate-limit`
 
@@ -12951,7 +12952,7 @@ No. Visibility and permission to reuse are separate questions; check the applica
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 9](../courses/am209a/lecnotes/lecture-02.pdf#page=9)
+Sources: [Lecture 2 · PDF p. 9](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=9)
 
 Card ID: `am209a-public-reuse`
 
@@ -12970,7 +12971,7 @@ No. It communicates crawler preferences rather than licensing the content.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 10](../courses/am209a/lecnotes/lecture-02.pdf#page=10)
+Sources: [Lecture 2 · PDF p. 10](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=10)
 
 Card ID: `am209a-robots`
 
@@ -12989,7 +12990,7 @@ Shared attributes can become a distinctive combination that links records to a p
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 11](../courses/am209a/lecnotes/lecture-02.pdf#page=11)
+Sources: [Lecture 2 · PDF p. 11](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=11)
 
 Card ID: `am209a-reidentify`
 
@@ -13008,7 +13009,7 @@ It avoids repeated downloads, reduces server load, and preserves a reproducible 
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 12](../courses/am209a/lecnotes/lecture-02.pdf#page=12)
+Sources: [Lecture 2 · PDF p. 12](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=12)
 
 Card ID: `am209a-cache`
 
@@ -13027,7 +13028,7 @@ It is treated as one indivisible value for the analysis, such as a number, Boole
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 15](../courses/am209a/lecnotes/lecture-02.pdf#page=15)
+Sources: [Lecture 2 · PDF p. 15](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=15)
 
 Card ID: `am209a-atomic`
 
@@ -13046,7 +13047,7 @@ It contains named components that may represent several variables.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 16](../courses/am209a/lecnotes/lecture-02.pdf#page=16)
+Sources: [Lecture 2 · PDF p. 16](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=16)
 
 Card ID: `am209a-compound`
 
@@ -13065,7 +13066,7 @@ Discrete variables have separated possible values; continuous variables can vary
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 17](../courses/am209a/lecnotes/lecture-02.pdf#page=17)
+Sources: [Lecture 2 · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=17)
 
 Card ID: `am209a-discrete-continuous`
 
@@ -13084,7 +13085,7 @@ Its categories have no meaningful intrinsic order, such as blood type.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 18](../courses/am209a/lecnotes/lecture-02.pdf#page=18)
+Sources: [Lecture 2 · PDF p. 18](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=18)
 
 Card ID: `am209a-nominal`
 
@@ -13103,7 +13104,7 @@ Its categories have a meaningful order, but the gaps need not be equal.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 18](../courses/am209a/lecnotes/lecture-02.pdf#page=18)
+Sources: [Lecture 2 · PDF p. 18](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=18)
 
 Card ID: `am209a-ordinal`
 
@@ -13122,7 +13123,7 @@ Counts, proportions, and the mode.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 20](../courses/am209a/lecnotes/lecture-02.pdf#page=20)
+Sources: [Lecture 2 · PDF p. 20](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=20)
 
 Card ID: `am209a-nominal-summary`
 
@@ -13141,7 +13142,7 @@ A mean treats numerical gaps as meaningful and equal, which the category order a
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 20](../courses/am209a/lecnotes/lecture-02.pdf#page=20)
+Sources: [Lecture 2 · PDF p. 20](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=20)
 
 Card ID: `am209a-ordinal-mean`
 
@@ -13160,7 +13161,7 @@ Add all n values and divide by n.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 21](../courses/am209a/lecnotes/lecture-02.pdf#page=21)
+Sources: [Lecture 2 · PDF p. 21](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=21)
 
 Card ID: `am209a-mean`
 
@@ -13179,7 +13180,7 @@ Sort the values and average the two middle ones.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 21](../courses/am209a/lecnotes/lecture-02.pdf#page=21)
+Sources: [Lecture 2 · PDF p. 21](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=21)
 
 Card ID: `am209a-median`
 
@@ -13198,7 +13199,7 @@ Usually the mean; the median depends on order rather than the extreme value's di
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 22](../courses/am209a/lecnotes/lecture-02.pdf#page=22)
+Sources: [Lecture 2 · PDF p. 22](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=22)
 
 Card ID: `am209a-outlier-mean`
 
@@ -13217,7 +13218,7 @@ The long right tail, even if most observations are on the left.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 22](../courses/am209a/lecnotes/lecture-02.pdf#page=22)
+Sources: [Lecture 2 · PDF p. 22](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=22)
 
 Card ID: `am209a-skew-tail`
 
@@ -13236,7 +13237,7 @@ Card ID: `am209a-skew-tail`
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 23](../courses/am209a/lecnotes/lecture-02.pdf#page=23)
+Sources: [Lecture 2 · PDF p. 23](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=23)
 
 Card ID: `am209a-range`
 
@@ -13255,7 +13256,7 @@ s²=Σ(xᵢ−x̄)²/(n−1), for n>1.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 24](../courses/am209a/lecnotes/lecture-02.pdf#page=24)
+Sources: [Lecture 2 · PDF p. 24](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=24)
 
 Card ID: `am209a-02-variance`
 
@@ -13274,7 +13275,7 @@ It has the original measurement units; variance has squared units.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 24](../courses/am209a/lecnotes/lecture-02.pdf#page=24)
+Sources: [Lecture 2 · PDF p. 24](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=24)
 
 Card ID: `am209a-sd-units`
 
@@ -13293,7 +13294,7 @@ Which values occur and how frequently they occur.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 25](../courses/am209a/lecnotes/lecture-02.pdf#page=25)
+Sources: [Lecture 2 · PDF p. 25](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=25)
 
 Card ID: `am209a-distribution`
 
@@ -13312,7 +13313,7 @@ Their horizontal order can be rearranged arbitrarily.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 26](../courses/am209a/lecnotes/lecture-02.pdf#page=26)
+Sources: [Lecture 2 · PDF p. 26](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=26)
 
 Card ID: `am209a-nominal-skew`
 
@@ -13331,7 +13332,7 @@ CSV is a rectangular table; JSON can represent nested records with differing fie
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 28](../courses/am209a/lecnotes/lecture-02.pdf#page=28)
+Sources: [Lecture 2 · PDF p. 28](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=28)
 
 Card ID: `am209a-storage`
 
@@ -13350,7 +13351,7 @@ One observation of a clearly defined unit.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 29](../courses/am209a/lecnotes/lecture-02.pdf#page=29)
+Sources: [Lecture 2 · PDF p. 29](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=29)
 
 Card ID: `am209a-row-unit`
 
@@ -13369,7 +13370,7 @@ One variable measured consistently across observations.
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 29](../courses/am209a/lecnotes/lecture-02.pdf#page=29)
+Sources: [Lecture 2 · PDF p. 29](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=29)
 
 Card ID: `am209a-column-variable`
 
@@ -13388,7 +13389,7 @@ No. Better formatting cannot create missing study design or relevant measurement
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 31](../courses/am209a/lecnotes/lecture-02.pdf#page=31)
+Sources: [Lecture 2 · PDF p. 31](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=31)
 
 Card ID: `am209a-unanswerable`
 
@@ -13407,7 +13408,7 @@ Dates are values of a variable. Long form stores them as values and can append n
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 34](../courses/am209a/lecnotes/lecture-02.pdf#page=34)
+Sources: [Lecture 2 · PDF p. 34](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=34)
 
 Card ID: `am209a-long-form`
 
@@ -13426,7 +13427,7 @@ They are separate pieces of information needed for consistent interpretation and
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 35](../courses/am209a/lecnotes/lecture-02.pdf#page=35)
+Sources: [Lecture 2 · PDF p. 35](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=35)
 
 Card ID: `am209a-split-cell`
 
@@ -13445,7 +13446,7 @@ They represent different observation units; mixing them duplicates person attrib
 
 </details>
 
-Sources: [Lecture 2 · PDF p. 36](../courses/am209a/lecnotes/lecture-02.pdf#page=36)
+Sources: [Lecture 2 · PDF p. 36](../courses/harvard/am209a/lecnotes/lecture-02.pdf#page=36)
 
 Card ID: `am209a-mixed-units`
 
@@ -13464,7 +13465,7 @@ The population is the full target group; the sample contains the observations ac
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 6](../courses/am209a/lecnotes/lecture-03.pdf#page=6)
+Sources: [Lecture 3 · PDF p. 6](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=6)
 
 Card ID: `am209a-population-sample`
 
@@ -13483,7 +13484,7 @@ The selection process systematically favors some relevant kinds of observations 
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 6](../courses/am209a/lecnotes/lecture-03.pdf#page=6)
+Sources: [Lecture 3 · PDF p. 6](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=6)
 
 Card ID: `am209a-selection-bias`
 
@@ -13502,7 +13503,7 @@ People who respond may differ systematically from those who do not.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 6](../courses/am209a/lecnotes/lecture-03.pdf#page=6)
+Sources: [Lecture 3 · PDF p. 6](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=6)
 
 Card ID: `am209a-nonresponse`
 
@@ -13521,7 +13522,7 @@ A different sample would generally give a different mean.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 8](../courses/am209a/lecnotes/lecture-03.pdf#page=8)
+Sources: [Lecture 3 · PDF p. 8](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=8)
 
 Card ID: `am209a-sample-uncertainty`
 
@@ -13540,7 +13541,7 @@ Card ID: `am209a-sample-uncertainty`
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 9](../courses/am209a/lecnotes/lecture-03.pdf#page=9)
+Sources: [Lecture 3 · PDF p. 9](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=9)
 
 Card ID: `am209a-median-example`
 
@@ -13559,7 +13560,7 @@ It squares deviations, giving large distances disproportionately large contribut
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 15](../courses/am209a/lecnotes/lecture-03.pdf#page=15)
+Sources: [Lecture 3 · PDF p. 15](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=15)
 
 Card ID: `am209a-variance-outlier`
 
@@ -13578,7 +13579,7 @@ The strength and direction of a linear relationship between two varying quantita
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 17](../courses/am209a/lecnotes/lecture-03.pdf#page=17)
+Sources: [Lecture 3 · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=17)
 
 Card ID: `am209a-correlation`
 
@@ -13597,7 +13598,7 @@ From −1 to 1, provided both variables have nonzero variance.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 17](../courses/am209a/lecnotes/lecture-03.pdf#page=17)
+Sources: [Lecture 3 · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=17)
 
 Card ID: `am209a-correlation-range`
 
@@ -13616,7 +13617,7 @@ No. Positive linear rescaling leaves it unchanged.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 17](../courses/am209a/lecnotes/lecture-03.pdf#page=17)
+Sources: [Lecture 3 · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=17)
 
 Card ID: `am209a-correlation-units`
 
@@ -13635,7 +13636,7 @@ No. Confounding, selection, or other mechanisms can produce association.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 17](../courses/am209a/lecnotes/lecture-03.pdf#page=17)
+Sources: [Lecture 3 · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=17)
 
 Card ID: `am209a-causality`
 
@@ -13654,7 +13655,7 @@ No. A strong curved or symmetric nonlinear relationship can have zero linear cor
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 18](../courses/am209a/lecnotes/lecture-03.pdf#page=18)
+Sources: [Lecture 3 · PDF p. 18](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=18)
 
 Card ID: `am209a-zero-correlation`
 
@@ -13673,7 +13674,7 @@ Datasets can share common summary statistics while having very different shapes 
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 20](../courses/am209a/lecnotes/lecture-03.pdf#page=20)
+Sources: [Lecture 3 · PDF p. 20](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=20)
 
 Card ID: `am209a-anscombe`
 
@@ -13692,7 +13693,7 @@ Finding patterns, problems, and useful questions through summaries and visual in
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 23](../courses/am209a/lecnotes/lecture-03.pdf#page=23)
+Sources: [Lecture 3 · PDF p. 23](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=23)
 
 Card ID: `am209a-eda-purpose`
 
@@ -13711,7 +13712,7 @@ The variable types and whether you want to show distribution, relationship, comp
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 24](../courses/am209a/lecnotes/lecture-03.pdf#page=24)
+Sources: [Lecture 3 · PDF p. 24](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=24)
 
 Card ID: `am209a-choose-plot`
 
@@ -13730,7 +13731,7 @@ How numerical observations are distributed across intervals.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 25](../courses/am209a/lecnotes/lecture-03.pdf#page=25)
+Sources: [Lecture 3 · PDF p. 25](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=25)
 
 Card ID: `am209a-histogram`
 
@@ -13749,7 +13750,7 @@ Bin choices can hide or exaggerate apparent peaks and gaps.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 25](../courses/am209a/lecnotes/lecture-03.pdf#page=25)
+Sources: [Lecture 3 · PDF p. 25](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=25)
 
 Card ID: `am209a-bins`
 
@@ -13768,7 +13769,7 @@ When comparing categories rather than intervals on a numeric scale.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 26](../courses/am209a/lecnotes/lecture-03.pdf#page=26)
+Sources: [Lecture 3 · PDF p. 26](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=26)
 
 Card ID: `am209a-bar-histogram`
 
@@ -13787,7 +13788,7 @@ Aligned lengths are easier to compare accurately than angles or areas.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 28](../courses/am209a/lecnotes/lecture-03.pdf#page=28)
+Sources: [Lecture 3 · PDF p. 28](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=28)
 
 Card ID: `am209a-pie-bars`
 
@@ -13806,7 +13807,7 @@ A scatter plot with one variable on each axis.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 29](../courses/am209a/lecnotes/lecture-03.pdf#page=29)
+Sources: [Lecture 3 · PDF p. 29](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=29)
 
 Card ID: `am209a-scatter`
 
@@ -13825,7 +13826,7 @@ How a total and its subgroup composition change over a continuous axis such as t
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 33](../courses/am209a/lecnotes/lecture-03.pdf#page=33)
+Sources: [Lecture 3 · PDF p. 33](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=33)
 
 Card ID: `am209a-stacked-area`
 
@@ -13844,7 +13845,7 @@ To compare their centers, spread, and shapes.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 34](../courses/am209a/lecnotes/lecture-03.pdf#page=34)
+Sources: [Lecture 3 · PDF p. 34](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=34)
 
 Card ID: `am209a-group-distributions`
 
@@ -13863,7 +13864,7 @@ The middle 50% of observations, from the first to third quartile, with a median 
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 35](../courses/am209a/lecnotes/lecture-03.pdf#page=35)
+Sources: [Lecture 3 · PDF p. 35](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=35)
 
 Card ID: `am209a-boxplot`
 
@@ -13882,7 +13883,7 @@ No. It is unusual under the plotting rule and deserves investigation.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 35](../courses/am209a/lecnotes/lecture-03.pdf#page=35)
+Sources: [Lecture 3 · PDF p. 35](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=35)
 
 Card ID: `am209a-box-outlier`
 
@@ -13901,7 +13902,7 @@ An estimated distribution shape, including possible multiple peaks.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 36](../courses/am209a/lecnotes/lecture-03.pdf#page=36)
+Sources: [Lecture 3 · PDF p. 36](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=36)
 
 Card ID: `am209a-violin`
 
@@ -13920,7 +13921,7 @@ Use color, marker shape, or separate panels for categories.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 38](../courses/am209a/lecnotes/lecture-03.pdf#page=38)
+Sources: [Lecture 3 · PDF p. 38](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=38)
 
 Card ID: `am209a-extra-dimensions`
 
@@ -13939,7 +13940,7 @@ Overlapping marks and competing encodings can obscure the relationships you want
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 39](../courses/am209a/lecnotes/lecture-03.pdf#page=39)
+Sources: [Lecture 3 · PDF p. 39](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=39)
 
 Card ID: `am209a-too-many-dimensions`
 
@@ -13958,7 +13959,7 @@ Whether apparent relationships differ across species or arise from mixing groups
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 43](../courses/am209a/lecnotes/lecture-03.pdf#page=43)
+Sources: [Lecture 3 · PDF p. 43](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=43)
 
 Card ID: `am209a-pairplot`
 
@@ -13977,7 +13978,7 @@ Representing magnitudes, scales, and context honestly rather than exaggerating a
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 50](../courses/am209a/lecnotes/lecture-03.pdf#page=50)
+Sources: [Lecture 3 · PDF p. 50](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=50)
 
 Card ID: `am209a-integrity`
 
@@ -13996,7 +13997,7 @@ They compete with the evidence for attention.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 52](../courses/am209a/lecnotes/lecture-03.pdf#page=52)
+Sources: [Lecture 3 · PDF p. 52](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=52)
 
 Card ID: `am209a-chart-junk`
 
@@ -14015,7 +14016,7 @@ When values extend on both sides of a meaningful center, such as positive and ne
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 56](../courses/am209a/lecnotes/lecture-03.pdf#page=56)
+Sources: [Lecture 3 · PDF p. 56](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=56)
 
 Card ID: `am209a-diverging-color`
 
@@ -14034,7 +14035,7 @@ Distinct colors without implying a numerical ranking.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 57](../courses/am209a/lecnotes/lecture-03.pdf#page=57)
+Sources: [Lecture 3 · PDF p. 57](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=57)
 
 Card ID: `am209a-category-color`
 
@@ -14053,7 +14054,7 @@ A perceptually ordered scale, often varying lightness.
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 58](../courses/am209a/lecnotes/lecture-03.pdf#page=58)
+Sources: [Lecture 3 · PDF p. 58](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=58)
 
 Card ID: `am209a-ordered-color`
 
@@ -14072,7 +14073,7 @@ Some readers cannot reliably distinguish them. Add labels, shapes, or other cues
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 60](../courses/am209a/lecnotes/lecture-03.pdf#page=60)
+Sources: [Lecture 3 · PDF p. 60](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=60)
 
 Card ID: `am209a-accessible-color`
 
@@ -14091,7 +14092,7 @@ Their knowledge and decision needs determine which labels, context, and detail a
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 61](../courses/am209a/lecnotes/lecture-03.pdf#page=61)
+Sources: [Lecture 3 · PDF p. 61](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=61)
 
 Card ID: `am209a-audience`
 
@@ -14110,7 +14111,7 @@ The quantity you want to predict, usually denoted y.
 
 </details>
 
-Sources: [Lecture 4 · Part A · PDF p. 8](../courses/am209a/lecnotes/lecture-04a.pdf#page=8)
+Sources: [Lecture 4 · Part A · PDF p. 8](../courses/harvard/am209a/lecnotes/lecture-04a.pdf#page=8)
 
 Card ID: `am209a-response`
 
@@ -14129,7 +14130,7 @@ The input variables used to predict the response.
 
 </details>
 
-Sources: [Lecture 4 · Part A · PDF p. 8](../courses/am209a/lecnotes/lecture-04a.pdf#page=8)
+Sources: [Lecture 4 · Part A · PDF p. 8](../courses/harvard/am209a/lecnotes/lecture-04a.pdf#page=8)
 
 Card ID: `am209a-predictors`
 
@@ -14148,7 +14149,7 @@ n rows by p columns, before adding any explicit intercept column.
 
 </details>
 
-Sources: [Lecture 4 · Part A · PDF p. 13](../courses/am209a/lecnotes/lecture-04a.pdf#page=13)
+Sources: [Lecture 4 · Part A · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-04a.pdf#page=13)
 
 Card ID: `am209a-design-shape`
 
@@ -14167,7 +14168,7 @@ The estimator expects a collection of rows and feature columns, even when there 
 
 </details>
 
-Sources: [Lecture 4 · Part A · PDF p. 13](../courses/am209a/lecnotes/lecture-04a.pdf#page=13)
+Sources: [Lecture 4 · Part A · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-04a.pdf#page=13)
 
 Card ID: `am209a-single-feature`
 
@@ -14186,7 +14187,7 @@ For a unique column name, the first returns a Series; the second returns a one-c
 
 </details>
 
-Sources: [Lecture 4 · Part A · PDF p. 16](../courses/am209a/lecnotes/lecture-04a.pdf#page=16)
+Sources: [Lecture 4 · Part A · PDF p. 16](../courses/harvard/am209a/lecnotes/lecture-04a.pdf#page=16)
 
 Card ID: `am209a-pandas-shape`
 
@@ -14205,7 +14206,7 @@ f(X) is the underlying systematic relationship; ε is the remaining random varia
 
 </details>
 
-Sources: [Lecture 4 · Part A · PDF p. 18](../courses/am209a/lecnotes/lecture-04a.pdf#page=18)
+Sources: [Lecture 4 · Part A · PDF p. 18](../courses/harvard/am209a/lecnotes/lecture-04a.pdf#page=18)
 
 Card ID: `am209a-signal-noise`
 
@@ -14224,7 +14225,7 @@ Inference emphasizes understanding relationships; prediction emphasizes accuracy
 
 </details>
 
-Sources: [Lecture 4 · Part A · PDF p. 19](../courses/am209a/lecnotes/lecture-04a.pdf#page=19)
+Sources: [Lecture 4 · Part A · PDF p. 19](../courses/harvard/am209a/lecnotes/lecture-04a.pdf#page=19)
 
 Card ID: `am209a-inference-prediction`
 
@@ -14243,7 +14244,7 @@ Its own observed response, assuming that observation is included among candidate
 
 </details>
 
-Sources: [Lecture 4 · Part A · PDF p. 31](../courses/am209a/lecnotes/lecture-04a.pdf#page=31)
+Sources: [Lecture 4 · Part A · PDF p. 31](../courses/harvard/am209a/lecnotes/lecture-04a.pdf#page=31)
 
 Card ID: `am209a-one-neighbor`
 
@@ -14262,7 +14263,7 @@ It does not fit a fixed-size coefficient formula for the relationship; predictio
 
 </details>
 
-Sources: [Lecture 4 · Part A · PDF p. 36](../courses/am209a/lecnotes/lecture-04a.pdf#page=36)
+Sources: [Lecture 4 · Part A · PDF p. 36](../courses/harvard/am209a/lecnotes/lecture-04a.pdf#page=36)
 
 Card ID: `am209a-nonparametric`
 
@@ -14281,7 +14282,7 @@ Find its k nearest training inputs and average their response values.
 
 </details>
 
-Sources: [Lecture 4 · Part A · PDF p. 37](../courses/am209a/lecnotes/lecture-04a.pdf#page=37)
+Sources: [Lecture 4 · Part A · PDF p. 37](../courses/harvard/am209a/lecnotes/lecture-04a.pdf#page=37)
 
 Card ID: `am209a-knn-rule`
 
@@ -14300,7 +14301,7 @@ Card ID: `am209a-knn-rule`
 
 </details>
 
-Sources: [Lecture 4 · Part A · PDF p. 37](../courses/am209a/lecnotes/lecture-04a.pdf#page=37)
+Sources: [Lecture 4 · Part A · PDF p. 37](../courses/harvard/am209a/lecnotes/lecture-04a.pdf#page=37)
 
 Card ID: `am209a-knn-example`
 
@@ -14319,7 +14320,7 @@ It is chosen to configure the learning procedure rather than fitted as a regress
 
 </details>
 
-Sources: [Lecture 4 · Part A · PDF p. 38](../courses/am209a/lecnotes/lecture-04a.pdf#page=38)
+Sources: [Lecture 4 · Part A · PDF p. 38](../courses/harvard/am209a/lecnotes/lecture-04a.pdf#page=38)
 
 Card ID: `am209a-k-hyperparameter`
 
@@ -14338,7 +14339,7 @@ Training fits the model; validation chooses settings; test data assess the final
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 8](../courses/am209a/lecnotes/lecture-04b.pdf#page=8)
+Sources: [Lecture 4 · Part B · PDF p. 8](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=8)
 
 Card ID: `am209a-train-validation-test`
 
@@ -14357,7 +14358,7 @@ y−ŷ=3, indicating underprediction.
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-04b.pdf#page=13)
+Sources: [Lecture 4 · Part B · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=13)
 
 Card ID: `am209a-residual-sign`
 
@@ -14376,7 +14377,7 @@ Average the squared residuals: MSE=Σ(yᵢ−ŷᵢ)²/n.
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 14](../courses/am209a/lecnotes/lecture-04b.pdf#page=14)
+Sources: [Lecture 4 · Part B · PDF p. 14](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=14)
 
 Card ID: `am209a-mse`
 
@@ -14395,7 +14396,7 @@ Card ID: `am209a-mse`
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 14](../courses/am209a/lecnotes/lecture-04b.pdf#page=14)
+Sources: [Lecture 4 · Part B · PDF p. 14](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=14)
 
 Card ID: `am209a-mse-example`
 
@@ -14414,7 +14415,7 @@ RMSE is √MSE and has the same units as the response.
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 15](../courses/am209a/lecnotes/lecture-04b.pdf#page=15)
+Sources: [Lecture 4 · Part B · PDF p. 15](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=15)
 
 Card ID: `am209a-rmse`
 
@@ -14433,7 +14434,7 @@ MAE grows linearly with error magnitude; MSE grows quadratically.
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 15](../courses/am209a/lecnotes/lecture-04b.pdf#page=15)
+Sources: [Lecture 4 · Part B · PDF p. 15](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=15)
 
 Card ID: `am209a-mae`
 
@@ -14452,7 +14453,7 @@ No. Choose a loss that reflects the consequences of different errors.
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 15](../courses/am209a/lecnotes/lecture-04b.pdf#page=15)
+Sources: [Lecture 4 · Part B · PDF p. 15](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=15)
 
 Card ID: `am209a-loss-choice`
 
@@ -14471,7 +14472,7 @@ A different split may reverse their ranking.
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 18](../courses/am209a/lecnotes/lecture-04b.pdf#page=18)
+Sources: [Lecture 4 · Part B · PDF p. 18](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=18)
 
 Card ID: `am209a-split-uncertainty`
 
@@ -14490,7 +14491,7 @@ It is multiplied by 100.
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-04b.pdf#page=21)
+Sources: [Lecture 4 · Part B · PDF p. 21](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=21)
 
 Card ID: `am209a-mse-rescale`
 
@@ -14509,7 +14510,7 @@ Card ID: `am209a-mse-rescale`
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 24](../courses/am209a/lecnotes/lecture-04b.pdf#page=24)
+Sources: [Lecture 4 · Part B · PDF p. 24](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=24)
 
 Card ID: `am209a-r2-formula`
 
@@ -14528,7 +14529,7 @@ The model matches the squared error of the evaluated data's mean benchmark.
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 25](../courses/am209a/lecnotes/lecture-04b.pdf#page=25)
+Sources: [Lecture 4 · Part B · PDF p. 25](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=25)
 
 Card ID: `am209a-r2-zero`
 
@@ -14547,7 +14548,7 @@ All its predictions match the observed responses exactly, assuming nonconstant r
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 25](../courses/am209a/lecnotes/lecture-04b.pdf#page=25)
+Sources: [Lecture 4 · Part B · PDF p. 25](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=25)
 
 Card ID: `am209a-r2-one`
 
@@ -14566,7 +14567,7 @@ Other predictions can have arbitrarily larger errors and therefore negative R².
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 25](../courses/am209a/lecnotes/lecture-04b.pdf#page=25)
+Sources: [Lecture 4 · Part B · PDF p. 25](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=25)
 
 Card ID: `am209a-baseline-not-worst`
 
@@ -14585,7 +14586,7 @@ Every prediction is the training response mean.
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 27](../courses/am209a/lecnotes/lecture-04b.pdf#page=27)
+Sources: [Lecture 4 · Part B · PDF p. 27](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=27)
 
 Card ID: `am209a-all-neighbors`
 
@@ -14604,7 +14605,7 @@ It makes the curve smoother by averaging more observations.
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 29](../courses/am209a/lecnotes/lecture-04b.pdf#page=29)
+Sources: [Lecture 4 · Part B · PDF p. 29](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=29)
 
 Card ID: `am209a-increase-k`
 
@@ -14623,7 +14624,7 @@ Card ID: `am209a-increase-k`
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 31](../courses/am209a/lecnotes/lecture-04b.pdf#page=31)
+Sources: [Lecture 4 · Part B · PDF p. 31](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=31)
 
 Card ID: `am209a-euclidean`
 
@@ -14642,7 +14643,7 @@ Card ID: `am209a-euclidean`
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 31](../courses/am209a/lecnotes/lecture-04b.pdf#page=31)
+Sources: [Lecture 4 · Part B · PDF p. 31](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=31)
 
 Card ID: `am209a-distance-example`
 
@@ -14661,7 +14662,7 @@ A feature with large numerical units can dominate distances even when it is not 
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 32](../courses/am209a/lecnotes/lecture-04b.pdf#page=32)
+Sources: [Lecture 4 · Part B · PDF p. 32](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=32)
 
 Card ID: `am209a-scale-distance`
 
@@ -14680,7 +14681,7 @@ Data become sparse, so nearby observations may no longer be truly local or clear
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 32](../courses/am209a/lecnotes/lecture-04b.pdf#page=32)
+Sources: [Lecture 4 · Part B · PDF p. 32](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=32)
 
 Card ID: `am209a-curse`
 
@@ -14699,7 +14700,7 @@ Card ID: `am209a-curse`
 
 </details>
 
-Sources: [Lecture 5 · Part A · PDF p. 6](../courses/am209a/lecnotes/lecture-05a.pdf#page=6)
+Sources: [Lecture 5 · Part A · PDF p. 6](../courses/harvard/am209a/lecnotes/lecture-05a.pdf#page=6)
 
 Card ID: `am209a-line`
 
@@ -14718,7 +14719,7 @@ Coefficients that minimize the sum, or equivalently the mean, of squared trainin
 
 </details>
 
-Sources: [Lecture 5 · Part A · PDF p. 12](../courses/am209a/lecnotes/lecture-05a.pdf#page=12)
+Sources: [Lecture 5 · Part A · PDF p. 12](../courses/harvard/am209a/lecnotes/lecture-05a.pdf#page=12)
 
 Card ID: `am209a-fit`
 
@@ -14737,7 +14738,7 @@ Card ID: `am209a-fit`
 
 </details>
 
-Sources: [Lecture 5 · Part A · PDF p. 16](../courses/am209a/lecnotes/lecture-05a.pdf#page=16)
+Sources: [Lecture 5 · Part A · PDF p. 16](../courses/harvard/am209a/lecnotes/lecture-05a.pdf#page=16)
 
 Card ID: `am209a-predict-number`
 
@@ -14756,7 +14757,7 @@ All the other arguments while varying the chosen one.
 
 </details>
 
-Sources: [Lecture 5 · Part A · PDF p. 19](../courses/am209a/lecnotes/lecture-05a.pdf#page=19)
+Sources: [Lecture 5 · Part A · PDF p. 19](../courses/harvard/am209a/lecnotes/lecture-05a.pdf#page=19)
 
 Card ID: `am209a-partial`
 
@@ -14775,7 +14776,7 @@ Card ID: `am209a-partial`
 
 </details>
 
-Sources: [Lecture 5 · Part A · PDF p. 22](../courses/am209a/lecnotes/lecture-05a.pdf#page=22)
+Sources: [Lecture 5 · Part A · PDF p. 22](../courses/harvard/am209a/lecnotes/lecture-05a.pdf#page=22)
 
 Card ID: `am209a-intercept-gradient`
 
@@ -14794,7 +14795,7 @@ Card ID: `am209a-intercept-gradient`
 
 </details>
 
-Sources: [Lecture 5 · Part A · PDF p. 23](../courses/am209a/lecnotes/lecture-05a.pdf#page=23)
+Sources: [Lecture 5 · Part A · PDF p. 23](../courses/harvard/am209a/lecnotes/lecture-05a.pdf#page=23)
 
 Card ID: `am209a-slope-gradient`
 
@@ -14813,7 +14814,7 @@ No. In general it can also identify a maximum or saddle; convex least squares ma
 
 </details>
 
-Sources: [Lecture 5 · Part A · PDF p. 24](../courses/am209a/lecnotes/lecture-05a.pdf#page=24)
+Sources: [Lecture 5 · Part A · PDF p. 24](../courses/harvard/am209a/lecnotes/lecture-05a.pdf#page=24)
 
 Card ID: `am209a-stationary-caution`
 
@@ -14832,7 +14833,7 @@ The vector of its partial derivatives.
 
 </details>
 
-Sources: [Lecture 5 · Part A · PDF p. 26](../courses/am209a/lecnotes/lecture-05a.pdf#page=26)
+Sources: [Lecture 5 · Part A · PDF p. 26](../courses/harvard/am209a/lecnotes/lecture-05a.pdf#page=26)
 
 Card ID: `am209a-gradient`
 
@@ -14851,7 +14852,7 @@ Card ID: `am209a-gradient`
 
 </details>
 
-Sources: [Lecture 5 · Part A · PDF p. 30](../courses/am209a/lecnotes/lecture-05a.pdf#page=30)
+Sources: [Lecture 5 · Part A · PDF p. 30](../courses/harvard/am209a/lecnotes/lecture-05a.pdf#page=30)
 
 Card ID: `am209a-slope-formula`
 
@@ -14870,7 +14871,7 @@ Card ID: `am209a-slope-formula`
 
 </details>
 
-Sources: [Lecture 5 · Part A · PDF p. 30](../courses/am209a/lecnotes/lecture-05a.pdf#page=30)
+Sources: [Lecture 5 · Part A · PDF p. 30](../courses/harvard/am209a/lecnotes/lecture-05a.pdf#page=30)
 
 Card ID: `am209a-intercept-formula`
 
@@ -14889,7 +14890,7 @@ There is no predictor variation; changes in slope can be offset by the intercept
 
 </details>
 
-Sources: [Lecture 5 · Part A · PDF p. 30](../courses/am209a/lecnotes/lecture-05a.pdf#page=30)
+Sources: [Lecture 5 · Part A · PDF p. 30](../courses/harvard/am209a/lecnotes/lecture-05a.pdf#page=30)
 
 Card ID: `am209a-constant-x`
 
@@ -14908,7 +14909,7 @@ Several predictor terms: ŷ=β̂₀+Σⱼβ̂ⱼxⱼ.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 8](../courses/am209a/lecnotes/lecture-05b.pdf#page=8)
+Sources: [Lecture 5 · Part B · PDF p. 8](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=8)
 
 Card ID: `am209a-multiple-form`
 
@@ -14927,7 +14928,7 @@ The intercept term.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 11](../courses/am209a/lecnotes/lecture-05b.pdf#page=11)
+Sources: [Lecture 5 · Part B · PDF p. 11](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=11)
 
 Card ID: `am209a-ones-column`
 
@@ -14946,7 +14947,7 @@ p+1.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 15](../courses/am209a/lecnotes/lecture-05b.pdf#page=15)
+Sources: [Lecture 5 · Part B · PDF p. 15](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=15)
 
 Card ID: `am209a-matrix-count`
 
@@ -14965,7 +14966,7 @@ Card ID: `am209a-matrix-count`
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 19](../courses/am209a/lecnotes/lecture-05b.pdf#page=19)
+Sources: [Lecture 5 · Part B · PDF p. 19](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=19)
 
 Card ID: `am209a-vector-loss`
 
@@ -14984,7 +14985,7 @@ No. Multiplying an objective by a positive constant preserves its minimizers.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 20](../courses/am209a/lecnotes/lecture-05b.pdf#page=20)
+Sources: [Lecture 5 · Part B · PDF p. 20](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=20)
 
 Card ID: `am209a-constant-loss-factor`
 
@@ -15003,7 +15004,7 @@ Card ID: `am209a-constant-loss-factor`
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 25](../courses/am209a/lecnotes/lecture-05b.pdf#page=25)
+Sources: [Lecture 5 · Part B · PDF p. 25](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=25)
 
 Card ID: `am209a-matrix-gradient`
 
@@ -15022,7 +15023,7 @@ XᵀXβ̂=Xᵀy.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 27](../courses/am209a/lecnotes/lecture-05b.pdf#page=27)
+Sources: [Lecture 5 · Part B · PDF p. 27](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=27)
 
 Card ID: `am209a-normal-equations`
 
@@ -15041,7 +15042,7 @@ When X has full column rank, so XᵀX is invertible.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 27](../courses/am209a/lecnotes/lecture-05b.pdf#page=27)
+Sources: [Lecture 5 · Part B · PDF p. 27](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=27)
 
 Card ID: `am209a-inverse-condition`
 
@@ -15060,7 +15061,7 @@ The predicted response when all numeric predictors are zero and categorical pred
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 34](../courses/am209a/lecnotes/lecture-05b.pdf#page=34)
+Sources: [Lecture 5 · Part B · PDF p. 34](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=34)
 
 Card ID: `am209a-intercept`
 
@@ -15079,7 +15080,7 @@ The predicted response increases by 3 units for a one-unit increase in x.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 34](../courses/am209a/lecnotes/lecture-05b.pdf#page=34)
+Sources: [Lecture 5 · Part B · PDF p. 34](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=34)
 
 Card ID: `am209a-slope`
 
@@ -15098,7 +15099,7 @@ The predicted response change for a one-unit predictor increase, holding other p
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 35](../courses/am209a/lecnotes/lecture-05b.pdf#page=35)
+Sources: [Lecture 5 · Part B · PDF p. 35](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=35)
 
 Card ID: `am209a-conditional-slope`
 
@@ -15117,7 +15118,7 @@ Features measured on different scales produce coefficients in different units.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 36](../courses/am209a/lecnotes/lecture-05b.pdf#page=36)
+Sources: [Lecture 5 · Part B · PDF p. 36](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=36)
 
 Card ID: `am209a-coefficient-units`
 
@@ -15136,7 +15137,7 @@ Subtract its training mean and divide by its training standard deviation.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 38](../courses/am209a/lecnotes/lecture-05b.pdf#page=38)
+Sources: [Lecture 5 · Part B · PDF p. 38](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=38)
 
 Card ID: `am209a-standardize`
 
@@ -15155,7 +15156,7 @@ Use (x−minimum)/(maximum−minimum), with extrema learned from training data.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 38](../courses/am209a/lecnotes/lecture-05b.pdf#page=38)
+Sources: [Lecture 5 · Part B · PDF p. 38](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=38)
 
 Card ID: `am209a-minmax`
 
@@ -15174,7 +15175,7 @@ No. It changes location and scale, not the underlying shape.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 38](../courses/am209a/lecnotes/lecture-05b.pdf#page=38)
+Sources: [Lecture 5 · Part B · PDF p. 38](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=38)
 
 Card ID: `am209a-scale-not-normal`
 
@@ -15193,7 +15194,7 @@ Predictors share information, so their separate contributions are hard to distin
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 40](../courses/am209a/lecnotes/lecture-05b.pdf#page=40)
+Sources: [Lecture 5 · Part B · PDF p. 40](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=40)
 
 Card ID: `am209a-collinear`
 
@@ -15212,7 +15213,7 @@ Exact dependence can make OLS coefficients nonunique; near dependence can make a
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 40](../courses/am209a/lecnotes/lecture-05b.pdf#page=40)
+Sources: [Lecture 5 · Part B · PDF p. 40](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=40)
 
 Card ID: `am209a-exact-near`
 
@@ -15231,7 +15232,7 @@ Whether an observation belongs to a specified group.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 47](../courses/am209a/lecnotes/lecture-05b.pdf#page=47)
+Sources: [Lecture 5 · Part B · PDF p. 47](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=47)
 
 Card ID: `am209a-dummy`
 
@@ -15250,7 +15251,7 @@ Card ID: `am209a-dummy`
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 48](../courses/am209a/lecnotes/lecture-05b.pdf#page=48)
+Sources: [Lecture 5 · Part B · PDF p. 48](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=48)
 
 Card ID: `am209a-dummy-interpretation`
 
@@ -15269,7 +15270,7 @@ K−1, with one reference category.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 49](../courses/am209a/lecnotes/lecture-05b.pdf#page=49)
+Sources: [Lecture 5 · Part B · PDF p. 49](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=49)
 
 Card ID: `am209a-levels`
 
@@ -15288,7 +15289,7 @@ No, when it is an equivalent recoding of the same model.
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 50](../courses/am209a/lecnotes/lecture-05b.pdf#page=50)
+Sources: [Lecture 5 · Part B · PDF p. 50](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=50)
 
 Card ID: `am209a-reference-change`
 
@@ -15307,7 +15308,7 @@ No. Normality is used for certain exact inferential results, not for minimizing 
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 51](../courses/am209a/lecnotes/lecture-05b.pdf#page=51)
+Sources: [Lecture 5 · Part B · PDF p. 51](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=51)
 
 Card ID: `am209a-normality-fitting`
 
@@ -15326,7 +15327,7 @@ No. Errors use the unknown true mean; residuals use an estimated mean and are ge
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 51](../courses/am209a/lecnotes/lecture-05b.pdf#page=51)
+Sources: [Lecture 5 · Part B · PDF p. 51](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=51)
 
 Card ID: `am209a-errors-residuals`
 
@@ -15345,7 +15346,7 @@ It can reveal curvature or changing spread without choosing only one predictor a
 
 </details>
 
-Sources: [Lecture 5 · Part B · PDF p. 52](../courses/am209a/lecnotes/lecture-05b.pdf#page=52)
+Sources: [Lecture 5 · Part B · PDF p. 52](../courses/harvard/am209a/lecnotes/lecture-05b.pdf#page=52)
 
 Card ID: `am209a-residual-pattern`
 
@@ -15364,7 +15365,7 @@ The fit captures sample-specific noise or quirks that fail to generalize.
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 9](../courses/am209a/lecnotes/lecture-06a.pdf#page=9)
+Sources: [Lecture 6 · Part A · PDF p. 9](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=9)
 
 Card ID: `am209a-overfit`
 
@@ -15383,7 +15384,7 @@ The effect of one predictor can depend on another predictor's value.
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 14](../courses/am209a/lecnotes/lecture-06a.pdf#page=14)
+Sources: [Lecture 6 · Part A · PDF p. 14](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=14)
 
 Card ID: `am209a-interaction`
 
@@ -15402,7 +15403,7 @@ Card ID: `am209a-interaction`
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 14](../courses/am209a/lecnotes/lecture-06a.pdf#page=14)
+Sources: [Lecture 6 · Part A · PDF p. 14](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=14)
 
 Card ID: `am209a-interaction-slope`
 
@@ -15421,7 +15422,7 @@ Group-specific intercepts with the same slope.
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 16](../courses/am209a/lecnotes/lecture-06a.pdf#page=16)
+Sources: [Lecture 6 · Part A · PDF p. 16](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=16)
 
 Card ID: `am209a-parallel-groups`
 
@@ -15440,7 +15441,7 @@ Their slopes can differ: β₁ for D=0 and β₁+β₃ for D=1.
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 17](../courses/am209a/lecnotes/lecture-06a.pdf#page=17)
+Sources: [Lecture 6 · Part A · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=17)
 
 Card ID: `am209a-group-slopes`
 
@@ -15459,7 +15460,7 @@ Card ID: `am209a-group-slopes`
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 17](../courses/am209a/lecnotes/lecture-06a.pdf#page=17)
+Sources: [Lecture 6 · Part A · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=17)
 
 Card ID: `am209a-interaction-number`
 
@@ -15478,7 +15479,7 @@ It is linear in the unknown coefficients, even though it is nonlinear in x.
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 24](../courses/am209a/lecnotes/lecture-06a.pdf#page=24)
+Sources: [Lecture 6 · Part A · PDF p. 24](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=24)
 
 Card ID: `am209a-polynomial-linear`
 
@@ -15497,7 +15498,7 @@ M+1.
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 24](../courses/am209a/lecnotes/lecture-06a.pdf#page=24)
+Sources: [Lecture 6 · Part A · PDF p. 24](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=24)
 
 Card ID: `am209a-poly-count`
 
@@ -15516,7 +15517,7 @@ Card ID: `am209a-poly-count`
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 25](../courses/am209a/lecnotes/lecture-06a.pdf#page=25)
+Sources: [Lecture 6 · Part A · PDF p. 25](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=25)
 
 Card ID: `am209a-poly-row`
 
@@ -15535,7 +15536,7 @@ Card ID: `am209a-poly-row`
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 25](../courses/am209a/lecnotes/lecture-06a.pdf#page=25)
+Sources: [Lecture 6 · Part A · PDF p. 25](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=25)
 
 Card ID: `am209a-poly-row-example`
 
@@ -15554,7 +15555,7 @@ With several inputs, it may add interaction terms as well as individual powers.
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 29](../courses/am209a/lecnotes/lecture-06a.pdf#page=29)
+Sources: [Lecture 6 · Part A · PDF p. 29](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=29)
 
 Card ID: `am209a-cross-features`
 
@@ -15573,7 +15574,7 @@ They represent the same constant direction and create redundant parameters.
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 29](../courses/am209a/lecnotes/lecture-06a.pdf#page=29)
+Sources: [Lecture 6 · Part A · PDF p. 29](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=29)
 
 Card ID: `am209a-duplicate-intercept`
 
@@ -15592,7 +15593,7 @@ The model is too restricted to capture important systematic structure.
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 31](../courses/am209a/lecnotes/lecture-06a.pdf#page=31)
+Sources: [Lecture 6 · Part A · PDF p. 31](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=31)
 
 Card ID: `am209a-underfit`
 
@@ -15611,7 +15612,7 @@ Very large or tiny input values become extreme when raised to high powers.
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 32](../courses/am209a/lecnotes/lecture-06a.pdf#page=32)
+Sources: [Lecture 6 · Part A · PDF p. 32](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=32)
 
 Card ID: `am209a-power-scaling`
 
@@ -15630,7 +15631,7 @@ The model may imply implausible responses or relationships in important parts of
 
 </details>
 
-Sources: [Lecture 6 · Part B · PDF p. 5](../courses/am209a/lecnotes/lecture-06b.pdf#page=5)
+Sources: [Lecture 6 · Part B · PDF p. 5](../courses/harvard/am209a/lecnotes/lecture-06b.pdf#page=5)
 
 Card ID: `am209a-plausibility`
 
@@ -15649,7 +15650,7 @@ Performing well on relevant observations that were not used to fit the model.
 
 </details>
 
-Sources: [Lecture 6 · Part B · PDF p. 6](../courses/am209a/lecnotes/lecture-06b.pdf#page=6)
+Sources: [Lecture 6 · Part B · PDF p. 6](../courses/harvard/am209a/lecnotes/lecture-06b.pdf#page=6)
 
 Card ID: `am209a-generalization`
 
@@ -15668,7 +15669,7 @@ The selection would adapt to the test data, making its final score optimisticall
 
 </details>
 
-Sources: [Lecture 6 · Part B · PDF p. 9](../courses/am209a/lecnotes/lecture-06b.pdf#page=9)
+Sources: [Lecture 6 · Part B · PDF p. 9](../courses/harvard/am209a/lecnotes/lecture-06b.pdf#page=9)
 
 Card ID: `am209a-test-leak`
 
@@ -15687,7 +15688,7 @@ Card ID: `am209a-test-leak`
 
 </details>
 
-Sources: [Lecture 6 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-06b.pdf#page=13)
+Sources: [Lecture 6 · Part B · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-06b.pdf#page=13)
 
 Card ID: `am209a-subset-count`
 
@@ -15706,7 +15707,7 @@ Card ID: `am209a-subset-count`
 
 </details>
 
-Sources: [Lecture 6 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-06b.pdf#page=13)
+Sources: [Lecture 6 · Part B · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-06b.pdf#page=13)
 
 Card ID: `am209a-subset-example`
 
@@ -15725,7 +15726,7 @@ Start with no predictors and repeatedly add the candidate that best improves the
 
 </details>
 
-Sources: [Lecture 6 · Part B · PDF p. 16](../courses/am209a/lecnotes/lecture-06b.pdf#page=16)
+Sources: [Lecture 6 · Part B · PDF p. 16](../courses/harvard/am209a/lecnotes/lecture-06b.pdf#page=16)
 
 Card ID: `am209a-forward-selection`
 
@@ -15744,7 +15745,7 @@ No. An early greedy choice can exclude better combinations from the path.
 
 </details>
 
-Sources: [Lecture 6 · Part B · PDF p. 16](../courses/am209a/lecnotes/lecture-06b.pdf#page=16)
+Sources: [Lecture 6 · Part B · PDF p. 16](../courses/harvard/am209a/lecnotes/lecture-06b.pdf#page=16)
 
 Card ID: `am209a-greedy-limits`
 
@@ -15763,7 +15764,7 @@ J+(J−1)+⋯+1=J(J+1)/2, excluding the initial null model.
 
 </details>
 
-Sources: [Lecture 6 · Part B · PDF p. 17](../courses/am209a/lecnotes/lecture-06b.pdf#page=17)
+Sources: [Lecture 6 · Part B · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-06b.pdf#page=17)
 
 Card ID: `am209a-forward-cost`
 
@@ -15782,7 +15783,7 @@ Coefficients are fitted parameters; degree is a hyperparameter selecting the mod
 
 </details>
 
-Sources: [Lecture 6 · Part B · PDF p. 19](../courses/am209a/lecnotes/lecture-06b.pdf#page=19)
+Sources: [Lecture 6 · Part B · PDF p. 19](../courses/harvard/am209a/lecnotes/lecture-06b.pdf#page=19)
 
 Card ID: `am209a-parameter-hyperparameter`
 
@@ -15801,7 +15802,7 @@ Overfitting, assuming both sets represent the same prediction setting.
 
 </details>
 
-Sources: [Lecture 6 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-06b.pdf#page=21)
+Sources: [Lecture 6 · Part B · PDF p. 21](../courses/harvard/am209a/lecnotes/lecture-06b.pdf#page=21)
 
 Card ID: `am209a-gap`
 
@@ -15820,7 +15821,7 @@ Underfitting or a noisy/difficult prediction problem.
 
 </details>
 
-Sources: [Lecture 6 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-06b.pdf#page=21)
+Sources: [Lecture 6 · Part B · PDF p. 21](../courses/harvard/am209a/lecnotes/lecture-06b.pdf#page=21)
 
 Card ID: `am209a-high-both`
 
@@ -15839,7 +15840,7 @@ Its particular observations can accidentally favor one model over another.
 
 </details>
 
-Sources: [Lecture 6 · Part C · PDF p. 3](../courses/am209a/lecnotes/lecture-06c.pdf#page=3)
+Sources: [Lecture 6 · Part C · PDF p. 3](../courses/harvard/am209a/lecnotes/lecture-06c.pdf#page=3)
 
 Card ID: `am209a-single-split`
 
@@ -15858,7 +15859,7 @@ Yes. Trying many choices can adapt to the validation evidence.
 
 </details>
 
-Sources: [Lecture 6 · Part C · PDF p. 3](../courses/am209a/lecnotes/lecture-06c.pdf#page=3)
+Sources: [Lecture 6 · Part C · PDF p. 3](../courses/harvard/am209a/lecnotes/lecture-06c.pdf#page=3)
 
 Card ID: `am209a-cv-not-magic`
 
@@ -15877,7 +15878,7 @@ No, when CV is used to choose the model; the test set still evaluates the finali
 
 </details>
 
-Sources: [Lecture 6 · Part C · PDF p. 5](../courses/am209a/lecnotes/lecture-06c.pdf#page=5)
+Sources: [Lecture 6 · Part C · PDF p. 5](../courses/harvard/am209a/lecnotes/lecture-06c.pdf#page=5)
 
 Card ID: `am209a-cv-test`
 
@@ -15896,7 +15897,7 @@ Card ID: `am209a-cv-test`
 
 </details>
 
-Sources: [Lecture 6 · Part C · PDF p. 12](../courses/am209a/lecnotes/lecture-06c.pdf#page=12)
+Sources: [Lecture 6 · Part C · PDF p. 12](../courses/harvard/am209a/lecnotes/lecture-06c.pdf#page=12)
 
 Card ID: `am209a-cv-average`
 
@@ -15915,7 +15916,7 @@ Split development data into K folds, fit on K−1 folds, validate on the remaini
 
 </details>
 
-Sources: [Lecture 6 · Part C · PDF p. 13](../courses/am209a/lecnotes/lecture-06c.pdf#page=13)
+Sources: [Lecture 6 · Part C · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-06c.pdf#page=13)
 
 Card ID: `am209a-kfold`
 
@@ -15934,7 +15935,7 @@ Five, before any final refit.
 
 </details>
 
-Sources: [Lecture 6 · Part C · PDF p. 13](../courses/am209a/lecnotes/lecture-06c.pdf#page=13)
+Sources: [Lecture 6 · Part C · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-06c.pdf#page=13)
 
 Card ID: `am209a-fold-count`
 
@@ -15953,7 +15954,7 @@ Inside each training fold, then applied to its validation fold.
 
 </details>
 
-Sources: [Lecture 6 · Part C · PDF p. 13](../courses/am209a/lecnotes/lecture-06c.pdf#page=13)
+Sources: [Lecture 6 · Part C · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-06c.pdf#page=13)
 
 Card ID: `am209a-preprocessing-folds`
 
@@ -15972,7 +15973,7 @@ Use each observation alone as validation and train on all the others.
 
 </details>
 
-Sources: [Lecture 6 · Part C · PDF p. 14](../courses/am209a/lecnotes/lecture-06c.pdf#page=14)
+Sources: [Lecture 6 · Part C · PDF p. 14](../courses/harvard/am209a/lecnotes/lecture-06c.pdf#page=14)
 
 Card ID: `am209a-loocv`
 
@@ -15991,7 +15992,7 @@ It usually requires one fit per observation.
 
 </details>
 
-Sources: [Lecture 6 · Part C · PDF p. 14](../courses/am209a/lecnotes/lecture-06c.pdf#page=14)
+Sources: [Lecture 6 · Part C · PDF p. 14](../courses/harvard/am209a/lecnotes/lecture-06c.pdf#page=14)
 
 Card ID: `am209a-loocv-cost`
 
@@ -16010,7 +16011,7 @@ The scoring convention maximizes values, so it negates a loss that should be min
 
 </details>
 
-Sources: [Lecture 6 · Part C · PDF p. 16](../courses/am209a/lecnotes/lecture-06c.pdf#page=16)
+Sources: [Lecture 6 · Part C · PDF p. 16](../courses/harvard/am209a/lecnotes/lecture-06c.pdf#page=16)
 
 Card ID: `am209a-negative-mse`
 
@@ -16029,7 +16030,7 @@ The response variation remaining even if the true conditional mean were known, f
 
 </details>
 
-Sources: [Lecture 7 · Part A · PDF p. 11](../courses/am209a/lecnotes/lecture-07a.pdf#page=11)
+Sources: [Lecture 7 · Part A · PDF p. 11](../courses/harvard/am209a/lecnotes/lecture-07a.pdf#page=11)
 
 Card ID: `am209a-irreducible`
 
@@ -16048,7 +16049,7 @@ Error from imperfect estimation or an inadequate model for the systematic relati
 
 </details>
 
-Sources: [Lecture 7 · Part A · PDF p. 12](../courses/am209a/lecnotes/lecture-07a.pdf#page=12)
+Sources: [Lecture 7 · Part A · PDF p. 12](../courses/harvard/am209a/lecnotes/lecture-07a.pdf#page=12)
 
 Card ID: `am209a-reducible`
 
@@ -16067,7 +16068,7 @@ How predictions change across repeated training samples.
 
 </details>
 
-Sources: [Lecture 7 · Part A · PDF p. 17](../courses/am209a/lecnotes/lecture-07a.pdf#page=17)
+Sources: [Lecture 7 · Part A · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-07a.pdf#page=17)
 
 Card ID: `am209a-07a-variance`
 
@@ -16086,7 +16087,7 @@ The average prediction over repeated training samples minus the true mean respon
 
 </details>
 
-Sources: [Lecture 7 · Part A · PDF p. 18](../courses/am209a/lecnotes/lecture-07a.pdf#page=18)
+Sources: [Lecture 7 · Part A · PDF p. 18](../courses/harvard/am209a/lecnotes/lecture-07a.pdf#page=18)
 
 Card ID: `am209a-bias`
 
@@ -16105,7 +16106,7 @@ Squared bias, model variance, and irreducible noise variance, under the standard
 
 </details>
 
-Sources: [Lecture 7 · Part A · PDF p. 19](../courses/am209a/lecnotes/lecture-07a.pdf#page=19)
+Sources: [Lecture 7 · Part A · PDF p. 19](../courses/harvard/am209a/lecnotes/lecture-07a.pdf#page=19)
 
 Card ID: `am209a-decomposition`
 
@@ -16124,7 +16125,7 @@ It can lower bias while increasing variance.
 
 </details>
 
-Sources: [Lecture 7 · Part A · PDF p. 19](../courses/am209a/lecnotes/lecture-07a.pdf#page=19)
+Sources: [Lecture 7 · Part A · PDF p. 19](../courses/harvard/am209a/lecnotes/lecture-07a.pdf#page=19)
 
 Card ID: `am209a-complexity-tradeoff`
 
@@ -16143,7 +16144,7 @@ Yes, if its variance reduction outweighs the added squared bias.
 
 </details>
 
-Sources: [Lecture 7 · Part A · PDF p. 19](../courses/am209a/lecnotes/lecture-07a.pdf#page=19)
+Sources: [Lecture 7 · Part A · PDF p. 19](../courses/harvard/am209a/lecnotes/lecture-07a.pdf#page=19)
 
 Card ID: `am209a-biased-better`
 
@@ -16162,7 +16163,7 @@ A data-fit loss plus a coefficient penalty weighted by λ.
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 12](../courses/am209a/lecnotes/lecture-07b.pdf#page=12)
+Sources: [Lecture 7 · Part B · PDF p. 12](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=12)
 
 Card ID: `am209a-penalty`
 
@@ -16181,7 +16182,7 @@ The penalty disappears, leaving ordinary least squares.
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-07b.pdf#page=13)
+Sources: [Lecture 7 · Part B · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=13)
 
 Card ID: `am209a-lambda-zero`
 
@@ -16200,7 +16201,7 @@ They shrink toward zero; an unpenalized intercept can remain.
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-07b.pdf#page=13)
+Sources: [Lecture 7 · Part B · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=13)
 
 Card ID: `am209a-large-lambda`
 
@@ -16219,7 +16220,7 @@ Yes. Excessive shrinkage can erase useful signal and underfit.
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-07b.pdf#page=13)
+Sources: [Lecture 7 · Part B · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=13)
 
 Card ID: `am209a-too-much`
 
@@ -16238,7 +16239,7 @@ Compare candidate λ values using validation or cross-validation loss.
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 15](../courses/am209a/lecnotes/lecture-07b.pdf#page=15)
+Sources: [Lecture 7 · Part B · PDF p. 15](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=15)
 
 Card ID: `am209a-tune-lambda`
 
@@ -16257,7 +16258,7 @@ The L1 penalty λΣⱼabs(βⱼ), usually excluding the intercept.
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 16](../courses/am209a/lecnotes/lecture-07b.pdf#page=16)
+Sources: [Lecture 7 · Part B · PDF p. 16](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=16)
 
 Card ID: `am209a-lasso-penalty`
 
@@ -16276,7 +16277,7 @@ The squared L2 penalty λΣⱼβⱼ², usually excluding the intercept.
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 19](../courses/am209a/lecnotes/lecture-07b.pdf#page=19)
+Sources: [Lecture 7 · Part B · PDF p. 19](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=19)
 
 Card ID: `am209a-ridge-penalty`
 
@@ -16295,7 +16296,7 @@ Changing a feature's units changes the coefficient needed for the same predictio
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 19](../courses/am209a/lecnotes/lecture-07b.pdf#page=19)
+Sources: [Lecture 7 · Part B · PDF p. 19](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=19)
 
 Card ID: `am209a-scale-penalty`
 
@@ -16314,7 +16315,7 @@ It sets the overall response level rather than a feature effect.
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 20](../courses/am209a/lecnotes/lecture-07b.pdf#page=20)
+Sources: [Lecture 7 · Part B · PDF p. 20](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=20)
 
 Card ID: `am209a-intercept-penalty`
 
@@ -16333,7 +16334,7 @@ Card ID: `am209a-intercept-penalty`
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-07b.pdf#page=21)
+Sources: [Lecture 7 · Part B · PDF p. 21](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=21)
 
 Card ID: `am209a-ridge-formula`
 
@@ -16352,7 +16353,7 @@ For nonzero v, vᵀ(XᵀX+λI)v=‖Xv‖²+λ‖v‖²>0.
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-07b.pdf#page=21)
+Sources: [Lecture 7 · Part B · PDF p. 21](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=21)
 
 Card ID: `am209a-ridge-invertible`
 
@@ -16371,7 +16372,7 @@ No. With MSE+λ‖β‖², the normal equations contain XᵀX+nλI.
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-07b.pdf#page=21)
+Sources: [Lecture 7 · Part B · PDF p. 21](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=21)
 
 Card ID: `am209a-ridge-loss-scale`
 
@@ -16390,7 +16391,7 @@ Useful strengths can differ by factors of ten or more.
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 24](../courses/am209a/lecnotes/lecture-07b.pdf#page=24)
+Sources: [Lecture 7 · Part B · PDF p. 24](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=24)
 
 Card ID: `am209a-log-grid`
 
@@ -16409,7 +16410,7 @@ No. Each λ defines a different optimization problem and generally needs its own
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 25](../courses/am209a/lecnotes/lecture-07b.pdf#page=25)
+Sources: [Lecture 7 · Part B · PDF p. 25](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=25)
 
 Card ID: `am209a-refit-candidates`
 
@@ -16428,7 +16429,7 @@ No. Use prediction error on held-out observations to compare predictive performa
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 26](../courses/am209a/lecnotes/lecture-07b.pdf#page=26)
+Sources: [Lecture 7 · Part B · PDF p. 26](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=26)
 
 Card ID: `am209a-validation-unpenalized`
 
@@ -16447,7 +16448,7 @@ All development data previously used for training and validation, keeping the te
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 29](../courses/am209a/lecnotes/lecture-07b.pdf#page=29)
+Sources: [Lecture 7 · Part B · PDF p. 29](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=29)
 
 Card ID: `am209a-final-refit`
 
@@ -16466,7 +16467,7 @@ Card ID: `am209a-final-refit`
 
 </details>
 
-Sources: [Lecture 7 · Part B · PDF p. 50](../courses/am209a/lecnotes/lecture-07b.pdf#page=50)
+Sources: [Lecture 7 · Part B · PDF p. 50](../courses/harvard/am209a/lecnotes/lecture-07b.pdf#page=50)
 
 Card ID: `am209a-cv-grid`
 
@@ -16485,7 +16486,7 @@ The absolute-value penalty is not differentiable at zero; algorithms handle that
 
 </details>
 
-Sources: [Lecture 7 · Part C · PDF p. 2](../courses/am209a/lecnotes/lecture-07c.pdf#page=2)
+Sources: [Lecture 7 · Part C · PDF p. 2](../courses/harvard/am209a/lecnotes/lecture-07c.pdf#page=2)
 
 Card ID: `am209a-lasso-optimization`
 
@@ -16504,7 +16505,7 @@ Lasso commonly does; ridge generally shrinks coefficients continuously without s
 
 </details>
 
-Sources: [Lecture 7 · Part C · PDF p. 3](../courses/am209a/lecnotes/lecture-07c.pdf#page=3)
+Sources: [Lecture 7 · Part C · PDF p. 3](../courses/harvard/am209a/lecnotes/lecture-07c.pdf#page=3)
 
 Card ID: `am209a-sparsity`
 
@@ -16523,7 +16524,7 @@ Its corners lie on coordinate axes, where one or more coefficients are zero.
 
 </details>
 
-Sources: [Lecture 7 · Part C · PDF p. 4](../courses/am209a/lecnotes/lecture-07c.pdf#page=4)
+Sources: [Lecture 7 · Part C · PDF p. 4](../courses/harvard/am209a/lecnotes/lecture-07c.pdf#page=4)
 
 Card ID: `am209a-lasso-geometry`
 
@@ -16542,7 +16543,7 @@ Its smooth constraint boundary does not favor axis-aligned corners.
 
 </details>
 
-Sources: [Lecture 7 · Part C · PDF p. 4](../courses/am209a/lecnotes/lecture-07c.pdf#page=4)
+Sources: [Lecture 7 · Part C · PDF p. 4](../courses/harvard/am209a/lecnotes/lecture-07c.pdf#page=4)
 
 Card ID: `am209a-ridge-geometry`
 
@@ -16561,7 +16562,7 @@ It stabilizes coefficient estimates by penalizing large solutions along weakly i
 
 </details>
 
-Sources: [Lecture 7 · Part C · PDF p. 5](../courses/am209a/lecnotes/lecture-07c.pdf#page=5)
+Sources: [Lecture 7 · Part C · PDF p. 5](../courses/harvard/am209a/lecnotes/lecture-07c.pdf#page=5)
 
 Card ID: `am209a-ridge-collinearity`
 
@@ -16580,7 +16581,7 @@ No. Selection depends on λ, other predictors, and the sample.
 
 </details>
 
-Sources: [Lecture 7 · Part C · PDF p. 5](../courses/am209a/lecnotes/lecture-07c.pdf#page=5)
+Sources: [Lecture 7 · Part C · PDF p. 5](../courses/harvard/am209a/lecnotes/lecture-07c.pdf#page=5)
 
 Card ID: `am209a-lasso-zero-proof`
 
@@ -16599,7 +16600,7 @@ The observed sample and noise vary, changing the fitted model.
 
 </details>
 
-Sources: [Lecture 8 · Part A · PDF p. 12](../courses/am209a/lecnotes/lecture-08a.pdf#page=12)
+Sources: [Lecture 8 · Part A · PDF p. 12](../courses/harvard/am209a/lecnotes/lecture-08a.pdf#page=12)
 
 Card ID: `am209a-coefficient-uncertainty`
 
@@ -16618,7 +16619,7 @@ The distribution of its estimated values across repeated datasets from the same 
 
 </details>
 
-Sources: [Lecture 8 · Part A · PDF p. 22](../courses/am209a/lecnotes/lecture-08a.pdf#page=22)
+Sources: [Lecture 8 · Part A · PDF p. 22](../courses/harvard/am209a/lecnotes/lecture-08a.pdf#page=22)
 
 Card ID: `am209a-sampling-distribution`
 
@@ -16637,7 +16638,7 @@ After a draw, that observation remains eligible to be drawn again.
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 5](../courses/am209a/lecnotes/lecture-08b.pdf#page=5)
+Sources: [Lecture 8 · Part B · PDF p. 5](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=5)
 
 Card ID: `am209a-replacement`
 
@@ -16656,7 +16657,7 @@ n draws with replacement from the original n observations.
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-08b.pdf#page=13)
+Sources: [Lecture 8 · Part B · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=13)
 
 Card ID: `am209a-bootstrap-size`
 
@@ -16675,7 +16676,7 @@ An entire observation row: its predictors and response.
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 19](../courses/am209a/lecnotes/lecture-08b.pdf#page=19)
+Sources: [Lecture 8 · Part B · PDF p. 19](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=19)
 
 Card ID: `am209a-pairs`
 
@@ -16694,7 +16695,7 @@ Refit the estimator and record the quantity of interest.
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 19](../courses/am209a/lecnotes/lecture-08b.pdf#page=19)
+Sources: [Lecture 8 · Part B · PDF p. 19](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=19)
 
 Card ID: `am209a-refit-bootstrap`
 
@@ -16713,7 +16714,7 @@ Take the sample standard deviation of the statistic across bootstrap replicates.
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-08b.pdf#page=21)
+Sources: [Lecture 8 · Part B · PDF p. 21](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=21)
 
 Card ID: `am209a-bootstrap-se`
 
@@ -16732,7 +16733,7 @@ No. The replicate SD already estimates that standard error; dividing by √B tar
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 21](../courses/am209a/lecnotes/lecture-08b.pdf#page=21)
+Sources: [Lecture 8 · Part B · PDF p. 21](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=21)
 
 Card ID: `am209a-not-divide-b`
 
@@ -16751,7 +16752,7 @@ The empirical distribution placing equal mass on each observed record.
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 22](../courses/am209a/lecnotes/lecture-08b.pdf#page=22)
+Sources: [Lecture 8 · Part B · PDF p. 22](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=22)
 
 Card ID: `am209a-empirical-population`
 
@@ -16770,7 +16771,7 @@ The numerical stability of the bootstrap estimate, not the information in the or
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 22](../courses/am209a/lecnotes/lecture-08b.pdf#page=22)
+Sources: [Lecture 8 · Part B · PDF p. 22](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=22)
 
 Card ID: `am209a-more-replicates`
 
@@ -16789,7 +16790,7 @@ No. It repeatedly reuses that sample's information and selection limitations.
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 22](../courses/am209a/lecnotes/lecture-08b.pdf#page=22)
+Sources: [Lecture 8 · Part B · PDF p. 22](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=22)
 
 Card ID: `am209a-bootstrap-limits`
 
@@ -16808,7 +16809,7 @@ Independent resampling breaks the dependence structure; a suitable design such a
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 22](../courses/am209a/lecnotes/lecture-08b.pdf#page=22)
+Sources: [Lecture 8 · Part B · PDF p. 22](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=22)
 
 Card ID: `am209a-dependent-data`
 
@@ -16827,7 +16828,7 @@ The long-run coverage of the interval-building procedure under its assumptions.
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 23](../courses/am209a/lecnotes/lecture-08b.pdf#page=23)
+Sources: [Lecture 8 · Part B · PDF p. 23](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=23)
 
 Card ID: `am209a-ci-meaning`
 
@@ -16846,7 +16847,7 @@ No. That is a Bayesian probability statement requiring a posterior model.
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 23](../courses/am209a/lecnotes/lecture-08b.pdf#page=23)
+Sources: [Lecture 8 · Part B · PDF p. 23](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=23)
 
 Card ID: `am209a-ci-not-posterior`
 
@@ -16865,7 +16866,7 @@ Use the 2.5th and 97.5th percentiles of the bootstrap estimates.
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 26](../courses/am209a/lecnotes/lecture-08b.pdf#page=26)
+Sources: [Lecture 8 · Part B · PDF p. 26](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=26)
 
 Card ID: `am209a-percentile-ci`
 
@@ -16884,7 +16885,7 @@ Card ID: `am209a-percentile-ci`
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 28](../courses/am209a/lecnotes/lecture-08b.pdf#page=28)
+Sources: [Lecture 8 · Part B · PDF p. 28](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=28)
 
 Card ID: `am209a-ci-example`
 
@@ -16903,7 +16904,7 @@ When the estimator's sampling distribution is approximately normal and the stand
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 30](../courses/am209a/lecnotes/lecture-08b.pdf#page=30)
+Sources: [Lecture 8 · Part B · PDF p. 30](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=30)
 
 Card ID: `am209a-normal-approx`
 
@@ -16922,7 +16923,7 @@ Under spherical errors, SE(β̂₁)=σ/√Σ(xᵢ−x̄)².
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 31](../courses/am209a/lecnotes/lecture-08b.pdf#page=31)
+Sources: [Lecture 8 · Part B · PDF p. 31](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=31)
 
 Card ID: `am209a-slope-se`
 
@@ -16941,7 +16942,7 @@ They double under the same linear-model assumptions.
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 31](../courses/am209a/lecnotes/lecture-08b.pdf#page=31)
+Sources: [Lecture 8 · Part B · PDF p. 31](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=31)
 
 Card ID: `am209a-noise-se`
 
@@ -16960,7 +16961,7 @@ s²=SSE/(n−2), for n>2 under the usual model assumptions.
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 32](../courses/am209a/lecnotes/lecture-08b.pdf#page=32)
+Sources: [Lecture 8 · Part B · PDF p. 32](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=32)
 
 Card ID: `am209a-noise-estimate`
 
@@ -16979,7 +16980,7 @@ Its uncertainty and units matter; a large estimate can be imprecise.
 
 </details>
 
-Sources: [Lecture 8 · Part C · PDF p. 5](../courses/am209a/lecnotes/lecture-08c.pdf#page=5)
+Sources: [Lecture 8 · Part C · PDF p. 5](../courses/harvard/am209a/lecnotes/lecture-08c.pdf#page=5)
 
 Card ID: `am209a-size-vs-evidence`
 
@@ -16998,7 +16999,7 @@ t=β̂ⱼ/SE(β̂ⱼ).
 
 </details>
 
-Sources: [Lecture 8 · Part C · PDF p. 7](../courses/am209a/lecnotes/lecture-08c.pdf#page=7)
+Sources: [Lecture 8 · Part C · PDF p. 7](../courses/harvard/am209a/lecnotes/lecture-08c.pdf#page=7)
 
 Card ID: `am209a-t-stat`
 
@@ -17017,7 +17018,7 @@ Card ID: `am209a-t-stat`
 
 </details>
 
-Sources: [Lecture 8 · Part C · PDF p. 7](../courses/am209a/lecnotes/lecture-08c.pdf#page=7)
+Sources: [Lecture 8 · Part C · PDF p. 7](../courses/harvard/am209a/lecnotes/lecture-08c.pdf#page=7)
 
 Card ID: `am209a-t-example`
 
@@ -17036,7 +17037,7 @@ n−p−1 for a full-rank design under the normal linear model.
 
 </details>
 
-Sources: [Lecture 8 · Part C · PDF p. 14](../courses/am209a/lecnotes/lecture-08c.pdf#page=14)
+Sources: [Lecture 8 · Part C · PDF p. 14](../courses/harvard/am209a/lecnotes/lecture-08c.pdf#page=14)
 
 Card ID: `am209a-t-df`
 
@@ -17055,7 +17056,7 @@ A correct linear mean, full-rank design, and independent Gaussian errors with co
 
 </details>
 
-Sources: [Lecture 8 · Part C · PDF p. 14](../courses/am209a/lecnotes/lecture-08c.pdf#page=14)
+Sources: [Lecture 8 · Part C · PDF p. 14](../courses/harvard/am209a/lecnotes/lecture-08c.pdf#page=14)
 
 Card ID: `am209a-exact-t`
 
@@ -17074,7 +17075,7 @@ Large departures in either the positive or negative direction count as evidence 
 
 </details>
 
-Sources: [Lecture 8 · Part C · PDF p. 16](../courses/am209a/lecnotes/lecture-08c.pdf#page=16)
+Sources: [Lecture 8 · Part C · PDF p. 16](../courses/harvard/am209a/lecnotes/lecture-08c.pdf#page=16)
 
 Card ID: `am209a-two-sided`
 
@@ -17093,7 +17094,7 @@ Under the null and model assumptions, the probability of a test statistic at lea
 
 </details>
 
-Sources: [Lecture 8 · Part C · PDF p. 17](../courses/am209a/lecnotes/lecture-08c.pdf#page=17)
+Sources: [Lecture 8 · Part C · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-08c.pdf#page=17)
 
 Card ID: `am209a-pvalue`
 
@@ -17112,7 +17113,7 @@ No.
 
 </details>
 
-Sources: [Lecture 8 · Part C · PDF p. 17](../courses/am209a/lecnotes/lecture-08c.pdf#page=17)
+Sources: [Lecture 8 · Part C · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-08c.pdf#page=17)
 
 Card ID: `am209a-p-not-null`
 
@@ -17131,7 +17132,7 @@ No. The data may be too imprecise to distinguish it from zero.
 
 </details>
 
-Sources: [Lecture 8 · Part C · PDF p. 17](../courses/am209a/lecnotes/lecture-08c.pdf#page=17)
+Sources: [Lecture 8 · Part C · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-08c.pdf#page=17)
 
 Card ID: `am209a-not-significant`
 
@@ -17150,7 +17151,7 @@ No. The regression can still reflect confounding or selection.
 
 </details>
 
-Sources: [Lecture 8 · Part C · PDF p. 17](../courses/am209a/lecnotes/lecture-08c.pdf#page=17)
+Sources: [Lecture 8 · Part C · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-08c.pdf#page=17)
 
 Card ID: `am209a-association-not-cause`
 
@@ -17169,7 +17170,7 @@ No. A tiny effect can be precisely estimated, and a meaningful effect can be unc
 
 </details>
 
-Sources: [Lecture 8 · Part C · PDF p. 18](../courses/am209a/lecnotes/lecture-08c.pdf#page=18)
+Sources: [Lecture 8 · Part C · PDF p. 18](../courses/harvard/am209a/lecnotes/lecture-08c.pdf#page=18)
 
 Card ID: `am209a-practical`
 
@@ -17188,7 +17189,7 @@ Predict at the same x with each bootstrap fit and summarize those fitted mean pr
 
 </details>
 
-Sources: [Lecture 8 · Part D · PDF p. 6](../courses/am209a/lecnotes/lecture-08d.pdf#page=6)
+Sources: [Lecture 8 · Part D · PDF p. 6](../courses/harvard/am209a/lecnotes/lecture-08d.pdf#page=6)
 
 Card ID: `am209a-mean-band`
 
@@ -17207,7 +17208,7 @@ It includes both uncertainty in the fitted mean and variation of a new response 
 
 </details>
 
-Sources: [Lecture 8 · Part D · PDF p. 11](../courses/am209a/lecnotes/lecture-08d.pdf#page=11)
+Sources: [Lecture 8 · Part D · PDF p. 11](../courses/harvard/am209a/lecnotes/lecture-08d.pdf#page=11)
 
 Card ID: `am209a-prediction-vs-confidence`
 
@@ -17226,7 +17227,7 @@ No. The new response still contains random error ε.
 
 </details>
 
-Sources: [Lecture 8 · Part D · PDF p. 11](../courses/am209a/lecnotes/lecture-08d.pdf#page=11)
+Sources: [Lecture 8 · Part D · PDF p. 11](../courses/harvard/am209a/lecnotes/lecture-08d.pdf#page=11)
 
 Card ID: `am209a-known-mean`
 
@@ -17245,7 +17246,7 @@ New-observation noise. A predictive simulation must also include suitable respon
 
 </details>
 
-Sources: [Lecture 8 · Part D · PDF p. 13](../courses/am209a/lecnotes/lecture-08d.pdf#page=13)
+Sources: [Lecture 8 · Part D · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-08d.pdf#page=13)
 
 Card ID: `am209a-bootstrap-new-response`
 
@@ -17264,7 +17265,7 @@ They add: Var(prediction error)=Var(estimated mean error)+σ², under the model.
 
 </details>
 
-Sources: [Lecture 8 · Part D · PDF p. 14](../courses/am209a/lecnotes/lecture-08d.pdf#page=14)
+Sources: [Lecture 8 · Part D · PDF p. 14](../courses/harvard/am209a/lecnotes/lecture-08d.pdf#page=14)
 
 Card ID: `am209a-two-variances`
 
@@ -17288,7 +17289,7 @@ It doubles, from 2⁻⁴⁶ to 2⁻⁴⁵. The exponent increases by one while b
 
 </details>
 
-Sources: [PS1 · Q1(a)](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(a)](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-spacing-visual-double-spacing`
 
@@ -17312,7 +17313,7 @@ A gives (2, 2). B first gives (2, 1), then (4, 1). Scaling and swapping generall
 
 </details>
 
-Sources: [PS1 · Q3](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q3](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-row-column-order-visual-operation-order`
 
@@ -17336,7 +17337,7 @@ Area is unchanged because the product of singular values is 1. The shape can sti
 
 </details>
 
-Sources: [PS1 · Q4](../courses/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q4](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
 
 Card ID: `am205-singular-values-area-visual-area-predict`
 
@@ -17360,7 +17361,7 @@ The true solution is (1, 1), so the second component is entirely wrong. The tiny
 
 </details>
 
-Sources: [Heath · §2.3.5, printed p. 61](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82)
+Sources: [Heath · §2.3.5, printed p. 61](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82)
 
 Card ID: `am205-small-residual-counterexample-visual-residual-trap`
 
@@ -17384,7 +17385,7 @@ The normal equations form XᵀX, whose 2-norm condition number is κ₂(X)² = 1
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
 
 Card ID: `am205-normal-squared-visual-conditioning-predict`
 
@@ -17409,7 +17410,7 @@ Solve Ux=y by back substitution. For each new right-hand side, reuse P, L, and U
 
 </details>
 
-Sources: [Heath · Ch. 2 review · repeated systems](../courses/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review · repeated systems](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
 
 Card ID: `am205-lu-reuse-visual-solve-pipeline`
 
@@ -17433,7 +17434,7 @@ Budget B. Standard error scales as 1/√N, so quadrupling N halves it; doubling 
 
 </details>
 
-Sources: [Lecture 03 · p. 27](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=27)
+Sources: [Lecture 03 · p. 27](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=27)
 
 Card ID: `am207-iid-mean-variance-visual-mc-budget`
 
@@ -17457,7 +17458,7 @@ Acceptance falls from 1/2 to 1/8. The looser envelope needs four times as many p
 
 </details>
 
-Sources: [Lecture 02 · p. 34](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=34)
+Sources: [Lecture 02 · p. 34](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=34)
 
 Card ID: `am207-rejection-acceptance-fraction-visual-envelope-cost`
 
@@ -17480,7 +17481,7 @@ Rejected proposals must append the current state again. Removing those repeated 
 
 </details>
 
-Sources: [Lecture 02 · p. 42](../courses/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=42)
+Sources: [Lecture 02 · p. 42](../courses/harvard/am207/lecnotes/Lecture_02_Transforms_Sampling_0914.pdf#page=42)
 
 Card ID: `am207-mh-holding-visual-rejection-trap`
 
@@ -17504,7 +17505,7 @@ B misses target mass outside [0,1]. A has full support, although its weight vari
 
 </details>
 
-Sources: [Lecture 03 · p. 33](../courses/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=33)
+Sources: [Lecture 03 · p. 33](../courses/harvard/am207/lecnotes/Lecture_03_MCMC_Monte_Carlo_0916.pdf#page=33)
 
 Card ID: `am207-importance-support-visual-support-check`
 
@@ -17528,7 +17529,7 @@ A Poisson random count with mean 3, not exactly three events. Freezing the prope
 
 </details>
 
-Sources: [Lecture 05 · p. 39](../courses/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=39)
+Sources: [Lecture 05 · p. 39](../courses/harvard/am207/lecnotes/Lecture_05_Stochastic_Simulation_0923.pdf#page=39)
 
 Card ID: `am207-tau-poisson-mean-visual-tau-predict`
 
@@ -17553,7 +17554,7 @@ Beta(5,8): add heads to the first shape parameter and tails to the second.
 
 </details>
 
-Sources: [Lecture 06 · p. 49](../courses/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=49)
+Sources: [Lecture 06 · p. 49](../courses/harvard/am207/lecnotes/Lecture_06_Introduction_UQ_0928.pdf#page=49)
 
 Card ID: `am207-coin-four-eleven-visual-bayes-pipeline`
 
@@ -17577,7 +17578,7 @@ No. Both give 3x because only the coefficient sum is identified. Individual coef
 
 </details>
 
-Sources: [HW2 · Q2](../courses/stat244/homeworks/ps2/hw2.pdf#page=1)
+Sources: [HW2 · Q2](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=1)
 
 Card ID: `stat244-affine-example-visual-coefficient-twins`
 
@@ -17600,7 +17601,7 @@ For a real matrix, also require Pᵀ=P. Idempotence alone describes a projection
 
 </details>
 
-Sources: [HW2 · Q5(a–c)](../courses/stat244/homeworks/ps2/hw2.pdf#page=3)
+Sources: [HW2 · Q5(a–c)](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=3)
 
 Card ID: `stat244-idempotent-not-orthogonal-visual-projection-trap`
 
@@ -17624,7 +17625,7 @@ It rises from 5 to 8. With SSE held fixed, fewer residual degrees of freedom mea
 
 </details>
 
-Sources: [HW2 · Q7; least-squares theory](../courses/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator](../courses/stat244/lecnotes/notes-lstheory.pdf)
+Sources: [HW2 · Q7; least-squares theory](../courses/harvard/stat244/homeworks/ps2/hw2.pdf#page=4); [Least-squares theory · variance estimator](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf)
 
 Card ID: `stat244-variance-numeric-visual-degrees-freedom`
 
@@ -17648,7 +17649,7 @@ A. Inverse-variance weights are 1 and 1/4; the noisier measurement receives less
 
 </details>
 
-Sources: [Least-squares theory · p. 22](../courses/stat244/lecnotes/notes-lstheory.pdf#page=22)
+Sources: [Least-squares theory · p. 22](../courses/harvard/stat244/lecnotes/notes-lstheory.pdf#page=22)
 
 Card ID: `stat244-weights-visual-weight-comparison`
 
@@ -17672,7 +17673,7 @@ The new-response SE is √5 ≈ 2.24; the mean-response SE is 1. The extra 1 rep
 
 </details>
 
-Sources: [Inference notes · pp. 12–13](../courses/stat244/lecnotes/notes-lsinf.pdf#page=13)
+Sources: [Inference notes · pp. 12–13](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=13)
 
 Card ID: `stat244-prediction-width-number-visual-uncertainty-split`
 
@@ -17695,7 +17696,7 @@ Predictor variance does not measure association with the response. A low-varianc
 
 </details>
 
-Sources: [Inference notes · pp. 23–24](../courses/stat244/lecnotes/notes-lsinf.pdf#page=23)
+Sources: [Inference notes · pp. 23–24](../courses/harvard/stat244/lecnotes/notes-lsinf.pdf#page=23)
 
 Card ID: `stat244-pcr-visual-pcr-trap`
 
@@ -17718,7 +17719,7 @@ More responses can reduce random variation while leaving selection bias intact. 
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 6](../courses/am209a/lecnotes/lecture-03.pdf#page=6)
+Sources: [Lecture 3 · PDF p. 6](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=6)
 
 Card ID: `am209a-selection-bias-visual-sample-size-trap`
 
@@ -17742,7 +17743,7 @@ Yes. The covariance is zero by symmetry, even though Y is completely determined 
 
 </details>
 
-Sources: [Lecture 3 · PDF p. 17](../courses/am209a/lecnotes/lecture-03.pdf#page=17)
+Sources: [Lecture 3 · PDF p. 17](../courses/harvard/am209a/lecnotes/lecture-03.pdf#page=17)
 
 Card ID: `am209a-correlation-visual-curved-association`
 
@@ -17767,7 +17768,7 @@ Step 2 uses the test set for selection. Tune with validation data or cross-valid
 
 </details>
 
-Sources: [Lecture 4 · Part B · PDF p. 8](../courses/am209a/lecnotes/lecture-04b.pdf#page=8)
+Sources: [Lecture 4 · Part B · PDF p. 8](../courses/harvard/am209a/lecnotes/lecture-04b.pdf#page=8)
 
 Card ID: `am209a-train-validation-test-visual-test-leak`
 
@@ -17791,7 +17792,7 @@ The slope changes from 2 to 6 because ∂f/∂x=2+4z.
 
 </details>
 
-Sources: [Lecture 6 · Part A · PDF p. 14](../courses/am209a/lecnotes/lecture-06a.pdf#page=14)
+Sources: [Lecture 6 · Part A · PDF p. 14](../courses/harvard/am209a/lecnotes/lecture-06a.pdf#page=14)
 
 Card ID: `am209a-interaction-slope-visual-interaction-predict`
 
@@ -17815,7 +17816,7 @@ Lasso can set coefficients exactly to zero. Ridge generally shrinks them continu
 
 </details>
 
-Sources: [Lecture 7 · Part C · PDF p. 3](../courses/am209a/lecnotes/lecture-07c.pdf#page=3)
+Sources: [Lecture 7 · Part C · PDF p. 3](../courses/harvard/am209a/lecnotes/lecture-07c.pdf#page=3)
 
 Card ID: `am209a-sparsity-visual-penalty-choice`
 
@@ -17838,6 +17839,5516 @@ Each resample contains the same observations, so the mean never changes. An ordi
 
 </details>
 
-Sources: [Lecture 8 · Part B · PDF p. 13](../courses/am209a/lecnotes/lecture-08b.pdf#page=13)
+Sources: [Lecture 8 · Part B · PDF p. 13](../courses/harvard/am209a/lecnotes/lecture-08b.pdf#page=13)
 
 Card ID: `am209a-bootstrap-size-visual-bootstrap-trap`
+
+---
+
+### 933. What crosses borders in international economics?
+
+**International Finance · International economics · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Goods and services, money, and investments. International economics studies how those cross-border interactions affect economies.
+
+**Intuition:** Trade and finance describe connected parts of the same system.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 3](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=3)
+
+Card ID: `ub-if-international-scope`
+
+---
+
+### 934. How does international finance differ from international trade?
+
+**International Finance · International economics · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Trade focuses on goods and services crossing borders. Finance focuses on monetary transactions, financial claims, and the policies governing them.
+
+**Intuition:** A goods transaction often has a financial counterpart.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 20](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=20)
+
+Card ID: `ub-if-trade-vs-finance`
+
+---
+
+### 935. Why measure trade relative to GDP rather than only in dollars?
+
+**International Finance · International economics · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The ratio indicates trade's importance relative to the economy's size. Dollar trade can rise simply because the whole economy grows.
+
+**Intuition:** Normalize before comparing economic exposure.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 4](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=4)
+
+Card ID: `ub-if-trade-share`
+
+---
+
+### 936. Why can a large, diverse country have a lower trade-to-GDP ratio?
+
+**International Finance · International economics · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It can obtain more goods and resources within its own borders. Smaller economies often rely more heavily on foreign production and markets.
+
+**Intuition:** Economic size changes the need to cross borders.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 6](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=6)
+
+Card ID: `ub-if-country-size`
+
+---
+
+### 937. How can an international exchange benefit both sides?
+
+**International Finance · Gains from trade · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Each party can receive something it values more than what it gives up. Differences in production opportunities create room for mutually beneficial exchange.
+
+**Intuition:** Trade is not automatically a zero-sum contest.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 8](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=8)
+
+Card ID: `ub-if-voluntary-trade`
+
+---
+
+### 938. Can a country gain from trade even if it is less productive in every good?
+
+**International Finance · Gains from trade · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. Gains depend on relative opportunity costs, not just absolute productivity. Specializing where its relative disadvantage is smallest can still improve its consumption possibilities.
+
+**Intuition:** Compare what production requires giving up.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 9](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=9)
+
+Card ID: `ub-if-comparative-advantage`
+
+---
+
+### 939. What is a good's opportunity cost?
+
+**International Finance · Gains from trade · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The amount of another good or activity sacrificed to produce it with scarce resources.
+
+**Intuition:** Scarcity makes relative tradeoffs matter.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 9](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=9)
+
+Card ID: `ub-if-opportunity-cost`
+
+---
+
+### 940. How can differences in resource abundance shape trade?
+
+**International Finance · Gains from trade · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Countries can export goods using relatively abundant factors intensively and import goods requiring relatively scarce factors.
+
+**Intuition:** Trade indirectly exchanges the services of productive resources.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 10](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=10)
+
+Card ID: `ub-if-abundant-resources`
+
+---
+
+### 941. How can specialization lower production costs?
+
+**International Finance · Gains from trade · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Producing at a larger scale can spread fixed costs or improve efficiency, allowing gains beyond differences in resources or productivity.
+
+**Intuition:** A larger market can support more efficient production.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 10](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=10)
+
+Card ID: `ub-if-scale`
+
+---
+
+### 942. Why are international borrowing and lending a form of trade?
+
+**International Finance · Gains from trade · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They exchange resources available now for claims on resources available later.
+
+**Intuition:** Finance moves purchasing power through time.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 10](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=10)
+
+Card ID: `ub-if-intertemporal-trade`
+
+---
+
+### 943. If a country gains overall from trade, must every resident gain?
+
+**International Finance · Gains from trade · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Owners of resources used intensively in import-competing industries can lose even when aggregate gains are positive.
+
+**Intuition:** National gains and individual gains are different claims.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 11](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=11)
+
+Card ID: `ub-if-distribution`
+
+---
+
+### 944. What does the pattern of trade describe?
+
+**International Finance · Trade patterns and policy · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Who sells which goods and services to whom. Productivity, climate, and relative factor supplies help explain that pattern.
+
+**Intuition:** Trade composition reflects differences in production possibilities.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 12](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=12)
+
+Card ID: `ub-if-trade-pattern`
+
+---
+
+### 945. How does a tariff differ from a quota?
+
+**International Finance · Trade patterns and policy · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A tariff taxes trade; a quota limits its quantity. Both can restrict trade but use different policy instruments.
+
+**Intuition:** A price wedge and a quantity ceiling are not the same mechanism.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=13)
+
+Card ID: `ub-if-tariff`
+
+---
+
+### 946. What is an export subsidy?
+
+**International Finance · Trade patterns and policy · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A payment encouraging producers to sell abroad, rather than a tax paid on imports.
+
+**Intuition:** Identify who receives the policy payment.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=13)
+
+Card ID: `ub-if-export-subsidy`
+
+---
+
+### 947. Can trade be restricted without a tariff or quota?
+
+**International Finance · Trade patterns and policy · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. Product rules or other regulations can exclude foreign goods while permitting domestic substitutes.
+
+**Intuition:** A barrier's effect can matter more than its label.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=13)
+
+Card ID: `ub-if-regulatory-barrier`
+
+---
+
+### 948. Why consider foreign retaliation when evaluating a trade restriction?
+
+**International Finance · Trade patterns and policy · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Other governments may respond with their own restrictions, reducing export opportunities and changing the original policy's costs and benefits.
+
+**Intuition:** Policy choices can provoke responses abroad.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 14](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=14)
+
+Card ID: `ub-if-retaliation`
+
+---
+
+### 949. Why might trade policy differ from a policy maximizing national welfare?
+
+**International Finance · Trade patterns and policy · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Organized groups can favor policies benefiting themselves even if the economy as a whole loses.
+
+**Intuition:** Concentrated benefits can outweigh diffuse costs politically.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 14](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=14)
+
+Card ID: `ub-if-special-interests`
+
+---
+
+### 950. How can international asset trade reduce income risk?
+
+**International Finance · International financial links · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Holding assets whose payoffs do not move together can reduce portfolio income variability. It does not eliminate every risk.
+
+**Intuition:** Different sources of income can offset one another.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 15](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=15)
+
+Card ID: `ub-if-diversification`
+
+---
+
+### 951. Why do exchange rates matter for trade prices?
+
+**International Finance · International financial links · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They translate foreign prices into domestic currency and domestic prices into foreign currency.
+
+**Intuition:** The currency conversion changes affordability across borders.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 17](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=17)
+
+Card ID: `ub-if-exchange-rate-role`
+
+---
+
+### 952. How does a floating exchange rate differ from a fixed one?
+
+**International Finance · International financial links · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A floating rate can change with market conditions; a fixed regime aims to maintain a specified rate or parity through policy.
+
+**Intuition:** The exchange-rate regime affects policy constraints.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 17](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=17)
+
+Card ID: `ub-if-fixed-floating`
+
+---
+
+### 953. Why can international policy coordination be useful?
+
+**International Finance · International financial links · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+One country's policies can affect other countries through trade and financial markets. Coordination can account for these spillovers.
+
+**Intuition:** Integrated economies are not isolated policy laboratories.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 18](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=18)
+
+Card ID: `ub-if-coordination`
+
+---
+
+### 954. What extra risks arise in international capital markets?
+
+**International Finance · International financial links · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Exchange-rate changes can alter repayments measured in the lender's currency, and sovereign borrowers can default. Foreign-investment rules also affect transactions.
+
+**Intuition:** A promised foreign-currency payoff has more than one source of uncertainty.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 19](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=19)
+
+Card ID: `ub-if-capital-risk`
+
+---
+
+### 955. Why do production, expenditure, and income have equal aggregate values?
+
+**International Finance · National income accounting · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Spending on produced goods and services becomes income to the factors and firms producing them. They are different ways to count the same activity.
+
+**Intuition:** Do not add the three measures together.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 3](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=3)
+
+Card ID: `ub-if-income-output-expenditure`
+
+---
+
+### 956. What does GNP measure?
+
+**International Finance · National income accounting · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The value of final goods and services produced by a nation's factors of production during a period, including their production abroad.
+
+**Intuition:** GNP follows the national ownership of productive factors.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 4](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=4)
+
+Card ID: `ub-if-gnp`
+
+---
+
+### 957. What does GDP measure?
+
+**International Finance · National income accounting · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The value of final goods and services produced within a country's borders during a period, regardless of factor ownership.
+
+**Intuition:** GDP follows the location of production.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 8](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=8)
+
+Card ID: `ub-if-gdp`
+
+---
+
+### 958. How do net foreign factor receipts connect GNP and GDP?
+
+**International Finance · National income accounting · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+GNP = GDP + factor income received from abroad − factor income paid abroad.
+
+**Intuition:** Location and ownership differ through cross-border factor income.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 8](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=8); [Homework Chapter 2 · Q2 · PDF page 1](../courses/ubuffalo/international-finance/CH2.pdf#page=1)
+
+Card ID: `ub-if-gnp-gdp`
+
+---
+
+### 959. How are profits from a Spanish factory owned by British residents classified?
+
+**International Finance · National income accounting · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The factory's production contributes to Spain's GDP. Its British-owned factor income contributes to Britain's GNP rather than Britain's GDP.
+
+**Intuition:** Where production occurs is distinct from who earns its income.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 8](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=8); [Homework Chapter 2 · Q3 · PDF page 1](../courses/ubuffalo/international-finance/CH2.pdf#page=1)
+
+Card ID: `ub-if-factory`
+
+---
+
+### 960. Why count final output rather than repeatedly counting intermediate inputs?
+
+**International Finance · National income accounting · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The final output's value already incorporates the intermediate inputs. Counting both in full would double-count production.
+
+**Intuition:** Value added and final expenditure avoid repeated counting.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 4](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=4)
+
+Card ID: `ub-if-final-goods`
+
+---
+
+### 961. What are the four expenditure components in Y=C+I+G+CA?
+
+**International Finance · National income accounting · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Consumption, domestic investment, government purchases, and the current account balance under the chapter's simplified accounting conventions.
+
+**Intuition:** Identify how national output is used.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 5](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=5); [Homework Chapter 2 · Q1 · PDF page 1](../courses/ubuffalo/international-finance/CH2.pdf#page=1)
+
+Card ID: `ub-if-four-uses`
+
+---
+
+### 962. Does buying an existing stock count as investment in national income accounting?
+
+**International Finance · National income accounting · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Here investment means additions to productive capital and inventories, not trading an existing financial claim.
+
+**Intuition:** Economic investment and portfolio investment use the same word differently.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 5](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=5)
+
+Card ID: `ub-if-investment-definition`
+
+---
+
+### 963. Why do firms' additions to inventories count as investment?
+
+**International Finance · National income accounting · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They are produced goods held for future sale or use rather than current consumption.
+
+**Intuition:** Unsold production is still production.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 5](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=5); [Homework Chapter 2 · Q5 · PDF page 1](../courses/ubuffalo/international-finance/CH2.pdf#page=1)
+
+Card ID: `ub-if-inventory`
+
+---
+
+### 964. Why subtract capital depreciation when moving from gross to net income?
+
+**International Finance · National income accounting · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Depreciation represents capital used up during production, so not all gross output is available without reducing the capital stock.
+
+**Intuition:** Gross measures include replacement of worn-out capital.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 7](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=7)
+
+Card ID: `ub-if-depreciation`
+
+---
+
+### 965. How does a unilateral transfer differ from payment for production?
+
+**International Finance · National income accounting · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It transfers purchasing power without buying a good, service, or asset in return. It affects disposable resources and the current account but is not newly produced output.
+
+**Intuition:** A gift is a transfer of resources, not extra production.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 7](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=7); [Homework Chapter 2 · Q12 · PDF page 3](../courses/ubuffalo/international-finance/CH2.pdf#page=3)
+
+Card ID: `ub-if-transfers`
+
+---
+
+### 966. What is domestic absorption?
+
+**International Finance · Current account and absorption · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+C+I+G: expenditure by domestic consumers, firms, and government on goods and services.
+
+**Intuition:** Absorption measures spending at home, not just domestic production.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 9](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=9)
+
+Card ID: `ub-if-absorption`
+
+---
+
+### 967. How does the current account relate to income and absorption?
+
+**International Finance · Current account and absorption · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+CA=Y−(C+I+G) in the chapter's income identity. A surplus means income exceeds absorption; a deficit means absorption exceeds income.
+
+**Intuition:** The current account records the gap between earning and spending.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 10](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=10); [Homework Chapter 2 · Q7 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-ca-absorption`
+
+---
+
+### 968. Is the full current account always just exports minus imports of goods?
+
+**International Finance · Current account and absorption · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It also includes services, net primary income, and net current transfers. The chapter's simple EX−IM notation suppresses or groups these adjustments.
+
+**Intuition:** Do not confuse a goods trade balance with the full current account.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 22](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=22)
+
+Card ID: `ub-if-ca-vs-trade`
+
+---
+
+### 969. How can a country finance a current account deficit?
+
+**International Finance · Current account and absorption · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+By increasing liabilities to foreigners or reducing previously accumulated foreign assets, ignoring capital transfers and valuation effects.
+
+**Intuition:** Spending beyond income uses external financing or existing wealth.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 10](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=10); [Homework Chapter 2 · Q7 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-deficit-finance`
+
+---
+
+### 970. Does a current account deficit exactly equal the fall in measured net foreign wealth?
+
+**International Finance · Current account and absorption · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Not generally. It contributes to the change, but asset-price changes, exchange-rate revaluations, capital transfers, and other adjustments also affect the stock.
+
+**Intuition:** A flow does not fully explain a revalued asset stock.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 38](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=38); [Homework Chapter 2 · Q4 · PDF page 1](../courses/ubuffalo/international-finance/CH2.pdf#page=1); [Homework Chapter 2 · Q7 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-wealth-caveat`
+
+---
+
+### 971. How is national saving defined in the chapter?
+
+**International Finance · Saving and investment · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+S=Y−C−G: income not used for consumption or government purchases.
+
+**Intuition:** Saving leaves resources available for investment or net foreign lending.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 12](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=12)
+
+Card ID: `ub-if-national-saving`
+
+---
+
+### 972. How do saving, investment, and the current account connect?
+
+**International Finance · Saving and investment · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+S=I+CA, so CA=S−I. Saving can fund domestic investment or a net acquisition of foreign claims.
+
+**Intuition:** An open economy has two destinations for saving.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 12](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=12); [Homework Chapter 2 · Q11 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-saving-identity`
+
+---
+
+### 973. Why does national saving equal investment in a closed economy?
+
+**International Finance · Saving and investment · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Without cross-border transactions, CA=0, so the identity S=I+CA reduces to S=I.
+
+**Intuition:** Closing the economy removes net foreign lending.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 12](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=12); [Homework Chapter 2 · Q6 · PDF page 1](../courses/ubuffalo/international-finance/CH2.pdf#page=1); [Homework Chapter 2 · Q11 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-closed-economy`
+
+---
+
+### 974. If domestic investment exceeds national saving, what sign does CA have?
+
+**International Finance · Saving and investment · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Negative: CA=S−I<0. The investment gap is financed by net external borrowing or foreign-asset reduction.
+
+**Intuition:** Domestic investment need not wait for equal domestic saving.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 12](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=12)
+
+Card ID: `ub-if-saving-deficit`
+
+---
+
+### 975. How do you calculate private saving from income, taxes, and consumption?
+
+**International Finance · Saving and investment · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Sᵖ=Y−T−C, where T is net taxes and Y−T is disposable income.
+
+**Intuition:** Private saving is what remains after taxes and consumption.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q9 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-private-saving`
+
+---
+
+### 976. What is government saving?
+
+**International Finance · Saving and investment · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Sᵍ=T−G. A budget deficit, G>T, is negative government saving.
+
+**Intuition:** A budget deficit absorbs part of national saving.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q9 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-government-saving`
+
+---
+
+### 977. Why does Sᵖ+Sᵍ equal national saving?
+
+**International Finance · Saving and investment · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Adding Y−T−C and T−G cancels taxes, leaving Y−C−G.
+
+**Intuition:** Taxes redistribute between sectors before they affect total saving through behavior.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q9 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-saving-sum`
+
+---
+
+### 978. How can private saving be written using I, CA, and the budget deficit?
+
+**International Finance · Saving and investment · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Sᵖ=I+CA+(G−T). Rearranging gives CA=Sᵖ−I−(G−T).
+
+**Intuition:** The budget deficit competes with investment and foreign lending for private saving.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q8 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-private-rearrange`
+
+---
+
+### 979. Must a larger government deficit cause an equal current account deterioration?
+
+**International Finance · Saving and investment · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Only if private saving and investment stay fixed. The accounting identity alone does not say how those behaviors respond.
+
+**Intuition:** An identity is not a complete causal model.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q9 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-twin-deficits`
+
+---
+
+### 980. How many entries does an international transaction create in double-entry bookkeeping?
+
+**International Finance · Balance of payments bookkeeping · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Two equal-value entries: one credit and one debit, possibly within the same account.
+
+**Intuition:** The payment side balances the resource or asset side.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 15](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=15); [Homework Chapter 2 · Q13 · PDF page 3](../courses/ubuffalo/international-finance/CH2.pdf#page=3); [Homework Chapter 2 · Q18 · PDF page 3](../courses/ubuffalo/international-finance/CH2.pdf#page=3)
+
+Card ID: `ub-if-double-entry`
+
+---
+
+### 981. What distinguishes the current, financial, and capital accounts?
+
+**International Finance · Balance of payments bookkeeping · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The current account records goods, services, income, and current transfers. The financial account records financial asset transactions. The capital account records capital transfers and certain nonproduced nonfinancial assets.
+
+**Intuition:** Classify the transaction before assigning its sign.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 16](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=16)
+
+Card ID: `ub-if-three-accounts`
+
+---
+
+### 982. What financial-account sign convention do these slides use?
+
+**International Finance · Balance of payments bookkeeping · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Net financial inflows are positive: sales of domestic assets to foreigners minus domestic purchases of foreign assets. Under it, CA+KA+FA=0.
+
+**Intuition:** State the sign convention before using an identity.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 24](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=24)
+
+Card ID: `ub-if-sign-convention`
+
+---
+
+### 983. Why is a resident's purchase of a foreign asset a financial-account debit in the slides?
+
+**International Finance · Balance of payments bookkeeping · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It is a financial outflow: the resident gives up funds to acquire a claim on a foreign entity.
+
+**Intuition:** Buying a foreign claim sends financing abroad.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 24](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=24)
+
+Card ID: `ub-if-asset-purchase`
+
+---
+
+### 984. Why is selling a domestic asset to a foreigner a financial-account credit?
+
+**International Finance · Balance of payments bookkeeping · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It brings financing into the domestic economy and increases foreigners' claims on it.
+
+**Intuition:** An inflow creates a foreign-held claim, not free income.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 24](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=24)
+
+Card ID: `ub-if-asset-sale`
+
+---
+
+### 985. A U.S. resident imports a $1,000 machine and the seller keeps a U.S. bank deposit. What are the entries?
+
+**International Finance · Balance of payments bookkeeping · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A $1,000 current-account debit for the goods import and a $1,000 financial-account credit for the foreign-held U.S. deposit.
+
+**Intuition:** The imported good and the payment claim balance.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 17](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=17)
+
+Card ID: `ub-if-import-entry`
+
+---
+
+### 986. How is a U.S. resident's meal in France paid by credit card recorded?
+
+**International Finance · Balance of payments bookkeeping · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A current-account debit for a U.S. service import and an offsetting financial credit for the payment claim, using the slides' convention.
+
+**Intuition:** Tourism purchases count as international trade in services.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 18](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=18); [Homework Chapter 2 · Q16 · PDF page 3](../courses/ubuffalo/international-finance/CH2.pdf#page=3)
+
+Card ID: `ub-if-travel-entry`
+
+---
+
+### 987. Can both entries for one transaction be in the financial account?
+
+**International Finance · Balance of payments bookkeeping · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. A U.S. resident buying a foreign share creates an asset-purchase debit; a matching increase in the foreign seller's U.S. deposit creates a credit.
+
+**Intuition:** No goods trade is required for a cross-border financial transaction.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 19](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=19); [Homework Chapter 2 · Q15 · PDF page 3](../courses/ubuffalo/international-finance/CH2.pdf#page=3)
+
+Card ID: `ub-if-stock-entry`
+
+---
+
+### 988. How do the slides record a U.S. bank forgiving foreign debt?
+
+**International Finance · Balance of payments bookkeeping · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A capital-account debit for the transfer and a financial-account credit for reducing the bank's claim on the foreign borrower.
+
+**Intuition:** Forgiveness removes an asset and transfers wealth.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 20](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=20)
+
+Card ID: `ub-if-debt-forgiveness`
+
+---
+
+### 989. If CA=−40 and KA=5, what is FA under the slides' net-inflow convention?
+
+**International Finance · Balance of payments bookkeeping · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+FA=35, since −40+5+35=0.
+
+**Intuition:** Account signs must close the same identity.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 21](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=21)
+
+Card ID: `ub-if-balance-identity`
+
+---
+
+### 990. Why can published balance-of-payments data need a statistical discrepancy?
+
+**International Finance · Balance of payments bookkeeping · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Different data sources have timing, coverage, and measurement errors even though the underlying double-entry identity balances.
+
+**Intuition:** An accounting identity does not make measurement perfect.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 26](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=26); [Homework Chapter 2 · Q13 · PDF page 3](../courses/ubuffalo/international-finance/CH2.pdf#page=3)
+
+Card ID: `ub-if-discrepancy`
+
+---
+
+### 991. Why should all countries' current accounts sum to zero in principle?
+
+**International Finance · Balance of payments bookkeeping · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Each country's payment is another country's receipt. A nonzero measured world total points to inconsistent measurement rather than trade with an outside planet.
+
+**Intuition:** Global credits and debits should match.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 30](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=30)
+
+Card ID: `ub-if-world-ca`
+
+---
+
+### 992. What is official foreign exchange intervention?
+
+**International Finance · Reserves and external wealth · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A central bank's purchase or sale of international reserve assets in asset markets. Such transactions can also inject or withdraw domestic money.
+
+**Intuition:** Reserve transactions connect exchange markets with monetary conditions.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 27](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=27)
+
+Card ID: `ub-if-intervention`
+
+---
+
+### 993. What counts as an official international reserve asset in the slides?
+
+**International Finance · Reserves and external wealth · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Foreign assets held by monetary authorities, including foreign currency, government bonds, gold, and IMF-related reserve assets.
+
+**Intuition:** Reserves provide a buffer for external payments and instability.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 28](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=28)
+
+Card ID: `ub-if-reserve-assets`
+
+---
+
+### 994. What is the official settlements balance under the slides' convention?
+
+**International Finance · Reserves and external wealth · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+CA+KA+nonreserve financial flows+statistical discrepancy. It is the negative of the balancing net official reserve-related financial flow.
+
+**Intuition:** The overall accounts balance even when the official settlements balance is nonzero.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 29](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=29); [Homework Chapter 2 · Q13 · PDF page 3](../courses/ubuffalo/international-finance/CH2.pdf#page=3); [Homework Chapter 2 · Q14 · PDF page 3](../courses/ubuffalo/international-finance/CH2.pdf#page=3)
+
+Card ID: `ub-if-settlements`
+
+---
+
+### 995. What may a negative official settlements balance indicate?
+
+**International Finance · Reserves and external wealth · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Reserve depletion or increased liabilities to foreign official institutions can finance it. It does not mean double-entry bookkeeping has failed.
+
+**Intuition:** Official financing fills the remaining external gap.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 29](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=29)
+
+Card ID: `ub-if-settlements-deficit`
+
+---
+
+### 996. How is a country's net foreign wealth calculated?
+
+**International Finance · Reserves and external wealth · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Foreign assets owned by residents minus domestic liabilities owed to foreigners, valued at the relevant date.
+
+**Intuition:** Large foreign assets do not imply positive net wealth.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 38](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=38)
+
+Card ID: `ub-if-net-foreign-wealth`
+
+---
+
+### 997. How can dollar depreciation improve U.S. net foreign wealth in the slides' example?
+
+**International Finance · Reserves and external wealth · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Foreign-currency assets rise in dollar value while dollar-denominated liabilities do not change from that currency movement alone.
+
+**Intuition:** The currencies of assets and liabilities determine valuation exposure.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 38](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=38)
+
+Card ID: `ub-if-valuation-dollar`
+
+---
+
+### 998. How do you reconcile beginning and ending international investment positions?
+
+**International Finance · Reserves and external wealth · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Add financial transactions, asset-price changes, exchange-rate changes, and other volume or valuation adjustments to the opening position.
+
+**Intuition:** External wealth changes through both transactions and revaluation.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 39](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=39)
+
+Card ID: `ub-if-stock-flow-reconcile`
+
+---
+
+### 999. Why can the international investment position contain an 'other changes' category?
+
+**International Finance · Reserves and external wealth · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Survey coverage, reporting-panel changes, unallocated valuation effects, and other revisions can alter measured positions without a recorded new transaction.
+
+**Intuition:** Measurement revisions need not represent fresh borrowing.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 46](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=46)
+
+Card ID: `ub-if-other-adjustments`
+
+---
+
+### 1000. What does profit shifting do to measured production in a low-tax location?
+
+**International Finance · GDP and welfare · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Booking multinational income or intellectual property there can raise measured GDP without a matching increase in local labor or living standards.
+
+**Intuition:** A GDP jump can reflect accounting location rather than broad prosperity.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 34](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=34); [Homework Chapter 2 · Q17 · PDF page 3](../courses/ubuffalo/international-finance/CH2.pdf#page=3)
+
+Card ID: `ub-if-profit-shifting`
+
+---
+
+### 1001. What is the lesson of the slides' 2015 Irish GDP jump?
+
+**International Finance · GDP and welfare · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its unusually large rise partly reflected multinational accounting and intellectual-property relocation, so GDP growth alone was a poor guide to residents' welfare.
+
+**Intuition:** Treat this as a historical illustration, not a current tax-rate claim.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 34](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=34)
+
+Card ID: `ub-if-ireland-example`
+
+---
+
+### 1002. What does E=1.20 dollars per euro mean?
+
+**International Finance · Exchange-rate quotations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+One euro costs 1.20 dollars. Multiplying a euro amount by E converts it to dollars; dividing a dollar amount by E converts it to euros.
+
+**Intuition:** Carry currency units through every calculation.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 3](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=3)
+
+Card ID: `ub-if-quote-units`
+
+---
+
+### 1003. If one euro costs $1.25, how many euros does one dollar buy?
+
+**International Finance · Exchange-rate quotations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+1/1.25=0.80 euros per dollar.
+
+**Intuition:** Reversing a quote requires taking its reciprocal.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 3](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=3)
+
+Card ID: `ub-if-reciprocal`
+
+---
+
+### 1004. If E in dollars per euro rises, which currency depreciates?
+
+**International Finance · Exchange-rate quotations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The dollar depreciates and the euro appreciates: more dollars are required to buy one euro.
+
+**Intuition:** A higher quoted number does not always mean a stronger domestic currency.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 9](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=9)
+
+Card ID: `ub-if-dollar-depreciation`
+
+---
+
+### 1005. If E falls from $1.00/€ to $0.90/€, what happens to the dollar?
+
+**International Finance · Exchange-rate quotations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It appreciates against the euro because each dollar now buys more euros.
+
+**Intuition:** Interpret the quote's units before naming the movement.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 10](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=10)
+
+Card ID: `ub-if-dollar-appreciation`
+
+---
+
+### 1006. With a fixed euro sticker price, how does dollar depreciation change a U.S. import's dollar price?
+
+**International Finance · Exchange-rate quotations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It increases the dollar price because P$=E×P€ and E rises.
+
+**Intuition:** Exchange-rate pass-through here assumes the foreign sticker price is unchanged.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 11](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=11); [Homework Chapter 3 · Q3 · PDF page 1](../courses/ubuffalo/international-finance/Ch3.pdf#page=1); [Homework Chapter 3 · Q4 · PDF page 1](../courses/ubuffalo/international-finance/Ch3.pdf#page=1)
+
+Card ID: `ub-if-import-price`
+
+---
+
+### 1007. With a fixed dollar sticker price, how does dollar appreciation affect a U.S. export's euro price?
+
+**International Finance · Exchange-rate quotations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It raises the euro price: P€=P$/E and dollar appreciation means E falls.
+
+**Intuition:** A stronger currency makes unchanged domestic-price exports costlier abroad.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 12](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=12); [Homework Chapter 3 · Q3 · PDF page 1](../courses/ubuffalo/international-finance/Ch3.pdf#page=1)
+
+Card ID: `ub-if-export-price`
+
+---
+
+### 1008. How do you express a British sweater's price in pairs of American jeans?
+
+**International Finance · Exchange-rate quotations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Multiply its pound price by dollars per pound, then divide by the dollar price of one pair of jeans.
+
+**Intuition:** Convert to a common currency before taking a relative price.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 13](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=13)
+
+Card ID: `ub-if-relative-price`
+
+---
+
+### 1009. Does depreciation mechanically guarantee an immediate export-volume increase?
+
+**International Finance · Exchange-rate quotations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It changes relative prices under the model's assumptions; quantity responses also depend on demand, contracts, and adjustment timing.
+
+**Intuition:** Price effects and quantity effects are not identical claims.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 13](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=13); [Homework Chapter 3 · Q4 · PDF page 1](../courses/ubuffalo/international-finance/Ch3.pdf#page=1)
+
+Card ID: `ub-if-quantity-caveat`
+
+---
+
+### 1010. Who participates in foreign exchange markets?
+
+**International Finance · Foreign exchange markets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Banks, nonfinancial corporations, nonbank financial institutions, and central banks. Their motives include trade payments, investment, and official reserve management.
+
+**Intuition:** The market is larger than importers exchanging travel money.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 16](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=16)
+
+Card ID: `ub-if-participants`
+
+---
+
+### 1011. Why do banks play a central role in FX trading?
+
+**International Finance · Foreign exchange markets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They buy and sell currency deposits for themselves and clients and trade extensively with other banks.
+
+**Intuition:** Many customer transactions are connected through the interbank market.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 17](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=17)
+
+Card ID: `ub-if-bank-role`
+
+---
+
+### 1012. How does arbitrage reduce exchange-rate differences across locations?
+
+**International Finance · Foreign exchange markets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Traders buy currency where it is cheaper and sell where it is dearer, raising demand in the cheap market and supply in the expensive one.
+
+**Intuition:** A tradable price gap invites trades that narrow it.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 18](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=18); [Homework Chapter 3 · Q5 · PDF page 1](../courses/ubuffalo/international-finance/Ch3.pdf#page=1)
+
+Card ID: `ub-if-arbitrage`
+
+---
+
+### 1013. Is a tiny quoted FX price difference automatically an exploitable profit?
+
+**International Finance · Foreign exchange markets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Fees, bid-ask spreads, timing, and execution costs can exceed the gross gap.
+
+**Intuition:** Compare achievable net prices, not just displayed midpoint quotes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 18](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=18)
+
+Card ID: `ub-if-arbitrage-costs`
+
+---
+
+### 1014. How does a forward exchange contract differ from a spot transaction?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A spot transaction exchanges currency promptly. A forward fixes the rate now for exchange at a specified future date.
+
+**Intuition:** Agreement date and delivery date are different concepts.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 19](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=19)
+
+Card ID: `ub-if-spot-forward`
+
+---
+
+### 1015. Must spot and forward rates be equal because they move together?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. They concern different delivery dates; interest-rate differentials can create a forward premium or discount.
+
+**Intuition:** High correlation is not numerical equality.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 20](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=20); [Homework Chapter 3 · Q12 · PDF page 3](../courses/ubuffalo/international-finance/Ch3.pdf#page=3)
+
+Card ID: `ub-if-spot-forward-equal`
+
+---
+
+### 1016. What are the two legs of the FX swap described in the slides?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A spot sale of one currency and a forward repurchase of it.
+
+**Intuition:** A swap temporarily changes the currency held.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 21](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=21); [Homework Chapter 3 · Q6 · PDF page 1](../courses/ubuffalo/international-finance/Ch3.pdf#page=1)
+
+Card ID: `ub-if-fx-swap`
+
+---
+
+### 1017. Why might a firm receiving dollars use an FX swap if it needs dollars again in three months?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It can exchange dollars into another currency now while arranging the reverse exchange for the future dollar payment.
+
+**Intuition:** Match temporary investment needs with known future currency needs.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 21](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=21)
+
+Card ID: `ub-if-swap-use`
+
+---
+
+### 1018. What distinguishes the futures contracts described here from customized forwards?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Futures use standardized contract amounts and delivery dates and can be traded in organized markets. Forwards are negotiated between parties.
+
+**Intuition:** Standardization supports trading and clearing.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 22](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=22); [Homework Chapter 3 · Q6 · PDF page 1](../courses/ubuffalo/international-finance/Ch3.pdf#page=1)
+
+Card ID: `ub-if-futures-forward`
+
+---
+
+### 1019. What is the dollar notional of ¥12,500,000 at $0.006400 per yen?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+¥12,500,000×$0.006400/¥=$80,000.
+
+**Intuition:** Notional measures the position's scale, not the required collateral.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 23](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=23)
+
+Card ID: `ub-if-futures-notional`
+
+---
+
+### 1020. How do you find the dollar value of a futures price tick?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Multiply the contract's currency amount by the price tick. Here ¥12,500,000×$0.0000005/¥=$6.25.
+
+**Intuition:** A small quote movement is multiplied by the full contract size.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 23](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=23)
+
+Card ID: `ub-if-tick-value`
+
+---
+
+### 1021. How does initial margin differ from maintenance margin?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Initial margin is collateral required to open a position; maintenance margin is the minimum account equity required to keep it open under the stated rules.
+
+**Intuition:** Margin is not the contract's purchase price.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 24](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=24)
+
+Card ID: `ub-if-margin`
+
+---
+
+### 1022. Why can a modest futures price change cause a large percentage change in posted collateral?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Profit and loss depend on the full notional position, which can be much larger than the margin deposit.
+
+**Intuition:** Leverage magnifies losses as well as gains relative to collateral.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 24](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=24)
+
+Card ID: `ub-if-margin-leverage`
+
+---
+
+### 1023. A long yen contract rises from 0.006400 to 0.006450 $/¥. What is gross profit on ¥12.5 million?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The price gain is 0.000050 $/¥. Multiplying by ¥12,500,000 gives $625, or 100 ticks at $6.25.
+
+**Intuition:** A long currency future benefits when that currency's quoted price rises.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 26](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=26)
+
+Card ID: `ub-if-futures-profit`
+
+---
+
+### 1024. With $625 gross futures profit and $2 fees at entry and exit, what is net profit?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+$625−$2−$2=$621 in the slide's example.
+
+**Intuition:** Round-trip costs reduce the amount actually earned.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 27](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=27)
+
+Card ID: `ub-if-net-profit`
+
+---
+
+### 1025. What separates buying an option from entering a forward obligation?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The option holder has a right, not an obligation, to transact under its terms. The right generally costs a premium.
+
+**Intuition:** Flexibility is not the same as a free guaranteed payoff.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 28](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=28); [Homework Chapter 3 · Q6 · PDF page 1](../courses/ubuffalo/international-finance/Ch3.pdf#page=1)
+
+Card ID: `ub-if-option-obligation`
+
+---
+
+### 1026. What is the difference between a currency call and put?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A call gives its holder the right to buy the specified currency; a put gives the right to sell it at the strike.
+
+**Intuition:** Name the underlying currency before interpreting the option.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 28](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=28)
+
+Card ID: `ub-if-call-put`
+
+---
+
+### 1027. Can every currency option be exercised at any time before expiry?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. That describes American-style exercise. European-style options are exercised only at expiry; the contract terms matter.
+
+**Intuition:** Do not turn one contract style into a universal definition.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 28](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=28)
+
+Card ID: `ub-if-option-style`
+
+---
+
+### 1028. How do you calculate a one-period nominal rate of return?
+
+**International Finance · Currency deposit returns · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Ending value minus initial value, divided by initial value. A $100 deposit ending at $102 returns 2%.
+
+**Intuition:** Return is a proportional gain, not the final account balance.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 30](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=30)
+
+Card ID: `ub-if-nominal-return`
+
+---
+
+### 1029. How do you approximate a real return from a nominal return and inflation?
+
+**International Finance · Currency deposit returns · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Subtract inflation: r≈R−π. The exact gross real return is (1+R)/(1+π).
+
+**Intuition:** Purchasing-power gains can be smaller than money gains.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 31](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=31)
+
+Card ID: `ub-if-real-return`
+
+---
+
+### 1030. Why do nominal and real returns coincide in the chapter's fixed-price short run?
+
+**International Finance · Currency deposit returns · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Inflation is zero over the modeled period, so adjusting the nominal return for inflation makes no change.
+
+**Intuition:** The equality comes from an assumption about prices.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 32](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=32)
+
+Card ID: `ub-if-fixed-prices`
+
+---
+
+### 1031. Which three attributes guide asset demand?
+
+**International Finance · Currency deposit returns · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Expected return, risk, and liquidity.
+
+**Intuition:** A higher promised interest rate is not the only consideration.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 33](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=33); [Homework Chapter 4 · Q2 · PDF page 1](../courses/ubuffalo/international-finance/Ch4.pdf#page=1)
+
+Card ID: `ub-if-asset-demand`
+
+---
+
+### 1032. Why does the basic currency-deposit model compare expected returns alone?
+
+**International Finance · Currency deposit returns · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It treats deposits' risk and liquidity as sufficiently similar. This is a simplifying assumption, not a universal property of real deposits.
+
+**Intuition:** Know what the model holds constant.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 34](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=34)
+
+Card ID: `ub-if-equal-risk-assumption`
+
+---
+
+### 1033. What determines a foreign deposit's return in domestic currency?
+
+**International Finance · Currency deposit returns · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its foreign-currency interest rate and the exchange-rate change between purchase and conversion back.
+
+**Intuition:** Currency gains can reinforce or offset interest earnings.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 35](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=35); [Homework Chapter 3 · Q11 · PDF page 3](../courses/ubuffalo/international-finance/Ch3.pdf#page=3)
+
+Card ID: `ub-if-two-return-components`
+
+---
+
+### 1034. How do you compute the expected dollar payoff from investing one dollar in euros?
+
+**International Finance · Currency deposit returns · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Buy 1/E euros, earn (1+R€)/E euros, then convert at expected future rate Eᵉ to get (1+R€)Eᵉ/E dollars.
+
+**Intuition:** Follow the currency conversion at both ends.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 38](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=38)
+
+Card ID: `ub-if-conversion-steps`
+
+---
+
+### 1035. What is the exact expected dollar return on a euro deposit in the chapter's one-period setup?
+
+**International Finance · Currency deposit returns · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+R€,$=(1+R€)Eᵉ/E−1, with E and Eᵉ both quoted in dollars per euro.
+
+**Intuition:** The interest gain also experiences the currency conversion.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 40](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=40)
+
+Card ID: `ub-if-exact-foreign-return`
+
+---
+
+### 1036. What approximation does the chapter use for a euro deposit's expected dollar return?
+
+**International Finance · Currency deposit returns · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+R€+(Eᵉ−E)/E. It drops the product of the interest rate and the expected exchange-rate change.
+
+**Intuition:** The approximation works best when both rates are small.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 40](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=40)
+
+Card ID: `ub-if-approx-foreign-return`
+
+---
+
+### 1037. Why can exact and approximate foreign returns disagree?
+
+**International Finance · Currency deposit returns · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The exact return includes R€×[(Eᵉ−E)/E], which the additive approximation omits.
+
+**Intuition:** A small omitted product is still nonzero.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 40](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=40)
+
+Card ID: `ub-if-cross-term`
+
+---
+
+### 1038. Does a 4% euro rate beat a 2% dollar rate when the euro is expected to lose 3% against the dollar?
+
+**International Finance · Currency deposit returns · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The euro deposit's exact dollar return is 1.04×0.97−1=0.88%, below 2%.
+
+**Intuition:** A currency loss can outweigh an interest advantage.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 39](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=39)
+
+Card ID: `ub-if-higher-interest-trap`
+
+---
+
+### 1039. What does R$−R€−(Eᵉ−E)/E measure?
+
+**International Finance · Currency deposit returns · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The approximate expected dollar return advantage of dollar deposits over euro deposits. A positive value favors dollars under the model's assumptions.
+
+**Intuition:** Compare both alternatives in the same currency.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 41](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=41)
+
+Card ID: `ub-if-return-gap`
+
+---
+
+### 1040. What is the chapter's approximate uncovered interest parity condition?
+
+**International Finance · Interest parity and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+R$=R€+(Eᵉ−E)/E. Deposits offer equal expected returns measured in dollars under the model's risk and liquidity assumptions.
+
+**Intuition:** Uncovered means the future exchange rate is not locked in.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 44](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=44); [Homework Chapter 3 · Q7 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2); [Homework Chapter 3 · Q16 · PDF page 3](../courses/ubuffalo/international-finance/Ch3.pdf#page=3)
+
+Card ID: `ub-if-uip`
+
+---
+
+### 1041. Does uncovered parity eliminate exchange-rate risk?
+
+**International Finance · Interest parity and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It equates expected returns under assumptions; the realized future spot rate can differ from its expectation.
+
+**Intuition:** Expected equality is not a guaranteed risk-free payoff.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 44](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=44)
+
+Card ID: `ub-if-uip-risk`
+
+---
+
+### 1042. If dollar deposits initially offer higher expected returns, how does E adjust in the model?
+
+**International Finance · Interest parity and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Demand shifts toward dollars, so E falls: the dollar appreciates. At fixed Eᵉ, cheaper euros now offer greater expected future appreciation until parity is restored.
+
+**Intuition:** Today's price adjusts to close the expected-return gap.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 45](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=45); [Homework Chapter 3 · Q16 · PDF page 3](../courses/ubuffalo/international-finance/Ch3.pdf#page=3)
+
+Card ID: `ub-if-dollar-excess-return`
+
+---
+
+### 1043. At fixed Eᵉ and R€, why does a higher current E lower expected euro returns?
+
+**International Finance · Interest parity and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It costs more dollars to acquire the same future euro payoff, reducing the percentage return.
+
+**Intuition:** Paying more today for the same expected payoff lowers its yield.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 46](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=46)
+
+Card ID: `ub-if-current-depreciation`
+
+---
+
+### 1044. At fixed Eᵉ and R€, how does dollar appreciation today affect expected euro returns?
+
+**International Finance · Interest parity and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A lower E makes euros cheaper today and raises their expected dollar return.
+
+**Intuition:** Current appreciation and expected future appreciation have different effects.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 47](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=47)
+
+Card ID: `ub-if-current-appreciation`
+
+---
+
+### 1045. What identifies equilibrium in the chapter's FX return diagram?
+
+**International Finance · Interest parity and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The intersection of the vertical dollar-return line and the downward-sloping expected euro-return curve, with E on the vertical axis.
+
+**Intuition:** Compare expected returns at each possible spot rate.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 50](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=50)
+
+Card ID: `ub-if-fx-graph`
+
+---
+
+### 1046. At fixed foreign interest and Eᵉ, what does a higher dollar interest rate do to E?
+
+**International Finance · Interest parity and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It lowers E, so the dollar appreciates.
+
+**Intuition:** The condition on expectations is essential.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 51](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=51); [Homework Chapter 3 · Q14 · PDF page 3](../courses/ubuffalo/international-finance/Ch3.pdf#page=3); [Homework Chapter 3 · Q18 · PDF page 4](../courses/ubuffalo/international-finance/Ch3.pdf#page=4)
+
+Card ID: `ub-if-dollar-rate-rise`
+
+---
+
+### 1047. At fixed dollar interest and Eᵉ, what does a higher euro interest rate do to E?
+
+**International Finance · Interest parity and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It raises E, so the dollar depreciates and the euro appreciates.
+
+**Intuition:** A higher foreign return increases demand for foreign deposits.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 51](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=51); [Homework Chapter 3 · Q19 · PDF page 4](../courses/ubuffalo/international-finance/Ch3.pdf#page=4)
+
+Card ID: `ub-if-euro-rate-rise`
+
+---
+
+### 1048. Why can expected future euro appreciation strengthen the euro immediately?
+
+**International Finance · Interest parity and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It raises expected dollar returns on euro assets, increasing demand for euros now. E rises to restore parity.
+
+**Intuition:** Asset prices respond to expected future payoffs today.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 54](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=54)
+
+Card ID: `ub-if-expectations-now`
+
+---
+
+### 1049. How do you solve approximate UIP for today's E?
+
+**International Finance · Interest parity and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+E=Eᵉ/(1+R$−R€), assuming the denominator is positive.
+
+**Intuition:** A higher expected future quote raises today's equilibrium quote.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 54](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=54)
+
+Card ID: `ub-if-uip-solve`
+
+---
+
+### 1050. What is a currency carry trade?
+
+**International Finance · Carry trade and covered parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Borrow in a low-interest currency and invest in a higher-interest currency, typically leaving exchange-rate exposure.
+
+**Intuition:** The interest spread is only one part of the total return.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 55](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=55); [Homework Chapter 3 · Q15 · PDF page 3](../courses/ubuffalo/international-finance/Ch3.pdf#page=3)
+
+Card ID: `ub-if-carry-trade`
+
+---
+
+### 1051. Why is a carry trade not a guaranteed profit?
+
+**International Finance · Carry trade and covered parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The high-interest currency may depreciate sharply, and financing, liquidity, and risk conditions can change.
+
+**Intuition:** Small regular gains can coexist with rare large losses.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 55](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=55); [Homework Chapter 3 · Q15 · PDF page 3](../courses/ubuffalo/international-finance/Ch3.pdf#page=3)
+
+Card ID: `ub-if-carry-risk`
+
+---
+
+### 1052. What changes when a foreign deposit is covered with a forward contract?
+
+**International Finance · Carry trade and covered parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The investor fixes the future conversion rate F today, replacing uncertain future spot conversion with contracted conversion.
+
+**Intuition:** Covering removes that exchange-rate uncertainty, subject to contract performance.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 57](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=57)
+
+Card ID: `ub-if-cip`
+
+---
+
+### 1053. What is exact covered interest parity for one matching investment period?
+
+**International Finance · Carry trade and covered parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+1+R$=(1+R€)F/E, with E and F in dollars per euro.
+
+**Intuition:** Compare two locked-in payoffs for the same initial dollar.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 57](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=57)
+
+Card ID: `ub-if-cip-exact`
+
+---
+
+### 1054. How is the euro's forward premium against the dollar calculated?
+
+**International Finance · Carry trade and covered parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It is (F−E)/E for matching spot and forward quotes in dollars per euro, over the contract period.
+
+**Intuition:** The premium compares forward with spot, not with an expected spot rate.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 59](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=59); [Homework Chapter 3 · Q20 · PDF page 4](../courses/ubuffalo/international-finance/Ch3.pdf#page=4)
+
+Card ID: `ub-if-forward-premium`
+
+---
+
+### 1055. What is the chapter's approximate covered parity relation?
+
+**International Finance · Carry trade and covered parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+R$≈R€+(F−E)/E. It neglects the interest-times-premium cross-term.
+
+**Intuition:** Label the approximation when doing numerical exercises.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 59](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=59); [Homework Chapter 3 · Q20 · PDF page 4](../courses/ubuffalo/international-finance/Ch3.pdf#page=4)
+
+Card ID: `ub-if-cip-approx`
+
+---
+
+### 1056. How do you solve exact covered parity for the forward rate?
+
+**International Finance · Carry trade and covered parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+F=E(1+R$)/(1+R€). Interest rates must cover the same maturity as the forward.
+
+**Intuition:** A quoted annual rate cannot be mixed blindly with a shorter contract.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 57](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=57)
+
+Card ID: `ub-if-forward-solve`
+
+---
+
+### 1057. If a covered euro investment pays more dollars than dollar borrowing costs, what is the idealized arbitrage direction?
+
+**International Finance · Carry trade and covered parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Borrow dollars, buy euros spot, invest in euros, and sell the euro payoff forward. At maturity, use the locked-in dollars to repay the loan.
+
+**Intuition:** The forward fixes the currency leg of the round trip.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 58](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=58)
+
+Card ID: `ub-if-covered-arbitrage-direction`
+
+---
+
+### 1058. Why can measured covered-parity deviations persist rather than vanish immediately?
+
+**International Finance · Carry trade and covered parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Funding costs, balance-sheet constraints, credit risk, and market frictions can prevent cheap unlimited execution. The slides document deviations around and after the financial crisis.
+
+**Intuition:** A textbook arbitrage assumes access and costs that real institutions may not have.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 60](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=60)
+
+Card ID: `ub-if-cip-frictions`
+
+---
+
+### 1059. When does the forward rate equal the expected future spot rate in these models?
+
+**International Finance · Carry trade and covered parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+When both covered and uncovered parity hold for comparable deposits and maturities under the stated assumptions. Covered parity alone does not imply F=Eᵉ.
+
+**Intuition:** A forward price is not automatically a forecast.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 62](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=62)
+
+Card ID: `ub-if-forward-expectation`
+
+---
+
+### 1060. What makes an asset money in the chapter's model?
+
+**International Finance · Money and liquidity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It is widely accepted as a means of payment. Currency and spendable checking balances are central examples.
+
+**Intuition:** Money's defining service is payment convenience.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 4](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=4); [Homework Chapter 4 · Q1 · PDF page 1](../courses/ubuffalo/international-finance/Ch4.pdf#page=1)
+
+Card ID: `ub-if-money`
+
+---
+
+### 1061. Why can different definitions of money give different totals?
+
+**International Finance · Money and liquidity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Narrow definitions include the most immediately spendable assets; broader definitions include additional liquid substitutes.
+
+**Intuition:** Liquidity is a spectrum, so the boundary is partly conventional.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 6](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=6); [Homework Chapter 4 · Q1 · PDF page 1](../courses/ubuffalo/international-finance/Ch4.pdf#page=1)
+
+Card ID: `ub-if-narrow-broad`
+
+---
+
+### 1062. What makes an asset liquid?
+
+**International Finance · Money and liquidity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It can be used for payment or converted into payment funds quickly with little cost.
+
+**Intuition:** Liquidity concerns ease of use, not simply a high resale price.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 5](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=5)
+
+Card ID: `ub-if-liquidity`
+
+---
+
+### 1063. Why hold money if other assets pay more interest?
+
+**International Finance · Money and liquidity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Money provides payment convenience and avoids the costs of repeatedly converting other assets into spendable funds.
+
+**Intuition:** Liquidity services compensate for forgone interest.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 5](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=5)
+
+Card ID: `ub-if-liquidity-return`
+
+---
+
+### 1064. How does the central bank influence money supply in the chapter?
+
+**International Finance · Money and liquidity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It directly controls currency issuance and influences deposit creation and other monetary assets through the banking system.
+
+**Intuition:** Control is not identical for every component of broad money.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 7](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=7)
+
+Card ID: `ub-if-central-bank-supply`
+
+---
+
+### 1065. Why can holding money be risky even if its nominal value is fixed?
+
+**International Finance · Money and liquidity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Unexpected inflation reduces the goods and services that the same nominal balance can buy.
+
+**Intuition:** Nominal safety does not guarantee purchasing-power safety.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 9](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=9); [Homework Chapter 4 · Q3 · PDF page 1](../courses/ubuffalo/international-finance/Ch4.pdf#page=1)
+
+Card ID: `ub-if-inflation-risk`
+
+---
+
+### 1066. What is the opportunity cost of holding non-interest-bearing money?
+
+**International Finance · Money demand · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The interest or return forgone on alternative assets.
+
+**Intuition:** As alternative yields rise, idle balances become more expensive to hold.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 10](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=10)
+
+Card ID: `ub-if-opportunity-cost-money`
+
+---
+
+### 1067. At fixed income and prices, how does a higher interest rate affect money demand?
+
+**International Finance · Money demand · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It lowers money demand by increasing the opportunity cost of holding monetary assets.
+
+**Intuition:** The real money-demand curve slopes down in the interest rate.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 10](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=10); [Homework Chapter 4 · Q7 · PDF page 2](../courses/ubuffalo/international-finance/Ch4.pdf#page=2); [Homework Chapter 4 · Q8 · PDF page 2](../courses/ubuffalo/international-finance/Ch4.pdf#page=2)
+
+Card ID: `ub-if-interest-money-demand`
+
+---
+
+### 1068. At fixed real income and interest, how does a doubling of P affect nominal money demand?
+
+**International Finance · Money demand · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It doubles nominal money demand while real money demand stays unchanged.
+
+**Intuition:** The same real transactions need twice as many currency units.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 10](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=10); [Homework Chapter 4 · Q7 · PDF page 2](../courses/ubuffalo/international-finance/Ch4.pdf#page=2)
+
+Card ID: `ub-if-price-money-demand`
+
+---
+
+### 1069. Why does higher real income increase desired money holdings?
+
+**International Finance · Money demand · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Higher production and expenditure create more transactions requiring liquidity.
+
+**Intuition:** More economic activity raises transactions demand.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 11](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=11); [Homework Chapter 4 · Q7 · PDF page 2](../courses/ubuffalo/international-finance/Ch4.pdf#page=2)
+
+Card ID: `ub-if-income-money-demand`
+
+---
+
+### 1070. What is the aggregate nominal money-demand equation?
+
+**International Finance · Money demand · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Mᵈ=P L(R,Y), where real money demand L falls with R and rises with Y.
+
+**Intuition:** Separate the price scale from desired purchasing power.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 12](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=12); [Homework Chapter 4 · Q5 · PDF page 1](../courses/ubuffalo/international-finance/Ch4.pdf#page=1)
+
+Card ID: `ub-if-nominal-demand`
+
+---
+
+### 1071. What does M/P measure?
+
+**International Finance · Money demand · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Real money balances: the purchasing power represented by a nominal money stock.
+
+**Intuition:** Dividing by the price level converts currency units into real units.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 12](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=12)
+
+Card ID: `ub-if-real-balances`
+
+---
+
+### 1072. How does an income increase differ from an interest-rate decrease in the money-demand graph?
+
+**International Finance · Money demand · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Higher income shifts the entire L(R,Y) curve outward; a lower interest rate moves along a given curve.
+
+**Intuition:** Distinguish a changed determinant from movement along the relationship.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 14](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=14)
+
+Card ID: `ub-if-shift-vs-move`
+
+---
+
+### 1073. What equation determines the equilibrium interest rate at fixed P and Y?
+
+**International Finance · Money-market equilibrium · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Mˢ/P=L(R,Y). The interest rate adjusts until real money demand equals real supply.
+
+**Intuition:** Equilibrium removes excess demand or supply of money.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 16](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=16); [Homework Chapter 4 · Q6 · PDF page 2](../courses/ubuffalo/international-finance/Ch4.pdf#page=2)
+
+Card ID: `ub-if-money-equilibrium`
+
+---
+
+### 1074. Why is the real money-supply line vertical in the chapter's graph?
+
+**International Finance · Money-market equilibrium · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Given the nominal stock and price level, Mˢ/P does not depend on the interest rate in this simplified model.
+
+**Intuition:** Verticality is a model assumption about supply.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 19](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=19)
+
+Card ID: `ub-if-supply-vertical`
+
+---
+
+### 1075. What happens when people hold more money than they want at the current interest rate?
+
+**International Finance · Money-market equilibrium · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They try to buy interest-bearing assets. Bond prices rise and yields fall until holding the supplied money becomes desirable.
+
+**Intuition:** Portfolio rebalancing changes prices; it does not let everyone eliminate money at once.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 17](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=17)
+
+Card ID: `ub-if-excess-money`
+
+---
+
+### 1076. What happens when people want more money than they currently hold?
+
+**International Finance · Money-market equilibrium · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They sell nonmonetary assets to obtain liquidity, putting downward pressure on bond prices and upward pressure on interest rates.
+
+**Intuition:** An excess demand for money is an excess supply of other assets.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 18](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=18)
+
+Card ID: `ub-if-money-shortage`
+
+---
+
+### 1077. At fixed P and Y, what does a larger money supply do to the interest rate?
+
+**International Finance · Money-market equilibrium · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It lowers the equilibrium interest rate, increasing demand for the additional real balances.
+
+**Intuition:** State the fixed-price assumption before applying this result.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 20](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=20); [Homework Chapter 4 · Q4 · PDF page 1](../courses/ubuffalo/international-finance/Ch4.pdf#page=1)
+
+Card ID: `ub-if-supply-interest`
+
+---
+
+### 1078. At fixed real money supply, does higher real income raise or lower the equilibrium interest rate?
+
+**International Finance · Money-market equilibrium · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It raises it. Money demand shifts outward, so the rate must rise to offset that increase. Figure 4.5 shows this despite a mistaken caption saying 'reduces'.
+
+**Intuition:** Use the equilibrium condition and graph to resolve the caption error.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 21](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=21)
+
+Card ID: `ub-if-income-interest`
+
+---
+
+### 1079. At fixed nominal money supply and income, what does a higher price level do to the interest rate?
+
+**International Finance · Money-market equilibrium · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It reduces real money supply Mˢ/P and raises the equilibrium interest rate.
+
+**Intuition:** A price increase can tighten real liquidity without changing nominal money.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 16](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=16)
+
+Card ID: `ub-if-price-interest`
+
+---
+
+### 1080. With sticky prices, fixed output, and fixed exchange-rate expectations, how does a domestic monetary expansion affect the currency?
+
+**International Finance · Money and FX in the short run · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It increases real balances, lowers domestic interest, and depreciates the domestic currency.
+
+**Intuition:** Money-market changes feed into expected asset returns.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 25](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=25); [Homework Chapter 4 · Q9 · PDF page 2](../courses/ubuffalo/international-finance/Ch4.pdf#page=2); [Homework Chapter 4 · Q16 · PDF page 4](../courses/ubuffalo/international-finance/Ch4.pdf#page=4)
+
+Card ID: `ub-if-domestic-expansion`
+
+---
+
+### 1081. Under the same short-run assumptions, what does a domestic monetary contraction do?
+
+**International Finance · Money and FX in the short run · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It reduces real balances, raises domestic interest, and appreciates the domestic currency.
+
+**Intuition:** Reverse the whole causal chain, not only its final step.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 25](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=25); [Homework Chapter 4 · Q9 · PDF page 2](../courses/ubuffalo/international-finance/Ch4.pdf#page=2)
+
+Card ID: `ub-if-domestic-contraction`
+
+---
+
+### 1082. What does a temporary European money-supply increase do to the dollar/euro quote in the model?
+
+**International Finance · Money and FX in the short run · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It lowers euro interest and reduces E in dollars per euro: the euro depreciates and the dollar appreciates.
+
+**Intuition:** The foreign monetary expansion changes the foreign-return curve.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 28](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=28); [Homework Chapter 4 · Q10 · PDF page 2](../courses/ubuffalo/international-finance/Ch4.pdf#page=2); [Homework Chapter 4 · Q11 · PDF page 2](../courses/ubuffalo/international-finance/Ch4.pdf#page=2)
+
+Card ID: `ub-if-foreign-expansion`
+
+---
+
+### 1083. Does the temporary European monetary expansion shift the U.S. money-market equilibrium in this model?
+
+**International Finance · Money and FX in the short run · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. U.S. money supply, prices, and income are held fixed, so the U.S. interest rate is unchanged.
+
+**Intuition:** The FX market can move while the domestic money market stays put.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 27](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=27); [Homework Chapter 4 · Q10 · PDF page 2](../courses/ubuffalo/international-finance/Ch4.pdf#page=2)
+
+Card ID: `ub-if-foreign-us-market`
+
+---
+
+### 1084. Which two conditions must hold in the combined money/FX diagram?
+
+**International Finance · Money and FX in the short run · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Domestic real money supply equals real money demand, and currency deposits offer equal expected returns under UIP.
+
+**Intuition:** One rate links the two equilibrium conditions.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 22](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=22)
+
+Card ID: `ub-if-joint-equilibrium`
+
+---
+
+### 1085. What separates the short run from the long run here?
+
+**International Finance · Long-run money and prices · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+In the short run, some prices and wages are sticky. In the long run, they have adjusted and real output reflects productive capacity.
+
+**Intuition:** The distinction is about adjustment, not a fixed calendar duration.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 29](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=29); [Homework Chapter 4 · Q14 · PDF page 4](../courses/ubuffalo/international-finance/Ch4.pdf#page=4)
+
+Card ID: `ub-if-short-long`
+
+---
+
+### 1086. What determines long-run real output in this framework?
+
+**International Finance · Long-run money and prices · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Labor, capital, technology, and other productive resources rather than the nominal quantity of money.
+
+**Intuition:** Printing currency does not itself create productive capacity.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 29](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=29); [Homework Chapter 4 · Q14 · PDF page 4](../courses/ubuffalo/international-finance/Ch4.pdf#page=4)
+
+Card ID: `ub-if-capacity`
+
+---
+
+### 1087. What is long-run neutrality of a one-time money-level change?
+
+**International Finance · Long-run money and prices · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A proportional money increase eventually raises the price level proportionally without changing real output or long-run real interest in the model.
+
+**Intuition:** Distinguish nominal scaling from real resource changes.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 30](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=30)
+
+Card ID: `ub-if-level-neutrality`
+
+---
+
+### 1088. How can money-market equilibrium determine the long-run price level?
+
+**International Finance · Long-run money and prices · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+P=Mˢ/L(R,Y). With real money demand unchanged, prices scale with nominal money supply.
+
+**Intuition:** Prices adjust to restore desired real balances.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 30](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=30)
+
+Card ID: `ub-if-price-equilibrium`
+
+---
+
+### 1089. How does the chapter relate inflation to money and real money-demand growth?
+
+**International Finance · Long-run money and prices · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Approximately, inflation equals nominal money growth minus real money-demand growth.
+
+**Intuition:** Some new money accommodates growing demand for liquidity rather than higher prices.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 31](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=31)
+
+Card ID: `ub-if-inflation-growth`
+
+---
+
+### 1090. What pattern do the slides' historical money-growth and inflation data illustrate?
+
+**International Finance · Long-run money and prices · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Higher sustained money growth tends to accompany higher inflation, though the relationship is not exact in every observation.
+
+**Intuition:** Long-run association does not imply identical short-run timing.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 32](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=32); [Homework Chapter 4 · Q12 · PDF page 3](../courses/ubuffalo/international-finance/Ch4.pdf#page=3)
+
+Card ID: `ub-if-money-data`
+
+---
+
+### 1091. Why can hyperinflation undermine money's usefulness?
+
+**International Finance · Long-run money and prices · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Rapid loss of purchasing power makes holding the currency costly and can lead people to avoid using it.
+
+**Intuition:** An asset can lose its payment role when its real value collapses.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 34](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=34)
+
+Card ID: `ub-if-hyperinflation`
+
+---
+
+### 1092. How can a money expansion eventually put upward pressure on wages and output prices?
+
+**International Finance · Long-run money and prices · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Higher spending increases demand for goods and labor. Producers may raise prices or pay higher wages as resources become harder to obtain.
+
+**Intuition:** Sticky prices can respond gradually to demand and cost pressure.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 36](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=36); [Homework Chapter 4 · Q17 · PDF page 4](../courses/ubuffalo/international-finance/Ch4.pdf#page=4)
+
+Card ID: `ub-if-demand-cost-pressure`
+
+---
+
+### 1093. How can expected inflation influence wages and prices before it is fully realized?
+
+**International Finance · Long-run money and prices · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Workers seek compensation for expected purchasing-power loss, and firms expecting higher output prices may agree to higher wages.
+
+**Intuition:** Expectations can affect current price-setting decisions.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 37](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=37); [Homework Chapter 4 · Q17 · PDF page 4](../courses/ubuffalo/international-finance/Ch4.pdf#page=4)
+
+Card ID: `ub-if-wage-expectations`
+
+---
+
+### 1094. What does much greater exchange-rate volatility than price-level-ratio volatility suggest?
+
+**International Finance · Long-run money and prices · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Financial prices adjust faster than aggregate goods prices, consistent with short-run price stickiness.
+
+**Intuition:** Asset markets can jump while goods prices move slowly.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 38](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=38)
+
+Card ID: `ub-if-volatility-sticky`
+
+---
+
+### 1095. What is the long-run currency effect of a permanent money-level increase, other things equal?
+
+**International Finance · Overshooting and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A proportional depreciation in the quoted domestic price of foreign currency, alongside a proportional domestic price-level rise.
+
+**Intuition:** The eventual nominal change matches the money-level change in the model.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 41](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=41)
+
+Card ID: `ub-if-permanent-level-fx`
+
+---
+
+### 1096. Why can a permanent money expansion depreciate the currency more initially than a temporary one?
+
+**International Finance · Overshooting and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Besides lowering current interest, it raises the expected future domestic-currency price of foreign currency.
+
+**Intuition:** Permanent policy changes both today's return and tomorrow's expected exchange rate.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 40](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=40); [Homework Chapter 4 · Q18 · PDF page 4](../courses/ubuffalo/international-finance/Ch4.pdf#page=4)
+
+Card ID: `ub-if-permanent-vs-temporary`
+
+---
+
+### 1097. What does exchange-rate overshooting mean?
+
+**International Finance · Overshooting and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The immediate exchange-rate response exceeds its eventual long-run response, followed by partial reversal.
+
+**Intuition:** Overshooting is about the path, not just a large movement.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 43](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=43)
+
+Card ID: `ub-if-overshooting`
+
+---
+
+### 1098. Why does a temporarily low domestic interest rate require expected currency appreciation under UIP?
+
+**International Finance · Overshooting and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The lower interest return must be offset by an expected currency gain. After an expansion, E jumps above its future level so it can be expected to fall.
+
+**Intuition:** The anticipated reversal compensates for the interest disadvantage.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=42); [Homework Chapter 4 · Q18 · PDF page 4](../courses/ubuffalo/international-finance/Ch4.pdf#page=4)
+
+Card ID: `ub-if-overshoot-uip`
+
+---
+
+### 1099. After permanent monetary expansion, how do P, R, and E evolve toward the new long run?
+
+**International Finance · Overshooting and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+P rises gradually, real balances decline from their initial jump, R recovers, and E falls from its overshoot while remaining above its original level.
+
+**Intuition:** The currency partially recovers but does not undo the permanent depreciation.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=42); [Homework Chapter 4 · Q18 · PDF page 4](../courses/ubuffalo/international-finance/Ch4.pdf#page=4)
+
+Card ID: `ub-if-adjustment-path`
+
+---
+
+### 1100. Would immediate proportional price adjustment create the same liquidity-driven overshoot?
+
+**International Finance · Overshooting and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Real money balances would not temporarily rise, so the temporary interest-rate fall driving that overshoot would disappear.
+
+**Intuition:** Different adjustment speeds are central to overshooting.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 43](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=43); [Homework Chapter 4 · Q15 · PDF page 4](../courses/ubuffalo/international-finance/Ch4.pdf#page=4)
+
+Card ID: `ub-if-flexible-prices`
+
+---
+
+### 1101. What is the mirror-image overshooting path after a permanent money contraction?
+
+**International Finance · Overshooting and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The currency initially appreciates beyond its long-run appreciation, then partly depreciates as prices fall and interest returns toward its long-run level.
+
+**Intuition:** The sign reverses, but the adjustment logic is the same.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 41](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=41)
+
+Card ID: `ub-if-contraction-path`
+
+---
+
+### 1102. Can inflation news coincide with currency appreciation rather than depreciation?
+
+**International Finance · Overshooting and expectations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes, if it raises expected policy interest rates enough relative to other changes. This conditional news response differs from a permanent inflation-driven depreciation model.
+
+**Intuition:** Identify what the news changes, especially expected policy and returns.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 39](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=39); [Homework Chapter 4 · Q19 · PDF page 4](../courses/ubuffalo/international-finance/Ch4.pdf#page=4)
+
+Card ID: `ub-if-inflation-news`
+
+---
+
+### 1103. What are the long-run exchange-rate models intended to explain?
+
+**International Finance · Long-run exchange-rate models · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+How exchange rates tend to relate to economic fundamentals after prices adjust, and how investors may form future-rate expectations. They are not exact daily forecasting machines.
+
+**Intuition:** A long-run benchmark is not a promise about tomorrow's quote.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 3](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=3)
+
+Card ID: `ub-if-long-run-model-purpose`
+
+---
+
+### 1104. What does the law of one price say?
+
+**International Finance · Purchasing power parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Identical goods should have equal common-currency prices across competitive markets when transport costs and trade barriers are negligible.
+
+**Intuition:** Arbitrage links comparable goods when they can move freely.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 5](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=5)
+
+Card ID: `ub-if-one-price`
+
+---
+
+### 1105. How do you express the law of one price for a good sold in the U.S. and Canada?
+
+**International Finance · Purchasing power parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+PUS=EUS$/C$×PCanada for the same good.
+
+**Intuition:** The exchange-rate units must cancel the foreign currency.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 6](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=6)
+
+Card ID: `ub-if-one-price-equation`
+
+---
+
+### 1106. How does PPP extend the law of one price?
+
+**International Finance · Purchasing power parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It compares the common-currency cost of equivalent baskets rather than one identical good.
+
+**Intuition:** Basket comparability is an additional requirement.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 7](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=7)
+
+Card ID: `ub-if-ppp-basket`
+
+---
+
+### 1107. What exchange rate does absolute PPP imply?
+
+**International Finance · Purchasing power parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+E=P/P*, where E is domestic currency per foreign currency and P and P* price equivalent baskets.
+
+**Intuition:** A foreign currency's price reflects the relative cost of the basket.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 8](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=8)
+
+Card ID: `ub-if-absolute-ppp`
+
+---
+
+### 1108. If a basket costs US$200 and C$400, what is the PPP quote in U.S. dollars per Canadian dollar?
+
+**International Finance · Purchasing power parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+200/400=US$0.50 per C$1. The reciprocal is C$2 per US$1.
+
+**Intuition:** A correct ratio can still be mislabeled if quote units are omitted.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 8](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=8)
+
+Card ID: `ub-if-ppp-numeric`
+
+---
+
+### 1109. What does relative PPP predict about exchange-rate changes?
+
+**International Finance · Purchasing power parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Domestic-currency depreciation approximately equals domestic inflation minus foreign inflation: ΔE/E≈π−π*.
+
+**Intuition:** Higher relative inflation erodes the domestic currency's purchasing power.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 9](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=9)
+
+Card ID: `ub-if-relative-ppp`
+
+---
+
+### 1110. What is the exact gross exchange-rate change under relative PPP?
+
+**International Finance · Purchasing power parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+E₁/E₀=(1+π)/(1+π*). The inflation-difference formula is a small-rate approximation.
+
+**Intuition:** Ratios of gross growth factors preserve compounding.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 9](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=9)
+
+Card ID: `ub-if-relative-exact`
+
+---
+
+### 1111. Can relative PPP hold even if absolute PPP fails?
+
+**International Finance · Purchasing power parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. A persistent level wedge can leave E proportional to P/P* without making the proportionality constant one.
+
+**Intuition:** Stable deviations in levels can cancel when comparing growth rates.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 9](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=9)
+
+Card ID: `ub-if-absolute-relative`
+
+---
+
+### 1112. If both countries have equal inflation, what does relative PPP predict for E?
+
+**International Finance · Purchasing power parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No systematic change in E from the inflation differential alone.
+
+**Intuition:** Compare inflation across countries, not only at home.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 9](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=9)
+
+Card ID: `ub-if-equal-inflation`
+
+---
+
+### 1113. What two conditions build the monetary approach to exchange rates?
+
+**International Finance · Monetary approach · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Money-market equilibrium in each country and absolute PPP linking their price levels.
+
+**Intuition:** Money determines prices; PPP translates relative prices into E.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 10](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=10)
+
+Card ID: `ub-if-monetary-building-blocks`
+
+---
+
+### 1114. How can E be written using money supplies and real money demands under absolute PPP?
+
+**International Finance · Monetary approach · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+E=(M/M*)×[L(R*,Y*)/L(R,Y)]. It follows by substituting P=M/L and P*=M*/L* into E=P/P*.
+
+**Intuition:** Relative supply and relative demand for money both matter.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 11](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=11)
+
+Card ID: `ub-if-monetary-equation`
+
+---
+
+### 1115. With real money demand and foreign conditions fixed, what does a 10% permanent domestic money increase do to E in the monetary model?
+
+**International Finance · Monetary approach · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It raises P and E by 10%, a domestic depreciation.
+
+**Intuition:** This is a money-level experiment, not a change in its continuing growth rate.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 12](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=12)
+
+Card ID: `ub-if-money-level-ppp`
+
+---
+
+### 1116. Under the same assumptions, how does higher foreign money supply affect E?
+
+**International Finance · Monetary approach · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It raises the foreign price level and lowers domestic currency per foreign currency: domestic appreciation.
+
+**Intuition:** The foreign price level is in the denominator.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 12](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=12)
+
+Card ID: `ub-if-foreign-money-ppp`
+
+---
+
+### 1117. Why can higher nominal domestic interest accompany depreciation in the monetary approach?
+
+**International Finance · Monetary approach · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Higher nominal interest lowers desired real money balances. At fixed M, a higher P restores money-market equilibrium, and PPP implies a higher E.
+
+**Intuition:** This flexible-price mechanism differs from the fixed-expectations short-run asset experiment.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 12](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=12)
+
+Card ID: `ub-if-interest-long-run`
+
+---
+
+### 1118. At fixed M, interest, and foreign conditions, how does higher domestic output affect E under the monetary approach?
+
+**International Finance · Monetary approach · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It raises real money demand, lowers P, and lowers E: domestic appreciation.
+
+**Intuition:** A stronger demand for domestic purchasing power can support the currency.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 13](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=13)
+
+Card ID: `ub-if-output-ppp`
+
+---
+
+### 1119. How does a one-time money-level increase differ from a permanently higher money-growth rate?
+
+**International Finance · Monetary approach · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The first changes the eventual price level; the second changes continuing inflation, holding real money-demand growth fixed.
+
+**Intuition:** A step change and a steeper trend are different shocks.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 14](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=14)
+
+Card ID: `ub-if-level-vs-growth`
+
+---
+
+### 1120. Which assumptions connect nominal interest differentials to expected inflation differentials?
+
+**International Finance · Fisher effect and inflation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Uncovered interest parity plus expected relative PPP give R−R*≈πᵉ−π*ᵉ.
+
+**Intuition:** The Fisher differential needs an exchange-rate expectation link.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 15](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=15)
+
+Card ID: `ub-if-fisher-derive`
+
+---
+
+### 1121. What does the Fisher effect predict when expected inflation rises and the real interest rate stays fixed?
+
+**International Finance · Fisher effect and inflation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Nominal interest rises by approximately the same amount.
+
+**Intuition:** Lenders require compensation for expected loss of purchasing power.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 16](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=16)
+
+Card ID: `ub-if-fisher`
+
+---
+
+### 1122. Does a high nominal interest rate always signal a strong currency?
+
+**International Finance · Fisher effect and inflation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It can reflect expected inflation and depreciation rather than an attractive real return.
+
+**Intuition:** Ask why the interest rate is high.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 16](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=16)
+
+Card ID: `ub-if-nominal-strength-trap`
+
+---
+
+### 1123. In the flexible-price model, what happens to nominal interest after an unanticipated permanent rise in money growth?
+
+**International Finance · Fisher effect and inflation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Expected inflation and nominal interest rise immediately through the Fisher effect, holding the real rate fixed.
+
+**Intuition:** Persistent expected inflation changes nominal yields.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 17](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=17)
+
+Card ID: `ub-if-growth-shock-rate`
+
+---
+
+### 1124. Why can P jump immediately when money-growth policy changes even though M has not yet jumped?
+
+**International Finance · Fisher effect and inflation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The higher nominal interest rate reduces L(R,Y). At fixed current M, P=M/L must rise to clear the money market.
+
+**Intuition:** A change in money demand can move prices without an immediate money-stock jump.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 19](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=19)
+
+Card ID: `ub-if-price-jump`
+
+---
+
+### 1125. After the flexible-price model's initial P and E jumps, how do their paths change?
+
+**International Finance · Fisher effect and inflation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Prices rise at the new higher inflation rate, and the domestic currency depreciates faster under relative PPP.
+
+**Intuition:** An initial level adjustment is followed by a new trend.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 19](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=19)
+
+Card ID: `ub-if-growth-path`
+
+---
+
+### 1126. Why does the flexible-price monetary approach not produce the same sticky-price overshoot?
+
+**International Finance · Fisher effect and inflation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Prices adjust immediately with expectations, preventing the temporary excess real balances and interest-rate fall of the sticky-price mechanism.
+
+**Intuition:** Speed of price adjustment changes the exchange-rate path.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 22](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=22)
+
+Card ID: `ub-if-ppp-no-overshoot`
+
+---
+
+### 1127. Why is 'higher interest appreciates the currency' compatible with inflation-driven depreciation and higher interest?
+
+**International Finance · Fisher effect and inflation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The first holds future exchange-rate expectations fixed in a short-run experiment. The second changes expected inflation and future exchange rates in a long-run experiment.
+
+**Intuition:** Comparative statics cannot be combined while silently changing what is held fixed.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 20](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=20)
+
+Card ID: `ub-if-two-experiments`
+
+---
+
+### 1128. How well do the slides say PPP predicts actual exchange rates?
+
+**International Finance · Limits of PPP · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Absolute PPP has weak empirical support. Relative PPP is often more plausible but still performs poorly as a precise exchange-rate predictor.
+
+**Intuition:** A useful benchmark can have large and persistent deviations.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 23](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=23)
+
+Card ID: `ub-if-ppp-evidence`
+
+---
+
+### 1129. Why can transport costs allow the same good to have different prices across countries?
+
+**International Finance · Limits of PPP · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A price gap smaller than shipping and trade costs need not offer profitable arbitrage.
+
+**Intuition:** Arbitrage constrains gaps only after its costs are paid.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 26](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=26)
+
+Card ID: `ub-if-transport-band`
+
+---
+
+### 1130. Why do nontradable services weaken PPP?
+
+**International Finance · Limits of PPP · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Services such as local haircuts cannot readily be shipped from the cheaper market to the expensive one.
+
+**Intuition:** Local markets need not share a single world price.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 26](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=26)
+
+Card ID: `ub-if-nontradables`
+
+---
+
+### 1131. What is pricing to market?
+
+**International Finance · Limits of PPP · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Charging different prices in different markets according to local demand and competition rather than applying one uniform converted price.
+
+**Intuition:** Market segmentation can let firms sustain price differences.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 27](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=27)
+
+Card ID: `ub-if-pricing-to-market`
+
+---
+
+### 1132. Why can national price-index differences make PPP tests difficult?
+
+**International Finance · Limits of PPP · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Countries' representative baskets, weights, and measurement methods differ, so their indexes may not compare identical purchases.
+
+**Intuition:** Comparing unlike baskets is not a clean one-price test.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 28](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=28)
+
+Card ID: `ub-if-basket-measurement`
+
+---
+
+### 1133. Which broad cross-country price pattern do the slides highlight?
+
+**International Finance · Price levels across countries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Richer countries tend to have higher common-currency price levels, especially for nontradables.
+
+**Intuition:** A market exchange rate does not equalize all local living costs.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 29](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=29)
+
+Card ID: `ub-if-rich-price-levels`
+
+---
+
+### 1134. How does the Balassa–Samuelson mechanism connect tradable productivity to nontradable prices?
+
+**International Finance · Price levels across countries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+High tradable-sector productivity supports high wages. Labor-market competition transmits those wages to nontradables, raising their costs and prices even without equally high nontradable productivity.
+
+**Intuition:** Tradable productivity can make local services expensive.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 30](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=30)
+
+Card ID: `ub-if-balassa-samuelson`
+
+---
+
+### 1135. Why can low tradable productivity help explain cheaper services in poorer countries?
+
+**International Finance · Price levels across countries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+With similar world tradable prices, lower productivity supports lower wages, which lower the cost of producing local services.
+
+**Intuition:** Cheap services need not imply cheap identical traded goods.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 30](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=30)
+
+Card ID: `ub-if-poor-wages`
+
+---
+
+### 1136. How does the alternative factor-endowment explanation differ from Balassa–Samuelson?
+
+**International Finance · Price levels across countries · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It emphasizes higher capital per worker raising wages in rich countries, combined with labor-intensive nontradables, rather than primarily sectoral productivity differences.
+
+**Intuition:** Different mechanisms can produce similar aggregate price patterns.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 31](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=31)
+
+Card ID: `ub-if-endowment-theory`
+
+---
+
+### 1137. What is q=EP*/P when E is domestic currency per foreign currency?
+
+**International Finance · Real exchange rates · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The domestic-currency cost of a foreign basket divided by the cost of a domestic basket: a relative goods price.
+
+**Intuition:** The real exchange rate compares purchasing power over goods, not currency units alone.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 33](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=33)
+
+Card ID: `ub-if-real-exchange-definition`
+
+---
+
+### 1138. If E=$1.20/€, P*=€100, and P=$120, what is q?
+
+**International Finance · Real exchange rates · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+q=1.20×100/120=1. One foreign basket costs the same as one domestic basket.
+
+**Intuition:** All three inputs are needed to measure real purchasing power.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 34](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=34)
+
+Card ID: `ub-if-real-one`
+
+---
+
+### 1139. Under q=EP*/P, what does a rise in q mean?
+
+**International Finance · Real exchange rates · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Domestic real depreciation: foreign goods become more expensive relative to domestic goods.
+
+**Intuition:** State the convention because reciprocal definitions reverse the direction.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 34](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=34)
+
+Card ID: `ub-if-real-depreciation`
+
+---
+
+### 1140. Under q=EP*/P, what does a fall in q mean?
+
+**International Finance · Real exchange rates · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Domestic real appreciation: domestic goods become more expensive relative to foreign goods.
+
+**Intuition:** Real appreciation concerns relative goods prices.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 34](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=34)
+
+Card ID: `ub-if-real-appreciation`
+
+---
+
+### 1141. How do you recover the nominal exchange rate from q and price levels?
+
+**International Finance · Real exchange rates · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+E=qP/P*. Nominal movements can reflect either relative price levels or real relative-price changes.
+
+**Intuition:** PPP is the special case with a fixed appropriate q.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 35](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=35)
+
+Card ID: `ub-if-nominal-decompose`
+
+---
+
+### 1142. Must nominal depreciation imply real depreciation?
+
+**International Finance · Real exchange rates · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. If domestic prices rise proportionally with E while foreign prices stay fixed, q=EP*/P is unchanged.
+
+**Intuition:** Inflation can offset a nominal exchange-rate movement.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 35](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=35)
+
+Card ID: `ub-if-nominal-real-distinction`
+
+---
+
+### 1143. How does higher relative world demand for domestic goods affect q in the long run?
+
+**International Finance · Real demand and supply · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It lowers q, a domestic real appreciation, as domestic goods become relatively more expensive.
+
+**Intuition:** Higher demand raises the relative value of the desired output.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 36](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=36)
+
+Card ID: `ub-if-demand-real`
+
+---
+
+### 1144. In the chapter's aggregate relative-supply model, how does more domestic output affect q?
+
+**International Finance · Real demand and supply · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It raises q, a real depreciation, to encourage the world to absorb the increased relative supply.
+
+**Intuition:** More output must be sold at a sufficiently attractive relative price.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 37](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=37)
+
+Card ID: `ub-if-supply-real`
+
+---
+
+### 1145. Why does the relative-demand curve rise with q in Figure 5.4?
+
+**International Finance · Real demand and supply · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A higher q makes domestic goods cheaper relative to foreign goods, increasing relative demand for domestic output.
+
+**Intuition:** Here the vertical-axis variable is the foreign-to-domestic goods price.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 38](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=38)
+
+Card ID: `ub-if-relative-graph`
+
+---
+
+### 1146. Why is long-run relative supply drawn vertically in Figure 5.4?
+
+**International Finance · Real demand and supply · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Full-employment relative output is taken as given by productive capacity in this simplified diagram.
+
+**Intuition:** The graph isolates a relative-price adjustment to given output.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 38](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=38)
+
+Card ID: `ub-if-relative-supply-vertical`
+
+---
+
+### 1147. When only monetary factors change in the long-run PPP benchmark, what happens to q?
+
+**International Finance · Real demand and supply · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It remains unchanged; P and E adjust consistently with the monetary change.
+
+**Intuition:** Nominal scaling alone need not change relative goods prices.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 40](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=40)
+
+Card ID: `ub-if-monetary-real-neutral`
+
+---
+
+### 1148. Holding price levels fixed, how does higher demand for domestic goods affect nominal E?
+
+**International Finance · Real demand and supply · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Real appreciation lowers q, so E=qP/P* falls: nominal domestic appreciation.
+
+**Intuition:** A real demand shift can move the currency without a money-supply change.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 40](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=40)
+
+Card ID: `ub-if-demand-nominal`
+
+---
+
+### 1149. Why is higher domestic output's effect on nominal E ambiguous in the general model?
+
+**International Finance · Real demand and supply · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+More output raises q through real depreciation but increases money demand and lowers P. Since E=qP/P*, those effects oppose each other.
+
+**Intuition:** A clear real effect need not determine the nominal effect.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 41](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=41)
+
+Card ID: `ub-if-supply-ambiguity`
+
+---
+
+### 1150. Why needn't aggregate-output real depreciation contradict Balassa–Samuelson appreciation?
+
+**International Finance · Real demand and supply · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The aggregate relative-supply exercise and the sector-specific tradable-productivity mechanism change different things. Sectoral composition and nontradable wages matter in the latter.
+
+**Intuition:** Specify which productivity experiment is being analyzed.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 41](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=41)
+
+Card ID: `ub-if-productivity-models`
+
+---
+
+### 1151. What adds to the inflation differential in the general nominal interest differential?
+
+**International Finance · Real interest parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Expected real depreciation: R−R*≈expected Δq/q+πᵉ−π*ᵉ, combining UIP with q=EP*/P.
+
+**Intuition:** Expected goods-price changes matter when relative PPP does not hold.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 45](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=45)
+
+Card ID: `ub-if-general-nominal-gap`
+
+---
+
+### 1152. What is the approximate expected real interest rate?
+
+**International Finance · Real interest parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+rᵉ≈R−πᵉ. It measures the expected purchasing-power return rather than the currency-unit return.
+
+**Intuition:** Expected inflation, not already realized inflation, enters an ex ante calculation.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 46](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=46)
+
+Card ID: `ub-if-real-interest`
+
+---
+
+### 1153. What does real interest parity predict under the chapter's assumptions?
+
+**International Finance · Real interest parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+rᵉ−r*ᵉ≈expected Δq/q. The real return gap matches expected domestic real depreciation.
+
+**Intuition:** Equal expected nominal-currency returns need not mean equal goods-basket returns.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 47](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=47)
+
+Card ID: `ub-if-real-parity`
+
+---
+
+### 1154. When does real interest parity imply equal real interest rates across countries?
+
+**International Finance · Real interest parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+When the real exchange rate is expected to stay constant, including the relative-PPP benchmark.
+
+**Intuition:** Equal real rates require more than capital-market integration alone.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 47](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=47)
+
+Card ID: `ub-if-real-equality`
+
+---
+
+### 1155. If expected real domestic depreciation is 2% and the foreign real rate is 1%, what is the domestic real rate under approximate real parity?
+
+**International Finance · Real interest parity · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+3%: the domestic real rate exceeds the foreign rate by the expected 2% real depreciation.
+
+**Intuition:** Keep the sign tied to q=EP*/P.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 47](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=47)
+
+Card ID: `ub-if-real-gap-numeric`
+
+---
+
+### 1156. What is a vehicle currency, and why is the dollar an example?
+
+**International Finance · Foreign exchange markets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It is used as an intermediary even when neither party is from its issuing country. Extensive dollar trading can make routing exchanges through dollars convenient and liquid.
+
+**Intuition:** A widely used trading network can reduce the need for every possible direct currency pair.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 15](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=15); [Homework Chapter 3 · Q13 · PDF page 3](../courses/ubuffalo/international-finance/Ch3.pdf#page=3)
+
+Card ID: `ub-if-vehicle-currency`
+
+---
+
+### 1157. Why is an ordinary bond not classified like a forward, future, option, or swap?
+
+**International Finance · Currency contracts · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+An ordinary bond is a debt claim. The other contracts derive payoffs from specified underlying prices, rates, or exchanges.
+
+**Intuition:** Do not classify every financial asset as a derivative.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 28](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=28); [Homework Chapter 3 · Q6 · PDF page 1](../courses/ubuffalo/international-finance/Ch3.pdf#page=1)
+
+Card ID: `ub-if-bond-derivative`
+
+---
+
+### 1158. How can electronic payment innovations change money demand at a given income and interest rate?
+
+**International Finance · Money demand · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They can change how much spendable balance is needed for transactions, shifting the money-demand relationship rather than merely moving along it.
+
+**Intuition:** Payment technology can alter desired liquidity.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 12](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=12); [Homework Chapter 4 · Q13 · PDF page 3](../courses/ubuffalo/international-finance/Ch4.pdf#page=3)
+
+Card ID: `ub-if-money-demand-innovation`
+
+---
+
+### 1159. What dollar amount buys a £50 sweater at $1.25 per pound?
+
+**International Finance · Exchange-rate quotations · PREDICT**
+
+**Homework conversion** (equation)
+
+- Price: £50
+- Quote: $1.25/£
+
+<details>
+<summary>Reveal explanation</summary>
+
+$62.50: 50×1.25. The pound units cancel, leaving dollars.
+
+**Intuition:** Use multiplication when the quote is domestic currency per foreign currency.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 3](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=3); [Homework Chapter 3 · Q1 · PDF page 1](../courses/ubuffalo/international-finance/Ch3.pdf#page=1)
+
+Card ID: `ub-if-sweater-conversion`
+
+---
+
+### 1160. If identical jeans cost $50 and £100, what dollar-per-pound rate equalizes their prices?
+
+**International Finance · Exchange-rate quotations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+$0.50 per pound, assuming the prices are linked by the law of one price. Prices alone do not reveal the actual market exchange rate without that assumption.
+
+**Intuition:** An implied parity rate is not automatically an observed market quote.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 3](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=3); [Homework Chapter 3 · Q2 · PDF page 1](../courses/ubuffalo/international-finance/Ch3.pdf#page=1)
+
+Card ID: `ub-if-implied-jeans-rate`
+
+---
+
+### 1161. Given CA=15, Sᵖ=50, I=25, G=12, what can you determine about T?
+
+**International Finance · Saving and investment practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+T=2. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+
+**Intuition:** Check how many independent unknowns remain before calculating.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q10 row 1 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-hw2-row-1`
+
+---
+
+### 1162. Given CA=8, Sᵖ=50, G=15, T=3, what can you determine about I?
+
+**International Finance · Saving and investment practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+I=30. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+
+**Intuition:** Check how many independent unknowns remain before calculating.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q10 row 2 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-hw2-row-2`
+
+---
+
+### 1163. Given CA=9, I=25, G=10, T=4, what can you determine about Sᵖ?
+
+**International Finance · Saving and investment practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Sᵖ=40. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+
+**Intuition:** Check how many independent unknowns remain before calculating.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q10 row 3 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-hw2-row-3`
+
+---
+
+### 1164. Given CA=35, Sᵖ=50, I=10, T=5, what can you determine about G?
+
+**International Finance · Saving and investment practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+G=10. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+
+**Intuition:** Check how many independent unknowns remain before calculating.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q10 row 4 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-hw2-row-4`
+
+---
+
+### 1165. Given Sᵖ=10, I=30, G=20, T=10, what can you determine about CA?
+
+**International Finance · Saving and investment practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+CA=-30. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+
+**Intuition:** Check how many independent unknowns remain before calculating.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q10 row 5 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-hw2-row-5`
+
+---
+
+### 1166. Given CA=22, Sᵖ=200, G=50, T=12, what can you determine about I?
+
+**International Finance · Saving and investment practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+I=140. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+
+**Intuition:** Check how many independent unknowns remain before calculating.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q10 row 6 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-hw2-row-6`
+
+---
+
+### 1167. Given CA=-25, I=140, G=100, T=15, what can you determine about Sᵖ?
+
+**International Finance · Saving and investment practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Sᵖ=200. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+
+**Intuition:** Check how many independent unknowns remain before calculating.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q10 row 7 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-hw2-row-7`
+
+---
+
+### 1168. Given Sᵖ=400, I=200, T=20, what can you determine about CA and G?
+
+**International Finance · Saving and investment practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+There is no unique numerical solution. The identity gives CA=220−G, so one additional value is needed.
+
+**Intuition:** Check how many independent unknowns remain before calculating.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q10 row 8 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-hw2-row-8`
+
+---
+
+### 1169. Given CA=-280, Sᵖ=100, I=200, G=200, what can you determine about T?
+
+**International Finance · Saving and investment practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+T=20. Use CA=Sᵖ−I−G+T and rearrange for the missing quantity.
+
+**Intuition:** Check how many independent unknowns remain before calculating.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 13](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=13); [Homework Chapter 2 · Q10 row 9 · PDF page 2](../courses/ubuffalo/international-finance/CH2.pdf#page=2)
+
+Card ID: `ub-if-hw2-row-9`
+
+---
+
+### 1170. With R$=10%, R€=6%, and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+4 percentage points: 10−6−(0)=4. Dollar deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 1 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-1`
+
+---
+
+### 1171. With R$=10%, R€=6%, and expected dollar depreciation 4%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+0 percentage points: 10−6−(4)=0. The deposits tie in expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 2 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-2`
+
+---
+
+### 1172. With R$=10%, R€=6%, and expected dollar depreciation 8%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+-4 percentage points: 10−6−(8)=-4. Euro deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 3 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-3`
+
+---
+
+### 1173. With R$=10%, R€=12%, and expected dollar depreciation -4%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+2 percentage points: 10−12−(-4)=2. Dollar deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 4 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-4`
+
+---
+
+### 1174. With R$=10%, R€=18%, and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+-8 percentage points: 10−18−(0)=-8. Euro deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 5 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-5`
+
+---
+
+### 1175. With R$=15%, R€=6%, and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+9 percentage points: 15−6−(0)=9. Dollar deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 6 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-6`
+
+---
+
+### 1176. With R$=15%, R€=6%, and expected dollar depreciation 4%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+5 percentage points: 15−6−(4)=5. Dollar deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 7 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-7`
+
+---
+
+### 1177. With R$=15%, R€=6%, and expected dollar depreciation 8%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+1 percentage points: 15−6−(8)=1. Dollar deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 8 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-8`
+
+---
+
+### 1178. With R$=15%, R€=12%, and expected dollar depreciation -4%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+7 percentage points: 15−12−(-4)=7. Dollar deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 9 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-9`
+
+---
+
+### 1179. With R$=15%, R€=18%, and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+-3 percentage points: 15−18−(0)=-3. Euro deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 10 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-10`
+
+---
+
+### 1180. With R$=20%, R€=6%, and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+14 percentage points: 20−6−(0)=14. Dollar deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 11 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-11`
+
+---
+
+### 1181. With R$=20%, R€=6%, and expected dollar depreciation 4%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+10 percentage points: 20−6−(4)=10. Dollar deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 12 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-12`
+
+---
+
+### 1182. With R$=20%, R€=6%, and expected dollar depreciation 8%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+6 percentage points: 20−6−(8)=6. Dollar deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 13 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-13`
+
+---
+
+### 1183. With R$=20%, R€=12%, and expected dollar depreciation -4%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+12 percentage points: 20−12−(-4)=12. Dollar deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 14 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-14`
+
+---
+
+### 1184. With R$=20%, R€=18%, and expected dollar depreciation 0%, what is the approximate dollar-minus-euro return gap?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+2 percentage points: 20−18−(0)=2. Dollar deposits have the higher expected dollar return.
+
+**Intuition:** Use the same currency and distinguish percentage points from percentage changes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=42); [Homework Chapter 3 · Q8 case 15 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-gap-15`
+
+---
+
+### 1185. Under approximate UIP, what dollar interest rate matches R€=6% and expected dollar depreciation of 0%?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+6%, found by adding the euro interest rate and expected dollar depreciation.
+
+**Intuition:** The worksheet repeats these five unique cases three times.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 44](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=44); [Homework Chapter 3 · Q17 cases 1, 6, 11 · PDF page 4](../courses/ubuffalo/international-finance/Ch3.pdf#page=4)
+
+Card ID: `ub-if-hw3-parity-1`
+
+---
+
+### 1186. Under approximate UIP, what dollar interest rate matches R€=6% and expected dollar depreciation of 4%?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+10%, found by adding the euro interest rate and expected dollar depreciation.
+
+**Intuition:** The worksheet repeats these five unique cases three times.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 44](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=44); [Homework Chapter 3 · Q17 cases 2, 7, 12 · PDF page 4](../courses/ubuffalo/international-finance/Ch3.pdf#page=4)
+
+Card ID: `ub-if-hw3-parity-2`
+
+---
+
+### 1187. Under approximate UIP, what dollar interest rate matches R€=6% and expected dollar depreciation of 8%?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+14%, found by adding the euro interest rate and expected dollar depreciation.
+
+**Intuition:** The worksheet repeats these five unique cases three times.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 44](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=44); [Homework Chapter 3 · Q17 cases 3, 8, 13 · PDF page 4](../courses/ubuffalo/international-finance/Ch3.pdf#page=4)
+
+Card ID: `ub-if-hw3-parity-3`
+
+---
+
+### 1188. Under approximate UIP, what dollar interest rate matches R€=12% and expected dollar depreciation of -4%?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+8%, found by adding the euro interest rate and expected dollar depreciation.
+
+**Intuition:** The worksheet repeats these five unique cases three times.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 44](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=44); [Homework Chapter 3 · Q17 cases 4, 9, 14 · PDF page 4](../courses/ubuffalo/international-finance/Ch3.pdf#page=4)
+
+Card ID: `ub-if-hw3-parity-4`
+
+---
+
+### 1189. Under approximate UIP, what dollar interest rate matches R€=18% and expected dollar depreciation of 0%?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+18%, found by adding the euro interest rate and expected dollar depreciation.
+
+**Intuition:** The worksheet repeats these five unique cases three times.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 44](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=44); [Homework Chapter 3 · Q17 cases 5, 10, 15 · PDF page 4](../courses/ubuffalo/international-finance/Ch3.pdf#page=4)
+
+Card ID: `ub-if-hw3-parity-5`
+
+---
+
+### 1190. With E=$1.10/€, Eᵉ=$1.20/€, and R€=5%, what is the expected dollar return?
+
+**International Finance · Interest parity practice · PREDICT**
+
+**Homework Q9** (equation)
+
+- Today: $1.10/€
+- Expected future: $1.20/€
+- Euro interest: 5%
+
+<details>
+<summary>Reveal explanation</summary>
+
+The chapter approximation gives 5%+0.10/1.10≈14.09%. The exact conversion gives 1.05×1.20/1.10−1≈14.55%. Both exceed the given 10% dollar rate under equal risk and liquidity.
+
+**Intuition:** Label whether you kept the interest-times-currency-change term.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 40](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=40); [Homework Chapter 3 · Q9 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-return-110-120`
+
+---
+
+### 1191. With E=$1.10/€, Eᵉ=$1.165/€, and R€=5%, why is the homework return about 11%?
+
+**International Finance · Interest parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The approximation is 5%+0.065/1.10≈10.91%, rounding to 11%. The exact return is about 11.20%.
+
+**Intuition:** Rounded choices can hide a meaningful distinction between formulas.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 40](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=40); [Homework Chapter 3 · Q10 · PDF page 2](../courses/ubuffalo/international-finance/Ch3.pdf#page=2)
+
+Card ID: `ub-if-hw3-return-1165`
+
+---
+
+### 1192. At E=$1.00/€, R$=10%, and R€=5%, what one-year forward quote satisfies parity?
+
+**International Finance · Covered parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Exact CIP gives F=1.00×1.10/1.05≈$1.04762/€. The chapter approximation gives F≈1.00×1.05=$1.0500/€.
+
+**Intuition:** Do not mix the approximate premium with an exact no-arbitrage claim.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 57](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=57); [Homework Chapter 3 · Q21 row 1 · PDF page 5](../courses/ubuffalo/international-finance/Ch3.pdf#page=5)
+
+Card ID: `ub-if-hw3-forward-1`
+
+---
+
+### 1193. At E=$1.05/€, R$=10%, and R€=5%, what one-year forward quote satisfies parity?
+
+**International Finance · Covered parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Exact CIP gives F=1.05×1.10/1.05≈$1.10000/€. The chapter approximation gives F≈1.05×1.05=$1.1025/€.
+
+**Intuition:** Do not mix the approximate premium with an exact no-arbitrage claim.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 57](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=57); [Homework Chapter 3 · Q21 row 2 · PDF page 5](../courses/ubuffalo/international-finance/Ch3.pdf#page=5)
+
+Card ID: `ub-if-hw3-forward-2`
+
+---
+
+### 1194. At E=$1.10/€, R$=10%, and R€=5%, what one-year forward quote satisfies parity?
+
+**International Finance · Covered parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Exact CIP gives F=1.10×1.10/1.05≈$1.15238/€. The chapter approximation gives F≈1.10×1.05=$1.1550/€.
+
+**Intuition:** Do not mix the approximate premium with an exact no-arbitrage claim.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 57](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=57); [Homework Chapter 3 · Q21 row 3 · PDF page 5](../courses/ubuffalo/international-finance/Ch3.pdf#page=5)
+
+Card ID: `ub-if-hw3-forward-3`
+
+---
+
+### 1195. At E=$1.20/€, R$=10%, and R€=5%, what one-year forward quote satisfies parity?
+
+**International Finance · Covered parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Exact CIP gives F=1.20×1.10/1.05≈$1.25714/€. The chapter approximation gives F≈1.20×1.05=$1.2600/€.
+
+**Intuition:** Do not mix the approximate premium with an exact no-arbitrage claim.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 57](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=57); [Homework Chapter 3 · Q21 row 4 · PDF page 5](../courses/ubuffalo/international-finance/Ch3.pdf#page=5)
+
+Card ID: `ub-if-hw3-forward-4`
+
+---
+
+### 1196. At E=$1.30/€, R$=10%, and R€=5%, what one-year forward quote satisfies parity?
+
+**International Finance · Covered parity practice · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Exact CIP gives F=1.30×1.10/1.05≈$1.36190/€. The chapter approximation gives F≈1.30×1.05=$1.3650/€.
+
+**Intuition:** Do not mix the approximate premium with an exact no-arbitrage claim.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 57](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=57); [Homework Chapter 3 · Q21 row 5 · PDF page 5](../courses/ubuffalo/international-finance/Ch3.pdf#page=5)
+
+Card ID: `ub-if-hw3-forward-5`
+
+---
+
+### 1197. A can make 10 shirts or 5 shoes; B can make 6 shirts or 2 shoes. Who has comparative advantage in shoes?
+
+**International Finance · Gains from trade · COMPARE**
+
+**Same resources, alternative outputs** (compare)
+
+- Country A: 10 shirts OR 5 shoes
+- Country B: 6 shirts OR 2 shoes
+
+<details>
+<summary>Reveal explanation</summary>
+
+A: one shoe costs A two shirts but costs B three shirts. A has lower opportunity cost in shoes even though it is also absolutely more productive in shirts.
+
+**Intuition:** Relative opportunity cost identifies the specialization margin.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 9](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=9)
+
+Card ID: `ub-if-comparative-numeric`
+
+---
+
+### 1198. What is wrong with saying aggregate gains from trade prove no compensation is needed?
+
+**International Finance · Gains from trade · SPOT THE MISTAKE**
+
+**Spot the claim** (mistake)
+
+- Claim: The country gains, so nobody loses.
+
+<details>
+<summary>Reveal explanation</summary>
+
+Aggregate gains do not guarantee every group gains. Import-competing workers or factor owners may lose; whether and how to compensate is a separate policy question.
+
+**Intuition:** An aggregate improvement can coexist with concentrated losses.
+
+</details>
+
+Sources: [Chapter 1 · PDF page 11](../courses/ubuffalo/international-finance/IF_Ch01%20-%20Tagged.pdf#page=11)
+
+Card ID: `ub-if-gains-mistake`
+
+---
+
+### 1199. If GDP is 500, foreign factor receipts are 40, and factor payments abroad are 25, what is GNP?
+
+**International Finance · National income accounting · PREDICT**
+
+**One period, same units** (equation)
+
+- GDP: 500
+- Receipts: 40
+- Payments: 25
+
+<details>
+<summary>Reveal explanation</summary>
+
+515: 500+40−25. Net foreign factor income is 15.
+
+**Intuition:** Use net receipts rather than adding all receipts alone.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 8](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=8)
+
+Card ID: `ub-if-gnp-numeric`
+
+---
+
+### 1200. What finishes the accounting chain if Y=200, C=120, G=30, and I=65?
+
+**International Finance · Saving and investment · COMPLETE THE SEQUENCE**
+
+**Find the external balance** (flow)
+
+- 1: S = Y − C − G
+- 2: S = 50
+- 3: CA = S − I = ?
+
+<details>
+<summary>Reveal explanation</summary>
+
+Saving is 200−120−30=50. CA=50−65=−15, a current account deficit.
+
+**Intuition:** Subtract domestic investment from saving after computing saving.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 12](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=12)
+
+Card ID: `ub-if-saving-pipeline`
+
+---
+
+### 1201. If CA+KA+nonreserve FA+discrepancy=−12, what official flow balances the accounts?
+
+**International Finance · Reserves and external wealth · PREDICT**
+
+**Net-inflow convention** (equation)
+
+- Nonofficial total: −12
+- Official flow: ?
+
+<details>
+<summary>Reveal explanation</summary>
+
+A +12 net official financing credit under the slides’ convention. This can reflect reserve sales or additional foreign official claims.
+
+**Intuition:** A negative settlements balance needs positive official financing.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 29](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=29)
+
+Card ID: `ub-if-official-balance-example`
+
+---
+
+### 1202. With €100 of assets and $80 of liabilities, what happens to net dollar wealth when E rises from 1 to 1.2 $/€?
+
+**International Finance · Reserves and external wealth · COMPARE**
+
+**Same portfolio, different exchange rate** (compare)
+
+- Before: $1.00/€
+- After: $1.20/€
+
+<details>
+<summary>Reveal explanation</summary>
+
+It rises from $20 to $40: assets rise from $100 to $120 while liabilities stay $80, assuming nothing else changes.
+
+**Intuition:** Currency revaluation can change wealth without any new saving.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 38](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=38)
+
+Card ID: `ub-if-valuation-example`
+
+---
+
+### 1203. An opening net position is −100; transactions add −10, price gains add 8, and currency gains add 7. What is the ending position?
+
+**International Finance · Reserves and external wealth · PREDICT**
+
+**Ignore other adjustments** (equation)
+
+- Opening: −100
+- Transactions: −10
+- Price + currency gains: 8 + 7
+
+<details>
+<summary>Reveal explanation</summary>
+
+−95: −100−10+8+7. The position improves despite negative net transactions.
+
+**Intuition:** Valuation gains can outweigh a negative transaction flow.
+
+</details>
+
+Sources: [Chapter 2 · PDF page 39](../courses/ubuffalo/international-finance/IF_Ch02%20-%20Tagged.pdf#page=39)
+
+Card ID: `ub-if-niip-reconcile-example`
+
+---
+
+### 1204. What is wrong with saying a rise from $1.00/€ to $1.20/€ means dollar appreciation?
+
+**International Finance · Exchange-rate quotations · SPOT THE MISTAKE**
+
+**Spot the quote error** (mistake)
+
+- Claim: More dollars per euro means a stronger dollar.
+
+<details>
+<summary>Reveal explanation</summary>
+
+The dollar depreciates: it buys fewer euros. The euro’s dollar price rises 20%, while the dollar’s euro value falls from 1 to 1/1.2≈0.8333, about 16.67%.
+
+**Intuition:** Reciprocal quotes have opposite signs and different percentage magnitudes.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 9](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=9)
+
+Card ID: `ub-if-quote-mistake`
+
+---
+
+### 1205. If euros cost $1.10 in one market and $1.12 in another, what is gross profit on an immediate €1,000 round trip?
+
+**International Finance · Foreign exchange markets · COMPARE**
+
+**Same currency, simultaneous quotes** (compare)
+
+- Market A: $1.10/€
+- Market B: $1.12/€
+
+<details>
+<summary>Reveal explanation</summary>
+
+Buy at $1.10 and sell at $1.12 for a gross $20 profit before fees, spreads, and execution risk.
+
+**Intuition:** A price gap only becomes profit if both legs are executable.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 18](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=18)
+
+Card ID: `ub-if-arbitrage-example`
+
+---
+
+### 1206. If Eᵉ=$1.20/€, R$=10%, and R€=5%, what is today’s approximate UIP equilibrium E?
+
+**International Finance · Interest parity and expectations · PREDICT**
+
+**Approximate UIP** (equation)
+
+- Expected future: $1.20/€
+- Interest gap: 5 percentage points
+
+<details>
+<summary>Reveal explanation</summary>
+
+E=1.20/(1+0.10−0.05)≈$1.14286/€. This leaves expected dollar depreciation of 5%, offsetting the euro interest disadvantage.
+
+**Intuition:** Solve for today’s price rather than plugging the future rate in as today’s rate.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 54](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=54)
+
+Card ID: `ub-if-uip-equilibrium-example`
+
+---
+
+### 1207. Does F=$1.113/€, E=$1.05/€, R€=4%, and R$=10% satisfy exact CIP?
+
+**International Finance · Covered parity practice · SPOT THE MISTAKE**
+
+**Spot the approximation trap** (mistake)
+
+- Claim: 4% + 6% forward premium = exact 10% return.
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The covered euro return is 1.04×1.113/1.05−1=10.24%, above 10%. Exact parity requires F=1.05×1.10/1.04≈$1.11058/€. The additive approximation hides the gap.
+
+**Intuition:** An approximate equality is not exact no-arbitrage.
+
+</details>
+
+Sources: [Chapter 3 · PDF page 58](../courses/ubuffalo/international-finance/IF_ch03%20-%20Tagged.pdf#page=58)
+
+Card ID: `ub-if-cip-rounding-trap`
+
+---
+
+### 1208. If nominal balances rise from 100 to 120 while P rises from 2 to 3, did real balances rise?
+
+**International Finance · Money demand · COMPARE**
+
+**Money and prices** (compare)
+
+- Before: M = 100, P = 2
+- After: M = 120, P = 3
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. They fell from 100/2=50 to 120/3=40, a 20% decrease.
+
+**Intuition:** More currency units can still buy fewer goods.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 12](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=12)
+
+Card ID: `ub-if-real-balances-example`
+
+---
+
+### 1209. What completes the temporary U.S. expansion chain with fixed prices, output, and expectations?
+
+**International Finance · Money and FX in the short run · COMPLETE THE SEQUENCE**
+
+**Temporary monetary expansion** (flow)
+
+- 1: U.S. M rises; P fixed
+- 2: Dollar interest falls
+- 3: Dollar/euro quote moves ?
+
+<details>
+<summary>Reveal explanation</summary>
+
+Higher U.S. real money supply lowers dollar interest; dollar deposits become less attractive, so E in dollars per euro rises and the dollar depreciates.
+
+**Intuition:** Carry the money-market result into the FX market.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 25](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=25)
+
+Card ID: `ub-if-money-fx-pipeline`
+
+---
+
+### 1210. If nominal money grows 8% and real money demand grows 3%, what inflation rate does the growth approximation predict?
+
+**International Finance · Long-run money and prices · PREDICT**
+
+**Money-market growth accounting** (equation)
+
+- Money growth: 8%
+- Real money-demand growth: 3%
+
+<details>
+<summary>Reveal explanation</summary>
+
+About 5%. The exact gross-rate calculation is 1.08/1.03−1≈4.85%.
+
+**Intuition:** State when you use a growth-rate approximation.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 31](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=31)
+
+Card ID: `ub-if-inflation-growth-example`
+
+---
+
+### 1211. If E starts at 1, jumps to 1.30, then settles at 1.10 dollars per euro, what is the overshoot?
+
+**International Finance · Overshooting and expectations · COMPLETE THE SEQUENCE**
+
+**Permanent money-level increase** (flow)
+
+- Before: $1.00/€
+- Immediately: $1.30/€
+- Long run: $1.10/€
+
+<details>
+<summary>Reveal explanation</summary>
+
+The initial 30% rise exceeds the eventual 10% rise. E later falls from 1.30 to 1.10: a partial dollar recovery, not a return to its original value.
+
+**Intuition:** Separate the immediate move, reversal, and lasting change.
+
+</details>
+
+Sources: [Chapter 4 · PDF page 42](../courses/ubuffalo/international-finance/IF_ch04%20-%20Tagged.pdf#page=42)
+
+Card ID: `ub-if-overshoot-numeric`
+
+---
+
+### 1212. With domestic inflation 6% and foreign inflation 2%, what does relative PPP predict for domestic depreciation?
+
+**International Finance · Purchasing power parity · COMPARE**
+
+**Same time horizon** (compare)
+
+- Domestic inflation: 6%
+- Foreign inflation: 2%
+
+<details>
+<summary>Reveal explanation</summary>
+
+Approximately 4%. Exactly, E₁/E₀−1=1.06/1.02−1≈3.92%.
+
+**Intuition:** An inflation differential is the linear approximation to a gross-price ratio.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 9](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=9)
+
+Card ID: `ub-if-ppp-inflation-example`
+
+---
+
+### 1213. If E rises 10% and domestic P rises 10% while foreign P stays fixed, what happens to q?
+
+**International Finance · Real exchange rates · PREDICT**
+
+**q = EP*/P** (equation)
+
+- E multiplier: 1.10
+- P multiplier: 1.10
+- P* multiplier: 1.00
+
+<details>
+<summary>Reveal explanation</summary>
+
+It is unchanged: the 1.10 multiplier in E cancels the 1.10 multiplier in P. There is nominal depreciation but no real depreciation.
+
+**Intuition:** Currency units can move without changing relative goods prices.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 35](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=35)
+
+Card ID: `ub-if-real-rate-example`
+
+---
+
+### 1214. If expected inflation rises from 2% to 5% and the real rate stays at 1%, how does the approximate nominal rate change?
+
+**International Finance · Fisher effect and inflation · COMPARE**
+
+**Hold the real rate fixed** (compare)
+
+- Old expected inflation: 2%
+- New expected inflation: 5%
+
+<details>
+<summary>Reveal explanation</summary>
+
+It rises from 3% to 6%, a three-percentage-point increase.
+
+**Intuition:** The Fisher effect compensates for expected purchasing-power loss.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 16](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=16)
+
+Card ID: `ub-if-fisher-example`
+
+---
+
+### 1215. If q rises 8% but P/P* falls 10%, what happens to E=qP/P*?
+
+**International Finance · Real demand and supply · PREDICT**
+
+**Combine both channels** (equation)
+
+- q multiplier: 1.08
+- P/P* multiplier: 0.90
+
+<details>
+<summary>Reveal explanation</summary>
+
+E changes by 1.08×0.90−1=−2.8%, a nominal appreciation despite real depreciation. Different magnitudes could reverse the net sign.
+
+**Intuition:** Opposing channels must be combined quantitatively.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 41](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=41)
+
+Card ID: `ub-if-supply-nominal-example`
+
+---
+
+### 1216. If domestic and foreign nominal rates are 7% and 4%, and expected inflation is 4% and 2%, what expected real depreciation is implied?
+
+**International Finance · Real interest parity · COMPARE**
+
+**Approximate real parity** (compare)
+
+- Domestic: R = 7%, πᵉ = 4%
+- Foreign: R* = 4%, π*ᵉ = 2%
+
+<details>
+<summary>Reveal explanation</summary>
+
+Real rates are approximately 3% and 2%, so real parity implies 1% expected domestic real depreciation. The nominal gap is 3 points; the inflation gap accounts for 2.
+
+**Intuition:** Subtract inflation before interpreting a real-return gap.
+
+</details>
+
+Sources: [Chapter 5 · PDF page 47](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=47)
+
+Card ID: `ub-if-real-parity-example`

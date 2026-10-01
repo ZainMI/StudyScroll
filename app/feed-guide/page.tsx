@@ -4,6 +4,15 @@ import feed from "@/content/master-feed.json";
 import coverage from "@/content/coverage.json";
 const map = [
   {
+    course: "International Finance",
+    title: "Connect money, trade, and exchange rates.",
+    topics:
+      "National accounts → balance of payments → FX returns → money markets → PPP → real exchange rates",
+    scope:
+      "UBuffalo · Chapters 1–5 slides and Chapter 2–4 homework. Includes exact-versus-approximate calculations and source caveats.",
+    next: "Practice drawing the money/FX diagrams and solving the homework tables before revealing explanations.",
+  },
+  {
     course: "AM 205",
     title: "Make the computation trustworthy.",
     topics:

@@ -31,7 +31,7 @@ The extraction helper `scripts/extract-courses.py` uses Python with `pypdf` to w
 - Interleaved course feed, filtering (including related cross-course cards), course library.
 - Reveal explanations, bookmark, mark understood, and save for another look.
 - Browser-local progress and imported cards; authored content updates are merged by stable ID.
-- School folders: choose Harvard or UBuffalo at launch. All current curated courses belong to Harvard. Source citations remain in the content, but PDF links and downloads are disabled.
+- School folders: choose Harvard or UBuffalo at launch. Harvard contains the original four courses; UBuffalo contains International Finance (284 cards across Chapters 1–5 and homework). Source citations remain in the content, but PDF links and downloads are disabled.
 - Folder import for text-based PDF, DOCX, TXT, and Markdown. It produces basic source-passage gap-fill cards, **not** the curated interpretation of the master feed.
 
 ## Limits
@@ -59,3 +59,5 @@ The learning feed mixes due reviews with new, prerequisite-ordered cards. Rate a
 ## Authoring cards
 
 Use [CARD_CREATION_GUIDE.md](content/CARD_CREATION_GUIDE.md) as the reusable LLM prompt and schema reference. It covers uncapped source coverage, teaching sequences, visual layouts, citations, and validation. The current visual companion batch adds 24 cards (six per course) while preserving all 908 existing cards.
+
+International Finance source inventory, chapter coverage, homework mapping, and source inconsistencies: [INTERNATIONAL_FINANCE_COVERAGE.md](content/INTERNATIONAL_FINANCE_COVERAGE.md).

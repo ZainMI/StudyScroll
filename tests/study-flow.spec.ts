@@ -12,7 +12,7 @@ test("curated feed reveals explanations and persists bookmarks and review", asyn
   await page.goto("/");
   await chooseCourses(page);
   await expect(page.locator("article.study-card")).toHaveCount(
-    feed.cards.length,
+    feed.cards.filter((card) => (card.school ?? "Harvard") === "Harvard").length,
   );
   const card = page.locator("article.study-card").first();
   await expect(card.locator(".answer")).toHaveCount(0);
@@ -77,7 +77,7 @@ test("import creates more than twenty cards without truncation and keeps course 
 test("PDF extraction works and source downloads are disabled", async ({
   request,
 }) => {
-  const file = "courses/am205/homeworks/ps1/ps1.pdf";
+  const file = "courses/harvard/am205/homeworks/ps1/ps1.pdf";
   const response = await request.post("/api/import", {
     multipart: {
       files: {
@@ -126,7 +126,7 @@ test("mobile layout fits the viewport and supports navigation", async ({
     .getByRole("button", { name: /My courses/ })
     .click();
   await expect(page.locator(".course-tile")).toHaveCount(
-    new Set(feed.cards.map((card) => card.course)).size,
+    new Set(feed.cards.filter((card) => (card.school ?? "Harvard") === "Harvard").map((card) => card.course)).size,
   );
 });
 
@@ -160,7 +160,7 @@ test("stored retired course and lecture cards do not return after a feed update"
   await page.goto("/");
   await chooseCourses(page);
   await expect(page.locator("article.study-card")).toHaveCount(
-    feed.cards.length,
+    feed.cards.filter((card) => (card.school ?? "Harvard") === "Harvard").length,
   );
   await expect(
     page.getByText("Retired course card", { exact: true }),

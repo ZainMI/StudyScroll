@@ -18,6 +18,10 @@ export function studyGroups(
         : (card.sources ?? []).flatMap((source) => {
             const lecture = source.path.match(/lecture[_-](\d+)/i);
             if (lecture) return [`Lecture ${Number(lecture[1])}`];
+            const chapter = source.path.match(
+              /(?:^|\/)(?:IF_)?ch0*(\d+)(?:[^0-9]|$)/i,
+            );
+            if (chapter) return [`Chapter ${Number(chapter[1])}`];
             const notes = source.path.match(
               /notes-(linalg|lstheory|lsinf)\.pdf$/,
             );
