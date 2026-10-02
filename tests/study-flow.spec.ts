@@ -5,7 +5,6 @@ import type { Card } from "../lib/cards";
 const feed: { cards: Card[] } = JSON.parse(
   readFileSync(new URL("../content/master-feed.json", import.meta.url), "utf8"),
 );
-import { readFile } from "node:fs/promises";
 test("curated feed reveals explanations and persists bookmarks and review", async ({
   page,
 }) => {
@@ -52,45 +51,9 @@ test("course filter includes cross-course connections and guide is reachable", a
   await page.getByRole("link", { name: "Explore the course map" }).click();
   await expect(page).toHaveURL(/feed-guide/);
 });
-test("import creates more than twenty cards without truncation and keeps course path", async ({
-  request,
-}) => {
-  const paragraphs = Array.from(
-    { length: 27 },
-    (_, i) =>
-      `Concept number ${i} describes independent observations and explains why careful measurement and explicit assumptions are necessary for statistical interpretation`,
-  );
-  const response = await request.post("/api/import", {
-    multipart: {
-      files: {
-        name: "Semester/TEST 101/notes.md",
-        mimeType: "text/markdown",
-        buffer: Buffer.from(paragraphs.join("\n\n")),
-      },
-    },
-  });
-  expect(response.ok()).toBeTruthy();
-  const data = await response.json();
-  expect(data.cards).toHaveLength(27);
-  expect(data.cards[0].course).toBe("TEST 101");
-  expect(data.skipped).toHaveLength(0);
-});
-test("PDF extraction works and source downloads are disabled", async ({
-  request,
-}) => {
+test("file uploads and source downloads are disabled", async ({ request }) => {
+  expect((await request.post("/api/import")).status()).toBe(404);
   const file = "courses/harvard/am205/homeworks/ps1/ps1.pdf";
-  const response = await request.post("/api/import", {
-    multipart: {
-      files: {
-        name: "Semester/AM 205/ps1.pdf",
-        mimeType: "application/pdf",
-        buffer: await readFile(file),
-      },
-    },
-  });
-  const data = await response.json();
-  expect(data.cards.length).toBeGreaterThan(0);
-  expect(data.skipped).toEqual([]);
   const source = await request.get(
     `/api/source?path=${encodeURIComponent(file)}`,
   );

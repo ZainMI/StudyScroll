@@ -32,7 +32,7 @@ The extraction helper `scripts/extract-courses.py` uses Python with `pypdf` to w
 - Reveal explanations, bookmark, mark understood, and save for another look.
 - Browser-local progress and imported cards; authored content updates are merged by stable ID.
 - School folders: choose Harvard or UBuffalo at launch. Harvard contains the original four courses; UBuffalo contains International Finance (284 cards across Chapters 1–5 and homework). Source citations remain in the content, but PDF links and downloads are disabled.
-- Folder import for text-based PDF, DOCX, TXT, and Markdown. It produces basic source-passage gap-fill cards, **not** the curated interpretation of the master feed.
+- Course material is added manually in the project, using `content/CARD_CREATION_GUIDE.md` and the canonical feed. The upload UI is removed and the upload endpoint returns 404.
 
 ## Limits
 
@@ -50,7 +50,7 @@ npm run build
 
 Stack: Next.js App Router, React, TypeScript, Lucide, pdf-parse, Mammoth.
 
-Browser workflow checks: `npm test` (Playwright, configured to use installed Google Chrome). They exercise reveal/save/reload, course filtering, mobile layout, PDF import, uncapped card extraction, and source access boundaries.
+Browser workflow checks: `npm test` (Playwright, configured to use installed Google Chrome). They exercise reveal/save/reload, course filtering, mobile layout, disabled uploads and source access boundaries.
 
 ## Learning schedule
 

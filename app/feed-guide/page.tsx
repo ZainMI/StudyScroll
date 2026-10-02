@@ -153,10 +153,9 @@ export default function Guide() {
           shared ideas. Save the ones that need another attempt.
         </p>
         <p>
-          The folder-import button remains an extraction prototype: it creates
-          literal gap-fill cards. It does not automatically produce the
-          interpreted content in this master feed. There is no live AI service
-          or cloud account. Your review schedule is stored in this browser.
+          Course material is curated manually before it appears here. The
+          optional tutor helps explain individual cards. Your review schedule
+          is stored in this browser.
         </p>
         <Link className="primary" href="/">
           Start exploring <ArrowUpRight size={16} />

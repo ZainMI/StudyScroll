@@ -15,7 +15,6 @@ import {
   FileText,
   FolderPlus,
   Layers3,
-  Plus,
   Sparkles,
   Sprout,
   X,
@@ -61,10 +60,7 @@ export default function Home() {
   const [view, setView] = useState("study");
   const [course, setCourse] = useState("All courses");
   const [revealed, setRevealed] = useState<string[]>([]);
-  const [upload, setUpload] = useState(false);
-  const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
-  const input = useRef<HTMLInputElement>(null);
   const reel = useRef<HTMLDivElement>(null);
   const [activeCard, setActiveCard] = useState(0);
   const moveCard = (direction: number) => {
@@ -83,14 +79,6 @@ export default function Home() {
     reel.current?.scrollTo({ top: 0, behavior: "instant" });
     setActiveCard(0);
   }, [view, course]);
-  useEffect(() => {
-    if (!upload) return;
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && !busy) setUpload(false);
-    };
-    window.addEventListener("keydown", closeOnEscape);
-    return () => window.removeEventListener("keydown", closeOnEscape);
-  }, [upload, busy]);
   useEffect(() => {
     try {
       const saved = localStorage.getItem("studyscroll-v1");
@@ -284,52 +272,6 @@ export default function Home() {
         ? p.saved.filter((x) => x !== id)
         : [...p.saved, id],
     }));
-  async function importFiles(files: FileList | null) {
-    if (!files?.length) return;
-    setBusy(true);
-    setMessage("");
-    try {
-      if (
-        files.length > 60 ||
-        Array.from(files).reduce((s, f) => s + f.size, 0) > 30 * 1024 * 1024
-      )
-        throw new Error("Choose up to 60 files and 30 MB at a time.");
-      const form = new FormData();
-      Array.from(files).forEach((f) =>
-        form.append("files", f, f.webkitRelativePath || f.name),
-      );
-      const response = await fetch("/api/import", {
-        method: "POST",
-        body: form,
-      });
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.error);
-      if (data.cards.length) {
-        setCards((c) => [
-          ...data.cards.map((card: Card) => ({
-            ...card,
-            school: school ?? "Harvard",
-            id: `${school ?? "Harvard"}:${card.id}`,
-          })),
-          ...c,
-        ]);
-        setStudyIds(null);
-        setCourse("All courses");
-        setView("study");
-        setUpload(false);
-      }
-      setMessage(
-        `${data.cards.length} study cards created.${data.skipped.length ? ` ${data.skipped.length} files could not produce cards (unsupported, scanned, or too little text).` : ""}`,
-      );
-    } catch (e) {
-      setMessage(
-        e instanceof Error ? e.message : "Import failed. Please try again.",
-      );
-    } finally {
-      setBusy(false);
-      if (input.current) input.current.value = "";
-    }
-  }
   const changeSchool = () => {
     setSchool(null);
     setSelectedGroups([]);
@@ -433,9 +375,6 @@ export default function Home() {
         </nav>
         <div className="nav-label course-label">
           YOUR COURSES
-          <button aria-label="Add a course" onClick={() => setUpload(true)}>
-            <Plus size={16} />
-          </button>
         </div>
         <div className="course-nav">
           {courses.map((c, i) => (
@@ -462,9 +401,6 @@ export default function Home() {
             </button>
           ))}
         </div>
-        <button className="add-course" onClick={() => setUpload(true)}>
-          <Plus size={16} /> Add course material
-        </button>
         <div className="sidebar-bottom">
           <div className="plant-icon">
             <Sprout size={26} />
@@ -526,12 +462,6 @@ export default function Home() {
                       : "One idea. A little curiosity. Swipe to the next."}
               </p>
             </div>
-            <button
-              className="primary import-top"
-              onClick={() => setUpload(true)}
-            >
-              <Plus size={17} /> Add material
-            </button>
           </section>
           {message && (
             <div className="notice" role="status">
@@ -658,15 +588,8 @@ export default function Home() {
                     <div className="school-empty">
                       <h2>Your {school} folder is ready.</h2>
                       <p>
-                        Add course material to start building your study
-                        collection.
+                        Course material for this school hasn’t been added yet.
                       </p>
-                      <button
-                        className="primary"
-                        onClick={() => setUpload(true)}
-                      >
-                        Add course material
-                      </button>
                     </div>
                   )}
                   <p className="study-help">
@@ -1148,8 +1071,7 @@ export default function Home() {
                 <div>
                   <span>01</span>
                   <p>
-                    <strong>Bring your classes</strong>Add a folder of course
-                    material.
+                    <strong>Choose your classes</strong>Pick the lectures you want to review.
                   </p>
                 </div>
                 <div>
@@ -1181,70 +1103,6 @@ export default function Home() {
           card={tutorCard}
           onClose={() => setTutorCard(null)}
         />
-      )}
-      {upload && (
-        <div
-          className="modal-backdrop"
-          onClick={() => !busy && setUpload(false)}
-        >
-          <section
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="upload-title"
-            className="modal"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="close"
-              aria-label="Close import"
-              disabled={busy}
-              onClick={() => setUpload(false)}
-            >
-              <X size={21} />
-            </button>
-            <div className="upload-icon">
-              <FolderPlus size={32} />
-            </div>
-            <h2 id="upload-title">A folder full of possibilities.</h2>
-            <p>
-              Choose a folder of classes. Subfolders become courses, and
-              passages become recall cards.
-            </p>
-            <div className="folder-example">
-              My semester /<br />
-              <span>↳ MATH 201 / lecture-notes.pdf</span>
-              <br />
-              <span>↳ CS 101 / homework.docx</span>
-            </div>
-            <button
-              className="primary upload-button"
-              disabled={busy}
-              onClick={() => input.current?.click()}
-            >
-              {busy ? "Reading your material…" : "Choose a course folder"}
-              <ArrowRight size={18} />
-            </button>
-            <input
-              ref={input}
-              type="file"
-              multiple
-              {...{ webkitdirectory: "" }}
-              hidden
-              onChange={(e) => importFiles(e.target.files)}
-            />
-            <small>PDF, DOCX, TXT & Markdown · Up to 60 files / 30 MB</small>
-            <p className="privacy">
-              Text is extracted on your local app server. Cards stay in this
-              browser. This prototype uses source passages and fill-in-the-gap
-              prompts; importing does not use AI. Scanned PDFs need OCR first.
-            </p>
-            {message && (
-              <div className="modal-message" role="status">
-                {message}
-              </div>
-            )}
-          </section>
-        </div>
       )}
     </div>
   );
