@@ -1,5 +1,5 @@
 {
-  "scope": "Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2 and supporting material. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference.",
+  "scope": "Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2, the October 2026 Quiz 1 review, and 2023–2025 Quiz 1 solutions with supporting concepts. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference.",
   "policy": "No minimum, maximum, or per-course card quota. Add, split, revise, and revisit cards according to conceptual coverage and observed recall gaps. A reviewed card is not evidence of mastery.",
   "units": [
     {
@@ -4806,6 +4806,701 @@
             "ub-if-real-equality",
             "ub-if-real-gap-numeric",
             "ub-if-real-parity-example"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "AM 205",
+      "title": "Quiz 1 review and 2023–2025 practice",
+      "status": "All source questions mapped; recall not yet assessed",
+      "cardIds": [
+        "am205-quiz1-exact-operands",
+        "am205-binade-boundary",
+        "am205-associative",
+        "am205-quiz1-commutative-rounding",
+        "am205-quiz1-gap-at-54",
+        "am205-quiz1-round-at-54",
+        "am205-quiz1-upper-product",
+        "am205-quiz1-lower-upper-product",
+        "am205-quiz1-symmetric-product",
+        "am205-zero-pivot-nonsingular",
+        "am205-quiz1-singular-lu",
+        "am205-spd-sensitive",
+        "am205-quiz1-vector-norm-order",
+        "am205-quiz1-singular-norm",
+        "am205-quiz1-zero-norm",
+        "am205-two-solutions",
+        "am205-quiz1-solution-line-proof",
+        "am205-quiz1-row-permutation",
+        "am205-quiz1-column-coordinates",
+        "am205-quiz1-invertible-left",
+        "am205-quiz1-residual-rescale",
+        "am205-scaled-residual",
+        "am205-quiz1-diagonal-row-scaling",
+        "am205-quiz1-scaling-pivot",
+        "am205-quiz1-three-pivots",
+        "am205-quiz1-outer-association",
+        "am205-quiz1-lp-solve",
+        "am205-quiz1-pl-solve",
+        "am205-quiz1-exact-fit",
+        "am205-quiz1-exact-nonunique",
+        "am205-quiz1-reflector-designed",
+        "am205-quiz1-normal-equations",
+        "am205-normal-squared",
+        "am205-quiz1-normal-condition-one",
+        "am205-quiz1-orthogonal-dot",
+        "am205-quiz1-orthogonality-not-transitive",
+        "am205-quiz1-orthogonal-norms",
+        "am205-quiz1-orthogonal-example",
+        "am205-orthogonal-map",
+        "am205-quiz1-householder-unit",
+        "am205-quiz1-householder-symmetric",
+        "am205-quiz1-householder-geometric",
+        "am205-quiz1-householder-alpha",
+        "am205-quiz1-singular-condition",
+        "am205-quiz1-reflector-count",
+        "am205-qr-reduction",
+        "am205-quiz1-svd-solve",
+        "am205-svd-minimum-norm",
+        "am205-quiz1-qr-projector",
+        "am205-quiz1-construct-span",
+        "am205-condition-scale",
+        "am205-quiz1-norms-four-five",
+        "am205-quiz1-svd-exists",
+        "am205-quiz1-orthogonal-determinant",
+        "am205-quiz1-product-commutes",
+        "am205-quiz1-diagonal-orthogonal",
+        "am205-quiz1-cross-formula",
+        "am205-quiz1-cross-nine",
+        "am205-spacing-at-100",
+        "am205-quiz1-six-digits",
+        "am205-quiz1-rank-storage",
+        "am205-quiz1-rank-matvec",
+        "am205-quiz1-rank-ball",
+        "am205-quiz1-same-fit",
+        "am205-quiz1-householder-proof",
+        "am205-quiz1-svd-normalize",
+        "am205-quiz1-svd-factor-example",
+        "am205-quiz1-svd-factor-vectors",
+        "am205-quiz1-svd-signs",
+        "am205-largest-consecutive-integers",
+        "am205-even-large",
+        "am205-quiz1-infinity-fit-geometry",
+        "am205-quiz1-infinity-fit-example",
+        "am205-quiz1-two-fit-objectives",
+        "am205-quiz1-solve-vs-compress",
+        "am205-quiz1-condition-not-rank",
+        "am205-quiz1-flag-rank",
+        "am205-quiz1-flag-decompose",
+        "am205-quiz1-tall-factor-cost",
+        "am205-quiz1-tall-qr-cost",
+        "am205-quiz1-product-norm-bound",
+        "am205-quiz1-product-norm-alignment",
+        "am205-quiz1-product-norm-example",
+        "am205-quiz1-rounded-gram",
+        "am205-quiz1-similarity-zeros",
+        "am205-quiz1-similarity-fixed",
+        "am205-quiz1-similarity-spectrum",
+        "am205-quiz1-symmetric-not-spd",
+        "am205-quiz1-cholesky-work",
+        "am205-quiz1-cross-two",
+        "am205-quiz1-cross-two-error",
+        "am205-quiz1-fit-contraction",
+        "am205-quiz1-coefficient-sensitivity",
+        "am205-quiz1-worst-target-direction",
+        "am205-quiz1-product-condition-bound",
+        "am205-quiz1-product-condition-four",
+        "am205-quiz1-sum-condition-unbounded"
+      ],
+      "objectives": [
+        {
+          "concept": "quiz1review, p. 1 · Review · 1.7",
+          "cardIds": [
+            "am205-quiz1-exact-operands"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 1 · Review · 1.8 · nonuniform spacing",
+          "cardIds": [
+            "am205-binade-boundary"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 1 · Review · 1.9 · associativity",
+          "cardIds": [
+            "am205-associative"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 1 · Review · 1.9 · commutativity",
+          "cardIds": [
+            "am205-quiz1-commutative-rounding"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 1 · Review · spacing companion",
+          "cardIds": [
+            "am205-quiz1-gap-at-54"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 1 · Review · rounding companion",
+          "cardIds": [
+            "am205-quiz1-round-at-54"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 1 · Review · 2.7",
+          "cardIds": [
+            "am205-quiz1-upper-product"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 1 · Review · 2.7 companion · authored example",
+          "cardIds": [
+            "am205-quiz1-lower-upper-product"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 1 · Review · 2.8",
+          "cardIds": [
+            "am205-quiz1-symmetric-product"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 2 · Review · 2.14",
+          "cardIds": [
+            "am205-zero-pivot-nonsingular"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 2 · Review · 2.15",
+          "cardIds": [
+            "am205-quiz1-singular-lu"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 2 · Review · 2.17",
+          "cardIds": [
+            "am205-spd-sensitive"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 2 · Review · 2.21 companion",
+          "cardIds": [
+            "am205-quiz1-vector-norm-order"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 2 · Review · 2.21",
+          "cardIds": [
+            "am205-quiz1-singular-norm"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 2 · Review · 2.23 and companions",
+          "cardIds": [
+            "am205-quiz1-zero-norm"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 2 · Review · 2.28",
+          "cardIds": [
+            "am205-two-solutions"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 2 · Review · 2.28 · proof",
+          "cardIds": [
+            "am205-quiz1-solution-line-proof"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 2 · Review · 2.32(a)",
+          "cardIds": [
+            "am205-quiz1-row-permutation"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 2 · Review · 2.32(b)",
+          "cardIds": [
+            "am205-quiz1-column-coordinates"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 2 · Review · 2.32(c)",
+          "cardIds": [
+            "am205-quiz1-invertible-left"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 3 · Review · 2.33(a–b)",
+          "cardIds": [
+            "am205-quiz1-residual-rescale"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 3 · Review · 2.33(c)",
+          "cardIds": [
+            "am205-scaled-residual"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 3 · Review · 2.34(a–b) · authored example",
+          "cardIds": [
+            "am205-quiz1-diagonal-row-scaling"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 3 · Review · 2.34(c) · authored example",
+          "cardIds": [
+            "am205-quiz1-scaling-pivot"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 3 · Review · 2.39",
+          "cardIds": [
+            "am205-quiz1-three-pivots"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 3 · Review · 2.46",
+          "cardIds": [
+            "am205-quiz1-outer-association"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 4 · Review · 2.49(a)",
+          "cardIds": [
+            "am205-quiz1-lp-solve"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 4 · Review · 2.49(b)",
+          "cardIds": [
+            "am205-quiz1-pl-solve"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 4 · Review · 3.5",
+          "cardIds": [
+            "am205-quiz1-exact-fit"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 4 · Review · 3.6 · authored example",
+          "cardIds": [
+            "am205-quiz1-exact-nonunique"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 4 · Review · 3.8",
+          "cardIds": [
+            "am205-quiz1-reflector-designed"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 4 · Review · 3.14",
+          "cardIds": [
+            "am205-quiz1-normal-equations"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 4 · Review · 3.14 · conditioning",
+          "cardIds": [
+            "am205-normal-squared"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 4 · Review · 3.14 · equality case",
+          "cardIds": [
+            "am205-quiz1-normal-condition-one"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 4 · Review · 3.19",
+          "cardIds": [
+            "am205-quiz1-orthogonal-dot"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 4 · Review · 3.20",
+          "cardIds": [
+            "am205-quiz1-orthogonality-not-transitive"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 5 · Review · 3.23 and companions",
+          "cardIds": [
+            "am205-quiz1-orthogonal-norms"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 5 · Review · 3.23 · example",
+          "cardIds": [
+            "am205-quiz1-orthogonal-example"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 5 · Review · 3.26",
+          "cardIds": [
+            "am205-orthogonal-map"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 5 · Review · 3.27",
+          "cardIds": [
+            "am205-quiz1-householder-unit"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 5 · Review · 3.27 · symmetry",
+          "cardIds": [
+            "am205-quiz1-householder-symmetric"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 5 · Review · 3.27 · authored companion",
+          "cardIds": [
+            "am205-quiz1-householder-geometric"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 5 · Review · 3.28",
+          "cardIds": [
+            "am205-quiz1-householder-alpha"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 5 · Review · 3.43",
+          "cardIds": [
+            "am205-quiz1-singular-condition"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 5 · Review · Householder QR",
+          "cardIds": [
+            "am205-quiz1-reflector-count"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 6 · Review · QR and least squares",
+          "cardIds": [
+            "am205-qr-reduction"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 6 · Review · SVD and least squares",
+          "cardIds": [
+            "am205-quiz1-svd-solve"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 6 · Review · SVD minimum norm",
+          "cardIds": [
+            "am205-svd-minimum-norm"
+          ]
+        },
+        {
+          "concept": "quiz1review, p. 6 · Review · QR and projection",
+          "cardIds": [
+            "am205-quiz1-qr-projector"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q1",
+          "cardIds": [
+            "am205-quiz1-construct-span"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q2",
+          "cardIds": [
+            "am205-zero-pivot-nonsingular"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q3",
+          "cardIds": [
+            "am205-condition-scale"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q4",
+          "cardIds": [
+            "am205-quiz1-norms-four-five"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q5",
+          "cardIds": [
+            "am205-quiz1-svd-exists"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q6",
+          "cardIds": [
+            "am205-quiz1-orthogonal-determinant"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q7",
+          "cardIds": [
+            "am205-quiz1-product-commutes"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q8",
+          "cardIds": [
+            "am205-quiz1-diagonal-orthogonal"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q9",
+          "cardIds": [
+            "am205-quiz1-vector-norm-order"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q10 · rank-one step",
+          "cardIds": [
+            "am205-quiz1-cross-formula"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q10",
+          "cardIds": [
+            "am205-quiz1-cross-nine"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q11",
+          "cardIds": [
+            "am205-spacing-at-100"
+          ]
+        },
+        {
+          "concept": "solns23, p. 1 · 2023 · Q12",
+          "cardIds": [
+            "am205-quiz1-six-digits"
+          ]
+        },
+        {
+          "concept": "solns23, p. 2 · 2023 · Q13",
+          "cardIds": [
+            "am205-quiz1-rank-storage"
+          ]
+        },
+        {
+          "concept": "solns23, p. 2 · 2023 · Q14",
+          "cardIds": [
+            "am205-quiz1-rank-matvec"
+          ]
+        },
+        {
+          "concept": "solns23, p. 2 · 2023 · Q15",
+          "cardIds": [
+            "am205-quiz1-rank-ball"
+          ]
+        },
+        {
+          "concept": "solns23, p. 2 · 2023 · Q16",
+          "cardIds": [
+            "am205-quiz1-same-fit"
+          ]
+        },
+        {
+          "concept": "solns23, p. 2 · 2023 · Q17",
+          "cardIds": [
+            "am205-quiz1-householder-proof"
+          ]
+        },
+        {
+          "concept": "solns23, p. 2 · 2023 · Q18 · normalize factors",
+          "cardIds": [
+            "am205-quiz1-svd-normalize"
+          ]
+        },
+        {
+          "concept": "solns23, p. 2 · 2023 · Q18 · singular values",
+          "cardIds": [
+            "am205-quiz1-svd-factor-example"
+          ]
+        },
+        {
+          "concept": "solns23, p. 2 · 2023 · Q18 · singular vectors",
+          "cardIds": [
+            "am205-quiz1-svd-factor-vectors"
+          ]
+        },
+        {
+          "concept": "solns23, p. 2 · 2023 · Q18 · sign convention",
+          "cardIds": [
+            "am205-quiz1-svd-signs"
+          ]
+        },
+        {
+          "concept": "solns24, p. 1 · 2024 · Q1",
+          "cardIds": [
+            "am205-largest-consecutive-integers",
+            "am205-even-large"
+          ]
+        },
+        {
+          "concept": "solns24, p. 1 · 2024 · Q2",
+          "cardIds": [
+            "am205-quiz1-infinity-fit-geometry"
+          ]
+        },
+        {
+          "concept": "solns24, p. 1 · 2024 · Q2 · authored companion",
+          "cardIds": [
+            "am205-quiz1-infinity-fit-example"
+          ]
+        },
+        {
+          "concept": "solns24, p. 1 · 2024 · Q2 · authored companion",
+          "cardIds": [
+            "am205-quiz1-two-fit-objectives"
+          ]
+        },
+        {
+          "concept": "solns24, p. 1 · 2024 · Q3",
+          "cardIds": [
+            "am205-quiz1-solve-vs-compress"
+          ]
+        },
+        {
+          "concept": "solns24, p. 1 · 2024 · Q3 · authored counterexample",
+          "cardIds": [
+            "am205-quiz1-condition-not-rank"
+          ]
+        },
+        {
+          "concept": "solns24, p. 2 · 2024 · Q4",
+          "cardIds": [
+            "am205-quiz1-flag-rank"
+          ]
+        },
+        {
+          "concept": "solns24, p. 2 · 2024 · Q4 · rank-one decomposition",
+          "cardIds": [
+            "am205-quiz1-flag-decompose"
+          ]
+        },
+        {
+          "concept": "solns24, p. 2 · 2024 · Q5",
+          "cardIds": [
+            "am205-quiz1-tall-factor-cost"
+          ]
+        },
+        {
+          "concept": "solns24, p. 2 · 2024 · Q5 · QR companion",
+          "cardIds": [
+            "am205-quiz1-tall-qr-cost"
+          ]
+        },
+        {
+          "concept": "solns24, p. 2 · 2024 · Q6 · bound",
+          "cardIds": [
+            "am205-quiz1-product-norm-bound"
+          ]
+        },
+        {
+          "concept": "solns24, p. 2 · 2024 · Q6 · equality",
+          "cardIds": [
+            "am205-quiz1-product-norm-alignment"
+          ]
+        },
+        {
+          "concept": "solns24, p. 2 · 2024 · Q6 · authored companion",
+          "cardIds": [
+            "am205-quiz1-product-norm-example"
+          ]
+        },
+        {
+          "concept": "solns25, p. 1 · 2025 · Q1",
+          "cardIds": [
+            "am205-quiz1-rounded-gram"
+          ]
+        },
+        {
+          "concept": "solns25, p. 1 · 2025 · Q2 · zero pattern",
+          "cardIds": [
+            "am205-quiz1-similarity-zeros"
+          ]
+        },
+        {
+          "concept": "solns25, p. 1 · 2025 · Q2 · unchanged entry",
+          "cardIds": [
+            "am205-quiz1-similarity-fixed"
+          ]
+        },
+        {
+          "concept": "solns25, p. 1 · 2025 · Q2 · authored companion",
+          "cardIds": [
+            "am205-quiz1-similarity-spectrum"
+          ]
+        },
+        {
+          "concept": "solns25, p. 1 · 2025 · Q3",
+          "cardIds": [
+            "am205-quiz1-symmetric-not-spd"
+          ]
+        },
+        {
+          "concept": "solns25, p. 1 · 2025 · Q3 · operation counts",
+          "cardIds": [
+            "am205-quiz1-cholesky-work"
+          ]
+        },
+        {
+          "concept": "solns25, p. 2 · 2025 · Q4 · complete-pivot approximation",
+          "cardIds": [
+            "am205-quiz1-cross-two"
+          ]
+        },
+        {
+          "concept": "solns25, p. 2 · 2025 · Q4 · Frobenius error",
+          "cardIds": [
+            "am205-quiz1-cross-two-error"
+          ]
+        },
+        {
+          "concept": "solns25, p. 2 · 2025 · Q5 · prediction sensitivity",
+          "cardIds": [
+            "am205-quiz1-fit-contraction"
+          ]
+        },
+        {
+          "concept": "solns25, p. 2 · 2025 · Q5 · coefficient sensitivity",
+          "cardIds": [
+            "am205-quiz1-coefficient-sensitivity"
+          ]
+        },
+        {
+          "concept": "solns25, p. 2 · 2025 · Q5 · equality direction",
+          "cardIds": [
+            "am205-quiz1-worst-target-direction"
+          ]
+        },
+        {
+          "concept": "solns25, p. 2 · 2025 · Q6 · product bound",
+          "cardIds": [
+            "am205-quiz1-product-condition-bound"
+          ]
+        },
+        {
+          "concept": "solns25, p. 2 · 2025 · Q6 · product construction",
+          "cardIds": [
+            "am205-quiz1-product-condition-four"
+          ]
+        },
+        {
+          "concept": "solns25, p. 2 · 2025 · Q6 · sum counterexample",
+          "cardIds": [
+            "am205-quiz1-sum-condition-unbounded"
           ]
         }
       ]

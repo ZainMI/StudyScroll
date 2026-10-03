@@ -192,3 +192,41 @@ test("International Finance offers five chapter groups and saves UBuffalo review
   await expect(page.locator(".study-course")).toHaveCount(4);
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem("studyscroll-v1")!).reviews)).toEqual(before);
 });
+
+test("AM 205 quiz groups reuse assignment cards without removing their original group", () => {
+  const am205 = curated.filter((c) => c.course === "AM 205");
+  const groups = studyGroups(am205, "lectures");
+  const quizzes = groups.filter((g) => g.label.startsWith("Quiz 1"));
+  expect(quizzes.map((g) => g.label)).toEqual([
+    "Quiz 1 · 2023 practice",
+    "Quiz 1 · 2024 practice",
+    "Quiz 1 · 2025 practice",
+    "Quiz 1 review",
+  ]);
+  const quizIds = new Set(quizzes.flatMap((g) => g.cardIds));
+  expect(quizIds).toEqual(new Set(am205.filter((c) => c.sources?.some((s) => s.path.includes("/quiz/quiz1/"))).map((c) => c.id)));
+  const reused = "am205-zero-pivot-nonsingular";
+  for (const label of ["Assignments & supporting material", "Quiz 1 review", "Quiz 1 · 2023 practice"]) {
+    expect(groups.find((g) => g.label === label)?.cardIds).toContain(reused);
+  }
+  for (const group of groups) expect(new Set(group.cardIds).size).toBe(group.cardIds.length);
+});
+
+test("mobile can study the new quiz material with rendered matrices", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  await page.getByRole("button", { name: /Harvard/ }).click();
+  const course = page.locator(".study-course").filter({ hasText: "AM 205" });
+  if (!(await course.getAttribute("open"))) await course.locator("summary").click();
+  await course.getByRole("checkbox", { name: /^Quiz 1 · 2025 practice/ }).check();
+  await page.getByRole("button", { name: "Start studying" }).click();
+  const expected = studyGroups(curated, "lectures").find((g) => g.course === "AM 205" && g.label === "Quiz 1 · 2025 practice")!;
+  await expect(page.locator("article.study-card")).toHaveCount(expected.cardIds.length);
+  const card = page.locator('[data-card-id="am205-quiz1-cross-two"]');
+  await card.scrollIntoViewIfNeeded();
+  await card.getByRole("button", { name: "Recall your answer, then reveal." }).click();
+  await expect(card.locator(".answer .katex")).toBeVisible();
+  await expect(card.locator(".math-fallback, .katex-error")).toHaveCount(0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.screenshot({ path: "tmp/am205-quiz-mobile.png", animations: "disabled" });
+});

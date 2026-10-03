@@ -1,8 +1,8 @@
 {
   "version": 3,
   "title": "Course-grounded flashcards",
-  "updated": "2026-10-01",
-  "scope": "Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2 and supporting material. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. UBuffalo International Finance covers the supplied Chapters 1–5 slides and Chapter 2–4 homework; source inconsistencies and exact/approximate conventions are documented in INTERNATIONAL_FINANCE_COVERAGE.md.",
+  "updated": "2026-10-03",
+  "scope": "Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2, the October 2026 Quiz 1 review, and 2023–2025 Quiz 1 solutions with supporting concepts. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. UBuffalo International Finance covers the supplied Chapters 1–5 slides and Chapter 2–4 homework; source inconsistencies and exact/approximate conventions are documented in INTERNATIONAL_FINANCE_COVERAGE.md.",
   "cards": [
     {
       "id": "am205-spacing",
@@ -36,6 +36,11 @@
           "path": "courses/harvard/am205/homeworks/ps1/ps1.pdf",
           "locator": "PS1 · Q1(a)",
           "page": 1
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 1,
+          "locator": "Review · 1.8 · nonuniform spacing"
         }
       ],
       "relatedCourses": [],
@@ -114,6 +119,11 @@
           "path": "courses/harvard/am205/Scientific Computing An Introductory Survey.pdf",
           "locator": "Heath · Ch. 1 review, printed pp. 40–41",
           "page": 61
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 1,
+          "locator": "2024 · Q1"
         }
       ],
       "relatedCourses": [],
@@ -463,6 +473,11 @@
           "path": "courses/harvard/am205/homeworks/ps1/ps1.pdf",
           "locator": "PS1 · Q4",
           "page": 1
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 5,
+          "locator": "Review · 3.26"
         }
       ],
       "relatedCourses": [],
@@ -512,6 +527,16 @@
           "path": "courses/harvard/am205/Scientific Computing An Introductory Survey.pdf",
           "locator": "Heath · Ch. 2 review, printed pp. 92–96",
           "page": 113
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 2,
+          "locator": "Review · 2.14"
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q2"
         }
       ],
       "relatedCourses": [],
@@ -1246,6 +1271,11 @@
           "path": "courses/harvard/am205/Scientific Computing An Introductory Survey.pdf",
           "locator": "Heath · Ch. 1 review · floating-point properties",
           "page": 60
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 1,
+          "locator": "Review · 1.9 · associativity"
         }
       ],
       "color": "green",
@@ -1318,6 +1348,11 @@
           "path": "courses/harvard/am205/Scientific Computing An Introductory Survey.pdf",
           "locator": "Heath · Ch. 2 review, printed p. 95",
           "page": 116
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q3"
         }
       ],
       "color": "green",
@@ -1442,6 +1477,11 @@
           "path": "courses/harvard/am205/Scientific Computing An Introductory Survey.pdf",
           "locator": "Heath · Ch. 2 review, printed p. 93",
           "page": 114
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 2,
+          "locator": "Review · 2.28"
         }
       ],
       "color": "green",
@@ -1791,6 +1831,11 @@
           "path": "courses/harvard/am205/Scientific Computing An Introductory Survey.pdf",
           "locator": "Heath · §3.3–3.5 · supporting least-squares reading",
           "page": 134
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 4,
+          "locator": "Review · 3.14 · conditioning"
         }
       ],
       "color": "green",
@@ -1808,6 +1853,11 @@
           "path": "courses/harvard/am205/Scientific Computing An Introductory Survey.pdf",
           "locator": "Heath · §3.3–3.5 · supporting least-squares reading",
           "page": 134
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 6,
+          "locator": "Review · QR and least squares"
         }
       ],
       "relatedCourses": [],
@@ -1834,6 +1884,11 @@
           "path": "courses/harvard/am205/Scientific Computing An Introductory Survey.pdf",
           "locator": "Heath · §3.3–3.5 · supporting least-squares reading",
           "page": 134
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 6,
+          "locator": "Review · SVD minimum norm"
         }
       ],
       "relatedCourses": [],
@@ -1866,6 +1921,11 @@
           "path": "courses/harvard/am205/homeworks/ps1/ps1.pdf",
           "locator": "PS1 · Q1(a) · companion concept check",
           "page": 1
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q11"
         }
       ],
       "color": "green",
@@ -1964,6 +2024,11 @@
           "path": "courses/harvard/am205/Scientific Computing An Introductory Survey.pdf",
           "locator": "Heath · Ch. 1 review, printed pp. 40–41 · companion concept check",
           "page": 61
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 1,
+          "locator": "2024 · Q1"
         }
       ],
       "relatedCourses": [],
@@ -3258,6 +3323,11 @@
           "path": "courses/harvard/am205/Scientific Computing An Introductory Survey.pdf",
           "locator": "Heath · §2.3.5, printed p. 61 · companion concept check",
           "page": 82
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 3,
+          "locator": "Review · 2.33(c)"
         }
       ],
       "color": "green",
@@ -3440,6 +3510,11 @@
           "path": "courses/harvard/am205/Scientific Computing An Introductory Survey.pdf",
           "locator": "Heath · Ch. 2 review, printed p. 95 · companion concept check",
           "page": 116
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 2,
+          "locator": "Review · 2.17"
         }
       ],
       "color": "green",
@@ -31771,6 +31846,2013 @@
         "ub-if-general-nominal-gap",
         "ub-if-real-parity"
       ]
+    },
+    {
+      "id": "am205-quiz1-exact-operands",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Floating-point arithmetic",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "If 1 and 3 are exact machine numbers, must their quotient be exact?",
+      "body": "",
+      "answer": "No. \\(1/3\\) has a repeating binary expansion, so it must be rounded. Exactly stored inputs do not guarantee an exactly representable result.",
+      "takeaway": "Input accuracy and arithmetic rounding are separate issues.",
+      "source": "Review · 1.7",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 1,
+          "locator": "Review · 1.7"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-commutative-rounding",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Floating-point arithmetic",
+      "kind": "COMPARE",
+      "format": "flashcard",
+      "title": "Does rounding make swapping two finite operands change their sum?",
+      "body": "",
+      "answer": "With the same IEEE format and rounding mode, no: \\(a+b\\) and \\(b+a\\) round the same exact sum. Regrouping three terms can change intermediate rounding. Exclude NaNs and changes in evaluation precision.",
+      "takeaway": "Swapping two operands differs from regrouping a longer calculation.",
+      "source": "Review · 1.9 · commutativity",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 1,
+          "locator": "Review · 1.9 · commutativity"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-gap-at-54",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Floating-point arithmetic",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "How far apart are binary64 numbers between \\(2^{54}\\) and \\(2^{55}\\)?",
+      "body": "",
+      "answer": "The gaps within this interval are \\(2^{54-52}=4\\). The gap immediately above \\(2^{55}\\) is 8. Binary64 has 53 significant binary bits.",
+      "takeaway": "One power-of-two interval has one spacing; the next doubles it.",
+      "source": "Review · spacing companion",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 1,
+          "locator": "Review · spacing companion"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-round-at-54",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Floating-point arithmetic",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "What does binary64 compute for \\(2^{54}+1\\) with nearest rounding?",
+      "body": "",
+      "answer": "\\(2^{54}\\). The neighboring machine numbers are \\(2^{54}\\) and \\(2^{54}+4\\); the exact result is closer to the first. This is not a halfway tie.",
+      "takeaway": "Compare the increment with the local gap.",
+      "source": "Review · rounding companion",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 1,
+          "locator": "Review · rounding companion"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "am205-quiz1-gap-at-54"
+      ]
+    },
+    {
+      "id": "am205-quiz1-upper-product",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix operations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why does multiplying two upper-triangular matrices keep zeros below the diagonal?",
+      "body": "",
+      "answer": "For \\(i>j\\), a nonzero term in \\((AB)_{ij}=\\sum_k A_{ik}B_{kj}\\) would need both \\(k\\ge i\\) and \\(k\\le j\\). That is impossible.",
+      "takeaway": "Both triangular patterns rule out every contribution below the diagonal.",
+      "source": "Review · 2.7",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 1,
+          "locator": "Review · 2.7"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-lower-upper-product",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix operations",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "Must a lower-triangular matrix times an upper-triangular matrix be triangular?",
+      "body": "",
+      "answer": "No. For example, \\[\\begin{bmatrix}1&0\\\\1&1\\end{bmatrix}\\begin{bmatrix}1&1\\\\0&1\\end{bmatrix}=\\begin{bmatrix}1&1\\\\1&2\\end{bmatrix}.\\] The product has nonzero entries on both sides of the diagonal.",
+      "takeaway": "Opposite triangular patterns can fill each other’s zeros.",
+      "source": "Review · 2.7 companion · authored example",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 1,
+          "locator": "Review · 2.7 companion · authored example"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-symmetric-product",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix operations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "When is the product of two real symmetric matrices also symmetric?",
+      "body": "",
+      "answer": "Exactly when they commute: \\(AB=BA\\). Since \\((AB)^T=B^TA^T=BA\\), symmetry of each factor alone is not enough.",
+      "takeaway": "Transposing a product reverses its order.",
+      "source": "Review · 2.8",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 1,
+          "locator": "Review · 2.8"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-singular-lu",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "LU factorization",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "Can a singular matrix still have an LU factorization?",
+      "body": "",
+      "answer": "Yes. \\(\\operatorname{diag}(1,0)=I\\operatorname{diag}(1,0)\\) is an LU factorization. Singularity means at least one zero diagonal entry in the triangular factor; it does not prohibit the factorization.",
+      "takeaway": "Having factors does not guarantee that triangular solves are invertible.",
+      "source": "Review · 2.15",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 2,
+          "locator": "Review · 2.15"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-vector-norm-order",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "For \\(x=(1,1)\\), which is largest: its 1-, 2-, or infinity-norm?",
+      "body": "",
+      "answer": "The 1-norm is 2, the 2-norm is \\(\\sqrt2\\), and the infinity-norm is 1. Generally, \\(\\|x\\|_\\infty\\le\\|x\\|_2\\le\\|x\\|_1\\).",
+      "takeaway": "Largest component, Euclidean length, and total absolute size measure different things.",
+      "source": "Review · 2.21 companion",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 2,
+          "locator": "Review · 2.21 companion"
+        },
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q9"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-singular-norm",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "Does a singular matrix have zero matrix norm?",
+      "body": "",
+      "answer": "No. \\(A=\\operatorname{diag}(1,0)\\) is singular but \\(\\|A\\|_2=1\\). Singularity means some direction is destroyed, while the 2-norm measures the largest stretch.",
+      "takeaway": "One collapsed direction does not erase every direction.",
+      "source": "Review · 2.21",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 2,
+          "locator": "Review · 2.21"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-zero-norm",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Can a nonzero matrix have zero 1-, 2-, infinity-, or Frobenius norm?",
+      "body": "",
+      "answer": "No. Each is a norm, and a norm is zero only for the zero matrix. In particular, \\(\\|A\\|_2=0\\) means \\(Ax=0\\) for every unit vector, so every column is zero.",
+      "takeaway": "Zero size is stronger than a zero determinant.",
+      "source": "Review · 2.23 and companions",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 2,
+          "locator": "Review · 2.23 and companions"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-solution-line-proof",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Linear systems",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(Ax_1=Ax_2=b\\), why is every point on their line another solution?",
+      "body": "",
+      "answer": "For any real \\(t\\), \\[A((1-t)x_1+tx_2)=(1-t)b+tb=b.\\] If \\(x_1\\ne x_2\\), varying \\(t\\) gives infinitely many distinct solutions.",
+      "takeaway": "The coefficients add to one, keeping the same right-hand side.",
+      "source": "Review · 2.28 · proof",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 2,
+          "locator": "Review · 2.28 · proof"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-row-permutation",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Linear systems",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If you reorder the rows of both A and b, does the solution change?",
+      "body": "",
+      "answer": "No. \\(PAx=Pb\\) contains the same equations in a different order. Multiplying by \\(P^T=P^{-1}\\) restores \\(Ax=b\\). Reordering A without b generally changes the problem.",
+      "takeaway": "Move each equation together with its right-hand side.",
+      "source": "Review · 2.32(a)",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 2,
+          "locator": "Review · 2.32(a)"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-column-coordinates",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Linear systems",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(Ax=b\\), which vector solves \\(APz=b\\) for a permutation matrix P?",
+      "body": "",
+      "answer": "\\(z=P^Tx\\), because \\(Pz=x\\). Column permutations reorder the unknowns, so the entries must be relabeled when reporting the original solution.",
+      "takeaway": "Columns correspond to variables; rows correspond to equations.",
+      "source": "Review · 2.32(b)",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 2,
+          "locator": "Review · 2.32(b)"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-invertible-left",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Linear systems",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Why does an invertible left multiplier M preserve the solutions of \\(Ax=b\\)?",
+      "body": "",
+      "answer": "\\(Ax=b\\) implies \\(MAx=Mb\\). Conversely, multiply the transformed system by \\(M^{-1}\\). If M is singular, this reverse step fails and information can be lost.",
+      "takeaway": "Reversible equation transformations preserve exactly the same constraints.",
+      "source": "Review · 2.32(c)",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 2,
+          "locator": "Review · 2.32(c)"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-residual-rescale",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Linear-system verification",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Multiply A and b by nonzero \\(\\alpha\\). What changes for a fixed estimate \\(\\hat x\\)?",
+      "body": "",
+      "answer": "The exact solution is unchanged, but the residual becomes \\(r_{\\mathrm{new}}=\\alpha(b-A\\hat x)=\\alpha r\\). Its norm scales by \\(|\\alpha|\\), even though the estimate has not improved.",
+      "takeaway": "Raw residual size depends on the units used for the equations.",
+      "source": "Review · 2.33(a–b)",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 3,
+          "locator": "Review · 2.33(a–b)"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-diagonal-row-scaling",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can scaling individual equations improve conditioning without changing their solution?",
+      "body": "",
+      "answer": "Yes. Let \\(A=\\operatorname{diag}(1,10^{-6})\\) and \\(D=\\operatorname{diag}(1,10^6)\\). Then \\(DA=I\\): its condition number drops from \\(10^6\\) to 1. Use \\(Db\\) too; the exact solution stays the same.",
+      "takeaway": "Relative equation scales affect numerical conditioning.",
+      "source": "Review · 2.34(a–b) · authored example",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 3,
+          "locator": "Review · 2.34(a–b) · authored example"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-scaling-pivot",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Pivoting",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If a first column is \\((2,1)^T\\), can row scaling change the partial pivot?",
+      "body": "",
+      "answer": "Yes. Initially the first row wins. Multiplying row 2 by 3 makes the column \\((2,3)^T\\), so the second row wins. Scale its right-hand side too to preserve the system.",
+      "takeaway": "Pivot choices depend on the magnitudes after scaling.",
+      "source": "Review · 2.34(c) · authored example",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 3,
+          "locator": "Review · 2.34(c) · authored example"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-three-pivots",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Pivoting",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "What are the first pivots with no, partial, and complete pivoting?",
+      "body": "\\[A=\\begin{bmatrix}4&-8&1\\\\6&5&7\\\\0&-10&-3\\end{bmatrix}.\\]",
+      "answer": "No pivoting: 4. Partial pivoting: 6, the largest magnitude in column 1. Complete pivoting: −10, the largest magnitude anywhere in the active matrix.",
+      "takeaway": "The search region determines which entry becomes the pivot.",
+      "source": "Review · 2.39",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 3,
+          "locator": "Review · 2.39"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-outer-association",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Low-rank computation",
+      "kind": "COMPARE",
+      "format": "flashcard",
+      "title": "For dense \\(A\\in\\mathbb R^{n\\times n}\\), why compute \\(x(x^TA)\\) instead of \\((xx^T)A\\)?",
+      "body": "",
+      "answer": "Compute the row \\(x^TA\\) in \\(O(n^2)\\), then its outer product with x in \\(O(n^2)\\). Forming \\(xx^T\\) and using ordinary dense matrix multiplication costs \\(O(n^3)\\). Both expressions give the same matrix in exact arithmetic.",
+      "takeaway": "Choose parentheses that preserve the cheap low-rank structure.",
+      "source": "Review · 2.46",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 3,
+          "locator": "Review · 2.46"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-lp-solve",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Efficient linear solves",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "How do you solve \\(LPx=b\\) when L is invertible lower triangular?",
+      "body": "",
+      "answer": "Solve \\(Ly=b\\) by forward substitution, then set \\(x=P^Ty\\). The intermediate variable is \\(y=Px\\).",
+      "takeaway": "Undo the permutation after the triangular solve.",
+      "source": "Review · 2.49(a)",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 4,
+          "locator": "Review · 2.49(a)"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-pl-solve",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Efficient linear solves",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "How do you solve \\(PLx=b\\) when L is invertible lower triangular?",
+      "body": "",
+      "answer": "First form \\(P^Tb\\), then solve \\(Lx=P^Tb\\) by forward substitution. Here the permutation acts on the output, so undo it on b.",
+      "takeaway": "The factor order tells you where to apply the inverse permutation.",
+      "source": "Review · 2.49(b)",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 4,
+          "locator": "Review · 2.49(b)"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-exact-fit",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "When can least squares make its residual exactly zero?",
+      "body": "",
+      "answer": "Exactly when b lies in the column space of A: some linear combination of A’s columns equals b. Then the minimum of \\(\\|Ax-b\\|_2\\) is zero.",
+      "takeaway": "An exact fit requires the target to be reachable.",
+      "source": "Review · 3.5",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 4,
+          "locator": "Review · 3.5"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-exact-nonunique",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "Does a zero least-squares residual guarantee unique coefficients?",
+      "body": "",
+      "answer": "No. With \\(A=[1\\;1]\\) and \\(b=1\\), every pair satisfying \\(x_1+x_2=1\\) fits exactly. A nonzero null-space direction changes coefficients without changing the fitted value.",
+      "takeaway": "Perfect prediction does not imply identifiable coefficients.",
+      "source": "Review · 3.6 · authored example",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 4,
+          "locator": "Review · 3.6 · authored example"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-reflector-designed",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Householder reflections",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "Does an arbitrary Householder reflection automatically zero the tail of any vector?",
+      "body": "",
+      "answer": "No. Its reflecting direction must be chosen from the vector being reduced. For example, \\(H=\\operatorname{diag}(-1,1)\\) sends \\((1,1)^T\\) to \\((-1,1)^T\\), leaving the second entry nonzero.",
+      "takeaway": "A reflection has the desired zeros only when designed for that target.",
+      "source": "Review · 3.8",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 4,
+          "locator": "Review · 3.8"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-normal-equations",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Why do least-squares coefficients satisfy \\(A^TAx=A^Tb\\)?",
+      "body": "",
+      "answer": "At the minimum, the residual \\(b-Ax\\) is perpendicular to every column of A. Thus \\(A^T(b-Ax)=0\\), giving the normal equations. They hold even when the minimizing coefficients are not unique.",
+      "takeaway": "The leftover error cannot have a component along a direction you can fit.",
+      "source": "Review · 3.14",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 4,
+          "locator": "Review · 3.14"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-normal-condition-one",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "Are normal equations strictly worse conditioned for every full-column-rank A?",
+      "body": "",
+      "answer": "No. \\(\\kappa_2(A^TA)=\\kappa_2(A)^2\\), but when \\(\\kappa_2(A)=1\\), both equal 1. For example, A with orthonormal columns has \\(A^TA=I\\).",
+      "takeaway": "Squaring increases numbers greater than one, not one itself.",
+      "source": "Review · 3.14 · equality case",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 4,
+          "locator": "Review · 3.14 · equality case"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-orthogonal-dot",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Geometry of linear maps",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "How can you check whether two real vectors are perpendicular?",
+      "body": "",
+      "answer": "Compute their dot product: \\(x^Ty=0\\). For example, \\((1,2)^T\\) and \\((2,-1)^T\\) are perpendicular because \\(2-2=0\\).",
+      "takeaway": "Positive and negative contributions cancel exactly.",
+      "source": "Review · 3.19",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 4,
+          "locator": "Review · 3.19"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-orthogonality-not-transitive",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Geometry of linear maps",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "If x is perpendicular to y and y to z, must x be perpendicular to z?",
+      "body": "",
+      "answer": "No. Take \\(x=z=(1,0)^T\\) and \\(y=(0,1)^T\\). Both are perpendicular to y, but \\(x^Tz=1\\).",
+      "takeaway": "Sharing a perpendicular direction does not make two vectors perpendicular.",
+      "source": "Review · 3.20",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 4,
+          "locator": "Review · 3.20"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-orthogonal-norms",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "For a square orthogonal Q, what are its 2-norm, condition number, and Frobenius norm?",
+      "body": "",
+      "answer": "\\(\\|Q\\|_2=1\\), \\(\\kappa_2(Q)=1\\), and \\(\\|Q\\|_F=\\sqrt n\\) for \\(Q\\in\\mathbb R^{n\\times n}\\). Every singular value is 1; the Frobenius norm combines their squares.",
+      "takeaway": "No direction stretches, but the total squared size counts n directions.",
+      "source": "Review · 3.23 and companions",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 5,
+          "locator": "Review · 3.23 and companions"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-orthogonal-example",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Geometry of linear maps",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Is \\(Q=\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}\\) orthogonal?",
+      "body": "",
+      "answer": "Yes. Its columns are perpendicular unit vectors, so \\(Q^TQ=I\\). It rotates every vector by 90 degrees without changing its length.",
+      "takeaway": "Orthogonal columns give a length-preserving coordinate transformation.",
+      "source": "Review · 3.23 · example",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 5,
+          "locator": "Review · 3.23 · example"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-householder-unit",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Householder reflections",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "For nonzero w, what makes \\(H=I-2ww^T\\) orthogonal?",
+      "body": "",
+      "answer": "\\(w^Tw=1\\). Along w, H multiplies by \\(1-2\\|w\\|_2^2\\), which must be −1 for nonzero w. For an unnormalized vector v, use \\(H=I-2vv^T/(v^Tv)\\).",
+      "takeaway": "Normalize the reflecting direction, or divide by its squared length.",
+      "source": "Review · 3.27",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 5,
+          "locator": "Review · 3.27"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-householder-symmetric",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Householder reflections",
+      "kind": "COMPARE",
+      "format": "flashcard",
+      "title": "Does \\(H=I-2ww^T\\) need unit-length w to be symmetric?",
+      "body": "",
+      "answer": "No. \\((ww^T)^T=ww^T\\), so \\(H^T=H\\) for any real w. Unit length is required for this formula to be an orthogonal reflection, not for symmetry.",
+      "takeaway": "Symmetry and length preservation are different properties.",
+      "source": "Review · 3.27 · symmetry",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 5,
+          "locator": "Review · 3.27 · symmetry"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-householder-geometric",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Householder reflections",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "For unit w, which parts of a vector does \\(I-2ww^T\\) change?",
+      "body": "",
+      "answer": "Write \\(x=aw+z\\) with \\(w^Tz=0\\). Then \\(Hx=-aw+z\\): the component along w flips, while every perpendicular component stays fixed.",
+      "takeaway": "A reflection reverses one direction and preserves its perpendicular plane.",
+      "source": "Review · 3.27 · authored companion",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 5,
+          "locator": "Review · 3.27 · authored companion"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-householder-alpha",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Householder reflections",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If an orthogonal Q sends \\((1,1)^T\\) to \\((\\alpha,0)^T\\), what can \\(\\alpha\\) be?",
+      "body": "",
+      "answer": "\\(\\alpha=\\pm\\sqrt2\\). Length preservation fixes \\(|\\alpha|\\), not its sign. Householder QR concentrates a column’s remaining Euclidean length in one entry while zeroing the entries below it.",
+      "takeaway": "The squared length survives even when coordinates disappear.",
+      "source": "Review · 3.28",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 5,
+          "locator": "Review · 3.28"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-singular-condition",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Why is \\(\\kappa_2(A)=\\sigma_{\\max}/\\sigma_{\\min}\\) for invertible A?",
+      "body": "",
+      "answer": "The largest stretch of A is \\(\\sigma_{\\max}\\). The inverse has largest stretch \\(1/\\sigma_{\\min}\\), because it reverses A’s weakest direction. Multiply the two norms.",
+      "takeaway": "Sensitivity compares the strongest and weakest directions.",
+      "source": "Review · 3.43",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 5,
+          "locator": "Review · 3.43"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-reflector-count",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Householder reflections",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "How many Householder reflections suffice to triangularize a square \\(n\\times n\\) matrix?",
+      "body": "",
+      "answer": "At most \\(n-1\\). Each step clears the entries below one diagonal position. The last column has no entries below its diagonal, so it needs no reflection. Some steps can be skipped if the entries are already zero.",
+      "takeaway": "Count tails that need clearing, not columns alone.",
+      "source": "Review · Householder QR",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 5,
+          "locator": "Review · Householder QR"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-svd-solve",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "With reduced SVD \\(A=U_r\\Sigma_rV_r^T\\), how do you get the minimum-norm least-squares solution?",
+      "body": "",
+      "answer": "\\(x=V_r\\Sigma_r^{-1}U_r^Tb\\). Project b onto the nonzero left singular directions, divide by their singular values, then combine the right singular directions. Set null-space coefficients to zero.",
+      "takeaway": "Fit reachable directions and avoid adding invisible coefficient components.",
+      "source": "Review · SVD and least squares",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 6,
+          "locator": "Review · SVD and least squares"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-qr-projector",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If reduced Q has orthonormal columns spanning A’s column space, what does \\(QQ^Tb\\) do?",
+      "body": "",
+      "answer": "It projects b onto the possible fitted vectors. If b is in that space, \\(QQ^Tb=b\\); if b is perpendicular to it, \\(QQ^Tb=0\\). Use reduced Q: a full square orthogonal Q would give \\(QQ^T=I\\).",
+      "takeaway": "Keep only directions the model can express.",
+      "source": "Review · QR and projection",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/quiz1review.pdf",
+          "page": 6,
+          "locator": "Review · QR and projection"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-construct-span",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Geometry of linear maps",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can you build a 2×2 matrix whose columns span \\((1,1)^T\\) but not \\((1,-1)^T\\)?",
+      "body": "",
+      "answer": "Use \\(A=\\begin{bmatrix}1&1\\\\1&1\\end{bmatrix}\\). Every column combination has equal coordinates, so \\((1,1)^T\\) is reachable and \\((1,-1)^T\\) is not.",
+      "takeaway": "Choose columns along the direction you want to keep.",
+      "source": "2023 · Q1",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q1"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-norms-four-five",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can a 2×2 matrix have 2-norm 4 and Frobenius norm 5?",
+      "body": "",
+      "answer": "Yes: \\(A=\\operatorname{diag}(4,3)\\). Its largest singular value is 4, while \\(\\|A\\|_F=\\sqrt{4^2+3^2}=5\\).",
+      "takeaway": "The spectral norm takes the maximum; the Frobenius norm combines all directions.",
+      "source": "2023 · Q4",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q4"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-svd-exists",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does a rectangular or singular real matrix still have an SVD?",
+      "body": "",
+      "answer": "Yes. Every real matrix has \\(A=U\\Sigma V^T\\), with orthogonal factors and nonnegative singular values. Rectangular shape changes dimensions; singularity introduces zero singular values.",
+      "takeaway": "An SVD does not require an inverse.",
+      "source": "2023 · Q5",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q5"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-orthogonal-determinant",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Geometry of linear maps",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "Must an orthogonal matrix have determinant +1?",
+      "body": "",
+      "answer": "No. Taking determinants of \\(Q^TQ=I\\) gives \\((\\det Q)^2=1\\), so \\(\\det Q=\\pm1\\). A reflection such as \\(\\operatorname{diag}(1,-1)\\) has determinant −1.",
+      "takeaway": "Length preservation allows orientation reversal.",
+      "source": "2023 · Q6",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q6"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-product-commutes",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Floating-point arithmetic",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can swapping two finite floating-point factors change their rounded product?",
+      "body": "",
+      "answer": "Under the same IEEE format and rounding mode, no. Both orders round the same exact product. This does not mean regrouping several factors is harmless. Exclude NaNs and changes in evaluation precision.",
+      "takeaway": "A single rounded multiplication remains commutative.",
+      "source": "2023 · Q7",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q7"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-diagonal-orthogonal",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Geometry of linear maps",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "When is a real diagonal matrix orthogonal?",
+      "body": "",
+      "answer": "Exactly when every diagonal entry is +1 or −1. For \\(D=\\operatorname{diag}(d_i)\\), \\(D^TD=\\operatorname{diag}(d_i^2)\\), which equals I only if every \\(d_i^2=1\\).",
+      "takeaway": "Sign flips preserve length; arbitrary scaling does not.",
+      "source": "2023 · Q8",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q8"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-cross-formula",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Low-rank computation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Given a nonzero pivot \\(a_{ij}\\), how do its column and row form a rank-one approximation?",
+      "body": "",
+      "answer": "\\(B=A_{:j}A_{i:}/a_{ij}\\). Dividing by the pivot makes B match both the chosen column and chosen row. Consequently, \\(A-B\\) is zero on that row and column.",
+      "takeaway": "One cross samples a column direction and its row weights.",
+      "source": "2023 · Q10 · rank-one step",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q10 · rank-one step"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-cross-nine",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Low-rank computation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "For this matrix, what rank-one approximation uses the complete pivot 9?",
+      "body": "\\[A=\\begin{bmatrix}1&2&3\\\\4&5&6\\\\7&8&9\\end{bmatrix}.\\]",
+      "answer": "\\[B=\\frac19\\begin{bmatrix}3\\\\6\\\\9\\end{bmatrix}\\begin{bmatrix}7&8&9\\end{bmatrix}=\\begin{bmatrix}7/3&8/3&3\\\\14/3&16/3&6\\\\7&8&9\\end{bmatrix}.\\] It matches the final row and column exactly.",
+      "takeaway": "Divide by the shared entry to avoid counting its scale twice.",
+      "source": "2023 · Q10",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q10"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "am205-quiz1-cross-formula"
+      ]
+    },
+    {
+      "id": "am205-quiz1-six-digits",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "A stable binary64 solve keeps about 6 of 16 digits. What condition-number scale might explain this?",
+      "body": "",
+      "answer": "Roughly \\(10^{10}\\): the rule of thumb is digits lost \\(\\approx\\log_{10}\\kappa(A)\\). This is a worst-case sensitivity estimate, not proof of the exact condition number from one observed error.",
+      "takeaway": "Ten lost digits suggest ten orders of possible amplification.",
+      "source": "2023 · Q12",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 1,
+          "locator": "2023 · Q12"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-rank-storage",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Low-rank computation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "How much storage does \\(A=BC\\) need for a 10000×10000 rank-100 matrix?",
+      "body": "",
+      "answer": "B is 10000×100 and C is 100×10000, so together they store 2,000,000 numbers. A dense A stores 100,000,000: 50 times as many.",
+      "takeaway": "Store the smaller factors when a few directions explain the whole map.",
+      "source": "2023 · Q13",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 2,
+          "locator": "2023 · Q13"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-rank-matvec",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Low-rank computation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "How many multiplications compute \\(Ax\\) using 10000×100 B and 100×10000 C?",
+      "body": "",
+      "answer": "Compute \\(y=Cx\\), then \\(By\\). Each stage takes 1,000,000 multiplications, totaling 2,000,000, versus 100,000,000 for dense A. Do not form BC first.",
+      "takeaway": "Keep the intermediate vector in the small 100-dimensional space.",
+      "source": "2023 · Q14",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 2,
+          "locator": "2023 · Q14"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-rank-ball",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Geometry of linear maps",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "What does a rank-100 map in \\(\\mathbb R^{10000}\\) do to the unit ball?",
+      "body": "",
+      "answer": "It produces a bounded ellipsoid lying in a 100-dimensional column space. Its nonzero singular values are the semiaxis lengths. The image is not the entire subspace: input lengths are bounded.",
+      "takeaway": "Rank counts surviving directions, while the unit-ball constraint bounds their extent.",
+      "source": "2023 · Q15",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 2,
+          "locator": "2023 · Q15"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-same-fit",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "For full-column-rank A, when do two targets give the same least-squares coefficients?",
+      "body": "",
+      "answer": "When \\(A^T(b_1-b_2)=0\\): their difference is perpendicular to A’s column space. Equivalently, their projections onto the possible fitted vectors are equal.",
+      "takeaway": "Changing only the unfit part of the data leaves coefficients unchanged.",
+      "source": "2023 · Q16",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 2,
+          "locator": "2023 · Q16"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-householder-proof",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Householder reflections",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "For unit w, why does \\((I-2ww^T)^T(I-2ww^T)=I\\)?",
+      "body": "",
+      "answer": "Expand: \\[I-4ww^T+4w(w^Tw)w^T.\\] Since \\(w^Tw=1\\), the last two terms cancel. Thus H preserves length; symmetry also gives \\(H^2=I\\).",
+      "takeaway": "Reflecting twice restores the original vector.",
+      "source": "2023 · Q17",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 2,
+          "locator": "2023 · Q17"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "am205-quiz1-householder-unit"
+      ]
+    },
+    {
+      "id": "am205-quiz1-svd-normalize",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "To convert orthogonal columns into SVD columns, what must you do first?",
+      "body": "",
+      "answer": "Normalize them and absorb their lengths into the middle scaling. For \\(C=[(1,0,1)^T\\;(0,1,0)^T]\\), the column lengths are \\(\\sqrt2\\) and 1. Orthogonal is not the same as orthonormal.",
+      "takeaway": "Singular vectors have unit length; singular values carry the stretching.",
+      "source": "2023 · Q18 · normalize factors",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 2,
+          "locator": "2023 · Q18 · normalize factors"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-svd-factor-example",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "What are the singular values of \\(A=\\begin{bmatrix}1&1\\\\-1&1\\\\1&1\\end{bmatrix}\\)?",
+      "body": "",
+      "answer": "\\(A^TA=\\begin{bmatrix}3&1\\\\1&3\\end{bmatrix}\\), with eigenvalues 4 and 2. The singular values are their square roots: 2 and \\(\\sqrt2\\).",
+      "takeaway": "The squared stretches appear as eigenvalues of the Gram matrix.",
+      "source": "2023 · Q18 · singular values",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 2,
+          "locator": "2023 · Q18 · singular values"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-svd-factor-vectors",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "For the displayed A, if \\(v_1=(1,1)^T/\\sqrt2\\), what is its matching left singular vector?",
+      "body": "\\[A=\\begin{bmatrix}1&1\\\\-1&1\\\\1&1\\end{bmatrix}.\\]",
+      "answer": "\\(Av_1=(\\sqrt2,0,\\sqrt2)^T\\). Its length is 2, so \\(u_1=Av_1/2=(1,0,1)^T/\\sqrt2\\). Similarly, \\(v_2=(-1,1)^T/\\sqrt2\\) gives \\(u_2=(0,1,0)^T\\) and \\(\\sigma_2=\\sqrt2\\).",
+      "takeaway": "Apply A to a unit input direction, then normalize the output.",
+      "source": "2023 · Q18 · singular vectors",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 2,
+          "locator": "2023 · Q18 · singular vectors"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "am205-quiz1-svd-factor-example"
+      ]
+    },
+    {
+      "id": "am205-quiz1-svd-signs",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can a negative middle factor be left as a negative singular value?",
+      "body": "",
+      "answer": "No. Singular values are nonnegative. Absorb a negative sign into a singular vector instead. Once an SVD is formed, flipping both \\(u_i\\) and \\(v_i\\) leaves \\(\\sigma_i u_iv_i^T\\) unchanged.",
+      "takeaway": "Sign choices belong to directions, not stretch magnitudes.",
+      "source": "2023 · Q18 · sign convention",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns23.pdf",
+          "page": 2,
+          "locator": "2023 · Q18 · sign convention"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-infinity-fit-geometry",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "COMPARE",
+      "format": "flashcard",
+      "title": "Why can the closest fit in infinity-norm differ from the perpendicular Euclidean fit?",
+      "body": "",
+      "answer": "An infinity-norm ball is an axis-aligned square in 2D, while a Euclidean ball is a circle. Expand the appropriate shape around b until it touches the line of possible fits. The first contact can occur at different points.",
+      "takeaway": "Changing the error measure changes which discrepancy matters most.",
+      "source": "2024 · Q2",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 1,
+          "locator": "2024 · Q2"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-infinity-fit-example",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Fit \\(b=(1,0)^T\\) by \\((t,2t)^T\\). Which t minimizes the largest absolute coordinate error?",
+      "body": "",
+      "answer": "\\(t=1/3\\). Balance \\(1-t=2t\\), giving maximum error \\(2/3\\). The residual has equal-magnitude coordinates. This corner-contact geometry explains the 45-degree direction in the quiz figure; it is not universal for every line.",
+      "takeaway": "The best worst-coordinate fit balances the competing errors.",
+      "source": "2024 · Q2 · authored companion",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 1,
+          "locator": "2024 · Q2 · authored companion"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-two-fit-objectives",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "COMPARE",
+      "format": "flashcard",
+      "title": "For the same fit \\((t,2t)^T\\) to \\((1,0)^T\\), what does ordinary least squares choose?",
+      "body": "",
+      "answer": "\\(t=1/5\\), because minimizing \\((t-1)^2+4t^2\\) gives \\(10t-2=0\\). This differs from the infinity-norm optimum \\(1/3\\).",
+      "takeaway": "Least squares balances squared errors; infinity-norm controls the worst coordinate.",
+      "source": "2024 · Q2 · authored companion",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 1,
+          "locator": "2024 · Q2 · authored companion"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-solve-vs-compress",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "COMPARE",
+      "format": "flashcard",
+      "title": "What matrix properties help accurate linear solves versus low-rank compression?",
+      "body": "",
+      "answer": "Solves benefit from a modest condition number and a stable algorithm. Compression benefits from rapidly decaying singular values, so discarded directions contribute little. A large condition number alone does not guarantee a useful low-rank approximation.",
+      "takeaway": "Invertibility needs every direction; compression deliberately discards weak ones.",
+      "source": "2024 · Q3",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 1,
+          "locator": "2024 · Q3"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-condition-not-rank",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "Does \\(A=\\operatorname{diag}(1,\\ldots,1,10^{-12})\\) have a good rank-one approximation?",
+      "body": "",
+      "answer": "Not when there are many unit entries. Its condition number is huge, but dropping to rank one discards many equally strong directions. Only the final direction is tiny.",
+      "takeaway": "A ratio of extremes does not describe the whole singular-value spectrum.",
+      "source": "2024 · Q3 · authored counterexample",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 1,
+          "locator": "2024 · Q3 · authored counterexample"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-flag-rank",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Low-rank approximation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "What is the rank of this cross-shaped matrix?",
+      "body": "\\[A=\\begin{bmatrix}0&1&0\\\\1&1&1\\\\0&1&0\\end{bmatrix}.\\]",
+      "answer": "2. Columns 1 and 3 are identical, giving an upper bound of 2. Columns 1 and 2 are independent, so the rank is at least 2.",
+      "takeaway": "Prove rank with both a construction and an independence check.",
+      "source": "2024 · Q4",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 2,
+          "locator": "2024 · Q4"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-flag-decompose",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Low-rank approximation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "How can two outer products build the displayed cross-shaped matrix?",
+      "body": "\\[A=\\begin{bmatrix}0&1&0\\\\1&1&1\\\\0&1&0\\end{bmatrix}.\\]",
+      "answer": "\\[A=\\begin{bmatrix}0\\\\1\\\\0\\end{bmatrix}\\begin{bmatrix}1&1&1\\end{bmatrix}+\\begin{bmatrix}1\\\\0\\\\1\\end{bmatrix}\\begin{bmatrix}0&1&0\\end{bmatrix}.\\] The first builds the middle row; the second adds the top and bottom of the middle column.",
+      "takeaway": "Avoid double-counting the central pixel.",
+      "source": "2024 · Q4 · rank-one decomposition",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 2,
+          "locator": "2024 · Q4 · rank-one decomposition"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-tall-factor-cost",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Efficient linear solves",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "For dense LU, how does factoring a 2n×n matrix compare with an n×n matrix?",
+      "body": "",
+      "answer": "The leading cost for \\(m\\ge n\\) is \\(mn^2-n^3/3\\). The ratio is \\((2-1/3)/(1-1/3)=5/2\\). Doubling rows while fixing columns is different from doubling both dimensions.",
+      "takeaway": "Elimination work shrinks across successive columns.",
+      "source": "2024 · Q5",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 2,
+          "locator": "2024 · Q5"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-tall-qr-cost",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Efficient linear solves",
+      "kind": "COMPARE",
+      "format": "flashcard",
+      "title": "Does dense Householder QR have the same 2n×n versus n×n cost ratio as LU?",
+      "body": "",
+      "answer": "Yes, to leading order. QR costs \\(2mn^2-2n^3/3\\), twice the corresponding LU formula. That common factor cancels in the ratio, again giving \\(5/2\\).",
+      "takeaway": "Cost ratios depend on shape as well as the factorization.",
+      "source": "2024 · Q5 · QR companion",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 2,
+          "locator": "2024 · Q5 · QR companion"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-product-norm-bound",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Why can \\(\\|AB\\|_2\\) never exceed \\(\\|A\\|_2\\|B\\|_2\\)?",
+      "body": "",
+      "answer": "For every unit x, \\(\\|ABx\\|_2\\le\\|A\\|_2\\|Bx\\|_2\\le\\|A\\|_2\\|B\\|_2\\). Maximize over x. Each stage can stretch by at most its own maximum.",
+      "takeaway": "The maximum combined stretch cannot beat the product of individual maxima.",
+      "source": "2024 · Q6 · bound",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 2,
+          "locator": "2024 · Q6 · bound"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-product-norm-alignment",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "For nonzero A and B, when does \\(\\|AB\\|_2=\\|A\\|_2\\|B\\|_2\\)?",
+      "body": "",
+      "answer": "When some input maximally stretched by B is sent into an input direction maximally stretched by A. Equivalently, B’s top left-singular subspace intersects A’s top right-singular subspace nontrivially. With repeated top singular values, one compatible direction is enough.",
+      "takeaway": "The strongest directions must connect across the two maps.",
+      "source": "2024 · Q6 · equality",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 2,
+          "locator": "2024 · Q6 · equality"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-product-norm-example",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "COMPARE",
+      "format": "flashcard",
+      "title": "For \\(A=\\operatorname{diag}(2,1)\\), which B attains the product-of-norms bound?",
+      "body": "",
+      "answer": "\\(B=\\operatorname{diag}(3,1)\\) gives \\(AB=\\operatorname{diag}(6,1)\\), attaining \\(2\\cdot3=6\\). With \\(B=\\operatorname{diag}(1,3)\\), the product is \\(\\operatorname{diag}(2,3)\\), whose norm is only 3.",
+      "takeaway": "Strong stretches reinforce each other only when their directions line up.",
+      "source": "2024 · Q6 · authored companion",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns24.pdf",
+          "page": 2,
+          "locator": "2024 · Q6 · authored companion"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-rounded-gram",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Floating-point arithmetic",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can a computed \\(A^TA\\) be symmetric even when its entries have rounding error?",
+      "body": "",
+      "answer": "Yes. Paired entries use the same products in reverse operand order. If both dot products use identical summation order, precision, and rounding, their results agree. Different reduction orders can break exact symmetry; do not assume it for every implementation.",
+      "takeaway": "Rounding error and loss of symmetry are separate questions.",
+      "source": "2025 · Q1",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 1,
+          "locator": "2025 · Q1"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-similarity-zeros",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Householder reflections",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "In the first symmetric Householder step on a 5×5 matrix, which entries are deliberately zeroed?",
+      "body": "",
+      "answer": "Entries \\((3,1),(4,1),(5,1)\\) and their symmetric partners \\((1,3),(1,4),(1,5)\\). The first subdiagonal entry is retained. Two-sided updates preserve symmetry while moving toward tridiagonal form.",
+      "takeaway": "Symmetric reduction clears beyond the first off-diagonal, not every off-diagonal entry.",
+      "source": "2025 · Q2 · zero pattern",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 1,
+          "locator": "2025 · Q2 · zero pattern"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-similarity-fixed",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Householder reflections",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "With \\(H=\\operatorname{diag}(1,\\widetilde H)\\), which entry of \\(H^TAH\\) is guaranteed to equal A’s?",
+      "body": "",
+      "answer": "The top-left entry: \\(e_1^TH^TAHe_1=e_1^TAe_1=A_{11}\\), because \\(He_1=e_1\\). Other entries may coincide for special A, but are not generally fixed.",
+      "takeaway": "Leaving the first basis vector unchanged protects its quadratic-form value.",
+      "source": "2025 · Q2 · unchanged entry",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 1,
+          "locator": "2025 · Q2 · unchanged entry"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-similarity-spectrum",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Householder reflections",
+      "kind": "COMPARE",
+      "format": "flashcard",
+      "title": "Why use \\(H^TAH\\) rather than only \\(HA\\) in symmetric eigenvalue reduction?",
+      "body": "",
+      "answer": "For orthogonal H, \\(H^T=H^{-1}\\), so the two-sided update is a similarity transformation. It preserves eigenvalues and, for symmetric A, symmetry. A one-sided QR update need not preserve A’s eigenvalues.",
+      "takeaway": "Change coordinates on both sides to represent the same linear map.",
+      "source": "2025 · Q2 · authored companion",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 1,
+          "locator": "2025 · Q2 · authored companion"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-symmetric-not-spd",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Structured factorizations",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "Does forming \\(A+A^T\\) guarantee that Cholesky can be used?",
+      "body": "",
+      "answer": "No. It guarantees symmetry, not positive definiteness. For \\(A=-I\\), the sum is \\(-2I\\), which is negative definite. Standard real Cholesky needs a symmetric positive-definite matrix.",
+      "takeaway": "Check the sign of quadratic forms before choosing Cholesky.",
+      "source": "2025 · Q3",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 1,
+          "locator": "2025 · Q3"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-cholesky-work",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Structured factorizations",
+      "kind": "COMPARE",
+      "format": "flashcard",
+      "title": "When Cholesky applies, how does its dense factorization cost compare with LU?",
+      "body": "",
+      "answer": "Cholesky takes about \\(n^3/3\\) floating-point operations, versus \\(2n^3/3\\) for general LU. Its symmetry lets it do roughly half the leading work.",
+      "takeaway": "Structure saves work only when the required assumptions hold.",
+      "source": "2025 · Q3 · operation counts",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 1,
+          "locator": "2025 · Q3 · operation counts"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-cross-two",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Low-rank approximation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Using pivot 2, what rank-one approximation does this matrix produce?",
+      "body": "\\[A=\\begin{bmatrix}1&1&1&1\\\\1&1&1&1\\\\1&1&1&2\\end{bmatrix}.\\]",
+      "answer": "\\[B=\\begin{bmatrix}1/2&1/2&1/2&1\\\\1/2&1/2&1/2&1\\\\1&1&1&2\\end{bmatrix}.\\] It is column 4 times row 3, divided by the pivot 2.",
+      "takeaway": "The chosen row and column are matched exactly.",
+      "source": "2025 · Q4 · complete-pivot approximation",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 2,
+          "locator": "2025 · Q4 · complete-pivot approximation"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "am205-quiz1-cross-formula"
+      ]
+    },
+    {
+      "id": "am205-quiz1-cross-two-error",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Low-rank approximation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "A rank-one residual has six entries equal to 1/2 and every other entry zero. What is its Frobenius norm?",
+      "body": "",
+      "answer": "\\(\\sqrt{6(1/2)^2}=\\sqrt{3/2}\\). Square each entry, sum them, then take the square root. This is the error of the quiz’s one-step complete-pivot approximation.",
+      "takeaway": "Frobenius error combines entrywise errors in quadrature.",
+      "source": "2025 · Q4 · Frobenius error",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 2,
+          "locator": "2025 · Q4 · Frobenius error"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-fit-contraction",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "For fixed full-column-rank A, can a target perturbation of length \\(\\varepsilon\\) move its least-squares fit farther than \\(\\varepsilon\\)?",
+      "body": "",
+      "answer": "No. The fitted-vector change is \\(\\delta\\hat b=P\\delta b\\), with \\(P=QQ^T\\). Orthogonal projection cannot increase Euclidean length, so \\(\\|\\delta\\hat b\\|_2\\le\\varepsilon\\).",
+      "takeaway": "Discarding the perpendicular component cannot enlarge a vector.",
+      "source": "2025 · Q5 · prediction sensitivity",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 2,
+          "locator": "2025 · Q5 · prediction sensitivity"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-coefficient-sensitivity",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "COMPARE",
+      "format": "flashcard",
+      "title": "Can least-squares coefficients change greatly even when the fitted vector barely changes?",
+      "body": "",
+      "answer": "Yes. \\(\\delta x=A^+\\delta b\\), so \\(\\|\\delta x\\|_2\\le\\|\\delta b\\|_2/\\sigma_{\\min}(A)\\). A tiny smallest singular value allows large coefficient changes, while the fitted-vector change remains bounded by \\(\\|\\delta b\\|_2\\).",
+      "takeaway": "Large, canceling coefficient changes can have small prediction effects.",
+      "source": "2025 · Q5 · coefficient sensitivity",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 2,
+          "locator": "2025 · Q5 · coefficient sensitivity"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-worst-target-direction",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Least-squares algorithms",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Which target perturbation maximizes coefficient change in full-column-rank least squares?",
+      "body": "",
+      "answer": "\\(\\delta b=\\varepsilon u_{\\min}\\), along the weakest left singular direction. Then \\(\\delta x=(\\varepsilon/\\sigma_{\\min})v_{\\min}\\). A perturbation perpendicular to the column space instead changes no coefficient.",
+      "takeaway": "Noise matters most when it points along the model’s weakest identifiable direction.",
+      "source": "2025 · Q5 · equality direction",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 2,
+          "locator": "2025 · Q5 · equality direction"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-product-condition-bound",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "For invertible square A and B, why is \\(\\kappa_2(AB)\\le\\kappa_2(A)\\kappa_2(B)\\)?",
+      "body": "",
+      "answer": "Bound \\(\\|AB\\|_2\\) by \\(\\|A\\|_2\\|B\\|_2\\), and \\(\\|(AB)^{-1}\\|_2=\\|B^{-1}A^{-1}\\|_2\\) by \\(\\|B^{-1}\\|_2\\|A^{-1}\\|_2\\). Multiply the bounds.",
+      "takeaway": "Both the forward map and its inverse contribute to sensitivity.",
+      "source": "2025 · Q6 · product bound",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 2,
+          "locator": "2025 · Q6 · product bound"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-product-condition-four",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(\\|A\\|_2=\\|B\\|_2=1\\) and both condition numbers are 2, how large can \\(\\kappa_2(AB)\\) be?",
+      "body": "",
+      "answer": "At most 4, and 4 is attainable. Take \\(A=B=\\operatorname{diag}(1,1/2)\\); then \\(AB=\\operatorname{diag}(1,1/4)\\), whose condition number is 4.",
+      "takeaway": "Aligned weak directions compound the loss of relative scale.",
+      "source": "2025 · Q6 · product construction",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 2,
+          "locator": "2025 · Q6 · product construction"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "am205-quiz1-sum-condition-unbounded",
+      "course": "AM 205",
+      "school": "Harvard",
+      "topic": "Matrix conditioning",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "If A and B each have norm 1 and condition number 2, must A+B be well-conditioned?",
+      "body": "",
+      "answer": "No. Choose \\(A=\\operatorname{diag}(1,1/2)\\) and \\(B=\\operatorname{diag}(1,-1/2)\\). Each has condition number 2, but \\(A+B=\\operatorname{diag}(2,0)\\) is singular. There is no analogous finite bound for the sum.",
+      "takeaway": "Adding two reliable maps can cancel an entire direction.",
+      "source": "2025 · Q6 · sum counterexample",
+      "sources": [
+        {
+          "path": "courses/harvard/am205/quiz/quiz1/solns25.pdf",
+          "page": 2,
+          "locator": "2025 · Q6 · sum counterexample"
+        }
+      ],
+      "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
     }
   ]
 }

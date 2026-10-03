@@ -23,7 +23,7 @@ Retain IDs when rewriting the same concept so review history and bookmarks survi
 
 - AM 209a: lectures 1–8 from the user-supplied COMPSCI 1090A Ed course, including 17 core PDF decks. The course uses the user’s AM 209a label. See [AM209A_COVERAGE.md](AM209A_COVERAGE.md) for lecture counts, source links, exclusions, and mathematical clarifications.
 
-- AM 205: PS1–2 and supporting Heath chapter 1–2 concepts; selected chapter 3 material supports the assigned least-squares work.
+- AM 205: PS1–2, the October 2026 Quiz 1 review, and 2023–2025 Quiz 1 solutions. Supporting Heath chapters 1–3 stay tied to this scope. See [AM205_QUIZ1_COVERAGE.md](AM205_QUIZ1_COVERAGE.md) for the question-level quiz ledger.
 - AM 207: HW1–2 and conceptual material in lectures 01–06. Historical anecdotes and application showcase slides are context, not invented exam requirements.
 - STAT 244: HW1–2 and all three uploaded lecture-note sets: linear algebra, least-squares theory, and inference, including regression diagnostics. The newer request for all necessary lecture material expands the earlier HW2 boundary.
 

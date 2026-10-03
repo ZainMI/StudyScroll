@@ -1,8 +1,8 @@
 # StudyScroll: master feed
 
-Updated 2026-10-01. 1216 curated cards.
+Updated 2026-10-03. 1299 curated cards.
 
-Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2 and supporting material. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. UBuffalo International Finance covers the supplied Chapters 1–5 slides and Chapter 2–4 homework; source inconsistencies and exact/approximate conventions are documented in INTERNATIONAL_FINANCE_COVERAGE.md.
+Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2, the October 2026 Quiz 1 review, and 2023–2025 Quiz 1 solutions with supporting concepts. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. UBuffalo International Finance covers the supplied Chapters 1–5 slides and Chapter 2–4 homework; source inconsistencies and exact/approximate conventions are documented in INTERNATIONAL_FINANCE_COVERAGE.md.
 
 The editable source of truth is [master-feed.json](master-feed.json). This readable document is generated with `npm run feed:build`. Edit the JSON, then regenerate; the Next app imports that same JSON directly.
 
@@ -11,7 +11,7 @@ These are authored learning prompts derived from the listed materials, not quota
 ## Course map
 
 - **UBuffalo — International Finance:** Chapters 1–5 and Chapter 2–4 homework: national accounts, balance of payments, currency returns, money markets, PPP, and real exchange rates. See [INTERNATIONAL_FINANCE_COVERAGE.md](INTERNATIONAL_FINANCE_COVERAGE.md).
-- **AM 205:** floating-point spacing, rounding, matrix operations, linear-map geometry, pivoting, low-rank approximation, algebraic least squares.
+- **AM 205:** floating-point spacing, rounding, matrix operations, linear-map geometry, pivoting, low-rank approximation, algebraic least squares, and Quiz 1 review/practice (2023–2025). See [AM205_QUIZ1_COVERAGE.md](AM205_QUIZ1_COVERAGE.md).
 - **AM 207:** probability foundations, inverse transforms, Monte Carlo, Metropolis–Hastings, Markov dynamics, jump processes, SSA, tau leaping, and Bayesian uncertainty.
 - **STAT 244:** linear algebra, estimability, projections, contrast coding, least squares and GLS, inference, multicollinearity, PCR/PLS, and regression diagnostics.
 - **AM 209a:** lectures 1–8 from the supplied COMPSCI 1090A course: data preparation, visualization, kNN, regression, cross-validation, ridge/lasso, and bootstrap inference. See [AM209A_COVERAGE.md](AM209A_COVERAGE.md).
@@ -51,7 +51,7 @@ No. In binary64, the gap below 2 is \(2^{-52}\); above it, \(2^{-51}\). Crossing
 
 </details>
 
-Sources: [PS1 · Q1(a)](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(a)](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [Review · 1.8 · nonuniform spacing](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
 
 Card ID: `am205-binade-boundary`
 
@@ -108,7 +108,7 @@ The gap there is 2, so the exact answer is halfway between neighbors. Ties-to-ev
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61); [2024 · Q1](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
 
 Card ID: `am205-largest-consecutive-integers`
 
@@ -374,7 +374,7 @@ Card ID: `am205-rank-collapse`
 
 </details>
 
-Sources: [PS1 · Q4](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q4](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [Review · 3.26](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
 
 Card ID: `am205-orthogonal-map`
 
@@ -412,7 +412,7 @@ No. \(\begin{bmatrix}0&1\\1&0\end{bmatrix}\) is invertible. Swapping rows makes 
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113); [Review · 2.14](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [2023 · Q2](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
 
 Card ID: `am205-zero-pivot-nonsingular`
 
@@ -963,7 +963,7 @@ Yes. In binary64, \((10^{16}-10^{16})+1\) gives 1, while \(10^{16}+(-10^{16}+1)\
 
 </details>
 
-Sources: [Heath · Ch. 1 review · floating-point properties](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60)
+Sources: [Heath · Ch. 1 review · floating-point properties](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60); [Review · 1.9 · associativity](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
 
 Card ID: `am205-associative`
 
@@ -1020,7 +1020,7 @@ Yes. For \(A=10^{-10}I\), \(\det (A)\) is tiny but \(\kappa _{2}(A)=1\). All dir
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 95](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review, printed p. 95](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116); [2023 · Q3](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
 
 Card ID: `am205-condition-scale`
 
@@ -1115,7 +1115,7 @@ No. Every point on the line through two distinct solutions is also a solution.
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 93](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
+Sources: [Heath · Ch. 2 review, printed p. 93](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114); [Review · 2.28](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
 
 Card ID: `am205-two-solutions`
 
@@ -1381,7 +1381,7 @@ For full-column-rank X, \(\kappa _{2}(X^{\mathsf{T}}X)=\kappa _{2}(X)^{2}\). For
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134); [Review · 3.14 · conditioning](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
 
 Card ID: `am205-normal-squared`
 
@@ -1400,7 +1400,7 @@ Card ID: `am205-normal-squared`
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134); [Review · QR and least squares](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=6)
 
 Card ID: `am205-qr-reduction`
 
@@ -1419,7 +1419,7 @@ It has the smallest Euclidean coefficient norm. Adding a null-space vector keeps
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134); [Review · SVD minimum norm](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=6)
 
 Card ID: `am205-svd-minimum-norm`
 
@@ -1438,7 +1438,7 @@ No. Both lie in [64,128), so both have gap \(2^{-46}\).
 
 </details>
 
-Sources: [PS1 · Q1(a) · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q1(a) · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [2023 · Q11](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
 
 Card ID: `am205-spacing-at-100`
 
@@ -1514,7 +1514,7 @@ No. In \([2^{53},2^{54})\), every even integer is representable. The odd integer
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61); [2024 · Q1](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
 
 Card ID: `am205-even-large`
 
@@ -2445,7 +2445,7 @@ Multiplying A and b by a tiny scalar makes the raw residual tiny without improvi
 
 </details>
 
-Sources: [Heath · §2.3.5, printed p. 61 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82)
+Sources: [Heath · §2.3.5, printed p. 61 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82); [Review · 2.33(c)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3)
 
 Card ID: `am205-scaled-residual`
 
@@ -2578,7 +2578,7 @@ Yes. \(\operatorname{diag}(1,10^{-12})\) is positive definite but has condition 
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 95 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review, printed p. 95 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116); [Review · 2.17](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
 
 Card ID: `am205-spd-sensitive`
 
@@ -23352,3 +23352,1592 @@ Real rates are approximately 3% and 2%, so real parity implies 1% expected domes
 Sources: [Chapter 5 · PDF page 47](../courses/ubuffalo/international-finance/IF_ch05%20-%20Tagged.pdf#page=47)
 
 Card ID: `ub-if-real-parity-example`
+
+---
+
+### 1217. If 1 and 3 are exact machine numbers, must their quotient be exact?
+
+**AM 205 · Floating-point arithmetic · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. \(1/3\) has a repeating binary expansion, so it must be rounded. Exactly stored inputs do not guarantee an exactly representable result.
+
+**Intuition:** Input accuracy and arithmetic rounding are separate issues.
+
+</details>
+
+Sources: [Review · 1.7](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+
+Card ID: `am205-quiz1-exact-operands`
+
+---
+
+### 1218. Does rounding make swapping two finite operands change their sum?
+
+**AM 205 · Floating-point arithmetic · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+With the same IEEE format and rounding mode, no: \(a+b\) and \(b+a\) round the same exact sum. Regrouping three terms can change intermediate rounding. Exclude NaNs and changes in evaluation precision.
+
+**Intuition:** Swapping two operands differs from regrouping a longer calculation.
+
+</details>
+
+Sources: [Review · 1.9 · commutativity](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+
+Card ID: `am205-quiz1-commutative-rounding`
+
+---
+
+### 1219. How far apart are binary64 numbers between \(2^{54}\) and \(2^{55}\)?
+
+**AM 205 · Floating-point arithmetic · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The gaps within this interval are \(2^{54-52}=4\). The gap immediately above \(2^{55}\) is 8. Binary64 has 53 significant binary bits.
+
+**Intuition:** One power-of-two interval has one spacing; the next doubles it.
+
+</details>
+
+Sources: [Review · spacing companion](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+
+Card ID: `am205-quiz1-gap-at-54`
+
+---
+
+### 1220. What does binary64 compute for \(2^{54}+1\) with nearest rounding?
+
+**AM 205 · Floating-point arithmetic · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(2^{54}\). The neighboring machine numbers are \(2^{54}\) and \(2^{54}+4\); the exact result is closer to the first. This is not a halfway tie.
+
+**Intuition:** Compare the increment with the local gap.
+
+</details>
+
+Sources: [Review · rounding companion](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+
+Card ID: `am205-quiz1-round-at-54`
+
+---
+
+### 1221. Why does multiplying two upper-triangular matrices keep zeros below the diagonal?
+
+**AM 205 · Matrix operations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For \(i>j\), a nonzero term in \((AB)_{ij}=\sum_k A_{ik}B_{kj}\) would need both \(k\ge i\) and \(k\le j\). That is impossible.
+
+**Intuition:** Both triangular patterns rule out every contribution below the diagonal.
+
+</details>
+
+Sources: [Review · 2.7](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+
+Card ID: `am205-quiz1-upper-product`
+
+---
+
+### 1222. Must a lower-triangular matrix times an upper-triangular matrix be triangular?
+
+**AM 205 · Matrix operations · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. For example, \[\begin{bmatrix}1&0\\1&1\end{bmatrix}\begin{bmatrix}1&1\\0&1\end{bmatrix}=\begin{bmatrix}1&1\\1&2\end{bmatrix}.\] The product has nonzero entries on both sides of the diagonal.
+
+**Intuition:** Opposite triangular patterns can fill each other’s zeros.
+
+</details>
+
+Sources: [Review · 2.7 companion · authored example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+
+Card ID: `am205-quiz1-lower-upper-product`
+
+---
+
+### 1223. When is the product of two real symmetric matrices also symmetric?
+
+**AM 205 · Matrix operations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Exactly when they commute: \(AB=BA\). Since \((AB)^T=B^TA^T=BA\), symmetry of each factor alone is not enough.
+
+**Intuition:** Transposing a product reverses its order.
+
+</details>
+
+Sources: [Review · 2.8](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+
+Card ID: `am205-quiz1-symmetric-product`
+
+---
+
+### 1224. Can a singular matrix still have an LU factorization?
+
+**AM 205 · LU factorization · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. \(\operatorname{diag}(1,0)=I\operatorname{diag}(1,0)\) is an LU factorization. Singularity means at least one zero diagonal entry in the triangular factor; it does not prohibit the factorization.
+
+**Intuition:** Having factors does not guarantee that triangular solves are invertible.
+
+</details>
+
+Sources: [Review · 2.15](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+
+Card ID: `am205-quiz1-singular-lu`
+
+---
+
+### 1225. For \(x=(1,1)\), which is largest: its 1-, 2-, or infinity-norm?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The 1-norm is 2, the 2-norm is \(\sqrt2\), and the infinity-norm is 1. Generally, \(\|x\|_\infty\le\|x\|_2\le\|x\|_1\).
+
+**Intuition:** Largest component, Euclidean length, and total absolute size measure different things.
+
+</details>
+
+Sources: [Review · 2.21 companion](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [2023 · Q9](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+
+Card ID: `am205-quiz1-vector-norm-order`
+
+---
+
+### 1226. Does a singular matrix have zero matrix norm?
+
+**AM 205 · Matrix conditioning · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. \(A=\operatorname{diag}(1,0)\) is singular but \(\|A\|_2=1\). Singularity means some direction is destroyed, while the 2-norm measures the largest stretch.
+
+**Intuition:** One collapsed direction does not erase every direction.
+
+</details>
+
+Sources: [Review · 2.21](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+
+Card ID: `am205-quiz1-singular-norm`
+
+---
+
+### 1227. Can a nonzero matrix have zero 1-, 2-, infinity-, or Frobenius norm?
+
+**AM 205 · Matrix conditioning · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Each is a norm, and a norm is zero only for the zero matrix. In particular, \(\|A\|_2=0\) means \(Ax=0\) for every unit vector, so every column is zero.
+
+**Intuition:** Zero size is stronger than a zero determinant.
+
+</details>
+
+Sources: [Review · 2.23 and companions](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+
+Card ID: `am205-quiz1-zero-norm`
+
+---
+
+### 1228. If \(Ax_1=Ax_2=b\), why is every point on their line another solution?
+
+**AM 205 · Linear systems · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For any real \(t\), \[A((1-t)x_1+tx_2)=(1-t)b+tb=b.\] If \(x_1\ne x_2\), varying \(t\) gives infinitely many distinct solutions.
+
+**Intuition:** The coefficients add to one, keeping the same right-hand side.
+
+</details>
+
+Sources: [Review · 2.28 · proof](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+
+Card ID: `am205-quiz1-solution-line-proof`
+
+---
+
+### 1229. If you reorder the rows of both A and b, does the solution change?
+
+**AM 205 · Linear systems · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. \(PAx=Pb\) contains the same equations in a different order. Multiplying by \(P^T=P^{-1}\) restores \(Ax=b\). Reordering A without b generally changes the problem.
+
+**Intuition:** Move each equation together with its right-hand side.
+
+</details>
+
+Sources: [Review · 2.32(a)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+
+Card ID: `am205-quiz1-row-permutation`
+
+---
+
+### 1230. If \(Ax=b\), which vector solves \(APz=b\) for a permutation matrix P?
+
+**AM 205 · Linear systems · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(z=P^Tx\), because \(Pz=x\). Column permutations reorder the unknowns, so the entries must be relabeled when reporting the original solution.
+
+**Intuition:** Columns correspond to variables; rows correspond to equations.
+
+</details>
+
+Sources: [Review · 2.32(b)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+
+Card ID: `am205-quiz1-column-coordinates`
+
+---
+
+### 1231. Why does an invertible left multiplier M preserve the solutions of \(Ax=b\)?
+
+**AM 205 · Linear systems · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(Ax=b\) implies \(MAx=Mb\). Conversely, multiply the transformed system by \(M^{-1}\). If M is singular, this reverse step fails and information can be lost.
+
+**Intuition:** Reversible equation transformations preserve exactly the same constraints.
+
+</details>
+
+Sources: [Review · 2.32(c)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+
+Card ID: `am205-quiz1-invertible-left`
+
+---
+
+### 1232. Multiply A and b by nonzero \(\alpha\). What changes for a fixed estimate \(\hat x\)?
+
+**AM 205 · Linear-system verification · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The exact solution is unchanged, but the residual becomes \(r_{\mathrm{new}}=\alpha(b-A\hat x)=\alpha r\). Its norm scales by \(|\alpha|\), even though the estimate has not improved.
+
+**Intuition:** Raw residual size depends on the units used for the equations.
+
+</details>
+
+Sources: [Review · 2.33(a–b)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3)
+
+Card ID: `am205-quiz1-residual-rescale`
+
+---
+
+### 1233. Can scaling individual equations improve conditioning without changing their solution?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. Let \(A=\operatorname{diag}(1,10^{-6})\) and \(D=\operatorname{diag}(1,10^6)\). Then \(DA=I\): its condition number drops from \(10^6\) to 1. Use \(Db\) too; the exact solution stays the same.
+
+**Intuition:** Relative equation scales affect numerical conditioning.
+
+</details>
+
+Sources: [Review · 2.34(a–b) · authored example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3)
+
+Card ID: `am205-quiz1-diagonal-row-scaling`
+
+---
+
+### 1234. If a first column is \((2,1)^T\), can row scaling change the partial pivot?
+
+**AM 205 · Pivoting · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. Initially the first row wins. Multiplying row 2 by 3 makes the column \((2,3)^T\), so the second row wins. Scale its right-hand side too to preserve the system.
+
+**Intuition:** Pivot choices depend on the magnitudes after scaling.
+
+</details>
+
+Sources: [Review · 2.34(c) · authored example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3)
+
+Card ID: `am205-quiz1-scaling-pivot`
+
+---
+
+### 1235. What are the first pivots with no, partial, and complete pivoting?
+
+**AM 205 · Pivoting · PREDICT**
+
+\[A=\begin{bmatrix}4&-8&1\\6&5&7\\0&-10&-3\end{bmatrix}.\]
+
+<details>
+<summary>Reveal explanation</summary>
+
+No pivoting: 4. Partial pivoting: 6, the largest magnitude in column 1. Complete pivoting: −10, the largest magnitude anywhere in the active matrix.
+
+**Intuition:** The search region determines which entry becomes the pivot.
+
+</details>
+
+Sources: [Review · 2.39](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3)
+
+Card ID: `am205-quiz1-three-pivots`
+
+---
+
+### 1236. For dense \(A\in\mathbb R^{n\times n}\), why compute \(x(x^TA)\) instead of \((xx^T)A\)?
+
+**AM 205 · Low-rank computation · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Compute the row \(x^TA\) in \(O(n^2)\), then its outer product with x in \(O(n^2)\). Forming \(xx^T\) and using ordinary dense matrix multiplication costs \(O(n^3)\). Both expressions give the same matrix in exact arithmetic.
+
+**Intuition:** Choose parentheses that preserve the cheap low-rank structure.
+
+</details>
+
+Sources: [Review · 2.46](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3)
+
+Card ID: `am205-quiz1-outer-association`
+
+---
+
+### 1237. How do you solve \(LPx=b\) when L is invertible lower triangular?
+
+**AM 205 · Efficient linear solves · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Solve \(Ly=b\) by forward substitution, then set \(x=P^Ty\). The intermediate variable is \(y=Px\).
+
+**Intuition:** Undo the permutation after the triangular solve.
+
+</details>
+
+Sources: [Review · 2.49(a)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+
+Card ID: `am205-quiz1-lp-solve`
+
+---
+
+### 1238. How do you solve \(PLx=b\) when L is invertible lower triangular?
+
+**AM 205 · Efficient linear solves · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+First form \(P^Tb\), then solve \(Lx=P^Tb\) by forward substitution. Here the permutation acts on the output, so undo it on b.
+
+**Intuition:** The factor order tells you where to apply the inverse permutation.
+
+</details>
+
+Sources: [Review · 2.49(b)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+
+Card ID: `am205-quiz1-pl-solve`
+
+---
+
+### 1239. When can least squares make its residual exactly zero?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Exactly when b lies in the column space of A: some linear combination of A’s columns equals b. Then the minimum of \(\|Ax-b\|_2\) is zero.
+
+**Intuition:** An exact fit requires the target to be reachable.
+
+</details>
+
+Sources: [Review · 3.5](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+
+Card ID: `am205-quiz1-exact-fit`
+
+---
+
+### 1240. Does a zero least-squares residual guarantee unique coefficients?
+
+**AM 205 · Least-squares algorithms · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. With \(A=[1\;1]\) and \(b=1\), every pair satisfying \(x_1+x_2=1\) fits exactly. A nonzero null-space direction changes coefficients without changing the fitted value.
+
+**Intuition:** Perfect prediction does not imply identifiable coefficients.
+
+</details>
+
+Sources: [Review · 3.6 · authored example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+
+Card ID: `am205-quiz1-exact-nonunique`
+
+---
+
+### 1241. Does an arbitrary Householder reflection automatically zero the tail of any vector?
+
+**AM 205 · Householder reflections · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Its reflecting direction must be chosen from the vector being reduced. For example, \(H=\operatorname{diag}(-1,1)\) sends \((1,1)^T\) to \((-1,1)^T\), leaving the second entry nonzero.
+
+**Intuition:** A reflection has the desired zeros only when designed for that target.
+
+</details>
+
+Sources: [Review · 3.8](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+
+Card ID: `am205-quiz1-reflector-designed`
+
+---
+
+### 1242. Why do least-squares coefficients satisfy \(A^TAx=A^Tb\)?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+At the minimum, the residual \(b-Ax\) is perpendicular to every column of A. Thus \(A^T(b-Ax)=0\), giving the normal equations. They hold even when the minimizing coefficients are not unique.
+
+**Intuition:** The leftover error cannot have a component along a direction you can fit.
+
+</details>
+
+Sources: [Review · 3.14](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+
+Card ID: `am205-quiz1-normal-equations`
+
+---
+
+### 1243. Are normal equations strictly worse conditioned for every full-column-rank A?
+
+**AM 205 · Least-squares algorithms · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. \(\kappa_2(A^TA)=\kappa_2(A)^2\), but when \(\kappa_2(A)=1\), both equal 1. For example, A with orthonormal columns has \(A^TA=I\).
+
+**Intuition:** Squaring increases numbers greater than one, not one itself.
+
+</details>
+
+Sources: [Review · 3.14 · equality case](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+
+Card ID: `am205-quiz1-normal-condition-one`
+
+---
+
+### 1244. How can you check whether two real vectors are perpendicular?
+
+**AM 205 · Geometry of linear maps · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Compute their dot product: \(x^Ty=0\). For example, \((1,2)^T\) and \((2,-1)^T\) are perpendicular because \(2-2=0\).
+
+**Intuition:** Positive and negative contributions cancel exactly.
+
+</details>
+
+Sources: [Review · 3.19](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+
+Card ID: `am205-quiz1-orthogonal-dot`
+
+---
+
+### 1245. If x is perpendicular to y and y to z, must x be perpendicular to z?
+
+**AM 205 · Geometry of linear maps · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Take \(x=z=(1,0)^T\) and \(y=(0,1)^T\). Both are perpendicular to y, but \(x^Tz=1\).
+
+**Intuition:** Sharing a perpendicular direction does not make two vectors perpendicular.
+
+</details>
+
+Sources: [Review · 3.20](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+
+Card ID: `am205-quiz1-orthogonality-not-transitive`
+
+---
+
+### 1246. For a square orthogonal Q, what are its 2-norm, condition number, and Frobenius norm?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(\|Q\|_2=1\), \(\kappa_2(Q)=1\), and \(\|Q\|_F=\sqrt n\) for \(Q\in\mathbb R^{n\times n}\). Every singular value is 1; the Frobenius norm combines their squares.
+
+**Intuition:** No direction stretches, but the total squared size counts n directions.
+
+</details>
+
+Sources: [Review · 3.23 and companions](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+
+Card ID: `am205-quiz1-orthogonal-norms`
+
+---
+
+### 1247. Is \(Q=\begin{bmatrix}0&-1\\1&0\end{bmatrix}\) orthogonal?
+
+**AM 205 · Geometry of linear maps · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. Its columns are perpendicular unit vectors, so \(Q^TQ=I\). It rotates every vector by 90 degrees without changing its length.
+
+**Intuition:** Orthogonal columns give a length-preserving coordinate transformation.
+
+</details>
+
+Sources: [Review · 3.23 · example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+
+Card ID: `am205-quiz1-orthogonal-example`
+
+---
+
+### 1248. For nonzero w, what makes \(H=I-2ww^T\) orthogonal?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(w^Tw=1\). Along w, H multiplies by \(1-2\|w\|_2^2\), which must be −1 for nonzero w. For an unnormalized vector v, use \(H=I-2vv^T/(v^Tv)\).
+
+**Intuition:** Normalize the reflecting direction, or divide by its squared length.
+
+</details>
+
+Sources: [Review · 3.27](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+
+Card ID: `am205-quiz1-householder-unit`
+
+---
+
+### 1249. Does \(H=I-2ww^T\) need unit-length w to be symmetric?
+
+**AM 205 · Householder reflections · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. \((ww^T)^T=ww^T\), so \(H^T=H\) for any real w. Unit length is required for this formula to be an orthogonal reflection, not for symmetry.
+
+**Intuition:** Symmetry and length preservation are different properties.
+
+</details>
+
+Sources: [Review · 3.27 · symmetry](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+
+Card ID: `am205-quiz1-householder-symmetric`
+
+---
+
+### 1250. For unit w, which parts of a vector does \(I-2ww^T\) change?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Write \(x=aw+z\) with \(w^Tz=0\). Then \(Hx=-aw+z\): the component along w flips, while every perpendicular component stays fixed.
+
+**Intuition:** A reflection reverses one direction and preserves its perpendicular plane.
+
+</details>
+
+Sources: [Review · 3.27 · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+
+Card ID: `am205-quiz1-householder-geometric`
+
+---
+
+### 1251. If an orthogonal Q sends \((1,1)^T\) to \((\alpha,0)^T\), what can \(\alpha\) be?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(\alpha=\pm\sqrt2\). Length preservation fixes \(|\alpha|\), not its sign. Householder QR concentrates a column’s remaining Euclidean length in one entry while zeroing the entries below it.
+
+**Intuition:** The squared length survives even when coordinates disappear.
+
+</details>
+
+Sources: [Review · 3.28](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+
+Card ID: `am205-quiz1-householder-alpha`
+
+---
+
+### 1252. Why is \(\kappa_2(A)=\sigma_{\max}/\sigma_{\min}\) for invertible A?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The largest stretch of A is \(\sigma_{\max}\). The inverse has largest stretch \(1/\sigma_{\min}\), because it reverses A’s weakest direction. Multiply the two norms.
+
+**Intuition:** Sensitivity compares the strongest and weakest directions.
+
+</details>
+
+Sources: [Review · 3.43](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+
+Card ID: `am205-quiz1-singular-condition`
+
+---
+
+### 1253. How many Householder reflections suffice to triangularize a square \(n\times n\) matrix?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+At most \(n-1\). Each step clears the entries below one diagonal position. The last column has no entries below its diagonal, so it needs no reflection. Some steps can be skipped if the entries are already zero.
+
+**Intuition:** Count tails that need clearing, not columns alone.
+
+</details>
+
+Sources: [Review · Householder QR](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+
+Card ID: `am205-quiz1-reflector-count`
+
+---
+
+### 1254. With reduced SVD \(A=U_r\Sigma_rV_r^T\), how do you get the minimum-norm least-squares solution?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(x=V_r\Sigma_r^{-1}U_r^Tb\). Project b onto the nonzero left singular directions, divide by their singular values, then combine the right singular directions. Set null-space coefficients to zero.
+
+**Intuition:** Fit reachable directions and avoid adding invisible coefficient components.
+
+</details>
+
+Sources: [Review · SVD and least squares](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=6)
+
+Card ID: `am205-quiz1-svd-solve`
+
+---
+
+### 1255. If reduced Q has orthonormal columns spanning A’s column space, what does \(QQ^Tb\) do?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It projects b onto the possible fitted vectors. If b is in that space, \(QQ^Tb=b\); if b is perpendicular to it, \(QQ^Tb=0\). Use reduced Q: a full square orthogonal Q would give \(QQ^T=I\).
+
+**Intuition:** Keep only directions the model can express.
+
+</details>
+
+Sources: [Review · QR and projection](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=6)
+
+Card ID: `am205-quiz1-qr-projector`
+
+---
+
+### 1256. Can you build a 2×2 matrix whose columns span \((1,1)^T\) but not \((1,-1)^T\)?
+
+**AM 205 · Geometry of linear maps · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Use \(A=\begin{bmatrix}1&1\\1&1\end{bmatrix}\). Every column combination has equal coordinates, so \((1,1)^T\) is reachable and \((1,-1)^T\) is not.
+
+**Intuition:** Choose columns along the direction you want to keep.
+
+</details>
+
+Sources: [2023 · Q1](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+
+Card ID: `am205-quiz1-construct-span`
+
+---
+
+### 1257. Can a 2×2 matrix have 2-norm 4 and Frobenius norm 5?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes: \(A=\operatorname{diag}(4,3)\). Its largest singular value is 4, while \(\|A\|_F=\sqrt{4^2+3^2}=5\).
+
+**Intuition:** The spectral norm takes the maximum; the Frobenius norm combines all directions.
+
+</details>
+
+Sources: [2023 · Q4](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+
+Card ID: `am205-quiz1-norms-four-five`
+
+---
+
+### 1258. Does a rectangular or singular real matrix still have an SVD?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. Every real matrix has \(A=U\Sigma V^T\), with orthogonal factors and nonnegative singular values. Rectangular shape changes dimensions; singularity introduces zero singular values.
+
+**Intuition:** An SVD does not require an inverse.
+
+</details>
+
+Sources: [2023 · Q5](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+
+Card ID: `am205-quiz1-svd-exists`
+
+---
+
+### 1259. Must an orthogonal matrix have determinant +1?
+
+**AM 205 · Geometry of linear maps · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Taking determinants of \(Q^TQ=I\) gives \((\det Q)^2=1\), so \(\det Q=\pm1\). A reflection such as \(\operatorname{diag}(1,-1)\) has determinant −1.
+
+**Intuition:** Length preservation allows orientation reversal.
+
+</details>
+
+Sources: [2023 · Q6](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+
+Card ID: `am205-quiz1-orthogonal-determinant`
+
+---
+
+### 1260. Can swapping two finite floating-point factors change their rounded product?
+
+**AM 205 · Floating-point arithmetic · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Under the same IEEE format and rounding mode, no. Both orders round the same exact product. This does not mean regrouping several factors is harmless. Exclude NaNs and changes in evaluation precision.
+
+**Intuition:** A single rounded multiplication remains commutative.
+
+</details>
+
+Sources: [2023 · Q7](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+
+Card ID: `am205-quiz1-product-commutes`
+
+---
+
+### 1261. When is a real diagonal matrix orthogonal?
+
+**AM 205 · Geometry of linear maps · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Exactly when every diagonal entry is +1 or −1. For \(D=\operatorname{diag}(d_i)\), \(D^TD=\operatorname{diag}(d_i^2)\), which equals I only if every \(d_i^2=1\).
+
+**Intuition:** Sign flips preserve length; arbitrary scaling does not.
+
+</details>
+
+Sources: [2023 · Q8](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+
+Card ID: `am205-quiz1-diagonal-orthogonal`
+
+---
+
+### 1262. Given a nonzero pivot \(a_{ij}\), how do its column and row form a rank-one approximation?
+
+**AM 205 · Low-rank computation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(B=A_{:j}A_{i:}/a_{ij}\). Dividing by the pivot makes B match both the chosen column and chosen row. Consequently, \(A-B\) is zero on that row and column.
+
+**Intuition:** One cross samples a column direction and its row weights.
+
+</details>
+
+Sources: [2023 · Q10 · rank-one step](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+
+Card ID: `am205-quiz1-cross-formula`
+
+---
+
+### 1263. For this matrix, what rank-one approximation uses the complete pivot 9?
+
+**AM 205 · Low-rank computation · PREDICT**
+
+\[A=\begin{bmatrix}1&2&3\\4&5&6\\7&8&9\end{bmatrix}.\]
+
+<details>
+<summary>Reveal explanation</summary>
+
+\[B=\frac19\begin{bmatrix}3\\6\\9\end{bmatrix}\begin{bmatrix}7&8&9\end{bmatrix}=\begin{bmatrix}7/3&8/3&3\\14/3&16/3&6\\7&8&9\end{bmatrix}.\] It matches the final row and column exactly.
+
+**Intuition:** Divide by the shared entry to avoid counting its scale twice.
+
+</details>
+
+Sources: [2023 · Q10](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+
+Card ID: `am205-quiz1-cross-nine`
+
+---
+
+### 1264. A stable binary64 solve keeps about 6 of 16 digits. What condition-number scale might explain this?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Roughly \(10^{10}\): the rule of thumb is digits lost \(\approx\log_{10}\kappa(A)\). This is a worst-case sensitivity estimate, not proof of the exact condition number from one observed error.
+
+**Intuition:** Ten lost digits suggest ten orders of possible amplification.
+
+</details>
+
+Sources: [2023 · Q12](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+
+Card ID: `am205-quiz1-six-digits`
+
+---
+
+### 1265. How much storage does \(A=BC\) need for a 10000×10000 rank-100 matrix?
+
+**AM 205 · Low-rank computation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+B is 10000×100 and C is 100×10000, so together they store 2,000,000 numbers. A dense A stores 100,000,000: 50 times as many.
+
+**Intuition:** Store the smaller factors when a few directions explain the whole map.
+
+</details>
+
+Sources: [2023 · Q13](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+
+Card ID: `am205-quiz1-rank-storage`
+
+---
+
+### 1266. How many multiplications compute \(Ax\) using 10000×100 B and 100×10000 C?
+
+**AM 205 · Low-rank computation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Compute \(y=Cx\), then \(By\). Each stage takes 1,000,000 multiplications, totaling 2,000,000, versus 100,000,000 for dense A. Do not form BC first.
+
+**Intuition:** Keep the intermediate vector in the small 100-dimensional space.
+
+</details>
+
+Sources: [2023 · Q14](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+
+Card ID: `am205-quiz1-rank-matvec`
+
+---
+
+### 1267. What does a rank-100 map in \(\mathbb R^{10000}\) do to the unit ball?
+
+**AM 205 · Geometry of linear maps · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It produces a bounded ellipsoid lying in a 100-dimensional column space. Its nonzero singular values are the semiaxis lengths. The image is not the entire subspace: input lengths are bounded.
+
+**Intuition:** Rank counts surviving directions, while the unit-ball constraint bounds their extent.
+
+</details>
+
+Sources: [2023 · Q15](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+
+Card ID: `am205-quiz1-rank-ball`
+
+---
+
+### 1268. For full-column-rank A, when do two targets give the same least-squares coefficients?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+When \(A^T(b_1-b_2)=0\): their difference is perpendicular to A’s column space. Equivalently, their projections onto the possible fitted vectors are equal.
+
+**Intuition:** Changing only the unfit part of the data leaves coefficients unchanged.
+
+</details>
+
+Sources: [2023 · Q16](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+
+Card ID: `am205-quiz1-same-fit`
+
+---
+
+### 1269. For unit w, why does \((I-2ww^T)^T(I-2ww^T)=I\)?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Expand: \[I-4ww^T+4w(w^Tw)w^T.\] Since \(w^Tw=1\), the last two terms cancel. Thus H preserves length; symmetry also gives \(H^2=I\).
+
+**Intuition:** Reflecting twice restores the original vector.
+
+</details>
+
+Sources: [2023 · Q17](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+
+Card ID: `am205-quiz1-householder-proof`
+
+---
+
+### 1270. To convert orthogonal columns into SVD columns, what must you do first?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Normalize them and absorb their lengths into the middle scaling. For \(C=[(1,0,1)^T\;(0,1,0)^T]\), the column lengths are \(\sqrt2\) and 1. Orthogonal is not the same as orthonormal.
+
+**Intuition:** Singular vectors have unit length; singular values carry the stretching.
+
+</details>
+
+Sources: [2023 · Q18 · normalize factors](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+
+Card ID: `am205-quiz1-svd-normalize`
+
+---
+
+### 1271. What are the singular values of \(A=\begin{bmatrix}1&1\\-1&1\\1&1\end{bmatrix}\)?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(A^TA=\begin{bmatrix}3&1\\1&3\end{bmatrix}\), with eigenvalues 4 and 2. The singular values are their square roots: 2 and \(\sqrt2\).
+
+**Intuition:** The squared stretches appear as eigenvalues of the Gram matrix.
+
+</details>
+
+Sources: [2023 · Q18 · singular values](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+
+Card ID: `am205-quiz1-svd-factor-example`
+
+---
+
+### 1272. For the displayed A, if \(v_1=(1,1)^T/\sqrt2\), what is its matching left singular vector?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+\[A=\begin{bmatrix}1&1\\-1&1\\1&1\end{bmatrix}.\]
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(Av_1=(\sqrt2,0,\sqrt2)^T\). Its length is 2, so \(u_1=Av_1/2=(1,0,1)^T/\sqrt2\). Similarly, \(v_2=(-1,1)^T/\sqrt2\) gives \(u_2=(0,1,0)^T\) and \(\sigma_2=\sqrt2\).
+
+**Intuition:** Apply A to a unit input direction, then normalize the output.
+
+</details>
+
+Sources: [2023 · Q18 · singular vectors](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+
+Card ID: `am205-quiz1-svd-factor-vectors`
+
+---
+
+### 1273. Can a negative middle factor be left as a negative singular value?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Singular values are nonnegative. Absorb a negative sign into a singular vector instead. Once an SVD is formed, flipping both \(u_i\) and \(v_i\) leaves \(\sigma_i u_iv_i^T\) unchanged.
+
+**Intuition:** Sign choices belong to directions, not stretch magnitudes.
+
+</details>
+
+Sources: [2023 · Q18 · sign convention](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+
+Card ID: `am205-quiz1-svd-signs`
+
+---
+
+### 1274. Why can the closest fit in infinity-norm differ from the perpendicular Euclidean fit?
+
+**AM 205 · Least-squares algorithms · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+An infinity-norm ball is an axis-aligned square in 2D, while a Euclidean ball is a circle. Expand the appropriate shape around b until it touches the line of possible fits. The first contact can occur at different points.
+
+**Intuition:** Changing the error measure changes which discrepancy matters most.
+
+</details>
+
+Sources: [2024 · Q2](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
+
+Card ID: `am205-quiz1-infinity-fit-geometry`
+
+---
+
+### 1275. Fit \(b=(1,0)^T\) by \((t,2t)^T\). Which t minimizes the largest absolute coordinate error?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(t=1/3\). Balance \(1-t=2t\), giving maximum error \(2/3\). The residual has equal-magnitude coordinates. This corner-contact geometry explains the 45-degree direction in the quiz figure; it is not universal for every line.
+
+**Intuition:** The best worst-coordinate fit balances the competing errors.
+
+</details>
+
+Sources: [2024 · Q2 · authored companion](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
+
+Card ID: `am205-quiz1-infinity-fit-example`
+
+---
+
+### 1276. For the same fit \((t,2t)^T\) to \((1,0)^T\), what does ordinary least squares choose?
+
+**AM 205 · Least-squares algorithms · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(t=1/5\), because minimizing \((t-1)^2+4t^2\) gives \(10t-2=0\). This differs from the infinity-norm optimum \(1/3\).
+
+**Intuition:** Least squares balances squared errors; infinity-norm controls the worst coordinate.
+
+</details>
+
+Sources: [2024 · Q2 · authored companion](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
+
+Card ID: `am205-quiz1-two-fit-objectives`
+
+---
+
+### 1277. What matrix properties help accurate linear solves versus low-rank compression?
+
+**AM 205 · Matrix conditioning · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Solves benefit from a modest condition number and a stable algorithm. Compression benefits from rapidly decaying singular values, so discarded directions contribute little. A large condition number alone does not guarantee a useful low-rank approximation.
+
+**Intuition:** Invertibility needs every direction; compression deliberately discards weak ones.
+
+</details>
+
+Sources: [2024 · Q3](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
+
+Card ID: `am205-quiz1-solve-vs-compress`
+
+---
+
+### 1278. Does \(A=\operatorname{diag}(1,\ldots,1,10^{-12})\) have a good rank-one approximation?
+
+**AM 205 · Matrix conditioning · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Not when there are many unit entries. Its condition number is huge, but dropping to rank one discards many equally strong directions. Only the final direction is tiny.
+
+**Intuition:** A ratio of extremes does not describe the whole singular-value spectrum.
+
+</details>
+
+Sources: [2024 · Q3 · authored counterexample](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
+
+Card ID: `am205-quiz1-condition-not-rank`
+
+---
+
+### 1279. What is the rank of this cross-shaped matrix?
+
+**AM 205 · Low-rank approximation · PREDICT**
+
+\[A=\begin{bmatrix}0&1&0\\1&1&1\\0&1&0\end{bmatrix}.\]
+
+<details>
+<summary>Reveal explanation</summary>
+
+2. Columns 1 and 3 are identical, giving an upper bound of 2. Columns 1 and 2 are independent, so the rank is at least 2.
+
+**Intuition:** Prove rank with both a construction and an independence check.
+
+</details>
+
+Sources: [2024 · Q4](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+
+Card ID: `am205-quiz1-flag-rank`
+
+---
+
+### 1280. How can two outer products build the displayed cross-shaped matrix?
+
+**AM 205 · Low-rank approximation · PREDICT**
+
+\[A=\begin{bmatrix}0&1&0\\1&1&1\\0&1&0\end{bmatrix}.\]
+
+<details>
+<summary>Reveal explanation</summary>
+
+\[A=\begin{bmatrix}0\\1\\0\end{bmatrix}\begin{bmatrix}1&1&1\end{bmatrix}+\begin{bmatrix}1\\0\\1\end{bmatrix}\begin{bmatrix}0&1&0\end{bmatrix}.\] The first builds the middle row; the second adds the top and bottom of the middle column.
+
+**Intuition:** Avoid double-counting the central pixel.
+
+</details>
+
+Sources: [2024 · Q4 · rank-one decomposition](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+
+Card ID: `am205-quiz1-flag-decompose`
+
+---
+
+### 1281. For dense LU, how does factoring a 2n×n matrix compare with an n×n matrix?
+
+**AM 205 · Efficient linear solves · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The leading cost for \(m\ge n\) is \(mn^2-n^3/3\). The ratio is \((2-1/3)/(1-1/3)=5/2\). Doubling rows while fixing columns is different from doubling both dimensions.
+
+**Intuition:** Elimination work shrinks across successive columns.
+
+</details>
+
+Sources: [2024 · Q5](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+
+Card ID: `am205-quiz1-tall-factor-cost`
+
+---
+
+### 1282. Does dense Householder QR have the same 2n×n versus n×n cost ratio as LU?
+
+**AM 205 · Efficient linear solves · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes, to leading order. QR costs \(2mn^2-2n^3/3\), twice the corresponding LU formula. That common factor cancels in the ratio, again giving \(5/2\).
+
+**Intuition:** Cost ratios depend on shape as well as the factorization.
+
+</details>
+
+Sources: [2024 · Q5 · QR companion](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+
+Card ID: `am205-quiz1-tall-qr-cost`
+
+---
+
+### 1283. Why can \(\|AB\|_2\) never exceed \(\|A\|_2\|B\|_2\)?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For every unit x, \(\|ABx\|_2\le\|A\|_2\|Bx\|_2\le\|A\|_2\|B\|_2\). Maximize over x. Each stage can stretch by at most its own maximum.
+
+**Intuition:** The maximum combined stretch cannot beat the product of individual maxima.
+
+</details>
+
+Sources: [2024 · Q6 · bound](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+
+Card ID: `am205-quiz1-product-norm-bound`
+
+---
+
+### 1284. For nonzero A and B, when does \(\|AB\|_2=\|A\|_2\|B\|_2\)?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+When some input maximally stretched by B is sent into an input direction maximally stretched by A. Equivalently, B’s top left-singular subspace intersects A’s top right-singular subspace nontrivially. With repeated top singular values, one compatible direction is enough.
+
+**Intuition:** The strongest directions must connect across the two maps.
+
+</details>
+
+Sources: [2024 · Q6 · equality](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+
+Card ID: `am205-quiz1-product-norm-alignment`
+
+---
+
+### 1285. For \(A=\operatorname{diag}(2,1)\), which B attains the product-of-norms bound?
+
+**AM 205 · Matrix conditioning · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(B=\operatorname{diag}(3,1)\) gives \(AB=\operatorname{diag}(6,1)\), attaining \(2\cdot3=6\). With \(B=\operatorname{diag}(1,3)\), the product is \(\operatorname{diag}(2,3)\), whose norm is only 3.
+
+**Intuition:** Strong stretches reinforce each other only when their directions line up.
+
+</details>
+
+Sources: [2024 · Q6 · authored companion](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+
+Card ID: `am205-quiz1-product-norm-example`
+
+---
+
+### 1286. Can a computed \(A^TA\) be symmetric even when its entries have rounding error?
+
+**AM 205 · Floating-point arithmetic · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. Paired entries use the same products in reverse operand order. If both dot products use identical summation order, precision, and rounding, their results agree. Different reduction orders can break exact symmetry; do not assume it for every implementation.
+
+**Intuition:** Rounding error and loss of symmetry are separate questions.
+
+</details>
+
+Sources: [2025 · Q1](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1)
+
+Card ID: `am205-quiz1-rounded-gram`
+
+---
+
+### 1287. In the first symmetric Householder step on a 5×5 matrix, which entries are deliberately zeroed?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Entries \((3,1),(4,1),(5,1)\) and their symmetric partners \((1,3),(1,4),(1,5)\). The first subdiagonal entry is retained. Two-sided updates preserve symmetry while moving toward tridiagonal form.
+
+**Intuition:** Symmetric reduction clears beyond the first off-diagonal, not every off-diagonal entry.
+
+</details>
+
+Sources: [2025 · Q2 · zero pattern](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1)
+
+Card ID: `am205-quiz1-similarity-zeros`
+
+---
+
+### 1288. With \(H=\operatorname{diag}(1,\widetilde H)\), which entry of \(H^TAH\) is guaranteed to equal A’s?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The top-left entry: \(e_1^TH^TAHe_1=e_1^TAe_1=A_{11}\), because \(He_1=e_1\). Other entries may coincide for special A, but are not generally fixed.
+
+**Intuition:** Leaving the first basis vector unchanged protects its quadratic-form value.
+
+</details>
+
+Sources: [2025 · Q2 · unchanged entry](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1)
+
+Card ID: `am205-quiz1-similarity-fixed`
+
+---
+
+### 1289. Why use \(H^TAH\) rather than only \(HA\) in symmetric eigenvalue reduction?
+
+**AM 205 · Householder reflections · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For orthogonal H, \(H^T=H^{-1}\), so the two-sided update is a similarity transformation. It preserves eigenvalues and, for symmetric A, symmetry. A one-sided QR update need not preserve A’s eigenvalues.
+
+**Intuition:** Change coordinates on both sides to represent the same linear map.
+
+</details>
+
+Sources: [2025 · Q2 · authored companion](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1)
+
+Card ID: `am205-quiz1-similarity-spectrum`
+
+---
+
+### 1290. Does forming \(A+A^T\) guarantee that Cholesky can be used?
+
+**AM 205 · Structured factorizations · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It guarantees symmetry, not positive definiteness. For \(A=-I\), the sum is \(-2I\), which is negative definite. Standard real Cholesky needs a symmetric positive-definite matrix.
+
+**Intuition:** Check the sign of quadratic forms before choosing Cholesky.
+
+</details>
+
+Sources: [2025 · Q3](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1)
+
+Card ID: `am205-quiz1-symmetric-not-spd`
+
+---
+
+### 1291. When Cholesky applies, how does its dense factorization cost compare with LU?
+
+**AM 205 · Structured factorizations · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Cholesky takes about \(n^3/3\) floating-point operations, versus \(2n^3/3\) for general LU. Its symmetry lets it do roughly half the leading work.
+
+**Intuition:** Structure saves work only when the required assumptions hold.
+
+</details>
+
+Sources: [2025 · Q3 · operation counts](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1)
+
+Card ID: `am205-quiz1-cholesky-work`
+
+---
+
+### 1292. Using pivot 2, what rank-one approximation does this matrix produce?
+
+**AM 205 · Low-rank approximation · PREDICT**
+
+\[A=\begin{bmatrix}1&1&1&1\\1&1&1&1\\1&1&1&2\end{bmatrix}.\]
+
+<details>
+<summary>Reveal explanation</summary>
+
+\[B=\begin{bmatrix}1/2&1/2&1/2&1\\1/2&1/2&1/2&1\\1&1&1&2\end{bmatrix}.\] It is column 4 times row 3, divided by the pivot 2.
+
+**Intuition:** The chosen row and column are matched exactly.
+
+</details>
+
+Sources: [2025 · Q4 · complete-pivot approximation](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+
+Card ID: `am205-quiz1-cross-two`
+
+---
+
+### 1293. A rank-one residual has six entries equal to 1/2 and every other entry zero. What is its Frobenius norm?
+
+**AM 205 · Low-rank approximation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(\sqrt{6(1/2)^2}=\sqrt{3/2}\). Square each entry, sum them, then take the square root. This is the error of the quiz’s one-step complete-pivot approximation.
+
+**Intuition:** Frobenius error combines entrywise errors in quadrature.
+
+</details>
+
+Sources: [2025 · Q4 · Frobenius error](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+
+Card ID: `am205-quiz1-cross-two-error`
+
+---
+
+### 1294. For fixed full-column-rank A, can a target perturbation of length \(\varepsilon\) move its least-squares fit farther than \(\varepsilon\)?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The fitted-vector change is \(\delta\hat b=P\delta b\), with \(P=QQ^T\). Orthogonal projection cannot increase Euclidean length, so \(\|\delta\hat b\|_2\le\varepsilon\).
+
+**Intuition:** Discarding the perpendicular component cannot enlarge a vector.
+
+</details>
+
+Sources: [2025 · Q5 · prediction sensitivity](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+
+Card ID: `am205-quiz1-fit-contraction`
+
+---
+
+### 1295. Can least-squares coefficients change greatly even when the fitted vector barely changes?
+
+**AM 205 · Least-squares algorithms · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. \(\delta x=A^+\delta b\), so \(\|\delta x\|_2\le\|\delta b\|_2/\sigma_{\min}(A)\). A tiny smallest singular value allows large coefficient changes, while the fitted-vector change remains bounded by \(\|\delta b\|_2\).
+
+**Intuition:** Large, canceling coefficient changes can have small prediction effects.
+
+</details>
+
+Sources: [2025 · Q5 · coefficient sensitivity](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+
+Card ID: `am205-quiz1-coefficient-sensitivity`
+
+---
+
+### 1296. Which target perturbation maximizes coefficient change in full-column-rank least squares?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(\delta b=\varepsilon u_{\min}\), along the weakest left singular direction. Then \(\delta x=(\varepsilon/\sigma_{\min})v_{\min}\). A perturbation perpendicular to the column space instead changes no coefficient.
+
+**Intuition:** Noise matters most when it points along the model’s weakest identifiable direction.
+
+</details>
+
+Sources: [2025 · Q5 · equality direction](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+
+Card ID: `am205-quiz1-worst-target-direction`
+
+---
+
+### 1297. For invertible square A and B, why is \(\kappa_2(AB)\le\kappa_2(A)\kappa_2(B)\)?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Bound \(\|AB\|_2\) by \(\|A\|_2\|B\|_2\), and \(\|(AB)^{-1}\|_2=\|B^{-1}A^{-1}\|_2\) by \(\|B^{-1}\|_2\|A^{-1}\|_2\). Multiply the bounds.
+
+**Intuition:** Both the forward map and its inverse contribute to sensitivity.
+
+</details>
+
+Sources: [2025 · Q6 · product bound](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+
+Card ID: `am205-quiz1-product-condition-bound`
+
+---
+
+### 1298. If \(\|A\|_2=\|B\|_2=1\) and both condition numbers are 2, how large can \(\kappa_2(AB)\) be?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+At most 4, and 4 is attainable. Take \(A=B=\operatorname{diag}(1,1/2)\); then \(AB=\operatorname{diag}(1,1/4)\), whose condition number is 4.
+
+**Intuition:** Aligned weak directions compound the loss of relative scale.
+
+</details>
+
+Sources: [2025 · Q6 · product construction](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+
+Card ID: `am205-quiz1-product-condition-four`
+
+---
+
+### 1299. If A and B each have norm 1 and condition number 2, must A+B be well-conditioned?
+
+**AM 205 · Matrix conditioning · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Choose \(A=\operatorname{diag}(1,1/2)\) and \(B=\operatorname{diag}(1,-1/2)\). Each has condition number 2, but \(A+B=\operatorname{diag}(2,0)\) is singular. There is no analogous finite bound for the sum.
+
+**Intuition:** Adding two reliable maps can cancel an entire direction.
+
+</details>
+
+Sources: [2025 · Q6 · sum counterexample](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+
+Card ID: `am205-quiz1-sum-condition-unbounded`

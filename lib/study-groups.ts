@@ -16,6 +16,15 @@ export function studyGroups(
       mode === "topics"
         ? [card.topic]
         : (card.sources ?? []).flatMap((source) => {
+            const quiz = source.path.match(
+              /\/quiz\/quiz(\d+)\/(quiz\d+review|solns(\d{2}))\.pdf$/i,
+            );
+            if (quiz)
+              return [
+                quiz[3]
+                  ? `Quiz ${Number(quiz[1])} · 20${quiz[3]} practice`
+                  : `Quiz ${Number(quiz[1])} review`,
+              ];
             const lecture = source.path.match(/lecture[_-](\d+)/i);
             if (lecture) return [`Lecture ${Number(lecture[1])}`];
             const chapter = source.path.match(
@@ -33,7 +42,10 @@ export function studyGroups(
                   lsinf: "Inference notes",
                 }[notes[1] as "linalg" | "lstheory" | "lsinf"],
               ];
-            return [];
+            // Keep AM 205's assignment/textbook group when adding quiz citations.
+            return source.path.startsWith("courses/harvard/am205/")
+              ? ["Assignments & supporting material"]
+              : [];
           });
     for (const label of new Set(
       labels.length ? labels : ["Assignments & supporting material"],
