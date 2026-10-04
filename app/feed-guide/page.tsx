@@ -17,7 +17,7 @@ const map = [
     title: "Make the computation trustworthy.",
     topics:
       "Floating-point arithmetic → matrix geometry → pivoting → low-rank approximation → least squares",
-    scope: "Problem sets 1–2, the Quiz 1 review, and 2023–2025 Quiz 1 practice. Includes Householder reflections, matrix norms, and least-squares sensitivity.",
+    scope: "Problem sets 1–2, the Quiz 1 review, 2023–2025 Quiz 1 practice, and the comprehensive study sheet. Includes Householder reflections, matrix norms, and least-squares sensitivity.",
     next: "Deepen with fresh numeric variants and multi-step QR practice where recall needs work.",
   },
   {

@@ -16,6 +16,11 @@ export function studyGroups(
       mode === "topics"
         ? [card.topic]
         : (card.sources ?? []).flatMap((source) => {
+            const studySheet = source.path.match(
+              /\/quiz\/quiz(\d+)\/quiz\d+-study-sheet\.md$/i,
+            );
+            if (studySheet)
+              return [`Quiz ${Number(studySheet[1])} · Comprehensive study`];
             const quiz = source.path.match(
               /\/quiz\/quiz(\d+)\/(quiz\d+review|solns(\d{2}))\.pdf$/i,
             );

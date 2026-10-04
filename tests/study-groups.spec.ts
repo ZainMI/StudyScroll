@@ -201,6 +201,7 @@ test("AM 205 quiz groups reuse assignment cards without removing their original 
     "Quiz 1 · 2023 practice",
     "Quiz 1 · 2024 practice",
     "Quiz 1 · 2025 practice",
+    "Quiz 1 · Comprehensive study",
     "Quiz 1 review",
   ]);
   const quizIds = new Set(quizzes.flatMap((g) => g.cardIds));
@@ -229,4 +230,33 @@ test("mobile can study the new quiz material with rendered matrices", async ({ p
   await expect(card.locator(".math-fallback, .katex-error")).toHaveCount(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({ path: "tmp/am205-quiz-mobile.png", animations: "disabled" });
+});
+
+test("comprehensive study sheet is selectable and overlapping review cards appear once", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const groups = studyGroups(curated, "lectures").filter((g) => g.course === "AM 205");
+  const comprehensive = groups.find((g) => g.label === "Quiz 1 · Comprehensive study")!;
+  const review = groups.find((g) => g.label === "Quiz 1 review")!;
+  expect(new Set(comprehensive.cardIds)).toEqual(new Set(curated.filter((c) => c.sources?.some((s) => s.path.endsWith("/quiz1-study-sheet.md"))).map((c) => c.id)));
+  expect(comprehensive.cardIds).toContain("am205-q1-sheet-reflector-construct");
+  expect(comprehensive.cardIds).toContain("am205-quiz1-householder-proof");
+  const expected = new Set([...comprehensive.cardIds, ...review.cardIds]);
+  expect(expected.size).toBeLessThan(comprehensive.cardIds.length + review.cardIds.length);
+  await page.goto("/");
+  await page.getByRole("button", { name: /Harvard/ }).click();
+  const course = page.locator(".study-course").filter({ hasText: "AM 205" });
+  if (!(await course.getAttribute("open"))) await course.locator("summary").click();
+  await course.getByRole("checkbox", { name: /^Quiz 1 · Comprehensive study/ }).check();
+  await course.getByRole("checkbox", { name: /^Quiz 1 review/ }).check();
+  await page.getByRole("button", { name: "Start studying" }).click();
+  const ids = await page.locator("article.study-card").evaluateAll((elements) => elements.map((el) => el.getAttribute("data-card-id")));
+  expect(ids).toHaveLength(expected.size);
+  expect(new Set(ids)).toEqual(expected);
+  const card = page.locator('[data-card-id="am205-q1-sheet-qr-small-solve"]');
+  await card.scrollIntoViewIfNeeded();
+  await card.getByRole("button", { name: "Recall your answer, then reveal." }).click();
+  await expect(card.locator(".answer .katex").first()).toBeVisible();
+  await expect(card.locator(".math-fallback, .katex-error")).toHaveCount(0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.screenshot({ path: "tmp/am205-comprehensive-mobile.png", animations: "disabled" });
 });

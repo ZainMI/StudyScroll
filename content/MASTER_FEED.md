@@ -1,8 +1,8 @@
 # StudyScroll: master feed
 
-Updated 2026-10-03. 1299 curated cards.
+Updated 2026-10-04. 1352 curated cards.
 
-Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2, the October 2026 Quiz 1 review, and 2023–2025 Quiz 1 solutions with supporting concepts. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. UBuffalo International Finance covers the supplied Chapters 1–5 slides and Chapter 2–4 homework; source inconsistencies and exact/approximate conventions are documented in INTERNATIONAL_FINANCE_COVERAGE.md.
+Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2, the October 2026 Quiz 1 review, and 2023–2025 Quiz 1 solutions, and the comprehensive Quiz 1 study sheet with supporting concepts. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. UBuffalo International Finance covers the supplied Chapters 1–5 slides and Chapter 2–4 homework; source inconsistencies and exact/approximate conventions are documented in INTERNATIONAL_FINANCE_COVERAGE.md.
 
 The editable source of truth is [master-feed.json](master-feed.json). This readable document is generated with `npm run feed:build`. Edit the JSON, then regenerate; the Next app imports that same JSON directly.
 
@@ -11,7 +11,7 @@ These are authored learning prompts derived from the listed materials, not quota
 ## Course map
 
 - **UBuffalo — International Finance:** Chapters 1–5 and Chapter 2–4 homework: national accounts, balance of payments, currency returns, money markets, PPP, and real exchange rates. See [INTERNATIONAL_FINANCE_COVERAGE.md](INTERNATIONAL_FINANCE_COVERAGE.md).
-- **AM 205:** floating-point spacing, rounding, matrix operations, linear-map geometry, pivoting, low-rank approximation, algebraic least squares, and Quiz 1 review/practice (2023–2025). See [AM205_QUIZ1_COVERAGE.md](AM205_QUIZ1_COVERAGE.md).
+- **AM 205:** floating-point spacing, rounding, matrix operations, linear-map geometry, pivoting, low-rank approximation, algebraic least squares, and Quiz 1 review/practice (2023–2025). See [AM205_QUIZ1_COVERAGE.md](AM205_QUIZ1_COVERAGE.md) and [AM205_COMPREHENSIVE_COVERAGE.md](AM205_COMPREHENSIVE_COVERAGE.md) for the comprehensive study sheet.
 - **AM 207:** probability foundations, inverse transforms, Monte Carlo, Metropolis–Hastings, Markov dynamics, jump processes, SSA, tau leaping, and Bayesian uncertainty.
 - **STAT 244:** linear algebra, estimability, projections, contrast coding, least squares and GLS, inference, multicollinearity, PCR/PLS, and regression diagnostics.
 - **AM 209a:** lectures 1–8 from the supplied COMPSCI 1090A course: data preparation, visualization, kNN, regression, cross-validation, ridge/lasso, and bootstrap inference. See [AM209A_COVERAGE.md](AM209A_COVERAGE.md).
@@ -51,7 +51,7 @@ No. In binary64, the gap below 2 is \(2^{-52}\); above it, \(2^{-51}\). Crossing
 
 </details>
 
-Sources: [PS1 · Q1(a)](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [Review · 1.8 · nonuniform spacing](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+Sources: [PS1 · Q1(a)](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [Review · 1.8 · nonuniform spacing](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1); [Study sheet §1 · Floating-point arithmetic · Machine epsilon, rounding, spacing examples, and representability](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-binade-boundary`
 
@@ -70,7 +70,7 @@ No. For binary64 round-to-nearest, the gap is \(2^{-52}\) but unit roundoff is \
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61); [Study sheet §1 · Floating-point arithmetic · Machine epsilon, rounding, spacing examples, and representability](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-roundoff-versus-epsilon`
 
@@ -108,7 +108,7 @@ The gap there is 2, so the exact answer is halfway between neighbors. Ties-to-ev
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61); [2024 · Q1](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61); [2024 · Q1](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1); [Study sheet §1 · Floating-point arithmetic · Machine epsilon, rounding, spacing examples, and representability](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-largest-consecutive-integers`
 
@@ -127,7 +127,7 @@ They provide a gradual approach to zero instead of an abrupt cutoff. These subno
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61); [Study sheet §1 · Floating-point arithmetic · Commutativity, associativity, cancellation, underflow, and Gram symmetry](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-subnormal-role`
 
@@ -317,7 +317,7 @@ It produces an ellipse. The map’s singular values are its semiaxis lengths; it
 
 </details>
 
-Sources: [PS1 · Q4](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q4](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [Study sheet §6 · SVD and the geometry of a matrix · Ellipsoid geometry and norm-product alignment](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-disk`
 
@@ -374,7 +374,7 @@ Card ID: `am205-rank-collapse`
 
 </details>
 
-Sources: [PS1 · Q4](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [Review · 3.26](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+Sources: [PS1 · Q4](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [Review · 3.26](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5); [Study sheet §4 · Orthogonality and Householder reflections · Orthogonality, norm preservation, inverse, determinant, and diagonal tests](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-orthogonal-map`
 
@@ -412,7 +412,7 @@ No. \(\begin{bmatrix}0&1\\1&0\end{bmatrix}\) is invertible. Swapping rows makes 
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113); [Review · 2.14](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [2023 · Q2](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113); [Review · 2.14](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [2023 · Q2](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1); [Study sheet §3 · Linear systems, elimination, and pivoting · LU, pivot choice, and ordered triangular solves](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-zero-pivot-nonsingular`
 
@@ -754,7 +754,7 @@ Their true difference is small, but the errors already in the inputs need not be
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61); [Study sheet §1 · Floating-point arithmetic · Commutativity, associativity, cancellation, underflow, and Gram symmetry](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-cancellation`
 
@@ -868,7 +868,7 @@ b−r, because \(A\hat{x}=b-r\). The residual measures the needed change in b wh
 
 </details>
 
-Sources: [Heath · §1.2.5, printed p. 12](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=33)
+Sources: [Heath · §1.2.5, printed p. 12](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=33); [Study sheet §2 · Norms, conditioning, and stability · Stability, residual interpretation, and scale](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-linear-backward-data`
 
@@ -887,7 +887,7 @@ Yes. It solves a nearby problem accurately, but an ill-conditioned problem can t
 
 </details>
 
-Sources: [Heath · §1.2.6, printed p. 13](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34)
+Sources: [Heath · §1.2.6, printed p. 13](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34); [Study sheet §2 · Norms, conditioning, and stability · Stability, residual interpretation, and scale](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-conditioning`
 
@@ -963,7 +963,7 @@ Yes. In binary64, \((10^{16}-10^{16})+1\) gives 1, while \(10^{16}+(-10^{16}+1)\
 
 </details>
 
-Sources: [Heath · Ch. 1 review · floating-point properties](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60); [Review · 1.9 · associativity](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+Sources: [Heath · Ch. 1 review · floating-point properties](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=60); [Review · 1.9 · associativity](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1); [Study sheet §1 · Floating-point arithmetic · Commutativity, associativity, cancellation, underflow, and Gram symmetry](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-associative`
 
@@ -1020,7 +1020,7 @@ Yes. For \(A=10^{-10}I\), \(\det (A)\) is tiny but \(\kappa _{2}(A)=1\). All dir
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 95](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116); [2023 · Q3](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+Sources: [Heath · Ch. 2 review, printed p. 95](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116); [2023 · Q3](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1); [Study sheet §2 · Norms, conditioning, and stability · Condition numbers, scaling, digit loss, and counterexamples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-condition-scale`
 
@@ -1039,7 +1039,7 @@ The 1-norm is 6, the largest absolute column sum. The infinity-norm is 7, the la
 
 </details>
 
-Sources: [Heath · Ch. 2 review · matrix norms](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
+Sources: [Heath · Ch. 2 review · matrix norms](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115); [Study sheet §2 · Norms, conditioning, and stability · Basic vector and matrix norms, zero norm, and singular matrices](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-matrix-norms`
 
@@ -1096,7 +1096,7 @@ Its residual is only \((0,10^{-8})\), but the true solution is (1,1). The second
 
 </details>
 
-Sources: [Heath · §2.3.5, printed p. 61](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82)
+Sources: [Heath · §2.3.5, printed p. 61](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82); [Study sheet §2 · Norms, conditioning, and stability · Stability, residual interpretation, and scale](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-small-residual-counterexample`
 
@@ -1115,7 +1115,7 @@ No. Every point on the line through two distinct solutions is also a solution.
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 93](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114); [Review · 2.28](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+Sources: [Heath · Ch. 2 review, printed p. 93](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114); [Review · 2.28](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [Study sheet §3 · Linear systems, elimination, and pivoting · Solution structure and reversible transformations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-two-solutions`
 
@@ -1134,7 +1134,7 @@ No. It may have none or infinitely many, depending on whether b lies in its colu
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review, printed pp. 92–96](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113); [Study sheet §3 · Linear systems, elimination, and pivoting · Solution structure and reversible transformations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-consistency`
 
@@ -1172,7 +1172,7 @@ Partial pivoting searches the active column. Complete pivoting searches the rema
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 93](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
+Sources: [Heath · Ch. 2 review, printed p. 93](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114); [Study sheet §3 · Linear systems, elimination, and pivoting · LU, pivot choice, and ordered triangular solves](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-pivot-scope`
 
@@ -1210,7 +1210,7 @@ Dense factorization costs \(O(n^{3})\). Once it is done, each pair of triangular
 
 </details>
 
-Sources: [Heath · Ch. 2 review · repeated systems](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review · repeated systems](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113); [Study sheet §7 · Rank, low-rank approximation, and cost · Concrete savings, factorization costs, and product association](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-lu-reuse`
 
@@ -1229,7 +1229,7 @@ Solve \(Ly=Pb\), then \(Ux=y\). Apply the row permutation to b as well as A.
 
 </details>
 
-Sources: [Heath · Ch. 2 review · repeated systems](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review · repeated systems](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113); [Study sheet §3 · Linear systems, elimination, and pivoting · LU, pivot choice, and ordered triangular solves](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-solve-with-permutation`
 
@@ -1248,7 +1248,7 @@ The first row gives the first unknown. Each later row uses values already found.
 
 </details>
 
-Sources: [Heath · Ch. 2 exercises · triangular solves](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=117)
+Sources: [Heath · Ch. 2 exercises · triangular solves](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=117); [Study sheet §3 · Linear systems, elimination, and pivoting · LU, pivot choice, and ordered triangular solves](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-triangular-step`
 
@@ -1305,7 +1305,7 @@ Positive definiteness. A real symmetric positive-definite matrix has \(A=LL^{\ma
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 95](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review, printed p. 95](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116); [Study sheet §3 · Linear systems, elimination, and pivoting · Triangular and symmetric products; Cholesky](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-cholesky`
 
@@ -1362,7 +1362,7 @@ Every column is a multiple of u, and at least one is nonzero.
 
 </details>
 
-Sources: [Heath · Ch. 2 review · rank-one matrices](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review · rank-one matrices](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116); [Study sheet §7 · Rank, low-rank approximation, and cost · Rank bounds, rank-one constructions, and error examples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-outer-product-rank`
 
@@ -1381,7 +1381,7 @@ For full-column-rank X, \(\kappa _{2}(X^{\mathsf{T}}X)=\kappa _{2}(X)^{2}\). For
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134); [Review · 3.14 · conditioning](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134); [Review · 3.14 · conditioning](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4); [Study sheet §5 · QR and least squares · Least-squares geometry, exact fits, uniqueness, and normal equations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-normal-squared`
 
@@ -1400,7 +1400,7 @@ Card ID: `am205-normal-squared`
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134); [Review · QR and least squares](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=6)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134); [Review · QR and least squares](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=6); [Study sheet §5 · QR and least squares · QR and SVD solution methods](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-qr-reduction`
 
@@ -1419,7 +1419,7 @@ It has the smallest Euclidean coefficient norm. Adding a null-space vector keeps
 
 </details>
 
-Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134); [Review · SVD minimum norm](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=6)
+Sources: [Heath · §3.3–3.5 · supporting least-squares reading](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=134); [Review · SVD minimum norm](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=6); [Study sheet §5 · QR and least squares · QR and SVD solution methods](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-svd-minimum-norm`
 
@@ -1438,7 +1438,7 @@ No. Both lie in [64,128), so both have gap \(2^{-46}\).
 
 </details>
 
-Sources: [PS1 · Q1(a) · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [2023 · Q11](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+Sources: [PS1 · Q1(a) · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [2023 · Q11](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1); [Study sheet §1 · Floating-point arithmetic · Machine epsilon, rounding, spacing examples, and representability](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-spacing-at-100`
 
@@ -1514,7 +1514,7 @@ No. In \([2^{53},2^{54})\), every even integer is representable. The odd integer
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61); [2024 · Q1](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61); [2024 · Q1](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1); [Study sheet §1 · Floating-point arithmetic · Machine epsilon, rounding, spacing examples, and representability](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-even-large`
 
@@ -1552,7 +1552,7 @@ Not by itself. It must also fit the format’s exponent range and precision.
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61); [Study sheet §1 · Floating-point arithmetic · Machine epsilon, rounding, spacing examples, and representability](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-fraction-range`
 
@@ -1761,7 +1761,7 @@ For square Q, \(Q^{\mathsf{T}}Q=I\), so \(Q^{-1}=Q^{\mathsf{T}}\).
 
 </details>
 
-Sources: [PS1 · Q4 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1)
+Sources: [PS1 · Q4 · companion concept check](../courses/harvard/am205/homeworks/ps1/ps1.pdf#page=1); [Study sheet §4 · Orthogonality and Householder reflections · Orthogonality, norm preservation, inverse, determinant, and diagonal tests](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-orthogonal-inverse`
 
@@ -1913,7 +1913,7 @@ The sum of squares of the discarded singular values: \(\sum_{i>k}\sigma_i^2\).
 
 </details>
 
-Sources: [PS2 · Q2 · method comparison · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2 · method comparison · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1); [Study sheet §7 · Rank, low-rank approximation, and cost · Frobenius tail error](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-svd-tail`
 
@@ -1951,7 +1951,7 @@ No. Its column space fits inside the span of at most k column vectors.
 
 </details>
 
-Sources: [PS2 · Q2 · method comparison · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1)
+Sources: [PS2 · Q2 · method comparison · companion concept check](../courses/harvard/am205/homeworks/ps2/ps2.pdf#page=1); [Study sheet §7 · Rank, low-rank approximation, and cost · Rank bounds, rank-one constructions, and error examples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-rank-sum`
 
@@ -2198,7 +2198,7 @@ Yes. It can reveal errors already present in the two operands.
 
 </details>
 
-Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61)
+Sources: [Heath · Ch. 1 review, printed pp. 40–41 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=61); [Study sheet §1 · Floating-point arithmetic · Commutativity, associativity, cancellation, underflow, and Gram symmetry](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-exact-subtraction`
 
@@ -2312,7 +2312,7 @@ Conditioning. Stability describes how an algorithm handles rounding and perturba
 
 </details>
 
-Sources: [Heath · §1.2.6, printed p. 13 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34)
+Sources: [Heath · §1.2.6, printed p. 13 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=34); [Study sheet §2 · Norms, conditioning, and stability · Stability, residual interpretation, and scale](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-problem-vs-solver`
 
@@ -2388,7 +2388,7 @@ No, for the same induced norm: \(\Vert \alpha A\Vert \Vert (\alpha A)^{-1}\Vert 
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 95 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116)
+Sources: [Heath · Ch. 2 review, printed p. 95 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116); [Study sheet §2 · Norms, conditioning, and stability · Condition numbers, scaling, digit loss, and counterexamples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-condition-scaling`
 
@@ -2407,7 +2407,7 @@ The induced matrix norm bounds how much A can amplify a vector’s size.
 
 </details>
 
-Sources: [Heath · Ch. 2 review · matrix norms · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
+Sources: [Heath · Ch. 2 review · matrix norms · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115); [Study sheet §2 · Norms, conditioning, and stability · Basic vector and matrix norms, zero norm, and singular matrices](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-norm-bound`
 
@@ -2426,7 +2426,7 @@ Card ID: `am205-norm-bound`
 
 </details>
 
-Sources: [Heath · Ch. 2 review Q2.57, printed p. 94 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115)
+Sources: [Heath · Ch. 2 review Q2.57, printed p. 94 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=115); [Study sheet §2 · Norms, conditioning, and stability · Condition numbers, scaling, digit loss, and counterexamples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-condition-one`
 
@@ -2445,7 +2445,7 @@ Multiplying A and b by a tiny scalar makes the raw residual tiny without improvi
 
 </details>
 
-Sources: [Heath · §2.3.5, printed p. 61 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82); [Review · 2.33(c)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3)
+Sources: [Heath · §2.3.5, printed p. 61 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=82); [Review · 2.33(c)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3); [Study sheet §2 · Norms, conditioning, and stability · Stability, residual interpretation, and scale](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-scaled-residual`
 
@@ -2502,7 +2502,7 @@ They reorder the variables. Without undoing them, the solution entries can be as
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 93 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114)
+Sources: [Heath · Ch. 2 review, printed p. 93 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=114); [Study sheet §3 · Linear systems, elimination, and pivoting · LU, pivot choice, and ordered triangular solves](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-column-permutation`
 
@@ -2521,7 +2521,7 @@ No. A triangular solve costs \(O(n^{2})\), so doubling n roughly quadruples that
 
 </details>
 
-Sources: [Heath · Ch. 2 review · repeated systems · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review · repeated systems · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113); [Study sheet §7 · Rank, low-rank approximation, and cost · Concrete savings, factorization costs, and product association](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-many-b-cost`
 
@@ -2540,7 +2540,7 @@ The upper-triangular solve. The last equation isolates the last unknown.
 
 </details>
 
-Sources: [Heath · Ch. 2 review · repeated systems · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113)
+Sources: [Heath · Ch. 2 review · repeated systems · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=113); [Study sheet §3 · Linear systems, elimination, and pivoting · LU, pivot choice, and ordered triangular solves](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-forward-backward`
 
@@ -2578,7 +2578,7 @@ Yes. \(\operatorname{diag}(1,10^{-12})\) is positive definite but has condition 
 
 </details>
 
-Sources: [Heath · Ch. 2 review, printed p. 95 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116); [Review · 2.17](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+Sources: [Heath · Ch. 2 review, printed p. 95 · companion concept check](../courses/harvard/am205/Scientific%20Computing%20An%20Introductory%20Survey.pdf#page=116); [Review · 2.17](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [Study sheet §2 · Norms, conditioning, and stability · Condition numbers, scaling, digit loss, and counterexamples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-spd-sensitive`
 
@@ -23368,7 +23368,7 @@ No. \(1/3\) has a repeating binary expansion, so it must be rounded. Exactly sto
 
 </details>
 
-Sources: [Review · 1.7](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+Sources: [Review · 1.7](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1); [Study sheet §1 · Floating-point arithmetic · Machine epsilon, rounding, spacing examples, and representability](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-exact-operands`
 
@@ -23387,7 +23387,7 @@ With the same IEEE format and rounding mode, no: \(a+b\) and \(b+a\) round the s
 
 </details>
 
-Sources: [Review · 1.9 · commutativity](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+Sources: [Review · 1.9 · commutativity](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1); [Study sheet §1 · Floating-point arithmetic · Commutativity, associativity, cancellation, underflow, and Gram symmetry](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-commutative-rounding`
 
@@ -23406,7 +23406,7 @@ The gaps within this interval are \(2^{54-52}=4\). The gap immediately above \(2
 
 </details>
 
-Sources: [Review · spacing companion](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+Sources: [Review · spacing companion](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1); [Study sheet §1 · Floating-point arithmetic · Machine epsilon, rounding, spacing examples, and representability](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-gap-at-54`
 
@@ -23425,7 +23425,7 @@ Card ID: `am205-quiz1-gap-at-54`
 
 </details>
 
-Sources: [Review · rounding companion](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+Sources: [Review · rounding companion](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1); [Study sheet §1 · Floating-point arithmetic · Machine epsilon, rounding, spacing examples, and representability](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-round-at-54`
 
@@ -23444,7 +23444,7 @@ For \(i>j\), a nonzero term in \((AB)_{ij}=\sum_k A_{ik}B_{kj}\) would need both
 
 </details>
 
-Sources: [Review · 2.7](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+Sources: [Review · 2.7](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1); [Study sheet §3 · Linear systems, elimination, and pivoting · Triangular and symmetric products; Cholesky](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-upper-product`
 
@@ -23463,7 +23463,7 @@ No. For example, \[\begin{bmatrix}1&0\\1&1\end{bmatrix}\begin{bmatrix}1&1\\0&1\e
 
 </details>
 
-Sources: [Review · 2.7 companion · authored example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+Sources: [Review · 2.7 companion · authored example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1); [Study sheet §3 · Linear systems, elimination, and pivoting · Triangular and symmetric products; Cholesky](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-lower-upper-product`
 
@@ -23482,7 +23482,7 @@ Exactly when they commute: \(AB=BA\). Since \((AB)^T=B^TA^T=BA\), symmetry of ea
 
 </details>
 
-Sources: [Review · 2.8](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1)
+Sources: [Review · 2.8](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=1); [Study sheet §3 · Linear systems, elimination, and pivoting · Triangular and symmetric products; Cholesky](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-symmetric-product`
 
@@ -23501,7 +23501,7 @@ Yes. \(\operatorname{diag}(1,0)=I\operatorname{diag}(1,0)\) is an LU factorizati
 
 </details>
 
-Sources: [Review · 2.15](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+Sources: [Review · 2.15](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [Study sheet §3 · Linear systems, elimination, and pivoting · LU, pivot choice, and ordered triangular solves](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-singular-lu`
 
@@ -23520,7 +23520,7 @@ The 1-norm is 2, the 2-norm is \(\sqrt2\), and the infinity-norm is 1. Generally
 
 </details>
 
-Sources: [Review · 2.21 companion](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [2023 · Q9](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+Sources: [Review · 2.21 companion](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [2023 · Q9](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1); [Study sheet §2 · Norms, conditioning, and stability · Basic vector and matrix norms, zero norm, and singular matrices](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-vector-norm-order`
 
@@ -23539,7 +23539,7 @@ No. \(A=\operatorname{diag}(1,0)\) is singular but \(\|A\|_2=1\). Singularity me
 
 </details>
 
-Sources: [Review · 2.21](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+Sources: [Review · 2.21](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [Study sheet §2 · Norms, conditioning, and stability · Basic vector and matrix norms, zero norm, and singular matrices](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-singular-norm`
 
@@ -23558,7 +23558,7 @@ No. Each is a norm, and a norm is zero only for the zero matrix. In particular, 
 
 </details>
 
-Sources: [Review · 2.23 and companions](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+Sources: [Review · 2.23 and companions](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [Study sheet §2 · Norms, conditioning, and stability · Basic vector and matrix norms, zero norm, and singular matrices](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-zero-norm`
 
@@ -23577,7 +23577,7 @@ For any real \(t\), \[A((1-t)x_1+tx_2)=(1-t)b+tb=b.\] If \(x_1\ne x_2\), varying
 
 </details>
 
-Sources: [Review · 2.28 · proof](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+Sources: [Review · 2.28 · proof](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [Study sheet §3 · Linear systems, elimination, and pivoting · Solution structure and reversible transformations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-solution-line-proof`
 
@@ -23596,7 +23596,7 @@ No. \(PAx=Pb\) contains the same equations in a different order. Multiplying by 
 
 </details>
 
-Sources: [Review · 2.32(a)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+Sources: [Review · 2.32(a)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [Study sheet §3 · Linear systems, elimination, and pivoting · Solution structure and reversible transformations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-row-permutation`
 
@@ -23615,7 +23615,7 @@ Card ID: `am205-quiz1-row-permutation`
 
 </details>
 
-Sources: [Review · 2.32(b)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+Sources: [Review · 2.32(b)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [Study sheet §3 · Linear systems, elimination, and pivoting · Solution structure and reversible transformations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-column-coordinates`
 
@@ -23634,7 +23634,7 @@ Card ID: `am205-quiz1-column-coordinates`
 
 </details>
 
-Sources: [Review · 2.32(c)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2)
+Sources: [Review · 2.32(c)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=2); [Study sheet §3 · Linear systems, elimination, and pivoting · Solution structure and reversible transformations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-invertible-left`
 
@@ -23653,7 +23653,7 @@ The exact solution is unchanged, but the residual becomes \(r_{\mathrm{new}}=\al
 
 </details>
 
-Sources: [Review · 2.33(a–b)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3)
+Sources: [Review · 2.33(a–b)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3); [Study sheet §2 · Norms, conditioning, and stability · Stability, residual interpretation, and scale](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-residual-rescale`
 
@@ -23672,7 +23672,7 @@ Yes. Let \(A=\operatorname{diag}(1,10^{-6})\) and \(D=\operatorname{diag}(1,10^6
 
 </details>
 
-Sources: [Review · 2.34(a–b) · authored example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3)
+Sources: [Review · 2.34(a–b) · authored example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3); [Study sheet §3 · Linear systems, elimination, and pivoting · Solution structure and reversible transformations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-diagonal-row-scaling`
 
@@ -23691,7 +23691,7 @@ Yes. Initially the first row wins. Multiplying row 2 by 3 makes the column \((2,
 
 </details>
 
-Sources: [Review · 2.34(c) · authored example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3)
+Sources: [Review · 2.34(c) · authored example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3); [Study sheet §3 · Linear systems, elimination, and pivoting · Solution structure and reversible transformations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-scaling-pivot`
 
@@ -23712,7 +23712,7 @@ No pivoting: 4. Partial pivoting: 6, the largest magnitude in column 1. Complete
 
 </details>
 
-Sources: [Review · 2.39](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3)
+Sources: [Review · 2.39](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3); [Study sheet §3 · Linear systems, elimination, and pivoting · LU, pivot choice, and ordered triangular solves](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-three-pivots`
 
@@ -23731,7 +23731,7 @@ Compute the row \(x^TA\) in \(O(n^2)\), then its outer product with x in \(O(n^2
 
 </details>
 
-Sources: [Review · 2.46](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3)
+Sources: [Review · 2.46](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=3); [Study sheet §7 · Rank, low-rank approximation, and cost · Concrete savings, factorization costs, and product association](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-outer-association`
 
@@ -23750,7 +23750,7 @@ Solve \(Ly=b\) by forward substitution, then set \(x=P^Ty\). The intermediate va
 
 </details>
 
-Sources: [Review · 2.49(a)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+Sources: [Review · 2.49(a)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4); [Study sheet §3 · Linear systems, elimination, and pivoting · LU, pivot choice, and ordered triangular solves](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-lp-solve`
 
@@ -23769,7 +23769,7 @@ First form \(P^Tb\), then solve \(Lx=P^Tb\) by forward substitution. Here the pe
 
 </details>
 
-Sources: [Review · 2.49(b)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+Sources: [Review · 2.49(b)](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4); [Study sheet §3 · Linear systems, elimination, and pivoting · LU, pivot choice, and ordered triangular solves](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-pl-solve`
 
@@ -23788,7 +23788,7 @@ Exactly when b lies in the column space of A: some linear combination of A’s c
 
 </details>
 
-Sources: [Review · 3.5](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+Sources: [Review · 3.5](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4); [Study sheet §5 · QR and least squares · Least-squares geometry, exact fits, uniqueness, and normal equations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-exact-fit`
 
@@ -23807,7 +23807,7 @@ No. With \(A=[1\;1]\) and \(b=1\), every pair satisfying \(x_1+x_2=1\) fits exac
 
 </details>
 
-Sources: [Review · 3.6 · authored example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+Sources: [Review · 3.6 · authored example](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4); [Study sheet §5 · QR and least squares · Least-squares geometry, exact fits, uniqueness, and normal equations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-exact-nonunique`
 
@@ -23826,7 +23826,7 @@ No. Its reflecting direction must be chosen from the vector being reduced. For e
 
 </details>
 
-Sources: [Review · 3.8](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+Sources: [Review · 3.8](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4); [Study sheet §4 · Orthogonality and Householder reflections · Householder formula, geometric action, normalization, proof, and targeting](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-reflector-designed`
 
@@ -23845,7 +23845,7 @@ At the minimum, the residual \(b-Ax\) is perpendicular to every column of A. Thu
 
 </details>
 
-Sources: [Review · 3.14](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+Sources: [Review · 3.14](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4); [Study sheet §5 · QR and least squares · Least-squares geometry, exact fits, uniqueness, and normal equations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-normal-equations`
 
@@ -23864,7 +23864,7 @@ No. \(\kappa_2(A^TA)=\kappa_2(A)^2\), but when \(\kappa_2(A)=1\), both equal 1. 
 
 </details>
 
-Sources: [Review · 3.14 · equality case](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+Sources: [Review · 3.14 · equality case](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4); [Study sheet §5 · QR and least squares · Least-squares geometry, exact fits, uniqueness, and normal equations](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-normal-condition-one`
 
@@ -23883,7 +23883,7 @@ Compute their dot product: \(x^Ty=0\). For example, \((1,2)^T\) and \((2,-1)^T\)
 
 </details>
 
-Sources: [Review · 3.19](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+Sources: [Review · 3.19](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4); [Study sheet §4 · Orthogonality and Householder reflections · Orthogonality, norm preservation, inverse, determinant, and diagonal tests](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-orthogonal-dot`
 
@@ -23902,7 +23902,7 @@ No. Take \(x=z=(1,0)^T\) and \(y=(0,1)^T\). Both are perpendicular to y, but \(x
 
 </details>
 
-Sources: [Review · 3.20](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4)
+Sources: [Review · 3.20](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=4); [Study sheet §4 · Orthogonality and Householder reflections · Orthogonality, norm preservation, inverse, determinant, and diagonal tests](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-orthogonality-not-transitive`
 
@@ -23921,7 +23921,7 @@ Card ID: `am205-quiz1-orthogonality-not-transitive`
 
 </details>
 
-Sources: [Review · 3.23 and companions](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+Sources: [Review · 3.23 and companions](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5); [Study sheet §4 · Orthogonality and Householder reflections · Orthogonality, norm preservation, inverse, determinant, and diagonal tests](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-orthogonal-norms`
 
@@ -23959,7 +23959,7 @@ Card ID: `am205-quiz1-orthogonal-example`
 
 </details>
 
-Sources: [Review · 3.27](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+Sources: [Review · 3.27](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5); [Study sheet §4 · Orthogonality and Householder reflections · Householder formula, geometric action, normalization, proof, and targeting](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-householder-unit`
 
@@ -23978,7 +23978,7 @@ No. \((ww^T)^T=ww^T\), so \(H^T=H\) for any real w. Unit length is required for 
 
 </details>
 
-Sources: [Review · 3.27 · symmetry](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+Sources: [Review · 3.27 · symmetry](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5); [Study sheet §4 · Orthogonality and Householder reflections · Householder formula, geometric action, normalization, proof, and targeting](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-householder-symmetric`
 
@@ -23997,7 +23997,7 @@ Write \(x=aw+z\) with \(w^Tz=0\). Then \(Hx=-aw+z\): the component along w flips
 
 </details>
 
-Sources: [Review · 3.27 · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+Sources: [Review · 3.27 · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5); [Study sheet §4 · Orthogonality and Householder reflections · Householder formula, geometric action, normalization, proof, and targeting](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-householder-geometric`
 
@@ -24016,7 +24016,7 @@ Card ID: `am205-quiz1-householder-geometric`
 
 </details>
 
-Sources: [Review · 3.28](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+Sources: [Review · 3.28](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5); [Study sheet §4 · Orthogonality and Householder reflections · Householder formula, geometric action, normalization, proof, and targeting](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-householder-alpha`
 
@@ -24035,7 +24035,7 @@ The largest stretch of A is \(\sigma_{\max}\). The inverse has largest stretch \
 
 </details>
 
-Sources: [Review · 3.43](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+Sources: [Review · 3.43](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5); [Study sheet §2 · Norms, conditioning, and stability · Condition numbers, scaling, digit loss, and counterexamples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-singular-condition`
 
@@ -24054,7 +24054,7 @@ At most \(n-1\). Each step clears the entries below one diagonal position. The l
 
 </details>
 
-Sources: [Review · Householder QR](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5)
+Sources: [Review · Householder QR](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=5); [Study sheet §5 · QR and least squares · Square reflector count and symmetric tridiagonalization](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-reflector-count`
 
@@ -24073,7 +24073,7 @@ Card ID: `am205-quiz1-reflector-count`
 
 </details>
 
-Sources: [Review · SVD and least squares](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=6)
+Sources: [Review · SVD and least squares](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=6); [Study sheet §5 · QR and least squares · QR and SVD solution methods](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-svd-solve`
 
@@ -24092,7 +24092,7 @@ It projects b onto the possible fitted vectors. If b is in that space, \(QQ^Tb=b
 
 </details>
 
-Sources: [Review · QR and projection](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=6)
+Sources: [Review · QR and projection](../courses/harvard/am205/quiz/quiz1/quiz1review.pdf#page=6); [Study sheet §5 · QR and least squares · Projection actions and perturbation bounds](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-qr-projector`
 
@@ -24130,7 +24130,7 @@ Yes: \(A=\operatorname{diag}(4,3)\). Its largest singular value is 4, while \(\|
 
 </details>
 
-Sources: [2023 · Q4](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+Sources: [2023 · Q4](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1); [Study sheet §2 · Norms, conditioning, and stability · Basic vector and matrix norms, zero norm, and singular matrices](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-norms-four-five`
 
@@ -24149,7 +24149,7 @@ Yes. Every real matrix has \(A=U\Sigma V^T\), with orthogonal factors and nonneg
 
 </details>
 
-Sources: [2023 · Q5](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+Sources: [2023 · Q5](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1); [Study sheet §6 · SVD and the geometry of a matrix · Existence, normalization, signs, and SVD construction example](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-svd-exists`
 
@@ -24168,7 +24168,7 @@ No. Taking determinants of \(Q^TQ=I\) gives \((\det Q)^2=1\), so \(\det Q=\pm1\)
 
 </details>
 
-Sources: [2023 · Q6](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+Sources: [2023 · Q6](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1); [Study sheet §4 · Orthogonality and Householder reflections · Orthogonality, norm preservation, inverse, determinant, and diagonal tests](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-orthogonal-determinant`
 
@@ -24187,7 +24187,7 @@ Under the same IEEE format and rounding mode, no. Both orders round the same exa
 
 </details>
 
-Sources: [2023 · Q7](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+Sources: [2023 · Q7](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1); [Study sheet §1 · Floating-point arithmetic · Commutativity, associativity, cancellation, underflow, and Gram symmetry](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-product-commutes`
 
@@ -24206,7 +24206,7 @@ Exactly when every diagonal entry is +1 or −1. For \(D=\operatorname{diag}(d_i
 
 </details>
 
-Sources: [2023 · Q8](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+Sources: [2023 · Q8](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1); [Study sheet §4 · Orthogonality and Householder reflections · Orthogonality, norm preservation, inverse, determinant, and diagonal tests](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-diagonal-orthogonal`
 
@@ -24225,7 +24225,7 @@ Card ID: `am205-quiz1-diagonal-orthogonal`
 
 </details>
 
-Sources: [2023 · Q10 · rank-one step](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+Sources: [2023 · Q10 · rank-one step](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1); [Study sheet §7 · Rank, low-rank approximation, and cost · Rank bounds, rank-one constructions, and error examples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-cross-formula`
 
@@ -24265,7 +24265,7 @@ Roughly \(10^{10}\): the rule of thumb is digits lost \(\approx\log_{10}\kappa(A
 
 </details>
 
-Sources: [2023 · Q12](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1)
+Sources: [2023 · Q12](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=1); [Study sheet §2 · Norms, conditioning, and stability · Condition numbers, scaling, digit loss, and counterexamples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-six-digits`
 
@@ -24284,7 +24284,7 @@ B is 10000×100 and C is 100×10000, so together they store 2,000,000 numbers. A
 
 </details>
 
-Sources: [2023 · Q13](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+Sources: [2023 · Q13](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2); [Study sheet §7 · Rank, low-rank approximation, and cost · Concrete savings, factorization costs, and product association](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-rank-storage`
 
@@ -24303,7 +24303,7 @@ Compute \(y=Cx\), then \(By\). Each stage takes 1,000,000 multiplications, total
 
 </details>
 
-Sources: [2023 · Q14](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+Sources: [2023 · Q14](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2); [Study sheet §7 · Rank, low-rank approximation, and cost · Concrete savings, factorization costs, and product association](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-rank-matvec`
 
@@ -24322,7 +24322,7 @@ It produces a bounded ellipsoid lying in a 100-dimensional column space. Its non
 
 </details>
 
-Sources: [2023 · Q15](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+Sources: [2023 · Q15](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2); [Study sheet §6 · SVD and the geometry of a matrix · Ellipsoid geometry and norm-product alignment](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-rank-ball`
 
@@ -24341,7 +24341,7 @@ When \(A^T(b_1-b_2)=0\): their difference is perpendicular to A’s column space
 
 </details>
 
-Sources: [2023 · Q16](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+Sources: [2023 · Q16](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2); [Study sheet §5 · QR and least squares · Projection actions and perturbation bounds](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-same-fit`
 
@@ -24360,7 +24360,7 @@ Expand: \[I-4ww^T+4w(w^Tw)w^T.\] Since \(w^Tw=1\), the last two terms cancel. Th
 
 </details>
 
-Sources: [2023 · Q17](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+Sources: [2023 · Q17](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2); [Study sheet §4 · Orthogonality and Householder reflections · Householder formula, geometric action, normalization, proof, and targeting](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-householder-proof`
 
@@ -24379,7 +24379,7 @@ Normalize them and absorb their lengths into the middle scaling. For \(C=[(1,0,1
 
 </details>
 
-Sources: [2023 · Q18 · normalize factors](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+Sources: [2023 · Q18 · normalize factors](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2); [Study sheet §6 · SVD and the geometry of a matrix · Existence, normalization, signs, and SVD construction example](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-svd-normalize`
 
@@ -24398,7 +24398,7 @@ Card ID: `am205-quiz1-svd-normalize`
 
 </details>
 
-Sources: [2023 · Q18 · singular values](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+Sources: [2023 · Q18 · singular values](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2); [Study sheet §6 · SVD and the geometry of a matrix · Existence, normalization, signs, and SVD construction example](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-svd-factor-example`
 
@@ -24419,7 +24419,7 @@ Card ID: `am205-quiz1-svd-factor-example`
 
 </details>
 
-Sources: [2023 · Q18 · singular vectors](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+Sources: [2023 · Q18 · singular vectors](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2); [Study sheet §6 · SVD and the geometry of a matrix · Existence, normalization, signs, and SVD construction example](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-svd-factor-vectors`
 
@@ -24438,7 +24438,7 @@ No. Singular values are nonnegative. Absorb a negative sign into a singular vect
 
 </details>
 
-Sources: [2023 · Q18 · sign convention](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2)
+Sources: [2023 · Q18 · sign convention](../courses/harvard/am205/quiz/quiz1/solns23.pdf#page=2); [Study sheet §6 · SVD and the geometry of a matrix · Existence, normalization, signs, and SVD construction example](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-svd-signs`
 
@@ -24457,7 +24457,7 @@ An infinity-norm ball is an axis-aligned square in 2D, while a Euclidean ball is
 
 </details>
 
-Sources: [2024 · Q2](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
+Sources: [2024 · Q2](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1); [Study sheet §5 · QR and least squares · Alternative error norms and contact geometry](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-infinity-fit-geometry`
 
@@ -24476,7 +24476,7 @@ Card ID: `am205-quiz1-infinity-fit-geometry`
 
 </details>
 
-Sources: [2024 · Q2 · authored companion](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
+Sources: [2024 · Q2 · authored companion](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1); [Study sheet §5 · QR and least squares · Alternative error norms and contact geometry](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-infinity-fit-example`
 
@@ -24495,7 +24495,7 @@ Card ID: `am205-quiz1-infinity-fit-example`
 
 </details>
 
-Sources: [2024 · Q2 · authored companion](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
+Sources: [2024 · Q2 · authored companion](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1); [Study sheet §5 · QR and least squares · Alternative error norms and contact geometry](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-two-fit-objectives`
 
@@ -24514,7 +24514,7 @@ Solves benefit from a modest condition number and a stable algorithm. Compressio
 
 </details>
 
-Sources: [2024 · Q3](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
+Sources: [2024 · Q3](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1); [Study sheet §7 · Rank, low-rank approximation, and cost · Rank bounds, rank-one constructions, and error examples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-solve-vs-compress`
 
@@ -24533,7 +24533,7 @@ Not when there are many unit entries. Its condition number is huge, but dropping
 
 </details>
 
-Sources: [2024 · Q3 · authored counterexample](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1)
+Sources: [2024 · Q3 · authored counterexample](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=1); [Study sheet §7 · Rank, low-rank approximation, and cost · Rank bounds, rank-one constructions, and error examples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-condition-not-rank`
 
@@ -24554,7 +24554,7 @@ Card ID: `am205-quiz1-condition-not-rank`
 
 </details>
 
-Sources: [2024 · Q4](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+Sources: [2024 · Q4](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2); [Study sheet §7 · Rank, low-rank approximation, and cost · Rank bounds, rank-one constructions, and error examples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-flag-rank`
 
@@ -24575,7 +24575,7 @@ Card ID: `am205-quiz1-flag-rank`
 
 </details>
 
-Sources: [2024 · Q4 · rank-one decomposition](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+Sources: [2024 · Q4 · rank-one decomposition](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2); [Study sheet §7 · Rank, low-rank approximation, and cost · Rank bounds, rank-one constructions, and error examples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-flag-decompose`
 
@@ -24594,7 +24594,7 @@ The leading cost for \(m\ge n\) is \(mn^2-n^3/3\). The ratio is \((2-1/3)/(1-1/3
 
 </details>
 
-Sources: [2024 · Q5](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+Sources: [2024 · Q5](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2); [Study sheet §7 · Rank, low-rank approximation, and cost · Concrete savings, factorization costs, and product association](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-tall-factor-cost`
 
@@ -24613,7 +24613,7 @@ Yes, to leading order. QR costs \(2mn^2-2n^3/3\), twice the corresponding LU for
 
 </details>
 
-Sources: [2024 · Q5 · QR companion](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+Sources: [2024 · Q5 · QR companion](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2); [Study sheet §7 · Rank, low-rank approximation, and cost · Concrete savings, factorization costs, and product association](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-tall-qr-cost`
 
@@ -24632,7 +24632,7 @@ For every unit x, \(\|ABx\|_2\le\|A\|_2\|Bx\|_2\le\|A\|_2\|B\|_2\). Maximize ove
 
 </details>
 
-Sources: [2024 · Q6 · bound](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+Sources: [2024 · Q6 · bound](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2); [Study sheet §6 · SVD and the geometry of a matrix · Ellipsoid geometry and norm-product alignment](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-product-norm-bound`
 
@@ -24651,7 +24651,7 @@ When some input maximally stretched by B is sent into an input direction maximal
 
 </details>
 
-Sources: [2024 · Q6 · equality](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+Sources: [2024 · Q6 · equality](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2); [Study sheet §6 · SVD and the geometry of a matrix · Ellipsoid geometry and norm-product alignment](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-product-norm-alignment`
 
@@ -24670,7 +24670,7 @@ Card ID: `am205-quiz1-product-norm-alignment`
 
 </details>
 
-Sources: [2024 · Q6 · authored companion](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2)
+Sources: [2024 · Q6 · authored companion](../courses/harvard/am205/quiz/quiz1/solns24.pdf#page=2); [Study sheet §6 · SVD and the geometry of a matrix · Ellipsoid geometry and norm-product alignment](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-product-norm-example`
 
@@ -24689,7 +24689,7 @@ Yes. Paired entries use the same products in reverse operand order. If both dot 
 
 </details>
 
-Sources: [2025 · Q1](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1)
+Sources: [2025 · Q1](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1); [Study sheet §1 · Floating-point arithmetic · Commutativity, associativity, cancellation, underflow, and Gram symmetry](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-rounded-gram`
 
@@ -24708,7 +24708,7 @@ Entries \((3,1),(4,1),(5,1)\) and their symmetric partners \((1,3),(1,4),(1,5)\)
 
 </details>
 
-Sources: [2025 · Q2 · zero pattern](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1)
+Sources: [2025 · Q2 · zero pattern](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1); [Study sheet §5 · QR and least squares · Square reflector count and symmetric tridiagonalization](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-similarity-zeros`
 
@@ -24727,7 +24727,7 @@ The top-left entry: \(e_1^TH^TAHe_1=e_1^TAe_1=A_{11}\), because \(He_1=e_1\). Ot
 
 </details>
 
-Sources: [2025 · Q2 · unchanged entry](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1)
+Sources: [2025 · Q2 · unchanged entry](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1); [Study sheet §5 · QR and least squares · Square reflector count and symmetric tridiagonalization](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-similarity-fixed`
 
@@ -24746,7 +24746,7 @@ For orthogonal H, \(H^T=H^{-1}\), so the two-sided update is a similarity transf
 
 </details>
 
-Sources: [2025 · Q2 · authored companion](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1)
+Sources: [2025 · Q2 · authored companion](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1); [Study sheet §5 · QR and least squares · Square reflector count and symmetric tridiagonalization](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-similarity-spectrum`
 
@@ -24765,7 +24765,7 @@ No. It guarantees symmetry, not positive definiteness. For \(A=-I\), the sum is 
 
 </details>
 
-Sources: [2025 · Q3](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1)
+Sources: [2025 · Q3](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1); [Study sheet §3 · Linear systems, elimination, and pivoting · Triangular and symmetric products; Cholesky](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-symmetric-not-spd`
 
@@ -24784,7 +24784,7 @@ Cholesky takes about \(n^3/3\) floating-point operations, versus \(2n^3/3\) for 
 
 </details>
 
-Sources: [2025 · Q3 · operation counts](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1)
+Sources: [2025 · Q3 · operation counts](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=1); [Study sheet §3 · Linear systems, elimination, and pivoting · Triangular and symmetric products; Cholesky](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md); [Study sheet §7 · Rank, low-rank approximation, and cost · Concrete savings, factorization costs, and product association](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-cholesky-work`
 
@@ -24805,7 +24805,7 @@ Card ID: `am205-quiz1-cholesky-work`
 
 </details>
 
-Sources: [2025 · Q4 · complete-pivot approximation](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+Sources: [2025 · Q4 · complete-pivot approximation](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2); [Study sheet §7 · Rank, low-rank approximation, and cost · Rank bounds, rank-one constructions, and error examples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-cross-two`
 
@@ -24824,7 +24824,7 @@ Card ID: `am205-quiz1-cross-two`
 
 </details>
 
-Sources: [2025 · Q4 · Frobenius error](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+Sources: [2025 · Q4 · Frobenius error](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2); [Study sheet §7 · Rank, low-rank approximation, and cost · Rank bounds, rank-one constructions, and error examples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-cross-two-error`
 
@@ -24843,7 +24843,7 @@ No. The fitted-vector change is \(\delta\hat b=P\delta b\), with \(P=QQ^T\). Ort
 
 </details>
 
-Sources: [2025 · Q5 · prediction sensitivity](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+Sources: [2025 · Q5 · prediction sensitivity](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2); [Study sheet §5 · QR and least squares · Projection actions and perturbation bounds](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-fit-contraction`
 
@@ -24862,7 +24862,7 @@ Yes. \(\delta x=A^+\delta b\), so \(\|\delta x\|_2\le\|\delta b\|_2/\sigma_{\min
 
 </details>
 
-Sources: [2025 · Q5 · coefficient sensitivity](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+Sources: [2025 · Q5 · coefficient sensitivity](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2); [Study sheet §5 · QR and least squares · Projection actions and perturbation bounds](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-coefficient-sensitivity`
 
@@ -24881,7 +24881,7 @@ Card ID: `am205-quiz1-coefficient-sensitivity`
 
 </details>
 
-Sources: [2025 · Q5 · equality direction](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+Sources: [2025 · Q5 · equality direction](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2); [Study sheet §5 · QR and least squares · Projection actions and perturbation bounds](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-worst-target-direction`
 
@@ -24900,7 +24900,7 @@ Bound \(\|AB\|_2\) by \(\|A\|_2\|B\|_2\), and \(\|(AB)^{-1}\|_2=\|B^{-1}A^{-1}\|
 
 </details>
 
-Sources: [2025 · Q6 · product bound](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+Sources: [2025 · Q6 · product bound](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2); [Study sheet §2 · Norms, conditioning, and stability · Condition numbers, scaling, digit loss, and counterexamples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-product-condition-bound`
 
@@ -24919,7 +24919,7 @@ At most 4, and 4 is attainable. Take \(A=B=\operatorname{diag}(1,1/2)\); then \(
 
 </details>
 
-Sources: [2025 · Q6 · product construction](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+Sources: [2025 · Q6 · product construction](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2); [Study sheet §2 · Norms, conditioning, and stability · Condition numbers, scaling, digit loss, and counterexamples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-product-condition-four`
 
@@ -24938,6 +24938,1015 @@ No. Choose \(A=\operatorname{diag}(1,1/2)\) and \(B=\operatorname{diag}(1,-1/2)\
 
 </details>
 
-Sources: [2025 · Q6 · sum counterexample](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2)
+Sources: [2025 · Q6 · sum counterexample](../courses/harvard/am205/quiz/quiz1/solns25.pdf#page=2); [Study sheet §2 · Norms, conditioning, and stability · Condition numbers, scaling, digit loss, and counterexamples](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-quiz1-sum-condition-unbounded`
+
+---
+
+### 1300. How can a number be within binary64’s range but still fail to fit exactly?
+
+**AM 205 · Floating-point arithmetic · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Range limits the exponent; precision limits the significant bits. Binary64 has 53 significant binary digits, about 16 decimal digits. For example, \(2^{53}+1\) is far below overflow but needs more precision than the format provides.
+
+**Intuition:** Having room for a magnitude does not mean having room for every nearby value.
+
+</details>
+
+Sources: [Study sheet §1 · Floating-point arithmetic · precision range](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-precision-range`
+
+---
+
+### 1301. Why is binary64 spacing \(2^{e-52}\) in \([2^e,2^{e+1})\)?
+
+**AM 205 · Floating-point arithmetic · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The leading binary digit is fixed at 1, leaving 52 fractional bits. The least significant bit contributes \(2^{-52}\) to the significand; multiplying by \(2^e\) gives the gap.
+
+**Intuition:** Moving the exponent moves the entire representable grid.
+
+</details>
+
+Sources: [Study sheet §1 · Floating-point arithmetic · spacing rule](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-spacing-rule`
+
+---
+
+### 1302. What does \(\operatorname{fl}(a\circ b)=(a\circ b)(1+\delta)\) tell you about one operation?
+
+**AM 205 · Floating-point arithmetic · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For basic binary64 operations rounded to nearest, away from underflow and overflow, \(|\delta|\le2^{-53}\). The absolute error is bounded by unit roundoff times the exact result’s magnitude. This bounds one operation, not a whole algorithm.
+
+**Intuition:** Small local rounding errors can still accumulate or be amplified.
+
+</details>
+
+Sources: [Study sheet §1 · Floating-point arithmetic · rounding model](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-rounding-model`
+
+---
+
+### 1303. Why can an extremely small result lose relative accuracy even though it does not overflow?
+
+**AM 205 · Floating-point arithmetic · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It can enter the subnormal range, where the absolute spacing stays constant. As the result shrinks, that fixed spacing becomes a larger fraction of its size. Overflow instead concerns results too large for the exponent range.
+
+**Intuition:** Near zero, the usual relative-error model can stop applying.
+
+</details>
+
+Sources: [Study sheet §1 · Floating-point arithmetic · underflow vs overflow](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-underflow-vs-overflow`
+
+---
+
+### 1304. For \(x=(-3,4,0)^T\), what are the 1-, 2-, and infinity-norms?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(\|x\|_1=3+4=7\), \(\|x\|_2=\sqrt{9+16}=5\), and \(\|x\|_\infty=4\). Take absolute values before summing or maximizing.
+
+**Intuition:** The signs do not cancel when measuring size.
+
+</details>
+
+Sources: [Study sheet §2 · Norms, conditioning, and stability · Vector norm formulas · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-vector-norm-practice`
+
+---
+
+### 1305. Why can \(\|x\|_1\) be up to \(\sqrt n\) times \(\|x\|_2\)?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Cauchy–Schwarz gives \(\sum_i|x_i|\le\sqrt{\sum_i1^2}\sqrt{\sum_i x_i^2}=\sqrt n\|x\|_2\). Equal-magnitude components attain the bound.
+
+**Intuition:** Spreading size across many coordinates increases the total absolute size.
+
+</details>
+
+Sources: [Study sheet §2 · Norms, conditioning, and stability · norm dimension bound](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-norm-dimension-bound`
+
+---
+
+### 1306. If every coordinate has magnitude at most M, how large can a length-n vector’s Euclidean norm be?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+At most \(\sqrt n M\), since \(\sum_i x_i^2\le nM^2\). Therefore \(\|x\|_2\le\sqrt n\|x\|_\infty\). All coordinates of magnitude M attain equality.
+
+**Intuition:** The Euclidean norm combines n bounded squared contributions.
+
+</details>
+
+Sources: [Study sheet §2 · Norms, conditioning, and stability · max coordinate bound](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-max-coordinate-bound`
+
+---
+
+### 1307. If two same-sized matrices have 2-norms 3 and 4, must their sum have norm 7?
+
+**AM 205 · Matrix conditioning · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The triangle inequality gives only \(\|A+B\|_2\le7\). Cancellation can make the sum much smaller; for scalars 3 and −4, the absolute value of their sum is 1.
+
+**Intuition:** An upper bound need not be the actual result.
+
+</details>
+
+Sources: [Study sheet §2 · Norms, conditioning, and stability · Triangle inequality · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-norm-triangle`
+
+---
+
+### 1308. If every matrix entry is multiplied by −3, what happens to its norm and condition number?
+
+**AM 205 · Matrix conditioning · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Any matrix norm triples: \(\|-3A\|=3\|A\|\). If A is invertible, its induced-norm condition number stays unchanged because the inverse norm is divided by 3.
+
+**Intuition:** Absolute size changes; relative imbalance between directions does not.
+
+</details>
+
+Sources: [Study sheet §2 · Norms, conditioning, and stability · Homogeneity versus conditioning · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-norm-scalar`
+
+---
+
+### 1309. For a full-column-rank tall matrix, what replaces the inverse in its 2-norm condition number?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The pseudoinverse: \(\kappa_2(A)=\|A\|_2\|A^+\|_2=\sigma_1/\sigma_n\). Here n is the number of columns. If column rank is lost, the sheet’s convention gives infinite condition number.
+
+**Intuition:** Unique coefficients require every input direction to survive.
+
+</details>
+
+Sources: [Study sheet §2 · Norms, conditioning, and stability · rectangular condition](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-rectangular-condition`
+
+---
+
+### 1310. Does a condition number of a million mean every input perturbation is amplified a millionfold?
+
+**AM 205 · Matrix conditioning · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It describes worst-case relative sensitivity. The actual effect depends on the right-hand side and perturbation direction; many perturbations can have a much smaller effect.
+
+**Intuition:** Conditioning identifies possible vulnerability, not inevitable error.
+
+</details>
+
+Sources: [Study sheet §2 · Norms, conditioning, and stability · worst case not every](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-worst-case-not-every`
+
+---
+
+### 1311. For fixed invertible A, how can relative error in b bound relative error in x?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For nonzero b and \(Ax=b\), \[\frac{\|\delta x\|}{\|x\|}\le\kappa(A)\frac{\|\delta b\|}{\|b\|}.\] Use \(\delta x=A^{-1}\delta b\) and \(\|b\|\le\|A\|\|x\|\). A stays fixed in this bound.
+
+**Intuition:** The inverse amplifies the perturbation; the original map sets the reference scale.
+
+</details>
+
+Sources: [Study sheet §2 · Norms, conditioning, and stability · relative rhs bound](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-relative-rhs-bound`
+
+---
+
+### 1312. What does a backward-stable solver promise about its computed answer?
+
+**AM 205 · Conditioning vs stability · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It solves a nearby input problem exactly, with a small perturbation relative to the input scale. It does not promise a small error in the answer when the original problem is ill-conditioned.
+
+**Intuition:** A good algorithm cannot remove the problem’s own sensitivity.
+
+</details>
+
+Sources: [Study sheet §2 · Norms, conditioning, and stability · backward stable](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-backward-stable`
+
+---
+
+### 1313. If \(r=b-A\hat x\), what is the exact relation between residual and solution error?
+
+**AM 205 · Linear-system verification · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For invertible A with \(Ax=b\), \(A(x-\hat x)=r\), hence \(x-\hat x=A^{-1}r\). The opposite error convention \(\hat x-x\) has a minus sign.
+
+**Intuition:** State the error direction before choosing its sign.
+
+</details>
+
+Sources: [Study sheet §2 · Norms, conditioning, and stability · residual to error](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-residual-to-error`
+
+---
+
+### 1314. With condition number \(10^6\) and relative residual \(10^{-8}\), what relative solution-error bound follows?
+
+**AM 205 · Linear-system verification · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+At most \(10^{-2}\), using \(\|x-\hat x\|/\|x\|\le\kappa(A)\|r\|/\|b\|\) for invertible A and nonzero b. This is an upper bound, not a prediction of the actual error.
+
+**Intuition:** A tiny residual can still allow a noticeable solution error.
+
+</details>
+
+Sources: [Study sheet §2 · Norms, conditioning, and stability · Residual error bound · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-relative-residual-bound`
+
+---
+
+### 1315. How can you scale a residual using both the matrix and right-hand side?
+
+**AM 205 · Linear-system verification · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Use \(\|b-A\hat x\|/(\|A\|\|\hat x\|+\|b\|)\) when the denominator is nonzero. Multiplying A and b by the same nonzero scalar scales numerator and denominator equally.
+
+**Intuition:** Judge the leftover against the sizes that produced it.
+
+</details>
+
+Sources: [Study sheet §2 · Norms, conditioning, and stability · scaled residual formula](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-scaled-residual-formula`
+
+---
+
+### 1316. What guarantees exactly one solution to \(Ax=b\) for every b when A is square?
+
+**AM 205 · Linear systems · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A must be invertible. Then \(x=A^{-1}b\) exists and is unique. If A is singular, some targets are unreachable and reachable targets have nonunique solutions.
+
+**Intuition:** An invertible map both reaches every output and keeps inputs distinct.
+
+</details>
+
+Sources: [Study sheet §3 · Linear systems, elimination, and pivoting · unique system](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-unique-system`
+
+---
+
+### 1317. If \(A\ne0\) and \(Ax=Ay\), can you conclude \(x=y\)?
+
+**AM 205 · Linear systems · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Take \(A=\operatorname{diag}(1,0)\), \(x=(0,1)^T\), and \(y=(0,0)^T\). Both outputs are zero. Cancellation requires a trivial null space; full column rank suffices even for a rectangular matrix.
+
+**Intuition:** A nonzero map can still erase an entire direction.
+
+</details>
+
+Sources: [Study sheet §3 · Linear systems, elimination, and pivoting · cannot cancel](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-cannot-cancel`
+
+---
+
+### 1318. What must a real symmetric matrix do in every nonzero direction to be positive definite?
+
+**AM 205 · Structured factorizations · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It must satisfy \(x^TAx>0\) for every nonzero x. Equivalently, every eigenvalue is positive. One negative or zero eigenvalue violates positive definiteness, even if many directions give positive values.
+
+**Intuition:** Positive definiteness is a statement about every direction, not selected entries.
+
+</details>
+
+Sources: [Study sheet §3 · Linear systems, elimination, and pivoting · spd directions](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-spd-directions`
+
+---
+
+### 1319. If Q is tall with orthonormal columns, are both \(Q^TQ\) and \(QQ^T\) identities?
+
+**AM 205 · Geometry of linear maps · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Only \(Q^TQ=I_n\). For \(m>n\), \(QQ^T\) has rank n, so it cannot equal \(I_m\). It projects onto the n-dimensional space spanned by Q’s columns.
+
+**Intuition:** A tall Q embeds a smaller space; it cannot cover every output direction.
+
+</details>
+
+Sources: [Study sheet §4 · Orthogonality and Householder reflections · thin q identity](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-thin-q-identity`
+
+---
+
+### 1320. How do you build a Householder reflector that sends nonzero x onto the first coordinate axis?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Choose \(\alpha=-\operatorname{sign}(x_1)\|x\|_2\), taking the sign as +1 at zero. Set \(v=x-\alpha e_1\), normalize \(w=v/\|v\|_2\), and use \(H=I-2ww^T\). Then \(Hx=\alpha e_1\).
+
+**Intuition:** Reflect across the plane halfway between the original and target vectors.
+
+</details>
+
+Sources: [Study sheet §4 · Orthogonality and Householder reflections · reflector construct](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-reflector-construct`
+
+---
+
+### 1321. Why choose \(\alpha\) with the opposite sign to \(x_1\) when forming \(v=x-\alpha e_1\)?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Then \(|v_1|=|x_1|+\|x\|_2\). You add magnitudes instead of subtracting nearly equal numbers, avoiding cancellation in the vector used to construct the reflector.
+
+**Intuition:** Both target signs work geometrically; one is safer numerically.
+
+</details>
+
+Sources: [Study sheet §4 · Orthogonality and Householder reflections · reflector sign](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-reflector-sign`
+
+---
+
+### 1322. For \(x=(3,4)^T\), what are \(\alpha\) and the normalized reflector direction w?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(\|x\|_2=5\), so \(\alpha=-5\) and \(v=(8,4)^T\). Normalize to \(w=(2,1)^T/\sqrt5\). The resulting reflector sends x to \((-5,0)^T\).
+
+**Intuition:** The construction turns a tail-clearing goal into one normalized vector.
+
+</details>
+
+Sources: [Study sheet §4 · Orthogonality and Householder reflections · Constructing a reflector · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-reflector-example`
+
+---
+
+### 1323. Why does \(v=x-\alpha e_1\) give \(Hx=\alpha e_1\) when \(\alpha^2=\|x\|_2^2\) and v is nonzero?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(v^Tx=\|x\|_2^2-\alpha x_1\), while \(v^Tv=2(\|x\|_2^2-\alpha x_1)\). Thus \(2v(v^Tx)/(v^Tv)=v\), and \(Hx=x-v=\alpha e_1\).
+
+**Intuition:** The correction subtracts exactly the difference between input and target.
+
+</details>
+
+Sources: [Study sheet §4 · Orthogonality and Householder reflections · reflector proof target](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-reflector-proof-target`
+
+---
+
+### 1324. What should a Householder routine do if the vector to clear is zero?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Skip the reflection or use the identity. There is no tail to clear, and normalizing \(v=0\) would divide by zero. If only the tail is already zero, a reflection can also be skipped when the diagonal sign is unrestricted.
+
+**Intuition:** Handle a finished elimination step before normalizing.
+
+</details>
+
+Sources: [Study sheet §4 · Orthogonality and Householder reflections · Constructing a reflector · boundary case](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-reflector-zero-input`
+
+---
+
+### 1325. In thin QR of a full-column-rank 7×3 matrix, what are the shapes of Q and R?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Q is 7×3 with three orthonormal columns. R is 3×3, upper triangular and invertible. Their product has the original 7×3 shape; \(Q^TQ=I_3\).
+
+**Intuition:** Q supplies output directions; R supplies their coordinates.
+
+</details>
+
+Sources: [Study sheet §5 · QR and least squares · Thin QR dimensions · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-thin-qr-shapes`
+
+---
+
+### 1326. Why can a tall \(m\times n\) matrix need n Householder steps when a square matrix needs at most n−1?
+
+**AM 205 · Householder reflections · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+When \(m>n\), the last column can still have entries below row n. That final tail may need clearing. In a square matrix, the last diagonal entry already sits in the final row.
+
+**Intuition:** The remaining rows determine whether the final column needs work.
+
+</details>
+
+Sources: [Study sheet §5 · QR and least squares · tall reflectors](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-tall-reflectors`
+
+---
+
+### 1327. Why does full column rank guarantee unique least-squares coefficients even when an exact fit is impossible?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The closest fitted vector in the column space is unique. Full column rank means \(Ax_1=Ax_2\) implies \(x_1=x_2\), so exactly one coefficient vector produces that projection.
+
+**Intuition:** Projection chooses the fitted vector; injectivity makes its coordinates unique.
+
+</details>
+
+Sources: [Study sheet §5 · QR and least squares · unique ls](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-unique-ls`
+
+---
+
+### 1328. Why does the QR least-squares objective split into two squared lengths?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Write \(Ax-b=Q(Rx-Q^Tb)-(I-QQ^T)b\). The first term lies in Q’s column space, and the second is perpendicular. Pythagoras and \(Q^TQ=I\) give \[\|Ax-b\|_2^2=\|Rx-Q^Tb\|_2^2+\|(I-QQ^T)b\|_2^2.\]
+
+**Intuition:** Separate the error you can change from the error outside the model.
+
+</details>
+
+Sources: [Study sheet §5 · QR and least squares · qr pythagoras](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-qr-pythagoras`
+
+---
+
+### 1329. If \(Rx=Q^Tb\) is solved exactly, does that mean \(Ax=b\)?
+
+**AM 205 · Least-squares algorithms · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Only if b lies in A’s column space. Solving the triangular system removes the adjustable error; the perpendicular residual \((I-QQ^T)b\) can remain nonzero.
+
+**Intuition:** Exact arithmetic in a least-squares solve does not guarantee an exact fit.
+
+</details>
+
+Sources: [Study sheet §5 · QR and least squares · qr inconsistent](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-qr-inconsistent`
+
+---
+
+### 1330. Thin QR gives the displayed R and \(Q^Tb\). What are the least-squares coefficients?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+\[R=\begin{bmatrix}2&1\\0&3\end{bmatrix},\qquad Q^Tb=\begin{bmatrix}8\\6\end{bmatrix}.\]
+
+<details>
+<summary>Reveal explanation</summary>
+
+Back substitution gives \(x_2=2\), then \(2x_1+2=8\), so \(x_1=3\). The coefficient vector is \((3,2)^T\).
+
+**Intuition:** Use the last triangular equation first.
+
+</details>
+
+Sources: [Study sheet §5 · QR and least squares · QR solve · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-qr-small-solve`
+
+---
+
+### 1331. Why does projecting with \(P=QQ^T\) twice give the same result as projecting once?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(P^2=Q(Q^TQ)Q^T=QQ^T=P\), since Q’s columns are orthonormal. After the first projection, the vector already lies in the target space. Also \(P^T=P\), expressing orthogonal projection.
+
+**Intuition:** Once a vector is in the fitted space, another projection cannot change it.
+
+</details>
+
+Sources: [Study sheet §5 · QR and least squares · projector twice](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-projector-twice`
+
+---
+
+### 1332. Why is \(AA^+\) the fitted-value projector even when A is rank deficient?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For compact SVD, \(AA^+=U_r\Sigma_rV_r^TV_r\Sigma_r^{-1}U_r^T=U_rU_r^T\). The columns of \(U_r\) span exactly the reachable outputs.
+
+**Intuition:** The pseudoinverse cancels the nonzero stretches and keeps the reachable directions.
+
+</details>
+
+Sources: [Study sheet §5 · QR and least squares · pseudoinverse projector](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-pseudoinverse-projector`
+
+---
+
+### 1333. Why is a 2D 1-norm unit ball a diamond while an infinity-norm unit ball is a square?
+
+**AM 205 · Least-squares algorithms · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The 1-norm constraint \(|x|+|y|\le1\) trades one coordinate’s size against the other. The infinity constraint \(\max(|x|,|y|)\le1\) independently bounds each coordinate. The Euclidean constraint \(x^2+y^2\le1\) gives a disk.
+
+**Intuition:** Different error budgets allow different combinations of coordinate errors.
+
+</details>
+
+Sources: [Study sheet §5 · QR and least squares · norm balls](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-norm-balls`
+
+---
+
+### 1334. For a rank-2 matrix of size 5×3, what are the compact SVD factor shapes?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(U_r\) is 5×2, \(\Sigma_r\) is 2×2, and \(V_r\) is 3×2. Thus \(U_r\Sigma_rV_r^T\) is 5×3. The two diagonal singular values are positive.
+
+**Intuition:** Compact SVD stores only directions that survive the map.
+
+</details>
+
+Sources: [Study sheet §6 · SVD and the geometry of a matrix · Compact SVD dimensions · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-compact-svd-shapes`
+
+---
+
+### 1335. What happens to a right singular vector \(v_i\) when A acts on it?
+
+**AM 205 · Geometry of linear maps · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(Av_i=\sigma_i u_i\): the input unit direction becomes an output unit direction scaled by its singular value. Conversely, \(A^Tu_i=\sigma_i v_i\).
+
+**Intuition:** Right vectors live in the input space; left vectors live in the output space.
+
+</details>
+
+Sources: [Study sheet §6 · SVD and the geometry of a matrix · svd directions](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-svd-directions`
+
+---
+
+### 1336. Which singular vectors describe the column space and which describe the row space?
+
+**AM 205 · Geometry of linear maps · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Left singular vectors with positive singular values span the column space. Their matching right singular vectors span the row space. These spaces can live in different dimensions for a rectangular matrix.
+
+**Intuition:** Reachable outputs and effective input directions are different spaces.
+
+</details>
+
+Sources: [Study sheet §6 · SVD and the geometry of a matrix · svd column row](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-svd-column-row`
+
+---
+
+### 1337. How does the SVD reveal input directions that A completely erases?
+
+**AM 205 · Geometry of linear maps · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+In a full SVD, right singular directions with zero stretch satisfy \(Av=0\) and span the null space. A rank-r matrix with n columns has \(n-r\) such independent directions. The compact SVD omits them.
+
+**Intuition:** Zero singular directions represent invisible input changes.
+
+</details>
+
+Sources: [Study sheet §6 · SVD and the geometry of a matrix · svd nullspace](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-svd-nullspace`
+
+---
+
+### 1338. Why are the squared singular values eigenvalues of \(A^TA\)?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+From \(Av_i=\sigma_i u_i\) and \(A^Tu_i=\sigma_i v_i\), \(A^TAv_i=\sigma_i^2v_i\). Equivalently, \(A^TA=V\Sigma^T\Sigma V^T\) in a full SVD.
+
+**Intuition:** Applying the map and its transpose produces a squared stretch.
+
+</details>
+
+Sources: [Study sheet §6 · SVD and the geometry of a matrix · svd eigenvalues](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-svd-eigenvalues`
+
+---
+
+### 1339. After finding normalized eigenvectors of \(A^TA\), how do you finish an SVD by hand?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For each positive eigenvalue \(\lambda_i\), set \(\sigma_i=\sqrt{\lambda_i}\) and \(u_i=Av_i/\sigma_i\). Order the singular values and keep matching vectors together. Do not divide by a zero singular value.
+
+**Intuition:** Normalize the transformed eigenvector to separate direction from length.
+
+</details>
+
+Sources: [Study sheet §6 · SVD and the geometry of a matrix · svd by hand](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-svd-by-hand`
+
+---
+
+### 1340. Why is forming \(A^TA\) useful by hand but risky for computing tiny singular values numerically?
+
+**AM 205 · Least-squares algorithms · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It squares the singular values and, for full column rank, the condition number. Rounding in the Gram matrix can obscure weak directions. Numerical SVD methods generally avoid explicitly forming it.
+
+**Intuition:** An algebraically valid construction is not always a reliable numerical algorithm.
+
+</details>
+
+Sources: [Study sheet §6 · SVD and the geometry of a matrix · svd gram caution](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-svd-gram-caution`
+
+---
+
+### 1341. For invertible \(A=U\Sigma V^T\), why is the inverse \(V\Sigma^{-1}U^T\)?
+
+**AM 205 · Least-squares algorithms · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Undo the output rotation with \(U^T\), undo each nonzero stretch with \(\Sigma^{-1}\), then return to input coordinates with V. Multiplying the factors confirms the identity.
+
+**Intuition:** Invert a sequence by reversing its order and undoing each step.
+
+</details>
+
+Sources: [Study sheet §6 · SVD and the geometry of a matrix · svd inverse](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-svd-inverse`
+
+---
+
+### 1342. Does a rank-deficient map always send the unit sphere to only an ellipsoid’s boundary?
+
+**AM 205 · Geometry of linear maps · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. For \(A=\operatorname{diag}(2,0)\), the unit circle maps onto the whole segment \([-2,2]\times\{0\}\). A null-space component can fill out the input’s unit length without changing its output.
+
+**Intuition:** Collapsing directions can turn a boundary into a filled image.
+
+</details>
+
+Sources: [Study sheet §6 · SVD and the geometry of a matrix · Sphere-versus-ball caveat · authored counterexample to unrestricted sphere claim](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-sphere-collapse`
+
+---
+
+### 1343. A 3×3 matrix has singular values 5, 2, and 0. What are its rank, 2-norm, and condition number?
+
+**AM 205 · Matrix conditioning · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Rank 2, 2-norm 5, and infinite condition number under the sheet’s singular-matrix convention. Its Frobenius norm is \(\sqrt{25+4}=\sqrt{29}\).
+
+**Intuition:** Count positive stretches, take their maximum, and check whether any input direction disappears.
+
+</details>
+
+Sources: [Study sheet §6 · SVD and the geometry of a matrix · Read properties from singular values · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-singular-values-read`
+
+---
+
+### 1344. If a matrix contains a nonsingular 3×3 submatrix, what does that tell you about its rank?
+
+**AM 205 · Low-rank approximation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its rank is at least 3. Those selected columns cannot be dependent, because restricting a dependence to the selected rows would contradict invertibility of the submatrix. A three-outer-product decomposition would also show rank at most 3, proving equality.
+
+**Intuition:** Prove an exact rank by matching lower and upper bounds.
+
+</details>
+
+Sources: [Study sheet §7 · Rank, low-rank approximation, and cost · Nonsingular minor rank bound · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-rank-minor`
+
+---
+
+### 1345. Which rank-at-most-k approximation minimizes both spectral and Frobenius error?
+
+**AM 205 · Low-rank approximation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The truncated SVD \(A_k=\sum_{i=1}^k\sigma_i u_iv_i^T\), keeping the largest singular values. It preserves the strongest independent input-output patterns and discards the weakest ones.
+
+**Intuition:** Spend the rank budget on the directions that carry the most size.
+
+</details>
+
+Sources: [Study sheet §7 · Rank, low-rank approximation, and cost · truncated svd best](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-truncated-svd-best`
+
+---
+
+### 1346. After keeping k singular directions, why is the spectral error \(\sigma_{k+1}\)?
+
+**AM 205 · Low-rank approximation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The residual contains only discarded SVD terms. Its largest remaining singular value is \(\sigma_{k+1}\), so that is its maximum stretch. If all nonzero directions are kept, the error is zero.
+
+**Intuition:** Worst-direction error depends on the strongest discarded direction.
+
+</details>
+
+Sources: [Study sheet §7 · Rank, low-rank approximation, and cost · spectral tail](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-spectral-tail`
+
+---
+
+### 1347. Singular values are 8, 3, and 1. What errors result from the best rank-one approximation?
+
+**AM 205 · Low-rank approximation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The spectral error is 3. The Frobenius error is \(\sqrt{3^2+1^2}=\sqrt{10}\). Both ignore the retained singular value 8 and measure what was discarded.
+
+**Intuition:** One norm selects the largest leftover; the other combines all leftovers.
+
+</details>
+
+Sources: [Study sheet §7 · Rank, low-rank approximation, and cost · Truncated SVD errors · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-tail-error-practice`
+
+---
+
+### 1348. Does matching a pivot row and column make an elimination-based rank-one approximation optimal?
+
+**AM 205 · Low-rank approximation · COMPARE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The cross approximation enforces a local row-and-column match. Truncated SVD instead minimizes global spectral and Frobenius error. These objectives generally produce different approximations.
+
+**Intuition:** Matching selected entries exactly need not minimize total error.
+
+</details>
+
+Sources: [Study sheet §7 · Rank, low-rank approximation, and cost · elimination not optimal](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-elimination-not-optimal`
+
+---
+
+### 1349. When does storing \(A=BC\) use fewer numbers than a dense m×n matrix?
+
+**AM 205 · Low-rank computation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+With B of size m×r and C of size r×n, storage is \(r(m+n)\) instead of mn. It saves space when \(r<mn/(m+n)\). Merely having rank below \(\min(m,n)\) does not guarantee savings in this representation.
+
+**Intuition:** Factor storage pays off only when the inner dimension is small enough.
+
+</details>
+
+Sources: [Study sheet §7 · Rank, low-rank approximation, and cost · factor storage general](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-factor-storage-general`
+
+---
+
+### 1350. Why does a dense m×n matrix-vector product use mn multiplications but about 2mn flops?
+
+**AM 205 · Efficient linear solves · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Each of m row dot products uses n multiplications and n−1 additions. That is mn multiplications and \(m(2n-1)\) flops, approximately 2mn for large n.
+
+**Intuition:** State which operations you count before comparing costs.
+
+</details>
+
+Sources: [Study sheet §7 · Rank, low-rank approximation, and cost · flops vs products](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-flops-vs-products`
+
+---
+
+### 1351. For \(A=BC\) with inner dimension r, why multiply as \(B(Cx)\)?
+
+**AM 205 · Low-rank computation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Cx costs rn multiplications and B times that length-r vector costs mr, totaling \(r(m+n)\). Forming BC first destroys the computational saving and stores a dense matrix.
+
+**Intuition:** Pass through the small intermediate space.
+
+</details>
+
+Sources: [Study sheet §7 · Rank, low-rank approximation, and cost · factor matvec general](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-factor-matvec-general`
+
+---
+
+### 1352. If both dimensions of a square matrix double, how do dense LU and a triangular solve scale?
+
+**AM 205 · Efficient linear solves · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+LU’s leading \(\frac23n^3\) work grows by 8. A triangular solve’s \(O(n^2)\) work grows by 4. This differs from doubling only the rows of a tall factorization.
+
+**Intuition:** Track which dimensions change before applying a scaling rule.
+
+</details>
+
+Sources: [Study sheet §7 · Rank, low-rank approximation, and cost · Operation-count scaling · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
+
+Card ID: `am205-q1-sheet-square-cost-scaling`

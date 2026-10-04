@@ -1,4 +1,12 @@
 "use client";
+import { MaterialPicker } from "@/components/material-picker";
+import { StudyQuiz } from "@/components/study-quiz";
+import { chronological, shuffle, type StudyOrder } from "@/lib/study-session";
+import {
+  readQuizResults,
+  recordQuizResult,
+  type QuizResults,
+} from "@/lib/quiz";
 import { MathText } from "@/components/math-text";
 import { CardTutor } from "@/components/card-tutor";
 import { CardVisual } from "@/components/card-visual";
@@ -32,6 +40,9 @@ import {
 const curatedIds = new Set(curated.map((card) => card.id));
 type Progress = { saved: string[]; learned: string[] };
 export default function Home() {
+  const [studyOrder, setStudyOrder] = useState<StudyOrder>("adaptive");
+  const [quizCards, setQuizCards] = useState<Card[] | null>(null);
+  const [quizResults, setQuizResults] = useState<QuizResults>({});
   const [tutorCard, setTutorCard] = useState<Card | null>(null);
   const [allCards, setCards] = useState<Card[]>(curated);
   const [school, setSchool] = useState<string | null>(null);
@@ -113,6 +124,11 @@ export default function Home() {
           reviewsRef.current = restoredReviews;
           setReviews(restoredReviews);
           const activeIds = new Set(restored.map((c: Card) => c.id));
+          setQuizResults(readQuizResults(data.quizResults, activeIds));
+          if (
+            ["adaptive", "chronological", "shuffle"].includes(data.studyOrder)
+          )
+            setStudyOrder(data.studyOrder);
           setProgress({
             saved: data.progress.saved.filter((id: string) =>
               activeIds.has(id),
@@ -136,12 +152,14 @@ export default function Home() {
             progress,
             reviews,
             learningVersion: 1,
+            quizResults,
+            studyOrder,
           }),
         );
       } catch {
         setMessage("Browser storage is full. This session will not be saved.");
       }
-  }, [allCards, progress, reviews, ready]);
+  }, [allCards, progress, reviews, quizResults, studyOrder, ready]);
   const groups = [
     ...studyGroups(cards, "topics"),
     ...studyGroups(cards, "lectures"),
@@ -174,16 +192,20 @@ export default function Home() {
         (!studyIds || studyIds.includes(c.id)),
     );
     const selection =
-      view === "saved" || practice
-        ? filtered
-        : [
-            ...learningQueue(filtered, reviewsRef.current, Date.now()),
-            ...(studyIds
-              ? filtered.filter(
-                  (c) => reviewsRef.current[c.id]?.due > Date.now(),
-                )
-              : []),
-          ];
+      studyOrder === "chronological"
+        ? chronological(filtered)
+        : studyOrder === "shuffle"
+          ? shuffle(filtered)
+          : view === "saved" || practice
+            ? filtered
+            : [
+                ...learningQueue(filtered, reviewsRef.current, Date.now()),
+                ...(studyIds
+                  ? filtered.filter(
+                      (c) => reviewsRef.current[c.id]?.due > Date.now(),
+                    )
+                  : []),
+              ];
     setQueue(
       selection.map((card) => ({ card, key: `${card.id}:${Date.now()}` })),
     );
@@ -193,9 +215,10 @@ export default function Home() {
     reel.current?.scrollTo({ top: 0, behavior: "instant" });
     setActiveCard(0);
     // Ratings deliberately do not reorder the card being read.
-  }, [cards, course, view, ready, practice, session, studyIds]);
+  }, [cards, course, view, ready, practice, session, studyIds, studyOrder]);
   useEffect(() => {
-    if (!ready || practice || view !== "feed") return;
+    if (!ready || practice || view !== "feed" || studyOrder !== "adaptive")
+      return;
     setQueue((current) => {
       const due = cards.filter(
         (c) =>
@@ -220,7 +243,17 @@ export default function Home() {
         ...current.slice(insertAt),
       ];
     });
-  }, [clock, ready, practice, view, cards, course, activeCard, studyIds]);
+  }, [
+    clock,
+    ready,
+    practice,
+    view,
+    cards,
+    course,
+    activeCard,
+    studyIds,
+    studyOrder,
+  ]);
   const visible = queue.filter(
     (entry) => view !== "saved" || progress.saved.includes(entry.card.id),
   );
@@ -246,13 +279,14 @@ export default function Home() {
   const resetProgress = () => {
     if (
       !window.confirm(
-        "Reset all learning progress on this device? This clears recall ratings and review dates. Your course material and saved cards will stay.",
+        "Reset all learning progress on this device? This clears recall ratings, review dates, and quiz results. Your course material and saved cards will stay.",
       )
     )
       return;
     reviewsRef.current = {};
     ratedRef.current.clear();
     setReviews({});
+    setQuizResults({});
     setRated({});
     setRevealed([]);
     seenAnswers.current.clear();
@@ -373,9 +407,7 @@ export default function Home() {
             <Layers3 size={19} /> Study
           </button>
         </nav>
-        <div className="nav-label course-label">
-          YOUR COURSES
-        </div>
+        <div className="nav-label course-label">YOUR COURSES</div>
         <div className="course-nav">
           {courses.map((c, i) => (
             <button
@@ -454,7 +486,7 @@ export default function Home() {
               </h1>
               <p>
                 {view === "study"
-                  ? "Mix topics or lectures into your own study session."
+                  ? "Choose a set. Build recall with cards, or check your understanding with a quiz."
                   : view === "saved"
                     ? "The ideas you want to come back to."
                     : view === "courses"
@@ -476,7 +508,7 @@ export default function Home() {
           )}
           <div className="content-grid">
             <div className="feed-column">
-              <div className="filters">
+              <div className="filters" hidden={view === "study"}>
                 {(view === "feed" ? courses : ["All courses", ...courses]).map(
                   (c) => (
                     <button
@@ -552,159 +584,45 @@ export default function Home() {
                 </section>
               )}
               {view === "study" ? (
-                <section
-                  className="study-picker"
-                  aria-label="Choose study material"
-                >
-                  <div className="study-picker-toolbar">
-                    <div className="study-modes" aria-label="Group material by">
-                      {(["topics", "lectures"] as const).map((mode) => (
-                        <button
-                          key={mode}
-                          aria-pressed={groupMode === mode}
-                          onClick={() => setGroupMode(mode)}
-                        >
-                          {mode === "topics" ? "Topics" : "Lectures / chapters"}
-                        </button>
-                      ))}
-                    </div>
-                    <button
-                      onClick={() => {
-                        setStudyIds(null);
-                        setCourse("All courses");
-                        setView("saved");
-                      }}
-                    >
-                      Saved cards (
-                      {
-                        progress.saved.filter((id) =>
-                          cards.some((card) => card.id === id),
-                        ).length
-                      }
-                      )
-                    </button>
-                  </div>
-                  {!courses.length && (
-                    <div className="school-empty">
-                      <h2>Your {school} folder is ready.</h2>
-                      <p>
-                        Course material for this school hasn’t been added yet.
-                      </p>
-                    </div>
-                  )}
-                  <p className="study-help">
-                    Select any combination. Overlapping cards appear once.
-                    Reviews due come first, followed by new cards and early
-                    practice.
-                  </p>
-                  {courses
-                    .filter((c) => course === "All courses" || c === course)
-                    .map((c) => (
-                      <details
-                        className="study-course"
-                        key={c}
-                        open={course === c || courses.length === 1}
-                      >
-                        <summary>
-                          {c}
-                          <span>
-                            {
-                              groups.filter(
-                                (g) =>
-                                  g.course === c &&
-                                  selectedGroups.includes(g.id),
-                              ).length
-                            }{" "}
-                            selected
-                          </span>
-                        </summary>
-                        <label className="study-group study-whole-course">
-                          <input
-                            type="checkbox"
-                            checked={groups
-                              .filter(
-                                (g) => g.course === c && g.mode === "topics",
-                              )
-                              .every((g) => selectedGroups.includes(g.id))}
-                            onChange={(event) => {
-                              const ids = groups
-                                .filter(
-                                  (g) => g.course === c && g.mode === "topics",
-                                )
-                                .map((g) => g.id);
-                              setSelectedGroups((old) =>
-                                event.target.checked
-                                  ? [...new Set([...old, ...ids])]
-                                  : old.filter(
-                                      (id) =>
-                                        !groups.some(
-                                          (g) => g.course === c && g.id === id,
-                                        ),
-                                    ),
-                              );
-                            }}
-                          />
-                          <span>
-                            Entire {c}
-                            <small>
-                              {cards.filter((card) => card.course === c).length}{" "}
-                              cards
-                            </small>
-                          </span>
-                        </label>
-                        <div className="study-group-list">
-                          {groups
-                            .filter(
-                              (g) => g.course === c && g.mode === groupMode,
-                            )
-                            .map((group) => (
-                              <label key={group.id} className="study-group">
-                                <input
-                                  type="checkbox"
-                                  checked={selectedGroups.includes(group.id)}
-                                  onChange={() =>
-                                    setSelectedGroups((old) =>
-                                      old.includes(group.id)
-                                        ? old.filter((id) => id !== group.id)
-                                        : [...old, group.id],
-                                    )
-                                  }
-                                />
-                                <span>
-                                  {group.label}
-                                  <small>{group.cardIds.length} cards</small>
-                                </span>
-                              </label>
-                            ))}
-                        </div>
-                      </details>
-                    ))}
-                  <div className="study-start">
-                    <span aria-live="polite">
-                      {selectedIds.length} cards · {selectedGroups.length}{" "}
-                      groups
-                    </span>
-                    <button
-                      onClick={() => setSelectedGroups([])}
-                      disabled={!selectedGroups.length}
-                    >
-                      Clear selection
-                    </button>
-                    <button
-                      className="primary"
-                      disabled={!selectedIds.length}
-                      onClick={() => {
-                        setStudyIds(selectedIds);
-                        setCourse("All courses");
-                        setPractice(false);
-                        setSession((n) => n + 1);
-                        setView("feed");
-                      }}
-                    >
-                      Start studying <ArrowRight size={16} />
-                    </button>
-                  </div>
-                </section>
+                <MaterialPicker
+                  cards={cards}
+                  groups={groups}
+                  selected={selectedGroups}
+                  setSelected={setSelectedGroups}
+                  mode={groupMode}
+                  setMode={setGroupMode}
+                  order={studyOrder}
+                  setOrder={setStudyOrder}
+                  reviews={reviews}
+                  results={quizResults}
+                  savedCount={
+                    progress.saved.filter((id) =>
+                      cards.some((c) => c.id === id),
+                    ).length
+                  }
+                  onSaved={() => {
+                    setStudyIds(null);
+                    setCourse("All courses");
+                    setView("saved");
+                  }}
+                  onStart={() => {
+                    setStudyIds(selectedIds);
+                    setCourse("All courses");
+                    setPractice(false);
+                    setSession((n) => n + 1);
+                    setView("feed");
+                  }}
+                  onQuiz={() => {
+                    const eligible = cards.filter(
+                      (c) => selectedIds.includes(c.id) && curatedIds.has(c.id),
+                    );
+                    if (eligible.length) setQuizCards(eligible);
+                    else
+                      setMessage(
+                        "AI quizzes need built-in course cards. Your selected flashcards still work.",
+                      );
+                  }}
+                />
               ) : view === "courses" ? (
                 <div className="course-grid">
                   {courses
@@ -1071,7 +989,8 @@ export default function Home() {
                 <div>
                   <span>01</span>
                   <p>
-                    <strong>Choose your classes</strong>Pick the lectures you want to review.
+                    <strong>Choose your classes</strong>Pick the lectures you
+                    want to review.
                   </p>
                 </div>
                 <div>
@@ -1097,6 +1016,25 @@ export default function Home() {
           </div>
         </div>
       </main>
+      {quizCards && (
+        <StudyQuiz
+          cards={quizCards}
+          reviews={reviews}
+          results={quizResults}
+          onResult={(id, correct) =>
+            setQuizResults((old) => recordQuizResult(old, id, correct))
+          }
+          onClose={() => setQuizCards(null)}
+          onReview={(ids) => {
+            setQuizCards(null);
+            setStudyIds(ids);
+            setCourse("All courses");
+            setPractice(false);
+            setSession((n) => n + 1);
+            setView("feed");
+          }}
+        />
+      )}
       {tutorCard && (
         <CardTutor
           key={tutorCard.id}
