@@ -12,10 +12,12 @@ export function shuffle<T>(items: T[], random = Math.random): T[] {
 export function chronological(cards: Card[]): Card[] {
   function location(c: Card): [number, number] {
     const positions = (c.sources ?? []).map((s) => {
-      const numbered = s.path.match(/(?:lecture[_-]|(?:IF_)?ch|\/ps)(\d+)/i);
+      const numbered = s.path.match(/(?:lecture[_-]|\/F\d+-L|(?:IF_)?ch|\/ps)(\d+)/i);
+      const recorded = s.path.match(/\/F\d+-R(\d+)\.pdf$/i);
       const section = s.locator.match(/§(\d+)/);
       return [
-        numbered ? Number(numbered[1]) : 1000,
+        // Duke's recorded primer follows the corresponding live introduction.
+        numbered ? Number(numbered[1]) : recorded ? Number(recorded[1]) + 0.5 : 1000,
         s.page ?? (section ? Number(section[1]) : 0),
       ] as [number, number];
     });

@@ -241,3 +241,19 @@ test("AM 209a opens lecture flashcards without PDF links and persists reviews", 
   await expect(page.locator("article.study-card h2")).toHaveText(courseCards[0].title);
   await expect(page.locator(".learned-label")).toContainText("Reviewed");
 });
+
+test('desktop reveal stays beside the question and wheel advances without reading to the bottom', async ({page}) => {
+  await page.setViewportSize({width:1440,height:900});
+  await page.goto('/');await chooseCourses(page);
+  const card=page.locator('.reel-card').first(), question=card.locator('.question-content'), reel=page.locator('.reel-viewport');
+  const before=await question.boundingBox();
+  await card.getByRole('button',{name:'Recall your answer, then reveal.'}).click();
+  const panel=card.getByRole('region',{name:'Card explanation'});
+  await expect(panel).toBeVisible();
+  const after=await question.boundingBox(),right=await panel.boundingBox();
+  expect(after!.x).toBe(before!.x);expect(after!.y).toBe(before!.y);expect(right!.x).toBeGreaterThan(after!.x+after!.width);
+  expect(await card.locator('.card-reading').evaluate(e=>e.scrollHeight-e.clientHeight)).toBeLessThan(2);
+  await page.screenshot({path:'tmp/desktop-answer-panel.png',animations:'disabled'});
+  await question.hover();await page.mouse.wheel(0,600);
+  await expect.poll(()=>reel.evaluate(e=>e.scrollTop)).toBeGreaterThan(10);
+});

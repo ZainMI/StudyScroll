@@ -325,7 +325,7 @@ export default function Home() {
           <p>Your courses, your pace. Progress stays saved on this device.</p>
         </div>
         <div className="school-folders">
-          {["Harvard", "UBuffalo"].map((name) => {
+          {Array.from(new Set(allCards.map((card) => card.school ?? "Harvard"))).map((name) => {
             const schoolCards = allCards.filter(
               (card) => (card.school ?? "Harvard") === name,
             );
@@ -340,7 +340,7 @@ export default function Home() {
                 <strong>{name}</strong>
                 <span>
                   {count
-                    ? `${count} courses · ${schoolCards.length} cards`
+                    ? `${count} ${count === 1 ? "course" : "courses"} · ${schoolCards.length} cards`
                     : "Ready for your courses"}
                 </span>
                 <ArrowRight size={20} />
@@ -760,31 +760,22 @@ export default function Home() {
                                 : "NEW IDEA"}{" "}
                             · {card.kind}
                           </div>
-                          <div className="card-body">
-                            <h2>
-                              <MathText>{card.title}</MathText>
-                            </h2>
-                            {card.visual && <CardVisual visual={card.visual} />}
-                            {card.body && (
-                              <p>
-                                <MathText>{card.body}</MathText>
-                              </p>
-                            )}
-                            {open && (
-                              <div className="answer">
-                                <div>
-                                  <Sparkles size={16} /> THE IDEA
-                                </div>
+                          <div
+                            className={`card-body ${open ? "answer-open" : ""}`}
+                          >
+                            <div className="question-content">
+                              <h2>
+                                <MathText>{card.title}</MathText>
+                              </h2>
+                              {card.visual && (
+                                <CardVisual visual={card.visual} />
+                              )}
+                              {card.body && (
                                 <p>
-                                  <MathText>{card.answer}</MathText>
+                                  <MathText>{card.body}</MathText>
                                 </p>
-                                {card.takeaway && (
-                                  <strong className="takeaway">
-                                    <MathText>{card.takeaway}</MathText>
-                                  </strong>
-                                )}
-                              </div>
-                            )}
+                              )}
+                            </div>
                             <button
                               className={open ? "reveal revealed" : "reveal"}
                               onClick={() => {
@@ -805,48 +796,69 @@ export default function Home() {
                                 <ArrowRight size={17} />
                               )}
                             </button>
-                            {open && curatedIds.has(card.id) && (
-                              <button
-                                className="ask-card"
-                                onClick={() => setTutorCard(card)}
-                              >
-                                Ask about this
-                              </button>
-                            )}
-                            {open &&
-                              (practice || view === "saved" ? (
-                                <p className="review-status">
-                                  Browse mode · your review schedule stays
-                                  unchanged.
-                                </p>
-                              ) : rated[key] ? (
-                                <p className="review-status" role="status">
-                                  {rated[key]} · swipe for the next idea.
-                                </p>
-                              ) : (
-                                <div className="rating recall-rating">
-                                  <span>
-                                    Swipe for Easy · missed it? Choose Hard.
-                                  </span>
-                                  {(
-                                    [
-                                      ["again", "Again"],
-                                      ["hard", "Hard"],
-                                      ["good", "Easy"],
-                                      ["easy", "Super easy"],
-                                    ] as const
-                                  ).map(([rating, label]) => (
-                                    <button
-                                      key={rating}
-                                      onClick={() =>
-                                        rateCard(card, key, rating)
-                                      }
-                                    >
-                                      <strong>{label}</strong>
-                                    </button>
-                                  ))}
+                            <div
+                              className="explanation-panel"
+                              role={open ? "region" : undefined}
+                              aria-label={open ? "Card explanation" : undefined}
+                            >
+                              {open && (
+                                <div className="answer">
+                                  <div>
+                                    <Sparkles size={16} /> THE IDEA
+                                  </div>
+                                  <p>
+                                    <MathText>{card.answer}</MathText>
+                                  </p>
+                                  {card.takeaway && (
+                                    <strong className="takeaway">
+                                      <MathText>{card.takeaway}</MathText>
+                                    </strong>
+                                  )}
                                 </div>
-                              ))}
+                              )}
+                              {open && curatedIds.has(card.id) && (
+                                <button
+                                  className="ask-card"
+                                  onClick={() => setTutorCard(card)}
+                                >
+                                  Ask about this
+                                </button>
+                              )}
+                              {open &&
+                                (practice || view === "saved" ? (
+                                  <p className="review-status">
+                                    Browse mode · your review schedule stays
+                                    unchanged.
+                                  </p>
+                                ) : rated[key] ? (
+                                  <p className="review-status" role="status">
+                                    {rated[key]} · swipe for the next idea.
+                                  </p>
+                                ) : (
+                                  <div className="rating recall-rating">
+                                    <span>
+                                      Swipe for Easy · missed it? Choose Hard.
+                                    </span>
+                                    {(
+                                      [
+                                        ["again", "Again"],
+                                        ["hard", "Hard"],
+                                        ["good", "Easy"],
+                                        ["easy", "Super easy"],
+                                      ] as const
+                                    ).map(([rating, label]) => (
+                                      <button
+                                        key={rating}
+                                        onClick={() =>
+                                          rateCard(card, key, rating)
+                                        }
+                                      >
+                                        <strong>{label}</strong>
+                                      </button>
+                                    ))}
+                                  </div>
+                                ))}
+                            </div>
                           </div>
                           <footer className="card-footer">
                             <FileText size={14} />

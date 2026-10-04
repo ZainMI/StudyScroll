@@ -2299,3 +2299,24 @@ h1 {
 .study-start .study-settings { flex-basis: 100%; padding: 0 0 14px; border-bottom: 1px solid var(--line); }
 .study-picker > .selected-material { margin: 20px 0 0; }
 .study-whole-course:has(input:checked) { background: transparent; }
+
+/* Keep the mobile reveal sequence; desktop uses an independent reading panel. */
+.question-content, .explanation-panel { display: contents; }
+.reel-card .card-body .question-content > p { font-size: 17px; line-height: 1.8; color: #332a2d; margin-bottom: 28px; max-width: 60ch; }
+.reel-card .card-body > .reveal { order: 2; }
+.explanation-panel .answer { order: 1; }
+.explanation-panel .ask-card { order: 3; }
+.explanation-panel .rating, .explanation-panel .review-status { order: 4; }
+@media (min-width: 1024px) {
+  .reels-mode .page-content { max-width: 1320px; }
+  .reel-card .card-reading { overflow: hidden; }
+  .reel-card .card-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; gap: 20px 32px; flex: 1 1 0; min-height: 0; padding: 20px 30px 24px; }
+  .reel-card .question-content { display: flex; flex-direction: column; justify-content: safe center; grid-column: 1; grid-row: 1; min-height: 0; min-width: 0; overflow-y: auto; scrollbar-width: thin; }
+  .reel-card .card-body > .reveal { grid-column: 1; grid-row: 2; align-self: end; margin: 0; }
+  .reel-card .explanation-panel { display: flex; flex-direction: column; grid-column: 2; grid-row: 1 / 3; min-height: 0; min-width: 0; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; padding: 2px 8px 8px 2px; }
+  .reel-card .explanation-panel:empty { visibility: hidden; }
+  .reel-card .explanation-panel .answer { margin: 0 0 14px; }
+  .reel-card .explanation-panel .ask-card { flex-shrink: 0; }
+  .reel-card .explanation-panel .rating { flex-shrink: 0; }
+  .reel-card .card-body h2 { font-size: clamp(23px, 2vw, 30px); }
+}

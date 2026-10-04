@@ -1,5 +1,5 @@
 {
-  "scope": "Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2, the October 2026 Quiz 1 review, and 2023–2025 Quiz 1 solutions, and the comprehensive Quiz 1 study sheet with supporting concepts. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference.",
+  "scope": "Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2, the October 2026 Quiz 1 review, and 2023–2025 Quiz 1 solutions, and the comprehensive Quiz 1 study sheet with supporting concepts. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. Duke MATH 218D (Introduction to Linear Algebra) covers the four supplied PDFs: lectures 1, 3, and 9 and recorded lecture 1, including conceptual examples and proof steps. Missing lectures are not inferred; source corrections are documented in DUKE_LINEAR_ALGEBRA_COVERAGE.md.",
   "policy": "No minimum, maximum, or per-course card quota. Add, split, revise, and revisit cards according to conceptual coverage and observed recall gaps. A reviewed card is not evidence of mastery.",
   "units": [
     {
@@ -6224,6 +6224,1305 @@
           "concept": "§7 · Operation-count scaling · authored companion",
           "cardIds": [
             "am205-q1-sheet-square-cost-scaling"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "MATH 218D",
+      "title": "Linear models and solutions",
+      "status": "Flashcards authored and source-checked; recall not yet assessed",
+      "cardIds": [
+        "duke-218d-linear-unknowns",
+        "duke-218d-linear-rearrange",
+        "duke-218d-simultaneous",
+        "duke-218d-nonlinear-coefficient",
+        "duke-218d-traffic-conservation",
+        "duke-218d-traffic-node",
+        "duke-218d-traffic-global",
+        "duke-218d-traffic-redundancy",
+        "duke-218d-traffic-cycle",
+        "duke-218d-traffic-family",
+        "duke-218d-traffic-physical",
+        "duke-218d-fit-unknowns",
+        "duke-218d-fit-row",
+        "duke-218d-fit-columns",
+        "duke-218d-fit-overdetermined",
+        "duke-218d-fit-noisy",
+        "duke-218d-fit-leastsquares",
+        "duke-218d-fit-ellipse",
+        "duke-218d-rabbits-births",
+        "duke-218d-rabbits-survival",
+        "duke-218d-rabbits-state",
+        "duke-218d-rabbits-map",
+        "duke-218d-rabbits-scale",
+        "duke-218d-rabbits-ratio"
+      ],
+      "objectives": [
+        {
+          "concept": "Why is \\(3x-2y=7\\) linear but \\(xy=7\\) nonlinear?",
+          "cardIds": [
+            "duke-218d-linear-unknowns"
+          ]
+        },
+        {
+          "concept": "Does moving \\(2y\\) across the equals sign make \\(x=2y+3\\) nonlinear?",
+          "cardIds": [
+            "duke-218d-linear-rearrange"
+          ]
+        },
+        {
+          "concept": "A point satisfies one equation in a two-equation system. Is it a solution?",
+          "cardIds": [
+            "duke-218d-simultaneous"
+          ]
+        },
+        {
+          "concept": "Is \\(\\pi x+\\sqrt{2}y=5\\) linear even though its coefficients are not integers?",
+          "cardIds": [
+            "duke-218d-nonlinear-coefficient"
+          ]
+        },
+        {
+          "concept": "At a junction with no buildup of cars, what must incoming and outgoing traffic satisfy?",
+          "cardIds": [
+            "duke-218d-traffic-conservation"
+          ]
+        },
+        {
+          "concept": "A junction receives \\(120+w\\) cars per hour and sends out \\(250+x\\). What constraint follows?",
+          "cardIds": [
+            "duke-218d-traffic-node"
+          ]
+        },
+        {
+          "concept": "Why must the traffic network's total external inflow equal its total external outflow?",
+          "cardIds": [
+            "duke-218d-traffic-global"
+          ]
+        },
+        {
+          "concept": "Why can four junction equations leave a free traffic flow?",
+          "cardIds": [
+            "duke-218d-traffic-redundancy"
+          ]
+        },
+        {
+          "concept": "If every internal flow in a directed traffic cycle rises by 10, does junction balance change?",
+          "cardIds": [
+            "duke-218d-traffic-cycle"
+          ]
+        },
+        {
+          "concept": "The traffic solution is \\((x,y,z,w)=(t,t+50,t+190,t+130)\\). What does \\(t\\) represent?",
+          "cardIds": [
+            "duke-218d-traffic-family"
+          ]
+        },
+        {
+          "concept": "Which \\(t\\) values make \\((t,t+50,t+190,t+130)\\) physically valid directed flows?",
+          "cardIds": [
+            "duke-218d-traffic-physical"
+          ]
+        },
+        {
+          "concept": "Why is fitting \\(x^2+By^2+Cxy+Dx+Ey+F=0\\) linear in the unknown coefficients?",
+          "cardIds": [
+            "duke-218d-fit-unknowns"
+          ]
+        },
+        {
+          "concept": "What equation does the data point \\((0,2)\\) give in the conic model \\(x^2+By^2+Cxy+Dx+Ey+F=0\\)?",
+          "cardIds": [
+            "duke-218d-fit-row"
+          ]
+        },
+        {
+          "concept": "For \\(x^2+By^2+Cxy+Dx+Ey+F=0\\), why does each data point give the row \\([y^2,xy,x,y,1]\\)?",
+          "cardIds": [
+            "duke-218d-fit-columns"
+          ]
+        },
+        {
+          "concept": "Do six observations and five unknown coefficients automatically mean no exact fit?",
+          "cardIds": [
+            "duke-218d-fit-overdetermined"
+          ]
+        },
+        {
+          "concept": "Why might slightly noisy points have no single exact conic fit?",
+          "cardIds": [
+            "duke-218d-fit-noisy"
+          ]
+        },
+        {
+          "concept": "When exact fitting fails, what does least squares try to make small?",
+          "cardIds": [
+            "duke-218d-fit-leastsquares"
+          ]
+        },
+        {
+          "concept": "Does any solution for the coefficients in the conic model necessarily describe a real ellipse?",
+          "cardIds": [
+            "duke-218d-fit-ellipse"
+          ]
+        },
+        {
+          "concept": "If age-1 rabbits produce 6 offspring and age-2 rabbits produce 8, what is next year's newborn count?",
+          "cardIds": [
+            "duke-218d-rabbits-births"
+          ]
+        },
+        {
+          "concept": "If half the newborns survive to age 1, which count determines next year's age-1 population?",
+          "cardIds": [
+            "duke-218d-rabbits-survival"
+          ]
+        },
+        {
+          "concept": "Why do newborn, age-1, and age-2 rabbits need separate coordinates?",
+          "cardIds": [
+            "duke-218d-rabbits-state"
+          ]
+        },
+        {
+          "concept": "What matrix updates the rabbit counts when births are \\(6y+8z\\) and half survive each age transition?",
+          "cardIds": [
+            "duke-218d-rabbits-map"
+          ]
+        },
+        {
+          "concept": "If every current age-group count doubles, what happens to next year's counts under the linear rabbit model?",
+          "cardIds": [
+            "duke-218d-rabbits-scale"
+          ]
+        },
+        {
+          "concept": "The rabbit model maps \\((16,4,1)\\) to \\((32,8,2)\\). What changes and what stays fixed?",
+          "cardIds": [
+            "duke-218d-rabbits-ratio"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "MATH 218D",
+      "title": "Geometry of solution sets",
+      "status": "Flashcards authored and source-checked; recall not yet assessed",
+      "cardIds": [
+        "duke-218d-line-equation",
+        "duke-218d-plane-equation",
+        "duke-218d-extra-coordinate",
+        "duke-218d-lines-one",
+        "duke-218d-lines-point",
+        "duke-218d-lines-same",
+        "duke-218d-lines-parallel",
+        "duke-218d-planes-line",
+        "duke-218d-planes-third",
+        "duke-218d-planes-pairwise",
+        "duke-218d-planes-options"
+      ],
+      "objectives": [
+        {
+          "concept": "What does one nontrivial linear equation in two unknowns describe geometrically?",
+          "cardIds": [
+            "duke-218d-line-equation"
+          ]
+        },
+        {
+          "concept": "What does one nontrivial linear equation in three unknowns usually leave free?",
+          "cardIds": [
+            "duke-218d-plane-equation"
+          ]
+        },
+        {
+          "concept": "Must a fourth coordinate in \\(\\mathbb R^4\\) represent time?",
+          "cardIds": [
+            "duke-218d-extra-coordinate"
+          ]
+        },
+        {
+          "concept": "Why do two nonparallel lines in the plane give a unique solution?",
+          "cardIds": [
+            "duke-218d-lines-one"
+          ]
+        },
+        {
+          "concept": "Does \\((3,1)\\) solve both \\(x-2y=1\\) and \\(3x+2y=11\\)?",
+          "cardIds": [
+            "duke-218d-lines-point"
+          ]
+        },
+        {
+          "concept": "Do \\(x-2y=1\\) and \\(3x-6y=3\\) give two independent constraints?",
+          "cardIds": [
+            "duke-218d-lines-same"
+          ]
+        },
+        {
+          "concept": "Why do \\(x-2y=1\\) and \\(3x-6y=6\\) have no common solution?",
+          "cardIds": [
+            "duke-218d-lines-parallel"
+          ]
+        },
+        {
+          "concept": "What is the intersection of two nonparallel planes in \\(\\mathbb R^3\\)?",
+          "cardIds": [
+            "duke-218d-planes-line"
+          ]
+        },
+        {
+          "concept": "The equations \\(x+y+z=1\\) and \\(x-z=0\\) give a line. What does adding \\(y=0\\) leave?",
+          "cardIds": [
+            "duke-218d-planes-third"
+          ]
+        },
+        {
+          "concept": "If every pair of three planes intersects, must all three share a point?",
+          "cardIds": [
+            "duke-218d-planes-pairwise"
+          ]
+        },
+        {
+          "concept": "Can a linear system have exactly two distinct solutions?",
+          "cardIds": [
+            "duke-218d-planes-options"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "MATH 218D",
+      "title": "Vectors and linear combinations",
+      "status": "Flashcards authored and source-checked; recall not yet assessed",
+      "cardIds": [
+        "duke-218d-vector-order",
+        "duke-218d-vector-size",
+        "duke-218d-coordinate-vectors",
+        "duke-218d-vector-zero-size",
+        "duke-218d-vector-scaling",
+        "duke-218d-vector-add-size",
+        "duke-218d-vector-add-example",
+        "duke-218d-dot-output",
+        "duke-218d-dot-cancellation",
+        "duke-218d-dot-self",
+        "duke-218d-dot-power",
+        "duke-218d-dot-linear",
+        "duke-218d-dot-sum",
+        "duke-218d-linear-combo",
+        "duke-218d-coordinate-expansion"
+      ],
+      "objectives": [
+        {
+          "concept": "Do \\((2,5)\\) and \\((5,2)\\) represent the same vector?",
+          "cardIds": [
+            "duke-218d-vector-order"
+          ]
+        },
+        {
+          "concept": "A vector has 100 coordinates, all zero. Is its geometric length 100?",
+          "cardIds": [
+            "duke-218d-vector-size"
+          ]
+        },
+        {
+          "concept": "What does multiplying the coordinate vector \\(e_2=(0,1,0)\\) by 5 do?",
+          "cardIds": [
+            "duke-218d-coordinate-vectors"
+          ]
+        },
+        {
+          "concept": "Are the zero vectors in \\(\\mathbb R^2\\) and \\(\\mathbb R^3\\) equal?",
+          "cardIds": [
+            "duke-218d-vector-zero-size"
+          ]
+        },
+        {
+          "concept": "What happens to each coordinate of a vector when it is multiplied by \\(-2\\)?",
+          "cardIds": [
+            "duke-218d-vector-scaling"
+          ]
+        },
+        {
+          "concept": "Why is adding a two-coordinate vector to a three-coordinate vector undefined here?",
+          "cardIds": [
+            "duke-218d-vector-add-size"
+          ]
+        },
+        {
+          "concept": "What is \\((2,-1)+(1,3)\\)?",
+          "cardIds": [
+            "duke-218d-vector-add-example"
+          ]
+        },
+        {
+          "concept": "Does the dot product of two three-coordinate vectors have three coordinates?",
+          "cardIds": [
+            "duke-218d-dot-output"
+          ]
+        },
+        {
+          "concept": "Can two nonzero real vectors have dot product zero?",
+          "cardIds": [
+            "duke-218d-dot-cancellation"
+          ]
+        },
+        {
+          "concept": "Can a real vector have a negative dot product with itself?",
+          "cardIds": [
+            "duke-218d-dot-self"
+          ]
+        },
+        {
+          "concept": "What is wrong with treating \\(v\\cdot v\\) as a vector that can be dotted with \\(v\\) again?",
+          "cardIds": [
+            "duke-218d-dot-power"
+          ]
+        },
+        {
+          "concept": "If \\(u\\cdot v=3\\), what is \\(u\\cdot(2v)\\)?",
+          "cardIds": [
+            "duke-218d-dot-linear"
+          ]
+        },
+        {
+          "concept": "Why does \\(u\\cdot(v+w)\\) equal \\(u\\cdot v+u\\cdot w\\)?",
+          "cardIds": [
+            "duke-218d-dot-sum"
+          ]
+        },
+        {
+          "concept": "What does \\(2u-3v\\) mean geometrically as a way to build a vector?",
+          "cardIds": [
+            "duke-218d-linear-combo"
+          ]
+        },
+        {
+          "concept": "Why can \\((a,b,c)\\) be written as \\(ae_1+be_2+ce_3\\)?",
+          "cardIds": [
+            "duke-218d-coordinate-expansion"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "MATH 218D",
+      "title": "Matrix operations and dimensions",
+      "status": "Flashcards authored and source-checked; recall not yet assessed",
+      "cardIds": [
+        "duke-218d-matrix-shape",
+        "duke-218d-matrix-index",
+        "duke-218d-matrix-diagonal",
+        "duke-218d-matrix-identity",
+        "duke-218d-matrix-zero",
+        "duke-218d-matrix-add",
+        "duke-218d-matrix-scalar",
+        "duke-218d-matrix-vector-column",
+        "duke-218d-matrix-vector-row",
+        "duke-218d-matrix-two-views",
+        "duke-218d-matrix-select-column",
+        "duke-218d-matrix-product-size",
+        "duke-218d-matrix-product-invalid",
+        "duke-218d-matrix-product-columns",
+        "duke-218d-matrix-product-entry",
+        "duke-218d-matrix-identity-sides",
+        "duke-218d-outer-shape",
+        "duke-218d-outer-sum",
+        "duke-218d-transpose-shape",
+        "duke-218d-inner-outer",
+        "duke-218d-symmetric-test",
+        "duke-218d-gram-entry",
+        "duke-218d-gram-symmetric",
+        "duke-218d-product-associative",
+        "duke-218d-product-distribute",
+        "duke-218d-transpose-product",
+        "duke-218d-transpose-twice",
+        "duke-218d-transpose-sum",
+        "duke-218d-matrix-power",
+        "duke-218d-product-commute",
+        "duke-218d-matrix-cancel",
+        "duke-218d-zero-product"
+      ],
+      "objectives": [
+        {
+          "concept": "A matrix has 3 rows and 2 columns. What sizes should its input and output vectors have?",
+          "cardIds": [
+            "duke-218d-matrix-shape"
+          ]
+        },
+        {
+          "concept": "Does \\(a_{23}\\) refer to row 3, column 2?",
+          "cardIds": [
+            "duke-218d-matrix-index"
+          ]
+        },
+        {
+          "concept": "In these notes, can a rectangular matrix be diagonal?",
+          "cardIds": [
+            "duke-218d-matrix-diagonal"
+          ]
+        },
+        {
+          "concept": "What distinguishes the identity matrix from a general diagonal matrix?",
+          "cardIds": [
+            "duke-218d-matrix-identity"
+          ]
+        },
+        {
+          "concept": "Is a zero matrix diagonal under the notes' definition?",
+          "cardIds": [
+            "duke-218d-matrix-zero"
+          ]
+        },
+        {
+          "concept": "Can you add a \\(2\\times3\\) matrix to a \\(3\\times2\\) matrix because both have six entries?",
+          "cardIds": [
+            "duke-218d-matrix-add"
+          ]
+        },
+        {
+          "concept": "Does \\(3(A+B)\\) mean multiply only diagonal entries by 3?",
+          "cardIds": [
+            "duke-218d-matrix-scalar"
+          ]
+        },
+        {
+          "concept": "If \\(A\\) has columns \\(a_1,a_2\\), what does \\(A(2,-1)^T\\) combine?",
+          "cardIds": [
+            "duke-218d-matrix-vector-column"
+          ]
+        },
+        {
+          "concept": "How does row 2 of \\(A\\) determine coordinate 2 of \\(Ax\\)?",
+          "cardIds": [
+            "duke-218d-matrix-vector-row"
+          ]
+        },
+        {
+          "concept": "Do the row-dot-product and weighted-column methods for \\(Ax\\) give different answers?",
+          "cardIds": [
+            "duke-218d-matrix-two-views"
+          ]
+        },
+        {
+          "concept": "What does \\(Ae_2\\) return?",
+          "cardIds": [
+            "duke-218d-matrix-select-column"
+          ]
+        },
+        {
+          "concept": "If \\(A\\) is \\(2\\times3\\) and \\(B\\) is \\(3\\times4\\), what shape is \\(AB\\)?",
+          "cardIds": [
+            "duke-218d-matrix-product-size"
+          ]
+        },
+        {
+          "concept": "Can a \\(2\\times3\\) matrix multiply a \\(2\\times4\\) matrix in that order?",
+          "cardIds": [
+            "duke-218d-matrix-product-invalid"
+          ]
+        },
+        {
+          "concept": "What is column \\(j\\) of \\(AB\\)?",
+          "cardIds": [
+            "duke-218d-matrix-product-columns"
+          ]
+        },
+        {
+          "concept": "Which parts of \\(A\\) and \\(B\\) determine entry \\((i,j)\\) of \\(AB\\)?",
+          "cardIds": [
+            "duke-218d-matrix-product-entry"
+          ]
+        },
+        {
+          "concept": "For \\(A\\) of size \\(3\\times2\\), are the identities in \\(IA=A\\) and \\(AI=A\\) the same size?",
+          "cardIds": [
+            "duke-218d-matrix-identity-sides"
+          ]
+        },
+        {
+          "concept": "If \\(u\\) has 2 coordinates and \\(v\\) has 3, what shape is \\(uv^T\\)?",
+          "cardIds": [
+            "duke-218d-outer-shape"
+          ]
+        },
+        {
+          "concept": "How can a matrix product be written using columns of \\(A\\) and rows of \\(B\\)?",
+          "cardIds": [
+            "duke-218d-outer-sum"
+          ]
+        },
+        {
+          "concept": "If \\(A\\) is \\(2\\times5\\), what shape is \\(A^T\\)?",
+          "cardIds": [
+            "duke-218d-transpose-shape"
+          ]
+        },
+        {
+          "concept": "For column vectors \\(u,v\\in\\mathbb R^3\\), how do \\(u^Tv\\) and \\(uv^T\\) differ?",
+          "cardIds": [
+            "duke-218d-inner-outer"
+          ]
+        },
+        {
+          "concept": "Is a square matrix automatically symmetric?",
+          "cardIds": [
+            "duke-218d-symmetric-test"
+          ]
+        },
+        {
+          "concept": "What does entry \\((i,j)\\) of \\(A^TA\\) measure?",
+          "cardIds": [
+            "duke-218d-gram-entry"
+          ]
+        },
+        {
+          "concept": "Why is \\(A^TA\\) symmetric even when \\(A\\) is rectangular?",
+          "cardIds": [
+            "duke-218d-gram-symmetric"
+          ]
+        },
+        {
+          "concept": "Can \\(A(BC)\\) differ from \\((AB)C\\) when the products are defined?",
+          "cardIds": [
+            "duke-218d-product-associative"
+          ]
+        },
+        {
+          "concept": "Is \\(A(B+C)=AB+AC\\) valid for compatible matrix sizes?",
+          "cardIds": [
+            "duke-218d-product-distribute"
+          ]
+        },
+        {
+          "concept": "What is wrong with the claim \\((AB)^T=A^TB^T\\)?",
+          "cardIds": [
+            "duke-218d-transpose-product"
+          ]
+        },
+        {
+          "concept": "What happens if you transpose a matrix twice?",
+          "cardIds": [
+            "duke-218d-transpose-twice"
+          ]
+        },
+        {
+          "concept": "Must the order of a sum reverse when taking its transpose?",
+          "cardIds": [
+            "duke-218d-transpose-sum"
+          ]
+        },
+        {
+          "concept": "Why does \\(A^2\\) require a square matrix in this course?",
+          "cardIds": [
+            "duke-218d-matrix-power"
+          ]
+        },
+        {
+          "concept": "If both \\(AB\\) and \\(BA\\) exist, must they be equal?",
+          "cardIds": [
+            "duke-218d-product-commute"
+          ]
+        },
+        {
+          "concept": "Why can \\(AB=AC\\) with \\(A\\ne0\\) fail to imply \\(B=C\\)?",
+          "cardIds": [
+            "duke-218d-matrix-cancel"
+          ]
+        },
+        {
+          "concept": "Can two nonzero matrices multiply to the zero matrix?",
+          "cardIds": [
+            "duke-218d-zero-product"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "MATH 218D",
+      "title": "Pivots and solution freedom",
+      "status": "Flashcards authored and source-checked; recall not yet assessed",
+      "cardIds": [
+        "duke-218d-pivot-contradiction",
+        "duke-218d-pivot-augmented",
+        "duke-218d-pivot-unique",
+        "duke-218d-pivot-infinite",
+        "duke-218d-pivot-free-inconsistent",
+        "duke-218d-pivot-row-count",
+        "duke-218d-pivot-parameter",
+        "duke-218d-pivot-sample",
+        "duke-218d-implicit-vs-parametric",
+        "duke-218d-parametric-membership",
+        "duke-218d-circle-parameter",
+        "duke-218d-vector-form",
+        "duke-218d-vector-form-example",
+        "duke-218d-four-variable-free",
+        "duke-218d-four-variable-point",
+        "duke-218d-four-variable-correct",
+        "duke-218d-four-variable-directions",
+        "duke-218d-solution-difference",
+        "duke-218d-solution-translate",
+        "duke-218d-plane-parameters",
+        "duke-218d-point-dimension",
+        "duke-218d-rank-dimension",
+        "duke-218d-rank-empty"
+      ],
+      "objectives": [
+        {
+          "concept": "What does a reduced augmented row \\([0\\;0\\;0\\mid8]\\) tell you?",
+          "cardIds": [
+            "duke-218d-pivot-contradiction"
+          ]
+        },
+        {
+          "concept": "Why does a pivot in the augmented column signal inconsistency?",
+          "cardIds": [
+            "duke-218d-pivot-augmented"
+          ]
+        },
+        {
+          "concept": "When does a consistent linear system have exactly one solution?",
+          "cardIds": [
+            "duke-218d-pivot-unique"
+          ]
+        },
+        {
+          "concept": "If a consistent system has a nonpivot variable column, why are there infinitely many solutions?",
+          "cardIds": [
+            "duke-218d-pivot-infinite"
+          ]
+        },
+        {
+          "concept": "What is wrong with the claim “a free variable always means infinitely many solutions”?",
+          "cardIds": [
+            "duke-218d-pivot-free-inconsistent"
+          ]
+        },
+        {
+          "concept": "Does a zero row in the reduced augmented matrix automatically mean infinitely many solutions?",
+          "cardIds": [
+            "duke-218d-pivot-row-count"
+          ]
+        },
+        {
+          "concept": "The reduced equations are \\(x+5z=1\\), \\(y+2z=-1\\). Which variable is free?",
+          "cardIds": [
+            "duke-218d-pivot-parameter"
+          ]
+        },
+        {
+          "concept": "For \\((x,y,z)=(1-5t,-1-2t,t)\\), what point does \\(t=1\\) produce?",
+          "cardIds": [
+            "duke-218d-pivot-sample"
+          ]
+        },
+        {
+          "concept": "Which description makes testing a candidate easier: equations or a parameterization?",
+          "cardIds": [
+            "duke-218d-implicit-vs-parametric"
+          ]
+        },
+        {
+          "concept": "Can each coordinate use a different \\(t\\) when checking membership in \\(p+tv\\)?",
+          "cardIds": [
+            "duke-218d-parametric-membership"
+          ]
+        },
+        {
+          "concept": "Does having a parameterization make a curve a linear solution set?",
+          "cardIds": [
+            "duke-218d-circle-parameter"
+          ]
+        },
+        {
+          "concept": "In \\(x=p+tv\\), which vector chooses a starting point and which chooses the direction?",
+          "cardIds": [
+            "duke-218d-vector-form"
+          ]
+        },
+        {
+          "concept": "What is the direction of the line \\((1,-1,0)+t(-5,-2,1)\\)?",
+          "cardIds": [
+            "duke-218d-vector-form-example"
+          ]
+        },
+        {
+          "concept": "In \\(x_1+2x_2-x_4=-1\\), \\(x_3+x_4=1\\), which variables can be chosen freely?",
+          "cardIds": [
+            "duke-218d-four-variable-free"
+          ]
+        },
+        {
+          "concept": "For \\(x_1+2x_2-x_4=-1\\), \\(x_3+x_4=1\\), what solution comes from setting both free variables to zero?",
+          "cardIds": [
+            "duke-218d-four-variable-point"
+          ]
+        },
+        {
+          "concept": "For \\(x_1=-1-2s+t\\), \\(x_2=s\\), \\(x_3=1-t\\), \\(x_4=t\\), what does \\((s,t)=(1,2)\\) give?",
+          "cardIds": [
+            "duke-218d-four-variable-correct"
+          ]
+        },
+        {
+          "concept": "What changes when \\(s\\) rises by 1 in \\((-1,0,1,0)+s(-2,1,0,0)+t(1,0,-1,1)\\)?",
+          "cardIds": [
+            "duke-218d-four-variable-directions"
+          ]
+        },
+        {
+          "concept": "If \\(p\\) and \\(q\\) both solve \\(Ax=b\\), what does \\(A(p-q)\\) equal?",
+          "cardIds": [
+            "duke-218d-solution-difference"
+          ]
+        },
+        {
+          "concept": "Why does adding a vector \\(v\\) with \\(Av=0\\) to a solution \\(p\\) of \\(Ax=b\\) give another solution?",
+          "cardIds": [
+            "duke-218d-solution-translate"
+          ]
+        },
+        {
+          "concept": "Why does \\(x+y+z=1\\) have two free parameters?",
+          "cardIds": [
+            "duke-218d-plane-parameters"
+          ]
+        },
+        {
+          "concept": "What is the dimension of a solution set containing exactly one point?",
+          "cardIds": [
+            "duke-218d-point-dimension"
+          ]
+        },
+        {
+          "concept": "A consistent system has 5 unknowns and 3 pivots. What is its solution-set dimension?",
+          "cardIds": [
+            "duke-218d-rank-dimension"
+          ]
+        },
+        {
+          "concept": "Can you use “unknowns minus pivots” to call an inconsistent system a plane?",
+          "cardIds": [
+            "duke-218d-rank-empty"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "MATH 218D",
+      "title": "Inverses and reversible systems",
+      "status": "Flashcards authored and source-checked; recall not yet assessed",
+      "cardIds": [
+        "duke-218d-inverse-meaning",
+        "duke-218d-inverse-not-reciprocal",
+        "duke-218d-inverse-2x2",
+        "duke-218d-inverse-nonzero",
+        "duke-218d-inverse-product",
+        "duke-218d-inverse-twice",
+        "duke-218d-inverse-augment",
+        "duke-218d-inverse-left-fails",
+        "duke-218d-inverse-dependent",
+        "duke-218d-inverse-solve",
+        "duke-218d-inverse-example",
+        "duke-218d-inverse-singular-rhs"
+      ],
+      "objectives": [
+        {
+          "concept": "What must an inverse matrix undo?",
+          "cardIds": [
+            "duke-218d-inverse-meaning"
+          ]
+        },
+        {
+          "concept": "Is a matrix inverse formed by taking the reciprocal of each entry?",
+          "cardIds": [
+            "duke-218d-inverse-not-reciprocal"
+          ]
+        },
+        {
+          "concept": "When does \\(\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}\\) have an inverse?",
+          "cardIds": [
+            "duke-218d-inverse-2x2"
+          ]
+        },
+        {
+          "concept": "Why is \\(\\operatorname{diag}(1,0)\\) noninvertible even though it is nonzero?",
+          "cardIds": [
+            "duke-218d-inverse-nonzero"
+          ]
+        },
+        {
+          "concept": "If \\(A\\) and \\(B\\) are invertible, which order gives \\((AB)^{-1}\\)?",
+          "cardIds": [
+            "duke-218d-inverse-product"
+          ]
+        },
+        {
+          "concept": "What is the inverse of \\(A^{-1}\\)?",
+          "cardIds": [
+            "duke-218d-inverse-twice"
+          ]
+        },
+        {
+          "concept": "Why row-reduce \\([A\\mid I]\\) to compute an inverse?",
+          "cardIds": [
+            "duke-218d-inverse-augment"
+          ]
+        },
+        {
+          "concept": "If row reduction cannot turn a square \\(A\\) into \\(I\\), can the right block of \\([A\\mid I]\\) still be called its inverse?",
+          "cardIds": [
+            "duke-218d-inverse-left-fails"
+          ]
+        },
+        {
+          "concept": "Why is \\(\\begin{bmatrix}1&2&3\\\\4&5&6\\\\7&8&9\\end{bmatrix}\\) singular without computing an inverse?",
+          "cardIds": [
+            "duke-218d-inverse-dependent"
+          ]
+        },
+        {
+          "concept": "Why does invertible \\(A\\) make \\(Ax=b\\) uniquely solvable for every \\(b\\)?",
+          "cardIds": [
+            "duke-218d-inverse-solve"
+          ]
+        },
+        {
+          "concept": "If \\(A^{-1}=\\begin{bmatrix}2&-3\\\\-1&2\\end{bmatrix}\\), what input gives output \\(b=(1,0)^T\\)?",
+          "cardIds": [
+            "duke-218d-inverse-example"
+          ]
+        },
+        {
+          "concept": "Does a singular square matrix mean \\(Ax=b\\) has no solution for every \\(b\\)?",
+          "cardIds": [
+            "duke-218d-inverse-singular-rhs"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "MATH 218D",
+      "title": "Cost of matrix computations",
+      "status": "Flashcards authored and source-checked; recall not yet assessed",
+      "cardIds": [
+        "duke-218d-flop-meaning",
+        "duke-218d-matvec-cost",
+        "duke-218d-matmul-cost",
+        "duke-218d-row-swap-cost",
+        "duke-218d-row-elimination-cost",
+        "duke-218d-substitution-cost",
+        "duke-218d-substitution-not-gauss-jordan",
+        "duke-218d-cost-double",
+        "duke-218d-inverse-cost"
+      ],
+      "objectives": [
+        {
+          "concept": "What does counting floating-point operations tell you, and what does it miss?",
+          "cardIds": [
+            "duke-218d-flop-meaning"
+          ]
+        },
+        {
+          "concept": "Why does an \\(n\\times n\\) matrix-vector product cost about \\(2n^2\\) arithmetic operations?",
+          "cardIds": [
+            "duke-218d-matvec-cost"
+          ]
+        },
+        {
+          "concept": "Why does ordinary dense matrix multiplication cost about \\(2n^3\\), rather than \\(2n^2\\)?",
+          "cardIds": [
+            "duke-218d-matmul-cost"
+          ]
+        },
+        {
+          "concept": "If a row swap uses zero arithmetic flops, is it free in actual runtime?",
+          "cardIds": [
+            "duke-218d-row-swap-cost"
+          ]
+        },
+        {
+          "concept": "Why does Gaussian elimination have cubic leading cost?",
+          "cardIds": [
+            "duke-218d-row-elimination-cost"
+          ]
+        },
+        {
+          "concept": "Why is solving a triangular system with one right-hand side only quadratic work?",
+          "cardIds": [
+            "duke-218d-substitution-cost"
+          ]
+        },
+        {
+          "concept": "Is the notes' \\(n^2\\) substitution count a claim that all Gauss–Jordan elimination is quadratic?",
+          "cardIds": [
+            "duke-218d-substitution-not-gauss-jordan"
+          ]
+        },
+        {
+          "concept": "If \\(n\\) doubles, how do quadratic and cubic leading costs change?",
+          "cardIds": [
+            "duke-218d-cost-double"
+          ]
+        },
+        {
+          "concept": "The notes estimate inversion at \\(\\tfrac43n^3\\) flops. Is forming an inverse a cheap shortcut around elimination?",
+          "cardIds": [
+            "duke-218d-inverse-cost"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "MATH 218D",
+      "title": "Lengths, angles, and best approximation",
+      "status": "Flashcards authored and source-checked; recall not yet assessed",
+      "cardIds": [
+        "duke-218d-closest-column",
+        "duke-218d-closest-residual",
+        "duke-218d-closest-both-conditions",
+        "duke-218d-closest-pythagoras",
+        "duke-218d-norm-dot",
+        "duke-218d-norm-example",
+        "duke-218d-norm-scale-negative",
+        "duke-218d-distance-difference",
+        "duke-218d-distance-symmetric",
+        "duke-218d-unit-normalize",
+        "duke-218d-unit-zero",
+        "duke-218d-unit-sphere",
+        "duke-218d-unit-line",
+        "duke-218d-distance-expand",
+        "duke-218d-dot-angle",
+        "duke-218d-dot-sign",
+        "duke-218d-unit-angle",
+        "duke-218d-dot-bound",
+        "duke-218d-orthogonal-zero"
+      ],
+      "objectives": [
+        {
+          "concept": "If \\(Ax=b\\) has no exact solution, where do all candidate outputs \\(Ax\\) live?",
+          "cardIds": [
+            "duke-218d-closest-column"
+          ]
+        },
+        {
+          "concept": "What geometric test identifies the closest \\(\\hat b\\) in a subspace to \\(b\\)?",
+          "cardIds": [
+            "duke-218d-closest-residual"
+          ]
+        },
+        {
+          "concept": "Is a perpendicular residual alone enough to identify the closest vector in a subspace?",
+          "cardIds": [
+            "duke-218d-closest-both-conditions"
+          ]
+        },
+        {
+          "concept": "Why does a perpendicular residual make \\(\\hat b\\) closer than any different vector in the subspace?",
+          "cardIds": [
+            "duke-218d-closest-pythagoras"
+          ]
+        },
+        {
+          "concept": "How can a dot product recover a vector's geometric length?",
+          "cardIds": [
+            "duke-218d-norm-dot"
+          ]
+        },
+        {
+          "concept": "What is the length of \\((3,4)\\), and why is it not 7?",
+          "cardIds": [
+            "duke-218d-norm-example"
+          ]
+        },
+        {
+          "concept": "If \\(\\|v\\|=3\\), what is \\(\\|-2v\\|\\)?",
+          "cardIds": [
+            "duke-218d-norm-scale-negative"
+          ]
+        },
+        {
+          "concept": "Why is the distance between \\(v\\) and \\(w\\) equal to \\(\\|v-w\\|\\)?",
+          "cardIds": [
+            "duke-218d-distance-difference"
+          ]
+        },
+        {
+          "concept": "Does using \\(w-v\\) instead of \\(v-w\\) change the distance?",
+          "cardIds": [
+            "duke-218d-distance-symmetric"
+          ]
+        },
+        {
+          "concept": "How do you keep a nonzero vector's direction but change its length to 1?",
+          "cardIds": [
+            "duke-218d-unit-normalize"
+          ]
+        },
+        {
+          "concept": "Why can't you normalize the zero vector?",
+          "cardIds": [
+            "duke-218d-unit-zero"
+          ]
+        },
+        {
+          "concept": "What do all unit vectors in \\(\\mathbb R^2\\) have in common geometrically?",
+          "cardIds": [
+            "duke-218d-unit-sphere"
+          ]
+        },
+        {
+          "concept": "How many unit vectors lie on a line through the origin?",
+          "cardIds": [
+            "duke-218d-unit-line"
+          ]
+        },
+        {
+          "concept": "What cross term appears when you expand \\(\\|v-w\\|^2\\)?",
+          "cardIds": [
+            "duke-218d-distance-expand"
+          ]
+        },
+        {
+          "concept": "For nonzero vectors, how does their dot product encode their angle?",
+          "cardIds": [
+            "duke-218d-dot-angle"
+          ]
+        },
+        {
+          "concept": "For nonzero vectors, what does a negative dot product tell you about their angle?",
+          "cardIds": [
+            "duke-218d-dot-sign"
+          ]
+        },
+        {
+          "concept": "If two unit vectors have dot product \\(1/2\\), what is their angle?",
+          "cardIds": [
+            "duke-218d-unit-angle"
+          ]
+        },
+        {
+          "concept": "Can two unit vectors have dot product 2?",
+          "cardIds": [
+            "duke-218d-dot-bound"
+          ]
+        },
+        {
+          "concept": "Is the zero vector perpendicular to every vector, and does it make a \\(90^\\circ\\) angle with each?",
+          "cardIds": [
+            "duke-218d-orthogonal-zero"
+          ]
+        }
+      ]
+    },
+    {
+      "course": "MATH 218D",
+      "title": "Orthogonal complements and subspaces",
+      "status": "Flashcards authored and source-checked; recall not yet assessed",
+      "cardIds": [
+        "duke-218d-perp-equation",
+        "duke-218d-perp-two",
+        "duke-218d-perp-example",
+        "duke-218d-perp-span",
+        "duke-218d-perp-every",
+        "duke-218d-perp-intersection",
+        "duke-218d-perp-null",
+        "duke-218d-perp-basis-independent",
+        "duke-218d-perp-redundant",
+        "duke-218d-perp-zero-space",
+        "duke-218d-perp-entire-space",
+        "duke-218d-perp-closed-sum",
+        "duke-218d-perp-dimension",
+        "duke-218d-perp-twice",
+        "duke-218d-perp-not-complement",
+        "duke-218d-perp-ambient",
+        "duke-218d-four-spaces-column",
+        "duke-218d-four-spaces-row",
+        "duke-218d-four-spaces-dimensions",
+        "duke-218d-four-spaces-reverse",
+        "duke-218d-four-spaces-mismatch",
+        "duke-218d-four-spaces-example",
+        "duke-218d-four-spaces-column-example",
+        "duke-218d-null-complement-basis",
+        "duke-218d-implicit-from-span",
+        "duke-218d-implicit-double",
+        "duke-218d-implicit-plane",
+        "duke-218d-implicit-membership",
+        "duke-218d-parametric-generate"
+      ],
+      "objectives": [
+        {
+          "concept": "How do you find every vector perpendicular to \\((1,-1,1)\\)?",
+          "cardIds": [
+            "duke-218d-perp-equation"
+          ]
+        },
+        {
+          "concept": "How do you find vectors perpendicular to both \\(v_1\\) and \\(v_2\\)?",
+          "cardIds": [
+            "duke-218d-perp-two"
+          ]
+        },
+        {
+          "concept": "Is \\((1,4,3)\\) perpendicular to both \\((1,-1,1)\\) and \\((2,1,-2)\\)?",
+          "cardIds": [
+            "duke-218d-perp-example"
+          ]
+        },
+        {
+          "concept": "Why is it enough to check perpendicularity against a spanning set?",
+          "cardIds": [
+            "duke-218d-perp-span"
+          ]
+        },
+        {
+          "concept": "Does being perpendicular to one vector in a plane make you perpendicular to the plane?",
+          "cardIds": [
+            "duke-218d-perp-every"
+          ]
+        },
+        {
+          "concept": "What vector can belong to both a subspace \\(V\\) and its orthogonal complement \\(V^\\perp\\)?",
+          "cardIds": [
+            "duke-218d-perp-intersection"
+          ]
+        },
+        {
+          "concept": "If the columns of \\(A\\) span \\(V\\), what system describes \\(V^\\perp\\)?",
+          "cardIds": [
+            "duke-218d-perp-null"
+          ]
+        },
+        {
+          "concept": "Does changing the spanning set of a subspace change its orthogonal complement?",
+          "cardIds": [
+            "duke-218d-perp-basis-independent"
+          ]
+        },
+        {
+          "concept": "What happens if you add a redundant spanning vector when computing an orthogonal complement?",
+          "cardIds": [
+            "duke-218d-perp-redundant"
+          ]
+        },
+        {
+          "concept": "What is the orthogonal complement of \\(\\{0\\}\\) inside \\(\\mathbb R^n\\)?",
+          "cardIds": [
+            "duke-218d-perp-zero-space"
+          ]
+        },
+        {
+          "concept": "What is perpendicular to every vector in \\(\\mathbb R^n\\)?",
+          "cardIds": [
+            "duke-218d-perp-entire-space"
+          ]
+        },
+        {
+          "concept": "Why is the sum of two vectors in \\(V^\\perp\\) still in \\(V^\\perp\\)?",
+          "cardIds": [
+            "duke-218d-perp-closed-sum"
+          ]
+        },
+        {
+          "concept": "If a subspace has dimension 2 inside \\(\\mathbb R^5\\), what is the dimension of its orthogonal complement?",
+          "cardIds": [
+            "duke-218d-perp-dimension"
+          ]
+        },
+        {
+          "concept": "What happens when you take a subspace's orthogonal complement twice?",
+          "cardIds": [
+            "duke-218d-perp-twice"
+          ]
+        },
+        {
+          "concept": "The \\(x\\)-axis and \\(y\\)-axis are perpendicular in \\(\\mathbb R^3\\). Are they each other's orthogonal complements?",
+          "cardIds": [
+            "duke-218d-perp-not-complement"
+          ]
+        },
+        {
+          "concept": "Does the orthogonal complement of a line depend on the ambient space?",
+          "cardIds": [
+            "duke-218d-perp-ambient"
+          ]
+        },
+        {
+          "concept": "Which null space is perpendicular to the column space of \\(A\\)?",
+          "cardIds": [
+            "duke-218d-four-spaces-column"
+          ]
+        },
+        {
+          "concept": "Why is \\(\\operatorname{Nul}(A)\\) perpendicular to the row space of \\(A\\)?",
+          "cardIds": [
+            "duke-218d-four-spaces-row"
+          ]
+        },
+        {
+          "concept": "For \\(A\\) of size \\(m\\times n\\), which orthogonal pair lives in \\(\\mathbb R^n\\)?",
+          "cardIds": [
+            "duke-218d-four-spaces-dimensions"
+          ]
+        },
+        {
+          "concept": "What is \\(\\operatorname{Nul}(A)^\\perp\\)?",
+          "cardIds": [
+            "duke-218d-four-spaces-reverse"
+          ]
+        },
+        {
+          "concept": "What is wrong with the claim \\(\\operatorname{Col}(A)^\\perp=\\operatorname{Nul}(A)\\) for every matrix?",
+          "cardIds": [
+            "duke-218d-four-spaces-mismatch"
+          ]
+        },
+        {
+          "concept": "For \\(A=\\begin{bmatrix}1&2\\\\1&2\\end{bmatrix}\\), why is \\((-2,1)\\) in its null space?",
+          "cardIds": [
+            "duke-218d-four-spaces-example"
+          ]
+        },
+        {
+          "concept": "For \\(A=\\begin{bmatrix}1&2\\\\1&2\\end{bmatrix}\\), what is perpendicular to its column space?",
+          "cardIds": [
+            "duke-218d-four-spaces-column-example"
+          ]
+        },
+        {
+          "concept": "How can you describe \\(\\operatorname{Nul}(A)^\\perp\\) without first solving for \\(\\operatorname{Nul}(A)\\)?",
+          "cardIds": [
+            "duke-218d-null-complement-basis"
+          ]
+        },
+        {
+          "concept": "How can you turn a spanning description \\(V=\\operatorname{Col}(A)\\) into equations for \\(V\\)?",
+          "cardIds": [
+            "duke-218d-implicit-from-span"
+          ]
+        },
+        {
+          "concept": "Why doesn't solving \\(A^Tx=0\\) directly give the original column space of \\(A\\)?",
+          "cardIds": [
+            "duke-218d-implicit-double"
+          ]
+        },
+        {
+          "concept": "The plane is spanned by \\((1,1,1)\\) and \\((1,1,0)\\). What simple equation describes it?",
+          "cardIds": [
+            "duke-218d-implicit-plane"
+          ]
+        },
+        {
+          "concept": "Which point lies in the plane \\(x_1=x_2\\): \\((2,2,1)\\) or \\((2,1,1)\\)?",
+          "cardIds": [
+            "duke-218d-implicit-membership"
+          ]
+        },
+        {
+          "concept": "How can you generate a point in \\(\\operatorname{Span}\\{(1,1,1),(1,1,0)\\}\\) without solving equations?",
+          "cardIds": [
+            "duke-218d-parametric-generate"
           ]
         }
       ]

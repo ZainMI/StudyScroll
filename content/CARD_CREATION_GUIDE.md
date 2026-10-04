@@ -12,7 +12,7 @@ Begin by inspecting `lib/cards.ts`, `components/card-visual.tsx`, `scripts/build
 
 - List each source, course, lecture/assignment, page range, and extraction status. Inspect figures, mathematical notation, and tables when text extraction is incomplete. Never infer the content of unreadable pages.
 - Use current lectures and assignments; use textbooks only to support that scope. Do not silently include a whole textbook or unassigned future lectures.
-- Current repository scope: AM 205 assignments 1–2, Quiz 1 review, 2023–2025 Quiz 1 practice, the comprehensive Quiz 1 study sheet, and supporting concepts; AM 207 lectures 1–6 (exclude lecture 0); STAT 244 uploaded linear algebra, least-squares theory, and inference notes; AM 209a lectures 1–8 from the supplied COMPSCI 1090A Ed material. UBuffalo International Finance covers the eight supplied PDFs: Chapters 1–5 slides and Chapter 2–4 homework. Recheck scope when new files arrive.
+- Current repository scope: AM 205 assignments 1–2, Quiz 1 review, 2023–2025 Quiz 1 practice, the comprehensive Quiz 1 study sheet, and supporting concepts; AM 207 lectures 1–6 (exclude lecture 0); STAT 244 uploaded linear algebra, least-squares theory, and inference notes; AM 209a lectures 1–8 from the supplied COMPSCI 1090A Ed material. UBuffalo International Finance covers the eight supplied PDFs: Chapters 1–5 slides and Chapter 2–4 homework. Duke MATH 218D covers F25-L1, F25-L3, F25-L9, and F25-R1 (recorded lecture 1). Recheck scope when new files arrive.
 - Inventory definitions, assumptions, notation, identities, derivations, algorithms, examples, interpretation, limitations, counterexamples, and assignment skills. Administrative/history slides can be excluded with a reason. Do not skip difficult proofs or calculations just because they require multiple cards.
 - If sources disagree, distinguish their conventions and record the discrepancy. If something cannot be verified, flag it in the ledger rather than asserting it as fact.
 
@@ -91,7 +91,7 @@ Edit `content/master-feed.json`, an object with `version`, `title`, `updated` (Y
 }
 ```
 
-`school` must be `Harvard` or `UBuffalo`; assign new material to its actual school. All existing curated courses belong to Harvard, and legacy cards without this field default to Harvard. New IDs must be globally unique across schools.
+`school` currently uses `Harvard`, `UBuffalo`, or `Duke`; assign new material to its actual school. The school chooser derives its folders from these fields. Legacy cards without this field default to Harvard. New IDs must be globally unique across schools.
 
 `id` is unique and stable; never rename IDs just to reorder cards. `course` and `topic` drive the selection UI; reuse existing labels consistently. `kind` is a short visible badge, e.g. QUICK RECALL, PREDICT, COMPARE, SPOT THE MISTAKE, COMPLETE THE SEQUENCE. `color` is a legacy palette field; retain the course's existing value, rather than interpreting it as permission to change the crimson theme. `seconds` is an estimate, not a timer or card limit. `relatedCourses` is optional and only for genuine cross-course relevance.
 

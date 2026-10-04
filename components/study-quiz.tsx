@@ -33,6 +33,15 @@ export function StudyQuiz({
   const [code, setCode] = useState(""),
     [editingCode, setEditingCode] = useState(false),
     [format, setFormat] = useState<QuizFormat>("mixed");
+  const maxQuestions = Math.min(20, cards.length);
+  const [questionCountInput, setQuestionCountInput] = useState(
+    String(Math.min(6, maxQuestions)),
+  );
+  const questionCount = Number(questionCountInput);
+  const validCount =
+    Number.isInteger(questionCount) &&
+    questionCount >= 1 &&
+    questionCount <= maxQuestions;
   const [questions, setQuestions] = useState<QuizQuestion[]>([]),
     [index, setIndex] = useState(0),
     [picked, setPicked] = useState<number | null>(null);
@@ -62,7 +71,7 @@ export function StudyQuiz({
     dialog.current?.scrollTo({ top: 0 });
   }, [index, questions]);
   async function generate() {
-    if (pending.current) return;
+    if (pending.current || !validCount) return;
     if (!code.trim()) {
       setEditingCode(true);
       setError(
@@ -70,7 +79,7 @@ export function StudyQuiz({
       );
       return;
     }
-    const chosen = quizCandidates(cards, reviews, results);
+    const chosen = quizCandidates(cards, reviews, results, questionCount);
     const controller = new AbortController();
     pending.current = controller;
     setBusy(true);
@@ -82,7 +91,11 @@ export function StudyQuiz({
           "Content-Type": "application/json",
           "x-study-access-code": code,
         },
-        body: JSON.stringify({ cardIds: chosen.map((c) => c.id), format }),
+        body: JSON.stringify({
+          cardIds: chosen.map((c) => c.id),
+          format,
+          count: chosen.length,
+        }),
         signal: controller.signal,
       });
       const data = await response.json();
@@ -163,8 +176,8 @@ export function StudyQuiz({
             A little test of understanding.
           </h2>
           <p>
-            {Math.min(cards.length, 6)} short questions from your selection. No
-            calculator. No pen and paper.
+            {questionCount} short questions from your selection. No calculator.
+            No pen and paper.
           </p>
           <p className="quiz-note">
             Missed quiz answers and difficult cards come first. New questions
@@ -317,6 +330,27 @@ export function StudyQuiz({
       )}
       {(!questions.length || done) && (
         <footer className="quiz-footer">
+          <label className="quiz-format">
+            Number of questions
+            <input
+              type="number"
+              inputMode="numeric"
+              aria-label="Number of questions"
+              min={1}
+              max={maxQuestions}
+              step={1}
+              value={questionCountInput}
+              disabled={busy}
+              aria-invalid={!validCount}
+              onChange={(e) => setQuestionCountInput(e.target.value)}
+            />
+            {!validCount && (
+              <small role="alert">
+                Enter a whole number from 1 to {maxQuestions}.
+              </small>
+            )}
+            <small>Up to 20, limited to the number of selected cards.</small>
+          </label>
           {(!code || editingCode) && (
             <label>
               Study access code
@@ -332,7 +366,7 @@ export function StudyQuiz({
           )}
           <button
             className="primary"
-            disabled={busy || !cards.length}
+            disabled={busy || !cards.length || !validCount}
             onClick={generate}
           >
             {busy

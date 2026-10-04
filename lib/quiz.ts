@@ -56,6 +56,7 @@ export function quizCandidates(
   cards: Card[],
   reviews: Reviews,
   results: QuizResults,
+  count = 6,
 ): Card[] {
   const priority = (c: Card) =>
     results[c.id]?.lastCorrect === false
@@ -74,7 +75,7 @@ export function quizCandidates(
           ? results[a.id].lastAnswered - results[b.id].lastAnswered
           : 0),
     )
-    .slice(0, 6);
+    .slice(0, Math.min(20, Math.max(1, Math.floor(count))));
 }
 export function validateQuiz(
   value: unknown,

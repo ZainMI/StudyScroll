@@ -1,6 +1,6 @@
 # StudyScroll
 
-A Next.js app that turns your course material into an intentional study feed. The current version loads an expanding library of authored, source-grounded cards covering AM 205, AM 207, STAT 244, and AM 209a (lectures 1–8 from the supplied COMPSCI 1090A Ed course).
+A Next.js app that turns your course material into an intentional study feed. The current version loads an expanding library of authored, source-grounded cards covering AM 205, AM 207, STAT 244, and AM 209a (lectures 1–8 from the supplied COMPSCI 1090A Ed course), UBuffalo International Finance, and Duke MATH 218D (Introduction to Linear Algebra).
 
 ## Run locally
 
@@ -29,9 +29,9 @@ The extraction helper `scripts/extract-courses.py` uses Python with `pypdf` to w
 ## Working features
 
 - Interleaved course feed, filtering (including related cross-course cards), course library.
-- Reveal explanations, bookmark, mark understood, and save for another look.
+- Reveal explanations, bookmark, mark understood, and save for another look. On desktop (1024px and wider), explanations appear beside the question with their own scrolling area; mobile keeps the stacked layout.
 - Browser-local progress and imported cards; authored content updates are merged by stable ID.
-- School folders: choose Harvard or UBuffalo at launch. Harvard contains the original four courses; UBuffalo contains International Finance (284 cards across Chapters 1–5 and homework). Source citations remain in the content, but PDF links and downloads are disabled.
+- School folders: choose Harvard, UBuffalo, or Duke at launch. Harvard contains the original four courses; UBuffalo contains International Finance (284 cards across Chapters 1–5 and homework). Duke contains MATH 218D (174 cards from lectures 1, 3, 9 and recorded lecture 1; see `content/DUKE_LINEAR_ALGEBRA_COVERAGE.md`). Source citations remain in the content, but PDF links and downloads are disabled.
 - Course material is added manually in the project, using `content/CARD_CREATION_GUIDE.md` and the canonical feed. The upload UI is removed and the upload endpoint returns 404.
 
 ## Limits
@@ -76,11 +76,11 @@ Card text now supports KaTeX using `\(...\)` inline and `\[...\]` for display ma
 
 ## Intuition quizzes and material selection
 
-Study offers searchable course/lecture/topic sets, reviewed counts, missed-concept counts, and removable selection chips. Choose Flashcards or Practice quiz. The study-order preference persists on this browser. Quizzes use up to six selected built-in cards per round; this is a round size, not a limit on course coverage or continued practice.
+Study offers searchable course/lecture/topic sets, reviewed counts, missed-concept counts, and removable selection chips. Choose Flashcards or Practice quiz. The study-order preference persists on this browser. Quizzes offer 1–20 questions from selected built-in cards per round (default six, limited by the selection size); this is a round size, not a limit on course coverage or continued practice.
 
-`/api/quiz` uses the same Harvard endpoint, model, and access-code setup as the tutor. The client prioritizes last-missed quiz concepts, then Again/Hard cards, then untested ideas; random ties vary coverage. The server accepts only canonical card IDs (at most six), supplies trusted card excerpts, and asks for intuition questions without written calculations. Multiple choice has four choices; true/false has two; mixed rounds include both when possible. Answers reveal explanatory feedback and an expandable source-card comparison. MCQ choice positions are randomized. Skipping does not score the question.
+`/api/quiz` uses the same Harvard endpoint, model, and access-code setup as the tutor. The client prioritizes last-missed quiz concepts, then Again/Hard cards, then untested ideas; random ties vary coverage. The server accepts only canonical card IDs (at most 20), supplies trusted card excerpts, and asks for intuition questions without written calculations. Multiple choice has four choices; true/false has two; mixed rounds include both when possible. Answers reveal explanatory feedback and an expandable source-card comparison. MCQ choice positions are randomized. Skipping does not score the question.
 
-Questions use [OpenAI Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs) and additional runtime checks for format, count, allowed/unique IDs, answer indices, duplicate options, field lengths, and KaTeX validity. Schema validation cannot guarantee factual or pedagogical correctness; quizzes are labeled AI-generated practice. No automatic paid fallback or repeated generation loop is configured. Requests have a 45-second timeout, a 3,000-output-token budget, and a best-effort six-requests/minute limit per instance. The university gateway must support the supplied structured-output format.
+Questions use [OpenAI Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs) and additional runtime checks for format, count, allowed/unique IDs, answer indices, duplicate options, field lengths, and KaTeX validity. Schema validation cannot guarantee factual or pedagogical correctness; quizzes are labeled AI-generated practice. No automatic paid fallback or repeated generation loop is configured. Requests have a 75-second timeout, a 500-output-token-per-question budget (up to 10,000), and a best-effort six-requests/minute limit per instance. The university gateway must support the supplied structured-output format.
 
 Quiz attempts/correct totals/latest correctness are stored by canonical card ID in `studyscroll-v1.quizResults`. They do not mark flashcards learned or alter recall schedules. Results survive school changes/reloads; Reset learning progress clears both quiz and recall results. Closing a partial quiz preserves answered-question results but discards the unfinished generated round. The summary can open missed concepts as flashcards or generate another adaptive round. Only selected card excerpts are sent; no PDFs or private answer history are uploaded.
 

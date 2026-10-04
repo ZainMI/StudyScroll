@@ -123,7 +123,11 @@ test("quiz API authenticates, grounds generation, validates output, and handles 
           {
             finish_reason: "stop",
             message: {
-              content: JSON.stringify({ questions: [makeQuestion(id)] }),
+              content: JSON.stringify({
+                questions: JSON.parse(sent.messages[1].content).cards.map(
+                  (c: { cardId: string }) => makeQuestion(c.cardId),
+                ),
+              }),
             },
           },
         ],
@@ -139,10 +143,31 @@ test("quiz API authenticates, grounds generation, validates output, and handles 
     expect(
       (await POST(req({ ...payload, cardIds: Array(7).fill(id) }))).status,
     ).toBe(400);
+    expect((await POST(req({ ...payload, count: 2 }))).status).toBe(400);
+    expect(
+      (
+        await POST(
+          req({
+            ...payload,
+            cardIds: curated.slice(0, 21).map((c) => c.id),
+            count: 21,
+          }),
+        )
+      ).status,
+    ).toBe(400);
     expect(calls).toBe(0);
     expect(
       (await POST(req({ ...payload, answer: "forged content" }))).status,
     ).toBe(200);
+    const twenty = await POST(
+      req({
+        ...payload,
+        cardIds: curated.slice(0, 20).map((c) => c.id),
+        count: 20,
+      }),
+    );
+    expect(twenty.status).toBe(200);
+    expect((await twenty.json()).questions).toHaveLength(20);
     globalThis.fetch = async () =>
       Response.json({
         choices: [
@@ -370,4 +395,47 @@ test("chronological session keeps source order after rating and saves the prefer
   await page.reload();
   await page.getByRole("button", { name: /Harvard/ }).click();
   await expect(page.getByLabel("Card order")).toHaveValue("chronological");
+});
+
+test("quiz count uses a numeric keypad input and generates the chosen 20 questions", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: /Harvard/ }).click();
+  await page.getByLabel("Search study material").fill("Comprehensive");
+  await page
+    .getByRole("checkbox", { name: /^Quiz 1 · Comprehensive study/ })
+    .check();
+  await page.getByRole("button", { name: /Practice quiz/ }).click();
+  await page.getByRole("button", { name: "Build practice quiz" }).click();
+  const dialog = page.getByRole("dialog"),
+    count = dialog.getByLabel("Number of questions", { exact: true });
+  await expect(count).toHaveAttribute("inputmode", "numeric");
+  await expect(count).toHaveValue("6");
+  await count.fill("21");
+  await expect(
+    dialog.getByRole("button", { name: "Create quiz", exact: true }),
+  ).toBeDisabled();
+  await count.fill("");
+  await expect(
+    dialog.getByRole("button", { name: "Create quiz", exact: true }),
+  ).toBeDisabled();
+  await count.fill("20");
+  await dialog.getByLabel("Question format").selectOption("true_false");
+  await dialog
+    .getByLabel("Study access code", { exact: true })
+    .fill("quiz-test");
+  await page.route("**/api/quiz", async (route) => {
+    const body = route.request().postDataJSON();
+    expect(body.count).toBe(20);
+    expect(body.cardIds).toHaveLength(20);
+    expect(new Set(body.cardIds).size).toBe(20);
+    await route.fulfill({
+      json: { questions: body.cardIds.map(makeQuestion) },
+    });
+  });
+  await dialog
+    .getByRole("button", { name: "Create quiz", exact: true })
+    .click();
+  await expect(dialog.getByText("Question 1 of 20")).toBeVisible();
 });

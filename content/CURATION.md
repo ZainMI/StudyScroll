@@ -42,3 +42,7 @@ npm run typecheck
 Do not send private course material to an external model service as part of automatic imports without an explicitly selected integration. Current imports are a local extraction prototype; curated content is authored separately.
 
 If intentionally working without some gitignored source PDFs, use `npm run feed:build -- --allow-missing-sources` (and the same flag for `feed:check`). This validates content and references but reports missing files; default checks still require every source file. Never describe an opted-out source check as proof all PDFs exist.
+
+## Duke MATH 218D
+
+The October 4, 2026 pass added 174 cards from the four supplied Linear Algebra PDFs (L1, R1, L3, L9). See [DUKE_LINEAR_ALGEBRA_COVERAGE.md](DUKE_LINEAR_ALGEBRA_COVERAGE.md) for inspected pages, source corrections, concept coverage and exclusions. R1 is a recorded lecture, not a review. No missing lectures were inferred. Duke cards have independent stable IDs; existing school progress is preserved.

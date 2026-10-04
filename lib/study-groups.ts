@@ -30,7 +30,9 @@ export function studyGroups(
                   ? `Quiz ${Number(quiz[1])} · 20${quiz[3]} practice`
                   : `Quiz ${Number(quiz[1])} review`,
               ];
-            const lecture = source.path.match(/lecture[_-](\d+)/i);
+            const recorded = source.path.match(/\/F\d+-R(\d+)\.pdf$/i);
+            if (recorded) return [`Recorded lecture ${Number(recorded[1])}`];
+            const lecture = source.path.match(/(?:lecture[_-]|\/F\d+-L)(\d+)/i);
             if (lecture) return [`Lecture ${Number(lecture[1])}`];
             const chapter = source.path.match(
               /(?:^|\/)(?:IF_)?ch0*(\d+)(?:[^0-9]|$)/i,

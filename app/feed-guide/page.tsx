@@ -4,6 +4,13 @@ import feed from "@/content/master-feed.json";
 import coverage from "@/content/coverage.json";
 const map = [
   {
+    course: "MATH 218D",
+    title: "Connect equations to geometry.",
+    topics: "Linear models → vector and matrix algebra → solution sets and inverses → orthogonality",
+    scope: "Duke · Introduction to Linear Algebra. Supplied lectures 1, 3, and 9, plus recorded lecture 1. Includes source-checked examples and short proof steps.",
+    next: "Add the intervening lectures when available, then practice longer elimination calculations alongside these conceptual cards.",
+  },
+  {
     course: "International Finance",
     title: "Connect money, trade, and exchange rates.",
     topics:

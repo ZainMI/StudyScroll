@@ -1,8 +1,8 @@
 # StudyScroll: master feed
 
-Updated 2026-10-04. 1352 curated cards.
+Updated 2026-10-04. 1526 curated cards.
 
-Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2, the October 2026 Quiz 1 review, and 2023–2025 Quiz 1 solutions, and the comprehensive Quiz 1 study sheet with supporting concepts. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. UBuffalo International Finance covers the supplied Chapters 1–5 slides and Chapter 2–4 homework; source inconsistencies and exact/approximate conventions are documented in INTERNATIONAL_FINANCE_COVERAGE.md.
+Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2, the October 2026 Quiz 1 review, and 2023–2025 Quiz 1 solutions, and the comprehensive Quiz 1 study sheet with supporting concepts. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. UBuffalo International Finance covers the supplied Chapters 1–5 slides and Chapter 2–4 homework; source inconsistencies and exact/approximate conventions are documented in INTERNATIONAL_FINANCE_COVERAGE.md. Duke MATH 218D (Introduction to Linear Algebra) covers the four supplied PDFs: lectures 1, 3, and 9 and recorded lecture 1, including conceptual examples and proof steps. Missing lectures are not inferred; source corrections are documented in DUKE_LINEAR_ALGEBRA_COVERAGE.md.
 
 The editable source of truth is [master-feed.json](master-feed.json). This readable document is generated with `npm run feed:build`. Edit the JSON, then regenerate; the Next app imports that same JSON directly.
 
@@ -10,6 +10,7 @@ These are authored learning prompts derived from the listed materials, not quota
 
 ## Course map
 
+- **Duke — MATH 218D:** Introduction to Linear Algebra, supplied lectures 1, 3, 9 and recorded lecture 1. Linear models, matrix algebra, solution geometry, inverses, cost, and orthogonality. See [DUKE_LINEAR_ALGEBRA_COVERAGE.md](DUKE_LINEAR_ALGEBRA_COVERAGE.md).
 - **UBuffalo — International Finance:** Chapters 1–5 and Chapter 2–4 homework: national accounts, balance of payments, currency returns, money markets, PPP, and real exchange rates. See [INTERNATIONAL_FINANCE_COVERAGE.md](INTERNATIONAL_FINANCE_COVERAGE.md).
 - **AM 205:** floating-point spacing, rounding, matrix operations, linear-map geometry, pivoting, low-rank approximation, algebraic least squares, and Quiz 1 review/practice (2023–2025). See [AM205_QUIZ1_COVERAGE.md](AM205_QUIZ1_COVERAGE.md) and [AM205_COMPREHENSIVE_COVERAGE.md](AM205_COMPREHENSIVE_COVERAGE.md) for the comprehensive study sheet.
 - **AM 207:** probability foundations, inverse transforms, Monte Carlo, Metropolis–Hastings, Markov dynamics, jump processes, SSA, tau leaping, and Bayesian uncertainty.
@@ -25950,3 +25951,3338 @@ LU’s leading \(\frac23n^3\) work grows by 8. A triangular solve’s \(O(n^2)\)
 Sources: [Study sheet §7 · Rank, low-rank approximation, and cost · Operation-count scaling · authored companion](../courses/harvard/am205/quiz/quiz1/quiz1-study-sheet.md)
 
 Card ID: `am205-q1-sheet-square-cost-scaling`
+
+---
+
+### 1353. Why is \(3x-2y=7\) linear but \(xy=7\) nonlinear?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+In a linear equation, unknowns appear to the first power with constant coefficients. In \(xy\), the coefficient of either unknown depends on the other.
+
+**Intuition:** Linearity is about how the unknowns enter the equation.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 1 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=1)
+
+Card ID: `duke-218d-linear-unknowns`
+
+---
+
+### 1354. Does moving \(2y\) across the equals sign make \(x=2y+3\) nonlinear?
+
+**MATH 218D · Linear models and solutions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Rearranging gives \(x-2y=3\), a linear equation. Moving terms changes the presentation, not the relationship.
+
+**Intuition:** Recognize structure even when equations look different.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 1 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=1)
+
+Card ID: `duke-218d-linear-rearrange`
+
+---
+
+### 1355. A point satisfies one equation in a two-equation system. Is it a solution?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Only if it satisfies the other equation too. A system asks for values that make every equation true simultaneously.
+
+**Intuition:** A solution belongs to the intersection of all constraints.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 1 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=1)
+
+Card ID: `duke-218d-simultaneous`
+
+---
+
+### 1356. Is \(\pi x+\sqrt{2}y=5\) linear even though its coefficients are not integers?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. The coefficients are fixed numbers. Irrational constants are fine; products or nonlinear functions of unknowns are the problem.
+
+**Intuition:** Complicated constants do not make a model nonlinear.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 1 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=1)
+
+Card ID: `duke-218d-nonlinear-coefficient`
+
+---
+
+### 1357. At a junction with no buildup of cars, what must incoming and outgoing traffic satisfy?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Total inflow equals total outflow. Otherwise cars would accumulate or disappear at that junction.
+
+**Intuition:** A physical conservation rule becomes a linear equation.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 2 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=2)
+
+Card ID: `duke-218d-traffic-conservation`
+
+---
+
+### 1358. A junction receives \(120+w\) cars per hour and sends out \(250+x\). What constraint follows?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+**Junction traffic** (flow)
+
+- In: 120 + w
+- Out: 250 + x
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(120+w=250+x\), so \(w-x=130\). The unknown incoming flow must exceed the unknown outgoing flow by 130.
+
+**Intuition:** Keep flow direction consistent before simplifying signs.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=3)
+
+Card ID: `duke-218d-traffic-node`
+
+---
+
+### 1359. Why must the traffic network's total external inflow equal its total external outflow?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Adding all junction equations cancels each internal flow: it leaves one junction and enters another. Only external traffic remains.
+
+**Intuition:** Local conservation implies a global balance check.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=3)
+
+Card ID: `duke-218d-traffic-global`
+
+---
+
+### 1360. Why can four junction equations leave a free traffic flow?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For this connected cycle with balanced external flows, one junction equation follows from the other three. It adds no independent constraint.
+
+**Intuition:** The number of equations can exceed the number of independent restrictions.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=3)
+
+Card ID: `duke-218d-traffic-redundancy`
+
+---
+
+### 1361. If every internal flow in a directed traffic cycle rises by 10, does junction balance change?
+
+**MATH 218D · Linear models and solutions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Each junction gains 10 incoming and 10 outgoing cars per hour. Their difference stays the same.
+
+**Intuition:** Circulation can change while net flow stays fixed.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=3)
+
+Card ID: `duke-218d-traffic-cycle`
+
+---
+
+### 1362. The traffic solution is \((x,y,z,w)=(t,t+50,t+190,t+130)\). What does \(t\) represent?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+One freely chosen circulation level. Once \(x=t\) is set, the other three flows are determined by conservation.
+
+**Intuition:** A parameter describes a whole family of solutions.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=3)
+
+Card ID: `duke-218d-traffic-family`
+
+---
+
+### 1363. Which \(t\) values make \((t,t+50,t+190,t+130)\) physically valid directed flows?
+
+**MATH 218D · Linear models and solutions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(t\geq0\). All four flows must be nonnegative, and the first coordinate gives the strongest restriction.
+
+**Intuition:** Physical constraints can narrow an algebraic solution set.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=3)
+
+Card ID: `duke-218d-traffic-physical`
+
+---
+
+### 1364. Why is fitting \(x^2+By^2+Cxy+Dx+Ey+F=0\) linear in the unknown coefficients?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+At each observed point, \(x\) and \(y\) are known. The unknowns \(B,C,D,E,F\) appear only multiplied by fixed numbers, never by each other.
+
+**Intuition:** A curved geometric model can be linear in its parameters.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 4 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=4)
+
+Card ID: `duke-218d-fit-unknowns`
+
+---
+
+### 1365. What equation does the data point \((0,2)\) give in the conic model \(x^2+By^2+Cxy+Dx+Ey+F=0\)?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(4B+2E+F=0\). Substitute the observed coordinates; only the coefficients remain unknown.
+
+**Intuition:** Each observation supplies one constraint on the model.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 4 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=4)
+
+Card ID: `duke-218d-fit-row`
+
+---
+
+### 1366. For \(x^2+By^2+Cxy+Dx+Ey+F=0\), why does each data point give the row \([y^2,xy,x,y,1]\)?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Those are the coefficients multiplying \((B,C,D,E,F)\). The known term \(x^2\) moves to the right, giving \(-x^2\).
+
+**Intuition:** Design-matrix columns are the features multiplying unknown parameters.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 4 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=4)
+
+Card ID: `duke-218d-fit-columns`
+
+---
+
+### 1367. Do six observations and five unknown coefficients automatically mean no exact fit?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The six equations might be compatible. Having more equations than unknowns allows inconsistency but does not prove it.
+
+**Intuition:** Count constraints, then check whether they agree.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 4 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=4)
+
+Card ID: `duke-218d-fit-overdetermined`
+
+---
+
+### 1368. Why might slightly noisy points have no single exact conic fit?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Noise can make the coefficient equations inconsistent. An approximate fit chooses coefficients that make the discrepancies small instead of forcing impossible exact agreement.
+
+**Intuition:** Approximation is useful when measurements conflict.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=5)
+
+Card ID: `duke-218d-fit-noisy`
+
+---
+
+### 1369. When exact fitting fails, what does least squares try to make small?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The sum of squared equation residuals: differences between modeled and observed right-hand sides. For an implicit conic model, these are algebraic residuals, not automatically geometric distances to the curve.
+
+**Intuition:** Be clear about which errors the fitting rule measures.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=5)
+
+Card ID: `duke-218d-fit-leastsquares`
+
+---
+
+### 1370. Does any solution for the coefficients in the conic model necessarily describe a real ellipse?
+
+**MATH 218D · Linear models and solutions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Coefficient fitting alone does not guarantee a real, nondegenerate ellipse. The resulting conic must also have the appropriate geometric properties.
+
+**Intuition:** Solving equations and validating a model's shape are separate checks.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 4 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=4)
+
+Card ID: `duke-218d-fit-ellipse`
+
+---
+
+### 1371. If age-1 rabbits produce 6 offspring and age-2 rabbits produce 8, what is next year's newborn count?
+
+**MATH 218D · Linear models and solutions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(x_{n+1}=6y_n+8z_n\), where \(y_n,z_n\) are this year's age-1 and age-2 counts.
+
+**Intuition:** Each age group contributes independently to the next generation.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 6 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=6)
+
+Card ID: `duke-218d-rabbits-births`
+
+---
+
+### 1372. If half the newborns survive to age 1, which count determines next year's age-1 population?
+
+**MATH 218D · Linear models and solutions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+This year's newborn count: \(y_{n+1}=\tfrac12x_n\). Do not use this year's age-1 count; those survivors move to age 2.
+
+**Intuition:** Track both age and time when updating a population.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 6 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=6)
+
+Card ID: `duke-218d-rabbits-survival`
+
+---
+
+### 1373. Why do newborn, age-1, and age-2 rabbits need separate coordinates?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They have different reproduction and survival rules. The total population alone does not tell us next year's total.
+
+**Intuition:** A useful state records the information needed to predict the next step.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 6 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=6)
+
+Card ID: `duke-218d-rabbits-state`
+
+---
+
+### 1374. What matrix updates the rabbit counts when births are \(6y+8z\) and half survive each age transition?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\[\begin{bmatrix}0&6&8\\1/2&0&0\\0&1/2&0\end{bmatrix}.\] Each row computes one next-year age group from current counts.
+
+**Intuition:** Rows encode update rules; columns encode each group's contributions.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 6 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=6)
+
+Card ID: `duke-218d-rabbits-map`
+
+---
+
+### 1375. If every current age-group count doubles, what happens to next year's counts under the linear rabbit model?
+
+**MATH 218D · Linear models and solutions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Every next-year count doubles too. Each update is a fixed weighted sum with no constant population added.
+
+**Intuition:** Linear rules preserve proportional scaling.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 7 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=7)
+
+Card ID: `duke-218d-rabbits-scale`
+
+---
+
+### 1376. The rabbit model maps \((16,4,1)\) to \((32,8,2)\). What changes and what stays fixed?
+
+**MATH 218D · Linear models and solutions · QUICK RECALL**
+
+**One year of growth** (compare)
+
+- Now: \((16,4,1)\)
+- Next year: \((32,8,2)\)
+
+<details>
+<summary>Reveal explanation</summary>
+
+The total doubles, but the age proportions stay \(16:4:1\). The state vector is scaled without changing its direction.
+
+**Intuition:** A population can grow while its composition stays steady.
+
+</details>
+
+Sources: [Lecture 1 · Linear models and solutions · PDF page 7 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=7)
+
+Card ID: `duke-218d-rabbits-ratio`
+
+---
+
+### 1377. What does one nontrivial linear equation in two unknowns describe geometrically?
+
+**MATH 218D · Geometry of solution sets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A line in the coordinate plane. Each point on it is one solution pair.
+
+**Intuition:** An equation can describe infinitely many points at once.
+
+</details>
+
+Sources: [Lecture 1 · Geometry of solution sets · PDF page 8 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=8)
+
+Card ID: `duke-218d-line-equation`
+
+---
+
+### 1378. What does one nontrivial linear equation in three unknowns usually leave free?
+
+**MATH 218D · Geometry of solution sets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Two independent parameters: its solution set is a plane in three-dimensional space.
+
+**Intuition:** One independent constraint removes one degree of freedom.
+
+</details>
+
+Sources: [Lecture 1 · Geometry of solution sets · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=9)
+
+Card ID: `duke-218d-plane-equation`
+
+---
+
+### 1379. Must a fourth coordinate in \(\mathbb R^4\) represent time?
+
+**MATH 218D · Geometry of solution sets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Coordinates can represent any four quantities. The geometry does not assign them physical meanings.
+
+**Intuition:** Dimension counts independent coordinates, not a particular physical interpretation.
+
+</details>
+
+Sources: [Lecture 1 · Geometry of solution sets · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=9)
+
+Card ID: `duke-218d-extra-coordinate`
+
+---
+
+### 1380. Why do two nonparallel lines in the plane give a unique solution?
+
+**MATH 218D · Geometry of solution sets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+They intersect at exactly one point, which satisfies both equations.
+
+**Intuition:** Uniqueness means the constraints meet in only one place.
+
+</details>
+
+Sources: [Lecture 1 · Geometry of solution sets · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=9)
+
+Card ID: `duke-218d-lines-one`
+
+---
+
+### 1381. Does \((3,1)\) solve both \(x-2y=1\) and \(3x+2y=11\)?
+
+**MATH 218D · Geometry of solution sets · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes: \(3-2=1\) and \(9+2=11\). Checking a candidate only requires substitution.
+
+**Intuition:** Membership can be easier to check than a solution is to discover.
+
+</details>
+
+Sources: [Lecture 1 · Geometry of solution sets · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=9)
+
+Card ID: `duke-218d-lines-point`
+
+---
+
+### 1382. Do \(x-2y=1\) and \(3x-6y=3\) give two independent constraints?
+
+**MATH 218D · Geometry of solution sets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The second is three times the first, so they describe the same line and have infinitely many common solutions.
+
+**Intuition:** Repeating information does not reduce freedom.
+
+</details>
+
+Sources: [Lecture 1 · Geometry of solution sets · PDF page 10 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=10)
+
+Card ID: `duke-218d-lines-same`
+
+---
+
+### 1383. Why do \(x-2y=1\) and \(3x-6y=6\) have no common solution?
+
+**MATH 218D · Geometry of solution sets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Dividing the second by 3 gives \(x-2y=2\), contradicting the first. They are distinct parallel lines.
+
+**Intuition:** Identical left sides with incompatible right sides expose inconsistency.
+
+</details>
+
+Sources: [Lecture 1 · Geometry of solution sets · PDF page 10 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=10)
+
+Card ID: `duke-218d-lines-parallel`
+
+---
+
+### 1384. What is the intersection of two nonparallel planes in \(\mathbb R^3\)?
+
+**MATH 218D · Geometry of solution sets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A line. Two independent linear constraints leave one free direction.
+
+**Intuition:** Each independent constraint reduces the remaining freedom by one.
+
+</details>
+
+Sources: [Lecture 1 · Geometry of solution sets · PDF page 10 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=10)
+
+Card ID: `duke-218d-planes-line`
+
+---
+
+### 1385. The equations \(x+y+z=1\) and \(x-z=0\) give a line. What does adding \(y=0\) leave?
+
+**MATH 218D · Geometry of solution sets · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The single point \((1/2,0,1/2)\). With \(y=0\) and \(x=z\), the first equation becomes \(2x=1\).
+
+**Intuition:** A further independent constraint can pin down a point.
+
+</details>
+
+Sources: [Lecture 1 · Geometry of solution sets · PDF page 10 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=10)
+
+Card ID: `duke-218d-planes-third`
+
+---
+
+### 1386. If every pair of three planes intersects, must all three share a point?
+
+**MATH 218D · Geometry of solution sets · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. For example, \(x=0\), \(y=0\), and \(x+y=1\) intersect pairwise but cannot all hold together.
+
+**Intuition:** Pairwise compatibility does not guarantee simultaneous compatibility.
+
+</details>
+
+Sources: [Lecture 1 · Geometry of solution sets · PDF page 11 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=11)
+
+Card ID: `duke-218d-planes-pairwise`
+
+---
+
+### 1387. Can a linear system have exactly two distinct solutions?
+
+**MATH 218D · Geometry of solution sets · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No, over the real numbers. If two distinct solutions exist, every point on the line through them is also a solution.
+
+**Intuition:** Real linear systems have zero, one, or infinitely many solutions.
+
+</details>
+
+Sources: [Lecture 1 · Geometry of solution sets · PDF page 11 · authored conceptual practice](../courses/duke/linear-algebra/F25-L1.pdf#page=11)
+
+Card ID: `duke-218d-planes-options`
+
+---
+
+### 1388. Do \((2,5)\) and \((5,2)\) represent the same vector?
+
+**MATH 218D · Vectors and linear combinations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Coordinates have an order, so swapping them usually changes the vector.
+
+**Intuition:** A coordinate's position carries meaning.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 1 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=1)
+
+Card ID: `duke-218d-vector-order`
+
+---
+
+### 1389. A vector has 100 coordinates, all zero. Is its geometric length 100?
+
+**MATH 218D · Vectors and linear combinations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Its coordinate count is 100, but its geometric length is zero.
+
+**Intuition:** Coordinate count and geometric length measure different things.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 1 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=1)
+
+Card ID: `duke-218d-vector-size`
+
+---
+
+### 1390. What does multiplying the coordinate vector \(e_2=(0,1,0)\) by 5 do?
+
+**MATH 218D · Vectors and linear combinations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It gives \((0,5,0)\): only the second coordinate changes.
+
+**Intuition:** Coordinate vectors isolate individual directions.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 2 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=2)
+
+Card ID: `duke-218d-coordinate-vectors`
+
+---
+
+### 1391. Are the zero vectors in \(\mathbb R^2\) and \(\mathbb R^3\) equal?
+
+**MATH 218D · Vectors and linear combinations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. They have different numbers of coordinates. A zero vector's size comes from its space.
+
+**Intuition:** Even zeros must have compatible dimensions.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=3)
+
+Card ID: `duke-218d-vector-zero-size`
+
+---
+
+### 1392. What happens to each coordinate of a vector when it is multiplied by \(-2\)?
+
+**MATH 218D · Vectors and linear combinations · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Each coordinate is multiplied by \(-2\). Geometrically, direction reverses and length doubles.
+
+**Intuition:** Scalar multiplication changes a vector uniformly.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=3)
+
+Card ID: `duke-218d-vector-scaling`
+
+---
+
+### 1393. Why is adding a two-coordinate vector to a three-coordinate vector undefined here?
+
+**MATH 218D · Vectors and linear combinations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Vector addition pairs corresponding coordinates. The unmatched third coordinate prevents an addition in a single common space.
+
+**Intuition:** Check dimensions before doing arithmetic.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 4 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=4)
+
+Card ID: `duke-218d-vector-add-size`
+
+---
+
+### 1394. What is \((2,-1)+(1,3)\)?
+
+**MATH 218D · Vectors and linear combinations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\((3,2)\). Add matching coordinates separately.
+
+**Intuition:** Vector addition combines contributions coordinate by coordinate.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 4 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=4)
+
+Card ID: `duke-218d-vector-add-example`
+
+---
+
+### 1395. Does the dot product of two three-coordinate vectors have three coordinates?
+
+**MATH 218D · Vectors and linear combinations · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It is a single number: multiply matching coordinates, then add the products.
+
+**Intuition:** The dot product compresses two vectors into one scalar.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 4 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=4)
+
+Card ID: `duke-218d-dot-output`
+
+---
+
+### 1396. Can two nonzero real vectors have dot product zero?
+
+**MATH 218D · Vectors and linear combinations · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. For example, \((1,1)\cdot(1,-1)=0\). Positive and negative contributions cancel.
+
+**Intuition:** A zero dot product does not mean either vector is zero.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=5)
+
+Card ID: `duke-218d-dot-cancellation`
+
+---
+
+### 1397. Can a real vector have a negative dot product with itself?
+
+**MATH 218D · Vectors and linear combinations · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. \(v\cdot v\) is a sum of coordinate squares, so it is nonnegative and is zero only when \(v=0\).
+
+**Intuition:** Self-dot products cannot cancel their squared terms.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=5)
+
+Card ID: `duke-218d-dot-self`
+
+---
+
+### 1398. What is wrong with treating \(v\cdot v\) as a vector that can be dotted with \(v\) again?
+
+**MATH 218D · Vectors and linear combinations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(v\cdot v\) is a scalar. Another dot product with \(v\) is not defined between a scalar and a vector.
+
+**Intuition:** Track the type of each intermediate result.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=5)
+
+Card ID: `duke-218d-dot-power`
+
+---
+
+### 1399. If \(u\cdot v=3\), what is \(u\cdot(2v)\)?
+
+**MATH 218D · Vectors and linear combinations · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+6. Scaling either vector scales the dot product by the same factor.
+
+**Intuition:** The dot product is linear in each input separately.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=5)
+
+Card ID: `duke-218d-dot-linear`
+
+---
+
+### 1400. Why does \(u\cdot(v+w)\) equal \(u\cdot v+u\cdot w\)?
+
+**MATH 218D · Vectors and linear combinations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Coordinatewise multiplication distributes over addition; summing those coordinate identities gives the result.
+
+**Intuition:** Scalar distributivity survives inside vector calculations.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 6 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=6)
+
+Card ID: `duke-218d-dot-sum`
+
+---
+
+### 1401. What does \(2u-3v\) mean geometrically as a way to build a vector?
+
+**MATH 218D · Vectors and linear combinations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Scale \(u\) by 2, scale \(v\) by \(-3\), then add. The result is a linear combination of the two directions.
+
+**Intuition:** Weights tell you how much of each direction to use.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 6 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=6)
+
+Card ID: `duke-218d-linear-combo`
+
+---
+
+### 1402. Why can \((a,b,c)\) be written as \(ae_1+be_2+ce_3\)?
+
+**MATH 218D · Vectors and linear combinations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Each coordinate vector contributes to exactly one coordinate. Adding their weighted contributions reconstructs the vector.
+
+**Intuition:** Coordinates are weights in the standard basis.
+
+</details>
+
+Sources: [Recorded lecture 1 · Vectors and linear combinations · PDF page 6 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=6)
+
+Card ID: `duke-218d-coordinate-expansion`
+
+---
+
+### 1403. A matrix has 3 rows and 2 columns. What sizes should its input and output vectors have?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The input has 2 coordinates and the output has 3. Each column gets an input weight; each row produces an output coordinate.
+
+**Intuition:** Matrix shape describes the route from inputs to outputs.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 7 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=7)
+
+Card ID: `duke-218d-matrix-shape`
+
+---
+
+### 1404. Does \(a_{23}\) refer to row 3, column 2?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It is row 2, column 3. The row index comes first.
+
+**Intuition:** Use one consistent index order.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 7 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=7)
+
+Card ID: `duke-218d-matrix-index`
+
+---
+
+### 1405. In these notes, can a rectangular matrix be diagonal?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. The notes call a matrix diagonal when every entry with unequal row and column indices is zero. Being square is a separate condition.
+
+**Intuition:** Use the source's definition while keeping shape explicit.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 8 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=8)
+
+Card ID: `duke-218d-matrix-diagonal`
+
+---
+
+### 1406. What distinguishes the identity matrix from a general diagonal matrix?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The identity is square with every diagonal entry 1. A general diagonal matrix may scale coordinates differently or zero them out.
+
+**Intuition:** Identity preserves every coordinate exactly.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 8 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=8)
+
+Card ID: `duke-218d-matrix-identity`
+
+---
+
+### 1407. Is a zero matrix diagonal under the notes' definition?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. Every off-diagonal entry is zero; diagonal entries are allowed to be zero too.
+
+**Intuition:** A structural condition need not require nonzero entries.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 8 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=8)
+
+Card ID: `duke-218d-matrix-zero`
+
+---
+
+### 1408. Can you add a \(2\times3\) matrix to a \(3\times2\) matrix because both have six entries?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Addition needs the same row and column shape, not merely the same number of entries.
+
+**Intuition:** Matching positions matters more than total size.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=9)
+
+Card ID: `duke-218d-matrix-add`
+
+---
+
+### 1409. Does \(3(A+B)\) mean multiply only diagonal entries by 3?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Multiply every entry. Entrywise distributivity gives \(3A+3B\).
+
+**Intuition:** Scalar multiplication applies to the whole matrix.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=9)
+
+Card ID: `duke-218d-matrix-scalar`
+
+---
+
+### 1410. If \(A\) has columns \(a_1,a_2\), what does \(A(2,-1)^T\) combine?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(2a_1-a_2\). The input coordinates are weights on the columns.
+
+**Intuition:** Matrix multiplication builds outputs from column directions.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 10 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=10)
+
+Card ID: `duke-218d-matrix-vector-column`
+
+---
+
+### 1411. How does row 2 of \(A\) determine coordinate 2 of \(Ax\)?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Take the dot product of row 2 with \(x\). It adds up that row's weighted input contributions.
+
+**Intuition:** Rows compute output coordinates; columns explain the combined output.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 10 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=10)
+
+Card ID: `duke-218d-matrix-vector-row`
+
+---
+
+### 1412. Do the row-dot-product and weighted-column methods for \(Ax\) give different answers?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. They group the same products differently. One works output coordinate by output coordinate; the other works input contribution by input contribution.
+
+**Intuition:** Two views reveal different structure in the same calculation.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 11 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=11)
+
+Card ID: `duke-218d-matrix-two-views`
+
+---
+
+### 1413. What does \(Ae_2\) return?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The second column of \(A\), provided \(e_2\) has as many coordinates as \(A\) has columns.
+
+**Intuition:** A coordinate vector switches on just one column.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 11 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=11)
+
+Card ID: `duke-218d-matrix-select-column`
+
+---
+
+### 1414. If \(A\) is \(2\times3\) and \(B\) is \(3\times4\), what shape is \(AB\)?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+**Matrix shapes** (compare)
+
+- A: \(2\times3\)
+- B: \(3\times4\)
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(2\times4\). The matching inner dimension 3 is summed over; the outer dimensions remain.
+
+**Intuition:** Inner dimensions connect; outer dimensions describe the result.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=12)
+
+Card ID: `duke-218d-matrix-product-size`
+
+---
+
+### 1415. Can a \(2\times3\) matrix multiply a \(2\times4\) matrix in that order?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The first matrix expects three-coordinate columns, but the second supplies two-coordinate columns.
+
+**Intuition:** Multiplication requires matching inner dimensions.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=12)
+
+Card ID: `duke-218d-matrix-product-invalid`
+
+---
+
+### 1416. What is column \(j\) of \(AB\)?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(A\) multiplied by column \(j\) of \(B\). Each column is transformed independently by \(A\).
+
+**Intuition:** A matrix product can be understood one input column at a time.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=12)
+
+Card ID: `duke-218d-matrix-product-columns`
+
+---
+
+### 1417. Which parts of \(A\) and \(B\) determine entry \((i,j)\) of \(AB\)?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Row \(i\) of \(A\) dotted with column \(j\) of \(B\). It is not row \(i\) dotted with row \(j\).
+
+**Intuition:** The row-column rule ensures dimensions and indices agree.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 13 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=13)
+
+Card ID: `duke-218d-matrix-product-entry`
+
+---
+
+### 1418. For \(A\) of size \(3\times2\), are the identities in \(IA=A\) and \(AI=A\) the same size?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. \(I_3A=A\) and \(AI_2=A\). The left identity preserves outputs; the right preserves inputs.
+
+**Intuition:** Identity size depends on which side it acts on.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 14 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=14)
+
+Card ID: `duke-218d-matrix-identity-sides`
+
+---
+
+### 1419. If \(u\) has 2 coordinates and \(v\) has 3, what shape is \(uv^T\)?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(2\times3\). Each entry is \(u_i v_j\), and each column is a multiple of \(u\).
+
+**Intuition:** An outer product spreads one direction across several columns.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 14 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=14)
+
+Card ID: `duke-218d-outer-shape`
+
+---
+
+### 1420. How can a matrix product be written using columns of \(A\) and rows of \(B\)?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(AB=\sum_k a_k r_k\), where \(a_k\) is column \(k\) of \(A\) and \(r_k\) is row \(k\) of \(B\). Each term is an outer product.
+
+**Intuition:** Each shared index contributes one whole output matrix.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 15 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=15)
+
+Card ID: `duke-218d-outer-sum`
+
+---
+
+### 1421. If \(A\) is \(2\times5\), what shape is \(A^T\)?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(5\times2\). Rows become columns, and entry \((i,j)\) becomes entry \((j,i)\).
+
+**Intuition:** Transposing exchanges the roles of the two indices.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 16 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=16)
+
+Card ID: `duke-218d-transpose-shape`
+
+---
+
+### 1422. For column vectors \(u,v\in\mathbb R^3\), how do \(u^Tv\) and \(uv^T\) differ?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(u^Tv\) is a scalar dot product. \(uv^T\) is a \(3\times3\) outer-product matrix.
+
+**Intuition:** Moving the transpose changes both the operation and the output type.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 17 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=17)
+
+Card ID: `duke-218d-inner-outer`
+
+---
+
+### 1423. Is a square matrix automatically symmetric?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Symmetry requires \(a_{ij}=a_{ji}\), so the entries reflected across the diagonal must match.
+
+**Intuition:** Square describes shape; symmetric describes entries.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 17 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=17)
+
+Card ID: `duke-218d-symmetric-test`
+
+---
+
+### 1424. What does entry \((i,j)\) of \(A^TA\) measure?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The dot product of columns \(i\) and \(j\) of \(A\). A diagonal entry is a column's squared length.
+
+**Intuition:** The Gram matrix collects relationships among columns.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 17 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=17)
+
+Card ID: `duke-218d-gram-entry`
+
+---
+
+### 1425. Why is \(A^TA\) symmetric even when \(A\) is rectangular?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its \((i,j)\) and \((j,i)\) entries are the same dot product in reverse order. Real dot products commute.
+
+**Intuition:** Pairwise column comparisons have no preferred order.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 18 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=18)
+
+Card ID: `duke-218d-gram-symmetric`
+
+---
+
+### 1426. Can \(A(BC)\) differ from \((AB)C\) when the products are defined?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Matrix multiplication is associative. Parentheses may change computation cost, but not the exact result.
+
+**Intuition:** You may regroup a product without reordering its factors.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 18 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=18)
+
+Card ID: `duke-218d-product-associative`
+
+---
+
+### 1427. Is \(A(B+C)=AB+AC\) valid for compatible matrix sizes?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. Multiplication distributes over addition. Keep \(A\) on the same side of both terms.
+
+**Intuition:** Distributivity does not grant permission to swap factors.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 18 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=18)
+
+Card ID: `duke-218d-product-distribute`
+
+---
+
+### 1428. What is wrong with the claim \((AB)^T=A^TB^T\)?
+
+**MATH 218D · Matrix operations and dimensions · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The order must reverse: \((AB)^T=B^TA^T\). The claimed product may even have incompatible dimensions.
+
+**Intuition:** Transpose reverses a sequence of matrix operations.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 18 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=18)
+
+Card ID: `duke-218d-transpose-product`
+
+---
+
+### 1429. What happens if you transpose a matrix twice?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+You get the original matrix: \((A^T)^T=A\). Each entry moves from \((i,j)\) to \((j,i)\) and back.
+
+**Intuition:** Swapping rows and columns twice undoes the change.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 18 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=18)
+
+Card ID: `duke-218d-transpose-twice`
+
+---
+
+### 1430. Must the order of a sum reverse when taking its transpose?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No reversal is needed: \((A+B)^T=A^T+B^T\). Both sides transpose each corresponding entry.
+
+**Intuition:** The reversal rule belongs to products.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 18 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=18)
+
+Card ID: `duke-218d-transpose-sum`
+
+---
+
+### 1431. Why does \(A^2\) require a square matrix in this course?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(A^2=AA\), so the number of columns of \(A\) must equal its number of rows. It is not entrywise squaring.
+
+**Intuition:** Matrix powers mean repeated matrix multiplication.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 19 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=19)
+
+Card ID: `duke-218d-matrix-power`
+
+---
+
+### 1432. If both \(AB\) and \(BA\) exist, must they be equal?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Matrix multiplication generally depends on order. Even when both products are square, they may have different sizes or entries.
+
+**Intuition:** Applying transformations in reverse order can change the result.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 20 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=20)
+
+Card ID: `duke-218d-product-commute`
+
+---
+
+### 1433. Why can \(AB=AC\) with \(A\ne0\) fail to imply \(B=C\)?
+
+**MATH 218D · Matrix operations and dimensions · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+A nonzero matrix can discard information. For example, \(\operatorname{diag}(1,0)\) ignores the second row of the matrix it multiplies.
+
+**Intuition:** Nonzero is weaker than invertible.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 20 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=20)
+
+Card ID: `duke-218d-matrix-cancel`
+
+---
+
+### 1434. Can two nonzero matrices multiply to the zero matrix?
+
+**MATH 218D · Matrix operations and dimensions · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. \(\operatorname{diag}(1,0)\operatorname{diag}(0,1)=0\). The first matrix erases exactly the direction produced by the second.
+
+**Intuition:** Matrix multiplication can destroy nonzero information.
+
+</details>
+
+Sources: [Recorded lecture 1 · Matrix operations and dimensions · PDF page 20 · authored conceptual practice](../courses/duke/linear-algebra/F25-R1.pdf#page=20)
+
+Card ID: `duke-218d-zero-product`
+
+---
+
+### 1435. What does a reduced augmented row \([0\;0\;0\mid8]\) tell you?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+**Reduced augmented row** (equation)
+
+- Constraint: \([0\;0\;0\mid8]\)
+
+<details>
+<summary>Reveal explanation</summary>
+
+It says \(0=8\), so the system has no solution. No choice of variables can repair that contradiction.
+
+**Intuition:** Check consistency before counting free variables.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 1 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=1)
+
+Card ID: `duke-218d-pivot-contradiction`
+
+---
+
+### 1436. Why does a pivot in the augmented column signal inconsistency?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It produces a row whose variable coefficients are all zero but whose right-hand side is nonzero.
+
+**Intuition:** The augmented column is a constraint value, not another unknown.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 1 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=1)
+
+Card ID: `duke-218d-pivot-augmented`
+
+---
+
+### 1437. When does a consistent linear system have exactly one solution?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+When every variable column has a pivot. Then there are no free variables.
+
+**Intuition:** Consistency guarantees existence; pivots in all variable columns guarantee uniqueness.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 2 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=2)
+
+Card ID: `duke-218d-pivot-unique`
+
+---
+
+### 1438. If a consistent system has a nonpivot variable column, why are there infinitely many solutions?
+
+**MATH 218D · Pivots and solution freedom · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+That variable can vary freely over the real numbers, with pivot variables adjusting to satisfy the equations.
+
+**Intuition:** One free direction already produces infinitely many points.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 2 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=2)
+
+Card ID: `duke-218d-pivot-infinite`
+
+---
+
+### 1439. What is wrong with the claim “a free variable always means infinitely many solutions”?
+
+**MATH 218D · Pivots and solution freedom · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It also needs consistency. A contradictory row makes the solution set empty regardless of nonpivot columns.
+
+**Intuition:** Freedom cannot rescue incompatible constraints.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 2 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=2)
+
+Card ID: `duke-218d-pivot-free-inconsistent`
+
+---
+
+### 1440. Does a zero row in the reduced augmented matrix automatically mean infinitely many solutions?
+
+**MATH 218D · Pivots and solution freedom · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. A zero row is redundant, but there may still be a pivot in every variable column and a unique solution.
+
+**Intuition:** Count free columns, not just zero rows.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 2 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=2)
+
+Card ID: `duke-218d-pivot-row-count`
+
+---
+
+### 1441. The reduced equations are \(x+5z=1\), \(y+2z=-1\). Which variable is free?
+
+**MATH 218D · Pivots and solution freedom · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(z\). Choosing it determines \(x=1-5z\) and \(y=-1-2z\).
+
+**Intuition:** Solve pivot variables in terms of the remaining variables.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=3)
+
+Card ID: `duke-218d-pivot-parameter`
+
+---
+
+### 1442. For \((x,y,z)=(1-5t,-1-2t,t)\), what point does \(t=1\) produce?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\((-4,-3,1)\). One parameter choice produces one solution point.
+
+**Intuition:** A parameterization is a recipe for generating solutions.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=3)
+
+Card ID: `duke-218d-pivot-sample`
+
+---
+
+### 1443. Which description makes testing a candidate easier: equations or a parameterization?
+
+**MATH 218D · Pivots and solution freedom · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Usually the equations: substitute the candidate and check them all. A parameterization is usually better for generating solutions.
+
+**Intuition:** Different descriptions make different tasks easy.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 4 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=4)
+
+Card ID: `duke-218d-implicit-vs-parametric`
+
+---
+
+### 1444. Can each coordinate use a different \(t\) when checking membership in \(p+tv\)?
+
+**MATH 218D · Pivots and solution freedom · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. One common value of \(t\) must generate all coordinates simultaneously.
+
+**Intuition:** A parameter controls the whole point, not independent coordinates.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 4 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=4)
+
+Card ID: `duke-218d-parametric-membership`
+
+---
+
+### 1445. Does having a parameterization make a curve a linear solution set?
+
+**MATH 218D · Pivots and solution freedom · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The circle \((\cos t,\sin t)\) is parameterized but nonlinear. Linear solution sets have affine forms built from fixed vectors and scalar weights.
+
+**Intuition:** Parameterization is a way to describe a set, not a guarantee of linearity.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=5)
+
+Card ID: `duke-218d-circle-parameter`
+
+---
+
+### 1446. In \(x=p+tv\), which vector chooses a starting point and which chooses the direction?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(p\) is a particular solution; \(v\) is the direction. Changing \(t\) moves along a line through \(p\).
+
+**Intuition:** Separate position from allowed movement.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=5)
+
+Card ID: `duke-218d-vector-form`
+
+---
+
+### 1447. What is the direction of the line \((1,-1,0)+t(-5,-2,1)\)?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\((-5,-2,1)\), or any nonzero multiple of it. Increasing \(t\) by 1 changes the point by that vector.
+
+**Intuition:** The coefficient of a parameter describes motion along the set.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=5)
+
+Card ID: `duke-218d-vector-form-example`
+
+---
+
+### 1448. In \(x_1+2x_2-x_4=-1\), \(x_3+x_4=1\), which variables can be chosen freely?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(x_2\) and \(x_4\). Then \(x_1=-1-2x_2+x_4\) and \(x_3=1-x_4\).
+
+**Intuition:** Nonpivot columns supply the independent parameters.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 6 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=6)
+
+Card ID: `duke-218d-four-variable-free`
+
+---
+
+### 1449. For \(x_1+2x_2-x_4=-1\), \(x_3+x_4=1\), what solution comes from setting both free variables to zero?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\((-1,0,1,0)\). Setting free variables to zero finds one point; it does not describe the entire solution set.
+
+**Intuition:** A convenient particular solution is just an anchor.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 7 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=7)
+
+Card ID: `duke-218d-four-variable-point`
+
+---
+
+### 1450. For \(x_1=-1-2s+t\), \(x_2=s\), \(x_3=1-t\), \(x_4=t\), what does \((s,t)=(1,2)\) give?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\((-1,1,-1,2)\). The first coordinate is \(-1-2+2=-1\).
+
+**Intuition:** Substitute into every coordinate and check the arithmetic.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 8 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=8)
+
+Card ID: `duke-218d-four-variable-correct`
+
+---
+
+### 1451. What changes when \(s\) rises by 1 in \((-1,0,1,0)+s(-2,1,0,0)+t(1,0,-1,1)\)?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The solution changes by \((-2,1,0,0)\), regardless of its starting point or the value of \(t\).
+
+**Intuition:** Each free parameter controls one fixed direction of motion.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 8 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=8)
+
+Card ID: `duke-218d-four-variable-directions`
+
+---
+
+### 1452. If \(p\) and \(q\) both solve \(Ax=b\), what does \(A(p-q)\) equal?
+
+**MATH 218D · Pivots and solution freedom · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Zero: \(Ap-Aq=b-b=0\). Differences between solutions solve the homogeneous system.
+
+**Intuition:** You may move between solutions along directions that the matrix erases.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 8 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=8)
+
+Card ID: `duke-218d-solution-difference`
+
+---
+
+### 1453. Why does adding a vector \(v\) with \(Av=0\) to a solution \(p\) of \(Ax=b\) give another solution?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(A(p+v)=Ap+Av=b+0=b\). The added direction does not change the output.
+
+**Intuition:** A consistent solution set is one solution plus all null-space directions.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 8 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=8)
+
+Card ID: `duke-218d-solution-translate`
+
+---
+
+### 1454. Why does \(x+y+z=1\) have two free parameters?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+You can choose \(y=s\) and \(z=t\), then \(x=1-s-t\). Those choices sweep out a plane.
+
+**Intuition:** A plane needs two independent directions plus an anchor.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=9)
+
+Card ID: `duke-218d-plane-parameters`
+
+---
+
+### 1455. What is the dimension of a solution set containing exactly one point?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Zero. There is no free direction in which to move while remaining a solution.
+
+**Intuition:** Dimension measures freedom, not the number of coordinates written down.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=9)
+
+Card ID: `duke-218d-point-dimension`
+
+---
+
+### 1456. A consistent system has 5 unknowns and 3 pivots. What is its solution-set dimension?
+
+**MATH 218D · Pivots and solution freedom · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+2, because \(5-3=2\) variables are free. In general it is the number of unknowns minus the rank.
+
+**Intuition:** Independent constraints consume degrees of freedom.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 10 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=10)
+
+Card ID: `duke-218d-rank-dimension`
+
+---
+
+### 1457. Can you use “unknowns minus pivots” to call an inconsistent system a plane?
+
+**MATH 218D · Pivots and solution freedom · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. An inconsistent system has no solution set to parameterize. The dimension rule here applies to consistent systems.
+
+**Intuition:** Existence must come before geometric classification.
+
+</details>
+
+Sources: [Lecture 3 · Pivots and solution freedom · PDF page 10 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=10)
+
+Card ID: `duke-218d-rank-empty`
+
+---
+
+### 1458. What must an inverse matrix undo?
+
+**MATH 218D · Inverses and reversible systems · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For a square matrix \(A\), its inverse satisfies \(A^{-1}A=AA^{-1}=I\). It reverses the action of \(A\).
+
+**Intuition:** Invertibility means no information is lost.
+
+</details>
+
+Sources: [Lecture 3 · Inverses and reversible systems · PDF page 11 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=11)
+
+Card ID: `duke-218d-inverse-meaning`
+
+---
+
+### 1459. Is a matrix inverse formed by taking the reciprocal of each entry?
+
+**MATH 218D · Inverses and reversible systems · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. An inverse must undo matrix multiplication. Entrywise reciprocals generally do not do that, and even invertible matrices can contain zeros.
+
+**Intuition:** The operation being reversed is matrix multiplication.
+
+</details>
+
+Sources: [Lecture 3 · Inverses and reversible systems · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=12)
+
+Card ID: `duke-218d-inverse-not-reciprocal`
+
+---
+
+### 1460. When does \(\begin{bmatrix}a&b\\c&d\end{bmatrix}\) have an inverse?
+
+**MATH 218D · Inverses and reversible systems · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Exactly when \(ad-bc\ne0\). Its inverse is \(\frac1{ad-bc}\begin{bmatrix}d&-b\\-c&a\end{bmatrix}\).
+
+**Intuition:** A zero determinant signals a collapsed direction.
+
+</details>
+
+Sources: [Lecture 3 · Inverses and reversible systems · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=12)
+
+Card ID: `duke-218d-inverse-2x2`
+
+---
+
+### 1461. Why is \(\operatorname{diag}(1,0)\) noninvertible even though it is nonzero?
+
+**MATH 218D · Inverses and reversible systems · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It sends every \((x,y)\) to \((x,0)\), erasing \(y\). The original second coordinate cannot be recovered.
+
+**Intuition:** Nonzero output in one direction does not guarantee reversibility in every direction.
+
+</details>
+
+Sources: [Lecture 3 · Inverses and reversible systems · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=12)
+
+Card ID: `duke-218d-inverse-nonzero`
+
+---
+
+### 1462. If \(A\) and \(B\) are invertible, which order gives \((AB)^{-1}\)?
+
+**MATH 218D · Inverses and reversible systems · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(B^{-1}A^{-1}\). Undo the last-applied operation \(A\) first, then undo \(B\).
+
+**Intuition:** Reversing a process reverses the order of its steps.
+
+</details>
+
+Sources: [Lecture 3 · Inverses and reversible systems · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=12)
+
+Card ID: `duke-218d-inverse-product`
+
+---
+
+### 1463. What is the inverse of \(A^{-1}\)?
+
+**MATH 218D · Inverses and reversible systems · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(A\), because multiplying the two in either order gives identity.
+
+**Intuition:** Undoing an undo restores the original operation.
+
+</details>
+
+Sources: [Lecture 3 · Inverses and reversible systems · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=12)
+
+Card ID: `duke-218d-inverse-twice`
+
+---
+
+### 1464. Why row-reduce \([A\mid I]\) to compute an inverse?
+
+**MATH 218D · Inverses and reversible systems · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Each column on the right asks you to solve \(Ax=e_j\). If the left becomes \(I\), the right contains those solutions as the columns of \(A^{-1}\).
+
+**Intuition:** Computing an inverse solves for all coordinate outputs at once.
+
+</details>
+
+Sources: [Lecture 3 · Inverses and reversible systems · PDF page 13 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=13)
+
+Card ID: `duke-218d-inverse-augment`
+
+---
+
+### 1465. If row reduction cannot turn a square \(A\) into \(I\), can the right block of \([A\mid I]\) still be called its inverse?
+
+**MATH 218D · Inverses and reversible systems · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Failure to obtain a pivot in every column means \(A\) is singular, so the inverse does not exist.
+
+**Intuition:** The left identity is a required success condition.
+
+</details>
+
+Sources: [Lecture 3 · Inverses and reversible systems · PDF page 14 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=14)
+
+Card ID: `duke-218d-inverse-left-fails`
+
+---
+
+### 1466. Why is \(\begin{bmatrix}1&2&3\\4&5&6\\7&8&9\end{bmatrix}\) singular without computing an inverse?
+
+**MATH 218D · Inverses and reversible systems · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Row 3 equals twice row 2 minus row 1. The rows are dependent, so there cannot be three pivots.
+
+**Intuition:** A redundant row reveals lost information.
+
+</details>
+
+Sources: [Lecture 3 · Inverses and reversible systems · PDF page 14 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=14)
+
+Card ID: `duke-218d-inverse-dependent`
+
+---
+
+### 1467. Why does invertible \(A\) make \(Ax=b\) uniquely solvable for every \(b\)?
+
+**MATH 218D · Inverses and reversible systems · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Multiplying by \(A^{-1}\) forces \(x=A^{-1}b\), and this candidate satisfies the equation.
+
+**Intuition:** A reversible map reaches each output exactly once.
+
+</details>
+
+Sources: [Lecture 3 · Inverses and reversible systems · PDF page 15 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=15)
+
+Card ID: `duke-218d-inverse-solve`
+
+---
+
+### 1468. If \(A^{-1}=\begin{bmatrix}2&-3\\-1&2\end{bmatrix}\), what input gives output \(b=(1,0)^T\)?
+
+**MATH 218D · Inverses and reversible systems · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(x=(2,-1)^T\), the first column of \(A^{-1}\). Multiplying by \(e_1\) selects that column.
+
+**Intuition:** Inverse columns are the inputs that create coordinate outputs.
+
+</details>
+
+Sources: [Lecture 3 · Inverses and reversible systems · PDF page 15 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=15)
+
+Card ID: `duke-218d-inverse-example`
+
+---
+
+### 1469. Does a singular square matrix mean \(Ax=b\) has no solution for every \(b\)?
+
+**MATH 218D · Inverses and reversible systems · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Some right-hand sides are reachable and have infinitely many solutions; others are unreachable. For example, \(b=0\) is always reachable.
+
+**Intuition:** Singular means uniqueness for every output fails, not that every equation is inconsistent.
+
+</details>
+
+Sources: [Lecture 3 · Inverses and reversible systems · PDF page 15 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=15)
+
+Card ID: `duke-218d-inverse-singular-rhs`
+
+---
+
+### 1470. What does counting floating-point operations tell you, and what does it miss?
+
+**MATH 218D · Cost of matrix computations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It counts arithmetic such as additions, multiplications, and divisions. It does not capture all memory traffic, parallelism, or runtime overhead.
+
+**Intuition:** An operation count is a cost model, not a stopwatch.
+
+</details>
+
+Sources: [Lecture 3 · Cost of matrix computations · PDF page 16 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=16)
+
+Card ID: `duke-218d-flop-meaning`
+
+---
+
+### 1471. Why does an \(n\times n\) matrix-vector product cost about \(2n^2\) arithmetic operations?
+
+**MATH 218D · Cost of matrix computations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Each of \(n\) rows needs \(n\) multiplications and \(n-1\) additions. The exact elementary count is \(2n^2-n\).
+
+**Intuition:** Work per output multiplied by the number of outputs gives total work.
+
+</details>
+
+Sources: [Lecture 3 · Cost of matrix computations · PDF page 16 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=16)
+
+Card ID: `duke-218d-matvec-cost`
+
+---
+
+### 1472. Why does ordinary dense matrix multiplication cost about \(2n^3\), rather than \(2n^2\)?
+
+**MATH 218D · Cost of matrix computations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It computes \(n^2\) entries, each using a length-\(n\) dot product. Equivalently, it performs \(n\) matrix-vector products.
+
+**Intuition:** An extra loop over columns adds a factor of \(n\).
+
+</details>
+
+Sources: [Lecture 3 · Cost of matrix computations · PDF page 17 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=17)
+
+Card ID: `duke-218d-matmul-cost`
+
+---
+
+### 1473. If a row swap uses zero arithmetic flops, is it free in actual runtime?
+
+**MATH 218D · Cost of matrix computations · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Moving or rearranging data still has a cost. The flop model only counts arithmetic.
+
+**Intuition:** A model can ignore a cost without making it vanish.
+
+</details>
+
+Sources: [Lecture 3 · Cost of matrix computations · PDF page 17 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=17)
+
+Card ID: `duke-218d-row-swap-cost`
+
+---
+
+### 1474. Why does Gaussian elimination have cubic leading cost?
+
+**MATH 218D · Cost of matrix computations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+At each pivot, many remaining rows are updated across many remaining columns. Summing the shrinking square workloads gives about \(\tfrac23n^3\) flops.
+
+**Intuition:** Repeated two-dimensional updates create cubic total work.
+
+</details>
+
+Sources: [Lecture 3 · Cost of matrix computations · PDF page 18 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=18)
+
+Card ID: `duke-218d-row-elimination-cost`
+
+---
+
+### 1475. Why is solving a triangular system with one right-hand side only quadratic work?
+
+**MATH 218D · Cost of matrix computations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Each solved variable updates the remaining right-hand-side entries; there is no full remaining matrix to eliminate. Summing row lengths gives about \(n^2\) flops.
+
+**Intuition:** Once elimination is done, finishing one solve is much cheaper.
+
+</details>
+
+Sources: [Lecture 3 · Cost of matrix computations · PDF page 19 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=19)
+
+Card ID: `duke-218d-substitution-cost`
+
+---
+
+### 1476. Is the notes' \(n^2\) substitution count a claim that all Gauss–Jordan elimination is quadratic?
+
+**MATH 218D · Cost of matrix computations · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. It counts the specialized substitution phase for one right-hand side after triangular reduction, not arbitrary reduction of a whole dense matrix.
+
+**Intuition:** State which stage and which outputs a complexity count covers.
+
+</details>
+
+Sources: [Lecture 3 · Cost of matrix computations · PDF page 20 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=20)
+
+Card ID: `duke-218d-substitution-not-gauss-jordan`
+
+---
+
+### 1477. If \(n\) doubles, how do quadratic and cubic leading costs change?
+
+**MATH 218D · Cost of matrix computations · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Quadratic cost rises about 4-fold; cubic cost rises about 8-fold, for sufficiently large \(n\).
+
+**Intuition:** Growth rate matters more as problems get larger.
+
+</details>
+
+Sources: [Lecture 3 · Cost of matrix computations · PDF page 20 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=20)
+
+Card ID: `duke-218d-cost-double`
+
+---
+
+### 1478. The notes estimate inversion at \(\tfrac43n^3\) flops. Is forming an inverse a cheap shortcut around elimination?
+
+**MATH 218D · Cost of matrix computations · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. In that counting scheme inversion is also cubic, and using the inverse on a right-hand side adds matrix-vector work. The constant depends on the method counted.
+
+**Intuition:** An inverse is useful algebraically without being the cheapest computational route.
+
+</details>
+
+Sources: [Lecture 3 · Cost of matrix computations · PDF page 20 · authored conceptual practice](../courses/duke/linear-algebra/F25-L3.pdf#page=20)
+
+Card ID: `duke-218d-inverse-cost`
+
+---
+
+### 1479. If \(Ax=b\) has no exact solution, where do all candidate outputs \(Ax\) live?
+
+**MATH 218D · Lengths, angles, and best approximation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+In the column space of \(A\): all weighted combinations of its columns. Approximation searches for the output there closest to \(b\).
+
+**Intuition:** The matrix restricts which outputs are reachable.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 1 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=1)
+
+Card ID: `duke-218d-closest-column`
+
+---
+
+### 1480. What geometric test identifies the closest \(\hat b\) in a subspace to \(b\)?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(\hat b\) must lie in the subspace, and the residual \(b-\hat b\) must be perpendicular to every direction in it.
+
+**Intuition:** At the closest point, no allowed direction can reduce the error.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 1 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=1)
+
+Card ID: `duke-218d-closest-residual`
+
+---
+
+### 1481. Is a perpendicular residual alone enough to identify the closest vector in a subspace?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The candidate must also belong to the subspace. Taking \(\hat b=b\) makes the residual zero even when \(b\) is outside it.
+
+**Intuition:** A best approximation must be both feasible and perpendicular in its error.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 1 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=1)
+
+Card ID: `duke-218d-closest-both-conditions`
+
+---
+
+### 1482. Why does a perpendicular residual make \(\hat b\) closer than any different vector in the subspace?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Any alternative adds a displacement inside the subspace, perpendicular to the residual. By Pythagoras its squared error is the old squared error plus a positive squared displacement.
+
+**Intuition:** Moving sideways from a perpendicular foot only lengthens the error.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 1 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=1)
+
+Card ID: `duke-218d-closest-pythagoras`
+
+---
+
+### 1483. How can a dot product recover a vector's geometric length?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(\|v\|=\sqrt{v\cdot v}\). The dot product sums squared coordinates, and the square root converts squared length to length.
+
+**Intuition:** The usual distance formula is a self-dot product.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 2 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=2)
+
+Card ID: `duke-218d-norm-dot`
+
+---
+
+### 1484. What is the length of \((3,4)\), and why is it not 7?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+5, because \(\sqrt{3^2+4^2}=5\). Euclidean length uses squares, not the sum of coordinates.
+
+**Intuition:** Perpendicular coordinate contributions combine by Pythagoras.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 2 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=2)
+
+Card ID: `duke-218d-norm-example`
+
+---
+
+### 1485. If \(\|v\|=3\), what is \(\|-2v\|\)?
+
+**MATH 218D · Lengths, angles, and best approximation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+6. In general \(\|cv\|=|c|\|v\|\). A negative scale reverses direction but cannot make length negative.
+
+**Intuition:** Lengths use the magnitude of a scale factor.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 2 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=2)
+
+Card ID: `duke-218d-norm-scale-negative`
+
+---
+
+### 1486. Why is the distance between \(v\) and \(w\) equal to \(\|v-w\|\)?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The difference vector is the displacement between their endpoints. Its length measures their separation.
+
+**Intuition:** Distance comes from relative position, not either point's distance from the origin.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=3)
+
+Card ID: `duke-218d-distance-difference`
+
+---
+
+### 1487. Does using \(w-v\) instead of \(v-w\) change the distance?
+
+**MATH 218D · Lengths, angles, and best approximation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The vectors are negatives, so they have the same length.
+
+**Intuition:** Reversing a displacement preserves its length.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=3)
+
+Card ID: `duke-218d-distance-symmetric`
+
+---
+
+### 1488. How do you keep a nonzero vector's direction but change its length to 1?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Divide it by its length: \(u=v/\|v\|\). The positive scale factor preserves direction.
+
+**Intuition:** Normalization separates direction from magnitude.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=3)
+
+Card ID: `duke-218d-unit-normalize`
+
+---
+
+### 1489. Why can't you normalize the zero vector?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Its length is zero, so division is undefined. It also has no direction to preserve.
+
+**Intuition:** Normalization requires a nonzero direction.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=3)
+
+Card ID: `duke-218d-unit-zero`
+
+---
+
+### 1490. What do all unit vectors in \(\mathbb R^2\) have in common geometrically?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Their endpoints lie on the unit circle: \(x^2+y^2=1\). In \(\mathbb R^3\), the corresponding set is the unit sphere.
+
+**Intuition:** Fixing length still leaves many possible directions.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 3 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=3)
+
+Card ID: `duke-218d-unit-sphere`
+
+---
+
+### 1491. How many unit vectors lie on a line through the origin?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Exactly two: \(v/\|v\|\) and its negative, for any nonzero direction \(v\) on the line.
+
+**Intuition:** A line has two opposite unit directions.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 4 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=4)
+
+Card ID: `duke-218d-unit-line`
+
+---
+
+### 1492. What cross term appears when you expand \(\|v-w\|^2\)?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(-2v\cdot w\), giving \(\|v\|^2+\|w\|^2-2v\cdot w\). There are two equal negative cross terms.
+
+**Intuition:** Dot-product algebra connects displacement to angle.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 4 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=4)
+
+Card ID: `duke-218d-distance-expand`
+
+---
+
+### 1493. For nonzero vectors, how does their dot product encode their angle?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(v\cdot w=\|v\|\|w\|\cos\theta\). Dividing by both lengths isolates \(\cos\theta\).
+
+**Intuition:** Remove magnitudes to compare directions alone.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=5)
+
+Card ID: `duke-218d-dot-angle`
+
+---
+
+### 1494. For nonzero vectors, what does a negative dot product tell you about their angle?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It is obtuse: greater than \(90^\circ\). A positive dot product means acute, and zero means a right angle.
+
+**Intuition:** The sign records whether directions broadly agree or oppose.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=5)
+
+Card ID: `duke-218d-dot-sign`
+
+---
+
+### 1495. If two unit vectors have dot product \(1/2\), what is their angle?
+
+**MATH 218D · Lengths, angles, and best approximation · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(60^\circ\), since their lengths are 1 and \(\cos60^\circ=1/2\).
+
+**Intuition:** For unit vectors, the dot product is directly the cosine.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=5)
+
+Card ID: `duke-218d-unit-angle`
+
+---
+
+### 1496. Can two unit vectors have dot product 2?
+
+**MATH 218D · Lengths, angles, and best approximation · PREDICT**
+
+**Claim to test** (mistake)
+
+- Given: \(\|v\|=\|w\|=1\)
+- Claim: \(v\cdot w=2\)
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Cauchy–Schwarz gives \(|v\cdot w|\leq\|v\|\|w\|=1\). Equivalently, a cosine cannot exceed 1.
+
+**Intuition:** Angle interpretations supply useful error checks.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=5)
+
+Card ID: `duke-218d-dot-bound`
+
+---
+
+### 1497. Is the zero vector perpendicular to every vector, and does it make a \(90^\circ\) angle with each?
+
+**MATH 218D · Lengths, angles, and best approximation · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It is perpendicular algebraically because every dot product is zero. Its angle is undefined because it has no direction.
+
+**Intuition:** The zero vector fits the algebraic definition without a geometric angle.
+
+</details>
+
+Sources: [Lecture 9 · Lengths, angles, and best approximation · PDF page 5 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=5)
+
+Card ID: `duke-218d-orthogonal-zero`
+
+---
+
+### 1498. How do you find every vector perpendicular to \((1,-1,1)\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Solve \(x_1-x_2+x_3=0\). This is a plane through the origin, described by \(x=s(1,1,0)+t(-1,0,1)\).
+
+**Intuition:** Perpendicularity turns geometry into a homogeneous linear equation.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 6 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=6)
+
+Card ID: `duke-218d-perp-equation`
+
+---
+
+### 1499. How do you find vectors perpendicular to both \(v_1\) and \(v_2\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Put \(v_1^T\) and \(v_2^T\) as rows of a matrix and solve the homogeneous system. Both dot products must vanish.
+
+**Intuition:** Stack the perpendicularity constraints as rows.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 7 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=7)
+
+Card ID: `duke-218d-perp-two`
+
+---
+
+### 1500. Is \((1,4,3)\) perpendicular to both \((1,-1,1)\) and \((2,1,-2)\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. The dot products are \(1-4+3=0\) and \(2+4-6=0\). Every multiple of \((1,4,3)\) works too.
+
+**Intuition:** One direction can satisfy several perpendicularity constraints.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 7 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=7)
+
+Card ID: `duke-218d-perp-example`
+
+---
+
+### 1501. Why is it enough to check perpendicularity against a spanning set?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+If \(x\cdot v_i=0\) for each generator, then \(x\cdot\sum_i c_iv_i=\sum_i c_i(x\cdot v_i)=0\). It is therefore perpendicular to every vector in their span.
+
+**Intuition:** Linearity extends finitely many checks to the whole subspace.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 8 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=8)
+
+Card ID: `duke-218d-perp-span`
+
+---
+
+### 1502. Does being perpendicular to one vector in a plane make you perpendicular to the plane?
+
+**MATH 218D · Orthogonal complements and subspaces · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. You must be perpendicular to every direction in the plane. Checking two independent spanning directions is sufficient.
+
+**Intuition:** A subspace contains more than one representative direction.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 8 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=8)
+
+Card ID: `duke-218d-perp-every`
+
+---
+
+### 1503. What vector can belong to both a subspace \(V\) and its orthogonal complement \(V^\perp\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Only zero. Such a vector is perpendicular to itself, so its squared length must be zero.
+
+**Intuition:** A nonzero vector cannot be perpendicular to its own direction.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 8 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=8)
+
+Card ID: `duke-218d-perp-intersection`
+
+---
+
+### 1504. If the columns of \(A\) span \(V\), what system describes \(V^\perp\)?
+
+**MATH 218D · Orthogonal complements and subspaces · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(A^Tx=0\). Each row of \(A^T\) asks for zero dot product with one column of \(A\).
+
+**Intuition:** Transpose turns column directions into perpendicularity tests.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=9)
+
+Card ID: `duke-218d-perp-null`
+
+---
+
+### 1505. Does changing the spanning set of a subspace change its orthogonal complement?
+
+**MATH 218D · Orthogonal complements and subspaces · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. Perpendicularity depends on the subspace itself. A smaller spanning set can make the computation easier without changing the answer.
+
+**Intuition:** Different descriptions can define the same geometric object.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=9)
+
+Card ID: `duke-218d-perp-basis-independent`
+
+---
+
+### 1506. What happens if you add a redundant spanning vector when computing an orthogonal complement?
+
+**MATH 218D · Orthogonal complements and subspaces · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+You add a redundant equation. The vectors satisfying all the perpendicularity conditions stay the same.
+
+**Intuition:** Repeated information does not shrink a solution set.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=9)
+
+Card ID: `duke-218d-perp-redundant`
+
+---
+
+### 1507. What is the orthogonal complement of \(\{0\}\) inside \(\mathbb R^n\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+All of \(\mathbb R^n\), because every vector has zero dot product with zero.
+
+**Intuition:** No nonzero directions to test means no restrictions.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=9)
+
+Card ID: `duke-218d-perp-zero-space`
+
+---
+
+### 1508. What is perpendicular to every vector in \(\mathbb R^n\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Only the zero vector. A nonzero candidate would fail the dot-product test against itself.
+
+**Intuition:** Testing every direction leaves no nonzero escape.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 9 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=9)
+
+Card ID: `duke-218d-perp-entire-space`
+
+---
+
+### 1509. Why is the sum of two vectors in \(V^\perp\) still in \(V^\perp\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+For every \(v\in V\), \(v\cdot(x+y)=v\cdot x+v\cdot y=0\). Scalar multiples work the same way, and zero is included.
+
+**Intuition:** Orthogonal complements are subspaces because the constraints are homogeneous and linear.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 10 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=10)
+
+Card ID: `duke-218d-perp-closed-sum`
+
+---
+
+### 1510. If a subspace has dimension 2 inside \(\mathbb R^5\), what is the dimension of its orthogonal complement?
+
+**MATH 218D · Orthogonal complements and subspaces · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+3. The two dimensions add to the ambient dimension: \(\dim V+\dim V^\perp=5\).
+
+**Intuition:** Perpendicular directions account for the freedom outside the subspace.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 10 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=10)
+
+Card ID: `duke-218d-perp-dimension`
+
+---
+
+### 1511. What happens when you take a subspace's orthogonal complement twice?
+
+**MATH 218D · Orthogonal complements and subspaces · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+You recover the original subspace: \((V^\perp)^\perp=V\). This statement is for subspaces of finite-dimensional Euclidean space.
+
+**Intuition:** Perpendicularity pairs subspaces in both directions.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 10 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=10)
+
+Card ID: `duke-218d-perp-twice`
+
+---
+
+### 1512. The \(x\)-axis and \(y\)-axis are perpendicular in \(\mathbb R^3\). Are they each other's orthogonal complements?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+No. The complement of the \(x\)-axis is the whole \(yz\)-plane. The \(y\)-axis includes only some of those perpendicular vectors.
+
+**Intuition:** Perpendicular subspaces need not exhaust all perpendicular directions.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 11 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=11)
+
+Card ID: `duke-218d-perp-not-complement`
+
+---
+
+### 1513. Does the orthogonal complement of a line depend on the ambient space?
+
+**MATH 218D · Orthogonal complements and subspaces · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Yes. A line in \(\mathbb R^2\) has a one-dimensional complement; the same coordinate direction in \(\mathbb R^3\) has a two-dimensional complement.
+
+**Intuition:** Always specify the space in which perpendicularity is being considered.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 11 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=11)
+
+Card ID: `duke-218d-perp-ambient`
+
+---
+
+### 1514. Which null space is perpendicular to the column space of \(A\)?
+
+**MATH 218D · Orthogonal complements and subspaces · PREDICT**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(\operatorname{Nul}(A^T)\). Its vectors have zero dot product with every column of \(A\).
+
+**Intuition:** Column-space directions become rows after transposing.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=12)
+
+Card ID: `duke-218d-four-spaces-column`
+
+---
+
+### 1515. Why is \(\operatorname{Nul}(A)\) perpendicular to the row space of \(A\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(Ax=0\) says every row of \(A\) has zero dot product with \(x\). That also makes \(x\) perpendicular to any combination of rows.
+
+**Intuition:** The null-space equations already encode row perpendicularity.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=12)
+
+Card ID: `duke-218d-four-spaces-row`
+
+---
+
+### 1516. For \(A\) of size \(m\times n\), which orthogonal pair lives in \(\mathbb R^n\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The row space and \(\operatorname{Nul}(A)\). The column space and \(\operatorname{Nul}(A^T)\) instead live in \(\mathbb R^m\).
+
+**Intuition:** Inputs and outputs have separate geometric spaces.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=12)
+
+Card ID: `duke-218d-four-spaces-dimensions`
+
+---
+
+### 1517. What is \(\operatorname{Nul}(A)^\perp\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The row space of \(A\). Take orthogonal complements of \(\operatorname{Row}(A)^\perp=\operatorname{Nul}(A)\), then use the double-complement rule.
+
+**Intuition:** One perpendicular-pair identity gives the reverse identity too.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=12)
+
+Card ID: `duke-218d-four-spaces-reverse`
+
+---
+
+### 1518. What is wrong with the claim \(\operatorname{Col}(A)^\perp=\operatorname{Nul}(A)\) for every matrix?
+
+**MATH 218D · Orthogonal complements and subspaces · SPOT THE MISTAKE**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The transpose is missing: use \(\operatorname{Nul}(A^T)\). For a rectangular matrix, the claimed spaces may not even inhabit the same dimension.
+
+**Intuition:** Dimension checks catch many transpose mistakes.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 12 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=12)
+
+Card ID: `duke-218d-four-spaces-mismatch`
+
+---
+
+### 1519. For \(A=\begin{bmatrix}1&2\\1&2\end{bmatrix}\), why is \((-2,1)\) in its null space?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Each row gives \(-2+2=0\). It is perpendicular to the row-space direction \((1,2)\).
+
+**Intuition:** A null vector changes inputs without changing the output.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 13 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=13)
+
+Card ID: `duke-218d-four-spaces-example`
+
+---
+
+### 1520. For \(A=\begin{bmatrix}1&2\\1&2\end{bmatrix}\), what is perpendicular to its column space?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+The line spanned by \((-1,1)\). Both columns lie along \((1,1)\), whose dot product with \((-1,1)\) is zero.
+
+**Intuition:** The row and column pictures can have different perpendicular directions.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 13 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=13)
+
+Card ID: `duke-218d-four-spaces-column-example`
+
+---
+
+### 1521. How can you describe \(\operatorname{Nul}(A)^\perp\) without first solving for \(\operatorname{Nul}(A)\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Use the row space of \(A\). Independent rows form a basis; dependent rows must be removed if a basis is required.
+
+**Intuition:** Use the perpendicular-pair identity to avoid unnecessary computation.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 13 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=13)
+
+Card ID: `duke-218d-null-complement-basis`
+
+---
+
+### 1522. How can you turn a spanning description \(V=\operatorname{Col}(A)\) into equations for \(V\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Find a basis for \(\operatorname{Nul}(A^T)\), put those basis vectors in the columns of \(B\), then use \(B^Tx=0\). These equations describe \(V\).
+
+**Intuition:** Find perpendicular directions, then require zero dot product with them.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 14 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=14)
+
+Card ID: `duke-218d-implicit-from-span`
+
+---
+
+### 1523. Why doesn't solving \(A^Tx=0\) directly give the original column space of \(A\)?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+It gives the orthogonal complement of that column space. Taking the complement a second time returns the original space.
+
+**Intuition:** One complement changes the space; two recover it.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 14 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=14)
+
+Card ID: `duke-218d-implicit-double`
+
+---
+
+### 1524. The plane is spanned by \((1,1,1)\) and \((1,1,0)\). What simple equation describes it?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+\(x_1=x_2\). Both generators satisfy it and are independent, so their span fills that two-dimensional plane.
+
+**Intuition:** A normal vector packages a whole plane into one constraint.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 14 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=14)
+
+Card ID: `duke-218d-implicit-plane`
+
+---
+
+### 1525. Which point lies in the plane \(x_1=x_2\): \((2,2,1)\) or \((2,1,1)\)?
+
+**MATH 218D · Orthogonal complements and subspaces · PREDICT**
+
+**Candidate points** (compare)
+
+- A: \((2,2,1)\)
+- B: \((2,1,1)\)
+
+<details>
+<summary>Reveal explanation</summary>
+
+\((2,2,1)\). Its first two coordinates agree; those of the other point do not. The third coordinate is unrestricted.
+
+**Intuition:** Implicit equations make membership checks immediate.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 15 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=15)
+
+Card ID: `duke-218d-implicit-membership`
+
+---
+
+### 1526. How can you generate a point in \(\operatorname{Span}\{(1,1,1),(1,1,0)\}\) without solving equations?
+
+**MATH 218D · Orthogonal complements and subspaces · QUICK RECALL**
+
+<details>
+<summary>Reveal explanation</summary>
+
+Choose any weights \(a,b\), then form \((a+b,a+b,a)\). For example, \(a=1,b=1\) gives \((2,2,1)\).
+
+**Intuition:** Spanning vectors provide a direct construction recipe.
+
+</details>
+
+Sources: [Lecture 9 · Orthogonal complements and subspaces · PDF page 15 · authored conceptual practice](../courses/duke/linear-algebra/F25-L9.pdf#page=15)
+
+Card ID: `duke-218d-parametric-generate`

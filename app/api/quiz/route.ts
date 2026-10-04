@@ -3,7 +3,7 @@ import katex from "katex";
 import { curated } from "@/lib/cards";
 import { validateQuiz, type QuizFormat } from "@/lib/quiz";
 export const runtime = "nodejs";
-export const maxDuration = 60;
+export const maxDuration = 90;
 const cards = new Map(curated.map((c) => [c.id, c]));
 let windowStart = 0,
   requests = 0;
@@ -50,14 +50,19 @@ export async function POST(request: Request) {
     !body ||
     !Array.isArray(body.cardIds) ||
     !body.cardIds.length ||
-    body.cardIds.length > 6 ||
+    body.cardIds.length > 20 ||
+    (body.count !== undefined &&
+      (!Number.isInteger(body.count) || body.count !== body.cardIds.length)) ||
     new Set(body.cardIds).size !== body.cardIds.length ||
     body.cardIds.some(
       (id: unknown) => typeof id !== "string" || !cards.has(id),
     ) ||
     !["mixed", "mcq", "true_false"].includes(body.format)
   )
-    return error("Choose up to six built-in cards and a quiz format.", 400);
+    return error(
+      "Choose between 1 and 20 built-in cards and a quiz format.",
+      400,
+    );
   const ids = body.cardIds as string[],
     format = body.format as QuizFormat;
   const context = ids.map((id) => {
@@ -80,11 +85,11 @@ export async function POST(request: Request) {
         method: "POST",
         headers: { "Content-Type": "application/json", "api-key": key },
         cache: "no-store",
-        signal: AbortSignal.timeout(45000),
+        signal: AbortSignal.timeout(75000),
         body: JSON.stringify({
           model: "gpt-4o-mini",
           store: false,
-          max_completion_tokens: 3000,
+          max_completion_tokens: 500 * ids.length,
           response_format: {
             type: "json_schema",
             json_schema: {

@@ -2,7 +2,7 @@
   "version": 3,
   "title": "Course-grounded flashcards",
   "updated": "2026-10-04",
-  "scope": "Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2, the October 2026 Quiz 1 review, and 2023–2025 Quiz 1 solutions, and the comprehensive Quiz 1 study sheet with supporting concepts. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. UBuffalo International Finance covers the supplied Chapters 1–5 slides and Chapter 2–4 homework; source inconsistencies and exact/approximate conventions are documented in INTERNATIONAL_FINANCE_COVERAGE.md.",
+  "scope": "Short question-and-answer flashcards covering the core concepts in AM 207 lectures 01–06 and all three uploaded STAT 244 lecture-note sets, with assignment practice and supporting textbook concepts. AM 205 covers PS1–2, the October 2026 Quiz 1 review, and 2023–2025 Quiz 1 solutions, and the comprehensive Quiz 1 study sheet with supporting concepts. No card quota applies; coverage does not imply mastery. Historical and administrative slides are excluded. AM 209a uses the supplied COMPSCI 1090A Ed course, lectures 1–8 only, covering data, EDA, regression, model selection, regularization, and inference. UBuffalo International Finance covers the supplied Chapters 1–5 slides and Chapter 2–4 homework; source inconsistencies and exact/approximate conventions are documented in INTERNATIONAL_FINANCE_COVERAGE.md. Duke MATH 218D (Introduction to Linear Algebra) covers the four supplied PDFs: lectures 1, 3, and 9 and recorded lecture 1, including conceptual examples and proof steps. Missing lectures are not inferred; source corrections are documented in DUKE_LINEAR_ALGEBRA_COVERAGE.md.",
   "cards": [
     {
       "id": "am205-spacing",
@@ -35563,6 +35563,4302 @@
         }
       ],
       "color": "green",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-linear-unknowns",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why is \\(3x-2y=7\\) linear but \\(xy=7\\) nonlinear?",
+      "body": "",
+      "answer": "In a linear equation, unknowns appear to the first power with constant coefficients. In \\(xy\\), the coefficient of either unknown depends on the other.",
+      "takeaway": "Linearity is about how the unknowns enter the equation.",
+      "source": "Lecture 1 · p. 1",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 1 · authored conceptual practice",
+          "page": 1
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-linear-rearrange",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does moving \\(2y\\) across the equals sign make \\(x=2y+3\\) nonlinear?",
+      "body": "",
+      "answer": "No. Rearranging gives \\(x-2y=3\\), a linear equation. Moving terms changes the presentation, not the relationship.",
+      "takeaway": "Recognize structure even when equations look different.",
+      "source": "Lecture 1 · p. 1",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 1 · authored conceptual practice",
+          "page": 1
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-simultaneous",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "A point satisfies one equation in a two-equation system. Is it a solution?",
+      "body": "",
+      "answer": "Only if it satisfies the other equation too. A system asks for values that make every equation true simultaneously.",
+      "takeaway": "A solution belongs to the intersection of all constraints.",
+      "source": "Lecture 1 · p. 1",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 1 · authored conceptual practice",
+          "page": 1
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-nonlinear-coefficient",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Is \\(\\pi x+\\sqrt{2}y=5\\) linear even though its coefficients are not integers?",
+      "body": "",
+      "answer": "Yes. The coefficients are fixed numbers. Irrational constants are fine; products or nonlinear functions of unknowns are the problem.",
+      "takeaway": "Complicated constants do not make a model nonlinear.",
+      "source": "Lecture 1 · p. 1",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 1 · authored conceptual practice",
+          "page": 1
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-traffic-conservation",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "At a junction with no buildup of cars, what must incoming and outgoing traffic satisfy?",
+      "body": "",
+      "answer": "Total inflow equals total outflow. Otherwise cars would accumulate or disappear at that junction.",
+      "takeaway": "A physical conservation rule becomes a linear equation.",
+      "source": "Lecture 1 · p. 2",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 2 · authored conceptual practice",
+          "page": 2
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-traffic-node",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "A junction receives \\(120+w\\) cars per hour and sends out \\(250+x\\). What constraint follows?",
+      "body": "",
+      "answer": "\\(120+w=250+x\\), so \\(w-x=130\\). The unknown incoming flow must exceed the unknown outgoing flow by 130.",
+      "takeaway": "Keep flow direction consistent before simplifying signs.",
+      "source": "Lecture 1 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [],
+      "visual": {
+        "type": "flow",
+        "label": "Junction traffic",
+        "items": [
+          {
+            "label": "In",
+            "value": "120 + w"
+          },
+          {
+            "label": "Out",
+            "value": "250 + x"
+          }
+        ]
+      }
+    },
+    {
+      "id": "duke-218d-traffic-global",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why must the traffic network's total external inflow equal its total external outflow?",
+      "body": "",
+      "answer": "Adding all junction equations cancels each internal flow: it leaves one junction and enters another. Only external traffic remains.",
+      "takeaway": "Local conservation implies a global balance check.",
+      "source": "Lecture 1 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-traffic-redundancy",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why can four junction equations leave a free traffic flow?",
+      "body": "",
+      "answer": "For this connected cycle with balanced external flows, one junction equation follows from the other three. It adds no independent constraint.",
+      "takeaway": "The number of equations can exceed the number of independent restrictions.",
+      "source": "Lecture 1 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-traffic-cycle",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If every internal flow in a directed traffic cycle rises by 10, does junction balance change?",
+      "body": "",
+      "answer": "No. Each junction gains 10 incoming and 10 outgoing cars per hour. Their difference stays the same.",
+      "takeaway": "Circulation can change while net flow stays fixed.",
+      "source": "Lecture 1 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-traffic-family",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "The traffic solution is \\((x,y,z,w)=(t,t+50,t+190,t+130)\\). What does \\(t\\) represent?",
+      "body": "",
+      "answer": "One freely chosen circulation level. Once \\(x=t\\) is set, the other three flows are determined by conservation.",
+      "takeaway": "A parameter describes a whole family of solutions.",
+      "source": "Lecture 1 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-traffic-node"
+      ]
+    },
+    {
+      "id": "duke-218d-traffic-physical",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Which \\(t\\) values make \\((t,t+50,t+190,t+130)\\) physically valid directed flows?",
+      "body": "",
+      "answer": "\\(t\\geq0\\). All four flows must be nonnegative, and the first coordinate gives the strongest restriction.",
+      "takeaway": "Physical constraints can narrow an algebraic solution set.",
+      "source": "Lecture 1 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-fit-unknowns",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why is fitting \\(x^2+By^2+Cxy+Dx+Ey+F=0\\) linear in the unknown coefficients?",
+      "body": "",
+      "answer": "At each observed point, \\(x\\) and \\(y\\) are known. The unknowns \\(B,C,D,E,F\\) appear only multiplied by fixed numbers, never by each other.",
+      "takeaway": "A curved geometric model can be linear in its parameters.",
+      "source": "Lecture 1 · p. 4",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 4 · authored conceptual practice",
+          "page": 4
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-fit-row",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What equation does the data point \\((0,2)\\) give in the conic model \\(x^2+By^2+Cxy+Dx+Ey+F=0\\)?",
+      "body": "",
+      "answer": "\\(4B+2E+F=0\\). Substitute the observed coordinates; only the coefficients remain unknown.",
+      "takeaway": "Each observation supplies one constraint on the model.",
+      "source": "Lecture 1 · p. 4",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 4 · authored conceptual practice",
+          "page": 4
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-fit-columns",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "For \\(x^2+By^2+Cxy+Dx+Ey+F=0\\), why does each data point give the row \\([y^2,xy,x,y,1]\\)?",
+      "body": "",
+      "answer": "Those are the coefficients multiplying \\((B,C,D,E,F)\\). The known term \\(x^2\\) moves to the right, giving \\(-x^2\\).",
+      "takeaway": "Design-matrix columns are the features multiplying unknown parameters.",
+      "source": "Lecture 1 · p. 4",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 4 · authored conceptual practice",
+          "page": 4
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-fit-unknowns"
+      ]
+    },
+    {
+      "id": "duke-218d-fit-overdetermined",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Do six observations and five unknown coefficients automatically mean no exact fit?",
+      "body": "",
+      "answer": "No. The six equations might be compatible. Having more equations than unknowns allows inconsistency but does not prove it.",
+      "takeaway": "Count constraints, then check whether they agree.",
+      "source": "Lecture 1 · p. 4",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 4 · authored conceptual practice",
+          "page": 4
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-fit-noisy",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why might slightly noisy points have no single exact conic fit?",
+      "body": "",
+      "answer": "Noise can make the coefficient equations inconsistent. An approximate fit chooses coefficients that make the discrepancies small instead of forcing impossible exact agreement.",
+      "takeaway": "Approximation is useful when measurements conflict.",
+      "source": "Lecture 1 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-fit-leastsquares",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "When exact fitting fails, what does least squares try to make small?",
+      "body": "",
+      "answer": "The sum of squared equation residuals: differences between modeled and observed right-hand sides. For an implicit conic model, these are algebraic residuals, not automatically geometric distances to the curve.",
+      "takeaway": "Be clear about which errors the fitting rule measures.",
+      "source": "Lecture 1 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-fit-ellipse",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does any solution for the coefficients in the conic model necessarily describe a real ellipse?",
+      "body": "",
+      "answer": "No. Coefficient fitting alone does not guarantee a real, nondegenerate ellipse. The resulting conic must also have the appropriate geometric properties.",
+      "takeaway": "Solving equations and validating a model's shape are separate checks.",
+      "source": "Lecture 1 · p. 4",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 4 · authored conceptual practice",
+          "page": 4
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-rabbits-births",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If age-1 rabbits produce 6 offspring and age-2 rabbits produce 8, what is next year's newborn count?",
+      "body": "",
+      "answer": "\\(x_{n+1}=6y_n+8z_n\\), where \\(y_n,z_n\\) are this year's age-1 and age-2 counts.",
+      "takeaway": "Each age group contributes independently to the next generation.",
+      "source": "Lecture 1 · p. 6",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 6 · authored conceptual practice",
+          "page": 6
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-rabbits-survival",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If half the newborns survive to age 1, which count determines next year's age-1 population?",
+      "body": "",
+      "answer": "This year's newborn count: \\(y_{n+1}=\\tfrac12x_n\\). Do not use this year's age-1 count; those survivors move to age 2.",
+      "takeaway": "Track both age and time when updating a population.",
+      "source": "Lecture 1 · p. 6",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 6 · authored conceptual practice",
+          "page": 6
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-rabbits-state",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why do newborn, age-1, and age-2 rabbits need separate coordinates?",
+      "body": "",
+      "answer": "They have different reproduction and survival rules. The total population alone does not tell us next year's total.",
+      "takeaway": "A useful state records the information needed to predict the next step.",
+      "source": "Lecture 1 · p. 6",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 6 · authored conceptual practice",
+          "page": 6
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-rabbits-map",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What matrix updates the rabbit counts when births are \\(6y+8z\\) and half survive each age transition?",
+      "body": "",
+      "answer": "\\[\\begin{bmatrix}0&6&8\\\\1/2&0&0\\\\0&1/2&0\\end{bmatrix}.\\] Each row computes one next-year age group from current counts.",
+      "takeaway": "Rows encode update rules; columns encode each group's contributions.",
+      "source": "Lecture 1 · p. 6",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 6 · authored conceptual practice",
+          "page": 6
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-rabbits-state"
+      ]
+    },
+    {
+      "id": "duke-218d-rabbits-scale",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If every current age-group count doubles, what happens to next year's counts under the linear rabbit model?",
+      "body": "",
+      "answer": "Every next-year count doubles too. Each update is a fixed weighted sum with no constant population added.",
+      "takeaway": "Linear rules preserve proportional scaling.",
+      "source": "Lecture 1 · p. 7",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 7 · authored conceptual practice",
+          "page": 7
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-rabbits-ratio",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Linear models and solutions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "The rabbit model maps \\((16,4,1)\\) to \\((32,8,2)\\). What changes and what stays fixed?",
+      "body": "",
+      "answer": "The total doubles, but the age proportions stay \\(16:4:1\\). The state vector is scaled without changing its direction.",
+      "takeaway": "A population can grow while its composition stays steady.",
+      "source": "Lecture 1 · p. 7",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Linear models and solutions · PDF page 7 · authored conceptual practice",
+          "page": 7
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [],
+      "visual": {
+        "type": "compare",
+        "label": "One year of growth",
+        "items": [
+          {
+            "label": "Now",
+            "value": "\\((16,4,1)\\)"
+          },
+          {
+            "label": "Next year",
+            "value": "\\((32,8,2)\\)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "duke-218d-line-equation",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Geometry of solution sets",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What does one nontrivial linear equation in two unknowns describe geometrically?",
+      "body": "",
+      "answer": "A line in the coordinate plane. Each point on it is one solution pair.",
+      "takeaway": "An equation can describe infinitely many points at once.",
+      "source": "Lecture 1 · p. 8",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Geometry of solution sets · PDF page 8 · authored conceptual practice",
+          "page": 8
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-plane-equation",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Geometry of solution sets",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What does one nontrivial linear equation in three unknowns usually leave free?",
+      "body": "",
+      "answer": "Two independent parameters: its solution set is a plane in three-dimensional space.",
+      "takeaway": "One independent constraint removes one degree of freedom.",
+      "source": "Lecture 1 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Geometry of solution sets · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-extra-coordinate",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Geometry of solution sets",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Must a fourth coordinate in \\(\\mathbb R^4\\) represent time?",
+      "body": "",
+      "answer": "No. Coordinates can represent any four quantities. The geometry does not assign them physical meanings.",
+      "takeaway": "Dimension counts independent coordinates, not a particular physical interpretation.",
+      "source": "Lecture 1 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Geometry of solution sets · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-lines-one",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Geometry of solution sets",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why do two nonparallel lines in the plane give a unique solution?",
+      "body": "",
+      "answer": "They intersect at exactly one point, which satisfies both equations.",
+      "takeaway": "Uniqueness means the constraints meet in only one place.",
+      "source": "Lecture 1 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Geometry of solution sets · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-lines-point",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Geometry of solution sets",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does \\((3,1)\\) solve both \\(x-2y=1\\) and \\(3x+2y=11\\)?",
+      "body": "",
+      "answer": "Yes: \\(3-2=1\\) and \\(9+2=11\\). Checking a candidate only requires substitution.",
+      "takeaway": "Membership can be easier to check than a solution is to discover.",
+      "source": "Lecture 1 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Geometry of solution sets · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-lines-same",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Geometry of solution sets",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Do \\(x-2y=1\\) and \\(3x-6y=3\\) give two independent constraints?",
+      "body": "",
+      "answer": "No. The second is three times the first, so they describe the same line and have infinitely many common solutions.",
+      "takeaway": "Repeating information does not reduce freedom.",
+      "source": "Lecture 1 · p. 10",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Geometry of solution sets · PDF page 10 · authored conceptual practice",
+          "page": 10
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-lines-parallel",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Geometry of solution sets",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why do \\(x-2y=1\\) and \\(3x-6y=6\\) have no common solution?",
+      "body": "",
+      "answer": "Dividing the second by 3 gives \\(x-2y=2\\), contradicting the first. They are distinct parallel lines.",
+      "takeaway": "Identical left sides with incompatible right sides expose inconsistency.",
+      "source": "Lecture 1 · p. 10",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Geometry of solution sets · PDF page 10 · authored conceptual practice",
+          "page": 10
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-planes-line",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Geometry of solution sets",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What is the intersection of two nonparallel planes in \\(\\mathbb R^3\\)?",
+      "body": "",
+      "answer": "A line. Two independent linear constraints leave one free direction.",
+      "takeaway": "Each independent constraint reduces the remaining freedom by one.",
+      "source": "Lecture 1 · p. 10",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Geometry of solution sets · PDF page 10 · authored conceptual practice",
+          "page": 10
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-planes-third",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Geometry of solution sets",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "The equations \\(x+y+z=1\\) and \\(x-z=0\\) give a line. What does adding \\(y=0\\) leave?",
+      "body": "",
+      "answer": "The single point \\((1/2,0,1/2)\\). With \\(y=0\\) and \\(x=z\\), the first equation becomes \\(2x=1\\).",
+      "takeaway": "A further independent constraint can pin down a point.",
+      "source": "Lecture 1 · p. 10",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Geometry of solution sets · PDF page 10 · authored conceptual practice",
+          "page": 10
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-planes-pairwise",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Geometry of solution sets",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If every pair of three planes intersects, must all three share a point?",
+      "body": "",
+      "answer": "No. For example, \\(x=0\\), \\(y=0\\), and \\(x+y=1\\) intersect pairwise but cannot all hold together.",
+      "takeaway": "Pairwise compatibility does not guarantee simultaneous compatibility.",
+      "source": "Lecture 1 · p. 11",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Geometry of solution sets · PDF page 11 · authored conceptual practice",
+          "page": 11
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-planes-options",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Geometry of solution sets",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can a linear system have exactly two distinct solutions?",
+      "body": "",
+      "answer": "No, over the real numbers. If two distinct solutions exist, every point on the line through them is also a solution.",
+      "takeaway": "Real linear systems have zero, one, or infinitely many solutions.",
+      "source": "Lecture 1 · p. 11",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L1.pdf",
+          "locator": "Lecture 1 · Geometry of solution sets · PDF page 11 · authored conceptual practice",
+          "page": 11
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-vector-order",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Do \\((2,5)\\) and \\((5,2)\\) represent the same vector?",
+      "body": "",
+      "answer": "No. Coordinates have an order, so swapping them usually changes the vector.",
+      "takeaway": "A coordinate's position carries meaning.",
+      "source": "Recorded lecture 1 · p. 1",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 1 · authored conceptual practice",
+          "page": 1
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-vector-size",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "A vector has 100 coordinates, all zero. Is its geometric length 100?",
+      "body": "",
+      "answer": "No. Its coordinate count is 100, but its geometric length is zero.",
+      "takeaway": "Coordinate count and geometric length measure different things.",
+      "source": "Recorded lecture 1 · p. 1",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 1 · authored conceptual practice",
+          "page": 1
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-coordinate-vectors",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What does multiplying the coordinate vector \\(e_2=(0,1,0)\\) by 5 do?",
+      "body": "",
+      "answer": "It gives \\((0,5,0)\\): only the second coordinate changes.",
+      "takeaway": "Coordinate vectors isolate individual directions.",
+      "source": "Recorded lecture 1 · p. 2",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 2 · authored conceptual practice",
+          "page": 2
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-vector-zero-size",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Are the zero vectors in \\(\\mathbb R^2\\) and \\(\\mathbb R^3\\) equal?",
+      "body": "",
+      "answer": "No. They have different numbers of coordinates. A zero vector's size comes from its space.",
+      "takeaway": "Even zeros must have compatible dimensions.",
+      "source": "Recorded lecture 1 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-vector-scaling",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "What happens to each coordinate of a vector when it is multiplied by \\(-2\\)?",
+      "body": "",
+      "answer": "Each coordinate is multiplied by \\(-2\\). Geometrically, direction reverses and length doubles.",
+      "takeaway": "Scalar multiplication changes a vector uniformly.",
+      "source": "Recorded lecture 1 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-vector-add-size",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why is adding a two-coordinate vector to a three-coordinate vector undefined here?",
+      "body": "",
+      "answer": "Vector addition pairs corresponding coordinates. The unmatched third coordinate prevents an addition in a single common space.",
+      "takeaway": "Check dimensions before doing arithmetic.",
+      "source": "Recorded lecture 1 · p. 4",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 4 · authored conceptual practice",
+          "page": 4
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-vector-add-example",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What is \\((2,-1)+(1,3)\\)?",
+      "body": "",
+      "answer": "\\((3,2)\\). Add matching coordinates separately.",
+      "takeaway": "Vector addition combines contributions coordinate by coordinate.",
+      "source": "Recorded lecture 1 · p. 4",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 4 · authored conceptual practice",
+          "page": 4
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-dot-output",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does the dot product of two three-coordinate vectors have three coordinates?",
+      "body": "",
+      "answer": "No. It is a single number: multiply matching coordinates, then add the products.",
+      "takeaway": "The dot product compresses two vectors into one scalar.",
+      "source": "Recorded lecture 1 · p. 4",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 4 · authored conceptual practice",
+          "page": 4
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-dot-cancellation",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can two nonzero real vectors have dot product zero?",
+      "body": "",
+      "answer": "Yes. For example, \\((1,1)\\cdot(1,-1)=0\\). Positive and negative contributions cancel.",
+      "takeaway": "A zero dot product does not mean either vector is zero.",
+      "source": "Recorded lecture 1 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-dot-self",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can a real vector have a negative dot product with itself?",
+      "body": "",
+      "answer": "No. \\(v\\cdot v\\) is a sum of coordinate squares, so it is nonnegative and is zero only when \\(v=0\\).",
+      "takeaway": "Self-dot products cannot cancel their squared terms.",
+      "source": "Recorded lecture 1 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-dot-power",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What is wrong with treating \\(v\\cdot v\\) as a vector that can be dotted with \\(v\\) again?",
+      "body": "",
+      "answer": "\\(v\\cdot v\\) is a scalar. Another dot product with \\(v\\) is not defined between a scalar and a vector.",
+      "takeaway": "Track the type of each intermediate result.",
+      "source": "Recorded lecture 1 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-dot-linear",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(u\\cdot v=3\\), what is \\(u\\cdot(2v)\\)?",
+      "body": "",
+      "answer": "6. Scaling either vector scales the dot product by the same factor.",
+      "takeaway": "The dot product is linear in each input separately.",
+      "source": "Recorded lecture 1 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-dot-sum",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why does \\(u\\cdot(v+w)\\) equal \\(u\\cdot v+u\\cdot w\\)?",
+      "body": "",
+      "answer": "Coordinatewise multiplication distributes over addition; summing those coordinate identities gives the result.",
+      "takeaway": "Scalar distributivity survives inside vector calculations.",
+      "source": "Recorded lecture 1 · p. 6",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 6 · authored conceptual practice",
+          "page": 6
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-linear-combo",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What does \\(2u-3v\\) mean geometrically as a way to build a vector?",
+      "body": "",
+      "answer": "Scale \\(u\\) by 2, scale \\(v\\) by \\(-3\\), then add. The result is a linear combination of the two directions.",
+      "takeaway": "Weights tell you how much of each direction to use.",
+      "source": "Recorded lecture 1 · p. 6",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 6 · authored conceptual practice",
+          "page": 6
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-coordinate-expansion",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Vectors and linear combinations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why can \\((a,b,c)\\) be written as \\(ae_1+be_2+ce_3\\)?",
+      "body": "",
+      "answer": "Each coordinate vector contributes to exactly one coordinate. Adding their weighted contributions reconstructs the vector.",
+      "takeaway": "Coordinates are weights in the standard basis.",
+      "source": "Recorded lecture 1 · p. 6",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Vectors and linear combinations · PDF page 6 · authored conceptual practice",
+          "page": 6
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-shape",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "A matrix has 3 rows and 2 columns. What sizes should its input and output vectors have?",
+      "body": "",
+      "answer": "The input has 2 coordinates and the output has 3. Each column gets an input weight; each row produces an output coordinate.",
+      "takeaway": "Matrix shape describes the route from inputs to outputs.",
+      "source": "Recorded lecture 1 · p. 7",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 7 · authored conceptual practice",
+          "page": 7
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-index",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does \\(a_{23}\\) refer to row 3, column 2?",
+      "body": "",
+      "answer": "No. It is row 2, column 3. The row index comes first.",
+      "takeaway": "Use one consistent index order.",
+      "source": "Recorded lecture 1 · p. 7",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 7 · authored conceptual practice",
+          "page": 7
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-diagonal",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "In these notes, can a rectangular matrix be diagonal?",
+      "body": "",
+      "answer": "Yes. The notes call a matrix diagonal when every entry with unequal row and column indices is zero. Being square is a separate condition.",
+      "takeaway": "Use the source's definition while keeping shape explicit.",
+      "source": "Recorded lecture 1 · p. 8",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 8 · authored conceptual practice",
+          "page": 8
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-identity",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What distinguishes the identity matrix from a general diagonal matrix?",
+      "body": "",
+      "answer": "The identity is square with every diagonal entry 1. A general diagonal matrix may scale coordinates differently or zero them out.",
+      "takeaway": "Identity preserves every coordinate exactly.",
+      "source": "Recorded lecture 1 · p. 8",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 8 · authored conceptual practice",
+          "page": 8
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-zero",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Is a zero matrix diagonal under the notes' definition?",
+      "body": "",
+      "answer": "Yes. Every off-diagonal entry is zero; diagonal entries are allowed to be zero too.",
+      "takeaway": "A structural condition need not require nonzero entries.",
+      "source": "Recorded lecture 1 · p. 8",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 8 · authored conceptual practice",
+          "page": 8
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-add",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can you add a \\(2\\times3\\) matrix to a \\(3\\times2\\) matrix because both have six entries?",
+      "body": "",
+      "answer": "No. Addition needs the same row and column shape, not merely the same number of entries.",
+      "takeaway": "Matching positions matters more than total size.",
+      "source": "Recorded lecture 1 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-scalar",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does \\(3(A+B)\\) mean multiply only diagonal entries by 3?",
+      "body": "",
+      "answer": "No. Multiply every entry. Entrywise distributivity gives \\(3A+3B\\).",
+      "takeaway": "Scalar multiplication applies to the whole matrix.",
+      "source": "Recorded lecture 1 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-vector-column",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(A\\) has columns \\(a_1,a_2\\), what does \\(A(2,-1)^T\\) combine?",
+      "body": "",
+      "answer": "\\(2a_1-a_2\\). The input coordinates are weights on the columns.",
+      "takeaway": "Matrix multiplication builds outputs from column directions.",
+      "source": "Recorded lecture 1 · p. 10",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 10 · authored conceptual practice",
+          "page": 10
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-linear-combo"
+      ]
+    },
+    {
+      "id": "duke-218d-matrix-vector-row",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "How does row 2 of \\(A\\) determine coordinate 2 of \\(Ax\\)?",
+      "body": "",
+      "answer": "Take the dot product of row 2 with \\(x\\). It adds up that row's weighted input contributions.",
+      "takeaway": "Rows compute output coordinates; columns explain the combined output.",
+      "source": "Recorded lecture 1 · p. 10",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 10 · authored conceptual practice",
+          "page": 10
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-two-views",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Do the row-dot-product and weighted-column methods for \\(Ax\\) give different answers?",
+      "body": "",
+      "answer": "No. They group the same products differently. One works output coordinate by output coordinate; the other works input contribution by input contribution.",
+      "takeaway": "Two views reveal different structure in the same calculation.",
+      "source": "Recorded lecture 1 · p. 11",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 11 · authored conceptual practice",
+          "page": 11
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-select-column",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What does \\(Ae_2\\) return?",
+      "body": "",
+      "answer": "The second column of \\(A\\), provided \\(e_2\\) has as many coordinates as \\(A\\) has columns.",
+      "takeaway": "A coordinate vector switches on just one column.",
+      "source": "Recorded lecture 1 · p. 11",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 11 · authored conceptual practice",
+          "page": 11
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-product-size",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(A\\) is \\(2\\times3\\) and \\(B\\) is \\(3\\times4\\), what shape is \\(AB\\)?",
+      "body": "",
+      "answer": "\\(2\\times4\\). The matching inner dimension 3 is summed over; the outer dimensions remain.",
+      "takeaway": "Inner dimensions connect; outer dimensions describe the result.",
+      "source": "Recorded lecture 1 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [],
+      "visual": {
+        "type": "compare",
+        "label": "Matrix shapes",
+        "items": [
+          {
+            "label": "A",
+            "value": "\\(2\\times3\\)"
+          },
+          {
+            "label": "B",
+            "value": "\\(3\\times4\\)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "duke-218d-matrix-product-invalid",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can a \\(2\\times3\\) matrix multiply a \\(2\\times4\\) matrix in that order?",
+      "body": "",
+      "answer": "No. The first matrix expects three-coordinate columns, but the second supplies two-coordinate columns.",
+      "takeaway": "Multiplication requires matching inner dimensions.",
+      "source": "Recorded lecture 1 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-product-columns",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What is column \\(j\\) of \\(AB\\)?",
+      "body": "",
+      "answer": "\\(A\\) multiplied by column \\(j\\) of \\(B\\). Each column is transformed independently by \\(A\\).",
+      "takeaway": "A matrix product can be understood one input column at a time.",
+      "source": "Recorded lecture 1 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-matrix-vector-column"
+      ]
+    },
+    {
+      "id": "duke-218d-matrix-product-entry",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Which parts of \\(A\\) and \\(B\\) determine entry \\((i,j)\\) of \\(AB\\)?",
+      "body": "",
+      "answer": "Row \\(i\\) of \\(A\\) dotted with column \\(j\\) of \\(B\\). It is not row \\(i\\) dotted with row \\(j\\).",
+      "takeaway": "The row-column rule ensures dimensions and indices agree.",
+      "source": "Recorded lecture 1 · p. 13",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 13 · authored conceptual practice",
+          "page": 13
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-identity-sides",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "For \\(A\\) of size \\(3\\times2\\), are the identities in \\(IA=A\\) and \\(AI=A\\) the same size?",
+      "body": "",
+      "answer": "No. \\(I_3A=A\\) and \\(AI_2=A\\). The left identity preserves outputs; the right preserves inputs.",
+      "takeaway": "Identity size depends on which side it acts on.",
+      "source": "Recorded lecture 1 · p. 14",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 14 · authored conceptual practice",
+          "page": 14
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-outer-shape",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(u\\) has 2 coordinates and \\(v\\) has 3, what shape is \\(uv^T\\)?",
+      "body": "",
+      "answer": "\\(2\\times3\\). Each entry is \\(u_i v_j\\), and each column is a multiple of \\(u\\).",
+      "takeaway": "An outer product spreads one direction across several columns.",
+      "source": "Recorded lecture 1 · p. 14",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 14 · authored conceptual practice",
+          "page": 14
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-outer-sum",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "How can a matrix product be written using columns of \\(A\\) and rows of \\(B\\)?",
+      "body": "",
+      "answer": "\\(AB=\\sum_k a_k r_k\\), where \\(a_k\\) is column \\(k\\) of \\(A\\) and \\(r_k\\) is row \\(k\\) of \\(B\\). Each term is an outer product.",
+      "takeaway": "Each shared index contributes one whole output matrix.",
+      "source": "Recorded lecture 1 · p. 15",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 15 · authored conceptual practice",
+          "page": 15
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-outer-shape"
+      ]
+    },
+    {
+      "id": "duke-218d-transpose-shape",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(A\\) is \\(2\\times5\\), what shape is \\(A^T\\)?",
+      "body": "",
+      "answer": "\\(5\\times2\\). Rows become columns, and entry \\((i,j)\\) becomes entry \\((j,i)\\).",
+      "takeaway": "Transposing exchanges the roles of the two indices.",
+      "source": "Recorded lecture 1 · p. 16",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 16 · authored conceptual practice",
+          "page": 16
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-inner-outer",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "For column vectors \\(u,v\\in\\mathbb R^3\\), how do \\(u^Tv\\) and \\(uv^T\\) differ?",
+      "body": "",
+      "answer": "\\(u^Tv\\) is a scalar dot product. \\(uv^T\\) is a \\(3\\times3\\) outer-product matrix.",
+      "takeaway": "Moving the transpose changes both the operation and the output type.",
+      "source": "Recorded lecture 1 · p. 17",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 17 · authored conceptual practice",
+          "page": 17
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-symmetric-test",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Is a square matrix automatically symmetric?",
+      "body": "",
+      "answer": "No. Symmetry requires \\(a_{ij}=a_{ji}\\), so the entries reflected across the diagonal must match.",
+      "takeaway": "Square describes shape; symmetric describes entries.",
+      "source": "Recorded lecture 1 · p. 17",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 17 · authored conceptual practice",
+          "page": 17
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-gram-entry",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What does entry \\((i,j)\\) of \\(A^TA\\) measure?",
+      "body": "",
+      "answer": "The dot product of columns \\(i\\) and \\(j\\) of \\(A\\). A diagonal entry is a column's squared length.",
+      "takeaway": "The Gram matrix collects relationships among columns.",
+      "source": "Recorded lecture 1 · p. 17",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 17 · authored conceptual practice",
+          "page": 17
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-matrix-product-entry",
+        "duke-218d-transpose-shape"
+      ]
+    },
+    {
+      "id": "duke-218d-gram-symmetric",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why is \\(A^TA\\) symmetric even when \\(A\\) is rectangular?",
+      "body": "",
+      "answer": "Its \\((i,j)\\) and \\((j,i)\\) entries are the same dot product in reverse order. Real dot products commute.",
+      "takeaway": "Pairwise column comparisons have no preferred order.",
+      "source": "Recorded lecture 1 · p. 18",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 18 · authored conceptual practice",
+          "page": 18
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-product-associative",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can \\(A(BC)\\) differ from \\((AB)C\\) when the products are defined?",
+      "body": "",
+      "answer": "No. Matrix multiplication is associative. Parentheses may change computation cost, but not the exact result.",
+      "takeaway": "You may regroup a product without reordering its factors.",
+      "source": "Recorded lecture 1 · p. 18",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 18 · authored conceptual practice",
+          "page": 18
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-product-distribute",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Is \\(A(B+C)=AB+AC\\) valid for compatible matrix sizes?",
+      "body": "",
+      "answer": "Yes. Multiplication distributes over addition. Keep \\(A\\) on the same side of both terms.",
+      "takeaway": "Distributivity does not grant permission to swap factors.",
+      "source": "Recorded lecture 1 · p. 18",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 18 · authored conceptual practice",
+          "page": 18
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-transpose-product",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "What is wrong with the claim \\((AB)^T=A^TB^T\\)?",
+      "body": "",
+      "answer": "The order must reverse: \\((AB)^T=B^TA^T\\). The claimed product may even have incompatible dimensions.",
+      "takeaway": "Transpose reverses a sequence of matrix operations.",
+      "source": "Recorded lecture 1 · p. 18",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 18 · authored conceptual practice",
+          "page": 18
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-transpose-twice",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "What happens if you transpose a matrix twice?",
+      "body": "",
+      "answer": "You get the original matrix: \\((A^T)^T=A\\). Each entry moves from \\((i,j)\\) to \\((j,i)\\) and back.",
+      "takeaway": "Swapping rows and columns twice undoes the change.",
+      "source": "Recorded lecture 1 · p. 18",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 18 · authored conceptual practice",
+          "page": 18
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-transpose-sum",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Must the order of a sum reverse when taking its transpose?",
+      "body": "",
+      "answer": "No reversal is needed: \\((A+B)^T=A^T+B^T\\). Both sides transpose each corresponding entry.",
+      "takeaway": "The reversal rule belongs to products.",
+      "source": "Recorded lecture 1 · p. 18",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 18 · authored conceptual practice",
+          "page": 18
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-power",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why does \\(A^2\\) require a square matrix in this course?",
+      "body": "",
+      "answer": "\\(A^2=AA\\), so the number of columns of \\(A\\) must equal its number of rows. It is not entrywise squaring.",
+      "takeaway": "Matrix powers mean repeated matrix multiplication.",
+      "source": "Recorded lecture 1 · p. 19",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 19 · authored conceptual practice",
+          "page": 19
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-product-commute",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If both \\(AB\\) and \\(BA\\) exist, must they be equal?",
+      "body": "",
+      "answer": "No. Matrix multiplication generally depends on order. Even when both products are square, they may have different sizes or entries.",
+      "takeaway": "Applying transformations in reverse order can change the result.",
+      "source": "Recorded lecture 1 · p. 20",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 20 · authored conceptual practice",
+          "page": 20
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matrix-cancel",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why can \\(AB=AC\\) with \\(A\\ne0\\) fail to imply \\(B=C\\)?",
+      "body": "",
+      "answer": "A nonzero matrix can discard information. For example, \\(\\operatorname{diag}(1,0)\\) ignores the second row of the matrix it multiplies.",
+      "takeaway": "Nonzero is weaker than invertible.",
+      "source": "Recorded lecture 1 · p. 20",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 20 · authored conceptual practice",
+          "page": 20
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-zero-product",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Matrix operations and dimensions",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can two nonzero matrices multiply to the zero matrix?",
+      "body": "",
+      "answer": "Yes. \\(\\operatorname{diag}(1,0)\\operatorname{diag}(0,1)=0\\). The first matrix erases exactly the direction produced by the second.",
+      "takeaway": "Matrix multiplication can destroy nonzero information.",
+      "source": "Recorded lecture 1 · p. 20",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-R1.pdf",
+          "locator": "Recorded lecture 1 · Matrix operations and dimensions · PDF page 20 · authored conceptual practice",
+          "page": 20
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-pivot-contradiction",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What does a reduced augmented row \\([0\\;0\\;0\\mid8]\\) tell you?",
+      "body": "",
+      "answer": "It says \\(0=8\\), so the system has no solution. No choice of variables can repair that contradiction.",
+      "takeaway": "Check consistency before counting free variables.",
+      "source": "Lecture 3 · p. 1",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 1 · authored conceptual practice",
+          "page": 1
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [],
+      "visual": {
+        "type": "equation",
+        "label": "Reduced augmented row",
+        "items": [
+          {
+            "label": "Constraint",
+            "value": "\\([0\\;0\\;0\\mid8]\\)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "duke-218d-pivot-augmented",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why does a pivot in the augmented column signal inconsistency?",
+      "body": "",
+      "answer": "It produces a row whose variable coefficients are all zero but whose right-hand side is nonzero.",
+      "takeaway": "The augmented column is a constraint value, not another unknown.",
+      "source": "Lecture 3 · p. 1",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 1 · authored conceptual practice",
+          "page": 1
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-pivot-unique",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "When does a consistent linear system have exactly one solution?",
+      "body": "",
+      "answer": "When every variable column has a pivot. Then there are no free variables.",
+      "takeaway": "Consistency guarantees existence; pivots in all variable columns guarantee uniqueness.",
+      "source": "Lecture 3 · p. 2",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 2 · authored conceptual practice",
+          "page": 2
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-pivot-infinite",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If a consistent system has a nonpivot variable column, why are there infinitely many solutions?",
+      "body": "",
+      "answer": "That variable can vary freely over the real numbers, with pivot variables adjusting to satisfy the equations.",
+      "takeaway": "One free direction already produces infinitely many points.",
+      "source": "Lecture 3 · p. 2",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 2 · authored conceptual practice",
+          "page": 2
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-pivot-free-inconsistent",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "What is wrong with the claim “a free variable always means infinitely many solutions”?",
+      "body": "",
+      "answer": "It also needs consistency. A contradictory row makes the solution set empty regardless of nonpivot columns.",
+      "takeaway": "Freedom cannot rescue incompatible constraints.",
+      "source": "Lecture 3 · p. 2",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 2 · authored conceptual practice",
+          "page": 2
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-pivot-row-count",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does a zero row in the reduced augmented matrix automatically mean infinitely many solutions?",
+      "body": "",
+      "answer": "No. A zero row is redundant, but there may still be a pivot in every variable column and a unique solution.",
+      "takeaway": "Count free columns, not just zero rows.",
+      "source": "Lecture 3 · p. 2",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 2 · authored conceptual practice",
+          "page": 2
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-pivot-parameter",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "The reduced equations are \\(x+5z=1\\), \\(y+2z=-1\\). Which variable is free?",
+      "body": "",
+      "answer": "\\(z\\). Choosing it determines \\(x=1-5z\\) and \\(y=-1-2z\\).",
+      "takeaway": "Solve pivot variables in terms of the remaining variables.",
+      "source": "Lecture 3 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-pivot-sample",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "For \\((x,y,z)=(1-5t,-1-2t,t)\\), what point does \\(t=1\\) produce?",
+      "body": "",
+      "answer": "\\((-4,-3,1)\\). One parameter choice produces one solution point.",
+      "takeaway": "A parameterization is a recipe for generating solutions.",
+      "source": "Lecture 3 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-implicit-vs-parametric",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Which description makes testing a candidate easier: equations or a parameterization?",
+      "body": "",
+      "answer": "Usually the equations: substitute the candidate and check them all. A parameterization is usually better for generating solutions.",
+      "takeaway": "Different descriptions make different tasks easy.",
+      "source": "Lecture 3 · p. 4",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 4 · authored conceptual practice",
+          "page": 4
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-parametric-membership",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can each coordinate use a different \\(t\\) when checking membership in \\(p+tv\\)?",
+      "body": "",
+      "answer": "No. One common value of \\(t\\) must generate all coordinates simultaneously.",
+      "takeaway": "A parameter controls the whole point, not independent coordinates.",
+      "source": "Lecture 3 · p. 4",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 4 · authored conceptual practice",
+          "page": 4
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-circle-parameter",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does having a parameterization make a curve a linear solution set?",
+      "body": "",
+      "answer": "No. The circle \\((\\cos t,\\sin t)\\) is parameterized but nonlinear. Linear solution sets have affine forms built from fixed vectors and scalar weights.",
+      "takeaway": "Parameterization is a way to describe a set, not a guarantee of linearity.",
+      "source": "Lecture 3 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-vector-form",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "In \\(x=p+tv\\), which vector chooses a starting point and which chooses the direction?",
+      "body": "",
+      "answer": "\\(p\\) is a particular solution; \\(v\\) is the direction. Changing \\(t\\) moves along a line through \\(p\\).",
+      "takeaway": "Separate position from allowed movement.",
+      "source": "Lecture 3 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-pivot-parameter"
+      ]
+    },
+    {
+      "id": "duke-218d-vector-form-example",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What is the direction of the line \\((1,-1,0)+t(-5,-2,1)\\)?",
+      "body": "",
+      "answer": "\\((-5,-2,1)\\), or any nonzero multiple of it. Increasing \\(t\\) by 1 changes the point by that vector.",
+      "takeaway": "The coefficient of a parameter describes motion along the set.",
+      "source": "Lecture 3 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-four-variable-free",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "In \\(x_1+2x_2-x_4=-1\\), \\(x_3+x_4=1\\), which variables can be chosen freely?",
+      "body": "",
+      "answer": "\\(x_2\\) and \\(x_4\\). Then \\(x_1=-1-2x_2+x_4\\) and \\(x_3=1-x_4\\).",
+      "takeaway": "Nonpivot columns supply the independent parameters.",
+      "source": "Lecture 3 · p. 6",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 6 · authored conceptual practice",
+          "page": 6
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-four-variable-point",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "For \\(x_1+2x_2-x_4=-1\\), \\(x_3+x_4=1\\), what solution comes from setting both free variables to zero?",
+      "body": "",
+      "answer": "\\((-1,0,1,0)\\). Setting free variables to zero finds one point; it does not describe the entire solution set.",
+      "takeaway": "A convenient particular solution is just an anchor.",
+      "source": "Lecture 3 · p. 7",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 7 · authored conceptual practice",
+          "page": 7
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-four-variable-correct",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "For \\(x_1=-1-2s+t\\), \\(x_2=s\\), \\(x_3=1-t\\), \\(x_4=t\\), what does \\((s,t)=(1,2)\\) give?",
+      "body": "",
+      "answer": "\\((-1,1,-1,2)\\). The first coordinate is \\(-1-2+2=-1\\).",
+      "takeaway": "Substitute into every coordinate and check the arithmetic.",
+      "source": "Lecture 3 · p. 8",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 8 · authored conceptual practice",
+          "page": 8
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-four-variable-directions",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What changes when \\(s\\) rises by 1 in \\((-1,0,1,0)+s(-2,1,0,0)+t(1,0,-1,1)\\)?",
+      "body": "",
+      "answer": "The solution changes by \\((-2,1,0,0)\\), regardless of its starting point or the value of \\(t\\).",
+      "takeaway": "Each free parameter controls one fixed direction of motion.",
+      "source": "Lecture 3 · p. 8",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 8 · authored conceptual practice",
+          "page": 8
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-solution-difference",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(p\\) and \\(q\\) both solve \\(Ax=b\\), what does \\(A(p-q)\\) equal?",
+      "body": "",
+      "answer": "Zero: \\(Ap-Aq=b-b=0\\). Differences between solutions solve the homogeneous system.",
+      "takeaway": "You may move between solutions along directions that the matrix erases.",
+      "source": "Lecture 3 · p. 8",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 8 · authored conceptual practice",
+          "page": 8
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-solution-translate",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why does adding a vector \\(v\\) with \\(Av=0\\) to a solution \\(p\\) of \\(Ax=b\\) give another solution?",
+      "body": "",
+      "answer": "\\(A(p+v)=Ap+Av=b+0=b\\). The added direction does not change the output.",
+      "takeaway": "A consistent solution set is one solution plus all null-space directions.",
+      "source": "Lecture 3 · p. 8",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 8 · authored conceptual practice",
+          "page": 8
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-solution-difference"
+      ]
+    },
+    {
+      "id": "duke-218d-plane-parameters",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why does \\(x+y+z=1\\) have two free parameters?",
+      "body": "",
+      "answer": "You can choose \\(y=s\\) and \\(z=t\\), then \\(x=1-s-t\\). Those choices sweep out a plane.",
+      "takeaway": "A plane needs two independent directions plus an anchor.",
+      "source": "Lecture 3 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-point-dimension",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What is the dimension of a solution set containing exactly one point?",
+      "body": "",
+      "answer": "Zero. There is no free direction in which to move while remaining a solution.",
+      "takeaway": "Dimension measures freedom, not the number of coordinates written down.",
+      "source": "Lecture 3 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-rank-dimension",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "A consistent system has 5 unknowns and 3 pivots. What is its solution-set dimension?",
+      "body": "",
+      "answer": "2, because \\(5-3=2\\) variables are free. In general it is the number of unknowns minus the rank.",
+      "takeaway": "Independent constraints consume degrees of freedom.",
+      "source": "Lecture 3 · p. 10",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 10 · authored conceptual practice",
+          "page": 10
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-rank-empty",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Pivots and solution freedom",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can you use “unknowns minus pivots” to call an inconsistent system a plane?",
+      "body": "",
+      "answer": "No. An inconsistent system has no solution set to parameterize. The dimension rule here applies to consistent systems.",
+      "takeaway": "Existence must come before geometric classification.",
+      "source": "Lecture 3 · p. 10",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Pivots and solution freedom · PDF page 10 · authored conceptual practice",
+          "page": 10
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-inverse-meaning",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Inverses and reversible systems",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What must an inverse matrix undo?",
+      "body": "",
+      "answer": "For a square matrix \\(A\\), its inverse satisfies \\(A^{-1}A=AA^{-1}=I\\). It reverses the action of \\(A\\).",
+      "takeaway": "Invertibility means no information is lost.",
+      "source": "Lecture 3 · p. 11",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Inverses and reversible systems · PDF page 11 · authored conceptual practice",
+          "page": 11
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-inverse-not-reciprocal",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Inverses and reversible systems",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Is a matrix inverse formed by taking the reciprocal of each entry?",
+      "body": "",
+      "answer": "No. An inverse must undo matrix multiplication. Entrywise reciprocals generally do not do that, and even invertible matrices can contain zeros.",
+      "takeaway": "The operation being reversed is matrix multiplication.",
+      "source": "Lecture 3 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Inverses and reversible systems · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-inverse-2x2",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Inverses and reversible systems",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "When does \\(\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}\\) have an inverse?",
+      "body": "",
+      "answer": "Exactly when \\(ad-bc\\ne0\\). Its inverse is \\(\\frac1{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}\\).",
+      "takeaway": "A zero determinant signals a collapsed direction.",
+      "source": "Lecture 3 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Inverses and reversible systems · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-inverse-nonzero",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Inverses and reversible systems",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why is \\(\\operatorname{diag}(1,0)\\) noninvertible even though it is nonzero?",
+      "body": "",
+      "answer": "It sends every \\((x,y)\\) to \\((x,0)\\), erasing \\(y\\). The original second coordinate cannot be recovered.",
+      "takeaway": "Nonzero output in one direction does not guarantee reversibility in every direction.",
+      "source": "Lecture 3 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Inverses and reversible systems · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-inverse-product",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Inverses and reversible systems",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(A\\) and \\(B\\) are invertible, which order gives \\((AB)^{-1}\\)?",
+      "body": "",
+      "answer": "\\(B^{-1}A^{-1}\\). Undo the last-applied operation \\(A\\) first, then undo \\(B\\).",
+      "takeaway": "Reversing a process reverses the order of its steps.",
+      "source": "Lecture 3 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Inverses and reversible systems · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-inverse-meaning"
+      ]
+    },
+    {
+      "id": "duke-218d-inverse-twice",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Inverses and reversible systems",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What is the inverse of \\(A^{-1}\\)?",
+      "body": "",
+      "answer": "\\(A\\), because multiplying the two in either order gives identity.",
+      "takeaway": "Undoing an undo restores the original operation.",
+      "source": "Lecture 3 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Inverses and reversible systems · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-inverse-augment",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Inverses and reversible systems",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why row-reduce \\([A\\mid I]\\) to compute an inverse?",
+      "body": "",
+      "answer": "Each column on the right asks you to solve \\(Ax=e_j\\). If the left becomes \\(I\\), the right contains those solutions as the columns of \\(A^{-1}\\).",
+      "takeaway": "Computing an inverse solves for all coordinate outputs at once.",
+      "source": "Lecture 3 · p. 13",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Inverses and reversible systems · PDF page 13 · authored conceptual practice",
+          "page": 13
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-inverse-meaning",
+        "duke-218d-matrix-product-columns"
+      ]
+    },
+    {
+      "id": "duke-218d-inverse-left-fails",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Inverses and reversible systems",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If row reduction cannot turn a square \\(A\\) into \\(I\\), can the right block of \\([A\\mid I]\\) still be called its inverse?",
+      "body": "",
+      "answer": "No. Failure to obtain a pivot in every column means \\(A\\) is singular, so the inverse does not exist.",
+      "takeaway": "The left identity is a required success condition.",
+      "source": "Lecture 3 · p. 14",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Inverses and reversible systems · PDF page 14 · authored conceptual practice",
+          "page": 14
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-inverse-dependent",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Inverses and reversible systems",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why is \\(\\begin{bmatrix}1&2&3\\\\4&5&6\\\\7&8&9\\end{bmatrix}\\) singular without computing an inverse?",
+      "body": "",
+      "answer": "Row 3 equals twice row 2 minus row 1. The rows are dependent, so there cannot be three pivots.",
+      "takeaway": "A redundant row reveals lost information.",
+      "source": "Lecture 3 · p. 14",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Inverses and reversible systems · PDF page 14 · authored conceptual practice",
+          "page": 14
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-inverse-solve",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Inverses and reversible systems",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why does invertible \\(A\\) make \\(Ax=b\\) uniquely solvable for every \\(b\\)?",
+      "body": "",
+      "answer": "Multiplying by \\(A^{-1}\\) forces \\(x=A^{-1}b\\), and this candidate satisfies the equation.",
+      "takeaway": "A reversible map reaches each output exactly once.",
+      "source": "Lecture 3 · p. 15",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Inverses and reversible systems · PDF page 15 · authored conceptual practice",
+          "page": 15
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-inverse-example",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Inverses and reversible systems",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(A^{-1}=\\begin{bmatrix}2&-3\\\\-1&2\\end{bmatrix}\\), what input gives output \\(b=(1,0)^T\\)?",
+      "body": "",
+      "answer": "\\(x=(2,-1)^T\\), the first column of \\(A^{-1}\\). Multiplying by \\(e_1\\) selects that column.",
+      "takeaway": "Inverse columns are the inputs that create coordinate outputs.",
+      "source": "Lecture 3 · p. 15",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Inverses and reversible systems · PDF page 15 · authored conceptual practice",
+          "page": 15
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-inverse-singular-rhs",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Inverses and reversible systems",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does a singular square matrix mean \\(Ax=b\\) has no solution for every \\(b\\)?",
+      "body": "",
+      "answer": "No. Some right-hand sides are reachable and have infinitely many solutions; others are unreachable. For example, \\(b=0\\) is always reachable.",
+      "takeaway": "Singular means uniqueness for every output fails, not that every equation is inconsistent.",
+      "source": "Lecture 3 · p. 15",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Inverses and reversible systems · PDF page 15 · authored conceptual practice",
+          "page": 15
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-flop-meaning",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Cost of matrix computations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What does counting floating-point operations tell you, and what does it miss?",
+      "body": "",
+      "answer": "It counts arithmetic such as additions, multiplications, and divisions. It does not capture all memory traffic, parallelism, or runtime overhead.",
+      "takeaway": "An operation count is a cost model, not a stopwatch.",
+      "source": "Lecture 3 · p. 16",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Cost of matrix computations · PDF page 16 · authored conceptual practice",
+          "page": 16
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matvec-cost",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Cost of matrix computations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why does an \\(n\\times n\\) matrix-vector product cost about \\(2n^2\\) arithmetic operations?",
+      "body": "",
+      "answer": "Each of \\(n\\) rows needs \\(n\\) multiplications and \\(n-1\\) additions. The exact elementary count is \\(2n^2-n\\).",
+      "takeaway": "Work per output multiplied by the number of outputs gives total work.",
+      "source": "Lecture 3 · p. 16",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Cost of matrix computations · PDF page 16 · authored conceptual practice",
+          "page": 16
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-matmul-cost",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Cost of matrix computations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why does ordinary dense matrix multiplication cost about \\(2n^3\\), rather than \\(2n^2\\)?",
+      "body": "",
+      "answer": "It computes \\(n^2\\) entries, each using a length-\\(n\\) dot product. Equivalently, it performs \\(n\\) matrix-vector products.",
+      "takeaway": "An extra loop over columns adds a factor of \\(n\\).",
+      "source": "Lecture 3 · p. 17",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Cost of matrix computations · PDF page 17 · authored conceptual practice",
+          "page": 17
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-row-swap-cost",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Cost of matrix computations",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If a row swap uses zero arithmetic flops, is it free in actual runtime?",
+      "body": "",
+      "answer": "No. Moving or rearranging data still has a cost. The flop model only counts arithmetic.",
+      "takeaway": "A model can ignore a cost without making it vanish.",
+      "source": "Lecture 3 · p. 17",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Cost of matrix computations · PDF page 17 · authored conceptual practice",
+          "page": 17
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-row-elimination-cost",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Cost of matrix computations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why does Gaussian elimination have cubic leading cost?",
+      "body": "",
+      "answer": "At each pivot, many remaining rows are updated across many remaining columns. Summing the shrinking square workloads gives about \\(\\tfrac23n^3\\) flops.",
+      "takeaway": "Repeated two-dimensional updates create cubic total work.",
+      "source": "Lecture 3 · p. 18",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Cost of matrix computations · PDF page 18 · authored conceptual practice",
+          "page": 18
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-substitution-cost",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Cost of matrix computations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why is solving a triangular system with one right-hand side only quadratic work?",
+      "body": "",
+      "answer": "Each solved variable updates the remaining right-hand-side entries; there is no full remaining matrix to eliminate. Summing row lengths gives about \\(n^2\\) flops.",
+      "takeaway": "Once elimination is done, finishing one solve is much cheaper.",
+      "source": "Lecture 3 · p. 19",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Cost of matrix computations · PDF page 19 · authored conceptual practice",
+          "page": 19
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-substitution-not-gauss-jordan",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Cost of matrix computations",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "Is the notes' \\(n^2\\) substitution count a claim that all Gauss–Jordan elimination is quadratic?",
+      "body": "",
+      "answer": "No. It counts the specialized substitution phase for one right-hand side after triangular reduction, not arbitrary reduction of a whole dense matrix.",
+      "takeaway": "State which stage and which outputs a complexity count covers.",
+      "source": "Lecture 3 · p. 20",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Cost of matrix computations · PDF page 20 · authored conceptual practice",
+          "page": 20
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-cost-double",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Cost of matrix computations",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(n\\) doubles, how do quadratic and cubic leading costs change?",
+      "body": "",
+      "answer": "Quadratic cost rises about 4-fold; cubic cost rises about 8-fold, for sufficiently large \\(n\\).",
+      "takeaway": "Growth rate matters more as problems get larger.",
+      "source": "Lecture 3 · p. 20",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Cost of matrix computations · PDF page 20 · authored conceptual practice",
+          "page": 20
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-inverse-cost",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Cost of matrix computations",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "The notes estimate inversion at \\(\\tfrac43n^3\\) flops. Is forming an inverse a cheap shortcut around elimination?",
+      "body": "",
+      "answer": "No. In that counting scheme inversion is also cubic, and using the inverse on a right-hand side adds matrix-vector work. The constant depends on the method counted.",
+      "takeaway": "An inverse is useful algebraically without being the cheapest computational route.",
+      "source": "Lecture 3 · p. 20",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L3.pdf",
+          "locator": "Lecture 3 · Cost of matrix computations · PDF page 20 · authored conceptual practice",
+          "page": 20
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-closest-column",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(Ax=b\\) has no exact solution, where do all candidate outputs \\(Ax\\) live?",
+      "body": "",
+      "answer": "In the column space of \\(A\\): all weighted combinations of its columns. Approximation searches for the output there closest to \\(b\\).",
+      "takeaway": "The matrix restricts which outputs are reachable.",
+      "source": "Lecture 9 · p. 1",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 1 · authored conceptual practice",
+          "page": 1
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-closest-residual",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What geometric test identifies the closest \\(\\hat b\\) in a subspace to \\(b\\)?",
+      "body": "",
+      "answer": "\\(\\hat b\\) must lie in the subspace, and the residual \\(b-\\hat b\\) must be perpendicular to every direction in it.",
+      "takeaway": "At the closest point, no allowed direction can reduce the error.",
+      "source": "Lecture 9 · p. 1",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 1 · authored conceptual practice",
+          "page": 1
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-closest-both-conditions",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Is a perpendicular residual alone enough to identify the closest vector in a subspace?",
+      "body": "",
+      "answer": "No. The candidate must also belong to the subspace. Taking \\(\\hat b=b\\) makes the residual zero even when \\(b\\) is outside it.",
+      "takeaway": "A best approximation must be both feasible and perpendicular in its error.",
+      "source": "Lecture 9 · p. 1",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 1 · authored conceptual practice",
+          "page": 1
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-closest-pythagoras",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why does a perpendicular residual make \\(\\hat b\\) closer than any different vector in the subspace?",
+      "body": "",
+      "answer": "Any alternative adds a displacement inside the subspace, perpendicular to the residual. By Pythagoras its squared error is the old squared error plus a positive squared displacement.",
+      "takeaway": "Moving sideways from a perpendicular foot only lengthens the error.",
+      "source": "Lecture 9 · p. 1",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 1 · authored conceptual practice",
+          "page": 1
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-closest-residual",
+        "duke-218d-norm-dot"
+      ]
+    },
+    {
+      "id": "duke-218d-norm-dot",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "How can a dot product recover a vector's geometric length?",
+      "body": "",
+      "answer": "\\(\\|v\\|=\\sqrt{v\\cdot v}\\). The dot product sums squared coordinates, and the square root converts squared length to length.",
+      "takeaway": "The usual distance formula is a self-dot product.",
+      "source": "Lecture 9 · p. 2",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 2 · authored conceptual practice",
+          "page": 2
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-norm-example",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What is the length of \\((3,4)\\), and why is it not 7?",
+      "body": "",
+      "answer": "5, because \\(\\sqrt{3^2+4^2}=5\\). Euclidean length uses squares, not the sum of coordinates.",
+      "takeaway": "Perpendicular coordinate contributions combine by Pythagoras.",
+      "source": "Lecture 9 · p. 2",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 2 · authored conceptual practice",
+          "page": 2
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-norm-scale-negative",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If \\(\\|v\\|=3\\), what is \\(\\|-2v\\|\\)?",
+      "body": "",
+      "answer": "6. In general \\(\\|cv\\|=|c|\\|v\\|\\). A negative scale reverses direction but cannot make length negative.",
+      "takeaway": "Lengths use the magnitude of a scale factor.",
+      "source": "Lecture 9 · p. 2",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 2 · authored conceptual practice",
+          "page": 2
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-distance-difference",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why is the distance between \\(v\\) and \\(w\\) equal to \\(\\|v-w\\|\\)?",
+      "body": "",
+      "answer": "The difference vector is the displacement between their endpoints. Its length measures their separation.",
+      "takeaway": "Distance comes from relative position, not either point's distance from the origin.",
+      "source": "Lecture 9 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-distance-symmetric",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does using \\(w-v\\) instead of \\(v-w\\) change the distance?",
+      "body": "",
+      "answer": "No. The vectors are negatives, so they have the same length.",
+      "takeaway": "Reversing a displacement preserves its length.",
+      "source": "Lecture 9 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-unit-normalize",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "How do you keep a nonzero vector's direction but change its length to 1?",
+      "body": "",
+      "answer": "Divide it by its length: \\(u=v/\\|v\\|\\). The positive scale factor preserves direction.",
+      "takeaway": "Normalization separates direction from magnitude.",
+      "source": "Lecture 9 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-unit-zero",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why can't you normalize the zero vector?",
+      "body": "",
+      "answer": "Its length is zero, so division is undefined. It also has no direction to preserve.",
+      "takeaway": "Normalization requires a nonzero direction.",
+      "source": "Lecture 9 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-unit-sphere",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What do all unit vectors in \\(\\mathbb R^2\\) have in common geometrically?",
+      "body": "",
+      "answer": "Their endpoints lie on the unit circle: \\(x^2+y^2=1\\). In \\(\\mathbb R^3\\), the corresponding set is the unit sphere.",
+      "takeaway": "Fixing length still leaves many possible directions.",
+      "source": "Lecture 9 · p. 3",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 3 · authored conceptual practice",
+          "page": 3
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-unit-line",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "How many unit vectors lie on a line through the origin?",
+      "body": "",
+      "answer": "Exactly two: \\(v/\\|v\\|\\) and its negative, for any nonzero direction \\(v\\) on the line.",
+      "takeaway": "A line has two opposite unit directions.",
+      "source": "Lecture 9 · p. 4",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 4 · authored conceptual practice",
+          "page": 4
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-distance-expand",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What cross term appears when you expand \\(\\|v-w\\|^2\\)?",
+      "body": "",
+      "answer": "\\(-2v\\cdot w\\), giving \\(\\|v\\|^2+\\|w\\|^2-2v\\cdot w\\). There are two equal negative cross terms.",
+      "takeaway": "Dot-product algebra connects displacement to angle.",
+      "source": "Lecture 9 · p. 4",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 4 · authored conceptual practice",
+          "page": 4
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-dot-angle",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "For nonzero vectors, how does their dot product encode their angle?",
+      "body": "",
+      "answer": "\\(v\\cdot w=\\|v\\|\\|w\\|\\cos\\theta\\). Dividing by both lengths isolates \\(\\cos\\theta\\).",
+      "takeaway": "Remove magnitudes to compare directions alone.",
+      "source": "Lecture 9 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-norm-dot"
+      ]
+    },
+    {
+      "id": "duke-218d-dot-sign",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "For nonzero vectors, what does a negative dot product tell you about their angle?",
+      "body": "",
+      "answer": "It is obtuse: greater than \\(90^\\circ\\). A positive dot product means acute, and zero means a right angle.",
+      "takeaway": "The sign records whether directions broadly agree or oppose.",
+      "source": "Lecture 9 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-unit-angle",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If two unit vectors have dot product \\(1/2\\), what is their angle?",
+      "body": "",
+      "answer": "\\(60^\\circ\\), since their lengths are 1 and \\(\\cos60^\\circ=1/2\\).",
+      "takeaway": "For unit vectors, the dot product is directly the cosine.",
+      "source": "Lecture 9 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-dot-bound",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Can two unit vectors have dot product 2?",
+      "body": "",
+      "answer": "No. Cauchy–Schwarz gives \\(|v\\cdot w|\\leq\\|v\\|\\|w\\|=1\\). Equivalently, a cosine cannot exceed 1.",
+      "takeaway": "Angle interpretations supply useful error checks.",
+      "source": "Lecture 9 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [],
+      "visual": {
+        "type": "mistake",
+        "label": "Claim to test",
+        "items": [
+          {
+            "label": "Given",
+            "value": "\\(\\|v\\|=\\|w\\|=1\\)"
+          },
+          {
+            "label": "Claim",
+            "value": "\\(v\\cdot w=2\\)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "duke-218d-orthogonal-zero",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Lengths, angles, and best approximation",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Is the zero vector perpendicular to every vector, and does it make a \\(90^\\circ\\) angle with each?",
+      "body": "",
+      "answer": "It is perpendicular algebraically because every dot product is zero. Its angle is undefined because it has no direction.",
+      "takeaway": "The zero vector fits the algebraic definition without a geometric angle.",
+      "source": "Lecture 9 · p. 5",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Lengths, angles, and best approximation · PDF page 5 · authored conceptual practice",
+          "page": 5
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-equation",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "How do you find every vector perpendicular to \\((1,-1,1)\\)?",
+      "body": "",
+      "answer": "Solve \\(x_1-x_2+x_3=0\\). This is a plane through the origin, described by \\(x=s(1,1,0)+t(-1,0,1)\\).",
+      "takeaway": "Perpendicularity turns geometry into a homogeneous linear equation.",
+      "source": "Lecture 9 · p. 6",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 6 · authored conceptual practice",
+          "page": 6
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-two",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "How do you find vectors perpendicular to both \\(v_1\\) and \\(v_2\\)?",
+      "body": "",
+      "answer": "Put \\(v_1^T\\) and \\(v_2^T\\) as rows of a matrix and solve the homogeneous system. Both dot products must vanish.",
+      "takeaway": "Stack the perpendicularity constraints as rows.",
+      "source": "Lecture 9 · p. 7",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 7 · authored conceptual practice",
+          "page": 7
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-example",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Is \\((1,4,3)\\) perpendicular to both \\((1,-1,1)\\) and \\((2,1,-2)\\)?",
+      "body": "",
+      "answer": "Yes. The dot products are \\(1-4+3=0\\) and \\(2+4-6=0\\). Every multiple of \\((1,4,3)\\) works too.",
+      "takeaway": "One direction can satisfy several perpendicularity constraints.",
+      "source": "Lecture 9 · p. 7",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 7 · authored conceptual practice",
+          "page": 7
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-span",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why is it enough to check perpendicularity against a spanning set?",
+      "body": "",
+      "answer": "If \\(x\\cdot v_i=0\\) for each generator, then \\(x\\cdot\\sum_i c_iv_i=\\sum_i c_i(x\\cdot v_i)=0\\). It is therefore perpendicular to every vector in their span.",
+      "takeaway": "Linearity extends finitely many checks to the whole subspace.",
+      "source": "Lecture 9 · p. 8",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 8 · authored conceptual practice",
+          "page": 8
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-dot-sum"
+      ]
+    },
+    {
+      "id": "duke-218d-perp-every",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does being perpendicular to one vector in a plane make you perpendicular to the plane?",
+      "body": "",
+      "answer": "No. You must be perpendicular to every direction in the plane. Checking two independent spanning directions is sufficient.",
+      "takeaway": "A subspace contains more than one representative direction.",
+      "source": "Lecture 9 · p. 8",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 8 · authored conceptual practice",
+          "page": 8
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-intersection",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What vector can belong to both a subspace \\(V\\) and its orthogonal complement \\(V^\\perp\\)?",
+      "body": "",
+      "answer": "Only zero. Such a vector is perpendicular to itself, so its squared length must be zero.",
+      "takeaway": "A nonzero vector cannot be perpendicular to its own direction.",
+      "source": "Lecture 9 · p. 8",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 8 · authored conceptual practice",
+          "page": 8
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-null",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If the columns of \\(A\\) span \\(V\\), what system describes \\(V^\\perp\\)?",
+      "body": "",
+      "answer": "\\(A^Tx=0\\). Each row of \\(A^T\\) asks for zero dot product with one column of \\(A\\).",
+      "takeaway": "Transpose turns column directions into perpendicularity tests.",
+      "source": "Lecture 9 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-perp-span"
+      ]
+    },
+    {
+      "id": "duke-218d-perp-basis-independent",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does changing the spanning set of a subspace change its orthogonal complement?",
+      "body": "",
+      "answer": "No. Perpendicularity depends on the subspace itself. A smaller spanning set can make the computation easier without changing the answer.",
+      "takeaway": "Different descriptions can define the same geometric object.",
+      "source": "Lecture 9 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-redundant",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "What happens if you add a redundant spanning vector when computing an orthogonal complement?",
+      "body": "",
+      "answer": "You add a redundant equation. The vectors satisfying all the perpendicularity conditions stay the same.",
+      "takeaway": "Repeated information does not shrink a solution set.",
+      "source": "Lecture 9 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-zero-space",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What is the orthogonal complement of \\(\\{0\\}\\) inside \\(\\mathbb R^n\\)?",
+      "body": "",
+      "answer": "All of \\(\\mathbb R^n\\), because every vector has zero dot product with zero.",
+      "takeaway": "No nonzero directions to test means no restrictions.",
+      "source": "Lecture 9 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-entire-space",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What is perpendicular to every vector in \\(\\mathbb R^n\\)?",
+      "body": "",
+      "answer": "Only the zero vector. A nonzero candidate would fail the dot-product test against itself.",
+      "takeaway": "Testing every direction leaves no nonzero escape.",
+      "source": "Lecture 9 · p. 9",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 9 · authored conceptual practice",
+          "page": 9
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-closed-sum",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why is the sum of two vectors in \\(V^\\perp\\) still in \\(V^\\perp\\)?",
+      "body": "",
+      "answer": "For every \\(v\\in V\\), \\(v\\cdot(x+y)=v\\cdot x+v\\cdot y=0\\). Scalar multiples work the same way, and zero is included.",
+      "takeaway": "Orthogonal complements are subspaces because the constraints are homogeneous and linear.",
+      "source": "Lecture 9 · p. 10",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 10 · authored conceptual practice",
+          "page": 10
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-dimension",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "If a subspace has dimension 2 inside \\(\\mathbb R^5\\), what is the dimension of its orthogonal complement?",
+      "body": "",
+      "answer": "3. The two dimensions add to the ambient dimension: \\(\\dim V+\\dim V^\\perp=5\\).",
+      "takeaway": "Perpendicular directions account for the freedom outside the subspace.",
+      "source": "Lecture 9 · p. 10",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 10 · authored conceptual practice",
+          "page": 10
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-twice",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "What happens when you take a subspace's orthogonal complement twice?",
+      "body": "",
+      "answer": "You recover the original subspace: \\((V^\\perp)^\\perp=V\\). This statement is for subspaces of finite-dimensional Euclidean space.",
+      "takeaway": "Perpendicularity pairs subspaces in both directions.",
+      "source": "Lecture 9 · p. 10",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 10 · authored conceptual practice",
+          "page": 10
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-not-complement",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "The \\(x\\)-axis and \\(y\\)-axis are perpendicular in \\(\\mathbb R^3\\). Are they each other's orthogonal complements?",
+      "body": "",
+      "answer": "No. The complement of the \\(x\\)-axis is the whole \\(yz\\)-plane. The \\(y\\)-axis includes only some of those perpendicular vectors.",
+      "takeaway": "Perpendicular subspaces need not exhaust all perpendicular directions.",
+      "source": "Lecture 9 · p. 11",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 11 · authored conceptual practice",
+          "page": 11
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-perp-ambient",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Does the orthogonal complement of a line depend on the ambient space?",
+      "body": "",
+      "answer": "Yes. A line in \\(\\mathbb R^2\\) has a one-dimensional complement; the same coordinate direction in \\(\\mathbb R^3\\) has a two-dimensional complement.",
+      "takeaway": "Always specify the space in which perpendicularity is being considered.",
+      "source": "Lecture 9 · p. 11",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 11 · authored conceptual practice",
+          "page": 11
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-four-spaces-column",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Which null space is perpendicular to the column space of \\(A\\)?",
+      "body": "",
+      "answer": "\\(\\operatorname{Nul}(A^T)\\). Its vectors have zero dot product with every column of \\(A\\).",
+      "takeaway": "Column-space directions become rows after transposing.",
+      "source": "Lecture 9 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-perp-null"
+      ]
+    },
+    {
+      "id": "duke-218d-four-spaces-row",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why is \\(\\operatorname{Nul}(A)\\) perpendicular to the row space of \\(A\\)?",
+      "body": "",
+      "answer": "\\(Ax=0\\) says every row of \\(A\\) has zero dot product with \\(x\\). That also makes \\(x\\) perpendicular to any combination of rows.",
+      "takeaway": "The null-space equations already encode row perpendicularity.",
+      "source": "Lecture 9 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-four-spaces-dimensions",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "For \\(A\\) of size \\(m\\times n\\), which orthogonal pair lives in \\(\\mathbb R^n\\)?",
+      "body": "",
+      "answer": "The row space and \\(\\operatorname{Nul}(A)\\). The column space and \\(\\operatorname{Nul}(A^T)\\) instead live in \\(\\mathbb R^m\\).",
+      "takeaway": "Inputs and outputs have separate geometric spaces.",
+      "source": "Lecture 9 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-four-spaces-reverse",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "What is \\(\\operatorname{Nul}(A)^\\perp\\)?",
+      "body": "",
+      "answer": "The row space of \\(A\\). Take orthogonal complements of \\(\\operatorname{Row}(A)^\\perp=\\operatorname{Nul}(A)\\), then use the double-complement rule.",
+      "takeaway": "One perpendicular-pair identity gives the reverse identity too.",
+      "source": "Lecture 9 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-four-spaces-mismatch",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "SPOT THE MISTAKE",
+      "format": "flashcard",
+      "title": "What is wrong with the claim \\(\\operatorname{Col}(A)^\\perp=\\operatorname{Nul}(A)\\) for every matrix?",
+      "body": "",
+      "answer": "The transpose is missing: use \\(\\operatorname{Nul}(A^T)\\). For a rectangular matrix, the claimed spaces may not even inhabit the same dimension.",
+      "takeaway": "Dimension checks catch many transpose mistakes.",
+      "source": "Lecture 9 · p. 12",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 12 · authored conceptual practice",
+          "page": 12
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-four-spaces-example",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "For \\(A=\\begin{bmatrix}1&2\\\\1&2\\end{bmatrix}\\), why is \\((-2,1)\\) in its null space?",
+      "body": "",
+      "answer": "Each row gives \\(-2+2=0\\). It is perpendicular to the row-space direction \\((1,2)\\).",
+      "takeaway": "A null vector changes inputs without changing the output.",
+      "source": "Lecture 9 · p. 13",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 13 · authored conceptual practice",
+          "page": 13
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-four-spaces-column-example",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "For \\(A=\\begin{bmatrix}1&2\\\\1&2\\end{bmatrix}\\), what is perpendicular to its column space?",
+      "body": "",
+      "answer": "The line spanned by \\((-1,1)\\). Both columns lie along \\((1,1)\\), whose dot product with \\((-1,1)\\) is zero.",
+      "takeaway": "The row and column pictures can have different perpendicular directions.",
+      "source": "Lecture 9 · p. 13",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 13 · authored conceptual practice",
+          "page": 13
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-null-complement-basis",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "How can you describe \\(\\operatorname{Nul}(A)^\\perp\\) without first solving for \\(\\operatorname{Nul}(A)\\)?",
+      "body": "",
+      "answer": "Use the row space of \\(A\\). Independent rows form a basis; dependent rows must be removed if a basis is required.",
+      "takeaway": "Use the perpendicular-pair identity to avoid unnecessary computation.",
+      "source": "Lecture 9 · p. 13",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 13 · authored conceptual practice",
+          "page": 13
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-implicit-from-span",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "How can you turn a spanning description \\(V=\\operatorname{Col}(A)\\) into equations for \\(V\\)?",
+      "body": "",
+      "answer": "Find a basis for \\(\\operatorname{Nul}(A^T)\\), put those basis vectors in the columns of \\(B\\), then use \\(B^Tx=0\\). These equations describe \\(V\\).",
+      "takeaway": "Find perpendicular directions, then require zero dot product with them.",
+      "source": "Lecture 9 · p. 14",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 14 · authored conceptual practice",
+          "page": 14
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-perp-twice",
+        "duke-218d-four-spaces-column"
+      ]
+    },
+    {
+      "id": "duke-218d-implicit-double",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "Why doesn't solving \\(A^Tx=0\\) directly give the original column space of \\(A\\)?",
+      "body": "",
+      "answer": "It gives the orthogonal complement of that column space. Taking the complement a second time returns the original space.",
+      "takeaway": "One complement changes the space; two recover it.",
+      "source": "Lecture 9 · p. 14",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 14 · authored conceptual practice",
+          "page": 14
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": []
+    },
+    {
+      "id": "duke-218d-implicit-plane",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "The plane is spanned by \\((1,1,1)\\) and \\((1,1,0)\\). What simple equation describes it?",
+      "body": "",
+      "answer": "\\(x_1=x_2\\). Both generators satisfy it and are independent, so their span fills that two-dimensional plane.",
+      "takeaway": "A normal vector packages a whole plane into one constraint.",
+      "source": "Lecture 9 · p. 14",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 14 · authored conceptual practice",
+          "page": 14
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [
+        "duke-218d-implicit-from-span"
+      ]
+    },
+    {
+      "id": "duke-218d-implicit-membership",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "PREDICT",
+      "format": "flashcard",
+      "title": "Which point lies in the plane \\(x_1=x_2\\): \\((2,2,1)\\) or \\((2,1,1)\\)?",
+      "body": "",
+      "answer": "\\((2,2,1)\\). Its first two coordinates agree; those of the other point do not. The third coordinate is unrestricted.",
+      "takeaway": "Implicit equations make membership checks immediate.",
+      "source": "Lecture 9 · p. 15",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 15 · authored conceptual practice",
+          "page": 15
+        }
+      ],
+      "color": "blue",
+      "relatedCourses": [],
+      "seconds": 30,
+      "prerequisiteIds": [],
+      "visual": {
+        "type": "compare",
+        "label": "Candidate points",
+        "items": [
+          {
+            "label": "A",
+            "value": "\\((2,2,1)\\)"
+          },
+          {
+            "label": "B",
+            "value": "\\((2,1,1)\\)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "duke-218d-parametric-generate",
+      "course": "MATH 218D",
+      "school": "Duke",
+      "topic": "Orthogonal complements and subspaces",
+      "kind": "QUICK RECALL",
+      "format": "flashcard",
+      "title": "How can you generate a point in \\(\\operatorname{Span}\\{(1,1,1),(1,1,0)\\}\\) without solving equations?",
+      "body": "",
+      "answer": "Choose any weights \\(a,b\\), then form \\((a+b,a+b,a)\\). For example, \\(a=1,b=1\\) gives \\((2,2,1)\\).",
+      "takeaway": "Spanning vectors provide a direct construction recipe.",
+      "source": "Lecture 9 · p. 15",
+      "sources": [
+        {
+          "path": "courses/duke/linear-algebra/F25-L9.pdf",
+          "locator": "Lecture 9 · Orthogonal complements and subspaces · PDF page 15 · authored conceptual practice",
+          "page": 15
+        }
+      ],
+      "color": "blue",
       "relatedCourses": [],
       "seconds": 30,
       "prerequisiteIds": []
