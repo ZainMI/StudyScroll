@@ -27,7 +27,7 @@ import {
   Sprout,
   X,
 } from "lucide-react";
-import { studyGroups } from "@/lib/study-groups";
+import { studyGroups, wholeCourseGroups } from "@/lib/study-groups";
 import { Card, curated, retiredCardIds } from "@/lib/cards";
 import {
   learningQueue,
@@ -161,6 +161,7 @@ export default function Home() {
       }
   }, [allCards, progress, reviews, quizResults, studyOrder, ready]);
   const groups = [
+    ...wholeCourseGroups(cards),
     ...studyGroups(cards, "topics"),
     ...studyGroups(cards, "lectures"),
   ];

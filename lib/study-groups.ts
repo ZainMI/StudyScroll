@@ -1,7 +1,7 @@
 import type { Card } from "./cards";
 export type StudyGroup = {
   id: string;
-  mode: "topics" | "lectures";
+  mode: "topics" | "lectures" | "courses";
   course: string;
   label: string;
   cardIds: string[];
@@ -71,5 +71,19 @@ export function studyGroups(
     (a, b) =>
       a.course.localeCompare(b.course, undefined, { numeric: true }) ||
       a.label.localeCompare(b.label, undefined, { numeric: true }),
+  );
+}
+
+export function wholeCourseGroups(cards: Card[]): StudyGroup[] {
+  return Array.from(new Set(cards.map((card) => card.course))).map(
+    (course) => ({
+      id: JSON.stringify(["courses", course]),
+      mode: "courses",
+      course,
+      label: `Entire ${course}`,
+      cardIds: cards
+        .filter((card) => card.course === course)
+        .map((card) => card.id),
+    }),
   );
 }

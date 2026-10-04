@@ -64,7 +64,18 @@ export function MaterialPicker({
     setSelected(
       selected.includes(id)
         ? selected.filter((x) => x !== id)
-        : [...selected, id],
+        : [
+            ...selected.filter(
+              (x) =>
+                !groups.some(
+                  (g) =>
+                    g.id === x &&
+                    g.mode === "courses" &&
+                    g.course === groups.find((item) => item.id === id)?.course,
+                ),
+            ),
+            id,
+          ],
     );
   return (
     <section className="study-picker" aria-label="Choose study material">
@@ -119,20 +130,6 @@ export function MaterialPicker({
       <p className="study-help">
         Choose your material. Mix sets freely; shared cards appear once.
       </p>
-      {selectedGroups.length > 0 && (
-        <div className="selected-material" aria-label="Selected material">
-          {selectedGroups.map((g) => (
-            <button
-              key={g.id}
-              aria-label={`Remove ${g.course} ${g.label}`}
-              onClick={() => toggle(g.id)}
-            >
-              {g.course} · {g.label}
-              <X size={12} />
-            </button>
-          ))}
-        </div>
-      )}
       {courses
         .filter((c) => visible(c).length)
         .map((c) => (
@@ -156,26 +153,21 @@ export function MaterialPicker({
             <label className="study-group study-whole-course">
               <input
                 type="checkbox"
-                checked={groups
-                  .filter((g) => g.course === c && g.mode === mode)
-                  .every((g) => selected.includes(g.id))}
-                onChange={(e) =>
+                checked={selected.includes(
+                  groups.find((g) => g.course === c && g.mode === "courses")!
+                    .id,
+                )}
+                onChange={(e) => {
+                  const whole = groups.find(
+                    (g) => g.course === c && g.mode === "courses",
+                  )!;
+                  const others = selected.filter(
+                    (id) => !groups.some((g) => g.course === c && g.id === id),
+                  );
                   setSelected(
-                    e.target.checked
-                      ? [
-                          ...new Set([
-                            ...selected,
-                            ...groups
-                              .filter((g) => g.course === c && g.mode === mode)
-                              .map((g) => g.id),
-                          ]),
-                        ]
-                      : selected.filter(
-                          (id) =>
-                            !groups.some((g) => g.course === c && g.id === id),
-                        ),
-                  )
-                }
+                    e.target.checked ? [...others, whole.id] : others,
+                  );
+                }}
               />
               <span>
                 Entire {c}
@@ -223,38 +215,53 @@ export function MaterialPicker({
           topics.
         </p>
       )}
-      <div className="study-settings">
-        {activity === "cards" ? (
-          <>
-            <label htmlFor="study-order">
-              <Shuffle size={16} /> Card order
-            </label>
-            <select
-              id="study-order"
-              value={order}
-              onChange={(e) => setOrder(e.target.value as StudyOrder)}
+      {selectedGroups.length > 0 && (
+        <div className="selected-material" aria-label="Selected material">
+          {selectedGroups.map((g) => (
+            <button
+              key={g.id}
+              aria-label={`Remove ${g.course} ${g.label}`}
+              onClick={() => toggle(g.id)}
             >
-              <option value="adaptive">Smart review</option>
-              <option value="chronological">Chronological</option>
-              <option value="shuffle">Shuffle</option>
-            </select>
-            <p>
-              {order === "adaptive"
-                ? "Due reviews and new ideas, balanced for practice."
-                : order === "chronological"
-                  ? "Follow lecture and page order, then the authored sequence."
-                  : "Mix every selected card into a fresh random order."}
-            </p>
-          </>
-        ) : (
-          <p>
-            <strong>Understanding over calculation.</strong> Short
-            multiple-choice and true/false rounds focus on missed quiz answers,
-            difficult cards, then new ideas. Results stay saved on this device.
-          </p>
-        )}
-      </div>
+              {g.course} · {g.label}
+              <X size={12} />
+            </button>
+          ))}
+        </div>
+      )}
       <div className="study-start">
+        <div className="study-settings">
+          {activity === "cards" ? (
+            <>
+              <label htmlFor="study-order">
+                <Shuffle size={16} /> Card order
+              </label>
+              <select
+                id="study-order"
+                value={order}
+                onChange={(e) => setOrder(e.target.value as StudyOrder)}
+              >
+                <option value="adaptive">Smart review</option>
+                <option value="chronological">Chronological</option>
+                <option value="shuffle">Shuffle</option>
+              </select>
+              <p>
+                {order === "adaptive"
+                  ? "Due reviews and new ideas, balanced for practice."
+                  : order === "chronological"
+                    ? "Follow lecture and page order, then the authored sequence."
+                    : "Mix every selected card into a fresh random order."}
+              </p>
+            </>
+          ) : (
+            <p>
+              <strong>Understanding over calculation.</strong> Short
+              multiple-choice and true/false rounds focus on missed quiz
+              answers, difficult cards, then new ideas. Results stay saved on
+              this device.
+            </p>
+          )}
+        </div>
         <span aria-live="polite">
           {ids.size} cards · {selectedGroups.length} groups
         </span>
